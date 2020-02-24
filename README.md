@@ -3,14 +3,30 @@
  * @Date: 2020-02-13 02:43:04
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2020-02-21 21:52:38
+ * @LastEditTime: 2020-02-25 00:06:05
  * @Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
  -->
-
-
 ### first push on 2002021302:42
 
 
+
+
+
+
+
+
+
+
+
+
+
+### mywebsiteday04 2020-02-25 00:05:50
+git init
+git remote add origin git@github.com:ShepherdQR/ShepherdQR.github.io.git
+git pull origin master
+git add .
+git commit -m 'mywebsiteday04'
+git push -u origin master
 
 
 ### mywebsiteday03 2020-02-21 21:51:57
