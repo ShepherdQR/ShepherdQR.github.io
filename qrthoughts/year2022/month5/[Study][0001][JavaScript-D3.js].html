@@ -1,0 +1,100 @@
+<!--
+ * @Author: Shepherd Qirong
+ * @Date: 2021-08-05 15:40:21
+ * @Github: https://github.com/ShepherdQR
+ * @LastEditors: Shepherd Qirong
+ * @LastEditTime: 2022-05-02 00:27:31
+ * Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
+-->
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
+        <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
+        <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
+
+        <script>
+            MathJax = {
+              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            };
+            </script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <script src="../../../includes/js/d3.js"></script>
+
+<title>[Study][0001][JavaScript-D3.js]</title>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-45586344-1', 'shepherd.org');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <script>
+            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+            {
+               document.body.classList.add('mobile');
+            }
+        </script>
+        
+        <div class="inner">
+            <h2>[Study][0001][JavaScript-D3.js]</h2>
+            <p>
+                可视化库。
+
+            </p>
+            <hr />
+
+            <p>
+                学习。<br />
+
+              
+            </p>
+
+
+            <svg width = "400px" height = "20px">
+        <!--  H 10, reach coordinate H10 -->
+        <path d="M 10 10 H 390 V 19 H 10 L 10 10" /> 
+    </svg>
+    <p>Fig001, basic test. On 20220505_14:15, first picture using D3.</p>
+
+    <svg width = "960" height = "300" id = "mainsvg" class = "svgs">
+        <rect id="my_rect" 
+      x="10" y="200" width="200" height="30" 
+      stroke="black" fill="#69b3a2" stroke-width="1"
+      />
+    </svg>
+    <script>
+
+    let mainsvg = d3.select("#mainsvg");
+
+    let maingroup = mainsvg
+        .append('g')
+        .attr('transform', `translate(${100}, ${100})`);
+
+        let circle = maingroup
+        .append('circle')
+        .attr('stroke', 'black')
+        .attr('r', '66')
+        .attr('fill', 'yellow');
+    </script>
+
+ 
+
+<!--We donnot modify lines after this-->
+            <p>
+                <br /><br />
+            </p>
+            <hr />
+            <p>
+                <a href="https://shepherdqr.github.io/">Back to mainpage</a>
+            </p>
+        </div>
+    </body>
+</html>
