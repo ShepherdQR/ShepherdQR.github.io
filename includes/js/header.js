@@ -3,7 +3,7 @@
  * @Date: 2022-10-06 21:41:23
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-10-07 00:13:53
+ * @LastEditTime: 2022-10-08 19:57:58
  * Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
  */
 
@@ -19,9 +19,11 @@ MathJax = {
     tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
 };
 
-if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
-{
-    document.body.classList.add('mobile');
+function supportMobile(){
+    if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+    {
+        document.body.classList.add('mobile');
+    }
 }
 
 function retrieveTitle(){
