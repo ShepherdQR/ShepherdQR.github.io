@@ -3,7 +3,7 @@
  * @Date: 2022-06-02 22:41:25
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-10-08 20:05:52
+ * @LastEditTime: 2022-10-08 23:00:34
  * @Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
 -->
 
@@ -28,16 +28,31 @@
             </script>
 
             <p>
-                文美惠译。<br />
-
-                第二次看。<br />
+                50 Specific ways to improve your use of the standard template library.<br />
             </p>
             <hr />
 
             <p>
-               这样的白天仿佛比大多数人整个一生还要长。<br />
+                连续内存容器，vector, string, deque; 基于节点的容器，在插入和删除时不会引起迭代器、指针、引用的失效。<br />
 
-               
+                判断式（返回bool的）一般是纯函数，没有状态。<br />
+
+                for_each(vec.bagin(),vec.end(),mem_fun(&A::test));<br />
+
+                //元素从data复制到d前端，每个增加42:
+                transform(data, data+number,
+                insert(d,d.begin()), bind2nd(plus &lt double &gt(), 42));<br />
+
+                实践中，完全平衡树效率总体不如红黑树。<br />
+
+                find算法用的是相等，find成员函数用的是等价。<br />
+
+                greater &lt double &gt ::operator()是内联的，实例化sort时展开。<br />
+
+                函数指针做参数会抑制内联。<br />
+
+                不要写容易写，不容易读的代码。<br />
+
             </p>
 
 
