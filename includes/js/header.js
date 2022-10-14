@@ -3,7 +3,7 @@
  * @Date: 2022-10-06 21:41:23
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-10-08 20:05:37
+ * @LastEditTime: 2022-10-14 23:20:38
  * Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
  */
 
@@ -37,4 +37,8 @@ function retrieveTitle(){
     return curTittle;
 }
 
-
+function writeString(string){
+    string = string.replace(/\r\n/g,"<br>")
+    string = string.replace(/\n/g,"<br>");
+    document.write(string);
+}
