@@ -1,41 +1,32 @@
 
 
+
 <html>
+    <script src="../../../includes/js/header.js"></script>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=0.5">
         <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
         <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
         <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script> document.title = retrieveTitle();styleHeader();</script>
 
-        <script>
-            MathJax = {
-              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-            };
-            </script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-<title>[Books][0029][自然哲学-石里克]</title>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-45586344-1', 'shepherd.org');
-            ga('send', 'pageview');
-        </script>
+        <style> li {
+            font-size: 100%;
+            font-weight:bold;
+            background-color: lightgreen;
+        }  </style>
     </head>
+
     <body>
-        <script>
-            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
-            {
-               document.body.classList.add('mobile');
-            }
-        </script>
-        
+        <script>supportMobile();</script>
         <div class="inner">
-            <h2>[Books][0029][自然哲学-石里克]</h2>
+            <h2 id = 'currentInnerTitle'>currentInnerTitle</h2>
+            <script>
+                document.getElementById("currentInnerTitle").innerHTML =  retrieveTitle();
+            </script>
+
             <p>
                 石里克[1882,1936],哲学家、物理学家，逻辑实证主义维也纳学派的主要创始人，代表作《普通认识论》。出生于柏林的富人家庭。发表的论文涉及物理学、逻辑学、知识论、美学、科学哲学等领域。<br />
 

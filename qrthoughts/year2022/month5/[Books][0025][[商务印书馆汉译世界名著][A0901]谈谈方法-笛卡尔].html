@@ -3,46 +3,35 @@
  * @Date: 2021-08-05 15:40:21
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-05-02 00:27:31
+ * @LastEditTime: 2022-11-06 23:38:53
  * Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
 -->
 
 <html>
+    <script src="../../../includes/js/header.js"></script>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=0.5">
         <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
         <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
         <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script> document.title = retrieveTitle();styleHeader();</script>
 
-        <script>
-            MathJax = {
-              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-            };
-            </script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-<title>[Books][0025][谈谈方法-笛卡尔]</title>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-45586344-1', 'shepherd.org');
-            ga('send', 'pageview');
-        </script>
+        <style> li {
+            font-size: 100%;
+            font-weight:bold;
+            background-color: lightgreen;
+        }  </style>
     </head>
+
     <body>
-        <script>
-            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
-            {
-               document.body.classList.add('mobile');
-            }
-        </script>
-        
+        <script>supportMobile();</script>
         <div class="inner">
-            <h2>[Books][0025][谈谈方法-笛卡尔]</h2>
+            <h2 id = 'currentInnerTitle'>currentInnerTitle</h2>
+            <script>
+                document.getElementById("currentInnerTitle").innerHTML =  retrieveTitle();
+            </script>
             <p>
                 笛卡尔，1596-1650，法国人，西方近代哲学创始人之一。出身贵族，父亲是法官。父亲去世后，笛卡尔卖地，投资，靠利息生活。思想上、社会上、经济上编程资产阶级分子。言论谨慎。收集各种经验，随时随地用理性思考。收集资料，分析、综合、理解。为了认识世界，与各种各样的人交往。不爱早起，躺在床上一个上午。解析几何基本是靠在枕头上发明的。追求经验，还追问人是怎样研究科学的。<br />
 
