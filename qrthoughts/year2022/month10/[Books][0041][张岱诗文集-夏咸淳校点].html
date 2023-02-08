@@ -3,97 +3,85 @@
  * @Date: 2022-06-02 22:41:25
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-11-01 22:16:48
+ * @LastEditTime: 2023-02-08 22:23:51
  * @Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
 -->
 
 
 <html>
+    <script src="../../../includes/js/header.js"></script>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=0.5">
         <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
         <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
         <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
-
-        <script>
-            MathJax = {
-              tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-            };
-            </script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-<title>[Books][0041][张岱诗文集-夏咸淳校点]</title>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-45586344-1', 'shepherd.org');
-            ga('send', 'pageview');
-        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script> document.title = retrieveTitle();styleHeader();</script>
     </head>
+
     <body>
-        <script>
-            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
-            {
-               document.body.classList.add('mobile');
-            }
-        </script>
-        
+        <script>supportMobile();</script>
         <div class="inner">
-            <h2>[Books][0041][张岱诗文集-夏咸淳校点]</h2>
+            <h2 id = 'currentInnerTitle'>currentInnerTitle</h2>
+            <script>
+                document.getElementById("currentInnerTitle").innerHTML =  retrieveTitle();
+            </script>
+
+
             <p>
                 张岱，1597-1684。<br />
 
-                55,84/483<br />
+                69,98/483<br />
                 
-
 
             </p>
             <hr />
 
-            <p>
-               世间之物，为庸人所埋没者，不可胜计。<br />
+            
+            <script>var string=`
 
-               空山无人，读书深柳。<br />
+                
+                世间之物，为庸人所埋没者，不可胜计。
 
-               畀以千乘,弃如敝屣。<br />
+                空山无人，读书深柳。
 
-               神龙露尾，不见其身。<br />
+                畀以千乘,弃如敝屣。
 
-               瓶则缺粟，琴亦无弦。<br />
+                神龙露尾，不见其身。
 
-               生为明月，死剩清风。<br />
+                瓶则缺粟，琴亦无弦。
 
-               月得竹而青。<br />
+                生为明月，死剩清风。
 
-               脑中酒热骨自鸣，无人知是强王首。<br />
+                月得竹而青。
 
-               落花一瓣堕流水。<br />
+                脑中酒热骨自鸣，无人知是强王首。
 
-               敢借宰官医国手，天下精神尽抖擞。<br />
+                落花一瓣堕流水。
 
-               粗疏之中有细密。<br />
+                敢借宰官医国手，天下精神尽抖擞。
 
-               冬山原凛冽，月意自孤清。
+                粗疏之中有细密。
 
-               
+                冬山原凛冽，月意自孤清。
 
-               
+                夜壑孤藤上，琉璃映碧纱。
 
-               
+                冬山原凛冽，月意自孤清。
 
-               
-
+                横斜非幻影，清浅即真身。【写瓶中梅映壁上的梅影】
 
                 
 
+                
 
                 
-            </p>
 
+            `;writeString(string);
+            </script>
+
+           
  
 
 <!--We donnot modify lines after this-->
