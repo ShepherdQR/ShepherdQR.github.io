@@ -3,7 +3,7 @@
  * @Date: 2022-10-06 21:41:23
  * @Github: https://github.com/ShepherdQR
  * @LastEditors: Shepherd Qirong
- * @LastEditTime: 2022-10-14 23:20:38
+ * @LastEditTime: 2023-03-05 14:08:44
  * Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
  */
 
@@ -41,4 +41,12 @@ function writeString(string){
     string = string.replace(/\r\n/g,"<br>")
     string = string.replace(/\n/g,"<br>");
     document.write(string);
+}
+
+function writeItem(string){
+    document.write("<li>");
+    string = string.replace(/\r\n/g,"</li><li>")
+    string = string.replace(/\n/g,"</li><li>");
+    document.write(string);
+    document.write("</li>");
 }
