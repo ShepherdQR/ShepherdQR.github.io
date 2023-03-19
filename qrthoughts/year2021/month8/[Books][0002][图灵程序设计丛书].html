@@ -1,0 +1,277 @@
+<!--
+ * @Author: Shepherd Qirong
+ * @Date: 2022-06-02 22:41:25
+ * @Github: https://github.com/ShepherdQR
+ * @LastEditors: Shepherd Qirong
+ * @LastEditTime: 2023-03-18 15:13:24
+ * @Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
+-->
+
+<html>
+    <script src="../../../includes/js/header.js"></script>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
+        <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
+        <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script> document.title = retrieveTitle();styleHeader();</script>
+
+        <style> li {
+            font-size: 100%;
+            font-weight:bold;
+            background-color: lightgreen;
+        }  </style>
+    </head>
+
+    <body>
+        <script>supportMobile();</script>
+        <div class="inner">
+            <h2 id = 'currentInnerTitle'>currentInnerTitle</h2>
+            <script>
+                document.getElementById("currentInnerTitle").innerHTML =  retrieveTitle();
+            </script>
+
+            <p>
+                图灵程序设计丛书<br /><br />
+
+            </p>
+            <hr />
+            <script>var string=`
+                核心知识收集在latex中。这里罗列总体目录和心得。
+
+                `;writeString(string);
+                </script>
+
+<!-- 
+            <ol reversed>
+                <hr />
+                <li >AAAAAAA-BBBBBBBBB</li>
+                <p >
+                    CCCCCCCCC。<br /><br />
+                </p><hr />
+                <script>var string=`
+
+                `;writeString(string);
+                </script>
+            </ol>
+-->
+
+
+
+            <ol reversed>
+
+                <ol reversed>
+                    <hr />
+                    <li >The Pragmatic Programmers</li>
+                    <p >
+                        20210808整理完。Number 3 book of TURING serious. And the writer describes 75 problems.<br /><br />
+                    </p><hr />
+                    <script>var string=`
+    The last several probles are interesting. We also learn that some websites offer public apis.
+                    `;writeString(string);
+                    </script>
+                </ol>
+
+
+                <hr />
+                <li >The Principles of Programming</li>
+                <p >
+                    20210808整理完。
+                    
+                    This is the second book of TURING serious. And the writer introduced 101 rules about programming.<br /><br />
+                </p><hr />
+                <script>var string=`
+                    Only write what is needed right now.
+                            The connection in database, database config defination file, code source file, leads to the repeating codes problem. No good way to deal this. We can just put the consioning files together. 
+                            The abstraction has difficult levels, we need to seperate high level and lower levels.
+                            [Seal] gather the relative elements(like data and functions). 
+                            The codes with close relationship should be gathered together as a module. Those modules that called each other frequently, should be rethinking whether the elements should be gathered into one module.
+                            [Hide information] hide the internal state and functions of the module, prevent accessing to the internal elements from outside.
+                            architecture techniques, abstract, seal, informationHide, package, the seperation of strage and implimentation, the seperation of interface and implimentation.
+                            Strategy module offers parameters to the upper UI modules or the implimentation modules. 
+                            When the software goes wrong, it should immediately stop.
+                            Write some codes that are used to generate coeds. 
+                            Build a prototype as soon as possible. Prototype shows the basic interface or UI and it must be throw and recode when the program is tested ok. While the key born of the software which we then immediately wtire, is the structure of the software, and its shape is the structure of the software. 
+                            Choose portability over efficiency. 
+                            A software turns the input into output, it works like a filter. 
+                            [Coupling] 1)Modules share the same resource files, or the same public data.
+                            2)Module A using the public functions that defined in module B, the functions may contain parameters defined in module B.
+                            3)Data coupling, only data transfer between difficult modules.
+
+                            Idempotence. like function abs, no matter how many times we apply the function on the target, the output does not change. Like the Get in HTTP, no matter we get successfully or failed, we can just get again. 
+
+                            When we meet a problem, we repeat the problem to others, like our clothes, our cup or something, we clearly explain the problem, this helps us understand teh problem, its details and key point.
+                            Thinking about the title, the paragraph subtitle, helps us effeciently understand the meaning of the paragraphs below.
+
+                            Architecture follows the organization structure. We should design a good architecture.
+                            The 80 percent need can be easily implemented, while 10 percent can be achieved, and 10 percent can hardly be  achieved.
+
+                            Joshua tree principle: we ignore those things that we donnot know the name.
+                            The second version of the software always contains too much useless functions. Feature Creep.
+
+                            Donot reinvent wheels.
+
+                            When we go farther, we must always keep in mind our origional purpose.
+                `;writeString(string);
+                </script>
+
+
+                <hr />
+                <li >我的第一本算法书</li>
+                <p >
+                    20230318整理。<br /><br />
+                </p><hr />
+                <script>var string=`
+
+            【数据结构】
+            链表、数组、栈、队列、哈希表、堆（上浮和下沉，用于实现priority queues）
+
+            二叉查找树：
+            1）左子树的值<根的值<右子树的值；
+            2）一直向左达到最小值，一直向右达到最大值；
+            3）增加节点：从根开始，向末端方向，插入值更小就左转，否则右转，到达末端增加一个叶子节点；
+            4）删除节点A：A的左子树的最大节点替代删除的A的位置；
+            5）扩展：平衡二叉查找树；B树（m个节点的形状平衡的）。
+
+
+
+            【排序】
+            冒泡：O(n^2)，认为数组是从地板到天花板，每轮都从地板开始冒泡，每轮导致天花板降低；天地相接或某一轮的所有冒泡没有产生相邻的交换，认为排好序。
+            选择：O(n^2)，每次从剩余数组中挑最小的。
+            插入：O(n^2)，认为第1个已排序，剩余的依次插入到合适位置。
+            堆：O(nlogn)，构造堆，不断取根-维护堆结构。
+
+            归并：O(nlogn)，递归的分治法
+            1）自顶而下：不断细分，然后归并。归并要保证两帧有序。
+
+            快速：O(nlogn)，递归的分治法
+            每次操作F是把当前处理的区间划分为3个部分：[小于基准的数区间]基准数[大于基准的数区间]。对左右2个区间递归执行操作F。
+
+
+
+            【查找】
+            线性查找：O(n)，一个个比较。
+            二分查找：O(logn)，对于有序数组，每次甩掉一半可能区间。
+
+
+
+            【图的搜索】
+            广度优先：FIFO（先入先出），用队列。
+            深度度优先：LIFO（后入先出），用栈。
+
+            Bellman-Ford：无向图中最短路径问题。
+            从A节点到B节点，节点间度量为正。设置初始权重起点为0，其余点无穷大。广度优先，更新各个节点的权重值，有更小的时更新权重值。
+
+            Dijkstra：无向图中最短路径问题。
+            从A节点到B节点，节点间度量为正。设置初始权重起点为0，其余点无穷大。计算与A连接是边中最短的节点K1，然后计算与K1连接是边中最短的节点K2，持续下去直到B。
+
+            A-star：Dijkstra并没有一个指向性保证一次性走到终点。增加一种引导，如当前点与终点的估计距离，引导每次对最短节点K1的选择。这样的算法称为“启发式算法”。
+
+
+
+            【安全算法】
+
+            A向B数据传输4个问题：
+            1）窃听：C听到了；【加密】
+            2）假冒：A或B是假的；【消息认证、数字签名】
+            3）篡改：B收到的是C修改后的A发送的消息；【消息认证、数字签名】
+            4）事后否认：A事后不承认消息了。【数字签名】
+            数字签名中，为了确认公开秘钥的制作者，使用“数字证书”技术。
+
+            哈希函数：y=H(x), 输出长度不变；相同输入每次得到相同输出；输入差距小也会导致输出差距大，输入差距大也可能导致输出相同。x求y容易，y求x困难。
+            MD5, message digest algorithm 5
+            SHA-1, SHA-2, source hash algorithm.
+            MD5, SHA-1 存在安全隐患。
+
+            【共享秘钥加密。对称加密】DES，AES，凯撒密码，动态口令。
+            1）加密和解密用相同的秘钥。秘钥从A发送到B的过程中，也可能被窃听。秘钥分配问题。
+
+
+            秘钥分配问题：密钥交换协议，公开秘钥加密。
+
+
+            【公开秘钥加密】RSA算法、椭圆曲线加密算法。
+            1）B生成公钥P和私钥S，B把P发给A，A用P加密后把密文发给B，B用S解密。
+            2）假设n个人互相传输，需要n(n-1)/2对秘钥。改进是想B对所有的人都保持1个P和1个S。
+            3）安全问题：【中间人攻击】在B把P发给A时，C截获P，把Q发给A，A用Q加密后的密文再次被C截获，C解密后修改，再用P加密传给B。问题是由于A不知道收到的秘钥是否来自B。用数字证书解决。
+            4）加密解密时间长，不适合持续发送小数据的情形。用混合加密解决。
+            5)RSA算法中利用Miller-Rabin质数测试。
+
+            【混合加密】SSL/TLS协议。
+            数据用共享秘钥加密，发送的秘钥信息用公开密钥加密。
+
+
+            【Diffie-Hellman密钥交换】
+            1）构造秘钥合成算法F = [P, S],具有特点：1）可合成不可分解；合成后可继续合成；合成结果与合成顺序无关。
+            2）A和B公开秘钥P，A准备SA，A传输[P, SA]给B；B准备SB，A传输[P, SB]给A；A和B各自组合出[P, SA, SB]用于加密和解密。窃听者无法组合出。
+            2）A和B公开大质数P和另外一个数G；A选一个数x，A发送(G^x)modP给B；B选一个数y，B发送(G^y)modP给A；A和B都用秘钥(G^{xy})modP。根据质数P、生成元G、(G^x)modP，求x的问题，称为离散对数问题，该问题至今没找到解法。
+
+
+            【消息认证码】认证、检测篡改
+            A把秘钥P安全发给B；A用密文和秘钥P生成消息认证码如ab12，称为MAC(Message authentication code)；B收到密文和MAC后，用密文和秘钥生成一份MAC和A发来的比较是否一样。
+            MAC算法：HMAC, OMAC, CMAC
+            缺点：无法保证密文是A生成的还是B生成的。问题原因是两方都有相同的秘钥，不能确定MAC是谁生成的。解决方案：数字签名。
+
+
+            【数字签名】
+            希望：A的签名发送给B，B可以验证签名，B不能生成签名。
+            1）公开秘钥加密是P加密S解密；数字签名是S加密P解密。
+            2）A准备发签名，A准备好P和S；A用S加密得到签名，公开P。能够用A发布的P解密的，一定是A的S加密生成的。
+            3）求消息的哈希值X，对X加密得到签名。
+            4）问题：需要知道公钥P的制作者，防止C用自己的公钥冒充A的。解决方法：数字证书。
+
+
+
+            【数字证书】A和B之间的事，找一个双方承认的中间人。
+            A把要公开的秘钥PA和自己的个人信息提交给认证中心（CA,Certification Authority）；CA确认后利用CA的私钥将PA和个人信息生成签名作为A的证书。B收到证书后，利用CA的公钥PC检测证书。
+            1）问题：检测证书的公钥PC是来自CA的吗？CA的PC是以数字证书的形式交付的，有更高级别的CA署名。
+            2）根认证中心，其正当性由自身证明，如大型企业。
+            3）网站的证书称为“服务器证书”，与域名信息对应。可确认域名和存储网站本身的服务器由同一个组织管理。
+            4）PKI，public key infrastructure, 公钥基础设施。
+
+
+
+            【聚类】
+            k-means: 随机选择凝聚中心，得到n个集合；利用集合重心作为新的凝聚中心，计算新一轮的簇。重复下去得到最终的n个集合。
+            层次聚类：初始时每个对象为1类；每次将最近的2类合并为1类，持续下去。
+
+
+
+            【其他算法】
+
+            欧几里得算法（又称辗转相除法）
+            1）A = k1*gcd(A, B), B = k2*gcd(A, B),A和B看做相同刻度的不同数量的尺子，不断把长的重新赋值为长的减去短的，直到最后剩下长度之比为1:2，得到了刻度。
+            2）令L0 > R0;
+            L1 = R0,R1 = L0 mod R0；
+            一直到Lk, Rk,Rk = 0,Lk = gcd(L0， R0)
+
+            质数判断
+            1）根据定义枚举：计算A的平方根n，i:[2,n]，r[i] = A mod i;r[i]中有0表示有公因数，即不是质数。
+            2）费马测试：对于质数p，任意小于p的数c，有(c^p)mod(p) = c。测试A，随机找几个小于A的数，判断通过费马测试，大概率认为是质数。
+            3）存在满足费马测试的合数，称为Carmichael Numbers，绝对伪质数，如561.
+            4）AKS算法，多项式时间内进行质数测试。
+
+
+            PageRank
+            1）利用网页间的链接关系判断网页的价值。
+            2）A链接指向x个网页，x个网页评分A的权重；A被y个网页指向，A的评分等于来的各个网页的权重之和；为了解决循环链接，引入随机游走，即有a的概率跳到其他的节点，有1-a的概率沿着链接关系走。
+
+            汉诺塔问题:递归
+            1）移动方法F满足：F（n）=F（F（n-1))
+
+                `;writeString(string);
+                </script>
+            </ol>
+<!--We donnot modify lines after this-->
+            <p>
+                <br /><br />
+            </p>
+            <hr />
+            <p>
+                <a href="https://shepherdqr.github.io/">Back to mainpage</a>
+            </p>
+        </div>
+    </body>
+</html>
