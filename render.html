@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
+    <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
+    <script src="../../../includes/js/header.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        li {
+            font-size: 100%;
+            font-weight: bold;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <script>supportMobile();</script>
+    <div class="inner">
+        <h2 id="currentInnerTitle"></h2>
+        <div id="markdown-content"></div>
+        <hr />
+        <p><a href="https://shepherdqr.github.io/">Back to mainpage</a></p>
+    </div>
+
+    <script>
+    (function() {
+        const params = new URLSearchParams(window.location.search);
+        let mdFile = params.get('md');
+        if (!mdFile) {
+            document.getElementById('markdown-content').innerHTML = 
+                '<p style="color:red;">缺少参数 ?md=文件名.md</p>';
+            return;
+        }
+
+        // 智能补全 .md
+        if (!mdFile.match(/\.md$/i) && !mdFile.match(/\.html$/i)) {
+            mdFile += '.md';
+        }
+
+        // 步骤 1：加载并渲染 Markdown（不依赖 MathJax）
+        fetch(mdFile)
+            .then(res => {
+                if (!res.ok) throw new Error('文件不存在：' + mdFile);
+                return res.text();
+            })
+            .then(mdText => {
+                // 去除开头 HTML 注释
+                mdText = mdText.replace(/^<!---[\s\S]*?-->\s*/, '');
+
+                // 提取标题
+                const titleMatch = mdText.match(/^#\s+(.*)/m);
+                const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
+                document.title = title;
+                document.getElementById('currentInnerTitle').textContent = title;
+
+                // 渲染正文（避免重复显示 h1 标题）
+                const contentMd = titleMatch ? mdText.replace(/^#\s+.*\n?/, '') : mdText;
+                document.getElementById('markdown-content').innerHTML = marked.parse(contentMd);
+
+                // 步骤 2：安全启动 MathJax 排版（完全异步，绝不影响内容展示）
+                scheduleMathJax();
+            })
+            .catch(err => {
+                document.getElementById('markdown-content').innerHTML = 
+                    '<p style="color:red;">加载失败：' + err.message + '</p>';
+                console.error(err);
+            });
+
+        /**
+         * 安全调度 MathJax 排版
+         * 轮询等待 MathJax 就绪，最长 5 秒，超时则放弃公式渲染
+         */
+        function scheduleMathJax() {
+            const MAX_WAIT = 5000;       // 最大等待时间（毫秒）
+            const INTERVAL = 100;        // 轮询间隔
+            const startTime = Date.now();
+
+            function tryTypeset() {
+                // 判断 MathJax 核心是否就绪（startup.promise 是 v3 的标准接口）
+                if (window.MathJax && window.MathJax.startup) {
+                    window.MathJax.startup.promise
+                        .then(function() {
+                            // 安全调用排版方法
+                            if (typeof window.MathJax.typesetPromise === 'function') {
+                                return window.MathJax.typesetPromise();
+                            } else if (typeof window.MathJax.typeset === 'function') {
+                                window.MathJax.typeset();
+                            }
+                        })
+                        .catch(function(e) {
+                            console.warn('MathJax 排版失败：', e);
+                        });
+                } else if (Date.now() - startTime < MAX_WAIT) {
+                    // 尚未就绪且未超时，继续轮询
+                    setTimeout(tryTypeset, INTERVAL);
+                } else {
+                    // 超时放弃，不影响页面正常阅读
+                    console.warn('MathJax 未能在 ' + MAX_WAIT + 'ms 内就绪，已放弃公式渲染。');
+                }
+            }
+
+            tryTypeset();
+        }
+    })();
+    </script>  
+
+</body>
+</html>

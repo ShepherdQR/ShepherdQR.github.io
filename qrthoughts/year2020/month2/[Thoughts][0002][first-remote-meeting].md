@@ -1,20 +1,19 @@
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
- - Date: 2026-05-02 15:26:08
+ - Date: 2020-02-21 21:48:25
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-02 16:27:26
+ - LastEditTime: 2026-05-02 17:28:35
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
 
-### first push on 2002021302:42
 
 
-## 20260502
-local debug, we:
-1) go to the root folder
-2) start one server, like: python -m http.server 8000
-3) access via chrome: http://localhost:8000/qrthoughts/year2026/month5/abc.html
+# first-remote-meeting
 
-http://localhost:8000/index.html
+It rained in the morning, that's what I found when I woke up. With the 5G technology, I wonder if it possible to develope remote restaurant. How to share thoughts without any delay. 
+
+
+[2020-02-21 21:48:25]
+

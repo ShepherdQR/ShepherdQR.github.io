@@ -1,20 +1,15 @@
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
- - Date: 2026-05-02 15:26:08
+ - Date: 2026-05-02 15:33:56
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-02 16:27:26
+ - LastEditTime: 2026-05-02 17:09:17
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
 
-### first push on 2002021302:42
+# 朝花夕拾
 
 
-## 20260502
-local debug, we:
-1) go to the root folder
-2) start one server, like: python -m http.server 8000
-3) access via chrome: http://localhost:8000/qrthoughts/year2026/month5/abc.html
-
-http://localhost:8000/index.html
+d 
+d 
