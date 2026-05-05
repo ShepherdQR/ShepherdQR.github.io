@@ -1,13 +1,17 @@
 // index-data.js
 // already: [Books][0122][鲁迅]
 // already: [Videos][0002][北京人民艺术剧院话剧]
-// already: [Thoughts][0007][First Sunday]
+// already: [Thoughts][0011][“十五五”规划引领软件创新]
 // 
 window.INDEX_ITEMS = [
-  { date: '2023-03-05', href: './qrthoughts/others/BooksTitle', text: 'BooksTitle[TOP]' },
   { date: '2022-05-08', href: './qrthoughts/others/BooksDoneIndex', text: 'BooksDoneIndex[TOP]' },
   { date: '2022-09-04', href: './qrthoughts/others/BooksItem', text: 'BooksItem[TOP]' },
-  { date: '2026-05-02', href: 'render.html?md=/qrthoughts/year2026/month5/[Books][0122][鲁迅].md', text: '[Books][0122][鲁迅]' },
+  //
+  { date: '2026-05-05', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0011][“十五五”规划引领软件创新]', text: '[Thoughts][0011][“十五五”规划引领软件创新]' },
+  { date: '2026-05-04', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0010][批评与自我批评]', text: '[Thoughts][0010][批评与自我批评]' },
+  { date: '2026-05-02', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0009][丙午三学究天歌]', text: '[Thoughts][0009][丙午三学究天歌]' },
+  { date: '2026-05-02', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0008][政绩观]', text: '[Thoughts][0008][政绩观]' },
+  { date: '2026-05-02', href: 'render.html?md=/qrthoughts/year2026/month5/[Books][0122][鲁迅]', text: '[Books][0122][鲁迅]' },
   { date: '2025-04-03', href: 'render.html?md=/qrthoughts/year2025/month4/[Books][0121][TuringAward]', text: '[Books][0121][TuringAward]' },
   { date: '2024-12-09', href: './qrthoughts/year2024/month12/[Books][0120][淮南子]', text: '[Books][0120][淮南子]' },
   { date: '2024-10-10', href: './qrthoughts/year2024/month10/[Books][0119][[诺贝尔文学奖][2024]韩江]', text: '[Books][0119][[诺贝尔文学奖][2024]韩江]' },
