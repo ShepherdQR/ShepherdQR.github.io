@@ -1,12 +1,13 @@
 // index-data.js
 // already: [Books][0122][鲁迅]
 // already: [Videos][0002][北京人民艺术剧院话剧]
-// already: [Thoughts][0011][“十五五”规划引领软件创新]
+// already: [Thoughts][0012][对“生存还是毁灭”这一问题的认识]
 // 
 window.INDEX_ITEMS = [
   { date: '2022-05-08', href: './qrthoughts/others/BooksDoneIndex', text: 'BooksDoneIndex[TOP]' },
   { date: '2022-09-04', href: './qrthoughts/others/BooksItem', text: 'BooksItem[TOP]' },
   //
+  { date: '2026-05-12', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0012][对“生存还是毁灭”这一问题的认识]', text: '[Thoughts][0012][对“生存还是毁灭”这一问题的认识]' },
   { date: '2026-05-05', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0011][“十五五”规划引领软件创新]', text: '[Thoughts][0011][“十五五”规划引领软件创新]' },
   { date: '2026-05-04', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0010][批评与自我批评]', text: '[Thoughts][0010][批评与自我批评]' },
   { date: '2026-05-02', href: 'render.html?md=/qrthoughts/year2026/month5/[Thoughts][0009][丙午三学究天歌]', text: '[Thoughts][0009][丙午三学究天歌]' },
