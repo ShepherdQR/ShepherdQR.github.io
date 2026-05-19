@@ -1,47 +1,58 @@
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link href="../../../includes/css/pages.css" rel="stylesheet" type="text/css">
-    <link rel="alternate" type="application/atom+xml" href="../../../includes/atom.xml" title="Atom feed">
-    <link rel="shortcut icon" href="../../../resources/pics/shepherd.png">
-    <script src="../../../includes/js/header.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="includes/css/pages.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/atom+xml" href="includes/atom.xml" title="Atom feed">
+    <link rel="shortcut icon" href="resources/pics/shepherd.png">
+    <script src="includes/js/d3.js"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        li {
-            font-size: 100%;
-            font-weight: bold;
-            background-color: lightgreen;
-        }
-    </style>
+    <title>Pursuing Immortality</title>
 </head>
 <body>
-    <script>supportMobile();</script>
-    <div class="inner">
-        <h2 id="currentInnerTitle"></h2>
-        <div id="currentInnerMeta" class="article-meta"></div>
-        <div id="markdown-content"></div>
-        <hr />
-        <p><a href="https://shepherdqr.github.io/">Back to mainpage</a></p>
-    </div>
+    <main class="article-shell">
+        <nav class="article-nav" aria-label="Article navigation">
+            <a href="/">ShepherdQR.github.io</a>
+        </nav>
+
+        <article class="article-frame">
+            <header class="article-header">
+                <p id="currentInnerType" class="article-kicker"></p>
+                <h1 id="currentInnerTitle"></h1>
+                <div id="currentInnerMeta" class="article-meta"></div>
+            </header>
+            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+        </article>
+    </main>
 
     <script>
     (function() {
+        const content = document.getElementById('markdown-content');
+        const titleEl = document.getElementById('currentInnerTitle');
+        const metaEl = document.getElementById('currentInnerMeta');
+        const typeEl = document.getElementById('currentInnerType');
         const params = new URLSearchParams(window.location.search);
         let mdFile = params.get('md');
+
         if (!mdFile) {
-            document.getElementById('markdown-content').innerHTML = 
-                '<p style="color:red;">缺少参数 ?md=文件名.md</p>';
+            renderError('缺少参数：?md=/qrthoughts/.../[Type][0001][Title].md');
             return;
         }
 
-        // 智能补全 .md
-        if (!mdFile.match(/\.md$/i) && !mdFile.match(/\.html$/i)) {
+        if (!/\.(md|html)$/i.test(mdFile)) {
             mdFile += '.md';
         }
 
-        // 步骤 1：加载并渲染 Markdown（不依赖 MathJax）
+        marked.setOptions({ gfm: true, breaks: true });
+        content.innerHTML = '<p class="article-loading">Loading...</p>';
+
         fetch(mdFile)
             .then(res => {
                 if (!res.ok) throw new Error('文件不存在：' + mdFile);
@@ -49,70 +60,37 @@
             })
             .then(mdText => {
                 const parsed = parseMarkdownDocument(mdText);
-                mdText = parsed.body;
-
-                // 提取标题
-                const titleMatch = mdText.match(/^#\s+(.*)/m);
+                const titleMatch = parsed.body.match(/^#\s+(.*)/m);
                 const title = parsed.meta.title || (titleMatch ? titleMatch[1].trim() : 'Untitled');
-                document.title = title;
-                document.getElementById('currentInnerTitle').textContent = title;
-                document.getElementById('currentInnerMeta').textContent = formatArticleMeta(parsed.meta);
-
-                // 渲染正文；仅在正文 H1 与元数据标题一致时去重
                 const firstHeading = titleMatch ? titleMatch[1].trim() : '';
-                const contentMd = firstHeading === title ? mdText.replace(/^\s*#\s+.*\n?/, '') : mdText;
-                document.getElementById('markdown-content').innerHTML = marked.parse(contentMd);
+                const contentMd = firstHeading === title ? parsed.body.replace(/^\s*#\s+.*\n?/, '') : parsed.body;
 
-                // 步骤 2：安全启动 MathJax 排版（完全异步，绝不影响内容展示）
+                document.title = title;
+                titleEl.textContent = title;
+                typeEl.textContent = [parsed.meta.type, parsed.meta.id].filter(Boolean).join(' · ');
+                metaEl.textContent = formatArticleMeta(parsed.meta);
+                content.innerHTML = marked.parse(contentMd);
+
+                activateEmbeddedScripts(content);
                 scheduleMathJax();
             })
             .catch(err => {
-                document.getElementById('markdown-content').innerHTML = 
-                    '<p style="color:red;">加载失败：' + err.message + '</p>';
+                renderError('加载失败：' + err.message);
                 console.error(err);
             });
 
-        /**
-         * 安全调度 MathJax 排版
-         * 轮询等待 MathJax 就绪，最长 5 秒，超时则放弃公式渲染
-         */
-        function scheduleMathJax() {
-            const MAX_WAIT = 5000;       // 最大等待时间（毫秒）
-            const INTERVAL = 100;        // 轮询间隔
-            const startTime = Date.now();
-
-            function tryTypeset() {
-                // 判断 MathJax 核心是否就绪（startup.promise 是 v3 的标准接口）
-                if (window.MathJax && window.MathJax.startup) {
-                    window.MathJax.startup.promise
-                        .then(function() {
-                            // 安全调用排版方法
-                            if (typeof window.MathJax.typesetPromise === 'function') {
-                                return window.MathJax.typesetPromise();
-                            } else if (typeof window.MathJax.typeset === 'function') {
-                                window.MathJax.typeset();
-                            }
-                        })
-                        .catch(function(e) {
-                            console.warn('MathJax 排版失败：', e);
-                        });
-                } else if (Date.now() - startTime < MAX_WAIT) {
-                    // 尚未就绪且未超时，继续轮询
-                    setTimeout(tryTypeset, INTERVAL);
-                } else {
-                    // 超时放弃，不影响页面正常阅读
-                    console.warn('MathJax 未能在 ' + MAX_WAIT + 'ms 内就绪，已放弃公式渲染。');
-                }
-            }
-
-            tryTypeset();
+        function renderError(message) {
+            titleEl.textContent = 'Page unavailable';
+            metaEl.textContent = '';
+            typeEl.textContent = '';
+            content.innerHTML = '<p class="article-error">' + escapeHtml(message) + '</p>';
         }
 
         function parseMarkdownDocument(rawText) {
             const meta = {};
             let body = rawText.replace(/^\uFEFF/, '');
-
             const frontMatterMatch = body.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+
             if (frontMatterMatch) {
                 frontMatterMatch[1].split(/\r?\n/).forEach(line => {
                     if (/^\s/.test(line)) return;
@@ -139,8 +117,53 @@
             if (meta.updated_date) parts.push('更新：' + meta.updated_date);
             return parts.join('    ');
         }
-    })();
-    </script>  
 
+        function activateEmbeddedScripts(container) {
+            container.querySelectorAll('script').forEach(oldScript => {
+                const script = document.createElement('script');
+                Array.from(oldScript.attributes).forEach(attr => script.setAttribute(attr.name, attr.value));
+                script.textContent = oldScript.textContent;
+                oldScript.replaceWith(script);
+            });
+        }
+
+        function scheduleMathJax() {
+            const maxWait = 5000;
+            const interval = 100;
+            const startTime = Date.now();
+
+            function tryTypeset() {
+                if (window.MathJax && window.MathJax.startup) {
+                    window.MathJax.startup.promise
+                        .then(function() {
+                            if (typeof window.MathJax.typesetPromise === 'function') {
+                                return window.MathJax.typesetPromise();
+                            }
+                            if (typeof window.MathJax.typeset === 'function') {
+                                window.MathJax.typeset();
+                            }
+                        })
+                        .catch(function(e) {
+                            console.warn('MathJax typeset failed:', e);
+                        });
+                } else if (Date.now() - startTime < maxWait) {
+                    setTimeout(tryTypeset, interval);
+                }
+            }
+
+            tryTypeset();
+        }
+
+        function escapeHtml(value) {
+            return value.replace(/[&<>"']/g, ch => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[ch]);
+        }
+    })();
+    </script>
 </body>
 </html>

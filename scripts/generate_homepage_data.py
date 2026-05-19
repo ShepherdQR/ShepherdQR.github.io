@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Generate homepage data from Markdown front matter."""
+"""Generate homepage data from Markdown front matter.
+
+Markdown is the canonical content source. The legacy index can still be merged
+explicitly for diagnostics or transition work, but it is not used by default.
+"""
 
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import re
 import sys
@@ -37,7 +42,12 @@ def parse_type_id_title(value: str) -> tuple[str, str, str] | None:
     content_type = match.group("type")
     content_id = match.group("id")
     rest = (match.group("rest") or "").strip()
-    title = rest[1:-1].strip() if rest.startswith("[") and rest.endswith("]") else rest.strip()
+    if rest.startswith("[[") and rest.endswith("]"):
+        title = rest[1:-1].strip()
+    elif rest.startswith("[") and rest.endswith("]") and "][" not in rest[1:-1]:
+        title = rest[1:-1].strip()
+    else:
+        title = rest.strip()
     return content_type, content_id, title or f"{content_type}-{content_id}"
 
 
@@ -158,8 +168,12 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
     return items
 
 
-def collect_items(root: Path) -> list[dict[str, str]]:
+def collect_items(root: Path, include_legacy_index: bool = False) -> list[dict[str, str]]:
     markdown_items = collect_markdown_items(root)
+    if not include_legacy_index:
+        markdown_items.sort(key=lambda item: (item["published"], item["id"]), reverse=True)
+        return markdown_items
+
     markdown_keys = {(item["type"], item["id"]) for item in markdown_items}
     legacy_items = [
         item for item in parse_legacy_index_items(root)
@@ -178,7 +192,7 @@ def build_js(items: list[dict[str, str]]) -> str:
         years[item["published"][:4]] = years.get(item["published"][:4], 0) + 1
 
     payload = {
-        "generatedAt": "2026-05-19",
+        "generatedAt": dt.date.today().isoformat(),
         "items": items,
         "stats": {
             "total": len(items),
@@ -193,6 +207,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".", help="Repository root.")
     parser.add_argument("--out", default="homepage-data.js", help="Output JS file.")
+    parser.add_argument(
+        "--include-legacy-index",
+        action="store_true",
+        help="Merge legacy index-data.js entries that do not yet have Markdown sources.",
+    )
     return parser
 
 
@@ -201,7 +220,7 @@ def main(argv: list[str]) -> int:
         sys.stdout.reconfigure(encoding="utf-8")
     args = build_arg_parser().parse_args(argv)
     root = Path(args.root).resolve()
-    items = collect_items(root)
+    items = collect_items(root, include_legacy_index=args.include_legacy_index)
     out = root / args.out
     out.write_text(build_js(items), encoding="utf-8", newline="\n")
     print(f"Generated {out} with {len(items)} items")

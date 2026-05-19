@@ -40,6 +40,9 @@ class MigrationRecord:
     updated_date: str | None
     published: str | None
     published_source: str
+    status: str
+    created_source: str
+    updated_source: str
     complexity: int
     review_reasons: list[str]
     markdown: str
@@ -65,13 +68,13 @@ def parse_index_data(root: Path) -> dict[tuple[str, str], IndexEntry]:
     text = read_text(index_path)
     entries: dict[tuple[str, str], IndexEntry] = {}
     pattern = re.compile(
-        r"\{\s*date:\s*'(?P<date>[^']+)'\s*,\s*href:\s*'(?P<href>(?:\\'|[^'])*)'\s*,\s*text:\s*'(?P<text>(?:\\'|[^'])*)'",
+        r"\{\s*date:\s*'(?P<date>[^']+)'\s*,\s*href:\s*'(?P<href>(?:\\'|[^'])*)'\s*,\s*text:\s*(?:'(?P<text1>(?:\\'|[^'])*)'|\"(?P<text2>(?:\\\"|[^\"])*)\")",
         re.S,
     )
 
     for match in pattern.finditer(text):
         href = match.group("href").replace("\\'", "'")
-        item_text = match.group("text").replace("\\'", "'")
+        item_text = (match.group("text1") or match.group("text2") or "").replace("\\'", "'").replace('\\"', '"')
         candidates = [href, item_text]
         for candidate in candidates:
             parsed = parse_type_id_title(candidate)
@@ -98,7 +101,9 @@ def parse_type_id_title(value: str) -> tuple[str, str, str] | None:
     content_id = match.group("id")
     rest = (match.group("rest") or "").strip()
 
-    if rest.startswith("[") and rest.endswith("]"):
+    if rest.startswith("[[") and rest.endswith("]"):
+        title = rest[1:-1].strip()
+    elif rest.startswith("[") and rest.endswith("]") and "][" not in rest[1:-1]:
         title = rest[1:-1].strip()
     else:
         title = rest.strip()
@@ -182,22 +187,76 @@ def extract_inner_html(text: str) -> str:
 
 
 def replace_script_strings(fragment: str) -> str:
-    def replace_write_string(match: re.Match[str]) -> str:
-        return "\n\n" + match.group("content").strip("\n") + "\n\n"
+    def decode_js_string(content: str, quote: str) -> str:
+        if quote == "`":
+            return content.replace("\\`", "`")
+        replacements = {
+            "\\n": "\n",
+            "\\r": "\r",
+            "\\t": "\t",
+            "\\'": "'",
+            '\\"': '"',
+            "\\\\": "\\",
+        }
+        for source, target in replacements.items():
+            content = content.replace(source, target)
+        return content
 
-    def replace_write_item(match: re.Match[str]) -> str:
-        lines = [line.strip() for line in match.group("content").splitlines() if line.strip()]
+    def replace_match(match: re.Match[str]) -> str:
+        content = decode_js_string(match.group("content"), match.group("quote")).strip("\n")
+        if match.group("writer").lower() == "writeitem":
+            return replace_write_item(content)
+        return "\n\n" + content + "\n\n"
+
+    def replace_write_item(content: str) -> str:
+        lines = [line.strip() for line in content.splitlines() if line.strip()]
         return "\n" + "\n".join(f"- {line}" for line in lines) + "\n"
 
-    template = r"<script>\s*var\s+string\s*=\s*`(?P<content>[\s\S]*?)`\s*;\s*{name}\(string\)\s*;\s*</script>"
-    fragment = re.sub(template.format(name="writeString"), replace_write_string, fragment, flags=re.I)
-    fragment = re.sub(template.format(name="writeItem"), replace_write_item, fragment, flags=re.I)
-    return fragment
+    string_script = re.compile(
+        r"<script[^>]*>\s*var\s+string\s*=\s*(?P<quote>`|'|\")(?P<content>[\s\S]*?)(?P=quote)\s*;\s*(?P<writer>writeString|writeItem)\(string\)\s*;?\s*</script>",
+        re.I,
+    )
+    return string_script.sub(replace_match, fragment)
+
+
+def preserve_or_strip_script(match: re.Match[str]) -> str:
+    script = match.group(0)
+    lower = script.lower()
+    boilerplate_markers = (
+        "retrieveTitle".lower(),
+        "currentInnerTitle".lower(),
+        "supportMobile".lower(),
+        "styleHeader".lower(),
+        "googleanalyticsobject".lower(),
+        "ga('create'",
+    )
+    if any(marker in lower for marker in boilerplate_markers):
+        return "\n"
+    return "\n\n" + script.strip() + "\n\n"
+
+
+def stash_raw_blocks(fragment: str) -> tuple[str, list[str]]:
+    blocks: list[str] = []
+
+    def stash(match: re.Match[str]) -> str:
+        token = f"@@RAW_HTML_BLOCK_{len(blocks)}@@"
+        blocks.append(match.group(0).strip())
+        return "\n\n" + token + "\n\n"
+
+    for tag in ("script", "svg", "table"):
+        fragment = re.sub(rf"<{tag}\b[\s\S]*?</{tag}>", stash, fragment, flags=re.I)
+    return fragment, blocks
+
+
+def restore_raw_blocks(markdown: str, blocks: list[str]) -> str:
+    for index, block in enumerate(blocks):
+        markdown = markdown.replace(f"@@RAW_HTML_BLOCK_{index}@@", block)
+    return markdown
 
 
 def html_to_markdown(fragment: str) -> str:
     fragment = replace_script_strings(fragment)
-    fragment = re.sub(r"<script[\s\S]*?</script>", "\n", fragment, flags=re.I)
+    fragment = re.sub(r"<script[\s\S]*?</script>", preserve_or_strip_script, fragment, flags=re.I)
     fragment = re.sub(r"<h[12][^>]*>[\s\S]*?</h[12]>", "\n", fragment, flags=re.I)
 
     fragment = re.sub(
@@ -215,7 +274,7 @@ def html_to_markdown(fragment: str) -> str:
     fragment = re.sub(r"<br\s*/?>", "\n", fragment, flags=re.I)
     fragment = re.sub(r"<hr\s*/?>", "\n\n---\n\n", fragment, flags=re.I)
     fragment = re.sub(r"</p\s*>", "\n\n", fragment, flags=re.I)
-    fragment = re.sub(r"<p[^>]*>", "\n\n", fragment, flags=re.I)
+    fragment = re.sub(r"<p(?:\s[^>]*)?>", "\n\n", fragment, flags=re.I)
     fragment = re.sub(
         r"<li[^>]*>(?P<item>[\s\S]*?)</li>",
         lambda m: "\n- " + single_line(strip_tags(m.group("item"))),
@@ -223,10 +282,11 @@ def html_to_markdown(fragment: str) -> str:
         flags=re.I,
     )
     fragment = re.sub(r"</?(ol|ul)[^>]*>", "\n", fragment, flags=re.I)
+    fragment, raw_blocks = stash_raw_blocks(fragment)
     fragment = strip_tags(fragment)
     fragment = html.unescape(fragment)
     fragment = normalize_markdown(fragment)
-    return fragment
+    return restore_raw_blocks(fragment, raw_blocks)
 
 
 def strip_tags(value: str) -> str:
@@ -272,13 +332,13 @@ def build_front_matter(record: MigrationRecord) -> str:
         f"updated: {yaml_quote(record.updated or '')}",
         f"updated_date: {yaml_quote(record.updated_date or '')}",
         f"slug: {yaml_quote(slug)}",
-        'status: "published"',
+        f"status: {yaml_quote(record.status)}",
         "source:",
         f"  legacy_path: {yaml_quote(record.rel_path)}",
         "  date_source:",
-        '    created: "html-comment"',
+        f"    created: {yaml_quote(record.created_source)}",
         f"    published: {yaml_quote(record.published_source)}",
-        '    updated: "html-comment"',
+        f"    updated: {yaml_quote(record.updated_source)}",
         "migration:",
         '  status: "draft"',
         f"  complexity: {record.complexity}",
@@ -306,15 +366,32 @@ def analyze_file(path: Path, root: Path, index_entries: dict[tuple[str, str], In
     if published_entry:
         published = published_entry.date
         published_source = "index-data"
+        status = "published"
     else:
         published = created_date
         published_source = "created-date-fallback"
+        status = "draft"
+
+    created_source = "html-comment"
+    updated_source = "html-comment"
+    if not created and published_entry:
+        created = published_entry.date
+        created_date = published_entry.date
+        created_source = "index-data-fallback-missing-html-comment"
+    if not updated and published_entry:
+        updated = published_entry.date
+        updated_date = published_entry.date
+        updated_source = "index-data-fallback-missing-html-comment"
 
     complexity, complexity_reasons = complexity_level(text)
     review_reasons = list(complexity_reasons)
 
     if not parsed:
         review_reasons.append("filename does not contain supported type/id")
+    if created_source != "html-comment":
+        review_reasons.append("created date falls back to index-data")
+    if updated_source != "html-comment":
+        review_reasons.append("updated date falls back to index-data")
     if not created or not created_date:
         review_reasons.append("missing created date")
     if not updated or not updated_date:
@@ -338,6 +415,9 @@ def analyze_file(path: Path, root: Path, index_entries: dict[tuple[str, str], In
         updated_date=updated_date,
         published=published,
         published_source=published_source,
+        status=status,
+        created_source=created_source,
+        updated_source=updated_source,
         complexity=complexity,
         review_reasons=review_reasons,
         markdown="",
@@ -351,22 +431,26 @@ def find_html_files(root: Path) -> list[Path]:
     return sorted((root / "qrthoughts").rglob("*.html"))
 
 
-def write_preview(record: MigrationRecord, root: Path, output_dir: Path, overwrite: bool) -> Path:
+def write_preview(record: MigrationRecord, root: Path, output_dir: Path, overwrite: bool, skip_existing: bool) -> tuple[Path, bool]:
     target = output_dir / record.path.relative_to(root)
     target = target.with_suffix(".md")
+    if target.exists() and skip_existing:
+        return target, False
     if target.exists() and not overwrite:
         raise FileExistsError(f"Refusing to overwrite {target}")
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(record.markdown, encoding="utf-8", newline="\n")
-    return target
+    return target, True
 
 
-def write_in_place(record: MigrationRecord, overwrite: bool) -> Path:
+def write_in_place(record: MigrationRecord, overwrite: bool, skip_existing: bool) -> tuple[Path, bool]:
     target = record.path.with_suffix(".md")
+    if target.exists() and skip_existing:
+        return target, False
     if target.exists() and not overwrite:
         raise FileExistsError(f"Refusing to overwrite {target}")
     target.write_text(record.markdown, encoding="utf-8", newline="\n")
-    return target
+    return target, True
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
@@ -378,7 +462,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--write-preview", help="Write Markdown previews under this output directory.")
     parser.add_argument("--in-place", action="store_true", help="Create .md files next to legacy .html files.")
     parser.add_argument("--overwrite", action="store_true", help="Allow overwriting generated .md files.")
+    parser.add_argument("--skip-existing", action="store_true", help="Skip generated .md files that already exist.")
     parser.add_argument("--include-review", action="store_true", help="Write preview files even when manual review is required.")
+    parser.add_argument("--published-only", action="store_true", help="Write only files that have an index-data publication entry.")
     return parser
 
 
@@ -428,21 +514,33 @@ def main(argv: list[str]) -> int:
         if not output_dir.is_absolute():
             output_dir = root / output_dir
         written = 0
+        skipped = 0
         for record in records:
+            if args.published_only and record.status != "published":
+                continue
             if record.can_migrate or args.include_review:
-                write_preview(record, root, output_dir, args.overwrite)
-                written += 1
+                _, did_write = write_preview(record, root, output_dir, args.overwrite, args.skip_existing)
+                written += 1 if did_write else 0
+                skipped += 0 if did_write else 1
         print()
         print(f"Preview Markdown files written: {written} -> {output_dir}")
+        if skipped:
+            print(f"Preview Markdown files skipped because they already exist: {skipped}")
 
     if args.in_place:
         written = 0
+        skipped = 0
         for record in records:
+            if args.published_only and record.status != "published":
+                continue
             if record.can_migrate or args.include_review:
-                write_in_place(record, args.overwrite)
-                written += 1
+                _, did_write = write_in_place(record, args.overwrite, args.skip_existing)
+                written += 1 if did_write else 0
+                skipped += 0 if did_write else 1
         print()
         print(f"In-place Markdown files written: {written}")
+        if skipped:
+            print(f"In-place Markdown files skipped because they already exist: {skipped}")
 
     return 0
 

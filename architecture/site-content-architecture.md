@@ -5,21 +5,21 @@
 | Field | Value |
 | --- | --- |
 | Title | Site Content Architecture |
-| Status | Proposed |
-| Date | 2026-05-19 |
+| Status | Implemented in transition |
+| Date | 2026-05-20 |
 | Scope | ShepherdQR.github.io static personal site |
-| Primary Decision | Use Markdown as the content source and generate static HTML as the public delivery format |
+| Primary Decision | Use Markdown as the content source and generate homepage/article data from Markdown metadata |
 
 ## 1. Executive Decision
 
-The site should not standardize on the current runtime pattern `render.html?md=...` as the final architecture.
+The site should standardize immediately on Markdown as the canonical article source. During the transition, the current runtime pattern `render.html?md=...` is acceptable as the shared article shell; static per-article HTML generation can remain a later improvement.
 
 The recommended architecture is:
 
 1. Markdown is the single source of truth for article content.
 2. Each Markdown article contains explicit metadata in front matter.
-3. Static HTML pages are generated before deployment.
-4. Public URLs are stable, short, and independent of Chinese filenames and bracket-heavy source filenames.
+3. Homepage data is generated before deployment.
+4. Public article rendering is handled by a shared template until short static URLs are introduced.
 5. The homepage becomes a compact knowledge map inspired by mathematician and physicist personal homepages, while the full reverse chronological list moves into archive/category pages.
 6. Original note dates are first-class data and must be preserved through migration, generation, and page rendering.
 
@@ -57,8 +57,8 @@ Observed scale:
 
 | Type | Approximate Count |
 | --- | --- |
-| Markdown files under `qrthoughts/` | 17 |
-| HTML files under `qrthoughts/` | 127 |
+| Markdown-backed public records under `qrthoughts/` | 137 |
+| Legacy HTML files under `qrthoughts/` | 127 |
 
 The site is therefore not yet structurally unified.
 
@@ -130,8 +130,8 @@ The following are intentionally out of scope for the first architecture upgrade:
 1. Building a full single-page application.
 2. Introducing a database or server-side runtime.
 3. Redesigning the site into a marketing-style homepage.
-4. Migrating all legacy HTML articles in one step.
-5. Rewriting all article prose or normalizing all historical content manually.
+4. Rewriting all article prose or normalizing all historical content manually.
+5. Removing every legacy HTML compatibility copy before link-preservation policy is decided.
 
 ## 6. Proposed Target Architecture
 

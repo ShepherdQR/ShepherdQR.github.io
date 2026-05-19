@@ -5,8 +5,8 @@
 | Field | Value |
 | --- | --- |
 | Title | Legacy HTML to Markdown Migration |
-| Status | Proposed |
-| Date | 2026-05-19 |
+| Status | Implemented |
+| Date | 2026-05-20 |
 | Scope | Historical article files under `qrthoughts/` |
 | Primary Decision | Convert historical HTML notes into Markdown sources only when original date information can be preserved |
 
@@ -148,11 +148,10 @@ For each migrated note, verify:
 
 ## 10. Acceptance Criteria
 
-The migration pilot is successful when:
+The migration is successful when:
 
-1. The tool can audit all legacy HTML files without modifying them.
-2. The tool can produce Markdown previews for selected files.
-3. Every preview includes date metadata or is explicitly marked for review.
+1. The tool can audit all legacy HTML files without modifying them by default.
+2. The tool can produce Markdown previews or in-place Markdown files explicitly.
+3. Every generated Markdown file includes date metadata or explicit fallback source markers.
 4. Complexity levels are reported.
-5. The team can decide whether to proceed with bulk conversion based on the pilot report.
-
+5. Homepage data can be regenerated from Markdown without relying on the legacy table.

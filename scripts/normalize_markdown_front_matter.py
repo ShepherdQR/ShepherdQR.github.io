@@ -94,7 +94,12 @@ def parse_type_id_title(value: str) -> tuple[str, str, str] | None:
     content_type = match.group("type")
     content_id = match.group("id")
     rest = (match.group("rest") or "").strip()
-    title = rest[1:-1].strip() if rest.startswith("[") and rest.endswith("]") else rest.strip()
+    if rest.startswith("[[") and rest.endswith("]"):
+        title = rest[1:-1].strip()
+    elif rest.startswith("[") and rest.endswith("]") and "][" not in rest[1:-1]:
+        title = rest[1:-1].strip()
+    else:
+        title = rest.strip()
     if content_type not in TYPE_VALUES:
         return None
     return content_type, content_id, title or f"{content_type}-{content_id}"
