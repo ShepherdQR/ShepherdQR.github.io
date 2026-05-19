@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0010"
+title: "批评与自我批评"
+created: "2026-05-04 19:01:03"
+created_date: "2026-05-04"
+published: "2026-05-04"
+updated: "2026-05-04 19:03:54"
+updated_date: "2026-05-04"
+slug: "thoughts-0010"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Thoughts][0010][批评与自我批评].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-05-04 19:01:03

@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0009"
+title: "丙午三学究天歌"
+created: "2026-02-16 20:07:00"
+created_date: "2026-02-16"
+published: "2026-05-02"
+updated: "2026-05-02 19:30:21"
+updated_date: "2026-05-02"
+slug: "thoughts-0009"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Thoughts][0009][丙午三学究天歌].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-02-16 20:07:00

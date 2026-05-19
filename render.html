@@ -20,6 +20,7 @@
     <script>supportMobile();</script>
     <div class="inner">
         <h2 id="currentInnerTitle"></h2>
+        <div id="currentInnerMeta" class="article-meta"></div>
         <div id="markdown-content"></div>
         <hr />
         <p><a href="https://shepherdqr.github.io/">Back to mainpage</a></p>
@@ -47,17 +48,19 @@
                 return res.text();
             })
             .then(mdText => {
-                // 去除开头 HTML 注释
-                mdText = mdText.replace(/^<!---[\s\S]*?-->\s*/, '');
+                const parsed = parseMarkdownDocument(mdText);
+                mdText = parsed.body;
 
                 // 提取标题
                 const titleMatch = mdText.match(/^#\s+(.*)/m);
-                const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
+                const title = parsed.meta.title || (titleMatch ? titleMatch[1].trim() : 'Untitled');
                 document.title = title;
                 document.getElementById('currentInnerTitle').textContent = title;
+                document.getElementById('currentInnerMeta').textContent = formatArticleMeta(parsed.meta);
 
-                // 渲染正文（避免重复显示 h1 标题）
-                const contentMd = titleMatch ? mdText.replace(/^#\s+.*\n?/, '') : mdText;
+                // 渲染正文；仅在正文 H1 与元数据标题一致时去重
+                const firstHeading = titleMatch ? titleMatch[1].trim() : '';
+                const contentMd = firstHeading === title ? mdText.replace(/^\s*#\s+.*\n?/, '') : mdText;
                 document.getElementById('markdown-content').innerHTML = marked.parse(contentMd);
 
                 // 步骤 2：安全启动 MathJax 排版（完全异步，绝不影响内容展示）
@@ -103,6 +106,38 @@
             }
 
             tryTypeset();
+        }
+
+        function parseMarkdownDocument(rawText) {
+            const meta = {};
+            let body = rawText.replace(/^\uFEFF/, '');
+
+            const frontMatterMatch = body.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+            if (frontMatterMatch) {
+                frontMatterMatch[1].split(/\r?\n/).forEach(line => {
+                    if (/^\s/.test(line)) return;
+                    const field = line.match(/^([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.*)$/);
+                    if (!field) return;
+                    let value = field[2].trim();
+                    if (value.startsWith('"') && value.endsWith('"')) {
+                        value = value.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+                    }
+                    meta[field[1]] = value;
+                });
+                body = body.slice(frontMatterMatch[0].length);
+            }
+
+            body = body.replace(/^<!---[\s\S]*?-->\s*/, '');
+            body = body.replace(/^<!--[\s\S]*?-->\s*/, '');
+            return { meta, body };
+        }
+
+        function formatArticleMeta(meta) {
+            const parts = [];
+            if (meta.created_date) parts.push('创建：' + meta.created_date);
+            if (meta.published && meta.published !== meta.created_date) parts.push('发布：' + meta.published);
+            if (meta.updated_date) parts.push('更新：' + meta.updated_date);
+            return parts.join('    ');
         }
     })();
     </script>  

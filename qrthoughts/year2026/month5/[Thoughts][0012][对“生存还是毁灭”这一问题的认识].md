@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0012"
+title: "对“生存还是毁灭”这一问题的认识"
+created: "2026-05-12 22:42:37"
+created_date: "2026-05-12"
+published: "2026-05-12"
+updated: "2026-05-16 20:05:44"
+updated_date: "2026-05-16"
+slug: "thoughts-0012"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Thoughts][0012][对“生存还是毁灭”这一问题的认识].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-05-12 22:42:37

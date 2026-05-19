@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0007"
+title: "First Sunday"
+created: "2020-08-02 09:46:09"
+created_date: "2020-08-02"
+published: "2020-08-01"
+updated: "2026-05-02 17:43:05"
+updated_date: "2026-05-02"
+slug: "first-sunday"
+status: "published"
+source:
+  path: "qrthoughts/year2020/month8/[Thoughts][0007][First Sunday].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2020-08-02 09:46:09

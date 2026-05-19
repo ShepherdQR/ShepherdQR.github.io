@@ -21,6 +21,7 @@ The recommended architecture is:
 3. Static HTML pages are generated before deployment.
 4. Public URLs are stable, short, and independent of Chinese filenames and bracket-heavy source filenames.
 5. The homepage becomes a compact knowledge map inspired by mathematician and physicist personal homepages, while the full reverse chronological list moves into archive/category pages.
+6. Original note dates are first-class data and must be preserved through migration, generation, and page rendering.
 
 This preserves the current minimalist style while improving maintainability, searchability, link stability, and long-term durability.
 
@@ -91,6 +92,10 @@ The current homepage is primarily a reverse chronological list. This is useful a
 
 The current `includes/atom.xml` should be treated as suspect because it appears to contain a GitHub Pages 404 response rather than a valid feed. Feed generation should be rebuilt from canonical metadata.
 
+### 3.8 Date Preservation Risk
+
+The site has historically encoded dates in HTML comments, homepage data, filenames, and sometimes page prose. Because the notes are chronological records, losing creation dates or final edit dates would damage the site's meaning. Any migration that cannot preserve date information should be treated as incomplete.
+
 ## 4. Goals
 
 ### 4.1 Functional Goals
@@ -104,6 +109,7 @@ The current `includes/atom.xml` should be treated as suspect because it appears 
 | F5 | Legacy article links remain accessible during migration |
 | F6 | MathJax remains available for mathematical content |
 | F7 | The homepage provides a concise site identity and durable navigation |
+| F8 | Creation date, publication date, and final edit date are preserved and rendered near article titles |
 
 ### 4.2 Non-Functional Goals
 
@@ -164,10 +170,18 @@ Every new Markdown article should include front matter:
 type: Thoughts
 id: "0008"
 title: "政绩观"
-date: "2026-05-02"
-updated: "2026-05-16"
+created: "2026-05-02 15:33:56"
+created_date: "2026-05-02"
+published: "2026-05-02"
+updated: "2026-05-16 20:03:40"
+updated_date: "2026-05-16"
 slug: "zhengjiguan"
 status: "published"
+source:
+  date_source:
+    created: "markdown-front-matter"
+    published: "markdown-front-matter"
+    updated: "markdown-front-matter"
 ---
 ```
 
@@ -178,8 +192,11 @@ Required fields:
 | `type` | enum | Yes | `Books`, `Thoughts`, `Study`, `Videos`, or future approved type |
 | `id` | string | Yes | Four-digit content id within its type |
 | `title` | string | Yes | Human-readable title |
-| `date` | date | Yes | First publication or canonical article date |
-| `updated` | date | No | Last meaningful content update |
+| `created` | datetime | Yes | Original note creation timestamp when known |
+| `created_date` | date | Yes | Date portion used for grouping and display fallback |
+| `published` | date | Yes | Homepage/archive publication date |
+| `updated` | datetime | Yes | Last meaningful content update timestamp when known |
+| `updated_date` | date | Yes | Date portion used for grouping and display fallback |
 | `slug` | string | Yes | Stable ASCII public URL segment |
 | `status` | enum | Yes | `draft`, `published`, `doing`, or `archived` |
 
@@ -193,8 +210,32 @@ Optional fields:
 | `series` | string | Series name |
 | `legacy_url` | string | Existing URL to preserve |
 | `math` | boolean | Whether MathJax should be loaded |
+| `source.legacy_path` | string | Original file path for migrated content |
+| `source.date_source` | object | Source of each date field |
+| `migration.status` | string | Migration status such as `draft`, `reviewed`, or `verified` |
 
-### 6.4 Public URL Strategy
+### 6.4 Date Display Contract
+
+Every generated article page must render date information close to the title. The minimal display is:
+
+```text
+创建：2026-05-02    更新：2026-05-16
+```
+
+If the publication date differs from the creation date, render:
+
+```text
+创建：2026-05-02    发布：2026-05-12    更新：2026-05-16
+```
+
+Rules:
+
+1. Do not hide dates in footer-only metadata.
+2. Do not infer missing historical dates silently.
+3. If a legacy source lacks trustworthy date metadata, the migration must emit a review item instead of pretending the date is known.
+4. Date display should use `created_date`, `published`, and `updated_date`; exact timestamps remain preserved in front matter.
+
+### 6.5 Public URL Strategy
 
 Recommended public URLs:
 
@@ -216,7 +257,7 @@ Decision:
 
 Use id-based URLs for maximum stability. Keep slugs in metadata for generated page titles, aliases, search, and future optional redirects.
 
-### 6.5 Generated Outputs
+### 6.6 Generated Outputs
 
 The build process should generate:
 
@@ -229,7 +270,7 @@ The build process should generate:
 | Atom feed | Published articles only |
 | Link integrity report | Generated and legacy URLs |
 
-### 6.6 Homepage Architecture
+### 6.7 Homepage Architecture
 
 The homepage should follow the durable personal homepage pattern seen in many mathematician and physicist sites:
 
@@ -268,7 +309,7 @@ Archive
 
 The full reverse chronological list should become an archive page rather than the entire homepage.
 
-### 6.7 Styling Principles
+### 6.8 Styling Principles
 
 The site should remain:
 
@@ -395,7 +436,17 @@ Rejected for now.
 3. The current filename convention may continue for source files.
 4. `index-data.js` is not manually expanded after generation tooling exists.
 
-### Phase 2: Generator Prototype
+### Phase 2: Legacy Data Unification Pilot
+
+Before redesigning all public pages, run a small legacy HTML-to-Markdown pilot:
+
+1. Select representative legacy HTML pages.
+2. Convert them to Markdown previews.
+3. Preserve `created`, `published`, `updated`, and source date fields.
+4. Mark pages with missing or uncertain dates for manual review.
+5. Do not delete or overwrite legacy HTML during the pilot.
+
+### Phase 3: Generator Prototype
 
 Build a small generator that:
 
@@ -408,14 +459,14 @@ Build a small generator that:
 
 The generator can be implemented with a lightweight Node.js or Python script. Avoid a large framework unless later requirements justify it.
 
-### Phase 3: Homepage Upgrade
+### Phase 4: Homepage Upgrade
 
 1. Replace the homepage long list with the knowledge-map structure.
 2. Keep a link to the full archive.
 3. Generate `What's New` from published metadata.
 4. Keep visual style minimal and scholarly.
 
-### Phase 4: Incremental Legacy Migration
+### Phase 5: Incremental Legacy Migration
 
 Migration order:
 
@@ -427,7 +478,7 @@ Migration order:
 
 Legacy pages should remain accessible until replacements are verified.
 
-### Phase 5: Cleanup
+### Phase 6: Cleanup
 
 1. Remove obsolete templates only after no generated or legacy page depends on them.
 2. Replace broken or stale feeds.
@@ -443,9 +494,10 @@ The build should fail if:
 1. Required front matter is missing.
 2. `type` is not an approved value.
 3. `id` is not unique within a type.
-4. `date` is invalid.
-5. `slug` contains unsafe URL characters.
-6. A published article has no title.
+4. `created_date`, `published`, or `updated_date` is missing or invalid.
+5. `created` or `updated` has been lost during migration when it exists in the legacy source.
+6. `slug` contains unsafe URL characters.
+7. A published article has no title.
 
 ### 9.2 Link Validation
 
@@ -472,6 +524,7 @@ At minimum, verify:
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
 | Bulk migration breaks historical links | High | Migrate incrementally and preserve legacy URLs |
+| Bulk migration loses original dates | High | Treat missing dates as migration failures or manual review items |
 | Metadata cleanup takes longer than expected | Medium | Require metadata only for new and migrated pages |
 | Generated output adds noise to git diffs | Medium | Keep generator deterministic and separate source from output |
 | Chinese filenames complicate URLs | Medium | Keep Chinese source filenames but use ASCII public slugs or id-based URLs |
@@ -489,6 +542,8 @@ The architecture upgrade is considered successful when:
 5. Existing legacy pages remain reachable.
 6. Public URLs no longer require `render.html?md=...` for newly generated pages.
 7. The homepage presents identity, recent updates, collections, selected notes, and archive links.
+8. Generated article pages display creation and update dates near the title.
+9. Migrated legacy articles preserve original date metadata or are marked for review.
 
 ## 12. Final Recommendation
 
@@ -497,4 +552,3 @@ Adopt static generation from Markdown as the target architecture.
 Keep the current `render.html?md=...` approach only as a transitional tool. Preserve the current filename convention for authoring if desired, but move canonical metadata into front matter and expose clean generated URLs to readers.
 
 The homepage should evolve from a single chronological list into a compact scholarly knowledge map. This aligns with the durable personal homepage tradition while retaining the site's existing minimalist identity.
-

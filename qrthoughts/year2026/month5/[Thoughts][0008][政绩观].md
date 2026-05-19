@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0008"
+title: "政绩观"
+created: "2026-05-02 15:33:56"
+created_date: "2026-05-02"
+published: "2026-05-02"
+updated: "2026-05-16 20:03:40"
+updated_date: "2026-05-16"
+slug: "thoughts-0008"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Thoughts][0008][政绩观].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-05-02 15:33:56

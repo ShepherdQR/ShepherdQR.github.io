@@ -1,3 +1,21 @@
+---
+type: Books
+id: "0122"
+title: "鲁迅"
+created: "2026-05-02 15:33:56"
+created_date: "2026-05-02"
+published: "2026-05-02"
+updated: "2026-05-16 20:39:04"
+updated_date: "2026-05-16"
+slug: "books-0122"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Books][0122][鲁迅].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-05-02 15:33:56

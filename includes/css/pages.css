@@ -40,6 +40,14 @@ H2 {
     color: #666666;
 }
 
+.article-meta {
+    margin-top: -24px;
+    margin-bottom: 34px;
+    color: #888;
+    font-size: 80%;
+    line-height: 1.7;
+}
+
 
 H3 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;

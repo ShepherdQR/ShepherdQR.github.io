@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0006"
+title: "A little poem"
+created: "2020-03-29 20:59:46"
+created_date: "2020-03-29"
+published: "2020-03-29"
+updated: "2026-05-02 17:40:27"
+updated_date: "2026-05-02"
+slug: "a-little-poem"
+status: "published"
+source:
+  path: "qrthoughts/year2020/month3/[Thoughts][0006][A little poem].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2020-03-29 20:59:46

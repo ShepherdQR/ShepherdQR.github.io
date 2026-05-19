@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0011"
+title: "“十五五”规划引领软件创新"
+created: "2026-05-05 19:17:19"
+created_date: "2026-05-05"
+published: "2026-05-05"
+updated: "2026-05-16 20:05:12"
+updated_date: "2026-05-16"
+slug: "thoughts-0011"
+status: "published"
+source:
+  path: "qrthoughts/year2026/month5/[Thoughts][0011][“十五五”规划引领软件创新].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2026-05-05 19:17:19

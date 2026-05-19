@@ -1,122 +1,164 @@
-<!--
- * @Author: Shepherd Qirong
- * @Date: 2020-02-13 02:38:17
- * @Github: https://github.com/ShepherdQR
- * @LastEditors: Qirong ZHANG
- * @LastEditTime: 2026-05-02 17:05:10
- * @Copyright (c) 2019--20xx Shepherd Qirong. All rights reserved.
- -->
-
-
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
-    <link rel="stylesheet" href="./includes/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./includes/css/bootstrap-theme.min.css">
-    <link href="./includes/css/frontpage.css" rel="stylesheet" type="text/css">
-    <!---->
-    <link rel="alternate" type="application/atom+xml" href="./includes/atom.xml" title="Atom feed">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./includes/css/homepage.css">
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
-
     <title>Pursuing Immortality</title>
-
-
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','./includes/google-analytics.js','ga');
-        ga('create', 'UA-45586344-1', 'shepherd.org');
-        ga('send', 'pageview');
-    </script>
-
 </head>
 <body>
-        <!--
-        <img src="./pics/shepherd.png" width="137px" height="140px" />
-        <p>I'm hosted with GitHub Pages.212d331</p>
-        -->
-
-    <script>
-        if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent)){
-            document.body.classList.add('mobile');
-        }
-    </script>
-
-    <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Pursuing Immortality</a>
+    <main class="page">
+        <header class="site-header">
+            <div>
+                <p class="site-kicker">ShepherdQR.github.io</p>
+                <h1 class="site-title">Pursuing Immortality</h1>
+                <p class="site-subtitle">Software, algorithms, reading notes, poems, and durable thoughts.</p>
+                <nav class="site-nav" aria-label="Primary">
+                    <a href="https://github.com/ShepherdQR">GitHub</a>
+                </nav>
             </div>
+            <figure class="site-portrait">
+                <img src="./resources/pics/QirongZHANG.png" alt="Qirong Zhang">
+            </figure>
+        </header>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="https://github.com/ShepherdQR">GitHub</a></li>
-                    <!--
-                    <li><a href="mailto:EMAIL">联系</a></li>
-                    -->
-                </ul>
+        <section class="section intro-grid">
+            <div>
+                <h2 class="section-title">What's New</h2>
+                <ul class="note-list" id="latest-notes"></ul>
             </div>
-        </div>
-    </nav>
+            <div>
+                <h2 class="section-title">Collections</h2>
+                <div class="collection-grid" id="collections"></div>
+            </div>
+        </section>
 
-    <div class="outer">
-        <ul class="list-group" id="index-list">
-            <!-- 动态生成 -->
-        </ul>
-    </div>
+        <section class="section">
+            <h2 class="section-title">Selected Notes</h2>
+            <ul class="note-list" id="selected-notes"></ul>
+        </section>
 
-    <!-- 数据（最早加载，无依赖） -->
-    <script src="./index-data.js"></script>
+        <section class="section">
+            <h2 class="section-title">Archive</h2>
+            <ul class="archive-years" id="archive-years"></ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">All Notes</h2>
+            <ul class="all-notes" id="all-notes"></ul>
+        </section>
+
+        <footer class="footer">
+            Pursuing Immortality · Since 2020
+        </footer>
+    </main>
+
+    <script src="./homepage-data.js"></script>
     <script>
-        // 渲染列表（纯 JS，不依赖 jQuery）
-        (function() {
-            const list = document.getElementById('index-list');
-            if (!list || !window.INDEX_ITEMS) return;
+        (function () {
+            const data = window.HOMEPAGE_DATA || { items: [], stats: { byType: {}, years: {} } };
+            const items = data.items || [];
 
-            const sortedItems = [...INDEX_ITEMS];
+            function el(tag, className, text) {
+                const node = document.createElement(tag);
+                if (className) node.className = className;
+                if (text !== undefined) node.textContent = text;
+                return node;
+            }
 
-            // const sortedItems = [...INDEX_ITEMS].sort((a, b) => 
-            //     new Date(b.date) - new Date(a.date)
-            // );
-
-            sortedItems.forEach(item => {
-                const li = document.createElement('li');
-                li.className = 'list-group-item title';
-
-                const dateDiv = document.createElement('div');
-                dateDiv.className = 'date';
-                dateDiv.textContent = item.date;
-
-                const link = document.createElement('a');
+            function renderNote(item, compact) {
+                const li = el('li', 'note-item');
+                li.dataset.type = item.type;
+                const date = el('time', 'note-date', item.published);
+                date.dateTime = item.published;
+                const main = el('div', 'note-main');
+                const link = el('a', 'note-title', item.title);
                 link.href = item.href;
-                link.textContent = item.text;
+                main.appendChild(link);
+                if (!compact) {
+                    const metaText = item.source === 'legacy-index'
+                        ? `${item.type} · 记录 ${item.published}`
+                        : `${item.type} · 创建 ${item.createdDate} · 更新 ${item.updatedDate}`;
+                    main.appendChild(el('div', 'note-meta', metaText));
+                }
+                li.appendChild(date);
+                li.appendChild(main);
+                return li;
+            }
 
-                li.appendChild(dateDiv);
-                li.appendChild(document.createElement('br'));
-                li.appendChild(link);
-                list.appendChild(li);
-            });
+            function renderLatest() {
+                const list = document.getElementById('latest-notes');
+                items.slice(0, 7).forEach(item => list.appendChild(renderNote(item, false)));
+            }
+
+            function renderCollections() {
+                const host = document.getElementById('collections');
+                const names = ['Thoughts', 'Books', 'Study', 'Videos'];
+                names.forEach(name => {
+                    const link = el('a', 'collection-link');
+                    link.href = `#type-${name}`;
+                    link.appendChild(el('span', 'collection-name', name));
+                    link.appendChild(el('span', 'collection-count', `${data.stats.byType[name] || 0} notes`));
+                    host.appendChild(link);
+                });
+            }
+
+            function renderSelected() {
+                const list = document.getElementById('selected-notes');
+                const preferred = [
+                    ['Books', '0122'],
+                    ['Books', '0121'],
+                    ['Books', '0096'],
+                    ['Thoughts', '0012'],
+                    ['Thoughts', '0008']
+                ];
+                preferred
+                    .map(([type, id]) => items.find(item => item.type === type && item.id === id))
+                    .filter(Boolean)
+                    .forEach(item => list.appendChild(renderNote(item, false)));
+            }
+
+            function renderArchive() {
+                const list = document.getElementById('archive-years');
+                Object.keys(data.stats.years || {}).forEach(year => {
+                    const li = el('li');
+                    const link = el('a', null, `${year} (${data.stats.years[year]})`);
+                    link.href = `#year-${year}`;
+                    li.appendChild(link);
+                    list.appendChild(li);
+                });
+            }
+
+            function renderAll() {
+                const list = document.getElementById('all-notes');
+                let activeYear = '';
+                const seenTypes = new Set();
+                items.forEach(item => {
+                    const year = item.published.slice(0, 4);
+                    const li = el('li');
+                    li.id = activeYear !== year ? `year-${year}` : '';
+                    if (!seenTypes.has(item.type)) {
+                        const anchor = el('span', 'anchor-target');
+                        anchor.id = `type-${item.type}`;
+                        li.appendChild(anchor);
+                        seenTypes.add(item.type);
+                    }
+                    activeYear = year;
+                    li.appendChild(el('span', 'all-note-date', `${item.published} · ${item.type} · 更新 ${item.updatedDate}`));
+                    const link = el('a', null, item.title);
+                    link.href = item.href;
+                    li.appendChild(link);
+                    list.appendChild(li);
+                });
+            }
+
+            renderLatest();
+            renderCollections();
+            renderSelected();
+            renderArchive();
+            renderAll();
         })();
     </script>
-
-    <!-- jQuery 必须在 Bootstrap 之前 -->
-    <!-- 如果使用了 CDN 在 head 中，这里可以保留原有 jquery-main.js 但不会冲突；
-    如果 jquery-main.js 就是 jQuery 本身，则删除下面的 CDN 引用，只保留该文件即可 -->
-    <script src="./includes/jquery-4.0.0.min.js"></script>
-    <script src="./includes/bootstrap-main.js"></script>
 </body>
 </html>

@@ -1,7 +1,21 @@
-
-
-
-
+---
+type: Books
+id: "0121"
+title: "TuringAward"
+created: "2025-04-03"
+created_date: "2025-04-03"
+published: "2025-04-03"
+updated: "2025-04-04 00:30:37"
+updated_date: "2025-04-04"
+slug: "turingaward"
+status: "published"
+source:
+  path: "qrthoughts/year2025/month4/[Books][0121][TuringAward].md"
+  date_source:
+    created: "published-fallback"
+    published: "index-data"
+    updated: "sibling-html-comment"
+---
 # 1986 - Robert Tarjan
 
 打孔。fortran。高中。在斯坦福认为AI比较模糊，更感兴趣复杂性理论。

@@ -1,3 +1,21 @@
+---
+type: Thoughts
+id: "0003"
+title: "Rain"
+created: "2020-02-25 00:03:17"
+created_date: "2020-02-25"
+published: "2020-02-24"
+updated: "2026-05-02 17:33:10"
+updated_date: "2026-05-02"
+slug: "rain"
+status: "published"
+source:
+  path: "qrthoughts/year2020/month2/[Thoughts][0003][Rain].md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2020-02-25 00:03:17

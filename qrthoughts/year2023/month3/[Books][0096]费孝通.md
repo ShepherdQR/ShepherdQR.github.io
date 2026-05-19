@@ -1,3 +1,21 @@
+---
+type: Books
+id: "0096"
+title: "费孝通"
+created: "2023-03-30 20:28:56"
+created_date: "2023-03-30"
+published: "2023-03-20"
+updated: "2026-05-02 17:53:29"
+updated_date: "2026-05-02"
+slug: "books-0096"
+status: "published"
+source:
+  path: "qrthoughts/year2023/month3/[Books][0096]费孝通.md"
+  date_source:
+    created: "markdown-comment"
+    published: "index-data"
+    updated: "markdown-comment"
+---
 <!---------------------------------------------------------
  - Author: Qirong ZHANG
  - Date: 2023-03-30 20:28:56
