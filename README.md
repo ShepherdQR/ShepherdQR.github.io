@@ -16,9 +16,10 @@ The site is Markdown-first:
 3. `scripts/build_site.py` reads Markdown and regenerates site data.
 4. `homepage-data.js` drives the homepage, archive pages, category pages, adjacent article links, and `stats.html`.
 5. Stable article URLs are generated as committed static pages, such as `/books/0056/` and `/thoughts/0012/`.
-6. `render.html?md=...` remains as a legacy and diagnostic reader.
+6. `sitemap.xml` and `includes/atom.xml` are generated from the same Markdown metadata.
+7. `render.html?md=...` remains as a legacy and diagnostic reader.
 
-Because GitHub Pages serves this repository as static files, generated files such as `homepage-data.js` and `books/0056/index.html` must be committed after a build.
+Because GitHub Pages serves this repository as static files, generated files such as `homepage-data.js`, `sitemap.xml`, `includes/atom.xml`, and `books/0056/index.html` must be committed after a build.
 
 ## Daily Workflow
 
@@ -93,6 +94,8 @@ python scripts/build_site.py
 This regenerates:
 
 - `homepage-data.js`
+- `sitemap.xml`
+- `includes/atom.xml`
 - `/books/NNNN/index.html`
 - `/thoughts/NNNN/index.html`
 - `/study/NNNN/index.html`
@@ -225,6 +228,8 @@ Important source files:
 - `includes/js/archive-page.js`: archive and category page renderer
 - `includes/js/stats-page.js`: global statistics page renderer
 - `homepage-data.js`: generated site data
+- `sitemap.xml`: generated search-engine discovery file
+- `includes/atom.xml`: generated Atom feed
 - `render.html`: legacy Markdown reader
 
 Generated public entry points:

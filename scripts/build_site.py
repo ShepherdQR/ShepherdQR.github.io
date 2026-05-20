@@ -4,16 +4,29 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import json
 import sys
 from pathlib import Path
+from xml.sax.saxutils import escape as xml_escape
 
 import generate_homepage_data
 import normalize_markdown_front_matter
 
 
 ARTICLE_TYPES = {"Books", "Thoughts", "Study", "Videos"}
+SITE_TITLE = "ShepherdQR.github.io"
+DEFAULT_SITE_BASE_URL = "https://shepherdqr.github.io"
+STATIC_SITEMAP_PATHS = [
+    "/",
+    "/archive.html",
+    "/stats.html",
+    "/books.html",
+    "/thoughts.html",
+    "/study.html",
+    "/videos.html",
+]
 
 
 def root_relative_prefix(alias_path: Path, root: Path) -> str:
@@ -130,11 +143,115 @@ def write_article_alias_pages(root: Path, items: list[dict[str, str]]) -> int:
     return len(alias_items)
 
 
+def site_base_url(root: Path) -> str:
+    cname_path = root / "CNAME"
+    if cname_path.exists():
+        domain = cname_path.read_text(encoding="utf-8", errors="replace").strip()
+        if domain:
+            return "https://" + domain.rstrip("/")
+    return DEFAULT_SITE_BASE_URL
+
+
+def absolute_url(base_url: str, path: str) -> str:
+    if not path.startswith("/"):
+        path = "/" + path
+    return base_url.rstrip("/") + path
+
+
+def latest_date(items: list[dict[str, str]]) -> str:
+    return max(
+        (item.get("updatedDate") or item.get("published") or item.get("createdDate") for item in items),
+        default=dt.date.today().isoformat(),
+    )
+
+
+def atom_datetime(value: str) -> str:
+    value = (value or "").strip()
+    try:
+        if len(value) == 10:
+            parsed = dt.datetime.fromisoformat(value + "T00:00:00")
+        else:
+            parsed = dt.datetime.fromisoformat(value.replace(" ", "T"))
+    except ValueError:
+        parsed = dt.datetime.fromisoformat(dt.date.today().isoformat() + "T00:00:00")
+    return parsed.replace(tzinfo=dt.timezone(dt.timedelta(hours=8))).isoformat()
+
+
+def build_sitemap_xml(items: list[dict[str, str]], base_url: str) -> str:
+    site_lastmod = latest_date(items)
+    urls = [
+        {"loc": absolute_url(base_url, path), "lastmod": site_lastmod}
+        for path in STATIC_SITEMAP_PATHS
+    ]
+    urls.extend(
+        {
+            "loc": absolute_url(base_url, item["canonicalHref"]),
+            "lastmod": item.get("updatedDate") or item.get("published") or site_lastmod,
+        }
+        for item in items
+        if item.get("source") == "markdown" and item.get("canonicalHref")
+    )
+
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+    for entry in urls:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{xml_escape(entry['loc'])}</loc>")
+        lines.append(f"    <lastmod>{xml_escape(entry['lastmod'])}</lastmod>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
+    return "\n".join(lines) + "\n"
+
+
+def build_atom_xml(items: list[dict[str, str]], base_url: str) -> str:
+    updated = atom_datetime(latest_date(items))
+    feed_url = absolute_url(base_url, "/includes/atom.xml")
+    home_url = absolute_url(base_url, "/")
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    lines.append('<feed xmlns="http://www.w3.org/2005/Atom">')
+    lines.append(f"  <title>{xml_escape(SITE_TITLE)}</title>")
+    lines.append(f'  <link href="{xml_escape(home_url)}" />')
+    lines.append(f'  <link rel="self" href="{xml_escape(feed_url)}" />')
+    lines.append(f"  <id>{xml_escape(home_url)}</id>")
+    lines.append(f"  <updated>{xml_escape(updated)}</updated>")
+    lines.append("  <author>")
+    lines.append("    <name>Qirong Zhang</name>")
+    lines.append("  </author>")
+
+    for item in items[:50]:
+        if item.get("source") != "markdown" or not item.get("canonicalHref"):
+            continue
+        url = absolute_url(base_url, item["canonicalHref"])
+        published = atom_datetime(item.get("published", ""))
+        entry_updated = atom_datetime(item.get("updated", item.get("updatedDate", "")))
+        summary = item.get("summary") or f"{item.get('type', 'Note')} note {item.get('id', '')}"
+        lines.append("  <entry>")
+        lines.append(f"    <title>{xml_escape(item.get('title', 'Untitled'))}</title>")
+        lines.append(f'    <link href="{xml_escape(url)}" />')
+        lines.append(f"    <id>{xml_escape(url)}</id>")
+        lines.append(f"    <published>{xml_escape(published)}</published>")
+        lines.append(f"    <updated>{xml_escape(entry_updated)}</updated>")
+        lines.append(f"    <summary>{xml_escape(summary)}</summary>")
+        lines.append("  </entry>")
+
+    lines.append("</feed>")
+    return "\n".join(lines) + "\n"
+
+
+def write_site_indexes(root: Path, items: list[dict[str, str]]) -> None:
+    base_url = site_base_url(root)
+    (root / "sitemap.xml").write_text(build_sitemap_xml(items, base_url), encoding="utf-8", newline="\n")
+    atom_path = root / "includes" / "atom.xml"
+    atom_path.parent.mkdir(parents=True, exist_ok=True)
+    atom_path.write_text(build_atom_xml(items, base_url), encoding="utf-8", newline="\n")
+
+
 def build_generated_site(root: Path, out_name: str, include_legacy_index: bool = False) -> tuple[int, int]:
     items = generate_homepage_data.collect_items(root, include_legacy_index=include_legacy_index)
     out = root / out_name
     out.write_text(generate_homepage_data.build_js(items), encoding="utf-8", newline="\n")
     alias_count = write_article_alias_pages(root, items)
+    write_site_indexes(root, items)
     return len(items), alias_count
 
 
@@ -194,6 +311,8 @@ def main(argv: list[str]) -> int:
     )
     print(f"Generated {root / args.out} with {item_count} Markdown-backed items")
     print(f"Generated {alias_count} article alias pages")
+    print("Generated sitemap.xml")
+    print("Generated includes/atom.xml")
     return 0
 
 

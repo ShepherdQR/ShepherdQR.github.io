@@ -8,7 +8,6 @@ explicitly for diagnostics or transition work, but it is not used by default.
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import json
 import re
 import sys
@@ -201,9 +200,13 @@ def build_js(items: list[dict[str, str]]) -> str:
     for item in items:
         by_type[item["type"]] = by_type.get(item["type"], 0) + 1
         years[item["published"][:4]] = years.get(item["published"][:4], 0) + 1
+    generated_at = max(
+        (item.get("updatedDate") or item.get("published") or item.get("createdDate") for item in items),
+        default="",
+    )
 
     payload = {
-        "generatedAt": dt.date.today().isoformat(),
+        "generatedAt": generated_at,
         "items": items,
         "stats": {
             "total": len(items),
