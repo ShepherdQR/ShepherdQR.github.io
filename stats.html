@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./includes/css/archive.css">
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
-    <title>Books - Pursuing Immortality</title>
+    <title>Stats - Pursuing Immortality</title>
 </head>
-<body data-collection="Books">
+<body>
     <main class="archive-page">
         <header class="archive-header">
             <p class="archive-kicker">ShepherdQR.github.io</p>
-            <h1>Books</h1>
+            <h1>Stats</h1>
             <p id="archive-summary" class="archive-summary"></p>
-            <nav class="archive-nav" aria-label="Books navigation">
+            <nav class="archive-nav" aria-label="Stats navigation">
                 <a href="./index.html">Home</a>
                 <a href="./archive.html" data-nav="Archive">Archive</a>
                 <a href="./stats.html" data-nav="Stats">Stats</a>
@@ -25,14 +25,24 @@
             </nav>
         </header>
 
-        <section class="archive-section" aria-label="Book notes">
-            <div id="archive-list"></div>
+        <section class="archive-section" aria-label="Site statistics">
+            <div id="stats-overview" class="stats-overview"></div>
+
+            <section class="stats-block" aria-labelledby="stats-types-heading">
+                <h2 id="stats-types-heading">Collections</h2>
+                <div id="stats-types"></div>
+            </section>
+
+            <section class="stats-block" aria-labelledby="stats-years-heading">
+                <h2 id="stats-years-heading">Years</h2>
+                <div id="stats-years"></div>
+            </section>
         </section>
 
-        <footer class="archive-footer">Pursuing Immortality · Since 2020</footer>
+        <footer class="archive-footer">Pursuing Immortality 路 Since 2020</footer>
     </main>
 
     <script src="./homepage-data.js"></script>
-    <script src="./includes/js/archive-page.js"></script>
+    <script src="./includes/js/stats-page.js"></script>
 </body>
 </html>

@@ -65,6 +65,7 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
             <a class="article-brand" href="{asset('index.html')}">ShepherdQR.github.io</a>
             <div class="article-nav-links">
                 <a href="{asset('archive.html')}">Archive</a>
+                <a href="{asset('stats.html')}">Stats</a>
                 <a href="{asset('books.html')}">Books</a>
                 <a href="{asset('thoughts.html')}">Thoughts</a>
             </div>
@@ -81,6 +82,7 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
                 <div class="article-footer-links">
                     <a href="{asset('index.html')}">Home</a>
                     <a href="{asset('archive.html')}">Archive</a>
+                    <a href="{asset('stats.html')}">Stats</a>
                     <a href="{asset('books.html')}">Books</a>
                     <a href="{asset('thoughts.html')}">Thoughts</a>
                     <a href="{asset('study.html')}">Study</a>
