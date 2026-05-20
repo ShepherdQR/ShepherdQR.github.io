@@ -1,3 +1,12 @@
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2026-05-12 22:42:37
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-16 20:05:44
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Thoughts
 id: "0012"
@@ -16,18 +25,6 @@ source:
     published: "index-data"
     updated: "markdown-comment"
 ---
-<!---------------------------------------------------------
- - Author: Qirong ZHANG
- - Date: 2026-05-12 22:42:37
- - Github: https://github.com/ShepherdQR
- - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-16 20:05:44
- - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
- - SPDX-License-Identifier: LGPL-3.0-or-later.
- --------------------------------------------------------->
-
-
-
 # [Thoughts][0012][对“生存还是毁灭”这一问题的认识]
 
 ## 这个问题的终极认识【持续更新】

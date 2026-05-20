@@ -101,6 +101,7 @@
     function parseMarkdownDocument(rawText) {
         const meta = {};
         let body = rawText.replace(/^\uFEFF/, '');
+        body = stripLeadingHtmlComments(body);
         const frontMatterMatch = body.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
 
         if (frontMatterMatch) {
@@ -117,9 +118,12 @@
             body = body.slice(frontMatterMatch[0].length);
         }
 
-        body = body.replace(/^<!---[\s\S]*?-->\s*/, '');
-        body = body.replace(/^<!--[\s\S]*?-->\s*/, '');
+        body = stripLeadingHtmlComments(body);
         return { meta, body };
+    }
+
+    function stripLeadingHtmlComments(source) {
+        return source.replace(/^(?:<!--[\s\S]*?-->\s*)+/, '');
     }
 
     function formatArticleMeta(meta) {

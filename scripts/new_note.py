@@ -17,6 +17,9 @@ import build_site
 
 TYPE_VALUES = ("Books", "Thoughts", "Study", "Videos")
 FRONT_MATTER_FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
+FRONT_MATTER_RE = re.compile(
+    r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
+)
 
 
 def parse_existing_id(path: Path, content_type: str) -> int | None:
@@ -35,10 +38,7 @@ def parse_yaml_scalar(value: str) -> str:
 
 def parse_front_matter_fields(path: Path) -> dict[str, str]:
     text = path.read_text(encoding="utf-8", errors="replace")
-    if not text.startswith("---"):
-        return {}
-
-    match = re.match(r"^---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n", text)
+    match = FRONT_MATTER_RE.match(text)
     if not match:
         return {}
 
@@ -96,6 +96,24 @@ def split_values(value: str | None) -> list[str]:
     return [part.strip() for part in value.split(",") if part.strip()]
 
 
+def build_header_comment(now: str) -> str:
+    year = now[:4]
+    return "\n".join(
+        [
+            "<!---------------------------------------------------------",
+            " - Author: Qirong ZHANG",
+            f" - Date: {now}",
+            " - Github: https://github.com/ShepherdQR",
+            " - LastEditors: Qirong ZHANG",
+            f" - LastEditTime: {now}",
+            f" - Copyright (c) {year} Qirong ZHANG. All rights reserved.",
+            " - SPDX-License-Identifier: LGPL-3.0-or-later.",
+            " --------------------------------------------------------->",
+            "",
+        ]
+    )
+
+
 def build_markdown(
     content_type: str,
     content_id: str,
@@ -140,7 +158,7 @@ def build_markdown(
             "",
         ]
     )
-    return "\n".join(lines)
+    return build_header_comment(now) + "\n".join(lines)
 
 
 def open_note(path: Path) -> None:

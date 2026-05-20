@@ -12,7 +12,7 @@ Public site:
 The site is Markdown-first:
 
 1. Source notes live under `qrthoughts/yearYYYY/monthM/`.
-2. Each note has YAML front matter.
+2. Each note may start with an HTML file-header comment, followed by YAML front matter.
 3. `scripts/build_site.py` reads Markdown and regenerates site data.
 4. `homepage-data.js` drives the homepage, archive pages, category pages, adjacent article links, and `stats.html`.
 5. Stable article URLs are generated as committed static pages, such as `/books/0056/` and `/thoughts/0012/`.
@@ -42,7 +42,7 @@ The command will:
 
 - choose the next four-digit id for that type;
 - create a Markdown file under `qrthoughts/yearYYYY/monthM/`;
-- write standard front matter;
+- write the top file-header comment and standard front matter;
 - regenerate `homepage-data.js`;
 - regenerate stable article pages such as `/thoughts/0013/`.
 
@@ -161,11 +161,20 @@ https://zqr.world/thoughts/0013/
 
 Replace `thoughts/0013` with the generated type and id.
 
-## Markdown Front Matter
+## Markdown Header And Front Matter
 
 Every public note should keep this shape:
 
-```yaml
+```markdown
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2026-05-20 21:30:00
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-20 21:30:00
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Thoughts
 id: "0013"

@@ -1,3 +1,12 @@
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2020-03-29 20:59:46
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-02 17:40:27
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Thoughts
 id: "0006"
@@ -16,16 +25,6 @@ source:
     published: "index-data"
     updated: "markdown-comment"
 ---
-<!---------------------------------------------------------
- - Author: Qirong ZHANG
- - Date: 2020-03-29 20:59:46
- - Github: https://github.com/ShepherdQR
- - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-02 17:40:27
- - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
- - SPDX-License-Identifier: LGPL-3.0-or-later.
- --------------------------------------------------------->
-
 # A little poem
 
 

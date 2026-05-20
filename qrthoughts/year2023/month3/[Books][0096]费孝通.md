@@ -1,3 +1,12 @@
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2023-03-30 20:28:56
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-02 17:53:29
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Books
 id: "0096"
@@ -16,16 +25,6 @@ source:
     published: "index-data"
     updated: "markdown-comment"
 ---
-<!---------------------------------------------------------
- - Author: Qirong ZHANG
- - Date: 2023-03-30 20:28:56
- - Github: https://github.com/ShepherdQR
- - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-02 17:53:29
- - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
- - SPDX-License-Identifier: LGPL-3.0-or-later.
- --------------------------------------------------------->
-
 # 乡土中国 【first finished on 2023-03-30 20:28:56】
 
 

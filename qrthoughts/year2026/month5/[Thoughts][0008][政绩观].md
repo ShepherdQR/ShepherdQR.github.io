@@ -1,3 +1,12 @@
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2026-05-02 15:33:56
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-16 20:03:40
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Thoughts
 id: "0008"
@@ -16,17 +25,6 @@ source:
     published: "index-data"
     updated: "markdown-comment"
 ---
-<!---------------------------------------------------------
- - Author: Qirong ZHANG
- - Date: 2026-05-02 15:33:56
- - Github: https://github.com/ShepherdQR
- - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-16 20:03:40
- - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
- - SPDX-License-Identifier: LGPL-3.0-or-later.
- --------------------------------------------------------->
-
-
 # 政绩观-V1，研讨发言材料，3分钟【20260502】
 
 结合正与反，好与坏，未来与过去的，典型案例学习，我发现：向上的路和向下的路，并不是同一条路。

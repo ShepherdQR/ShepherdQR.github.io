@@ -15,7 +15,7 @@
 The public article system now uses a Markdown-first workflow:
 
 1. Add or edit a Markdown file under `qrthoughts/`.
-2. Keep required front matter in the Markdown file.
+2. Keep the file-header comment at the start of the Markdown file, followed by required front matter.
 3. Run the site build script.
 4. The build script scans Markdown and regenerates `homepage-data.js`.
 5. The build generates clean article URLs such as `/thoughts/0012/`.
@@ -67,9 +67,18 @@ python scripts/build_site.py --normalize
 
 ## 4. Required Markdown Contract
 
-Every public note must contain:
+Every public note must contain a top file-header comment when present, followed by front matter:
 
-```yaml
+```markdown
+<!---------------------------------------------------------
+ - Author: Qirong ZHANG
+ - Date: 2026-05-20 10:00:00
+ - Github: https://github.com/ShepherdQR
+ - LastEditors: Qirong ZHANG
+ - LastEditTime: 2026-05-20 10:00:00
+ - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
+ - SPDX-License-Identifier: LGPL-3.0-or-later.
+ --------------------------------------------------------->
 ---
 type: Thoughts
 id: "0013"

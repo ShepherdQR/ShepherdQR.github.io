@@ -18,6 +18,8 @@ from pathlib import Path
 
 
 TYPE_VALUES = {"Books", "Thoughts", "Study", "Videos"}
+LEADING_COMMENTS_RE = re.compile(r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*")
+FRONT_MATTER_RE = re.compile(r"^---\s*\n")
 
 
 @dataclass
@@ -57,7 +59,20 @@ def normalize_rel(path: Path, root: Path) -> str:
 
 
 def has_front_matter(text: str) -> bool:
-    return text.startswith("---\n") or text.startswith("---\r\n")
+    _, body = split_leading_comments(text)
+    return bool(FRONT_MATTER_RE.match(body))
+
+
+def split_leading_comments(text: str) -> tuple[str, str]:
+    match = LEADING_COMMENTS_RE.match(text)
+    if not match:
+        return "", text
+    return text[: match.end()], text[match.end():]
+
+
+def insert_front_matter_after_leading_comments(note: MarkdownNote) -> str:
+    comments, body = split_leading_comments(note.body)
+    return comments + build_front_matter(note) + body.lstrip()
 
 
 def parse_index_data(root: Path) -> dict[tuple[str, str], IndexEntry]:
@@ -271,7 +286,7 @@ def main(argv: list[str]) -> int:
 
     if args.write:
         for note in notes:
-            write_text(note.path, build_front_matter(note) + note.body.lstrip())
+            write_text(note.path, insert_front_matter_after_leading_comments(note))
         print(f"Updated Markdown files: {len(notes)}")
 
     return 0

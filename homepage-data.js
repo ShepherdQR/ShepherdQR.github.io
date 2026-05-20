@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-05-16",
+  "generatedAt": "2026-05-20",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0013",
+      "title": "关于token和工具的观察与思考",
+      "created": "2026-05-20 21:27:40",
+      "createdDate": "2026-05-20",
+      "published": "2026-05-20",
+      "updated": "2026-05-20 21:27:40",
+      "updatedDate": "2026-05-20",
+      "slug": "token",
+      "href": "/thoughts/0013/",
+      "canonicalHref": "/thoughts/0013/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0013%5D%5B%E5%85%B3%E4%BA%8Etoken%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E8%A7%82%E5%AF%9F%E4%B8%8E%E6%80%9D%E8%80%83%5D",
+      "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0013][关于token和工具的观察与思考].md",
+      "label": "[Thoughts][0013][关于token和工具的观察与思考]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0012",
@@ -2332,15 +2349,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 137,
+    "total": 138,
     "byType": {
-      "Thoughts": 12,
+      "Thoughts": 13,
       "Books": 122,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 6,
+      "2026": 7,
       "2025": 1,
       "2024": 2,
       "2023": 36,

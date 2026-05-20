@@ -20,6 +20,9 @@ ARTICLE_CONFIG_RE = re.compile(
     re.I,
 )
 FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
+FRONT_MATTER_RE = re.compile(
+    r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
+)
 ARTICLE_TYPES = {"Books", "Thoughts", "Study", "Videos"}
 APPROVED_STATUSES = {"published", "draft", "doing", "archived"}
 STATIC_SITEMAP_PATHS = {
@@ -76,9 +79,7 @@ def parse_scalar(value: str) -> str:
 
 
 def parse_front_matter(text: str) -> dict[str, str] | None:
-    if not text.startswith("---"):
-        return None
-    match = re.match(r"^---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n", text)
+    match = FRONT_MATTER_RE.match(text)
     if not match:
         return None
 

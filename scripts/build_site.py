@@ -300,7 +300,7 @@ def main(argv: list[str]) -> int:
         for note in notes:
             normalize_markdown_front_matter.write_text(
                 note.path,
-                normalize_markdown_front_matter.build_front_matter(note) + note.body.lstrip(),
+                normalize_markdown_front_matter.insert_front_matter_after_leading_comments(note),
             )
         print(f"Updated Markdown files: {len(notes)}")
 

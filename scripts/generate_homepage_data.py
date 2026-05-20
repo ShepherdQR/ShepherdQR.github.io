@@ -16,6 +16,9 @@ from urllib.parse import quote
 
 
 FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
+FRONT_MATTER_RE = re.compile(
+    r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
+)
 INDEX_ITEM_RE = re.compile(
     r"\{\s*date:\s*'(?P<date>[^']+)'\s*,\s*href:\s*'(?P<href>(?:\\'|[^'])*)'\s*,\s*text:\s*(?:'(?P<text1>(?:\\'|[^'])*)'|\"(?P<text2>(?:\\\"|[^\"])*)\")",
     re.S,
@@ -52,9 +55,7 @@ def parse_type_id_title(value: str) -> tuple[str, str, str] | None:
 
 
 def parse_front_matter(text: str) -> dict[str, str] | None:
-    if not text.startswith("---"):
-        return None
-    match = re.match(r"^---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n", text)
+    match = FRONT_MATTER_RE.match(text)
     if not match:
         return None
 
