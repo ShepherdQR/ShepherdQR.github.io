@@ -4,11 +4,14 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import quote, unquote, urlparse
+from xml.etree import ElementTree as ET
 
 
 DATA_RE = re.compile(r"^\s*window\.HOMEPAGE_DATA\s*=\s*(?P<payload>[\s\S]*?)\s*;\s*$")
@@ -16,11 +19,77 @@ ARTICLE_CONFIG_RE = re.compile(
     r'<script\s+type="application/json"\s+id="article-config"\s*>(?P<payload>[\s\S]*?)</script>',
     re.I,
 )
+FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
 ARTICLE_TYPES = {"Books", "Thoughts", "Study", "Videos"}
+APPROVED_STATUSES = {"published", "draft", "doing", "archived"}
+STATIC_SITEMAP_PATHS = {
+    "/",
+    "/archive.html",
+    "/stats.html",
+    "/books.html",
+    "/thoughts.html",
+    "/study.html",
+    "/videos.html",
+}
+REQUIRED_ITEM_FIELDS = {
+    "type",
+    "id",
+    "title",
+    "created",
+    "createdDate",
+    "published",
+    "updated",
+    "updatedDate",
+    "slug",
+    "href",
+    "canonicalHref",
+    "legacyHref",
+    "sourcePath",
+    "label",
+    "source",
+}
+REQUIRED_FRONT_MATTER_FIELDS = {
+    "type",
+    "id",
+    "title",
+    "created",
+    "created_date",
+    "published",
+    "updated",
+    "updated_date",
+    "slug",
+    "status",
+}
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DATETIME_RE = re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")
 
 
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
+
+
+def parse_scalar(value: str) -> str:
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] == '"':
+        return value[1:-1].replace('\\"', '"').replace("\\\\", "\\")
+    return value
+
+
+def parse_front_matter(text: str) -> dict[str, str] | None:
+    if not text.startswith("---"):
+        return None
+    match = re.match(r"^---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n", text)
+    if not match:
+        return None
+
+    data: dict[str, str] = {}
+    for line in match.group("yaml").splitlines():
+        if line.startswith(" ") or not line.strip():
+            continue
+        field = FIELD_RE.match(line)
+        if field:
+            data[field.group("key")] = parse_scalar(field.group("value"))
+    return data
 
 
 def load_homepage_data(root: Path) -> dict:
@@ -41,8 +110,43 @@ def expected_clean_href(item: dict[str, str]) -> str:
     return f"/{item.get('type', '').lower()}/{item.get('id', '')}/"
 
 
+def expected_legacy_href(item: dict[str, str]) -> str:
+    source_path = item.get("sourcePath", "")
+    if source_path.lower().endswith(".md"):
+        source_path = source_path[:-3]
+    return "render.html?md=" + quote("/" + source_path.lstrip("/"), safe="/")
+
+
 def is_clean_href(href: str) -> bool:
     return bool(re.fullmatch(r"/[a-z]+/\d{4}/", href))
+
+
+def parse_date(value: str, label: str, errors: list[str], item_label: str) -> dt.date | None:
+    if not value:
+        return None
+    if not DATE_RE.fullmatch(value):
+        errors.append(f"{item_label}: {label} is not YYYY-MM-DD: {value}")
+        return None
+    try:
+        return dt.date.fromisoformat(value)
+    except ValueError:
+        errors.append(f"{item_label}: {label} is not a valid date: {value}")
+        return None
+
+
+def parse_datetime(value: str, label: str, errors: list[str], item_label: str) -> dt.datetime | None:
+    if not value:
+        return None
+    if DATE_RE.fullmatch(value):
+        return dt.datetime.strptime(value, "%Y-%m-%d")
+    if not DATETIME_RE.fullmatch(value):
+        errors.append(f"{item_label}: {label} is not YYYY-MM-DD or YYYY-MM-DD HH:MM:SS: {value}")
+        return None
+    try:
+        return dt.datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        errors.append(f"{item_label}: {label} is not a valid datetime: {value}")
+        return None
 
 
 def load_article_config(alias_path: Path) -> dict[str, str]:
@@ -58,10 +162,30 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
     errors: list[str] = []
     label = f"{item.get('type', '<missing-type>')} {item.get('id', '<missing-id>')}"
 
+    missing = sorted(field for field in REQUIRED_ITEM_FIELDS if not item.get(field))
+    if missing:
+        errors.append(f"{label}: missing required item field(s): {', '.join(missing)}")
+
     href = item.get("href")
     canonical = item.get("canonicalHref")
     legacy = item.get("legacyHref")
     source_path = item.get("sourcePath")
+
+    if item.get("id") and not re.fullmatch(r"\d{4}", item.get("id", "")):
+        errors.append(f"{label}: id is not four digits: {item.get('id')}")
+
+    created_date = parse_date(item.get("createdDate", ""), "createdDate", errors, label)
+    published = parse_date(item.get("published", ""), "published", errors, label)
+    updated_date = parse_date(item.get("updatedDate", ""), "updatedDate", errors, label)
+    created = parse_datetime(item.get("created", ""), "created", errors, label)
+    updated = parse_datetime(item.get("updated", ""), "updated", errors, label)
+
+    if created and created_date and created.date() != created_date:
+        errors.append(f"{label}: created date disagrees with createdDate")
+    if updated and updated_date and updated.date() != updated_date:
+        errors.append(f"{label}: updated date disagrees with updatedDate")
+    if created_date and updated_date and created_date > updated_date:
+        errors.append(f"{label}: createdDate is after updatedDate")
 
     if not href:
         errors.append(f"{label}: missing href")
@@ -77,6 +201,13 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
         errors.append(f"{label}: missing legacyHref")
     elif not legacy.startswith("render.html?md="):
         errors.append(f"{label}: legacyHref is not render.html?md: {legacy}")
+    elif source_path:
+        legacy_md = unquote(urlparse(legacy).query.removeprefix("md="))
+        expected_md = "/" + source_path.removesuffix(".md").lstrip("/")
+        if legacy_md != expected_md:
+            errors.append(f"{label}: legacyHref md does not match sourcePath: {legacy_md} != {expected_md}")
+        if legacy != expected_legacy_href(item):
+            errors.append(f"{label}: legacyHref is not the canonical sourcePath href: {legacy}")
 
     if not source_path:
         errors.append(f"{label}: missing sourcePath")
@@ -84,6 +215,10 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
         md_path = root / source_path.lstrip("/")
         if not md_path.exists():
             errors.append(f"{label}: sourcePath does not exist: {source_path}")
+        elif md_path.suffix.lower() != ".md":
+            errors.append(f"{label}: sourcePath is not a Markdown file: {source_path}")
+        elif f"[{item.get('type')}][{item.get('id')}]" not in md_path.name:
+            errors.append(f"{label}: sourcePath filename does not contain matching type/id: {source_path}")
 
     if item.get("type") not in ARTICLE_TYPES:
         errors.append(f"{label}: unsupported article type for alias page: {item.get('type')}")
@@ -114,6 +249,207 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
     return errors
 
 
+def validate_front_matter(root: Path, item: dict[str, str]) -> list[str]:
+    errors: list[str] = []
+    label = f"{item.get('type', '<missing-type>')} {item.get('id', '<missing-id>')}"
+    source_path = item.get("sourcePath", "")
+    if not source_path:
+        return errors
+
+    md_path = root / source_path.lstrip("/")
+    if not md_path.exists():
+        return errors
+
+    data = parse_front_matter(read_text(md_path))
+    if data is None:
+        errors.append(f"{label}: source markdown is missing front matter")
+        return errors
+
+    missing = sorted(field for field in REQUIRED_FRONT_MATTER_FIELDS if not data.get(field))
+    if missing:
+        errors.append(f"{label}: missing required front matter field(s): {', '.join(missing)}")
+
+    status = data.get("status")
+    if status and status not in APPROVED_STATUSES:
+        errors.append(f"{label}: unsupported front matter status: {status}")
+    if status and item.get("source") == "markdown" and status != "published":
+        errors.append(f"{label}: homepage markdown item is not published in front matter: {status}")
+
+    field_pairs = [
+        ("type", "type"),
+        ("id", "id"),
+        ("title", "title"),
+        ("created", "created"),
+        ("created_date", "createdDate"),
+        ("published", "published"),
+        ("updated", "updated"),
+        ("updated_date", "updatedDate"),
+        ("slug", "slug"),
+    ]
+    for front_matter_field, item_field in field_pairs:
+        if data.get(front_matter_field) and item.get(item_field) != data.get(front_matter_field):
+            errors.append(
+                f"{label}: {item_field} differs from front matter {front_matter_field}: "
+                f"{item.get(item_field)} != {data.get(front_matter_field)}"
+            )
+
+    return errors
+
+
+def validate_markdown_sources(root: Path, homepage_keys: set[tuple[str, str]]) -> tuple[int, list[str]]:
+    errors: list[str] = []
+    checked = 0
+    for path in sorted((root / "qrthoughts").rglob("*.md")):
+        if path.name.lower() == "readme.md":
+            continue
+        checked += 1
+        rel = path.relative_to(root).as_posix()
+        data = parse_front_matter(read_text(path))
+        if data is None:
+            errors.append(f"{rel}: missing front matter")
+            continue
+
+        status = data.get("status")
+        if status and status not in APPROVED_STATUSES:
+            errors.append(f"{rel}: unsupported front matter status: {status}")
+        if status == "published":
+            missing = sorted(field for field in REQUIRED_FRONT_MATTER_FIELDS if not data.get(field))
+            if missing:
+                errors.append(f"{rel}: missing required front matter field(s): {', '.join(missing)}")
+            key = (data.get("type", ""), data.get("id", ""))
+            if key not in homepage_keys:
+                errors.append(f"{rel}: published markdown is missing from homepage-data.js")
+
+    return checked, errors
+
+
+def validate_uniqueness(items: list[dict[str, str]]) -> list[str]:
+    errors: list[str] = []
+    seen: dict[tuple[str, str], int] = {}
+    hrefs: dict[str, int] = {}
+    source_paths: dict[str, int] = {}
+    for index, item in enumerate(items):
+        key = (item.get("type", ""), item.get("id", ""))
+        if key in seen:
+            errors.append(f"{item.get('type')} {item.get('id')}: duplicate type/id with item #{seen[key] + 1}")
+        seen[key] = index
+
+        href = item.get("href")
+        if href:
+            if href in hrefs:
+                errors.append(f"{item.get('type')} {item.get('id')}: duplicate href with item #{hrefs[href] + 1}: {href}")
+            hrefs[href] = index
+
+        source_path = item.get("sourcePath")
+        if source_path:
+            if source_path in source_paths:
+                errors.append(
+                    f"{item.get('type')} {item.get('id')}: duplicate sourcePath with item "
+                    f"#{source_paths[source_path] + 1}: {source_path}"
+                )
+            source_paths[source_path] = index
+    return errors
+
+
+def validate_stats_and_counts(root: Path, data: dict, items: list[dict[str, str]]) -> list[str]:
+    errors: list[str] = []
+    stats = data.get("stats")
+    if not isinstance(stats, dict):
+        return ["homepage-data.js: missing stats object"]
+
+    by_type: dict[str, int] = {}
+    years: dict[str, int] = {}
+    for item in items:
+        item_type = item.get("type", "")
+        published = item.get("published", "")
+        by_type[item_type] = by_type.get(item_type, 0) + 1
+        if DATE_RE.fullmatch(published):
+            years[published[:4]] = years.get(published[:4], 0) + 1
+
+    if stats.get("total") != len(items):
+        errors.append(f"stats.total does not match items: {stats.get('total')} != {len(items)}")
+    if stats.get("byType") != by_type:
+        errors.append(f"stats.byType does not match items: {stats.get('byType')} != {by_type}")
+    expected_years = dict(sorted(years.items(), reverse=True))
+    if stats.get("years") != expected_years:
+        errors.append(f"stats.years does not match items: {stats.get('years')} != {expected_years}")
+
+    for article_type in ARTICLE_TYPES:
+        page_dir = root / article_type.lower()
+        if not page_dir.exists():
+            errors.append(f"{article_type}: collection directory does not exist: {page_dir.name}")
+            continue
+        generated_pages = [
+            path for path in page_dir.iterdir()
+            if path.is_dir() and re.fullmatch(r"\d{4}", path.name) and (path / "index.html").exists()
+        ]
+        expected_count = by_type.get(article_type, 0)
+        if len(generated_pages) != expected_count:
+            errors.append(f"{article_type}: generated page count does not match items: {len(generated_pages)} != {expected_count}")
+
+    return errors
+
+
+def xml_root(path: Path) -> ET.Element:
+    return ET.parse(path).getroot()
+
+
+def validate_atom_xml(root: Path) -> list[str]:
+    errors: list[str] = []
+    atom_path = root / "includes" / "atom.xml"
+    if not atom_path.exists():
+        return ["includes/atom.xml: file does not exist"]
+
+    try:
+        atom_root = xml_root(atom_path)
+    except ET.ParseError as exc:
+        return [f"includes/atom.xml: not parseable XML: {exc}"]
+    except OSError as exc:
+        return [f"includes/atom.xml: cannot read file: {exc}"]
+
+    if atom_root.tag.lower() == "html" or atom_root.find(".//title") is not None and atom_root.tag.lower() == "html":
+        errors.append("includes/atom.xml: parsed as HTML, not Atom XML")
+    if atom_root.tag != "{http://www.w3.org/2005/Atom}feed":
+        errors.append(f"includes/atom.xml: root is not Atom feed: {atom_root.tag}")
+    return errors
+
+
+def validate_sitemap_xml(root: Path, markdown_items: list[dict[str, str]]) -> list[str]:
+    errors: list[str] = []
+    sitemap_path = root / "sitemap.xml"
+    if not sitemap_path.exists():
+        return ["sitemap.xml: file does not exist"]
+
+    try:
+        sitemap_root = xml_root(sitemap_path)
+    except ET.ParseError as exc:
+        return [f"sitemap.xml: not parseable XML: {exc}"]
+    except OSError as exc:
+        return [f"sitemap.xml: cannot read file: {exc}"]
+
+    if sitemap_root.tag != "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset":
+        errors.append(f"sitemap.xml: root is not sitemap urlset: {sitemap_root.tag}")
+        return errors
+
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    loc_paths: set[str] = set()
+    for loc in sitemap_root.findall(".//sm:loc", namespace):
+        if loc.text:
+            path = urlparse(loc.text.strip()).path or "/"
+            loc_paths.add(path)
+
+    expected_paths = set(STATIC_SITEMAP_PATHS)
+    expected_paths.update(item["canonicalHref"] for item in markdown_items if item.get("canonicalHref"))
+    missing = sorted(expected_paths - loc_paths)
+    if missing:
+        preview = ", ".join(missing[:10])
+        if len(missing) > 10:
+            preview += f", ... {len(missing) - 10} more"
+        errors.append(f"sitemap.xml: missing expected URL path(s): {preview}")
+
+    return errors
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".", help="Repository root.")
@@ -140,13 +476,22 @@ def main(argv: list[str]) -> int:
         return 1
 
     markdown_items = [item for item in items if item.get("source") == "markdown"]
+    homepage_keys = {(item.get("type", ""), item.get("id", "")) for item in markdown_items}
     errors: list[str] = []
+    errors.extend(validate_uniqueness(items))
+    errors.extend(validate_stats_and_counts(root, data, items))
+    errors.extend(validate_atom_xml(root))
+    errors.extend(validate_sitemap_xml(root, markdown_items))
     for item in markdown_items:
         errors.extend(validate_item(root, item))
+        errors.extend(validate_front_matter(root, item))
+    markdown_source_count, markdown_source_errors = validate_markdown_sources(root, homepage_keys)
+    errors.extend(markdown_source_errors)
 
     print("Site validation summary")
     print(f"  homepage items: {len(items)}")
     print(f"  markdown items checked: {len(markdown_items)}")
+    print(f"  markdown sources checked: {markdown_source_count}")
     print(f"  errors: {len(errors)}")
 
     if errors:
