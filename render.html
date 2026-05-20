@@ -19,7 +19,12 @@
 <body>
     <main class="article-shell">
         <nav class="article-nav" aria-label="Article navigation">
-            <a href="/">ShepherdQR.github.io</a>
+            <a class="article-brand" href="./index.html">ShepherdQR.github.io</a>
+            <div class="article-nav-links">
+                <a href="./archive.html">Archive</a>
+                <a href="./books.html">Books</a>
+                <a href="./thoughts.html">Thoughts</a>
+            </div>
         </nav>
 
         <article class="article-frame">
@@ -29,15 +34,28 @@
                 <div id="currentInnerMeta" class="article-meta"></div>
             </header>
             <div id="markdown-content" class="article-content" aria-live="polite"></div>
+            <footer class="article-footer">
+                <div class="article-footer-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./archive.html">Archive</a>
+                    <a href="./books.html">Books</a>
+                    <a href="./thoughts.html">Thoughts</a>
+                    <a href="./study.html">Study</a>
+                    <a href="./videos.html">Videos</a>
+                </div>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+            </footer>
         </article>
     </main>
 
+    <script src="homepage-data.js"></script>
     <script>
     (function() {
         const content = document.getElementById('markdown-content');
         const titleEl = document.getElementById('currentInnerTitle');
         const metaEl = document.getElementById('currentInnerMeta');
         const typeEl = document.getElementById('currentInnerType');
+        const neighborsEl = document.getElementById('article-neighbors');
         const params = new URLSearchParams(window.location.search);
         let mdFile = params.get('md');
 
@@ -72,6 +90,7 @@
                 content.innerHTML = marked.parse(contentMd);
 
                 activateEmbeddedScripts(content);
+                renderArticleNeighbors(parsed.meta, mdFile);
                 scheduleMathJax();
             })
             .catch(err => {
@@ -112,10 +131,90 @@
 
         function formatArticleMeta(meta) {
             const parts = [];
-            if (meta.created_date) parts.push('创建：' + meta.created_date);
-            if (meta.published && meta.published !== meta.created_date) parts.push('发布：' + meta.published);
-            if (meta.updated_date) parts.push('更新：' + meta.updated_date);
-            return parts.join('    ');
+            if (meta.created_date) parts.push('创建 ' + meta.created_date);
+            if (meta.published && meta.published !== meta.created_date) parts.push('发布 ' + meta.published);
+            if (meta.updated_date) parts.push('更新 ' + meta.updated_date);
+            return parts.join(' · ');
+        }
+
+        function renderArticleNeighbors(meta, currentPath) {
+            const items = ((window.HOMEPAGE_DATA || {}).items || []);
+            const currentItem = findCurrentItem(items, meta, currentPath);
+            const currentIndex = currentItem ? items.indexOf(currentItem) : -1;
+
+            neighborsEl.innerHTML = '';
+            if (currentIndex < 0) {
+                neighborsEl.hidden = true;
+                return;
+            }
+
+            const entries = [
+                { label: '较新', item: items[currentIndex - 1] },
+                { label: '较早', item: items[currentIndex + 1] }
+            ].filter(entry => entry.item);
+
+            if (!entries.length) {
+                neighborsEl.hidden = true;
+                return;
+            }
+
+            neighborsEl.hidden = false;
+            entries.forEach(entry => neighborsEl.appendChild(renderNeighbor(entry.label, entry.item)));
+        }
+
+        function renderNeighbor(label, item) {
+            const link = document.createElement('a');
+            link.className = 'article-neighbor';
+            link.href = item.href;
+
+            const labelEl = document.createElement('span');
+            labelEl.className = 'article-neighbor-label';
+            labelEl.textContent = label;
+
+            const title = document.createElement('span');
+            title.className = 'article-neighbor-title';
+            title.textContent = item.title;
+
+            const date = document.createElement('time');
+            date.className = 'article-neighbor-date';
+            date.dateTime = item.published;
+            date.textContent = [item.published, item.type, '更新 ' + item.updatedDate].filter(Boolean).join(' · ');
+
+            link.appendChild(labelEl);
+            link.appendChild(title);
+            link.appendChild(date);
+            return link;
+        }
+
+        function findCurrentItem(items, meta, currentPath) {
+            const direct = items.find(item => item.type === meta.type && item.id === meta.id);
+            if (direct) return direct;
+
+            const normalizedCurrent = normalizeMdPath(currentPath);
+            return items.find(item => normalizeMdPath(pathFromItem(item)) === normalizedCurrent);
+        }
+
+        function pathFromItem(item) {
+            try {
+                const url = new URL(item.href, window.location.href);
+                return url.searchParams.get('md') || item.href;
+            } catch (e) {
+                return item.href;
+            }
+        }
+
+        function normalizeMdPath(value) {
+            let path = decodeURIComponent(value || '').replace(/\\/g, '/');
+            if (path.includes('?md=')) {
+                path = path.split('?md=')[1];
+            }
+            if (!path.startsWith('/')) {
+                path = '/' + path.replace(/^\.\//, '');
+            }
+            if (!/\.(md|html)$/i.test(path)) {
+                path += '.md';
+            }
+            return path;
         }
 
         function activateEmbeddedScripts(container) {

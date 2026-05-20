@@ -15,6 +15,9 @@
                 <h1 class="site-title">Pursuing Immortality</h1>
                 <p class="site-subtitle">Software, algorithms, reading notes, poems, and durable thoughts.</p>
                 <nav class="site-nav" aria-label="Primary">
+                    <a href="./archive.html">Archive</a>
+                    <a href="./books.html">Books</a>
+                    <a href="./thoughts.html">Thoughts</a>
                     <a href="https://github.com/ShepherdQR">GitHub</a>
                 </nav>
             </div>
@@ -95,9 +98,15 @@
             function renderCollections() {
                 const host = document.getElementById('collections');
                 const names = ['Thoughts', 'Books', 'Study', 'Videos'];
+                const collectionLinks = {
+                    Thoughts: './thoughts.html',
+                    Books: './books.html',
+                    Study: './study.html',
+                    Videos: './videos.html'
+                };
                 names.forEach(name => {
                     const link = el('a', 'collection-link');
-                    link.href = `#type-${name}`;
+                    link.href = collectionLinks[name];
                     link.appendChild(el('span', 'collection-name', name));
                     link.appendChild(el('span', 'collection-count', `${data.stats.byType[name] || 0} notes`));
                     host.appendChild(link);
@@ -124,7 +133,7 @@
                 Object.keys(data.stats.years || {}).forEach(year => {
                     const li = el('li');
                     const link = el('a', null, `${year} (${data.stats.years[year]})`);
-                    link.href = `#year-${year}`;
+                    link.href = `./archive.html#year-${year}`;
                     li.appendChild(link);
                     list.appendChild(li);
                 });

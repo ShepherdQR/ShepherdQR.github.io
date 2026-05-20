@@ -58,15 +58,36 @@ H2 {
 }
 
 .article-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     margin-bottom: 22px;
     font-size: 14px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    letter-spacing: 0;
 }
 
 .article-nav a {
     color: #6e4b2a;
     border-bottom-color: rgba(138, 90, 43, 0.3);
+    cursor: pointer;
+}
+
+.article-nav a:hover,
+.article-footer a:hover,
+.article-neighbor:hover {
+    background: #efe3cf;
+}
+
+.article-brand {
+    font-weight: 700;
+}
+
+.article-nav-links,
+.article-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
 }
 
 .article-frame {
@@ -158,12 +179,78 @@ H2 {
     max-width: 100%;
 }
 
+.article-content a {
+    color: #7d4f24;
+    border-bottom-color: rgba(138, 90, 43, 0.32);
+    cursor: pointer;
+}
+
 .article-loading {
     color: #786f63;
 }
 
 .article-error {
     color: #9b3d30;
+}
+
+.article-footer {
+    margin-top: 54px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(112, 84, 52, 0.18);
+}
+
+.article-footer-links {
+    margin-bottom: 18px;
+    color: #786f63;
+    font-size: 14px;
+}
+
+.article-footer-links a {
+    color: #6e4b2a;
+    border-bottom-color: rgba(138, 90, 43, 0.3);
+    cursor: pointer;
+}
+
+.article-neighbors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.article-neighbors[hidden] {
+    display: none;
+}
+
+.article-neighbor {
+    display: block;
+    min-height: 116px;
+    padding: 15px 16px;
+    border: 1px solid rgba(112, 84, 52, 0.18);
+    border-radius: 8px;
+    background: #fbf7ec;
+    color: #342f29;
+    cursor: pointer;
+}
+
+.article-neighbor-label,
+.article-neighbor-date {
+    display: block;
+    color: #8a5a2b;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Microsoft YaHei", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.article-neighbor-title {
+    display: block;
+    margin: 7px 0 10px;
+    color: #2f2a24;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.article-neighbor-date {
+    color: #786f63;
 }
 
 
@@ -306,6 +393,11 @@ body.mobile div.inner {
         padding: 16px 12px 36px;
     }
 
+    .article-nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     .article-frame {
         padding: 32px 22px 40px;
         border-radius: 6px;
@@ -313,6 +405,10 @@ body.mobile div.inner {
 
     .article-header h1 {
         font-size: 30px;
+    }
+
+    .article-neighbors {
+        grid-template-columns: 1fr;
     }
 }
 
