@@ -74,6 +74,10 @@ def render_href(path: Path, root: Path) -> str:
     return f"render.html?md={quote('/' + rel[:-3], safe='/')}"
 
 
+def clean_article_href(content_type: str, content_id: str) -> str:
+    return f"/{content_type.lower()}/{content_id}/"
+
+
 def normalize_legacy_href(href: str, root: Path) -> str:
     if href.startswith("render.html?"):
         return href
@@ -149,6 +153,9 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
         required = ["type", "id", "title", "created_date", "published", "updated_date"]
         if any(not data.get(field) for field in required):
             raise ValueError(f"Missing required front matter in {path}")
+        source_path = path.relative_to(root).as_posix()
+        legacy_href = render_href(path, root)
+        canonical_href = clean_article_href(data["type"], data["id"])
         items.append(
             {
                 "type": data["type"],
@@ -160,7 +167,10 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
                 "updated": data.get("updated", data["updated_date"]),
                 "updatedDate": data["updated_date"],
                 "slug": data.get("slug", ""),
-                "href": render_href(path, root),
+                "href": canonical_href,
+                "canonicalHref": canonical_href,
+                "legacyHref": legacy_href,
+                "sourcePath": source_path,
                 "label": f"[{data['type']}][{data['id']}][{data['title']}]",
                 "source": "markdown",
             }

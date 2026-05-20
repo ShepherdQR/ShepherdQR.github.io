@@ -18,7 +18,8 @@ The public article system now uses a Markdown-first workflow:
 2. Keep required front matter in the Markdown file.
 3. Run the site build script.
 4. The build script scans Markdown and regenerates `homepage-data.js`.
-5. The homepage links each article to the shared `render.html` article template.
+5. The build generates clean article URLs such as `/thoughts/0012/`.
+6. The homepage links each article to its clean URL.
 
 `index-data.js` is now legacy migration input only. It should not be the day-to-day table for adding new articles.
 
@@ -29,7 +30,9 @@ flowchart LR
     A["Markdown note"] --> B["scripts/build_site.py"]
     B --> C["homepage-data.js"]
     C --> D["index.html"]
-    D --> E["render.html?md=/qrthoughts/..."]
+    B --> E["/thoughts/0012/index.html"]
+    D --> E
+    F["render.html?md=/qrthoughts/..."] --> A
     A --> E
 ```
 
@@ -47,7 +50,8 @@ This creates:
 qrthoughts/yearYYYY/monthM/[Thoughts][NNNN][新的标题].md
 ```
 
-It also regenerates `homepage-data.js` unless `--no-build` is passed.
+It also regenerates `homepage-data.js` and clean article pages unless `--no-build` is passed.
+It also supports optional `--tags`, `--series`, `--summary`, and `--open` arguments.
 
 Manual workflow:
 
@@ -95,9 +99,9 @@ The publication date is hidden only when it equals the creation date.
 
 ## 5. Article Template
 
-`render.html` is the single article shell. It:
+`includes/js/article-renderer.js` is the shared article renderer used by both generated clean URL pages and `render.html`. It:
 
-1. Fetches Markdown from the `md` query parameter.
+1. Fetches Markdown from either embedded `article-config` or the `md` query parameter.
 2. Parses front matter.
 3. Uses front matter title and dates for the header.
 4. Renders Markdown with `marked`.
@@ -105,7 +109,7 @@ The publication date is hidden only when it equals the creation date.
 6. Re-activates trusted embedded scripts for migrated interactive notes.
 7. Loads local `includes/js/d3.js` for the historical D3 note.
 
-The template intentionally avoids per-article HTML boilerplate.
+Generated clean URL pages intentionally contain only the shared article shell and a small `article-config` block.
 
 ## 6. Legacy HTML Policy
 
@@ -117,6 +121,7 @@ The workflow is acceptable when:
 
 1. A new Markdown note can be created without touching HTML.
 2. The homepage updates after one build command.
-3. The article page shows title, type/id, creation date, publication date when relevant, and update date.
+3. The clean article URL shows title, type/id, creation date, publication date when relevant, and update date.
 4. Public article count comes from Markdown front matter.
-5. Legacy `index-data.js` is not required for new records.
+5. Legacy `render.html?md=...` links still render for compatibility.
+6. Legacy `index-data.js` is not required for new records.

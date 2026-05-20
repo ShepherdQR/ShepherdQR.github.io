@@ -9,7 +9,8 @@ Use Markdown front matter as the single content source, then render every note t
 
 ## Scope
 
-- `render.html` is the canonical article reader.
+- Clean article URLs are canonical, for example `/thoughts/0012/` and `/books/0056/`.
+- `render.html?md=...` remains a compatibility reader for old links and diagnostics.
 - `archive.html` is the chronological index for all published Markdown notes.
 - `books.html`, `thoughts.html`, `study.html`, and `videos.html` are filtered collection indexes.
 - `homepage-data.js` remains the generated read model for homepage, archive pages, and article adjacency.
@@ -28,14 +29,17 @@ Every published Markdown note must keep these front matter fields:
 
 The build script turns those fields into `homepage-data.js` items with:
 
-- `href`: canonical `render.html?md=/...` article URL.
+- `href`: canonical clean article URL.
+- `canonicalHref`: canonical clean article URL, duplicated explicitly for callers that distinguish display links from canonical identity.
+- `legacyHref`: compatibility `render.html?md=/...` URL.
+- `sourcePath`: canonical Markdown source path.
 - `createdDate`: date displayed as the creation date.
 - `published`: date used for sorting and archive grouping.
 - `updatedDate`: date displayed as the latest modification date.
 
 ## Article Template
 
-`render.html` fetches the Markdown file named by `md`, parses front matter, renders Markdown content, and shows the title metadata directly under the title. The article footer reads `homepage-data.js` to find the current item and show adjacent notes:
+Generated clean URL pages and `render.html` share `includes/js/article-renderer.js`. Clean pages provide an embedded `article-config` block with the Markdown source path and canonical URL. `render.html` reads the `md` query parameter for old links. The shared renderer fetches Markdown, parses front matter, renders Markdown content, and shows title metadata directly under the title. The article footer reads `homepage-data.js` to find the current item and show adjacent notes:
 
 - `较新`: previous item in reverse chronological order.
 - `较早`: next item in reverse chronological order.
@@ -65,4 +69,4 @@ Each entry must display:
 2. Keep the filename format `[Type][0000][Title].md`.
 3. Fill required front matter, especially date fields.
 4. Run `python scripts/build_site.py`.
-5. Verify homepage, article page, archive page, and relevant collection page locally.
+5. Verify homepage, clean article URL, legacy `render.html?md=...` URL, archive page, and relevant collection page locally.
