@@ -13,6 +13,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 
 FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
@@ -70,7 +71,7 @@ def parse_front_matter(text: str) -> dict[str, str] | None:
 
 def render_href(path: Path, root: Path) -> str:
     rel = path.relative_to(root).as_posix()
-    return f"render.html?md=/{rel[:-3]}"
+    return f"render.html?md={quote('/' + rel[:-3], safe='/')}"
 
 
 def normalize_legacy_href(href: str, root: Path) -> str:

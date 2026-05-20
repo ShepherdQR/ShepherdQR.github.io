@@ -53,7 +53,7 @@
         marked.setOptions({ gfm: true, breaks: true });
         content.innerHTML = '<p class="article-loading">Loading...</p>';
 
-        fetch(mdFile)
+        fetch(encodeFetchPath(mdFile))
             .then(res => {
                 if (!res.ok) throw new Error('文件不存在：' + mdFile);
                 return res.text();
@@ -152,6 +152,16 @@
             }
 
             tryTypeset();
+        }
+
+        function encodeFetchPath(path) {
+            return path
+                .split('/')
+                .map(function(segment, index) {
+                    if (!segment && index === 0) return '';
+                    return encodeURIComponent(segment);
+                })
+                .join('/');
         }
 
         function escapeHtml(value) {

@@ -11,7 +11,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-16 20:05:44",
       "updatedDate": "2026-05-16",
       "slug": "thoughts-0012",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Thoughts][0012][对“生存还是毁灭”这一问题的认识]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0012%5D%5B%E5%AF%B9%E2%80%9C%E7%94%9F%E5%AD%98%E8%BF%98%E6%98%AF%E6%AF%81%E7%81%AD%E2%80%9D%E8%BF%99%E4%B8%80%E9%97%AE%E9%A2%98%E7%9A%84%E8%AE%A4%E8%AF%86%5D",
       "label": "[Thoughts][0012][对“生存还是毁灭”这一问题的认识]",
       "source": "markdown"
     },
@@ -25,7 +25,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-16 20:05:12",
       "updatedDate": "2026-05-16",
       "slug": "thoughts-0011",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Thoughts][0011][“十五五”规划引领软件创新]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0011%5D%5B%E2%80%9C%E5%8D%81%E4%BA%94%E4%BA%94%E2%80%9D%E8%A7%84%E5%88%92%E5%BC%95%E9%A2%86%E8%BD%AF%E4%BB%B6%E5%88%9B%E6%96%B0%5D",
       "label": "[Thoughts][0011][“十五五”规划引领软件创新]",
       "source": "markdown"
     },
@@ -39,7 +39,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-04 19:03:54",
       "updatedDate": "2026-05-04",
       "slug": "thoughts-0010",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Thoughts][0010][批评与自我批评]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0010%5D%5B%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84%5D",
       "label": "[Thoughts][0010][批评与自我批评]",
       "source": "markdown"
     },
@@ -53,7 +53,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-16 20:39:04",
       "updatedDate": "2026-05-16",
       "slug": "books-0122",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Books][0122][鲁迅]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BBooks%5D%5B0122%5D%5B%E9%B2%81%E8%BF%85%5D",
       "label": "[Books][0122][鲁迅]",
       "source": "markdown"
     },
@@ -67,7 +67,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 19:30:21",
       "updatedDate": "2026-05-02",
       "slug": "thoughts-0009",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Thoughts][0009][丙午三学究天歌]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0009%5D%5B%E4%B8%99%E5%8D%88%E4%B8%89%E5%AD%A6%E7%A9%B6%E5%A4%A9%E6%AD%8C%5D",
       "label": "[Thoughts][0009][丙午三学究天歌]",
       "source": "markdown"
     },
@@ -81,7 +81,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-16 20:03:40",
       "updatedDate": "2026-05-16",
       "slug": "thoughts-0008",
-      "href": "render.html?md=/qrthoughts/year2026/month5/[Thoughts][0008][政绩观]",
+      "href": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0008%5D%5B%E6%94%BF%E7%BB%A9%E8%A7%82%5D",
       "label": "[Thoughts][0008][政绩观]",
       "source": "markdown"
     },
@@ -95,7 +95,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2025-04-04 00:30:37",
       "updatedDate": "2025-04-04",
       "slug": "turingaward",
-      "href": "render.html?md=/qrthoughts/year2025/month4/[Books][0121][TuringAward]",
+      "href": "render.html?md=/qrthoughts/year2025/month4/%5BBooks%5D%5B0121%5D%5BTuringAward%5D",
       "label": "[Books][0121][TuringAward]",
       "source": "markdown"
     },
@@ -109,7 +109,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-12-09 23:47:45",
       "updatedDate": "2024-12-09",
       "slug": "books-0120",
-      "href": "render.html?md=/qrthoughts/year2024/month12/[Books][0120][淮南子]",
+      "href": "render.html?md=/qrthoughts/year2024/month12/%5BBooks%5D%5B0120%5D%5B%E6%B7%AE%E5%8D%97%E5%AD%90%5D",
       "label": "[Books][0120][淮南子]",
       "source": "markdown"
     },
@@ -123,7 +123,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-10-10 20:35:04",
       "updatedDate": "2024-10-10",
       "slug": "books-0119",
-      "href": "render.html?md=/qrthoughts/year2024/month10/[Books][0119][[诺贝尔文学奖][2024]韩江]",
+      "href": "render.html?md=/qrthoughts/year2024/month10/%5BBooks%5D%5B0119%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2024%5D%E9%9F%A9%E6%B1%9F%5D",
       "label": "[Books][0119][[诺贝尔文学奖][2024]韩江]",
       "source": "markdown"
     },
@@ -137,7 +137,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-06-30 08:41:24",
       "updatedDate": "2024-06-30",
       "slug": "books-0118",
-      "href": "render.html?md=/qrthoughts/year2024/month6/[Books][0118][凡物流形]",
+      "href": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0118%5D%5B%E5%87%A1%E7%89%A9%E6%B5%81%E5%BD%A2%5D",
       "label": "[Books][0118][凡物流形]",
       "source": "markdown"
     },
@@ -151,7 +151,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-06-16 01:07:21",
       "updatedDate": "2024-06-16",
       "slug": "books-0117",
-      "href": "render.html?md=/qrthoughts/year2024/month6/[Books][0117][[诺贝尔文学奖][1994]福克纳]",
+      "href": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0117%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1994%5D%E7%A6%8F%E5%85%8B%E7%BA%B3%5D",
       "label": "[Books][0117][[诺贝尔文学奖][1994]福克纳]",
       "source": "markdown"
     },
@@ -165,7 +165,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-06-02 18:03:17",
       "updatedDate": "2024-06-02",
       "slug": "c0306",
-      "href": "render.html?md=/qrthoughts/year2024/month6/[Books][0116][[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷]",
+      "href": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0116%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0306%5D%E4%BA%BA%E7%B1%BB%E5%B9%B8%E7%A6%8F%E8%AE%BA-%E7%BA%A6%E7%BF%B0%C2%B7%E6%A0%BC%E9%9B%B7%5D",
       "label": "[Books][0116][[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷]",
       "source": "markdown"
     },
@@ -179,7 +179,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-20 19:00:38",
       "updatedDate": "2023-05-20",
       "slug": "c0412",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0115][[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0115%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0412%5D%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89-%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "label": "[Books][0115][[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔]",
       "source": "markdown"
     },
@@ -193,7 +193,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-20 18:06:38",
       "updatedDate": "2023-05-20",
       "slug": "books-0114",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0114]王尔德",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0114%5D%E7%8E%8B%E5%B0%94%E5%BE%B7",
       "label": "[Books][0114][王尔德]",
       "source": "markdown"
     },
@@ -207,7 +207,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-27 19:42:30",
       "updatedDate": "2023-03-27",
       "slug": "books-0026",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0026]爱因斯坦",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0026%5D%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6",
       "label": "[Books][0026][爱因斯坦]",
       "source": "markdown"
     },
@@ -221,7 +221,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-20 17:38:20",
       "updatedDate": "2023-05-20",
       "slug": "books-0113",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0113][[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0113%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E5%8B%83%E6%B4%9B%E5%85%8B%E6%8A%92%E6%83%85%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0113][[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选]",
       "source": "markdown"
     },
@@ -235,7 +235,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-02 17:26:57",
       "updatedDate": "2023-05-02",
       "slug": "books-0112",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0112][[诺贝尔文学奖][1996]辛波丝卡]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0112%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1996%5D%E8%BE%9B%E6%B3%A2%E4%B8%9D%E5%8D%A1%5D",
       "label": "[Books][0112][[诺贝尔文学奖][1996]辛波丝卡]",
       "source": "markdown"
     },
@@ -249,7 +249,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-02 15:46:23",
       "updatedDate": "2023-05-02",
       "slug": "c0503",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0111][[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0111%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0503%5D%E8%AE%BA%E5%87%BA%E7%89%88%E8%87%AA%E7%94%B1-%E5%BC%A5%E5%B0%94%E9%A1%BF%5D",
       "label": "[Books][0111][[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿]",
       "source": "markdown"
     },
@@ -263,7 +263,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-02 09:24:30",
       "updatedDate": "2023-05-02",
       "slug": "books-0110",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0110][欧里庇得斯]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0110%5D%5B%E6%AC%A7%E9%87%8C%E5%BA%87%E5%BE%97%E6%96%AF%5D",
       "label": "[Books][0110][欧里庇得斯]",
       "source": "markdown"
     },
@@ -277,7 +277,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-01 21:09:10",
       "updatedDate": "2023-05-01",
       "slug": "sarah-kane",
-      "href": "render.html?md=/qrthoughts/year2023/month5/[Books][0109][Sarah Kane]",
+      "href": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0109%5D%5BSarah%20Kane%5D",
       "label": "[Books][0109][Sarah Kane]",
       "source": "markdown"
     },
@@ -291,7 +291,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-22 21:56:51",
       "updatedDate": "2023-04-22",
       "slug": "books-0108",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0108]源氏物语",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0108%5D%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AF%AD",
       "label": "[Books][0108][源氏物语]",
       "source": "markdown"
     },
@@ -305,7 +305,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-16 21:50:23",
       "updatedDate": "2023-04-16",
       "slug": "c0201",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0107][[商务印书馆汉译世界名著][C0201]乌托邦-莫尔]",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0107%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0201%5D%E4%B9%8C%E6%89%98%E9%82%A6-%E8%8E%AB%E5%B0%94%5D",
       "label": "[Books][0107][[商务印书馆汉译世界名著][C0201]乌托邦-莫尔]",
       "source": "markdown"
     },
@@ -319,7 +319,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-09 15:55:27",
       "updatedDate": "2023-04-09",
       "slug": "books-0106",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0106][白夜行-东野圭吾]",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0106%5D%5B%E7%99%BD%E5%A4%9C%E8%A1%8C-%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%5D",
       "label": "[Books][0106][白夜行-东野圭吾]",
       "source": "markdown"
     },
@@ -333,7 +333,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-09 00:45:26",
       "updatedDate": "2023-04-09",
       "slug": "books-0105",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0105]屈原",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0105%5D%E5%B1%88%E5%8E%9F",
       "label": "[Books][0105][屈原]",
       "source": "markdown"
     },
@@ -347,7 +347,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-07-09 08:19:24",
       "updatedDate": "2023-07-09",
       "slug": "books-0104",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0104]李白",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0104%5D%E6%9D%8E%E7%99%BD",
       "label": "[Books][0104][李白]",
       "source": "markdown"
     },
@@ -361,7 +361,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-05 18:28:01",
       "updatedDate": "2023-04-05",
       "slug": "books-0103",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0103]纳博科夫",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0103%5D%E7%BA%B3%E5%8D%9A%E7%A7%91%E5%A4%AB",
       "label": "[Books][0103][纳博科夫]",
       "source": "markdown"
     },
@@ -375,7 +375,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-02 19:02:14",
       "updatedDate": "2023-04-02",
       "slug": "books-0102",
-      "href": "render.html?md=/qrthoughts/year2023/month4/[Books][0102]沈从文",
+      "href": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0102%5D%E6%B2%88%E4%BB%8E%E6%96%87",
       "label": "[Books][0102][沈从文]",
       "source": "markdown"
     },
@@ -389,7 +389,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-30 22:10:13",
       "updatedDate": "2023-03-30",
       "slug": "books-0101",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0101][[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0101%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E4%BA%8C%E5%8D%81%E4%B8%96%E7%BA%AA%E5%86%B0%E5%B2%9B%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0101][[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选]",
       "source": "markdown"
     },
@@ -403,7 +403,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 15:52:37",
       "updatedDate": "2023-03-26",
       "slug": "books-0100",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0100]红楼梦",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0100%5D%E7%BA%A2%E6%A5%BC%E6%A2%A6",
       "label": "[Books][0100][红楼梦]",
       "source": "markdown"
     },
@@ -417,7 +417,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 15:49:34",
       "updatedDate": "2023-03-26",
       "slug": "books-0099",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0099][西方数学文化理念传播译丛]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0099%5D%5B%E8%A5%BF%E6%96%B9%E6%95%B0%E5%AD%A6%E6%96%87%E5%8C%96%E7%90%86%E5%BF%B5%E4%BC%A0%E6%92%AD%E8%AF%91%E4%B8%9B%5D",
       "label": "[Books][0099][西方数学文化理念传播译丛]",
       "source": "markdown"
     },
@@ -431,7 +431,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 09:33:38",
       "updatedDate": "2023-03-26",
       "slug": "frank-v-e",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0098]活出生命的意义-Frank.V.E",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0098%5D%E6%B4%BB%E5%87%BA%E7%94%9F%E5%91%BD%E7%9A%84%E6%84%8F%E4%B9%89-Frank.V.E",
       "label": "[Books][0098][活出生命的意义-Frank.V.E]",
       "source": "markdown"
     },
@@ -445,7 +445,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 08:50:35",
       "updatedDate": "2023-03-26",
       "slug": "books-0097",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0097][[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0097%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E6%B3%A2%E6%99%AE%E6%8B%89%E5%A4%AB%E6%96%AF%E5%9F%BA%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0097][[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选]",
       "source": "markdown"
     },
@@ -459,7 +459,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:53:29",
       "updatedDate": "2026-05-02",
       "slug": "books-0096",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0096]费孝通",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0096%5D%E8%B4%B9%E5%AD%9D%E9%80%9A",
       "label": "[Books][0096][费孝通]",
       "source": "markdown"
     },
@@ -473,7 +473,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-19 22:28:49",
       "updatedDate": "2023-03-19",
       "slug": "1948-thomas-stearns-eliot",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0095][[诺贝尔文学奖][1948]Thomas Stearns Eliot]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0095%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1948%5DThomas%20Stearns%20Eliot%5D",
       "label": "[Books][0095][[诺贝尔文学奖][1948]Thomas Stearns Eliot]",
       "source": "markdown"
     },
@@ -487,7 +487,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-19 20:59:50",
       "updatedDate": "2023-03-19",
       "slug": "doing",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0094]陈景润[DOING]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0094%5D%E9%99%88%E6%99%AF%E6%B6%A6%5BDOING%5D",
       "label": "[Books][0094][陈景润[DOING]]",
       "source": "markdown"
     },
@@ -501,7 +501,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-11 19:48:32",
       "updatedDate": "2023-03-11",
       "slug": "books-0093",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0093][三岛由纪夫]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0093%5D%5B%E4%B8%89%E5%B2%9B%E7%94%B1%E7%BA%AA%E5%A4%AB%5D",
       "label": "[Books][0093][三岛由纪夫]",
       "source": "markdown"
     },
@@ -515,7 +515,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-05 13:30:19",
       "updatedDate": "2023-03-05",
       "slug": "books-0092",
-      "href": "render.html?md=/qrthoughts/year2023/month3/[Books][0092][[诺贝尔文学奖][1982]马尔克斯]",
+      "href": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0092%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1982%5D%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF%5D",
       "label": "[Books][0092][[诺贝尔文学奖][1982]马尔克斯]",
       "source": "markdown"
     },
@@ -529,7 +529,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-26 18:28:51",
       "updatedDate": "2023-02-26",
       "slug": "alice-s-adventures-in-wonderland",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0091][Alice's Adventures in Wonderland]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0091%5D%5BAlice%27s%20Adventures%20in%20Wonderland%5D",
       "label": "[Books][0091][Alice's Adventures in Wonderland]",
       "source": "markdown"
     },
@@ -543,7 +543,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-25 13:49:01",
       "updatedDate": "2023-02-25",
       "slug": "books-0090",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0090][[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0090%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E9%98%BF%E8%92%82%E6%8B%89-%E5%B0%A4%E8%8B%A5%E5%A4%AB%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0090][[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选]",
       "source": "markdown"
     },
@@ -557,7 +557,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-19 18:19:39",
       "updatedDate": "2023-02-19",
       "slug": "books-0089",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0089][[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0089%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%BA%A6%E7%BF%B0%E9%98%BF%E4%BB%80%E8%B4%9D%E5%88%A9%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%8B%E5%86%8C%5D",
       "label": "[Books][0089][[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册]",
       "source": "markdown"
     },
@@ -571,7 +571,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-19 14:42:11",
       "updatedDate": "2023-02-19",
       "slug": "woolf",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0088][Woolf]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0088%5D%5BWoolf%5D",
       "label": "[Books][0088][Woolf]",
       "source": "markdown"
     },
@@ -585,7 +585,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-12 16:59:43",
       "updatedDate": "2023-02-12",
       "slug": "books-0087",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0087][风雅俳句]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0087%5D%5B%E9%A3%8E%E9%9B%85%E4%BF%B3%E5%8F%A5%5D",
       "label": "[Books][0087][风雅俳句]",
       "source": "markdown"
     },
@@ -599,7 +599,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-11 13:31:29",
       "updatedDate": "2023-02-11",
       "slug": "books-0086",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0086][[20世纪世界诗歌译丛](第二辑)索德格朗诗全集]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0086%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%B4%A2%E5%BE%B7%E6%A0%BC%E6%9C%97%E8%AF%97%E5%85%A8%E9%9B%86%5D",
       "label": "[Books][0086][[20世纪世界诗歌译丛](第二辑)索德格朗诗全集]",
       "source": "markdown"
     },
@@ -613,7 +613,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-01 22:04:45",
       "updatedDate": "2023-02-01",
       "slug": "1969-samuel-beckett",
-      "href": "render.html?md=/qrthoughts/year2023/month2/[Books][0085][[诺贝尔文学奖][1969]Samuel Beckett]",
+      "href": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0085%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1969%5DSamuel%20Beckett%5D",
       "label": "[Books][0085][[诺贝尔文学奖][1969]Samuel Beckett]",
       "source": "markdown"
     },
@@ -627,7 +627,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-01-02 00:11:52",
       "updatedDate": "2023-01-02",
       "slug": "books-0084",
-      "href": "render.html?md=/qrthoughts/year2023/month1/[Books][0084][散宜生诗-聂绀弩]",
+      "href": "render.html?md=/qrthoughts/year2023/month1/%5BBooks%5D%5B0084%5D%5B%E6%95%A3%E5%AE%9C%E7%94%9F%E8%AF%97-%E8%81%82%E7%BB%80%E5%BC%A9%5D",
       "label": "[Books][0084][散宜生诗-聂绀弩]",
       "source": "markdown"
     },
@@ -641,7 +641,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-12-18 23:04:46",
       "updatedDate": "2022-12-18",
       "slug": "books-0083",
-      "href": "render.html?md=/qrthoughts/year2022/month12/[Books][0083][[诺贝尔文学奖][1968]川端康成]",
+      "href": "render.html?md=/qrthoughts/year2022/month12/%5BBooks%5D%5B0083%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1968%5D%E5%B7%9D%E7%AB%AF%E5%BA%B7%E6%88%90%5D",
       "label": "[Books][0083][[诺贝尔文学奖][1968]川端康成]",
       "source": "markdown"
     },
@@ -655,7 +655,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-11 20:46:34",
       "updatedDate": "2023-03-11",
       "slug": "books-0082",
-      "href": "render.html?md=/qrthoughts/year2022/month12/[Books][0082][[诺贝尔文学奖][2011]特朗斯特罗姆]",
+      "href": "render.html?md=/qrthoughts/year2022/month12/%5BBooks%5D%5B0082%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2011%5D%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%5D",
       "label": "[Books][0082][[诺贝尔文学奖][2011]特朗斯特罗姆]",
       "source": "markdown"
     },
@@ -669,7 +669,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-01 17:28:26",
       "updatedDate": "2023-05-01",
       "slug": "doing",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0071][佛教经典][DOING]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0071%5D%5B%E4%BD%9B%E6%95%99%E7%BB%8F%E5%85%B8%5D%5BDOING%5D",
       "label": "[Books][0071][[佛教经典][DOING]]",
       "source": "markdown"
     },
@@ -683,7 +683,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-01 17:30:09",
       "updatedDate": "2023-05-01",
       "slug": "doing",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0070][鲁迅全集][DOING]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0070%5D%5B%E9%B2%81%E8%BF%85%E5%85%A8%E9%9B%86%5D%5BDOING%5D",
       "label": "[Books][0070][[鲁迅全集][DOING]]",
       "source": "markdown"
     },
@@ -697,7 +697,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-20 22:01:33",
       "updatedDate": "2022-11-20",
       "slug": "books-0081",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0081][[20世纪世界诗歌译丛](第二辑)聂鲁达诗选]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0081%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E8%81%82%E9%B2%81%E8%BE%BE%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0081][[20世纪世界诗歌译丛](第二辑)聂鲁达诗选]",
       "source": "markdown"
     },
@@ -711,7 +711,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-19 23:31:24",
       "updatedDate": "2022-11-19",
       "slug": "books-0080",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0080][[20世纪世界诗歌译丛](第二辑)默温诗选上中下册]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0080%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E9%BB%98%E6%B8%A9%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%AD%E4%B8%8B%E5%86%8C%5D",
       "label": "[Books][0080][[20世纪世界诗歌译丛](第二辑)默温诗选上中下册]",
       "source": "markdown"
     },
@@ -725,7 +725,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-19 19:10:08",
       "updatedDate": "2022-11-19",
       "slug": "books-0079",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0079][人间失格-太宰治]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0079%5D%5B%E4%BA%BA%E9%97%B4%E5%A4%B1%E6%A0%BC-%E5%A4%AA%E5%AE%B0%E6%B2%BB%5D",
       "label": "[Books][0079][人间失格-太宰治]",
       "source": "markdown"
     },
@@ -739,7 +739,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-19 22:16:50",
       "updatedDate": "2022-11-19",
       "slug": "a0109",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0078][[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0078%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0109%5D%E8%A2%96%E7%8F%8D%E7%A5%9E%E5%AD%A6-%E9%9C%8D%E5%B0%94%E5%B7%B4%E8%B5%AB%5D",
       "label": "[Books][0078][[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫]",
       "source": "markdown"
     },
@@ -753,7 +753,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-09 00:02:14",
       "updatedDate": "2022-11-09",
       "slug": "a0403",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0077][[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0077%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0403%5D%E8%8C%83%E7%95%B4%E7%AF%87-%E8%A7%A3%E9%87%8A%E7%AF%87-%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7%5D",
       "label": "[Books][0077][[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德]",
       "source": "markdown"
     },
@@ -767,7 +767,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-08 22:22:55",
       "updatedDate": "2022-11-08",
       "slug": "books-0076",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0076][老妓抄-冈本加乃子]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0076%5D%5B%E8%80%81%E5%A6%93%E6%8A%84-%E5%86%88%E6%9C%AC%E5%8A%A0%E4%B9%83%E5%AD%90%5D",
       "label": "[Books][0076][老妓抄-冈本加乃子]",
       "source": "markdown"
     },
@@ -781,7 +781,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:18:37",
       "updatedDate": "2022-11-06",
       "slug": "a0711",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0075][[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0075%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0711%5D%E4%BA%BA%E7%94%9F%E7%9A%84%E4%BA%B2%E8%AF%81-%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "label": "[Books][0075][[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔]",
       "source": "markdown"
     },
@@ -795,7 +795,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-05 18:35:24",
       "updatedDate": "2022-11-05",
       "slug": "books-0074",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0074][[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0074%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E6%9B%BC%E5%BE%B7%E5%B0%94%E6%96%BD%E5%A1%94%E5%A7%86%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0074][[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选]",
       "source": "markdown"
     },
@@ -809,7 +809,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-05 01:01:12",
       "updatedDate": "2022-11-05",
       "slug": "books-0073",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0073][查拉图斯特拉如是说-尼采]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0073%5D%5B%E6%9F%A5%E6%8B%89%E5%9B%BE%E6%96%AF%E7%89%B9%E6%8B%89%E5%A6%82%E6%98%AF%E8%AF%B4-%E5%B0%BC%E9%87%87%5D",
       "label": "[Books][0073][查拉图斯特拉如是说-尼采]",
       "source": "markdown"
     },
@@ -823,7 +823,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2025-02-08 23:59:52",
       "updatedDate": "2025-02-08",
       "slug": "books-0072",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0072][博尔赫斯]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0072%5D%5B%E5%8D%9A%E5%B0%94%E8%B5%AB%E6%96%AF%5D",
       "label": "[Books][0072][博尔赫斯]",
       "source": "markdown"
     },
@@ -837,7 +837,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-07-21 13:39:00",
       "updatedDate": "2024-07-21",
       "slug": "books-0069",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0069][中国新诗百年大典-共30卷]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0069%5D%5B%E4%B8%AD%E5%9B%BD%E6%96%B0%E8%AF%97%E7%99%BE%E5%B9%B4%E5%A4%A7%E5%85%B8-%E5%85%B130%E5%8D%B7%5D",
       "label": "[Books][0069][中国新诗百年大典-共30卷]",
       "source": "markdown"
     },
@@ -851,7 +851,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-02 17:07:20",
       "updatedDate": "2022-11-02",
       "slug": "books-0068",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0068][伊索寓言-伊索]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0068%5D%5B%E4%BC%8A%E7%B4%A2%E5%AF%93%E8%A8%80-%E4%BC%8A%E7%B4%A2%5D",
       "label": "[Books][0068][伊索寓言-伊索]",
       "source": "markdown"
     },
@@ -865,7 +865,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-05 00:34:28",
       "updatedDate": "2022-11-05",
       "slug": "videos-0002",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Videos][0002][北京人民艺术剧院话剧]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BVideos%5D%5B0002%5D%5B%E5%8C%97%E4%BA%AC%E4%BA%BA%E6%B0%91%E8%89%BA%E6%9C%AF%E5%89%A7%E9%99%A2%E8%AF%9D%E5%89%A7%5D",
       "label": "[Videos][0002][北京人民艺术剧院话剧]",
       "source": "markdown"
     },
@@ -879,7 +879,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-30 20:44:13",
       "updatedDate": "2023-04-30",
       "slug": "books-0067",
-      "href": "render.html?md=/qrthoughts/year2022/month11/[Books][0067][海子]",
+      "href": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0067%5D%5B%E6%B5%B7%E5%AD%90%5D",
       "label": "[Books][0067][海子]",
       "source": "markdown"
     },
@@ -893,7 +893,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-01 22:06:26",
       "updatedDate": "2023-02-01",
       "slug": "books-0066",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0066][[诺贝尔文学奖][1925]萧伯纳]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0066%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1925%5D%E8%90%A7%E4%BC%AF%E7%BA%B3%5D",
       "label": "[Books][0066][[诺贝尔文学奖][1925]萧伯纳]",
       "source": "markdown"
     },
@@ -907,7 +907,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-05 16:34:07",
       "updatedDate": "2023-03-05",
       "slug": "books-0065",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0065][伊恩·麦克尤恩]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0065%5D%5B%E4%BC%8A%E6%81%A9%C2%B7%E9%BA%A6%E5%85%8B%E5%B0%A4%E6%81%A9%5D",
       "label": "[Books][0065][伊恩·麦克尤恩]",
       "source": "markdown"
     },
@@ -921,7 +921,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-30 19:54:13",
       "updatedDate": "2022-10-30",
       "slug": "a0209",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0064][[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0064%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0209%5D%E4%B8%80%E5%B9%B4%E6%9C%89%E5%8D%8A-%E7%BB%AD%E4%B8%80%E5%B9%B4%E6%9C%89%E5%8D%8A-%E4%B8%AD%E6%B1%9F%E5%85%86%E6%B0%91%5D",
       "label": "[Books][0064][[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民]",
       "source": "markdown"
     },
@@ -935,7 +935,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-23 19:58:21",
       "updatedDate": "2022-10-23",
       "slug": "books-0063",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0063][[20世纪世界诗歌译丛](第二辑)美洲译诗文选]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0063%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%BE%8E%E6%B4%B2%E8%AF%91%E8%AF%97%E6%96%87%E9%80%89%5D",
       "label": "[Books][0063][[20世纪世界诗歌译丛](第二辑)美洲译诗文选]",
       "source": "markdown"
     },
@@ -949,7 +949,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-23 19:17:28",
       "updatedDate": "2022-10-23",
       "slug": "books-0062",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0062][传习录-王阳明]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0062%5D%5B%E4%BC%A0%E4%B9%A0%E5%BD%95-%E7%8E%8B%E9%98%B3%E6%98%8E%5D",
       "label": "[Books][0062][传习录-王阳明]",
       "source": "markdown"
     },
@@ -963,7 +963,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-27 22:03:29",
       "updatedDate": "2023-03-27",
       "slug": "books-0061",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0061][[诺贝尔文学奖][2003]库切]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0061%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2003%5D%E5%BA%93%E5%88%87%5D",
       "label": "[Books][0061][[诺贝尔文学奖][2003]库切]",
       "source": "markdown"
     },
@@ -977,7 +977,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-23 16:56:33",
       "updatedDate": "2022-10-23",
       "slug": "books-0060",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0060][[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0060%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1972%5D%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4%E9%80%89-%E4%BA%A8%E5%88%A9%E5%B8%8C%C2%B7%E4%BC%AF%E5%B0%94%5D",
       "label": "[Books][0060][[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔]",
       "source": "markdown"
     },
@@ -991,7 +991,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-17 22:45:08",
       "updatedDate": "2023-03-17",
       "slug": "books-0059",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0059][[诺贝尔文学奖][1956]希梅内斯]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0059%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1956%5D%E5%B8%8C%E6%A2%85%E5%86%85%E6%96%AF%5D",
       "label": "[Books][0059][[诺贝尔文学奖][1956]希梅内斯]",
       "source": "markdown"
     },
@@ -1005,7 +1005,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-18 22:02:09",
       "updatedDate": "2022-10-18",
       "slug": "books-0058",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0058][[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0058%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1911%5D%E9%9D%92%E9%B8%9F-%E8%8E%AB%E9%87%8C%E6%96%AF%C2%B7%E6%A2%85%E7%89%B9%E6%9E%97%E5%85%8B%5D",
       "label": "[Books][0058][[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克]",
       "source": "markdown"
     },
@@ -1019,7 +1019,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-02-11 23:28:47",
       "updatedDate": "2023-02-11",
       "slug": "books-0057",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0057][[诺贝尔文学奖][1923]叶芝]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0057%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1923%5D%E5%8F%B6%E8%8A%9D%5D",
       "label": "[Books][0057][[诺贝尔文学奖][1923]叶芝]",
       "source": "markdown"
     },
@@ -1033,7 +1033,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-15 16:11:04",
       "updatedDate": "2022-10-15",
       "slug": "books-0056",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0056][论语-孔子]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0056%5D%5B%E8%AE%BA%E8%AF%AD-%E5%AD%94%E5%AD%90%5D",
       "label": "[Books][0056][论语-孔子]",
       "source": "markdown"
     },
@@ -1047,7 +1047,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-15 16:06:14",
       "updatedDate": "2022-10-15",
       "slug": "books-0055",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0055][[科学大师佳作系列]自然之数-伊恩·斯图尔特]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0055%5D%5B%5B%E7%A7%91%E5%AD%A6%E5%A4%A7%E5%B8%88%E4%BD%B3%E4%BD%9C%E7%B3%BB%E5%88%97%5D%E8%87%AA%E7%84%B6%E4%B9%8B%E6%95%B0-%E4%BC%8A%E6%81%A9%C2%B7%E6%96%AF%E5%9B%BE%E5%B0%94%E7%89%B9%5D",
       "label": "[Books][0055][[科学大师佳作系列]自然之数-伊恩·斯图尔特]",
       "source": "markdown"
     },
@@ -1061,7 +1061,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-15 14:57:19",
       "updatedDate": "2022-10-15",
       "slug": "a0812",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0054][[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0054%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0812%5D%E9%9D%A2%E5%90%91%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85-%E6%B5%B7%E5%BE%B7%E6%A0%BC%E5%B0%94%5D",
       "label": "[Books][0054][[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔]",
       "source": "markdown"
     },
@@ -1075,7 +1075,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-15 14:03:46",
       "updatedDate": "2022-10-15",
       "slug": "books-0053",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0053][[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0053%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2022%5D%E6%82%A0%E6%82%A0%E5%B2%81%E6%9C%88-%E5%AE%89%E5%A6%AE%C2%B7%E8%89%BE%E5%B0%94%E8%AF%BA%5D",
       "label": "[Books][0053][[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺]",
       "source": "markdown"
     },
@@ -1089,7 +1089,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-09 11:02:03",
       "updatedDate": "2023-04-09",
       "slug": "books-0052",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0052][苏轼]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0052%5D%5B%E8%8B%8F%E8%BD%BC%5D",
       "label": "[Books][0052][苏轼]",
       "source": "markdown"
     },
@@ -1103,7 +1103,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-04-09 11:01:12",
       "updatedDate": "2023-04-09",
       "slug": "books-0051",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0051][[诺贝尔文学奖][1913]泰戈尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0051%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1913%5D%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "label": "[Books][0051][[诺贝尔文学奖][1913]泰戈尔]",
       "source": "markdown"
     },
@@ -1117,7 +1117,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-14 22:53:28",
       "updatedDate": "2022-10-14",
       "slug": "books-0050",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0050][动物庄园-乔治奥威尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0050%5D%5B%E5%8A%A8%E7%89%A9%E5%BA%84%E5%9B%AD-%E4%B9%94%E6%B2%BB%E5%A5%A5%E5%A8%81%E5%B0%94%5D",
       "label": "[Books][0050][动物庄园-乔治奥威尔]",
       "source": "markdown"
     },
@@ -1131,7 +1131,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-18 15:30:13",
       "updatedDate": "2023-03-18",
       "slug": "a0903",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0049][[商务印书馆汉译世界名著][A0903]算术基础-弗雷格]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0049%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0903%5D%E7%AE%97%E6%9C%AF%E5%9F%BA%E7%A1%80-%E5%BC%97%E9%9B%B7%E6%A0%BC%5D",
       "label": "[Books][0049][[商务印书馆汉译世界名著][A0903]算术基础-弗雷格]",
       "source": "markdown"
     },
@@ -1145,7 +1145,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-08 23:00:34",
       "updatedDate": "2022-10-08",
       "slug": "effective-stl-scott-meyers",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0048][Effective STL-Scott Meyers]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0048%5D%5BEffective%20STL-Scott%20Meyers%5D",
       "label": "[Books][0048][Effective STL-Scott Meyers]",
       "source": "markdown"
     },
@@ -1159,7 +1159,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-08 22:10:06",
       "updatedDate": "2022-10-08",
       "slug": "books-0047",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0047][小王子-圣·埃克苏佩里]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0047%5D%5B%E5%B0%8F%E7%8E%8B%E5%AD%90-%E5%9C%A3%C2%B7%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C%5D",
       "label": "[Books][0047][小王子-圣·埃克苏佩里]",
       "source": "markdown"
     },
@@ -1173,7 +1173,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-08 22:05:47",
       "updatedDate": "2022-10-08",
       "slug": "books-0046",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0046][安静的位置-周国平]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0046%5D%5B%E5%AE%89%E9%9D%99%E7%9A%84%E4%BD%8D%E7%BD%AE-%E5%91%A8%E5%9B%BD%E5%B9%B3%5D",
       "label": "[Books][0046][安静的位置-周国平]",
       "source": "markdown"
     },
@@ -1187,7 +1187,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-08 21:39:05",
       "updatedDate": "2022-10-08",
       "slug": "books-0045",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0045][[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0045%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E9%9D%9E%E6%B4%B2%E7%8E%B0%E4%BB%A3%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%8B%E5%86%8C%5D",
       "label": "[Books][0045][[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册]",
       "source": "markdown"
     },
@@ -1201,7 +1201,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-08 20:05:52",
       "updatedDate": "2022-10-08",
       "slug": "books-0044",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0044][[诺贝尔文学奖][1907]老虎老虎-吉卜林]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0044%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1907%5D%E8%80%81%E8%99%8E%E8%80%81%E8%99%8E-%E5%90%89%E5%8D%9C%E6%9E%97%5D",
       "label": "[Books][0044][[诺贝尔文学奖][1907]老虎老虎-吉卜林]",
       "source": "markdown"
     },
@@ -1215,7 +1215,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-06-14 23:13:30",
       "updatedDate": "2024-06-14",
       "slug": "books-0043",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0043][[诺贝尔文学奖][1957]局外人-加缪]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0043%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1957%5D%E5%B1%80%E5%A4%96%E4%BA%BA-%E5%8A%A0%E7%BC%AA%5D",
       "label": "[Books][0043][[诺贝尔文学奖][1957]局外人-加缪]",
       "source": "markdown"
     },
@@ -1229,7 +1229,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-06 21:20:43",
       "updatedDate": "2022-10-06",
       "slug": "books-0042",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0042][[诺贝尔文学奖][1954]老人与海-海明威]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0042%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1954%5D%E8%80%81%E4%BA%BA%E4%B8%8E%E6%B5%B7-%E6%B5%B7%E6%98%8E%E5%A8%81%5D",
       "label": "[Books][0042][[诺贝尔文学奖][1954]老人与海-海明威]",
       "source": "markdown"
     },
@@ -1243,7 +1243,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-31 22:03:06",
       "updatedDate": "2023-05-31",
       "slug": "books-0041",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Books][0041][张岱诗文集-夏咸淳校点]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0041%5D%5B%E5%BC%A0%E5%B2%B1%E8%AF%97%E6%96%87%E9%9B%86-%E5%A4%8F%E5%92%B8%E6%B7%B3%E6%A0%A1%E7%82%B9%5D",
       "label": "[Books][0041][张岱诗文集-夏咸淳校点]",
       "source": "markdown"
     },
@@ -1257,7 +1257,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-10-06 19:00:59",
       "updatedDate": "2022-10-06",
       "slug": "videos-0001",
-      "href": "render.html?md=/qrthoughts/year2022/month10/[Videos][0001][中国美学-朱良志]",
+      "href": "render.html?md=/qrthoughts/year2022/month10/%5BVideos%5D%5B0001%5D%5B%E4%B8%AD%E5%9B%BD%E7%BE%8E%E5%AD%A6-%E6%9C%B1%E8%89%AF%E5%BF%97%5D",
       "label": "[Videos][0001][中国美学-朱良志]",
       "source": "markdown"
     },
@@ -1271,7 +1271,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-31 22:00:48",
       "updatedDate": "2023-05-31",
       "slug": "books-0040",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0040][[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0040%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E5%90%89%E7%9A%AE%E4%B9%8C%E6%96%AF%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0040][[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选]",
       "source": "markdown"
     },
@@ -1285,7 +1285,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-19 23:46:21",
       "updatedDate": "2022-09-19",
       "slug": "books-0039",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0039][瞧，这个人-尼采]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0039%5D%5B%E7%9E%A7%EF%BC%8C%E8%BF%99%E4%B8%AA%E4%BA%BA-%E5%B0%BC%E9%87%87%5D",
       "label": "[Books][0039][瞧，这个人-尼采]",
       "source": "markdown"
     },
@@ -1299,7 +1299,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-19 22:44:47",
       "updatedDate": "2022-09-19",
       "slug": "books-0038",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0038][[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0038%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1901%5D%E5%AD%A4%E7%8B%AC%E4%B8%8E%E6%B2%89%E6%80%9D-%E8%8B%8F%E5%88%A9%C2%B7%E6%99%AE%E5%90%95%E5%A4%9A%E5%A7%86%5D",
       "label": "[Books][0038][[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆]",
       "source": "markdown"
     },
@@ -1313,7 +1313,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-16 23:58:49",
       "updatedDate": "2022-09-16",
       "slug": "modern-c-tutorial-changkun-ou",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0037][Modern C++ Tutorial-Changkun Ou]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0037%5D%5BModern%20C%2B%2B%20Tutorial-Changkun%20Ou%5D",
       "label": "[Books][0037][Modern C++ Tutorial-Changkun Ou]",
       "source": "markdown"
     },
@@ -1327,7 +1327,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-17 19:17:00",
       "updatedDate": "2022-09-17",
       "slug": "books-0036",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0036][[诺贝尔文学奖][2012]蛙-莫言]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0036%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2012%5D%E8%9B%99-%E8%8E%AB%E8%A8%80%5D",
       "label": "[Books][0036][[诺贝尔文学奖][2012]蛙-莫言]",
       "source": "markdown"
     },
@@ -1341,7 +1341,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-10-08 21:55:02",
       "updatedDate": "2023-10-08",
       "slug": "books-0035",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0035][毛姆]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0035%5D%5B%E6%AF%9B%E5%A7%86%5D",
       "label": "[Books][0035][毛姆]",
       "source": "markdown"
     },
@@ -1355,7 +1355,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-05 22:05:00",
       "updatedDate": "2022-09-05",
       "slug": "books-0034",
-      "href": "render.html?md=/qrthoughts/year2022/month9/[Books][0034][三体-刘慈溪]",
+      "href": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0034%5D%5B%E4%B8%89%E4%BD%93-%E5%88%98%E6%85%88%E6%BA%AA%5D",
       "label": "[Books][0034][三体-刘慈溪]",
       "source": "markdown"
     },
@@ -1369,7 +1369,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-04 15:01:13",
       "updatedDate": "2022-09-04",
       "slug": "books-0033",
-      "href": "render.html?md=/qrthoughts/year2022/month6/[Books][0033][明清十大禁书]",
+      "href": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0033%5D%5B%E6%98%8E%E6%B8%85%E5%8D%81%E5%A4%A7%E7%A6%81%E4%B9%A6%5D",
       "label": "[Books][0033][明清十大禁书]",
       "source": "markdown"
     },
@@ -1383,7 +1383,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-06-13 23:35:05",
       "updatedDate": "2022-06-13",
       "slug": "books-0032",
-      "href": "render.html?md=/qrthoughts/year2022/month6/[Books][0032][哈佛天才与素质教育典藏文库系列]",
+      "href": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0032%5D%5B%E5%93%88%E4%BD%9B%E5%A4%A9%E6%89%8D%E4%B8%8E%E7%B4%A0%E8%B4%A8%E6%95%99%E8%82%B2%E5%85%B8%E8%97%8F%E6%96%87%E5%BA%93%E7%B3%BB%E5%88%97%5D",
       "label": "[Books][0032][哈佛天才与素质教育典藏文库系列]",
       "source": "markdown"
     },
@@ -1397,7 +1397,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:42:12",
       "updatedDate": "2022-11-06",
       "slug": "a0310",
-      "href": "render.html?md=/qrthoughts/year2022/month6/[Books][0031][[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉]",
+      "href": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0031%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0310%5D%E5%8A%9D%E5%AD%A6%E7%AF%87-%E7%A6%8F%E6%B3%BD%E8%B0%95%E5%90%89%5D",
       "label": "[Books][0031][[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉]",
       "source": "markdown"
     },
@@ -1411,7 +1411,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:41:14",
       "updatedDate": "2022-11-06",
       "slug": "a0115",
-      "href": "render.html?md=/qrthoughts/year2022/month6/[Books][0030][[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑]",
+      "href": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0030%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0115%5D%E7%A7%91%E5%AD%A6%E4%B8%AD%E5%8D%8E%E8%80%8C%E4%B8%8D%E5%AE%9E%E7%9A%84%E4%BD%9C%E9%A3%8E-%E8%B5%AB%E5%B0%94%E5%B2%91%5D",
       "label": "[Books][0030][[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑]",
       "source": "markdown"
     },
@@ -1425,7 +1425,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-05-29",
       "updatedDate": "2022-05-29",
       "slug": "a0512",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0029][[商务印书馆汉译世界名著][A0512]自然哲学-石里克]",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0029%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0512%5D%E8%87%AA%E7%84%B6%E5%93%B2%E5%AD%A6-%E7%9F%B3%E9%87%8C%E5%85%8B%5D",
       "label": "[Books][0029][[商务印书馆汉译世界名著][A0512]自然哲学-石里克]",
       "source": "markdown"
     },
@@ -1439,7 +1439,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-05-01 17:31:31",
       "updatedDate": "2023-05-01",
       "slug": "books-0028",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0028]王小波",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0028%5D%E7%8E%8B%E5%B0%8F%E6%B3%A2",
       "label": "[Books][0028][王小波]",
       "source": "markdown"
     },
@@ -1453,7 +1453,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-05-02 00:27:31",
       "updatedDate": "2022-05-02",
       "slug": "books-0027",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0027][物理世界奇遇记-乔治·伽莫夫]",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0027%5D%5B%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E5%A5%87%E9%81%87%E8%AE%B0-%E4%B9%94%E6%B2%BB%C2%B7%E4%BC%BD%E8%8E%AB%E5%A4%AB%5D",
       "label": "[Books][0027][物理世界奇遇记-乔治·伽莫夫]",
       "source": "markdown"
     },
@@ -1467,7 +1467,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-05-02 00:27:31",
       "updatedDate": "2022-05-02",
       "slug": "javascript-d3-js",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Study][0001][JavaScript-D3.js]",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BStudy%5D%5B0001%5D%5BJavaScript-D3.js%5D",
       "label": "[Study][0001][JavaScript-D3.js]",
       "source": "markdown"
     },
@@ -1481,7 +1481,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 11:07:02",
       "updatedDate": "2023-03-26",
       "slug": "a0901",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0025][[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔]",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0025%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0901%5D%E8%B0%88%E8%B0%88%E6%96%B9%E6%B3%95-%E7%AC%9B%E5%8D%A1%E5%B0%94%5D",
       "label": "[Books][0025][[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔]",
       "source": "markdown"
     },
@@ -1495,7 +1495,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-05-01 23:20:45",
       "updatedDate": "2022-05-01",
       "slug": "books-0024",
-      "href": "render.html?md=/qrthoughts/year2022/month5/[Books][0024][法国诗选]",
+      "href": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0024%5D%5B%E6%B3%95%E5%9B%BD%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0024][法国诗选]",
       "source": "markdown"
     },
@@ -1509,7 +1509,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-28 23:14:55",
       "updatedDate": "2021-12-28",
       "slug": "books-0023",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0023][[20世纪世界诗歌译丛](第一辑)切·米沃什诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0023%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%88%87%C2%B7%E7%B1%B3%E6%B2%83%E4%BB%80%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0023][[20世纪世界诗歌译丛](第一辑)切·米沃什诗选]",
       "source": "markdown"
     },
@@ -1523,7 +1523,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-28 22:39:52",
       "updatedDate": "2021-12-28",
       "slug": "books-0022",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0022][[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0022%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%8D%A1%E7%93%A6%E8%8F%B2%E6%96%AF%E8%AF%97%E9%9B%86%5D",
       "label": "[Books][0022][[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集]",
       "source": "markdown"
     },
@@ -1537,7 +1537,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-26 10:07:10",
       "updatedDate": "2023-03-26",
       "slug": "books-0021",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0021][初等代数_北京市初等数学编写组_1975]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0021%5D%5B%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0_%E5%8C%97%E4%BA%AC%E5%B8%82%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6%E7%BC%96%E5%86%99%E7%BB%84_1975%5D",
       "label": "[Books][0021][初等代数_北京市初等数学编写组_1975]",
       "source": "markdown"
     },
@@ -1551,7 +1551,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-09 20:42:37",
       "updatedDate": "2021-12-09",
       "slug": "books-0020",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0020][[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0020%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E7%8B%84%E5%85%B0%C2%B7%E6%89%98%E9%A9%AC%E6%96%AF%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0020][[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选]",
       "source": "markdown"
     },
@@ -1565,7 +1565,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-07 21:59:37",
       "updatedDate": "2021-12-07",
       "slug": "books-0019",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0019][[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0019%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BC%8A%E5%87%A1%C2%B7%E5%93%A5%E5%B0%94%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0019][[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选]",
       "source": "markdown"
     },
@@ -1579,7 +1579,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:37:46",
       "updatedDate": "2022-11-06",
       "slug": "a0909",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0018][[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0018%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0909%5D%E5%8D%A1%E5%B8%83%E6%96%AF%E6%95%99%E8%AF%B2%E5%BD%95-%E6%98%82%E8%8B%8F%E5%B0%94%E3%83%BB%E7%8E%9B%E9%98%BF%E9%87%8C%5D",
       "label": "[Books][0018][[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里]",
       "source": "markdown"
     },
@@ -1593,7 +1593,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-04 20:59:50",
       "updatedDate": "2021-12-04",
       "slug": "books-0017",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0017][[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0017%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BC%8A%E4%B8%BD%E8%8E%8E%E7%99%BD%C2%B7%E6%AF%95%E8%82%96%E6%99%AE%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0017][[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选]",
       "source": "markdown"
     },
@@ -1607,7 +1607,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:36:11",
       "updatedDate": "2022-11-06",
       "slug": "a0103",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0016][[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0016%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0103%5D%E5%AF%B9%E7%AC%9B%E5%8D%A1%E5%B0%94%E3%80%8A%E6%B2%89%E6%80%9D%E3%80%8B%E7%9A%84%E8%AF%98%E9%9A%BE-%E4%BC%BD%E6%A3%AE%E7%8B%84%5D",
       "label": "[Books][0016][[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄]",
       "source": "markdown"
     },
@@ -1621,7 +1621,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-01 21:51:07",
       "updatedDate": "2021-12-01",
       "slug": "books-0015",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0015][[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0015%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E8%80%B6%E8%83%A1%E8%BE%BE%C2%B7%E9%98%BF%E7%B1%B3%E4%BA%A5%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0015][[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选]",
       "source": "markdown"
     },
@@ -1635,7 +1635,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-12-01 21:00:49",
       "updatedDate": "2021-12-01",
       "slug": "books-0014",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0014][[20世纪世界诗歌译丛](第一辑)里尔克诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0014%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E9%87%8C%E5%B0%94%E5%85%8B%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0014][[20世纪世界诗歌译丛](第一辑)里尔克诗选]",
       "source": "markdown"
     },
@@ -1649,7 +1649,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2024-07-20 11:57:57",
       "updatedDate": "2024-07-20",
       "slug": "books-0013",
-      "href": "render.html?md=/qrthoughts/year2021/month12/[Books][0013][[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选]",
+      "href": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0013%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BF%9D%E7%BD%97%C2%B7%E7%AD%96%E5%85%B0%E8%AF%97%E6%96%87%E9%80%89%5D",
       "label": "[Books][0013][[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选]",
       "source": "markdown"
     },
@@ -1663,7 +1663,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-11-28 21:29:01",
       "updatedDate": "2021-11-28",
       "slug": "books-0012",
-      "href": "render.html?md=/qrthoughts/year2021/month11/[Books][0012][[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选]",
+      "href": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0012%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%AE%89%E4%B8%9C%E5%B0%BC%E5%A5%A5%C2%B7%E9%A9%AC%E6%9F%A5%E5%A4%9A%E8%AF%97%E9%80%89%5D",
       "label": "[Books][0012][[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选]",
       "source": "markdown"
     },
@@ -1677,7 +1677,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-09-17 00:07:30",
       "updatedDate": "2022-09-17",
       "slug": "aditya-bhargava",
-      "href": "render.html?md=/qrthoughts/year2021/month11/[Books][0011][算法图解-Aditya Bhargava]",
+      "href": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0011%5D%5B%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3-Aditya%20Bhargava%5D",
       "label": "[Books][0011][算法图解-Aditya Bhargava]",
       "source": "markdown"
     },
@@ -1691,7 +1691,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:34:45",
       "updatedDate": "2022-11-06",
       "slug": "a0408",
-      "href": "render.html?md=/qrthoughts/year2021/month11/[Books][0010][[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎]",
+      "href": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0010%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0408%5D%E7%9F%A5%E6%80%A7%E6%94%B9%E8%BF%9B%E8%AE%BA-%E6%96%AF%E5%AE%BE%E8%AF%BA%E8%8E%8E%5D",
       "label": "[Books][0010][[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎]",
       "source": "markdown"
     },
@@ -1705,7 +1705,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:33:20",
       "updatedDate": "2022-11-06",
       "slug": "a0107-mettrie",
-      "href": "render.html?md=/qrthoughts/year2021/month9/[Books][0009][[商务印书馆汉译世界名著][A0107]人是机器-Mettrie]",
+      "href": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0009%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0107%5D%E4%BA%BA%E6%98%AF%E6%9C%BA%E5%99%A8-Mettrie%5D",
       "label": "[Books][0009][[商务印书馆汉译世界名著][A0107]人是机器-Mettrie]",
       "source": "markdown"
     },
@@ -1719,7 +1719,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:30:52",
       "updatedDate": "2022-11-06",
       "slug": "a0907-john-von-neumann",
-      "href": "render.html?md=/qrthoughts/year2021/month9/[Books][0008][[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann]",
+      "href": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0008%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0907%5D%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BA%BA%E8%84%91-John%20von%20Neumann%5D",
       "label": "[Books][0008][[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann]",
       "source": "markdown"
     },
@@ -1733,7 +1733,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-09-09 21:48:02",
       "updatedDate": "2021-09-09",
       "slug": "books-0007",
-      "href": "render.html?md=/qrthoughts/year2021/month9/[Books][0007][编程之道]",
+      "href": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0007%5D%5B%E7%BC%96%E7%A8%8B%E4%B9%8B%E9%81%93%5D",
       "label": "[Books][0007][编程之道]",
       "source": "markdown"
     },
@@ -1747,7 +1747,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2022-11-06 23:27:55",
       "updatedDate": "2022-11-06",
       "slug": "a0804-john-toland",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0006][[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland]",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0006%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0804%5D%E6%B3%9B%E7%A5%9E%E8%AE%BA%E8%A6%81%E4%B9%89-John%20Toland%5D",
       "label": "[Books][0006][[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland]",
       "source": "markdown"
     },
@@ -1761,7 +1761,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-08-15 23:15:00",
       "updatedDate": "2021-08-15",
       "slug": "algorithms-to-live-by",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0005][Algorithms to live by]",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0005%5D%5BAlgorithms%20to%20live%20by%5D",
       "label": "[Books][0005][Algorithms to live by]",
       "source": "markdown"
     },
@@ -1775,7 +1775,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-08-15 22:45:28",
       "updatedDate": "2021-08-15",
       "slug": "effective-c",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0004][Effective C++]",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0004%5D%5BEffective%20C%2B%2B%5D",
       "label": "[Books][0004][Effective C++]",
       "source": "markdown"
     },
@@ -1789,7 +1789,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-18 15:26:46",
       "updatedDate": "2023-03-18",
       "slug": "books-0003",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0003]王国维",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0003%5D%E7%8E%8B%E5%9B%BD%E7%BB%B4",
       "label": "[Books][0003][王国维]",
       "source": "markdown"
     },
@@ -1803,7 +1803,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2023-03-18 15:13:24",
       "updatedDate": "2023-03-18",
       "slug": "books-0002",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0002][图灵程序设计丛书]",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0002%5D%5B%E5%9B%BE%E7%81%B5%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%9B%E4%B9%A6%5D",
       "label": "[Books][0002][图灵程序设计丛书]",
       "source": "markdown"
     },
@@ -1817,7 +1817,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2021-08-07 00:05:03",
       "updatedDate": "2021-08-07",
       "slug": "journal-of-the-universe",
-      "href": "render.html?md=/qrthoughts/year2021/month8/[Books][0001][Journal of the Universe]",
+      "href": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0001%5D%5BJournal%20of%20the%20Universe%5D",
       "label": "[Books][0001][Journal of the Universe]",
       "source": "markdown"
     },
@@ -1831,7 +1831,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:43:05",
       "updatedDate": "2026-05-02",
       "slug": "first-sunday",
-      "href": "render.html?md=/qrthoughts/year2020/month8/[Thoughts][0007][First Sunday]",
+      "href": "render.html?md=/qrthoughts/year2020/month8/%5BThoughts%5D%5B0007%5D%5BFirst%20Sunday%5D",
       "label": "[Thoughts][0007][First Sunday]",
       "source": "markdown"
     },
@@ -1845,7 +1845,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:40:27",
       "updatedDate": "2026-05-02",
       "slug": "a-little-poem",
-      "href": "render.html?md=/qrthoughts/year2020/month3/[Thoughts][0006][A little poem]",
+      "href": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0006%5D%5BA%20little%20poem%5D",
       "label": "[Thoughts][0006][A little poem]",
       "source": "markdown"
     },
@@ -1859,7 +1859,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:38:24",
       "updatedDate": "2026-05-02",
       "slug": "someplace",
-      "href": "render.html?md=/qrthoughts/year2020/month3/[Thoughts][0005][Someplace]",
+      "href": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0005%5D%5BSomeplace%5D",
       "label": "[Thoughts][0005][Someplace]",
       "source": "markdown"
     },
@@ -1873,7 +1873,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:36:25",
       "updatedDate": "2026-05-02",
       "slug": "fire",
-      "href": "render.html?md=/qrthoughts/year2020/month3/[Thoughts][0004][Fire]",
+      "href": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0004%5D%5BFire%5D",
       "label": "[Thoughts][0004][Fire]",
       "source": "markdown"
     },
@@ -1887,7 +1887,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:33:10",
       "updatedDate": "2026-05-02",
       "slug": "rain",
-      "href": "render.html?md=/qrthoughts/year2020/month2/[Thoughts][0003][Rain]",
+      "href": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0003%5D%5BRain%5D",
       "label": "[Thoughts][0003][Rain]",
       "source": "markdown"
     },
@@ -1901,7 +1901,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:28:35",
       "updatedDate": "2026-05-02",
       "slug": "first-remote-meeting",
-      "href": "render.html?md=/qrthoughts/year2020/month2/[Thoughts][0002][first-remote-meeting]",
+      "href": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0002%5D%5Bfirst-remote-meeting%5D",
       "label": "[Thoughts][0002][first-remote-meeting]",
       "source": "markdown"
     },
@@ -1915,7 +1915,7 @@ window.HOMEPAGE_DATA = {
       "updated": "2026-05-02 17:28:35",
       "updatedDate": "2026-05-02",
       "slug": "why-now",
-      "href": "render.html?md=/qrthoughts/year2020/month2/[Thoughts][0001][why-now]",
+      "href": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0001%5D%5Bwhy-now%5D",
       "label": "[Thoughts][0001][why-now]",
       "source": "markdown"
     }
