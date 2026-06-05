@@ -63,6 +63,7 @@ Observed project commits for the session sequence:
 - `2425daa Generate sitemap and Atom feed`
 - `2d28dd5 Support top markdown comments`
 - `151cf50 Update [Thoughts][0013][关于token和工具的观察与思考].md`
+- `02d0d7e Publish AI4AI R&D note`
 
 Checks and commands used during the work included:
 
@@ -83,7 +84,7 @@ Checks and commands used during the work included:
 
 ## Current Dirty State
 
-At final closeout verification, the only working-tree changes were this closeout report and the `architecture/README.md` index entry that points to it.
+At final closeout verification, the only working-tree changes were closeout reports and the `architecture/README.md` index entries that point to them.
 
 Earlier status output showed generated/content paths such as `homepage-data.js`, `includes/atom.xml`, `sitemap.xml`, `qrthoughts/year2026/month6/`, and `thoughts/0014/`; a full untracked and diff check before commit showed those paths were already tracked/clean and did not need to be included in this report commit.
 
@@ -130,4 +131,4 @@ No new skill or agent was installed during this closeout. The above are extracti
 
 - Branch at report creation: `master`.
 - Closeout report path: `architecture/task-closeouts/2026-06-06-site-publishing-closeout.md`.
-- The report is intended to be committed and pushed separately from pre-existing content/generated-file changes.
+- This report is intended to be committed and pushed with the focused Markdown header comments closeout report.
