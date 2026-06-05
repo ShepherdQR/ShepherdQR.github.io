@@ -12,3 +12,7 @@ This directory stores architecture design documents and decision records for the
 - [Archive and Article Page Design](archive-and-article-page-design.md): Shared article reader and archive/category page design.
 - [Legacy HTML Cleanup Strategy](legacy-html-cleanup-strategy.md): Accepted strategy for deleting old HTML compatibility copies after Markdown verification.
 - [Project Change and Migration Report](project-change-migration-report.md): Ongoing project-level ledger for architecture changes, migrations, cleanup decisions, and verification.
+
+## Task Closeouts
+
+- [2026-06-06 Site Publishing Closeout](task-closeouts/2026-06-06-site-publishing-closeout.md): Durable handoff for the Markdown-first site architecture, publishing workflow, generated pages, validation, and skill/agent extraction review.
