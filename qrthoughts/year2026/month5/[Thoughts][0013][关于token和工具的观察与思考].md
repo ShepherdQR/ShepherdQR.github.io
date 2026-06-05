@@ -3,7 +3,7 @@
  - Date: 2026-05-20 21:27:41
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-05-20 23:41:47
+ - LastEditTime: 2026-06-05 23:24:24
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -26,7 +26,10 @@ source:
     updated: "new-note"
 ---
 
-# 关于token和工具的观察与思考
+# 关于token和工具的观察与思考【第I部分】
+本部分是【20260520-01：37】凌晨匆匆完成，目的是观察第二天的讨论，研究个人的认识，能否覆盖整个团队的认识。
+
+第二天的讨论的复盘，等我有时间分析。初步估计覆盖率极高，于是直到此时【20260605-23：23】也没有复盘。后面有时间复盘时（时刻T），关注当时的欠缺的认识，以及，会议上匆匆讨论后，我到T时刻期间是否缩减了gap。
 
 
 ## 引子

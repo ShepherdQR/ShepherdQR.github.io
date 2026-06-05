@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-05-20",
+  "generatedAt": "2026-06-05",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0014",
+      "title": "AI4AI R&D",
+      "created": "2026-06-05 23:26:07",
+      "createdDate": "2026-06-05",
+      "published": "2026-06-05",
+      "updated": "2026-06-05 23:26:07",
+      "updatedDate": "2026-06-05",
+      "slug": "ai4ai-r-d",
+      "href": "/thoughts/0014/",
+      "canonicalHref": "/thoughts/0014/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0014%5D%5BAI4AI%20R%26D%5D",
+      "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&D].md",
+      "label": "[Thoughts][0014][AI4AI R&D]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0013",
@@ -2349,15 +2366,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 138,
+    "total": 139,
     "byType": {
-      "Thoughts": 13,
+      "Thoughts": 14,
       "Books": 122,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 7,
+      "2026": 8,
       "2025": 1,
       "2024": 2,
       "2023": 36,
