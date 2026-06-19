@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-06-19",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0018",
+      "title": "agent共生约束场",
+      "created": "2026-06-19 10:13:35",
+      "createdDate": "2026-06-19",
+      "published": "2026-06-19",
+      "updated": "2026-06-19 10:13:35",
+      "updatedDate": "2026-06-19",
+      "slug": "agent",
+      "href": "/thoughts/0018/",
+      "canonicalHref": "/thoughts/0018/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0018%5D%5Bagent%E5%85%B1%E7%94%9F%E7%BA%A6%E6%9D%9F%E5%9C%BA%5D",
+      "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0018][agent共生约束场].md",
+      "label": "[Thoughts][0018][agent共生约束场]",
+      "source": "markdown"
+    },
     {
       "type": "Books",
       "id": "0123",
@@ -2434,15 +2451,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 143,
+    "total": 144,
     "byType": {
+      "Thoughts": 18,
       "Books": 123,
-      "Thoughts": 17,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 12,
+      "2026": 13,
       "2025": 1,
       "2024": 2,
       "2023": 36,

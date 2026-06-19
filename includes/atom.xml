@@ -4,10 +4,18 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-06-18T00:00:00+08:00</updated>
+  <updated>2026-06-19T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>agent共生约束场</title>
+    <link href="https://zqr.world/thoughts/0018/" />
+    <id>https://zqr.world/thoughts/0018/</id>
+    <published>2026-06-19T00:00:00+08:00</published>
+    <updated>2026-06-19T10:13:35+08:00</updated>
+    <summary>Thoughts note 0018</summary>
+  </entry>
   <entry>
     <title>新中国航空事业发展70周年70件大事</title>
     <link href="https://zqr.world/books/0123/" />
@@ -399,13 +407,5 @@
     <published>2023-02-11T00:00:00+08:00</published>
     <updated>2023-02-11T13:31:29+08:00</updated>
     <summary>Books note 0086</summary>
-  </entry>
-  <entry>
-    <title>[诺贝尔文学奖][1969]Samuel Beckett</title>
-    <link href="https://zqr.world/books/0085/" />
-    <id>https://zqr.world/books/0085/</id>
-    <published>2023-02-01T00:00:00+08:00</published>
-    <updated>2023-02-01T22:04:45+08:00</updated>
-    <summary>Books note 0085</summary>
   </entry>
 </feed>
