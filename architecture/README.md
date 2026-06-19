@@ -17,3 +17,4 @@ This directory stores architecture design documents and decision records for the
 
 - [2026-06-06 Site Publishing Closeout](task-closeouts/2026-06-06-site-publishing-closeout.md): Durable handoff for the Markdown-first site architecture, publishing workflow, generated pages, validation, and skill/agent extraction review.
 - [2026-06-06 Markdown Header Comments Closeout](task-closeouts/2026-06-06-markdown-header-comments-closeout.md): Focused report for moving Markdown header comments before front matter, parser compatibility work, validation evidence, and skill/agent extraction review.
+- [2026-06-19 Thoughts 0018 Publishing Closeout](task-closeouts/2026-06-19-thoughts-0018-publishing-closeout.md): Focused report for publishing `[Thoughts][0018][agent共生约束场]`, adding the mobile poster as the leading article visual, validating, and pushing the result.
