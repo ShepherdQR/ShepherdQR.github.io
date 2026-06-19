@@ -3,7 +3,7 @@
  - Date: 2026-06-19 10:13:35
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-06-19 10:13:51
+ - LastEditTime: 2026-06-19 10:40:23
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -14,7 +14,7 @@ title: "agent共生约束场"
 created: "2026-06-19 10:13:35"
 created_date: "2026-06-19"
 published: "2026-06-19"
-updated: "2026-06-19 10:13:35"
+updated: "2026-06-19 10:40:23"
 updated_date: "2026-06-19"
 slug: "agent"
 status: "published"
@@ -27,6 +27,7 @@ source:
 
 # agent共生约束场
 
+![Agent共生约束场](../../../resources/pics/agent-symbiosis-constraint-field-mobile-zqr-world.png)
 
 # 关于单/大/厚软件系统智能化：
 - 多尺度模型：ropo/项目/系统级理解核心是构建符号图-历史-运行态证据-检索（按需）与验证的多维度/多层次/多分辨率的外部认知结构/共生成长组织/对等体量适配系统
@@ -38,4 +39,3 @@ source:
 - agent共生是17号晚上在内部写文档临时起意想到的词，很好描绘我们即将已经到来的境况，且一搜索果然有好多相关讨论。说明一旦有实践场域自然可以与top-builder形成长程纠缠（例如我们的课题/项目/组织/开发者），我们不禁好奇，是否【不假思索直觉】是突破brooks本质复杂性的根本？不是，技术层面解构【直觉】只是可验证/量化的表征跃迁
 - 升级/发展/演化/立和强 = 含能材料积累与反例消解 + 结构生成与表征跃迁 +  证据验证与形式结算
 - 自然地把约束场/共生/叙事线/呼吸等统合起来，我们正式提出agent共生约束场 = 横向编织/呼吸层（软的agent/硬的workflow） + 纵向压缩/吸引层（软的叙事线/硬的契约）
-

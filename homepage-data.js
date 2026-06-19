@@ -8,7 +8,7 @@ window.HOMEPAGE_DATA = {
       "created": "2026-06-19 10:13:35",
       "createdDate": "2026-06-19",
       "published": "2026-06-19",
-      "updated": "2026-06-19 10:13:35",
+      "updated": "2026-06-19 10:40:23",
       "updatedDate": "2026-06-19",
       "slug": "agent",
       "href": "/thoughts/0018/",
