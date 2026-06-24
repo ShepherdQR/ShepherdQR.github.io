@@ -4,10 +4,18 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-06-19T00:00:00+08:00</updated>
+  <updated>2026-06-24T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>机械工程智能层</title>
+    <link href="https://zqr.world/thoughts/0019/" />
+    <id>https://zqr.world/thoughts/0019/</id>
+    <published>2026-06-24T00:00:00+08:00</published>
+    <updated>2026-06-24T23:00:41+08:00</updated>
+    <summary>Thoughts note 0019</summary>
+  </entry>
   <entry>
     <title>agent共生约束场</title>
     <link href="https://zqr.world/thoughts/0018/" />
@@ -399,13 +407,5 @@
     <published>2023-02-12T00:00:00+08:00</published>
     <updated>2023-02-12T16:59:43+08:00</updated>
     <summary>Books note 0087</summary>
-  </entry>
-  <entry>
-    <title>[20世纪世界诗歌译丛](第二辑)索德格朗诗全集</title>
-    <link href="https://zqr.world/books/0086/" />
-    <id>https://zqr.world/books/0086/</id>
-    <published>2023-02-11T00:00:00+08:00</published>
-    <updated>2023-02-11T13:31:29+08:00</updated>
-    <summary>Books note 0086</summary>
   </entry>
 </feed>

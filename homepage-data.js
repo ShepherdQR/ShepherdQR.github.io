@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-06-19",
+  "generatedAt": "2026-06-24",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0019",
+      "title": "机械工程智能层",
+      "created": "2026-06-24 23:00:41",
+      "createdDate": "2026-06-24",
+      "published": "2026-06-24",
+      "updated": "2026-06-24 23:00:41",
+      "updatedDate": "2026-06-24",
+      "slug": "thoughts-0019",
+      "href": "/thoughts/0019/",
+      "canonicalHref": "/thoughts/0019/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0019%5D%5B%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B%E6%99%BA%E8%83%BD%E5%B1%82%5D",
+      "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0019][机械工程智能层].md",
+      "label": "[Thoughts][0019][机械工程智能层]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0018",
@@ -2451,15 +2468,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 144,
+    "total": 145,
     "byType": {
-      "Thoughts": 18,
+      "Thoughts": 19,
       "Books": 123,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 13,
+      "2026": 14,
       "2025": 1,
       "2024": 2,
       "2023": 36,
