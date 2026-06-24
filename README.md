@@ -29,6 +29,8 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
+python scripts/new_note.py Thoughts "热带对称的范畴图景"
+python scripts/new_note.py Books "新中国航空事业发展70周年70件大事"
 ```
 
 Supported content types:

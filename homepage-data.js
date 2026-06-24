@@ -3,6 +3,23 @@ window.HOMEPAGE_DATA = {
   "items": [
     {
       "type": "Thoughts",
+      "id": "0020",
+      "title": "热带对称的范畴图景",
+      "created": "2026-06-24 23:09:19",
+      "createdDate": "2026-06-24",
+      "published": "2026-06-24",
+      "updated": "2026-06-24 23:09:19",
+      "updatedDate": "2026-06-24",
+      "slug": "thoughts-0020",
+      "href": "/thoughts/0020/",
+      "canonicalHref": "/thoughts/0020/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0020%5D%5B%E7%83%AD%E5%B8%A6%E5%AF%B9%E7%A7%B0%E7%9A%84%E8%8C%83%E7%95%B4%E5%9B%BE%E6%99%AF%5D",
+      "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0020][热带对称的范畴图景].md",
+      "label": "[Thoughts][0020][热带对称的范畴图景]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
       "id": "0019",
       "title": "机械工程智能层",
       "created": "2026-06-24 23:00:41",
@@ -2468,15 +2485,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 145,
+    "total": 146,
     "byType": {
-      "Thoughts": 19,
+      "Thoughts": 20,
       "Books": 123,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 14,
+      "2026": 15,
       "2025": 1,
       "2024": 2,
       "2023": 36,
