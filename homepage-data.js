@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-06-24",
+  "generatedAt": "2026-07-01",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0021",
+      "title": "第二次论我的政绩观",
+      "created": "2026-07-01 21:53:32",
+      "createdDate": "2026-07-01",
+      "published": "2026-07-01",
+      "updated": "2026-07-01 21:53:32",
+      "updatedDate": "2026-07-01",
+      "slug": "thoughts-0021",
+      "href": "/thoughts/0021/",
+      "canonicalHref": "/thoughts/0021/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0021%5D%5B%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AE%BA%E6%88%91%E7%9A%84%E6%94%BF%E7%BB%A9%E8%A7%82%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0021][第二次论我的政绩观].md",
+      "label": "[Thoughts][0021][第二次论我的政绩观]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0020",
@@ -2485,15 +2502,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 146,
+    "total": 147,
     "byType": {
-      "Thoughts": 20,
+      "Thoughts": 21,
       "Books": 123,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 15,
+      "2026": 16,
       "2025": 1,
       "2024": 2,
       "2023": 36,
