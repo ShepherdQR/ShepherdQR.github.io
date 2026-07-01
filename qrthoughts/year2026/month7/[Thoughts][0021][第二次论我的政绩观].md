@@ -3,7 +3,7 @@
  - Date: 2026-07-01 21:53:32
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-07-01 22:07:49
+ - LastEditTime: 2026-07-01 22:38:08
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -26,6 +26,9 @@ source:
 ---
 
 # 第二次论我的政绩观
+
+![第二次论我的政绩观](../../../resources/pics/governance-view-mobile-red.png)
+
 
 
 夏播时节，阴云连绵，风雷激荡，这注定是一个提心吊胆的夏天。
