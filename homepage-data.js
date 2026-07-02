@@ -1,6 +1,40 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-01",
+  "generatedAt": "2026-07-03",
   "items": [
+    {
+      "type": "Books",
+      "id": "0124",
+      "title": "麦肯锡-问题分析与解决技巧",
+      "created": "2026-07-03 00:56:34",
+      "createdDate": "2026-07-03",
+      "published": "2026-07-03",
+      "updated": "2026-07-03 00:56:34",
+      "updatedDate": "2026-07-03",
+      "slug": "books-0124",
+      "href": "/books/0124/",
+      "canonicalHref": "/books/0124/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BBooks%5D%5B0124%5D%5B%E9%BA%A6%E8%82%AF%E9%94%A1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%8A%80%E5%B7%A7%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Books][0124][麦肯锡-问题分析与解决技巧].md",
+      "label": "[Books][0124][麦肯锡-问题分析与解决技巧]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
+      "id": "0022",
+      "title": "Topos理论研究报告",
+      "created": "2026-07-03 00:49:05",
+      "createdDate": "2026-07-03",
+      "published": "2026-07-03",
+      "updated": "2026-07-03 00:49:05",
+      "updatedDate": "2026-07-03",
+      "slug": "topos",
+      "href": "/thoughts/0022/",
+      "canonicalHref": "/thoughts/0022/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0022%5D%5BTopos%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0022][Topos理论研究报告].md",
+      "label": "[Thoughts][0022][Topos理论研究报告]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0021",
@@ -2502,15 +2536,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 147,
+    "total": 149,
     "byType": {
-      "Thoughts": 21,
-      "Books": 123,
+      "Books": 124,
+      "Thoughts": 22,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 16,
+      "2026": 18,
       "2025": 1,
       "2024": 2,
       "2023": 36,

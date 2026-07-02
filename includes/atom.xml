@@ -4,10 +4,26 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-07-01T00:00:00+08:00</updated>
+  <updated>2026-07-03T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>麦肯锡-问题分析与解决技巧</title>
+    <link href="https://zqr.world/books/0124/" />
+    <id>https://zqr.world/books/0124/</id>
+    <published>2026-07-03T00:00:00+08:00</published>
+    <updated>2026-07-03T00:56:34+08:00</updated>
+    <summary>Books note 0124</summary>
+  </entry>
+  <entry>
+    <title>Topos理论研究报告</title>
+    <link href="https://zqr.world/thoughts/0022/" />
+    <id>https://zqr.world/thoughts/0022/</id>
+    <published>2026-07-03T00:00:00+08:00</published>
+    <updated>2026-07-03T00:49:05+08:00</updated>
+    <summary>Thoughts note 0022</summary>
+  </entry>
   <entry>
     <title>第二次论我的政绩观</title>
     <link href="https://zqr.world/thoughts/0021/" />
@@ -391,21 +407,5 @@
     <published>2023-02-25T00:00:00+08:00</published>
     <updated>2023-02-26T18:28:51+08:00</updated>
     <summary>Books note 0091</summary>
-  </entry>
-  <entry>
-    <title>[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选</title>
-    <link href="https://zqr.world/books/0090/" />
-    <id>https://zqr.world/books/0090/</id>
-    <published>2023-02-25T00:00:00+08:00</published>
-    <updated>2023-02-25T13:49:01+08:00</updated>
-    <summary>Books note 0090</summary>
-  </entry>
-  <entry>
-    <title>[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册</title>
-    <link href="https://zqr.world/books/0089/" />
-    <id>https://zqr.world/books/0089/</id>
-    <published>2023-02-19T00:00:00+08:00</published>
-    <updated>2023-02-19T18:19:39+08:00</updated>
-    <summary>Books note 0089</summary>
   </entry>
 </feed>
