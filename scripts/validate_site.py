@@ -13,6 +13,8 @@ from pathlib import Path
 from urllib.parse import quote, unquote, urlparse
 from xml.etree import ElementTree as ET
 
+import generate_homepage_data
+
 
 DATA_RE = re.compile(r"^\s*window\.HOMEPAGE_DATA\s*=\s*(?P<payload>[\s\S]*?)\s*;\s*$")
 ARTICLE_CONFIG_RE = re.compile(
@@ -352,6 +354,22 @@ def validate_uniqueness(items: list[dict[str, str]]) -> list[str]:
     return errors
 
 
+def validate_item_order(items: list[dict[str, str]]) -> list[str]:
+    expected = sorted(items, key=generate_homepage_data.item_sort_key, reverse=True)
+    actual_keys = [(item.get("type", ""), item.get("id", "")) for item in items]
+    expected_keys = [(item.get("type", ""), item.get("id", "")) for item in expected]
+    if actual_keys == expected_keys:
+        return []
+
+    for index, (actual, expected_key) in enumerate(zip(actual_keys, expected_keys), start=1):
+        if actual != expected_key:
+            return [
+                "homepage-data.js: items are not sorted newest-first; "
+                f"position {index} has {actual[0]} {actual[1]}, expected {expected_key[0]} {expected_key[1]}"
+            ]
+    return ["homepage-data.js: items are not sorted newest-first"]
+
+
 def validate_stats_and_counts(root: Path, data: dict, items: list[dict[str, str]]) -> list[str]:
     errors: list[str] = []
     stats = data.get("stats")
@@ -480,6 +498,7 @@ def main(argv: list[str]) -> int:
     homepage_keys = {(item.get("type", ""), item.get("id", "")) for item in markdown_items}
     errors: list[str] = []
     errors.extend(validate_uniqueness(items))
+    errors.extend(validate_item_order(items))
     errors.extend(validate_stats_and_counts(root, data, items))
     errors.extend(validate_atom_xml(root))
     errors.extend(validate_sitemap_xml(root, markdown_items))

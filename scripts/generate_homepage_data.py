@@ -19,6 +19,8 @@ FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
 FRONT_MATTER_RE = re.compile(
     r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
 )
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DATETIME_RE = re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")
 INDEX_ITEM_RE = re.compile(
     r"\{\s*date:\s*'(?P<date>[^']+)'\s*,\s*href:\s*'(?P<href>(?:\\'|[^'])*)'\s*,\s*text:\s*(?:'(?P<text1>(?:\\'|[^'])*)'|\"(?P<text2>(?:\\\"|[^\"])*)\")",
     re.S,
@@ -34,6 +36,37 @@ def parse_scalar(value: str) -> str:
     if len(value) >= 2 and value[0] == value[-1] == '"':
         return value[1:-1].replace('\\"', '"').replace("\\\\", "\\")
     return value
+
+
+def date_part(value: str) -> str:
+    value = (value or "").strip()
+    if DATETIME_RE.fullmatch(value):
+        return value[:10]
+    if DATE_RE.fullmatch(value):
+        return value
+    return ""
+
+
+def normalize_sort_datetime(value: str, expected_date: str) -> str:
+    value = (value or "").strip()
+    if not expected_date or date_part(value) != expected_date:
+        return ""
+    if DATETIME_RE.fullmatch(value):
+        return value.replace(" ", "T")
+    if DATE_RE.fullmatch(value):
+        return value + "T00:00:00"
+    return ""
+
+
+def item_sort_key(item: dict[str, str]) -> tuple[str, str, str, str, str]:
+    published_date = date_part(item.get("published", ""))
+    return (
+        published_date,
+        normalize_sort_datetime(item.get("created", ""), published_date),
+        normalize_sort_datetime(item.get("updated", ""), published_date),
+        item.get("type", ""),
+        item.get("id", ""),
+    )
 
 
 def parse_type_id_title(value: str) -> tuple[str, str, str] | None:
@@ -182,7 +215,7 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
 def collect_items(root: Path, include_legacy_index: bool = False) -> list[dict[str, str]]:
     markdown_items = collect_markdown_items(root)
     if not include_legacy_index:
-        markdown_items.sort(key=lambda item: (item["published"], item["id"]), reverse=True)
+        markdown_items.sort(key=item_sort_key, reverse=True)
         return markdown_items
 
     markdown_keys = {(item["type"], item["id"]) for item in markdown_items}
@@ -191,7 +224,7 @@ def collect_items(root: Path, include_legacy_index: bool = False) -> list[dict[s
         if (item["type"], item["id"]) not in markdown_keys
     ]
     items = markdown_items + legacy_items
-    items.sort(key=lambda item: (item["published"], item["id"]), reverse=True)
+    items.sort(key=item_sort_key, reverse=True)
     return items
 
 
