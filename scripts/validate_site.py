@@ -32,10 +32,14 @@ STATIC_SITEMAP_PATHS = {
     "/archive.html",
     "/stats.html",
     "/books.html",
+    "/series.html",
+    "/series/20th-century-world-poetry/",
     "/thoughts.html",
     "/study.html",
     "/videos.html",
 }
+SERIES_STATUSES = {"done", "todo"}
+SERIES_MATCH_STATUSES = {"confirmed", "candidate", "unmatched"}
 REQUIRED_ITEM_FIELDS = {
     "type",
     "id",
@@ -469,6 +473,109 @@ def validate_sitemap_xml(root: Path, markdown_items: list[dict[str, str]]) -> li
     return errors
 
 
+def local_path_leak(value: str) -> bool:
+    return bool(re.search(r"[A-Za-z]:\\", value) or value.startswith("\\\\"))
+
+
+def series_href_path(root: Path, href: str) -> Path:
+    clean = href.strip()
+    if clean.endswith("/"):
+        return root / clean.lstrip("/") / "index.html"
+    return root / clean.lstrip("/")
+
+
+def validate_series_books(root: Path) -> list[str]:
+    errors: list[str] = []
+    data_path = root / "data" / "series-books.json"
+    if not data_path.exists():
+        return ["data/series-books.json: file does not exist"]
+
+    try:
+        payload = json.loads(read_text(data_path))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"data/series-books.json: cannot parse JSON: {exc}"]
+
+    series_list = payload.get("series")
+    if not isinstance(series_list, list) or not series_list:
+        return ["data/series-books.json: series must be a non-empty array"]
+
+    seen_series: set[str] = set()
+    for series in series_list:
+        slug = series.get("slug", "")
+        label = f"series {slug or '<missing-slug>'}"
+        if not slug:
+            errors.append("data/series-books.json: series is missing slug")
+        elif slug in seen_series:
+            errors.append(f"{label}: duplicate slug")
+        seen_series.add(slug)
+
+        href = series.get("href", "")
+        if not href:
+            errors.append(f"{label}: missing href")
+        elif local_path_leak(href):
+            errors.append(f"{label}: href leaks a local path: {href}")
+        elif not series_href_path(root, href).exists():
+            errors.append(f"{label}: href target does not exist: {href}")
+
+        items = series.get("items")
+        if not isinstance(items, list) or not items:
+            errors.append(f"{label}: items must be a non-empty array")
+            continue
+
+        seen_work_ids: set[str] = set()
+        for item in items:
+            work_id = item.get("workId", "")
+            item_label = f"{label} / {work_id or '<missing-workId>'}"
+            if not work_id:
+                errors.append(f"{item_label}: missing workId")
+            elif work_id in seen_work_ids:
+                errors.append(f"{item_label}: duplicate workId")
+            seen_work_ids.add(work_id)
+
+            for field in ["displayTitle", "personOrScope", "seriesPart", "status", "matchStatus"]:
+                if not item.get(field):
+                    errors.append(f"{item_label}: missing {field}")
+
+            status = item.get("status")
+            if status and status not in SERIES_STATUSES:
+                errors.append(f"{item_label}: unsupported status: {status}")
+
+            match_status = item.get("matchStatus")
+            if match_status and match_status not in SERIES_MATCH_STATUSES:
+                errors.append(f"{item_label}: unsupported matchStatus: {match_status}")
+
+            href = item.get("href", "")
+            if href:
+                if local_path_leak(href):
+                    errors.append(f"{item_label}: href leaks a local path: {href}")
+                elif not series_href_path(root, href).exists():
+                    errors.append(f"{item_label}: href target does not exist: {href}")
+            elif status == "done":
+                errors.append(f"{item_label}: done item is missing href")
+
+            for value in flatten_string_values(item):
+                if local_path_leak(value):
+                    errors.append(f"{item_label}: contains local absolute path: {value}")
+
+    return errors
+
+
+def flatten_string_values(value) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        strings: list[str] = []
+        for item in value:
+            strings.extend(flatten_string_values(item))
+        return strings
+    if isinstance(value, dict):
+        strings: list[str] = []
+        for item in value.values():
+            strings.extend(flatten_string_values(item))
+        return strings
+    return []
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".", help="Repository root.")
@@ -502,6 +609,7 @@ def main(argv: list[str]) -> int:
     errors.extend(validate_stats_and_counts(root, data, items))
     errors.extend(validate_atom_xml(root))
     errors.extend(validate_sitemap_xml(root, markdown_items))
+    errors.extend(validate_series_books(root))
     for item in markdown_items:
         errors.extend(validate_item(root, item))
         errors.extend(validate_front_matter(root, item))

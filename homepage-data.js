@@ -3,6 +3,23 @@ window.HOMEPAGE_DATA = {
   "items": [
     {
       "type": "Thoughts",
+      "id": "0024",
+      "title": "Fable5无敌",
+      "created": "2026-07-03 23:22:26",
+      "createdDate": "2026-07-03",
+      "published": "2026-07-03",
+      "updated": "2026-07-03 23:22:26",
+      "updatedDate": "2026-07-03",
+      "slug": "fable5",
+      "href": "/thoughts/0024/",
+      "canonicalHref": "/thoughts/0024/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0024%5D%5BFable5%E6%97%A0%E6%95%8C%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0024][Fable5无敌].md",
+      "label": "[Thoughts][0024][Fable5无敌]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
       "id": "0023",
       "title": "最近关切的5个问题",
       "created": "2026-07-03 18:47:25",
@@ -2553,15 +2570,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 150,
+    "total": 151,
     "byType": {
-      "Thoughts": 23,
+      "Thoughts": 24,
       "Books": 124,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 19,
+      "2026": 20,
       "2025": 1,
       "2024": 2,
       "2023": 36,

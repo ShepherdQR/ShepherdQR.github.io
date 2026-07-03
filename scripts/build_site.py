@@ -23,6 +23,8 @@ STATIC_SITEMAP_PATHS = [
     "/archive.html",
     "/stats.html",
     "/books.html",
+    "/series.html",
+    "/series/20th-century-world-poetry/",
     "/thoughts.html",
     "/study.html",
     "/videos.html",

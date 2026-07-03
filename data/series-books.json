@@ -1,0 +1,651 @@
+{
+  "generatedAt": "2026-07-03",
+  "series": [
+    {
+      "slug": "20th-century-world-poetry",
+      "title": "[20世纪世界诗歌译丛]",
+      "displayTitle": "20世纪世界诗歌译丛",
+      "description": "按辑、阅读状态和作品项整理的世界诗歌译丛阅读地图。",
+      "href": "/series/20th-century-world-poetry/",
+      "tags": ["Poetry", "Translation", "20th century"],
+      "lastUpdated": "2026-07-03",
+      "sourceSummary": {
+        "siteMarkdownExplicit": 21,
+        "localDoneWorks": 23,
+        "todoWorks": 26,
+        "candidateMatches": 2
+      },
+      "items": [
+        {
+          "workId": "antonio-machado-selected-poems",
+          "displayTitle": "安东尼奥·马查多诗选",
+          "personOrScope": "安东尼奥·马查多",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0012/",
+          "noteId": "0012",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选.董继平译.河北教育出版社(2002).pdf"]
+        },
+        {
+          "workId": "paul-celan-selected-prose-poems",
+          "displayTitle": "保罗·策兰诗文选",
+          "personOrScope": "保罗·策兰",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0013/",
+          "noteId": "0013",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选.pdf"]
+        },
+        {
+          "workId": "rainer-maria-rilke-selected-poems",
+          "displayTitle": "里尔克诗选",
+          "personOrScope": "里尔克",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0014/",
+          "noteId": "0014",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)里尔克诗选.pdf"]
+        },
+        {
+          "workId": "yehuda-amichai-poems",
+          "displayTitle": "耶胡达·阿米亥诗",
+          "personOrScope": "耶胡达·阿米亥",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "volumes": ["上册", "下册"],
+          "href": "/books/0015/",
+          "noteId": "0015",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗_上册.pdf",
+            "[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗_下册.pdf"
+          ]
+        },
+        {
+          "workId": "elizabeth-bishop-selected-poems",
+          "displayTitle": "伊丽莎白·毕肖普诗选",
+          "personOrScope": "伊丽莎白·毕肖普",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0017/",
+          "noteId": "0017",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选.pdf"]
+        },
+        {
+          "workId": "ivan-goll-selected-poems",
+          "displayTitle": "伊凡·哥尔诗选",
+          "personOrScope": "伊凡·哥尔",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0019/",
+          "noteId": "0019",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选.pdf"]
+        },
+        {
+          "workId": "dylan-thomas-selected-poems",
+          "displayTitle": "狄兰·托马斯诗选",
+          "personOrScope": "狄兰·托马斯",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0020/",
+          "noteId": "0020",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选.pdf"]
+        },
+        {
+          "workId": "constantine-cavafy-poems",
+          "displayTitle": "卡瓦菲斯诗集",
+          "personOrScope": "卡瓦菲斯",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0022/",
+          "noteId": "0022",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集.pdf"]
+        },
+        {
+          "workId": "czeslaw-milosz-selected-poems",
+          "displayTitle": "切·米沃什诗选",
+          "personOrScope": "切·米沃什",
+          "kind": "person",
+          "seriesPart": "第一辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0023/",
+          "noteId": "0023",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第一辑)切·米沃什诗选.pdf"]
+        },
+        {
+          "workId": "zinaida-gippius-selected-poems",
+          "displayTitle": "吉皮乌斯诗选",
+          "personOrScope": "吉皮乌斯",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0040/",
+          "noteId": "0040",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选.pdf"]
+        },
+        {
+          "workId": "modern-african-poetry",
+          "displayTitle": "非洲现代诗选",
+          "personOrScope": "非洲现代诗",
+          "kind": "anthology",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "volumes": ["上册", "下册"],
+          "href": "/books/0045/",
+          "noteId": "0045",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第二辑)非洲现代诗选 上.pdf",
+            "[20世纪世界诗歌译丛](第二辑)非洲现代诗选 下.pdf"
+          ]
+        },
+        {
+          "workId": "americas-translated-poetry-prose",
+          "displayTitle": "美洲译诗文选",
+          "personOrScope": "美洲译诗文",
+          "kind": "anthology",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0063/",
+          "noteId": "0063",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)美洲译诗文选.pdf"]
+        },
+        {
+          "workId": "osip-mandelstam-selected-poems",
+          "displayTitle": "曼德尔施塔姆诗选",
+          "personOrScope": "曼德尔施塔姆",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0074/",
+          "noteId": "0074",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选.pdf"]
+        },
+        {
+          "workId": "w-s-merwin-selected-poems",
+          "displayTitle": "默温诗选",
+          "personOrScope": "默温",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "volumes": ["001", "002", "003"],
+          "href": "/books/0080/",
+          "noteId": "0080",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第二辑)默温诗选001.pdf",
+            "[20世纪世界诗歌译丛](第二辑)默温诗选002.pdf",
+            "[20世纪世界诗歌译丛](第二辑)默温诗选003.pdf"
+          ]
+        },
+        {
+          "workId": "pablo-neruda-selected-poems",
+          "displayTitle": "聂鲁达诗选",
+          "personOrScope": "聂鲁达",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0081/",
+          "noteId": "0081",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)聂鲁达诗选.pdf"]
+        },
+        {
+          "workId": "edith-sodergran-complete-poems",
+          "displayTitle": "索德格朗诗全集",
+          "personOrScope": "索德格朗",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0086/",
+          "noteId": "0086",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)索德格朗诗全集.pdf"]
+        },
+        {
+          "workId": "john-ashbery-poems",
+          "displayTitle": "约翰·阿什贝利诗",
+          "personOrScope": "约翰·阿什贝利",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "volumes": ["上册", "下册"],
+          "href": "/books/0089/",
+          "noteId": "0089",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第二辑)约翰·阿什贝利诗-上.pdf",
+            "[20世纪世界诗歌译丛](第二辑)约翰·阿什贝利诗-下.pdf"
+          ]
+        },
+        {
+          "workId": "jorge-luis-borges-selected-poems",
+          "displayTitle": "博尔赫斯诗选",
+          "personOrScope": "博尔赫斯",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "candidate",
+          "href": "/books/0072/",
+          "noteId": "0072",
+          "sourceLabels": ["local-done", "candidate-note"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第二辑)博尔赫斯诗选.pdf"]
+        },
+        {
+          "workId": "w-b-yeats-poems",
+          "displayTitle": "叶芝诗集",
+          "personOrScope": "叶芝",
+          "kind": "person",
+          "seriesPart": "第二辑",
+          "status": "done",
+          "matchStatus": "candidate",
+          "volumes": ["上册", "中册", "下册"],
+          "href": "/books/0057/",
+          "noteId": "0057",
+          "sourceLabels": ["local-done", "candidate-note"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第二辑)叶芝诗集 上.pdf",
+            "[20世纪世界诗歌译丛](第二辑)叶芝诗集 中.pdf",
+            "[20世纪世界诗歌译丛](第二辑)叶芝诗集-下.pdf"
+          ]
+        },
+        {
+          "workId": "attila-jozsef-selected-poems",
+          "displayTitle": "阿蒂拉·尤若夫诗选",
+          "personOrScope": "阿蒂拉·尤若夫",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0090/",
+          "noteId": "0090",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)阿蒂拉·尤若夫诗选.董继平译.河北教育出版社(2002).pdf"]
+        },
+        {
+          "workId": "boris-poplavsky-selected-poems",
+          "displayTitle": "波普拉夫斯基诗选",
+          "personOrScope": "波普拉夫斯基",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0097/",
+          "noteId": "0097",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选.pdf"]
+        },
+        {
+          "workId": "twentieth-century-icelandic-poetry",
+          "displayTitle": "二十世纪冰岛诗选",
+          "personOrScope": "冰岛现代诗",
+          "kind": "anthology",
+          "seriesPart": "第三辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0101/",
+          "noteId": "0101",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选.pdf"]
+        },
+        {
+          "workId": "alexander-blok-lyric-poems",
+          "displayTitle": "勃洛克抒情诗选",
+          "personOrScope": "勃洛克",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "done",
+          "matchStatus": "confirmed",
+          "href": "/books/0113/",
+          "noteId": "0113",
+          "sourceLabels": ["site-md", "local-done"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选.pdf"]
+        },
+        {
+          "workId": "philip-larkin-selected-poems",
+          "displayTitle": "菲利普·拉金诗选",
+          "personOrScope": "菲利普·拉金",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选.pdf"]
+        },
+        {
+          "workId": "rasul-gamzatov-love-poems",
+          "displayTitle": "伽姆扎托夫爱情诗选",
+          "personOrScope": "伽姆扎托夫",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选[俄]伽姆扎托夫.谷羽译.河北教育出版社_(2002).pdf"]
+        },
+        {
+          "workId": "gregory-corso-poems",
+          "displayTitle": "格雷戈里·柯索诗",
+          "personOrScope": "格雷戈里·柯索",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "volumes": ["上册", "下册"],
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第三辑)格雷戈里·柯索诗-上.pdf",
+            "[20世纪世界诗歌译丛](第三辑)格雷戈里·柯索诗-下.pdf"
+          ]
+        },
+        {
+          "workId": "tomas-transtromer-selected-poems",
+          "displayTitle": "特兰斯特罗默诗选",
+          "personOrScope": "特兰斯特罗默",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)特兰斯特罗默诗选.pdf"]
+        },
+        {
+          "workId": "robert-penn-warren-selected-poems",
+          "displayTitle": "沃伦诗选",
+          "personOrScope": "沃伦",
+          "kind": "person",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)沃伦诗选.pdf"]
+        },
+        {
+          "workId": "contemporary-british-poetry",
+          "displayTitle": "英国当代诗选",
+          "personOrScope": "英国当代诗",
+          "kind": "anthology",
+          "seriesPart": "第三辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第三辑)英国当代诗选.pdf"]
+        },
+        {
+          "workId": "octavio-paz-selected-poems",
+          "displayTitle": "奥克塔维奥·帕斯诗选",
+          "personOrScope": "奥克塔维奥·帕斯",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)奥克塔维奥·帕斯诗选.朱景冬译.河北教育出版社(2003).pdf"]
+        },
+        {
+          "workId": "paul-eluard-selected-poems",
+          "displayTitle": "保尔·艾吕雅诗选",
+          "personOrScope": "保尔·艾吕雅",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)保尔·艾吕雅诗选.pdf"]
+        },
+        {
+          "workId": "twentieth-century-english-poetry",
+          "displayTitle": "二十世纪英语诗选",
+          "personOrScope": "二十世纪英语诗",
+          "kind": "anthology",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "volumes": ["上册", "中册", "下册"],
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第四辑)二十世纪英语诗选-上.pdf",
+            "[20世纪世界诗歌译丛](第四辑)二十世纪英语诗选-中.pdf",
+            "[20世纪世界诗歌译丛](第四辑)二十世纪英语诗选-下.pdf"
+          ]
+        },
+        {
+          "workId": "nikolay-gumilyov-selected-poems",
+          "displayTitle": "古米廖夫诗选",
+          "personOrScope": "古米廖夫",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)古米廖夫诗选.pdf"]
+        },
+        {
+          "workId": "ruben-dario-selected-poems",
+          "displayTitle": "鲁文·达里奥诗选",
+          "personOrScope": "鲁文·达里奥",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)鲁文·达里奥诗选.pdf"]
+        },
+        {
+          "workId": "james-merrill-selected-poems",
+          "displayTitle": "梅利尔诗选",
+          "personOrScope": "梅利尔",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)梅利尔诗选.pdf"]
+        },
+        {
+          "workId": "modern-european-american-poetry-schools",
+          "displayTitle": "欧美现代诗歌流派",
+          "personOrScope": "欧美现代诗歌流派",
+          "kind": "anthology",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "volumes": ["上册", "中册", "下册"],
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第四辑)欧美现代诗歌流派(上).pdf",
+            "[20世纪世界诗歌译丛](第四辑)欧美现代诗歌流派 (中).pdf",
+            "[20世纪世界诗歌译丛](第四辑)欧美现代诗歌流派 (下).pdf"
+          ]
+        },
+        {
+          "workId": "ten-british-american-poets",
+          "displayTitle": "英美十人诗选",
+          "personOrScope": "英美诗人选本",
+          "kind": "anthology",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)英美十人诗选.pdf"]
+        },
+        {
+          "workId": "american-poetry-after-1950",
+          "displayTitle": "1950年后的美国诗歌：革新者和局外人",
+          "personOrScope": "1950年后的美国诗歌",
+          "kind": "anthology",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "volumes": ["上册", "下册"],
+          "sourceLabels": ["local-going-on", "needs-review"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第四辑)1950年后的美国诗歌：革新者和局外人-上.pdf",
+            "[20世纪世界诗歌译丛](第四辑)1950年后的美国诗歌：革新者和局外人-下.pdf"
+          ]
+        },
+        {
+          "workId": "peter-horn-selected-poems",
+          "displayTitle": "彼得·霍恩诗选",
+          "personOrScope": "彼得·霍恩",
+          "kind": "person",
+          "seriesPart": "第四辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on", "needs-review"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第四辑)彼得·霍恩诗选.pdf"]
+        },
+        {
+          "workId": "r-s-thomas-selected-poems-1946-1968",
+          "displayTitle": "R.S.托马斯自选诗集：1946-1968",
+          "personOrScope": "R.S.托马斯",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)R.S.托马斯自选诗集：1946-1968[英]R·S·托马斯.程佳译.河北教育出版社(2002).pdf"]
+        },
+        {
+          "workId": "ana-blandiana-selected-poems",
+          "displayTitle": "安娜·布兰迪亚娜诗选",
+          "personOrScope": "安娜·布兰迪亚娜",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)安娜·布兰迪亚娜诗选.高兴译.河北教育出版社(2003).pdf"]
+        },
+        {
+          "workId": "modern-nordic-poetry",
+          "displayTitle": "北欧现代诗选",
+          "personOrScope": "北欧现代诗",
+          "kind": "anthology",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)北欧现代诗选.pdf"]
+        },
+        {
+          "workId": "derek-walcott-selected-poems",
+          "displayTitle": "德瑞克·沃尔科特诗选",
+          "personOrScope": "德瑞克·沃尔科特",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)德瑞克·沃尔科特诗选.傅浩译.河北教育出版社(2003).pdf"]
+        },
+        {
+          "workId": "twentieth-century-russian-emigre-poetry",
+          "displayTitle": "二十世纪俄罗斯流亡诗选",
+          "personOrScope": "俄罗斯流亡诗",
+          "kind": "anthology",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "volumes": ["上册", "下册"],
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": [
+            "[20世纪世界诗歌译丛](第五辑)二十世纪俄罗斯流亡诗选（上）.pdf",
+            "[20世纪世界诗歌译丛](第五辑)二十世纪俄罗斯流亡诗选（下）.pdf"
+          ]
+        },
+        {
+          "workId": "fernando-pessoa-selected-poems",
+          "displayTitle": "费尔南多·佩索阿诗选",
+          "personOrScope": "费尔南多·佩索阿",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)费尔南多·佩索阿诗选.杨子译.河北教育出版社(2003).pdf"]
+        },
+        {
+          "workId": "shuntaro-tanikawa-selected-poems",
+          "displayTitle": "谷川俊太郎诗选",
+          "personOrScope": "谷川俊太郎",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)谷川俊太郎诗选.pdf"]
+        },
+        {
+          "workId": "gabriela-mistral",
+          "displayTitle": "卡夫列拉·米斯特",
+          "personOrScope": "卡夫列拉·米斯特",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)卡夫列拉·米斯特.pdf"]
+        },
+        {
+          "workId": "mario-benedetti",
+          "displayTitle": "马里奥·贝内德蒂",
+          "personOrScope": "马里奥·贝内德蒂",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)马里奥·贝内德蒂.pdf"]
+        },
+        {
+          "workId": "francis-jammes-lyric-poems",
+          "displayTitle": "雅姆抒情诗选",
+          "personOrScope": "雅姆",
+          "kind": "person",
+          "seriesPart": "第五辑",
+          "status": "todo",
+          "matchStatus": "unmatched",
+          "sourceLabels": ["local-going-on"],
+          "sourceNames": ["[20世纪世界诗歌译丛](第五辑)雅姆抒情诗选.pdf"]
+        }
+      ]
+    }
+  ]
+}
