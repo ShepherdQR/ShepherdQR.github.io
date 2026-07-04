@@ -1,6 +1,23 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-03",
+  "generatedAt": "2026-07-04",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0025",
+      "title": "Fable5和GPT5.5的图片生成质量比较",
+      "created": "2026-07-04 18:39:13",
+      "createdDate": "2026-07-04",
+      "published": "2026-07-04",
+      "updated": "2026-07-04 18:39:13",
+      "updatedDate": "2026-07-04",
+      "slug": "fable5gpt5-5",
+      "href": "/thoughts/0025/",
+      "canonicalHref": "/thoughts/0025/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0025%5D%5BFable5%E5%92%8CGPT5.5%E7%9A%84%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E8%B4%A8%E9%87%8F%E6%AF%94%E8%BE%83%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较].md",
+      "label": "[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0024",
@@ -2570,15 +2587,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 151,
+    "total": 152,
     "byType": {
-      "Thoughts": 24,
+      "Thoughts": 25,
       "Books": 124,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 20,
+      "2026": 21,
       "2025": 1,
       "2024": 2,
       "2023": 36,

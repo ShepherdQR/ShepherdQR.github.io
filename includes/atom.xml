@@ -4,10 +4,18 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-07-03T00:00:00+08:00</updated>
+  <updated>2026-07-04T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>Fable5和GPT5.5的图片生成质量比较</title>
+    <link href="https://zqr.world/thoughts/0025/" />
+    <id>https://zqr.world/thoughts/0025/</id>
+    <published>2026-07-04T00:00:00+08:00</published>
+    <updated>2026-07-04T18:39:13+08:00</updated>
+    <summary>Thoughts note 0025</summary>
+  </entry>
   <entry>
     <title>Fable5无敌</title>
     <link href="https://zqr.world/thoughts/0024/" />
@@ -399,13 +407,5 @@
     <published>2023-03-18T00:00:00+08:00</published>
     <updated>2023-03-19T20:59:50+08:00</updated>
     <summary>Books note 0094</summary>
-  </entry>
-  <entry>
-    <title>三岛由纪夫</title>
-    <link href="https://zqr.world/books/0093/" />
-    <id>https://zqr.world/books/0093/</id>
-    <published>2023-03-11T00:00:00+08:00</published>
-    <updated>2023-03-11T19:48:32+08:00</updated>
-    <summary>Books note 0093</summary>
   </entry>
 </feed>
