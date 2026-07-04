@@ -3,6 +3,40 @@ window.HOMEPAGE_DATA = {
   "items": [
     {
       "type": "Thoughts",
+      "id": "0027",
+      "title": "导数-博物馆标本式压缩",
+      "created": "2026-07-04 21:03:31",
+      "createdDate": "2026-07-04",
+      "published": "2026-07-04",
+      "updated": "2026-07-04 21:03:31",
+      "updatedDate": "2026-07-04",
+      "slug": "thoughts-0027",
+      "href": "/thoughts/0027/",
+      "canonicalHref": "/thoughts/0027/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0027%5D%5B%E5%AF%BC%E6%95%B0-%E5%8D%9A%E7%89%A9%E9%A6%86%E6%A0%87%E6%9C%AC%E5%BC%8F%E5%8E%8B%E7%BC%A9%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0027][导数-博物馆标本式压缩].md",
+      "label": "[Thoughts][0027][导数-博物馆标本式压缩]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
+      "id": "0026",
+      "title": "导数-渐进的静默",
+      "created": "2026-07-04 21:00:38",
+      "createdDate": "2026-07-04",
+      "published": "2026-07-04",
+      "updated": "2026-07-04 21:00:38",
+      "updatedDate": "2026-07-04",
+      "slug": "thoughts-0026",
+      "href": "/thoughts/0026/",
+      "canonicalHref": "/thoughts/0026/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0026%5D%5B%E5%AF%BC%E6%95%B0-%E6%B8%90%E8%BF%9B%E7%9A%84%E9%9D%99%E9%BB%98%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0026][导数-渐进的静默].md",
+      "label": "[Thoughts][0026][导数-渐进的静默]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
       "id": "0025",
       "title": "Fable5和GPT5.5的图片生成质量比较",
       "created": "2026-07-04 18:39:13",
@@ -2587,15 +2621,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 152,
+    "total": 154,
     "byType": {
-      "Thoughts": 25,
+      "Thoughts": 27,
       "Books": 124,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 21,
+      "2026": 23,
       "2025": 1,
       "2024": 2,
       "2023": 36,

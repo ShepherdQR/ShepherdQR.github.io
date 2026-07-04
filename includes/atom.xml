@@ -9,6 +9,22 @@
     <name>Qirong Zhang</name>
   </author>
   <entry>
+    <title>导数-博物馆标本式压缩</title>
+    <link href="https://zqr.world/thoughts/0027/" />
+    <id>https://zqr.world/thoughts/0027/</id>
+    <published>2026-07-04T00:00:00+08:00</published>
+    <updated>2026-07-04T21:03:31+08:00</updated>
+    <summary>Thoughts note 0027</summary>
+  </entry>
+  <entry>
+    <title>导数-渐进的静默</title>
+    <link href="https://zqr.world/thoughts/0026/" />
+    <id>https://zqr.world/thoughts/0026/</id>
+    <published>2026-07-04T00:00:00+08:00</published>
+    <updated>2026-07-04T21:00:38+08:00</updated>
+    <summary>Thoughts note 0026</summary>
+  </entry>
+  <entry>
     <title>Fable5和GPT5.5的图片生成质量比较</title>
     <link href="https://zqr.world/thoughts/0025/" />
     <id>https://zqr.world/thoughts/0025/</id>
@@ -391,21 +407,5 @@
     <published>2023-03-20T00:00:00+08:00</published>
     <updated>2026-05-02T17:53:29+08:00</updated>
     <summary>Books note 0096</summary>
-  </entry>
-  <entry>
-    <title>[诺贝尔文学奖][1948]Thomas Stearns Eliot</title>
-    <link href="https://zqr.world/books/0095/" />
-    <id>https://zqr.world/books/0095/</id>
-    <published>2023-03-19T00:00:00+08:00</published>
-    <updated>2023-03-19T22:28:49+08:00</updated>
-    <summary>Books note 0095</summary>
-  </entry>
-  <entry>
-    <title>陈景润[DOING]</title>
-    <link href="https://zqr.world/books/0094/" />
-    <id>https://zqr.world/books/0094/</id>
-    <published>2023-03-18T00:00:00+08:00</published>
-    <updated>2023-03-19T20:59:50+08:00</updated>
-    <summary>Books note 0094</summary>
   </entry>
 </feed>
