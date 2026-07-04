@@ -3,7 +3,7 @@
  - Date: 2026-07-04 18:39:13
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-07-04 18:43:25
+ - LastEditTime: 2026-07-04 21:31:58
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -32,7 +32,7 @@ source:
 ![审美叙事线驱动](../../../resources/pics/导数的认识-derivative-first-order-mobile-poster.png)
 
 ## 以下为GPT5.5Pro网页版
-![GPT5.5Pro网页版](../../../resources/pics/导数的认识-ChatGPT Image 2026年7月4日 18_18_10.png)
+![GPT5.5Pro网页版](../../../resources/pics/导数的认识-ChatGPTImage.png)
 
 ## 以下为Fable5Max网页版
 
