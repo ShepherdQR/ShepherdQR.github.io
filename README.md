@@ -29,9 +29,8 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "导数-渐进的静默"
-python scripts/new_note.py Thoughts "导数-博物馆标本式压缩"
-python scripts/new_note.py Books "麦肯锡-问题分析与解决技巧"
+python scripts/new_note.py Thoughts "ASI研究进展"
+python scripts/new_note.py Books "中国2014年度诗歌精选"
 ```
 
 Supported content types:

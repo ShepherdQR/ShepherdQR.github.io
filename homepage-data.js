@@ -1,6 +1,40 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-04",
+  "generatedAt": "2026-07-06",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0028",
+      "title": "ASI研究进展",
+      "created": "2026-07-06 01:20:18",
+      "createdDate": "2026-07-06",
+      "published": "2026-07-06",
+      "updated": "2026-07-06 01:20:18",
+      "updatedDate": "2026-07-06",
+      "slug": "thoughts-0028",
+      "href": "/thoughts/0028/",
+      "canonicalHref": "/thoughts/0028/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0028%5D%5BASI%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0028][ASI研究进展].md",
+      "label": "[Thoughts][0028][ASI研究进展]",
+      "source": "markdown"
+    },
+    {
+      "type": "Books",
+      "id": "0125",
+      "title": "中国2014年度诗歌精选",
+      "created": "2026-07-06 01:15:04",
+      "createdDate": "2026-07-06",
+      "published": "2026-07-06",
+      "updated": "2026-07-06 01:15:04",
+      "updatedDate": "2026-07-06",
+      "slug": "books-0125",
+      "href": "/books/0125/",
+      "canonicalHref": "/books/0125/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BBooks%5D%5B0125%5D%5B%E4%B8%AD%E5%9B%BD2014%E5%B9%B4%E5%BA%A6%E8%AF%97%E6%AD%8C%E7%B2%BE%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Books][0125][中国2014年度诗歌精选].md",
+      "label": "[Books][0125][中国2014年度诗歌精选]",
+      "source": "markdown"
+    },
     {
       "type": "Thoughts",
       "id": "0027",
@@ -2621,15 +2655,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 154,
+    "total": 156,
     "byType": {
-      "Thoughts": 27,
-      "Books": 124,
+      "Thoughts": 28,
+      "Books": 125,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 23,
+      "2026": 25,
       "2025": 1,
       "2024": 2,
       "2023": 36,
