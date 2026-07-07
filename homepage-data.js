@@ -3,6 +3,23 @@ window.HOMEPAGE_DATA = {
   "items": [
     {
       "type": "Thoughts",
+      "id": "0029",
+      "title": "约束场的形态",
+      "created": "2026-07-07 22:39:39",
+      "createdDate": "2026-07-07",
+      "published": "2026-07-07",
+      "updated": "2026-07-07 22:39:39",
+      "updatedDate": "2026-07-07",
+      "slug": "thoughts-0029",
+      "href": "/thoughts/0029/",
+      "canonicalHref": "/thoughts/0029/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0029%5D%5B%E7%BA%A6%E6%9D%9F%E5%9C%BA%E7%9A%84%E5%BD%A2%E6%80%81%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md",
+      "label": "[Thoughts][0029][约束场的形态]",
+      "source": "markdown"
+    },
+    {
+      "type": "Thoughts",
       "id": "0028",
       "title": "ASI研究进展",
       "created": "2026-07-06 01:20:18",
@@ -2655,15 +2672,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 156,
+    "total": 157,
     "byType": {
-      "Thoughts": 28,
+      "Thoughts": 29,
       "Books": 125,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 25,
+      "2026": 26,
       "2025": 1,
       "2024": 2,
       "2023": 36,

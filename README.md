@@ -29,7 +29,7 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "ASI研究进展"
+python scripts/new_note.py Thoughts "约束场的形态"
 python scripts/new_note.py Books "中国2014年度诗歌精选"
 ```
 
