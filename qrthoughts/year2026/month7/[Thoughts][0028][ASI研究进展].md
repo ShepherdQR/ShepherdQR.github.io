@@ -3,7 +3,7 @@
  - Date: 2026-07-06 01:20:18
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-07-06 01:24:21
+ - LastEditTime: 2026-07-07 21:35:52
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -14,8 +14,8 @@ title: "ASI研究进展"
 created: "2026-07-06 01:20:18"
 created_date: "2026-07-06"
 published: "2026-07-06"
-updated: "2026-07-06 01:20:18"
-updated_date: "2026-07-06"
+updated: "2026-07-07 21:35:52"
+updated_date: "2026-07-07"
 slug: "thoughts-0028"
 status: "published"
 source:
@@ -27,12 +27,17 @@ source:
 
 # ASI研究进展
 
+![AGI结构计划](../../../resources/pics/agi-structure-plan-nine-grid-v1.png)
+
+
+
+
 ## L0【20260705】
 
 ## L1【20260705】
 20260705，划分为12个阶段，此时处于第1阶段。
 
-![Fable5Max网页版](../../../resources/pics/topos-asi-shadow-luxury-image-v2.png)
+![局部真理宪章](../../../resources/pics/topos-asi-shadow-luxury-image-v2.png)
 
 
 ## L2【TODO】
@@ -56,4 +61,3 @@ source:
 ## L11【TODO】
 
 ## END
-
