@@ -38,12 +38,12 @@ Goal: improve generated quality without changing the site's publishing model.
 | Task | Status | Notes |
 | --- | --- | --- |
 | Sort homepage archive years newest-first | Proposed | `index.html` currently enumerates numeric object keys in ascending order. |
-| Normalize article body heading hierarchy | Proposed | Body H1 headings should not compete with the article shell H1, especially on mobile. |
-| Preserve optional front matter in `homepage-data.js` | Proposed | Include `summary`, `tags`, `series`, `math`, `interactive`, and optional `lead_image`. |
-| Generate `meta description` fields | Proposed | Use front matter summary, then excerpt fallback. |
-| Improve Atom summaries | Proposed | Replace generic summaries such as `Thoughts note 0023`. |
+| Normalize article body heading hierarchy | In progress | Validator now warns on multiple body H1 headings; historical cleanup remains incremental. |
+| Preserve optional front matter in `homepage-data.js` | Implemented | Includes `summary`, `tags`, `series`, `math`, `interactive`, and optional `lead_image`; summary has excerpt fallback. |
+| Generate `meta description` fields | Partially implemented | Homepage and all generated article aliases now have descriptions; remaining root collection pages are future work. |
+| Improve Atom summaries | Implemented | Explicit summaries or generated excerpts replace generic type/id fallbacks. |
 | Add root-page canonical links | Proposed | Add canonical URLs for homepage, archive, stats, and collection pages. |
-| Add validation for local links and Markdown images | Proposed | Current ad hoc checks passed; fold them into `scripts/validate_site.py`. |
+| Add validation for local links and Markdown images | Implemented | Validator checks generated/local HTML references and Markdown images; first run fixed three legacy path errors. |
 
 Acceptance:
 
@@ -95,8 +95,8 @@ Goal: reduce runtime fragility and make article pages useful even when remote sc
 | Task | Status | Notes |
 | --- | --- | --- |
 | Render Markdown to HTML at build time | Proposed | Keep `render.html?md=...` as a diagnostic reader. |
-| Load MathJax only when needed | Proposed | Use front matter or build-time detection. |
-| Load D3 only for interactive notes | Proposed | Currently all 150 article pages load local D3. |
+| Load MathJax only when needed | Implemented | Front matter plus build-time detection currently selects three math articles. |
+| Load D3 only for interactive notes | Implemented | Front matter plus build-time detection currently selects one interactive article. |
 | Vendor or pin Markdown runtime dependencies | Proposed | If runtime rendering remains, avoid unpinned remote `marked`. |
 | Add no-JavaScript article fallback | Proposed | Generated article pages should contain readable body HTML. |
 

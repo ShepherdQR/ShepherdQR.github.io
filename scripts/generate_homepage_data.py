@@ -25,6 +25,8 @@ INDEX_ITEM_RE = re.compile(
     r"\{\s*date:\s*'(?P<date>[^']+)'\s*,\s*href:\s*'(?P<href>(?:\\'|[^'])*)'\s*,\s*text:\s*(?:'(?P<text1>(?:\\'|[^'])*)'|\"(?P<text2>(?:\\\"|[^\"])*)\")",
     re.S,
 )
+MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?P<target><[^>]+>|[^\s)]+)")
+TRUE_VALUES = {"1", "true", "yes", "on"}
 
 
 def read_text(path: Path) -> str:
@@ -36,6 +38,82 @@ def parse_scalar(value: str) -> str:
     if len(value) >= 2 and value[0] == value[-1] == '"':
         return value[1:-1].replace('\\"', '"').replace("\\\\", "\\")
     return value
+
+
+def parse_list(value: str) -> list[str]:
+    value = (value or "").strip()
+    if not value:
+        return []
+    try:
+        parsed = json.loads(value)
+    except json.JSONDecodeError:
+        parsed = None
+    if isinstance(parsed, list):
+        return [str(item).strip() for item in parsed if str(item).strip()]
+    return [item.strip() for item in value.strip("[]").split(",") if item.strip()]
+
+
+def parse_bool(value: str) -> bool:
+    return (value or "").strip().lower() in TRUE_VALUES
+
+
+def markdown_body(text: str) -> str:
+    match = FRONT_MATTER_RE.match(text)
+    return text[match.end() :] if match else text
+
+
+def markdown_excerpt(body: str, limit: int = 180) -> str:
+    text = re.sub(r"```[\s\S]*?```", " ", body)
+    text = re.sub(r"<!--[\s\S]*?-->", " ", text)
+    text = re.sub(r"<script\b[\s\S]*?</script>", " ", text, flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+    text = re.sub(r"(?m)^\s{0,3}#{1,6}\s+.*$", " ", text, count=1)
+    text = re.sub(r"(?m)^\s*(?:-{3,}|\*{3,}|_{3,})\s*$", " ", text)
+    text = re.sub(r"(?m)^\s*(?:[-*+] |\d+[.)] )", "", text)
+    text = re.sub(r"[`*_~>|]", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip(" ，。；：、,.!！?？") + "…"
+
+
+def detects_math(body: str) -> bool:
+    patterns = [
+        r"\$\$[\s\S]+?\$\$",
+        r"(?<!\\)\$(?![\s${])[^$\n]{1,300}(?<!\\)\$",
+        r"\\\([\s\S]+?\\\)",
+        r"\\\[[\s\S]+?\\\]",
+        r"\\begin\{",
+    ]
+    return any(re.search(pattern, body) for pattern in patterns)
+
+
+def detects_interactive(body: str) -> bool:
+    return bool(re.search(r"<script\b|\bd3\.", body, flags=re.I))
+
+
+def normalize_lead_image(value: str, source_path: Path, root: Path) -> str:
+    value = (value or "").strip().strip("<>")
+    if not value:
+        return ""
+    if re.match(r"^[a-z][a-z0-9+.-]*:", value, flags=re.I) or value.startswith("//"):
+        return value
+    if value.startswith("/"):
+        return value
+    try:
+        resolved = (source_path.parent / value).resolve()
+        return "/" + resolved.relative_to(root.resolve()).as_posix()
+    except (OSError, ValueError):
+        return value
+
+
+def first_markdown_image(body: str, source_path: Path, root: Path) -> str:
+    match = MARKDOWN_IMAGE_RE.search(body)
+    if not match:
+        return ""
+    return normalize_lead_image(match.group("target"), source_path, root)
 
 
 def date_part(value: str) -> str:
@@ -180,7 +258,8 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
     for path in sorted((root / "qrthoughts").rglob("*.md")):
         if path.name.lower() == "readme.md":
             continue
-        data = parse_front_matter(read_text(path))
+        text = read_text(path)
+        data = parse_front_matter(text)
         if not data or data.get("status") != "published":
             continue
         required = ["type", "id", "title", "created_date", "published", "updated_date"]
@@ -189,8 +268,14 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
         source_path = path.relative_to(root).as_posix()
         legacy_href = render_href(path, root)
         canonical_href = clean_article_href(data["type"], data["id"])
-        items.append(
-            {
+        body = markdown_body(text)
+        summary = data.get("summary") or markdown_excerpt(body) or data["title"]
+        tags = parse_list(data.get("tags", ""))
+        series = data.get("series", "").strip()
+        math_enabled = parse_bool(data.get("math", "")) or detects_math(body)
+        interactive_enabled = parse_bool(data.get("interactive", "")) or detects_interactive(body)
+        lead_image = normalize_lead_image(data.get("lead_image", ""), path, root) or first_markdown_image(body, path, root)
+        item = {
                 "type": data["type"],
                 "id": data["id"],
                 "title": data["title"],
@@ -207,7 +292,19 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
                 "label": f"[{data['type']}][{data['id']}][{data['title']}]",
                 "source": "markdown",
             }
-        )
+        if summary:
+            item["summary"] = summary
+        if tags:
+            item["tags"] = tags
+        if series:
+            item["series"] = series
+        if math_enabled:
+            item["math"] = True
+        if interactive_enabled:
+            item["interactive"] = True
+        if lead_image:
+            item["leadImage"] = lead_image
+        items.append(item)
 
     return items
 

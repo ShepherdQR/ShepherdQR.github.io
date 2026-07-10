@@ -1,0 +1,96 @@
+repo_id: shepherdqr-site
+control_plane: symbiotic-constraint-field-control-plane
+plan_name: ShepherdQR.github.io L1 Advisory Publishing Control
+manifest_version: "0.1"
+control_level: L1
+
+repo_role: target_data_plane
+owner: human
+
+allowed_actions:
+  read: true
+  advisory_report: true
+  control_plane_dashboard_write: true
+  target_issue_write: false
+  target_branch_write: false
+  direct_commit: false
+  publish: false
+  destructive: false
+
+human_gates:
+  - git_write
+  - target_branch_write
+  - target_manifest_install
+  - target_content_write
+  - mailbox_delivery
+  - resident_agent_runtime
+  - message_broker_enablement
+  - capability_grant
+  - dependency_change
+  - publish
+  - destructive
+  - governance_default_change
+
+local_validators:
+  - git diff --check
+  - python scripts\build_site.py
+  - python scripts\validate_site.py
+
+surfaces:
+  readme: README.md
+  homepage: index.html
+  content_root: qrthoughts/
+  project_map: architecture/site-content-architecture.md
+  status_dashboard: stats.html
+  task_cards: architecture/site-development-plan.md
+  completed_tasks: architecture/task-closeouts/
+  evidence_index: homepage-data.js
+  content_plan: architecture/site-content-form-and-publishing-cadence-plan-2026-07-10.md
+  publishing_workflow: architecture/markdown-publishing-workflow.md
+  build_script: scripts/build_site.py
+  validation_script: scripts/validate_site.py
+
+value_lines:
+  - id: VL-SHEPHERDQR-COMPLEX-INTELLIGENCE
+    name: Complex intelligence, constraint fields, and engineering evidence
+    status: active
+    evidence: qrthoughts/year2026/; architecture/site-content-form-and-publishing-cadence-plan-2026-07-10.md
+    next_action: backfill metadata for recent Thoughts after owner review
+  - id: VL-SHEPHERDQR-KNOWLEDGE-CORPUS
+    name: Durable public knowledge corpus across engineering, mathematics, governance, and literature
+    status: developing
+    evidence: homepage-data.js; archive.html; series.html
+    next_action: add tag and series navigation after metadata coverage improves
+
+adapter_policy:
+  filesystem: read_only
+  git: status_and_diff_only
+  issue_tracker: disabled
+  mcp: disabled
+
+evidence_policy:
+  skipped_checks_are_risk: true
+  completion_requires_evidence: true
+  stale_threshold_days: 14
+
+observation_policy:
+  repo_status: true
+  last_touched: true
+  evidence_coverage: true
+  stale_risk: true
+  git_status: best_effort_read_only
+
+architecture_learning:
+  learning_mode: shadow
+  owner_review_required: true
+  reports_path: architecture/control-plane/
+  pattern_registry_write: false
+  core_promotion_allowed: false
+
+x_current_release:
+  human_release_date: 2026-07-10
+  authorized_scope: publish all accumulated site improvements and Thoughts 0030 after validation
+  commit_or_publish_authorized: true
+  authorization_source: direct owner request on 2026-07-10
+
+x_domain_role: public_knowledge_publishing_site

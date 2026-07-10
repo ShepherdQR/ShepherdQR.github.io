@@ -26,6 +26,10 @@ FRONT_MATTER_RE = re.compile(
     r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
 )
 AMBIGUOUS_SETEXT_H2_RE = re.compile(r"(?m)^(?P<text>[^\n#][^\n]*)\n---\s*$")
+ATX_H1_RE = re.compile(r"(?m)^#\s+(?P<title>.+?)\s*$")
+HTML_REFERENCE_RE = re.compile(r"\b(?:href|src)\s*=\s*['\"](?P<target>[^'\"]+)['\"]", re.I)
+MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?P<target><[^>]+>|[^\s)]+)")
+FILE_HEADER_FIELD_RE = re.compile(r"(?m)^\s*- (?P<key>Date|LastEditTime):\s*(?P<value>.+?)\s*$")
 ARTICLE_TYPES = {"Books", "Thoughts", "Study", "Videos"}
 APPROVED_STATUSES = {"published", "draft", "doing", "archived"}
 STATIC_SITEMAP_PATHS = {
@@ -116,6 +120,98 @@ def validate_markdown_structure(path: Path, root: Path, text: str) -> list[str]:
             f"{rel}:{line}: text followed by --- renders as a level-2 Setext heading; "
             f"use ## for a heading or *** for a divider: {excerpt}"
         )
+    return errors
+
+
+def markdown_source_warnings(path: Path, root: Path, text: str, data: dict[str, str]) -> list[str]:
+    warnings: list[str] = []
+    front_matter = FRONT_MATTER_RE.match(text)
+    if not front_matter:
+        return warnings
+
+    rel = path.relative_to(root).as_posix()
+    body = text[front_matter.end() :]
+    h1_headings = [match.group("title").strip() for match in ATX_H1_RE.finditer(body)]
+    if len(h1_headings) > 1:
+        warnings.append(
+            f"{rel}: body contains {len(h1_headings)} H1 headings; article shell already provides H1: "
+            + " | ".join(h1_headings)
+        )
+
+    header_fields = {
+        match.group("key"): match.group("value").strip()
+        for match in FILE_HEADER_FIELD_RE.finditer(text[: front_matter.end()])
+    }
+    comparisons = [("Date", "created"), ("LastEditTime", "updated")]
+    for header_key, front_matter_key in comparisons:
+        header_value = header_fields.get(header_key, "")
+        front_matter_value = data.get(front_matter_key, "")
+        if header_value and front_matter_value and header_value != front_matter_value:
+            warnings.append(
+                f"{rel}: file header {header_key} differs from front matter {front_matter_key}: "
+                f"{header_value} != {front_matter_value}"
+            )
+    return warnings
+
+
+def resolve_local_reference(root: Path, source_path: Path, reference: str) -> Path | None:
+    reference = html.unescape(reference.strip()).strip("<>")
+    if not reference or reference.startswith("#"):
+        return None
+    parsed = urlparse(reference)
+    if parsed.scheme or parsed.netloc or reference.startswith("//"):
+        return None
+    raw_path = unquote(parsed.path)
+    if not raw_path:
+        return None
+    target = root / raw_path.lstrip("/") if raw_path.startswith("/") else source_path.parent / raw_path
+    target = target.resolve()
+    if raw_path.endswith("/") or target.is_dir():
+        target = target / "index.html"
+    return target
+
+
+def validate_local_html_references(root: Path) -> list[str]:
+    errors: list[str] = []
+    root_resolved = root.resolve()
+    for path in sorted(root.rglob("*.html")):
+        if ".git" in path.parts:
+            continue
+        rel = path.relative_to(root).as_posix()
+        for match in HTML_REFERENCE_RE.finditer(read_text(path)):
+            reference = match.group("target")
+            target = resolve_local_reference(root, path, reference)
+            if target is None:
+                continue
+            try:
+                target.relative_to(root_resolved)
+            except ValueError:
+                errors.append(f"{rel}: local reference escapes repository: {reference}")
+                continue
+            if not target.exists():
+                errors.append(f"{rel}: local reference target does not exist: {reference}")
+    return errors
+
+
+def validate_markdown_images(root: Path) -> list[str]:
+    errors: list[str] = []
+    root_resolved = root.resolve()
+    for path in sorted((root / "qrthoughts").rglob("*.md")):
+        if path.name.lower() == "readme.md":
+            continue
+        rel = path.relative_to(root).as_posix()
+        for match in MARKDOWN_IMAGE_RE.finditer(read_text(path)):
+            reference = match.group("target")
+            target = resolve_local_reference(root, path, reference)
+            if target is None:
+                continue
+            try:
+                target.relative_to(root_resolved)
+            except ValueError:
+                errors.append(f"{rel}: Markdown image escapes repository: {reference}")
+                continue
+            if not target.exists():
+                errors.append(f"{rel}: Markdown image does not exist: {reference}")
     return errors
 
 
@@ -256,6 +352,7 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
         if not alias_path.exists():
             errors.append(f"{label}: alias page does not exist: {alias_path.relative_to(root).as_posix()}")
         else:
+            alias_text = read_text(alias_path)
             try:
                 config = load_article_config(alias_path)
             except (ValueError, json.JSONDecodeError) as exc:
@@ -272,6 +369,21 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
                         f"{label}: article-config canonical mismatch in {alias_path.relative_to(root).as_posix()}: "
                         f"{config.get('canonical')} != {href}"
                     )
+                expected_math = bool(item.get("math"))
+                expected_interactive = bool(item.get("interactive"))
+                if config.get("math") is not expected_math:
+                    errors.append(f"{label}: article-config math flag does not match generated item")
+                if config.get("interactive") is not expected_interactive:
+                    errors.append(f"{label}: article-config interactive flag does not match generated item")
+
+                has_mathjax = 'id="MathJax-script"' in alias_text
+                has_d3 = "includes/js/d3.js" in alias_text
+                if has_mathjax != expected_math:
+                    errors.append(f"{label}: MathJax dependency presence does not match math flag")
+                if has_d3 != expected_interactive:
+                    errors.append(f"{label}: D3 dependency presence does not match interactive flag")
+                if not re.search(r'<meta\s+name="description"\s+content="[^"]+"', alias_text, re.I):
+                    errors.append(f"{label}: generated alias page is missing meta description")
 
     return errors
 
@@ -323,8 +435,12 @@ def validate_front_matter(root: Path, item: dict[str, str]) -> list[str]:
     return errors
 
 
-def validate_markdown_sources(root: Path, homepage_keys: set[tuple[str, str]]) -> tuple[int, list[str]]:
+def validate_markdown_sources(
+    root: Path,
+    homepage_keys: set[tuple[str, str]],
+) -> tuple[int, list[str], list[str]]:
     errors: list[str] = []
+    warnings: list[str] = []
     checked = 0
     for path in sorted((root / "qrthoughts").rglob("*.md")):
         if path.name.lower() == "readme.md":
@@ -338,6 +454,7 @@ def validate_markdown_sources(root: Path, homepage_keys: set[tuple[str, str]]) -
             continue
 
         errors.extend(validate_markdown_structure(path, root, text))
+        warnings.extend(markdown_source_warnings(path, root, text, data))
 
         status = data.get("status")
         if status and status not in APPROVED_STATUSES:
@@ -350,7 +467,7 @@ def validate_markdown_sources(root: Path, homepage_keys: set[tuple[str, str]]) -
             if key not in homepage_keys:
                 errors.append(f"{rel}: published markdown is missing from homepage-data.js")
 
-    return checked, errors
+    return checked, errors, warnings
 
 
 def validate_uniqueness(items: list[dict[str, str]]) -> list[str]:
@@ -603,6 +720,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".", help="Repository root.")
     parser.add_argument("--max-errors", type=int, default=25, help="Maximum errors to print before truncating.")
+    parser.add_argument("--max-warnings", type=int, default=25, help="Maximum warnings to print before truncating.")
     return parser
 
 
@@ -633,17 +751,29 @@ def main(argv: list[str]) -> int:
     errors.extend(validate_atom_xml(root))
     errors.extend(validate_sitemap_xml(root, markdown_items))
     errors.extend(validate_series_books(root))
+    errors.extend(validate_local_html_references(root))
+    errors.extend(validate_markdown_images(root))
     for item in markdown_items:
         errors.extend(validate_item(root, item))
         errors.extend(validate_front_matter(root, item))
-    markdown_source_count, markdown_source_errors = validate_markdown_sources(root, homepage_keys)
+    markdown_source_count, markdown_source_errors, warnings = validate_markdown_sources(root, homepage_keys)
     errors.extend(markdown_source_errors)
 
     print("Site validation summary")
     print(f"  homepage items: {len(items)}")
     print(f"  markdown items checked: {len(markdown_items)}")
     print(f"  markdown sources checked: {markdown_source_count}")
+    print(f"  warnings: {len(warnings)}")
     print(f"  errors: {len(errors)}")
+
+    if warnings:
+        print()
+        print("Warnings:")
+        for warning in warnings[: args.max_warnings]:
+            print(f"  - {warning}")
+        remaining = len(warnings) - args.max_warnings
+        if remaining > 0:
+            print(f"  ... {remaining} more warning(s) not shown")
 
     if errors:
         print()

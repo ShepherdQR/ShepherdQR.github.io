@@ -14,9 +14,11 @@ This directory stores architecture design documents and decision records for the
 - [Project Change and Migration Report](project-change-migration-report.md): Ongoing project-level ledger for architecture changes, migrations, cleanup decisions, and verification.
 - [Site Development Plan](site-development-plan.md): Active phased development plan for metadata, knowledge navigation, search, rendering durability, validation, and CSS cleanup.
 - [Site Improvement Analysis 2026-07-03](site-improvement-analysis-2026-07-03.md): Evidence-backed analysis of next improvement directions for navigation, metadata, runtime dependencies, article semantics, stats, and validation.
+- [Site Content Form and Publishing Cadence Plan 2026-07-10](site-content-form-and-publishing-cadence-plan-2026-07-10.md): Owner-review plan for content pillars, article forms, public cadence, metadata gates, ninety-day rollout, and L1 control-plane boundaries.
 
 ## Task Closeouts
 
+- [2026-07-10 Site Content and Publishing Closeout](task-closeouts/2026-07-10-site-content-and-publishing-closeout.md): Release record for Thoughts 0030, the elevated homepage About section, publishing-pipeline improvements, the content plan, L1 control-plane registration, validation, and full repository push.
 - [2026-07-03 Site Improvement Planning Closeout](task-closeouts/2026-07-03-site-improvement-planning-closeout.md): Durable handoff for the site improvement analysis, active development plan, validation evidence, and next implementation slice.
 - [2026-06-06 Site Publishing Closeout](task-closeouts/2026-06-06-site-publishing-closeout.md): Durable handoff for the Markdown-first site architecture, publishing workflow, generated pages, validation, and skill/agent extraction review.
 - [2026-06-06 Markdown Header Comments Closeout](task-closeouts/2026-06-06-markdown-header-comments-closeout.md): Focused report for moving Markdown header comments before front matter, parser compatibility work, validation evidence, and skill/agent extraction review.

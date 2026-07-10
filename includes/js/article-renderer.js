@@ -44,7 +44,7 @@
 
             activateEmbeddedScripts(content);
             renderArticleNeighbors(parsed.meta, mdFile, config);
-            scheduleMathJax();
+            if (config.math) scheduleMathJax();
         })
         .catch(err => {
             renderError('加载失败：' + err.message);
@@ -58,7 +58,13 @@
 
         return {
             md: queryMd || embedded.md || '',
-            canonical: embedded.canonical || embedded.canonicalHref || ''
+            canonical: embedded.canonical || embedded.canonicalHref || '',
+            math: typeof embedded.math === 'boolean'
+                ? embedded.math
+                : Boolean(document.getElementById('MathJax-script')),
+            interactive: typeof embedded.interactive === 'boolean'
+                ? embedded.interactive
+                : Boolean(document.querySelector('script[src*="/d3.js"]'))
         };
     }
 

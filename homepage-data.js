@@ -16,7 +16,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0029%5D%5B%E7%BA%A6%E6%9D%9F%E5%9C%BA%E7%9A%84%E5%BD%A2%E6%80%81%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md",
       "label": "[Thoughts][0029][约束场的形态]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 实例1：我们的海报任务流程 海报任务 - classify visibility - 启用审美叙事线 / visual workflow 【纵向硬的 + 横向软的】 - 如需要，编制 topic-object aesthetic brief - 路由 V4/V5 审美角色：Reference Curator, Aesthetic Director, V…"
     },
     {
       "type": "Thoughts",
@@ -33,7 +34,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0028%5D%5BASI%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0028][ASI研究进展].md",
       "label": "[Thoughts][0028][ASI研究进展]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## V1 ## V2 # ASI研究进展 ## L0【20260705】 ## L1【20260705】 20260705，划分为12个阶段，此时处于第1阶段。 ## L2【TODO】 ## L3【TODO】 ## L4【TODO】 ## L5【TODO】 ## L6【TODO】 ## L7【TODO】 ## L8【TODO】 ## L9【TODO】 ##…",
+      "leadImage": "/resources/pics/agi-structure-plan-nine-grid-v1.png"
     },
     {
       "type": "Books",
@@ -50,7 +53,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BBooks%5D%5B0125%5D%5B%E4%B8%AD%E5%9B%BD2014%E5%B9%B4%E5%BA%A6%E8%AF%97%E6%AD%8C%E7%B2%BE%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Books][0125][中国2014年度诗歌精选].md",
       "label": "[Books][0125][中国2014年度诗歌精选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "梁平，韩珩主编。总用时不到2h。 ## 全诗（存目） 车延高的【江湖】。// 拴一匹骏马，让路休息。 敕勒川，一滴雨中的湘湖。// 我带不走湘湖里的一滴水，但可以带走整个湘湖，连水里的/山、云，以及那些看不见的/此刻。 大卫，给母亲一首情诗。// 扬子江，2014年第四期 耿永红，豆荚来信。 // 绿风，2014年第5期 简明，我看见一头用嘴行走的牛。//…"
     },
     {
       "type": "Thoughts",
@@ -67,7 +71,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0027%5D%5B%E5%AF%BC%E6%95%B0-%E5%8D%9A%E7%89%A9%E9%A6%86%E6%A0%87%E6%9C%AC%E5%BC%8F%E5%8E%8B%E7%BC%A9%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0027][导数-博物馆标本式压缩].md",
       "label": "[Thoughts][0027][导数-博物馆标本式压缩]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "说明：最新的审美叙事线驱动",
+      "leadImage": "/resources/pics/derivative-museum-specimen-mobile-poster-v3.png"
     },
     {
       "type": "Thoughts",
@@ -84,7 +90,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0026%5D%5B%E5%AF%BC%E6%95%B0-%E6%B8%90%E8%BF%9B%E7%9A%84%E9%9D%99%E9%BB%98%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0026][导数-渐进的静默].md",
       "label": "[Thoughts][0026][导数-渐进的静默]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "说明： 基于【渐进的静默】设计风格，opus4.8生成",
+      "leadImage": "/resources/pics/导数_一阶结构的统一理论_海报.png"
     },
     {
       "type": "Thoughts",
@@ -101,7 +109,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0025%5D%5BFable5%E5%92%8CGPT5.5%E7%9A%84%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E8%B4%A8%E9%87%8F%E6%AF%94%E8%BE%83%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较].md",
       "label": "[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 以下为审美叙事线驱动 ## 以下为GPT5.5Pro网页版 ## 以下为Fable5Max网页版",
+      "leadImage": "/resources/pics/导数的认识-derivative-first-order-mobile-poster.png"
     },
     {
       "type": "Thoughts",
@@ -118,7 +128,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0024%5D%5BFable5%E6%97%A0%E6%95%8C%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0024][Fable5无敌].md",
       "label": "[Thoughts][0024][Fable5无敌]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "# claude code + fable5 = 无敌，20260703 配合cc工具使用，40刀，84min，生成19万字符的【专著级】研究报告，从综述跃迁到研究工具/导航/遵循 cc订阅此时不推荐（高压高风险、短窗口期），5x和20x管控严格，pro量太少（严肃研究问题需要跨5h时段间隔） 在提示词生成上，fable5宏伟开阔，更通用更拔高，很强调共同体…"
     },
     {
       "type": "Thoughts",
@@ -135,7 +146,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0023%5D%5B%E6%9C%80%E8%BF%91%E5%85%B3%E5%88%87%E7%9A%845%E4%B8%AA%E9%97%AE%E9%A2%98%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0023][最近关切的5个问题].md",
       "label": "[Thoughts][0023][最近关切的5个问题]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 缘起 整个事情都是非常有趣味：在人间观察的预见性上打赌输了，赌注是近期密切关注/久久不忘怀的 5 个问题。 ## 分析：近期的问题 ### 第I类：轻盈处 总括：颇为浅薄，兴致是随时来随时走的。 各国航母数量统计：美国11个均为核动力，法国只有1个是核动力；其余均为常规动力，我国总量排名第二有3搜。 山东地域文化特征分析：设计地理/历史/人文的综合问题…"
     },
     {
       "type": "Books",
@@ -152,7 +164,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BBooks%5D%5B0124%5D%5B%E9%BA%A6%E8%82%AF%E9%94%A1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%8A%80%E5%B7%A7%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Books][0124][麦肯锡-问题分析与解决技巧].md",
       "label": "[Books][0124][麦肯锡-问题分析与解决技巧]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 说明 好像陆续看了3个中午，有长有短，大约2h。速度还需要进一步提高。 ## 摘要"
     },
     {
       "type": "Thoughts",
@@ -169,7 +182,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0022%5D%5BTopos%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0022][Topos理论研究报告].md",
       "label": "[Thoughts][0022][Topos理论研究报告]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Topos理论研究报告",
+      "leadImage": "/resources/pics/topos-field-mobile-poster.png"
     },
     {
       "type": "Thoughts",
@@ -186,7 +201,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0021%5D%5B%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AE%BA%E6%88%91%E7%9A%84%E6%94%BF%E7%BB%A9%E8%A7%82%5D",
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0021][第二次论我的政绩观].md",
       "label": "[Thoughts][0021][第二次论我的政绩观]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "夏播时节，阴云连绵，风雷激荡，这注定是一个提心吊胆的夏天。 各位领导，同志们， 我们从不畏惧埋没深土，蛰伏沉寂；而是担心未曾扎根固本，便急于抽枝绽放。 我们从不怯于风雨淬炼，岁月磨砺；而是担心远离土地的干瘪的饱满。 种子只有落地，才是生命；政绩只有为民，才有重量。 越是在这样的夏天，越能体现一粒种子的初心。 回顾总书记深耕地方，砥砺实干的奋斗历程，正是这样一…",
+      "leadImage": "/resources/pics/governance-view-mobile-red.png"
     },
     {
       "type": "Thoughts",
@@ -203,7 +220,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0020%5D%5B%E7%83%AD%E5%B8%A6%E5%AF%B9%E7%A7%B0%E7%9A%84%E8%8C%83%E7%95%B4%E5%9B%BE%E6%99%AF%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0020][热带对称的范畴图景].md",
       "label": "[Thoughts][0020][热带对称的范畴图景]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "是这样的，这是把共生约束场抽象成【独立repo】节点，发挥吸收/富集/统合效能的初探小捷。研究转向repo群的结构，是一种联邦治理/项目集管理/生态建设/文明运营行为",
+      "leadImage": "/resources/pics/tropical-geometry-latex-category-theory-mobile-v3.png"
     },
     {
       "type": "Thoughts",
@@ -220,7 +239,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0019%5D%5B%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B%E6%99%BA%E8%83%BD%E5%B1%82%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0019][机械工程智能层].md",
       "label": "[Thoughts][0019][机械工程智能层]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "# leo ai cax学习小结 仔细想来，整个cax领域有较强的反馈环境，还是比较适合构建闭环的：生成-运行-验证-纠正-固化 内核是第一性原理；第二梯度是验证器证据意识，工作流数据闭环，生态建设工程服务团队; 后面是专业的数据/后训练技术/agent leo ai 这个公司的战略定位是机械工程智能层：机械工程copilot + 企业知识 这个产品：一做出…",
+      "leadImage": "/resources/pics/leo-ai-cax-mobile-summary-v3-refined.png"
     },
     {
       "type": "Thoughts",
@@ -237,7 +258,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0018%5D%5Bagent%E5%85%B1%E7%94%9F%E7%BA%A6%E6%9D%9F%E5%9C%BA%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0018][agent共生约束场].md",
       "label": "[Thoughts][0018][agent共生约束场]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "# 关于单/大/厚软件系统智能化： 多尺度模型：ropo/项目/系统级理解核心是构建符号图-历史-运行态证据-检索（按需）与验证的多维度/多层次/多分辨率的外部认知结构/共生成长组织/对等体量适配系统 组织记忆：瞬时上下文（压缩/rag）需要转向持久化状态/组织型记忆/体系型制度； 联邦治理：除了代码生成，还有很丰富的内容：CL（急），系统能力/边界量化/统…",
+      "leadImage": "/resources/pics/agent-symbiosis-constraint-field-mobile-zqr-world.png"
     },
     {
       "type": "Books",
@@ -254,7 +277,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BBooks%5D%5B0123%5D%5B%E6%96%B0%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E4%BA%8B%E4%B8%9A%E5%8F%91%E5%B1%9570%E5%91%A8%E5%B9%B470%E4%BB%B6%E5%A4%A7%E4%BA%8B%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Books][0123][新中国航空事业发展70周年70件大事].md",
       "label": "[Books][0123][新中国航空事业发展70周年70件大事]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "20260616中午，速读。读书【忠诚奉献，逐梦蓝天-新中国航空事业发展70周年70件大事】 1951.8，重工业部提出，3-5年从修理到制造的航空工业发展方案，6天内毛主席批准。 1953年，第一个5年计划，苏联援建，航空方面包括（13项:4个飞机/发动机制造，5个机载设备，4个飞机/发动机修理） 1954，新中国生产的第一架飞机=初教5。爱姆11型发动机…"
     },
     {
       "type": "Thoughts",
@@ -271,7 +295,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0017%5D%5BASE%E4%BC%9A%E8%AE%AE20260612%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0017][ASE会议20260612].md",
       "label": "[Thoughts][0017][ASE会议20260612]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 背景 上午，集团会议，公开。 ## 整体感受 自动化为主，没有见到智能化的味道 人机协同只是【口号】级别，ai/agent占据人的生态位是结构性必然 大领导有水平，提到了纵向贯通的制度线 ## 个人的学习 ### 1.1 组织治理 软件/组件包从坚硬/稳定的路径，到柔软/支持变化的路径节点 agent - harness - loop, 关注边界（权限…"
     },
     {
       "type": "Thoughts",
@@ -288,7 +313,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0016%5D%5B%E8%87%AA%E4%B8%BB%E6%97%A0%E4%BA%BA%E6%9C%BA%E4%BA%8B%E4%BB%B6%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0016][自主无人机事件].md",
       "label": "[Thoughts][0016][自主无人机事件]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 定性 具名产业人士披露 严肃科技媒体报道 独立证据链未闭合 不是司法级/联合调查级/独立取证级 可信度：高 技术可行性：完全可行 战略层：临界事件 ## 我们所看到的 人类从选择具体目标，到给出范围/规则/目标特征，机器在开发战场执行发现/接近/解决完整动作。 新型空中地雷 ## 我们的材料 ### 自主杀伤系统的治理层级【可控性】 自主涉及以下环节…"
     },
     {
       "type": "Thoughts",
@@ -305,7 +331,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0015%5D%5B%E6%96%87%E6%98%8E%E7%BB%A7%E6%89%BF%E6%B3%95%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0015][文明继承法].md",
       "label": "[Thoughts][0015][文明继承法]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "我们必须尽快，在人类文明与ai文明之间，制定【文明继承法】。 # 背景 ## 引子：从【生产力—生产关系】变革角度，需要研究/发展/引导 AI agent 进入 因果主路径/核心矛盾 生产力层面：【认知劳动/知识生产/可验证行动】进入准工业化阶段。【工具增效-生产流程-工业闭环】发展趋势锐不可当，顶级AI公司已经进入agentic engineering工程…"
     },
     {
       "type": "Thoughts",
@@ -322,7 +349,34 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0014%5D%5BAI4AI%20R%26D%5D",
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&D].md",
       "label": "[Thoughts][0014][AI4AI R&D]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Today, Anthoro published When all builds itself, RSI(recursive self-improvement) is actually taking off. ## 我先生成这些自然的观点： 核武器级别的AI，中国有没有，怎么有 SE的复杂性治理的对象，必须升级为【治理过程】（闭环/自动化/高速的研发模式）…"
+    },
+    {
+      "type": "Thoughts",
+      "id": "0030",
+      "title": "个人事迹：20260604",
+      "created": "2026-06-04 23:25:46",
+      "createdDate": "2026-06-04",
+      "published": "2026-06-04",
+      "updated": "2026-07-10 23:42:46",
+      "updatedDate": "2026-07-10",
+      "slug": "thoughts-0030",
+      "href": "/thoughts/0030/",
+      "canonicalHref": "/thoughts/0030/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month6/%5BThoughts%5D%5B0030%5D%5B%E4%B8%AA%E4%BA%BA%E4%BA%8B%E8%BF%B9%EF%BC%9A20260604%5D",
+      "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0030][个人事迹：20260604].md",
+      "label": "[Thoughts][0030][个人事迹：20260604]",
+      "source": "markdown",
+      "summary": "讲政治、守初心、敢攻坚、能打硬仗；以贯通理论、算法、验证与工程的方法持续攻关深水区。",
+      "tags": [
+        "个人事迹",
+        "科研理想",
+        "组合理论",
+        "智能软件工程",
+        "工程方法"
+      ],
+      "series": "个人与理想"
     },
     {
       "type": "Thoughts",
@@ -339,7 +393,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0013%5D%5B%E5%85%B3%E4%BA%8Etoken%E5%92%8C%E5%B7%A5%E5%85%B7%E7%9A%84%E8%A7%82%E5%AF%9F%E4%B8%8E%E6%80%9D%E8%80%83%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0013][关于token和工具的观察与思考].md",
       "label": "[Thoughts][0013][关于token和工具的观察与思考]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "本部分是【20260520-01：37】凌晨匆匆完成，目的是观察第二天的讨论，研究个人的认识，能否覆盖整个团队的认识。 第二天的讨论的复盘，等我有时间分析。初步估计覆盖率极高，于是直到此时【20260605-23：23】也没有复盘。后面有时间复盘时（时刻T），关注当时的欠缺的认识，以及，会议上匆匆讨论后，我到T时刻期间是否缩减了gap。 ## 引子 组织上的…"
     },
     {
       "type": "Thoughts",
@@ -356,7 +411,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0012%5D%5B%E5%AF%B9%E2%80%9C%E7%94%9F%E5%AD%98%E8%BF%98%E6%98%AF%E6%AF%81%E7%81%AD%E2%80%9D%E8%BF%99%E4%B8%80%E9%97%AE%E9%A2%98%E7%9A%84%E8%AE%A4%E8%AF%86%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0012][对“生存还是毁灭”这一问题的认识].md",
       "label": "[Thoughts][0012][对“生存还是毁灭”这一问题的认识]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 这个问题的终极认识【持续更新】 问题本身是把“价值生成条件”误当成“价值对象”的范畴错误。提出“可回应性本体论”。【20260512】 ## Level 2 呼唤哲学本体论革命【20260430】 我现在一层层解构“为什么活着比死了好”这个问题本身： 【1】“我存在”是一个构造性的过程，只有当个体正在运行（经历）时，它才被实例化。【述行本体论 (Per…"
     },
     {
       "type": "Thoughts",
@@ -373,7 +429,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0011%5D%5B%E2%80%9C%E5%8D%81%E4%BA%94%E4%BA%94%E2%80%9D%E8%A7%84%E5%88%92%E5%BC%95%E9%A2%86%E8%BD%AF%E4%BB%B6%E5%88%9B%E6%96%B0%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0011][“十五五”规划引领软件创新].md",
       "label": "[Thoughts][0011][“十五五”规划引领软件创新]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 研讨主题 “十五五”规划引领工业软件创新，党建强基赋能部门高质量发展 ## 研讨目的 深入领会“十五五”规划的战略意图，把理论学习成果转化为工业软件研发、攻关、落地的实际行动，充分发挥基层党支部的战斗堡垒作用 ## 时间 （2026年3月27日）下午16:00-17:30 ## 其他说明 全篇用yau的语调 ## 稿件 我的发言包括3个部分，谈2点体会…"
     },
     {
       "type": "Thoughts",
@@ -390,7 +447,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0010%5D%5B%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0010][批评与自我批评].md",
       "label": "[Thoughts][0010][批评与自我批评]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "如何严肃化，如何落实到实处，是我们必须不断探索的。空谈/虚假的批评，是白白浪费了自我提升的好机会。因此，再三考虑，我们认为，比如把自我批评的内容/整改措施，完全公开出来，做到全面的敞开，核心目的是在于不断进行“自我革命”。 # 自我批评 尊敬的徐书记，我是张棋荣。 ## 我从4个方面自我批评 1）首先，在学习贯彻党的创新理论，强化政治忠诚方面，我批评自己：存…"
     },
     {
       "type": "Thoughts",
@@ -407,7 +465,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0008%5D%5B%E6%94%BF%E7%BB%A9%E8%A7%82%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0008][政绩观].md",
       "label": "[Thoughts][0008][政绩观]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "结合正与反，好与坏，未来与过去的，典型案例学习，我发现：向上的路和向下的路，并不是同一条路。 焦裕禄、谷文昌、孔繁森，面对艰苦的条件、复杂的局面，团结人民、接续奋斗，沉淀出经得起岁月洗礼的（无量潜绩和）硕大功德。反面案例则：目标函数错置、边界条件人为虚化，把发展冲动降维成系统损耗，表面开山造势实则劳民伤财，一挖一个大窟窿。 工作中贯彻正确的政绩观，需要我们成…"
     },
     {
       "type": "Books",
@@ -424,7 +483,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BBooks%5D%5B0122%5D%5B%E9%B2%81%E8%BF%85%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Books][0122][鲁迅].md",
       "label": "[Books][0122][鲁迅]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "鲁迅"
     },
     {
       "type": "Thoughts",
@@ -441,7 +501,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2026/month5/%5BThoughts%5D%5B0009%5D%5B%E4%B8%99%E5%8D%88%E4%B8%89%E5%AD%A6%E7%A9%B6%E5%A4%A9%E6%AD%8C%5D",
       "sourcePath": "qrthoughts/year2026/month5/[Thoughts][0009][丙午三学究天歌].md",
       "label": "[Thoughts][0009][丙午三学究天歌]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "【20260216】过年回家的火车上，我构思本诗，于晚上完成。 【20260502】原18韵，今日重新整理为20韵。"
     },
     {
       "type": "Books",
@@ -458,7 +519,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2025/month4/%5BBooks%5D%5B0121%5D%5BTuringAward%5D",
       "sourcePath": "qrthoughts/year2025/month4/[Books][0121][TuringAward].md",
       "label": "[Books][0121][TuringAward]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "打孔。fortran。高中。在斯坦福认为AI比较模糊，更感兴趣复杂性理论。 I want to develop the theory, what is graph search, what is dfs, what can you do with it, what it can do with the graph. Use dfs to find bicon…"
     },
     {
       "type": "Books",
@@ -475,7 +537,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2024/month12/%5BBooks%5D%5B0120%5D%5B%E6%B7%AE%E5%8D%97%E5%AD%90%5D",
       "sourcePath": "qrthoughts/year2024/month12/[Books][0120][淮南子].md",
       "label": "[Books][0120][淮南子]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 西汉淮南王刘安组织门客所集体编撰,成书大约在平定吴楚七国之乱到汉武帝登基之间,正是汉家奠定大一统王朝的关健时期。《淮南子》“牢笼天地,博极古今”（《史通·自叙》）的叙述方式或许正是汉初思想宏大而驳杂的反映。 到了建元六年,窦太后死,其后武帝改元为元光,接着才有元光元年的董仲舒“天人三策”,随之迎来武帝朝“独尊儒术”的格局。因此,我们可以判断,武帝对这…"
     },
     {
       "type": "Books",
@@ -492,7 +555,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2024/month10/%5BBooks%5D%5B0119%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2024%5D%E9%9F%A9%E6%B1%9F%5D",
       "sourcePath": "qrthoughts/year2024/month10/[Books][0119][[诺贝尔文学奖][2024]韩江].md",
       "label": "[Books][0119][[诺贝尔文学奖][2024]韩江]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "今天是2024-10-10 20:34:28，2年前读过《素食者》感觉一般以下。 素食者-[韩] 韩江，译者: 胡椒筒 小说。 两颗橡子样的乳头在她的衬衫里呼之欲出。 整个房间冷得像凉掉的饭和汤。 你现在不吃肉，全世界的人就会把你吃掉。 你苦苦寻找的，是更安静、更隐秘、更迷人、更深奥的某种东西。 散发着空虚美的躯体。"
     },
     {
       "type": "Books",
@@ -509,7 +573,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0118%5D%5B%E5%87%A1%E7%89%A9%E6%B5%81%E5%BD%A2%5D",
       "sourcePath": "qrthoughts/year2024/month6/[Books][0118][凡物流形].md",
       "label": "[Books][0118][凡物流形]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "1994年，战国晚期楚国贵族墓中的随葬品，竹书出现于香港文物市场，辗转到上海博物馆，简称上博简。《凡物流形》是上博简其中之一。 凡物流形，奚得而成？ 问之曰：升高从埤，至远从迩，十围之木，其始生如蘖，足将至千里，必从寸始。日之有珥，将何听？月之有晕，将何征？水之东流，将何盈？日之始出，何故大而不耀？其入中，奚故小而彰树？ 问：天孰高与？地孰远与？孰为天？孰为…"
     },
     {
       "type": "Books",
@@ -526,7 +591,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0117%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1994%5D%E7%A6%8F%E5%85%8B%E7%BA%B3%5D",
       "sourcePath": "qrthoughts/year2024/month6/[Books][0117][[诺贝尔文学奖][1994]福克纳].md",
       "label": "[Books][0117][[诺贝尔文学奖][1994]福克纳]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "福克纳。强。 我弥留之际-20240608 威廉·燕卜荪：牧歌是用一个简单得多的世界来映照一个远为复杂的世界,特别是深谙世故的读者的世界。 兄弟阅墙 《寓言》(1954)里,福克纳又写下了这样的文字:“人类和他的愚蠢行为会继续存在下去(will endure)和蓬勃发展。” 福克纳自己说:“《我弥留之际》一书中的本德仑一家，也是和自己的命运极力搏斗的。”可以…"
     },
     {
       "type": "Books",
@@ -543,7 +609,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2024/month6/%5BBooks%5D%5B0116%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0306%5D%E4%BA%BA%E7%B1%BB%E5%B9%B8%E7%A6%8F%E8%AE%BA-%E7%BA%A6%E7%BF%B0%C2%B7%E6%A0%BC%E9%9B%B7%5D",
       "sourcePath": "qrthoughts/year2024/month6/[Books][0116][[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷].md",
       "label": "[Books][0116][[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "约翰·格雷，英国空想社会主义，1798-1850。 18世纪下半叶，英国产业革命，机器代替手工，带来剥削（工作十五六小时每天，女工和童工）、失业。无产阶级从捣毁机器到认识到是资本主义制度问题。 在资本主义社会中,越是把自己的劳动贡献给有益目的的人,越是受人鄙视,而越是能够靠自己的财产来支配别人劳动的人,却越是受人尊敬。 为无产阶级利益，利用李嘉图的价值学说和…"
     },
     {
       "type": "Books",
@@ -560,7 +627,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0115%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0412%5D%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89-%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0115][[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔].md",
       "label": "[Books][0115][[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 民族主义-20230520 1916年访日、美的演讲稿。 西方民族主义的核心，是冲突和征服精神。这种政治文明是排他的、自私的,是靠别国养活自己,并企图吞噬所有弱小民族的。文明内部有若干冲突,如个人和国家之间、劳资之间的冲突,物质利益的贪欲和个人生活之间的冲突,以及民族的自私自利和人类崇高理想之间的冲突。 【概述】 我并不反对一个特定的民族,而是反对一…"
     },
     {
       "type": "Books",
@@ -577,7 +645,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0114%5D%E7%8E%8B%E5%B0%94%E5%BE%B7",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0114]王尔德.md",
       "label": "[Books][0114][王尔德]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "王尔德，1854-1900，英国，唯美主义。 王尔德童话-20230520 小矮人，经常和蝴蝶发生战争。 只有夜莺心里的血才能染红玫瑰的花心。 春天已经忘记了这座花园。 现在他已经不讨厌冬天了，因而他心里明白，只不过是让春天打个盹，让花儿歇口气罢了。 任何地方只要你爱它，它就是你的世界。 能让我维持一生的唯一一件事：想到自己要比别人优越得多。 我经常一个人讲…"
     },
     {
       "type": "Books",
@@ -594,7 +663,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0026%5D%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0026]爱因斯坦.md",
       "label": "[Books][0026][爱因斯坦]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 AAAAAAA-BBBBBBBBB"
     },
     {
       "type": "Books",
@@ -611,7 +681,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0113%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E5%8B%83%E6%B4%9B%E5%85%8B%E6%8A%92%E6%83%85%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0113][[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选].md",
       "label": "[Books][0113][[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "勃洛克，1880-1921，俄国贵族，象征主义诗人。姥爷是彼得堡大学校长。 我的怀疑主义是我生命的本质。 20世纪世界诗歌译丛勃洛克抒情诗选-20230507 俄罗斯民族有宗教感，宿命的神秘主义精神渗透在集体无意识中。 受无意识流派影响。 无意识流派的费特：我在痛苦中感到无限幸福。 费特 丘特切夫，因为前者鲜明体现了后者模糊梦想着的东西。 索洛维约夫认为，现…"
     },
     {
       "type": "Books",
@@ -628,7 +699,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0112%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1996%5D%E8%BE%9B%E6%B3%A2%E4%B8%9D%E5%8D%A1%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0112][[诺贝尔文学奖][1996]辛波丝卡].md",
       "label": "[Books][0112][[诺贝尔文学奖][1996]辛波丝卡]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "辛波丝卡，1923-2012，波兰女诗人。 诗文选-20230502 诗人与世界：维斯瓦娃·希姆博尔斯卡诗文选.张振辉译.中央编译出版社(2002) 海参在遇到天敌时会把身子分成两半，一半让天敌吃掉，另一半逃走。 快乐总是伴随着恐惧，绝望任何时候也不会没有希望，生命虽然不短，但总是有限的。 人类的国界并不是那么严密，有多少云雾不受惩罚地从它们的上空飞过，有多…"
     },
     {
       "type": "Books",
@@ -645,7 +717,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0111%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0503%5D%E8%AE%BA%E5%87%BA%E7%89%88%E8%87%AA%E7%94%B1-%E5%BC%A5%E5%B0%94%E9%A1%BF%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0111][[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿].md",
       "label": "[Books][0111][[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "弥尔顿，1608-1674。 英国诗人，政论家，17世纪资产阶级革命参加者。 《论出版自由》1644。 《偶像破坏者》1649，论证了人民有权处死君主。 《失乐园》1667，失明后做的长诗。 论出版自由-20230502 该法令何以破坏学术、窒息真理。 1）法令制定者是诸位不能承认的； 2）应该如何对待阅读问题； 3）该法令想要禁止诽谤的、煽动性的书籍，这个…"
     },
     {
       "type": "Books",
@@ -662,7 +735,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0110%5D%5B%E6%AC%A7%E9%87%8C%E5%BA%87%E5%BE%97%E6%96%AF%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0110][欧里庇得斯].md",
       "label": "[Books][0110][欧里庇得斯]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "欧里庇得斯。 美狄亚-20230429 罗念生译。 盟誓的美德已经消失，全希腊再不见信义的踪迹，她已经飞回天上去了。 我不能让我的仇人侮辱我的孩儿 我的痛苦己经制伏了我﹔我现在才觉得我要做的是一件多么可怕的罪行﹐我的愤怒已经战胜了我的理智。 这不是我第一次把人生看作幻影；这人间没有一个幸福的人。"
     },
     {
       "type": "Books",
@@ -679,7 +753,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month5/%5BBooks%5D%5B0109%5D%5BSarah%20Kane%5D",
       "sourcePath": "qrthoughts/year2023/month5/[Books][0109][Sarah Kane].md",
       "label": "[Books][0109][Sarah Kane]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Sarah Kane， 1971-1999，英国，“直面戏剧浪潮”代表人物。用鞋带勒死了自己。 她短暂的一生有5个剧本。《4：48 精神崩溃》 我一直不断地写剧只是为了逃避地狱————然而始终未能如愿 戏剧集-20230501 这些剧作家重人物和场景,轻矛盾、张力和结构，重栩栩如生的舞台形象,轻情节的策划和构思,也许是因为情节意味着同人们生活的牵连。 和你在…"
     },
     {
       "type": "Books",
@@ -696,7 +771,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0108%5D%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AF%AD",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0108]源氏物语.md",
       "label": "[Books][0108][源氏物语]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "紫式部，或者说无名氏。 源氏物语-BBBBBBBBB 成书在794-1192中期。早于但丁300年，早于莎士比亚600年，早于歌德800年。 “物语”形式出现在有假名之前，当时是像漫画的形式，故事骨干画成图画，由擅长“说话”的人说出来给人听。 “物语”是平安时代，贵族化女性化的行为，场合在帝王后宫，或贵妇深闺，有文艺修养的女官说给贵妇名媛，反映上层社会悠闲的…"
     },
     {
       "type": "Books",
@@ -713,7 +789,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0107%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BC0201%5D%E4%B9%8C%E6%89%98%E9%82%A6-%E8%8E%AB%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0107][[商务印书馆汉译世界名著][C0201]乌托邦-莫尔].md",
       "label": "[Books][0107][[商务印书馆汉译世界名著][C0201]乌托邦-莫尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "莫尔，英国，1478-1535. 其父是皇家高等法院的法官。 1521年，副财务大臣，在宫廷声望很高，和英王谈论，一起吃饭，讨论天文和数学。 1529年，英国大法官，英王下的第一号人物。资产阶级的第一个大法官。 文艺主义时期，人文主义者，反对中世纪的禁欲和神权，以人为本，相信人的力量。 为当时英国人们水深火热而慷慨陈词、大声疾呼。 贵族豪绅的圈地运动。羊毛…"
     },
     {
       "type": "Books",
@@ -730,7 +807,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0106%5D%5B%E7%99%BD%E5%A4%9C%E8%A1%8C-%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%5D",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0106][白夜行-东野圭吾].md",
       "label": "[Books][0106][白夜行-东野圭吾]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "东野圭吾。 畅销书作家。 白夜行-20230409 \"无望的坚守的凄凉的爱情；执着的缜密的冷静的推理。\" 小男孩一出来就意识到是他杀了他父亲，他是被写成一种又不能无辜又不能不扼腕叹息的那种。仔细一想应该是因为书里面人物不多。 他俩的关系：a）读到85%，想到他们是兄妹。b）第12章结束处，确实有可能一男一女是同一个人，因为一直没有他俩一起出现的时候。 其中的…"
     },
     {
       "type": "Books",
@@ -747,7 +825,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0105%5D%E5%B1%88%E5%8E%9F",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0105]屈原.md",
       "label": "[Books][0105][屈原]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "屈原。 吾不能变心而从俗兮，固将愁苦而终穷。 屈原诗全集-20230408 《离骚》（节选） 帝高阳之苗裔兮，朕皇考曰伯庸。 摄提贞于孟陬兮，惟庚寅吾以降。[提, ti,2][陬, zou, 1][降,jiang,4] 皇览揆余于初度兮，肇锡余以嘉名。[揆,kui,2] 名余曰正则兮，字余曰灵均。 纷吾既有此内美兮，又重之以修能。[重, chong,2][能…"
     },
     {
       "type": "Books",
@@ -764,7 +843,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0103%5D%E7%BA%B3%E5%8D%9A%E7%A7%91%E5%A4%AB",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0103]纳博科夫.md",
       "label": "[Books][0103][纳博科夫]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "纳博科夫，1899-1977。 我是地道的美国人，地道得就像亚利桑那州的四月天。 我写的东西总是先有个整体布局。然后像一个填字游戏，我碰巧选了哪里就先把那里的空填上。这些我都写在索引卡片上，直到完成全书。我的时间表很灵活，但是对于写作工具我相当挑剔：打线的蜡光纸以及削得很尖、又不太硬的铅笔，笔头上得带橡皮。 除了写小说，最喜欢：捕蝴蝶，还有研究蝴蝶。 我想不…"
     },
     {
       "type": "Books",
@@ -781,7 +861,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0104%5D%E6%9D%8E%E7%99%BD",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0104]李白.md",
       "label": "[Books][0104][李白]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "李白。 李太白全集 501,1907 古赋 8 古风 59 乐府 30+37+44+38 古近体诗 28+53+43+24+32+25+25+26+35+21+44+35+32+60+36+58+47+65+90 表书 9 序 20 记颂赞 20 铭碑祭文 9 诗文十遗 57 序志碑传 12 诗文 21+59 丛说 220 年谱 1 外记 194 序跋 9…"
     },
     {
       "type": "Books",
@@ -798,7 +879,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month4/%5BBooks%5D%5B0102%5D%E6%B2%88%E4%BB%8E%E6%96%87",
       "sourcePath": "qrthoughts/year2023/month4/[Books][0102]沈从文.md",
       "label": "[Books][0102][沈从文]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "沈从文。 我的寫作就是頌揚一切與我同在的人類美麗與智慧。 生活或許使我平凡與沉落，我的感情還可以向高處跑去﹔生活或許使我孤單寂寞，我的作品將同許多人發生愛情同友誼。 AAAAAAA-BBBBBBBBB"
     },
     {
       "type": "Books",
@@ -815,7 +897,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0101%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E4%BA%8C%E5%8D%81%E4%B8%96%E7%BA%AA%E5%86%B0%E5%B2%9B%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0101][[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选].md",
       "label": "[Books][0101][[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 一-位对冰岛诗歌相当熟悉、前不久访问过我们国家的拉脱维亚诗人告诉我,他错过了的我们诗歌里的东西,就是人类存在的固有性质的“危险性”和“不安全性”,而自然是多数冰岛诗歌中的一个突出而投上阴影的主题。这个评论到目前是有效的,它记录下了多数冰岛诗歌里缺乏明显“哲学的\"或者“存在的”内容,但它忽略自然可以是恶意也可以是善意的这一事实,而两方面都深深涉及我们的…"
     },
     {
       "type": "Books",
@@ -832,7 +915,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0100%5D%E7%BA%A2%E6%A5%BC%E6%A2%A6",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0100]红楼梦.md",
       "label": "[Books][0100][红楼梦]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "第100个书目，想了一下放什么。红楼梦。只看前80回。 AAAAAAA-BBBBBBBBB CCCCCCCCC。"
     },
     {
       "type": "Books",
@@ -849,7 +933,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0099%5D%5B%E8%A5%BF%E6%96%B9%E6%95%B0%E5%AD%A6%E6%96%87%E5%8C%96%E7%90%86%E5%BF%B5%E4%BC%A0%E6%92%AD%E8%AF%91%E4%B8%9B%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0099][西方数学文化理念传播译丛].md",
       "label": "[Books][0099][西方数学文化理念传播译丛]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "西方数学文化理念传播译丛， 复旦大学出版社 什么是数学 : 对思想和方法的基本研究 高观点下的初等数学（全3册） 西方文化中的数学 证明与反驳 : 数学发现的逻辑 数学与知识的探求 数学哲学 : 对数学的思考 后现代思想的数学根源 数学恩仇录：数学家的十大论战【OK】 微积分概念发展史 数学恩仇录：数学家的十大论战 20230326，整理完。 感想：论战促进…"
     },
     {
       "type": "Books",
@@ -866,7 +951,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0098%5D%E6%B4%BB%E5%87%BA%E7%94%9F%E5%91%BD%E7%9A%84%E6%84%8F%E4%B9%89-Frank.V.E",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0098]活出生命的意义-Frank.V.E.md",
       "label": "[Books][0098][活出生命的意义-Frank.V.E]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Frank.V.E.,1905-1997。 全家被关进奥斯威辛集中营，只有他和妹妹幸存。 尼采：知道为什么而活的人，便能生存。 那些没杀死我的，会使我更强大。 活出生命的意义 CCCCCCCCC。 人活着是为了寻找生命的意义，这是一项使命。寻找意义的3个途径：做有意义的事情如工作，关爱他人，拥有克服困难的勇气。 苦难无意义，通过自身对苦难的反应赋予其意义…"
     },
     {
       "type": "Books",
@@ -883,7 +969,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0097%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E6%B3%A2%E6%99%AE%E6%8B%89%E5%A4%AB%E6%96%AF%E5%9F%BA%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0097][[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选].md",
       "label": "[Books][0097][[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "波普拉夫斯基，1903-1935，俄罗斯。 为了避免停滞与腐朽,需要让每个瞬间死去,并以新的方式复活。 AAAAAAA-BBBBBBBBB CCCCCCCCC。 城巿的上空.冬天向我们飘来 社会的水多么地冰凉 你不要去等待命中注定的时刻。 《静止》 有风的日子格外地高远，格外地静寂,格外地轻盈。 我在镜子里看到遗传的鬓角，拱屈的静脉和瘦弱的西装。 我的心脏病…"
     },
     {
       "type": "Books",
@@ -900,7 +987,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0096%5D%E8%B4%B9%E5%AD%9D%E9%80%9A",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0096]费孝通.md",
       "label": "[Books][0096][费孝通]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "## 第1部分 尝试回答我自己提出的“作为中国基层社会的乡土社会究竟是个什么样的社会”这个问题。 这里讲的乡土中国，并不是具体的中国社会的素描，而是包含在具体的中国基层传统社会里的一种特具的体系，支配着社会生活的各个方面。 Ideal Type，观念中的类型，在具体现象中提炼出认识现象的概念，概念需要实践检验，逐步减少误差。 从基层上看去，中国社会是乡土性的…"
     },
     {
       "type": "Books",
@@ -917,7 +1005,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0095%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1948%5DThomas%20Stearns%20Eliot%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0095][[诺贝尔文学奖][1948]Thomas Stearns Eliot].md",
       "label": "[Books][0095][[诺贝尔文学奖][1948]Thomas Stearns Eliot]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Thomas Stearns Eliot。 自评：宗教上是英国国教式的天主教徒，政治上是保皇派，文学上是古典主义者。 《荒原》创作动机：个人消遣，对生活无足轻重的抱怨。博学而高傲，包括了许多一流作者的著名诗句。 现代荒原的重要特征是人们丧失了信仰。 诗人自己认为《四首四重奏》写得最好。 他精心建立起来的诗风则是:表面上互无联系的片断排列,用神话﹑隐喻或象征所…"
     },
     {
       "type": "Books",
@@ -934,7 +1023,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0094%5D%E9%99%88%E6%99%AF%E6%B6%A6%5BDOING%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0094]陈景润[DOING].md",
       "label": "[Books][0094][陈景润[DOING]]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "陈景润。 初等数论-3册 第1册，20230318-20230319整理完。 【整数的整除性： 因数和倍数；质数和合数； 质数分布： pi(x) :=不大于x的质数的个数； 质数定理：x趋于无穷时，pi(x) 和 x/log(x)的比值是1 Goldbach猜想：大于4的偶数都是2个奇质数的和。 是否存在无数个形如$2^p-1$的数是质数 Fermat数：$…",
+      "math": true
     },
     {
       "type": "Books",
@@ -951,7 +1042,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0093%5D%5B%E4%B8%89%E5%B2%9B%E7%94%B1%E7%BA%AA%E5%A4%AB%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0093][三岛由纪夫].md",
       "label": "[Books][0093][三岛由纪夫]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "三岛由纪夫。 金阁寺 三岛由纪夫。1956年写的。水平高。 “必须烧掉金阁。” 我想，我还是要活下去。 金阁的美丽与崇高，人世的污浊与丑恶。美到极致就要遭到毁灭。 失去鲜度的现实、一半散发腐臭气的现实 ……这时候，我确实产生了一种自觉。向黑暗的世界摆开架势，五月的花朵、制服、坏心眼儿的同学们，都在我的控制范围之内。我揪住这个世界的底边，紧紧抓在手里。……但是…"
     },
     {
       "type": "Books",
@@ -968,7 +1060,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month3/%5BBooks%5D%5B0092%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1982%5D%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF%5D",
       "sourcePath": "qrthoughts/year2023/month3/[Books][0092][[诺贝尔文学奖][1982]马尔克斯].md",
       "label": "[Books][0092][[诺贝尔文学奖][1982]马尔克斯]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 。 百年孤独 精彩，很流畅。结合个人与哥伦比亚。与他早年在《宇宙报》的激烈相比，文字冷静平和。 马孔多无事发生。 多年以后，面对行刑队，他将会回想起父亲带他去见识冰块的那个遥远的下午。 多年以后，面对行刑队，奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午。 他觉得这一切如此简单而神奇，一夜之间又对炼金研究完全失去了兴趣，陷入新的…"
     },
     {
       "type": "Books",
@@ -985,7 +1078,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0090%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E9%98%BF%E8%92%82%E6%8B%89-%E5%B0%A4%E8%8B%A5%E5%A4%AB%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0090][[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选].md",
       "label": "[Books][0090][[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "尤若夫（1905-1937），匈牙利诗人。卧轨自杀。受超现实主义和表现主义影响，诗歌体现社会主义人本主义，匈牙利第一个描写工人生活的诗人。 他们慢慢流尽血液 又变得透明: 建筑在你们身上的 通向未来的巨大水晶窗。 《一个疲倦的人》 沉重的农夫一言不发 从田野中拖拖拉拉回家。 河流与我肩并肩躺一起。 清新的草丛沉睡在我的心下。 一种深沉的平静在河里滚动。 我沉…"
     },
     {
       "type": "Books",
@@ -1002,7 +1096,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0091%5D%5BAlice%27s%20Adventures%20in%20Wonderland%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0091][Alice's Adventures in Wonderland].md",
       "label": "[Books][0091][Alice's Adventures in Wonderland]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 In another moment down went Alice after it, never once considering how in the world she was to get out again. She did not like to drop the jar for fear of killing somebody unde…"
     },
     {
       "type": "Books",
@@ -1019,7 +1114,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0089%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%BA%A6%E7%BF%B0%E9%98%BF%E4%BB%80%E8%B4%9D%E5%88%A9%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%8B%E5%86%8C%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0089][[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册].md",
       "label": "[Books][0089][[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "阿什贝利，1927-2017，美国人，后现代诗歌代表。在巴黎待过10年，声称未受法国超现实主义和达达主义影响。 代表作长诗《凸面镜中的自画像》。 发展了斯蒂文森开创的“想象力去填充存在的匮乏”的语言狂欢传统，糅合叙述、抒情、经验、玄学等维度，拓展意识范围、保持语言活力和对事物的触及能力。 阿什贝利的诗歌中充满了对可以认识的知识秩序的颠覆﹐他认为这些所谓的秩序…"
     },
     {
       "type": "Books",
@@ -1036,7 +1132,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0088%5D%5BWoolf%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0088][Woolf].md",
       "label": "[Books][0088][Woolf]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "伍尔夫, 1882-1941, 英国人。现代主义和女性主义先锋, 意识流代表人物。两次世界大战期间伦敦文学界的核心人物。多次精神崩溃, 投河自杀。 。 到灯塔去 第1部分, “窗”, 沟通内外的框架, 拉姆齐夫人的心灵之窗。从内向外观察人们的思想情绪, 外在事物从外向内投射到意识中。主题是拉姆齐夫人, 第1主题, 篇幅长。用“内部分析”的写法，人称转换时采用…"
     },
     {
       "type": "Books",
@@ -1053,7 +1150,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0087%5D%5B%E9%A3%8E%E9%9B%85%E4%BF%B3%E5%8F%A5%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0087][风雅俳句].md",
       "label": "[Books][0087][风雅俳句]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "郑民钦翻译的，分为春夏秋冬四小本。 1908年大须贺乙首次用“季句”，指形成季节核心的自然物象。徘谐、俳句重视日常生活中的季节感。 松尾芭蕉（1644-1694），俳圣，革新徘谐，用于表现内心生活。 与谢芜村（1716-1783），小林一茶（1804-1829）。 新兴俳句、无季俳句、连作俳句、自由律、社会性俳句、前卫俳句。 传统俳句：十七音、切字、季语…"
     },
     {
       "type": "Books",
@@ -1070,7 +1168,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0086%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%B4%A2%E5%BE%B7%E6%A0%BC%E6%9C%97%E8%AF%97%E5%85%A8%E9%9B%86%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0086][[20世纪世界诗歌译丛](第二辑)索德格朗诗全集].md",
       "label": "[Books][0086][[20世纪世界诗歌译丛](第二辑)索德格朗诗全集]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "索德格朗，Sodergran，1892-1923，北欧现代主义鼻祖，芬兰女诗人。早年接触德国前期表现主义和俄国象征主义。 一生穷困潦倒，卖内衣和香水瓶买稿纸。31岁死于肺结核和营养不良，留下200多诗。 一个圆圈画在这些东西周围 没有人跨越它。 你寻找一朵花儿却找到一枚果实。 你寻找一口水井却找到一片大海。 你寻找一个女人却找到一个灵魂—— 你感到被诡计玩弄…"
     },
     {
       "type": "Books",
@@ -1087,7 +1186,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month2/%5BBooks%5D%5B0085%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1969%5DSamuel%20Beckett%5D",
       "sourcePath": "qrthoughts/year2023/month2/[Books][0085][[诺贝尔文学奖][1969]Samuel Beckett].md",
       "label": "[Books][0085][[诺贝尔文学奖][1969]Samuel Beckett]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "塞缪尔·贝克特（Samuel Beckett，1906－1989年）爱尔兰作家，涉及戏剧、小说和诗歌。荒诞派戏剧的重要代表人物。1969年诺奖。 。 等待戈多 1952年创作。之前主要以小说为主，后面以剧作为主。 荒诞：人与世界处于一种敌对状态，人的存在方式是荒诞的，人被无可名状的异己力量左右，无力改变自己的处境，人与人、人与世界无法沟通，人在一个毫无意义的…"
     },
     {
       "type": "Books",
@@ -1104,7 +1204,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2023/month1/%5BBooks%5D%5B0084%5D%5B%E6%95%A3%E5%AE%9C%E7%94%9F%E8%AF%97-%E8%81%82%E7%BB%80%E5%BC%A9%5D",
       "sourcePath": "qrthoughts/year2023/month1/[Books][0084][散宜生诗-聂绀弩].md",
       "label": "[Books][0084][散宜生诗-聂绀弩]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "聂绀弩 不合律，奇特，别开生面，变格，新声。 散宜生诗 老夫耄矣,久自知为散人散木，无志无才，唯一可述:或能终此久病之天年而已。因窃假“散宜生”为号，而命所做诗为《散宜生诗》云。 一双两好缠绵久，万转千回缱绻多。 《锄草》 何处有苗无有草，每回锄草总伤苗。培苗常恨草相混，锄草又怜苗太娇。未见新苗高一尺，来锄杂草已三遭。停锄不觉手挥汗，物理难通心自焦。【END…"
     },
     {
       "type": "Books",
@@ -1121,7 +1222,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month12/%5BBooks%5D%5B0083%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1968%5D%E5%B7%9D%E7%AB%AF%E5%BA%B7%E6%88%90%5D",
       "sourcePath": "qrthoughts/year2022/month12/[Books][0083][[诺贝尔文学奖][1968]川端康成].md",
       "label": "[Books][0083][[诺贝尔文学奖][1968]川端康成]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "物哀。 唯美作家：永井荷风、谷崎润一郎、佐藤眷夫，川端康成，三岛由纪夫。 而作为现代派作家,川端则是日本现代派文学的开山祖师之一-—新感觉派的骁将,与同时代的横光利一、中河与一、片冈铁兵及稍后的掘辰雄等,成为二战后野间宏、大江健三郎、黑井千次等一大批现代派作家的先导。川端康成恰好站在两种文艺思潮的交汇点上,集唯美派与现代派于一身。 于浓郁的抒情中,总是隐含着…"
     },
     {
       "type": "Books",
@@ -1138,7 +1240,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month12/%5BBooks%5D%5B0082%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2011%5D%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%5D",
       "sourcePath": "qrthoughts/year2022/month12/[Books][0082][[诺贝尔文学奖][2011]特朗斯特罗姆].md",
       "label": "[Books][0082][[诺贝尔文学奖][2011]特朗斯特罗姆]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "特朗斯特罗姆，1931-2015，瑞典诗人、心理学家。象征主义、超现实主义。 1990年患脑溢血导致右半身瘫痪。八十多年只写诗。号称一年只写三首诗。 问：诗的本质是什么？答：诗是对事物的感受，不是再认识，而是幻想。一首诗是我让它醒着的梦。诗最重要的任务是塑造精神生活，揭示神秘。 弗罗斯特：诗是翻译中丢失的部分。 我是一棵老树，挂满了不会掉落的叶子！ 特朗斯特…"
     },
     {
       "type": "Books",
@@ -1155,7 +1258,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0071%5D%5B%E4%BD%9B%E6%95%99%E7%BB%8F%E5%85%B8%5D%5BDOING%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0071][佛教经典][DOING].md",
       "label": "[Books][0071][[佛教经典][DOING]]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "佛教经典很多。 《坛经》 《般若波罗蜜多心经》 《金刚经》 《坛经》 中国僧人写的经。 即心即佛的佛性论，顿悟见性的修行观，自性自度的解脱观。 最有代表性的有:1.敦煌本,2.惠昕本,3．契嵩本,4．德异本和曹溪原本,5．宗宝本。 《坛经》的思想对中国佛教思想的内在理路和架构上也影响重大,包括了把传统佛教的真如佛变为心性佛、把传统佛教的佛度师度变为注重自性自…"
     },
     {
       "type": "Books",
@@ -1172,7 +1276,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0070%5D%5B%E9%B2%81%E8%BF%85%E5%85%A8%E9%9B%86%5D%5BDOING%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0070][鲁迅全集][DOING].md",
       "label": "[Books][0070][[鲁迅全集][DOING]]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "鲁迅我们是佩服的。 《野草》 《野草》 需要继续背诵。 《野草题辞》 当我沉默着的时候，我觉得充实；我将开口，同时感到空虚。 过去的生命已经死亡。我对于这死亡有大欢喜，因为我借此知道它曾经存活。死亡的生命已经朽腐。我对于这朽腐有大欢喜，因为我借此知道它还非空虚。 生命的泥委弃在地面上，不生乔木，只生野草，这是我的罪过。 野草，根本不深，花叶不美，然而吸取露…"
     },
     {
       "type": "Books",
@@ -1189,7 +1294,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0081%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E8%81%82%E9%B2%81%E8%BE%BE%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0081][[20世纪世界诗歌译丛](第二辑)聂鲁达诗选].md",
       "label": "[Books][0081][[20世纪世界诗歌译丛](第二辑)聂鲁达诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "聂鲁达。 艾略特说，未成熟的诗人模仿，成熟的诗人剽窃。 。 我孤单如一条隧道。群鸟从我这里逃走 现在我要让它们说我要对你说的，以便让你听见我要让你听见的。 黄昏的火苗在你眼睛里纠缠 叶子飘落在你灵魂的水面。 畏惧的篝火里我的渴望在燃烧 你的回忆是光﹐是烟,是宁静的池塘。 薄暮在你眼睛更深的地方燃烧。 干燥的秋叶在你的灵魂里旋转。 我们甚至丧失这个黄昏。 蓝色…"
     },
     {
       "type": "Books",
@@ -1206,7 +1312,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0080%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E9%BB%98%E6%B8%A9%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%AD%E4%B8%8B%E5%86%8C%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0080][[20世纪世界诗歌译丛](第二辑)默温诗选上中下册].md",
       "label": "[Books][0080][[20世纪世界诗歌译丛](第二辑)默温诗选上中下册]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "默温。 《金牛座》 白得像一朵花， 像一朵漂浮的花， 像一个白色的孩子， 我运用十一个国王; 漂浮在温和的水中， 我踩在那存在之物上面， 我是那要存在的存在之物。【END】 就像同一场雨落在 一棵树的两边。 《就像在水边》 哦 一起 拥抱启程 我们像升帆那样升起我们的爱情 就像一片帆及其映像 无论怎样 我们也移动,无论在哪里 我们都会被分开,就像被水 永远永…"
     },
     {
       "type": "Books",
@@ -1223,7 +1330,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0079%5D%5B%E4%BA%BA%E9%97%B4%E5%A4%B1%E6%A0%BC-%E5%A4%AA%E5%AE%B0%E6%B2%BB%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0079][人间失格-太宰治].md",
       "label": "[Books][0079][人间失格-太宰治]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "太宰治，1909-1948。无赖派文学大师。在家排行第六。 有劲。看到一大半看不下去了，第二天平复心情看完了。我觉着如果我是里面的任何一个角色，我都可以做的更好。 笑是集体狩猎时对猎物漏出牙齿的一种威吓行为。 宫崎渐渐陷入恍惚的状态，出神地看着另一个自己。【女装后的宫崎】 千寻无法按捺住心头的鼓动。她想：是该试着戴隐形眼镜了。【悦男对千寻求婚，说千寻同意的话…"
     },
     {
       "type": "Books",
@@ -1240,7 +1348,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0078%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0109%5D%E8%A2%96%E7%8F%8D%E7%A5%9E%E5%AD%A6-%E9%9C%8D%E5%B0%94%E5%B7%B4%E8%B5%AB%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0078][[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫].md",
       "label": "[Books][0078][[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "霍尔巴赫，1723-1789，法国十八世纪唯物主义哲学家。 十八世纪上半叶的法国，随着手工工场这种资本主义企业的出现和海外贸易的扩大，资本主义生产关系已经迅速发展起来了，但是，腐朽的封建制度仍然维持着顽固的统治。行会制度和陈旧的生产管理,林立的关卡和不统一的货币及度量单位,使商品生产和商品流通受到严重阻碍。在农村，占全国人口百分之九十以上的农民,只占有小部分…"
     },
     {
       "type": "Books",
@@ -1257,7 +1366,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0076%5D%5B%E8%80%81%E5%A6%93%E6%8A%84-%E5%86%88%E6%9C%AC%E5%8A%A0%E4%B9%83%E5%AD%90%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0076][老妓抄-冈本加乃子].md",
       "label": "[Books][0076][老妓抄-冈本加乃子]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "冈本加乃子，1889-1939。 川端康成：死亡是唯一的静美。 冈本加乃子自杀未遂，终日痛苦不堪，丈夫一平幡然悔悟，决心守护加乃子；得知加乃子与早稻田的大学生堀切茂雄堕入情网，他甚至同意加乃子将堀切茂雄带回家里同居，一场奇特的三人行生活就此展开。当时加乃子又重新怀孕，心里大为困扰，却依然与两个男人，共同生活在一起。而堀切茂雄也同样因此大为困扰，甚至移情恋上加…"
     },
     {
       "type": "Books",
@@ -1274,7 +1384,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0077%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0403%5D%E8%8C%83%E7%95%B4%E7%AF%87-%E8%A7%A3%E9%87%8A%E7%AF%87-%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0077][[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德].md",
       "label": "[Books][0077][[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "范畴篇和解释篇是亚里士多德《工具论》中较短的两篇。 【范畴篇内容提要】 第一章 同名异义的东西、同名同义的东西；由引仲得名的东西。 第二章 (1)简单用嚭和复合用嚭。 (2)(a)可以用来言说一个主体的东两, (b)存在于一个主体之中的东西, (c)既可以用来言说一个主体、并且又存在于一个主体之中的东西， (d)既不可以用来逑酰一个主体、又不存在于一个主体之…"
     },
     {
       "type": "Books",
@@ -1291,7 +1402,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0074%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E6%9B%BC%E5%BE%B7%E5%B0%94%E6%96%BD%E5%A1%94%E5%A7%86%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0074][[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选].md",
       "label": "[Books][0074][[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "曼德尔施塔姆，1891-1938，死于远东西伯利亚的一个劳改营中转站。俄罗斯白银时代。受伊万诺夫、柏格森（主观时间和客观时间）、因肯诺吉·安年科夫（象征主义诗人）的影响。 反对象征主义对神秘性、空洞的音乐性的追求，反对对颓败的个人经验的崇拜。 俄罗斯作曲家斯克里亚宾（可挑战贝多芬）。 早晨,费解的柔情， 一半真实,一半如梦﹔ 止不住的瞌睡﹔ 雾蒙蒙,叮当响的…"
     },
     {
       "type": "Books",
@@ -1308,7 +1420,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0073%5D%5B%E6%9F%A5%E6%8B%89%E5%9B%BE%E6%96%AF%E7%89%B9%E6%8B%89%E5%A6%82%E6%98%AF%E8%AF%B4-%E5%B0%BC%E9%87%87%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0073][查拉图斯特拉如是说-尼采].md",
       "label": "[Books][0073][查拉图斯特拉如是说-尼采]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "尼采。 人类是应当被超越的。 上帝死了，因为上帝的亵渎者也死了。 人类是一根系在兽与超人间的软索——一根悬在深谷上的软索。 往彼端去是危险的，停在半途是危险的，向后瞧望也是危险的，战栗或不前进，都是危险的。 人类之伟大处，正在它是一座桥而不是一个目的。人类之可爱处，正在它是一个过程与一个没落。 我爱那些只知道为没落而生活的人。因为他们是跨过桥者。 我爱那些大…"
     },
     {
       "type": "Books",
@@ -1325,7 +1438,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0075%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0711%5D%E4%BA%BA%E7%94%9F%E7%9A%84%E4%BA%B2%E8%AF%81-%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0075][[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔].md",
       "label": "[Books][0075][[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "泰戈尔。 是1912年他访问美国时的演讲集。梵文的题目的含义是“将人生引向正确的道路”。 这本书中，明确感到他想要强说那不可说，然而我努力感受也没有体会到他之所说。 亲证人类精神与宇宙精神的契合，要扩展意识与周围事物契合。真理包容一切，不存在绝对独立的存在，亲证真理的唯一途径是将生命融汇于一切对象之中。 不知界限的人类抱负的崇高表现，在于亲证无限，除此之外别…"
     },
     {
       "type": "Books",
@@ -1342,7 +1456,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0072%5D%5B%E5%8D%9A%E5%B0%94%E8%B5%AB%E6%96%AF%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0072][博尔赫斯].md",
       "label": "[Books][0072][博尔赫斯]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "博尔赫斯，自己说首先是一个读者，其次是诗人，再是散文家。 其他 CCCCCCCCC。 随着岁月的流转, 其他的绚丽色彩渐渐将我遗忘, 现如今只剩下了 模糊的光亮、错杂的暗影, 以及那初始的金黄。 20世纪世界诗歌译丛博尔赫斯诗选 CCCCCCCCC。 《愧对一切死亡》 免于记忆与希望， 无限的,抽象的,几乎属于未来， 死者不是一位死者:而是死亡。 像神秘主义…"
     },
     {
       "type": "Books",
@@ -1359,7 +1474,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0068%5D%5B%E4%BC%8A%E7%B4%A2%E5%AF%93%E8%A8%80-%E4%BC%8A%E7%B4%A2%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0068][伊索寓言-伊索].md",
       "label": "[Books][0068][伊索寓言-伊索]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "伊索。古希腊奴隶，爱讲寓言，称为自由人。 主题：世上存在邪恶；命运变化莫测；要识破假象；贪欲有害。 吴健平和于国畔译，上海译文出版社。 地下的走兽抓不住天上的飞禽。"
     },
     {
       "type": "Videos",
@@ -1376,7 +1492,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BVideos%5D%5B0002%5D%5B%E5%8C%97%E4%BA%AC%E4%BA%BA%E6%B0%91%E8%89%BA%E6%9C%AF%E5%89%A7%E9%99%A2%E8%AF%9D%E5%89%A7%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Videos][0002][北京人民艺术剧院话剧].md",
       "label": "[Videos][0002][北京人民艺术剧院话剧]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "30部话剧。 伊索、秦二爷令人印象深刻。 卖儿鬻女，乱伦，逼良为娼，时代变迁，等等主题。外国剧作中的观点部部不同，国内多为反应民间疾苦，家庭（家族）式微。 伊索（又名狐狸与葡萄）-1979年版 精彩！看了一遍之后，还回味，于是看了第二遍。 神永远是饶恕人的，所以人才会创造出神来。要是没有神，谁会来饶恕人呢。 奴隶只有希望的权利。 自由不是秘密，应该让所有人都…"
     },
     {
       "type": "Books",
@@ -1393,7 +1510,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0069%5D%5B%E4%B8%AD%E5%9B%BD%E6%96%B0%E8%AF%97%E7%99%BE%E5%B9%B4%E5%A4%A7%E5%85%B8-%E5%85%B130%E5%8D%B7%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0069][中国新诗百年大典-共30卷].md",
       "label": "[Books][0069][中国新诗百年大典-共30卷]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "共30卷这套书，在大学的图书馆吐完，笔记共35页A4纸。 当我开始读的时候，那天是20140516，现在是20221102。此刻是20240716，决定尽快完成录入。 卷1 【胡适】 我且坐到天明，明天绝早跑到最高峰，去看那日出的奇景。 醉过才知酒浓，爱过才知轻重，你不能做我的诗，正如我不能做你的梦。 【刘大白】 是谁把心里相思，种成红豆？待我来碾豆成尘，看…"
     },
     {
       "type": "Books",
@@ -1410,7 +1528,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month11/%5BBooks%5D%5B0067%5D%5B%E6%B5%B7%E5%AD%90%5D",
       "sourcePath": "qrthoughts/year2022/month11/[Books][0067][海子].md",
       "label": "[Books][0067][海子]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "海子 海子诗全编 CCCCCCCCC。 亚洲铜，亚洲铜 爱怀疑和飞翔的是鸟，淹没一切的是海水 你的主人却是青草，住在自己细小的腰上，守住野花的手掌和秘密 一只眼睛留给纷纷的花朵 一只眼睛永不走出铁铸的城门 单翅鸟为什么要飞呢 我为什么喝下自己的影子 揪着头发作为翅膀离开 今天夜晚，语言秘密前进，直到完全沉默 《跳跃者》 老鼻子橡树 夹住了我的蓝鞋子 我却是跳…"
     },
     {
       "type": "Books",
@@ -1427,7 +1546,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0066%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1925%5D%E8%90%A7%E4%BC%AF%E7%BA%B3%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0066][[诺贝尔文学奖][1925]萧伯纳].md",
       "label": "[Books][0066][[诺贝尔文学奖][1925]萧伯纳]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "萧伯纳，1856-1950，爱尔兰现实主义剧作家。生活在垄断资本主义初期。幽默。 墓志铭“我早就知道无论我活多久，这种事情迟早总会发生的。” 华伦夫人的职业- 没有明说职业。 奇迹是创造信仰的东西。 华伦夫人：我自己的想法和自己的生活方式！听听她说的！你以为我是像你这样长大的吗？可以像你一样选择自己的生活方式？你以为我所做的事情是因为我喜欢做吗，还是我会以为…"
     },
     {
       "type": "Books",
@@ -1444,7 +1564,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0064%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0209%5D%E4%B8%80%E5%B9%B4%E6%9C%89%E5%8D%8A-%E7%BB%AD%E4%B8%80%E5%B9%B4%E6%9C%89%E5%8D%8A-%E4%B8%AD%E6%B1%9F%E5%85%86%E6%B0%91%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0064][[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民].md",
       "label": "[Books][0064][[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "中江兆民，1847-1901，日本近代唯物主义哲学家。处于封建社会到资本主义社会过渡时期。1868明治维新不彻底，资本主义生产关系发展，农村的封建生产关系几乎没有任何触动。他深受孔德的实证主义影响。 1900年底患癌症，医生说余命只有“一年有半”。 哲学家要冷静、直率、不妥协。 19世纪自然科学的发展：物质转化、细胞学说、进化论。 有，没有道理变成无。 我是…"
     },
     {
       "type": "Books",
@@ -1461,7 +1582,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0065%5D%5B%E4%BC%8A%E6%81%A9%C2%B7%E9%BA%A6%E5%85%8B%E5%B0%A4%E6%81%A9%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0065][伊恩·麦克尤恩].md",
       "label": "[Books][0065][伊恩·麦克尤恩]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "美国作家。 最初的爱情最后的仪式 余华写了个序。8个短篇组成。 辛苦劳累一星期,星期天才得休息,然后星期一又得奔赴苦役。每晚回家时都变得更老,更累,却没有更富。他们挖呀推呀包呀查呀，为别人的利润呻吟和流汗。 她把厨房变成了一个你没事来坐坐的地方。 我逆流而上，阳光斜射在背脊上，但孱弱得难以察觉，苍白得甚至照不出影子。 尸体把生和死摆在了一起。 我轻轻把她抱起…"
     },
     {
       "type": "Books",
@@ -1478,7 +1600,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0063%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%BE%8E%E6%B4%B2%E8%AF%91%E8%AF%97%E6%96%87%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0063][[20世纪世界诗歌译丛](第二辑)美洲译诗文选].md",
       "label": "[Books][0063][[20世纪世界诗歌译丛](第二辑)美洲译诗文选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "蔡天新译。 泥土，果实，坠向泥土，一次次永远，反反复复。 他的首要任务是要否认前辈，那些在他以前就有的修辞学。 不存在诗人的风格，一旦你获得了风格，文学就取代了诗歌。 之后，人们死去，我将跳舞。 《太阳，诗歌》故乡河面上的船只。忧郁的水，遗忘的动物。紫丁香的花瓣，仅有的无限。公园里的喧闹，阳光下的奥妙。如此古老！ 我曾渴望成为一具尸体，并进入一颗陌生的心脏…"
     },
     {
       "type": "Books",
@@ -1495,7 +1618,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0062%5D%5B%E4%BC%A0%E4%B9%A0%E5%BD%95-%E7%8E%8B%E9%98%B3%E6%98%8E%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0062][传习录-王阳明].md",
       "label": "[Books][0062][传习录-王阳明]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "王阳明。 先生明睿天授，然和乐坦易，不事边幅。 十余年来， 竟未能窥其藩篱。 ‘修己以安百姓’。 ‘修己’便是‘明明德’。‘安百姓’便是‘亲民’。说亲民便是兼教养意。说新民便觉偏了。 心即理也。天下有心外之事，心外之理乎？ 此心无私欲之蔽，即是天理。 只在此心去人欲存天理上用工便是。 只见那好色时，已自好了。不是见了后，又立个心去好。 又如知痛，必已自痛了…"
     },
     {
       "type": "Books",
@@ -1512,7 +1636,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0060%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1972%5D%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4%E9%80%89-%E4%BA%A8%E5%88%A9%E5%B8%8C%C2%B7%E4%BC%AF%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0060][[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔].md",
       "label": "[Books][0060][[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "亨利希·伯尔，1917-1985。德国作家。 代表作《与一位女士的合影》（1971）和《丧失了名誉的卡塔琳娜》（1974）。著有《女士及众生相》，《正点到达》等。 看的短篇的题目记录。 不中用的狗。 死者不听话。 卖笑人。就这样，我以各种各样的方式笑，却不知道自己的笑。 拉客的雅克。拉客的雅克来到前线和我一起盯梢，他说着与他的三个接客姑娘的事，天明敌军来，我…"
     },
     {
       "type": "Books",
@@ -1529,7 +1654,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0061%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2003%5D%E5%BA%93%E5%88%87%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0061][[诺贝尔文学奖][2003]库切].md",
       "label": "[Books][0061][[诺贝尔文学奖][2003]库切]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "库切 特点：反复建构，即没有两部作品采用相同的创作手法。 动物的生命-20230327 人有神性，动物有物性。 我们已与动物停止了情感交流，我们的理性思考也顺从了我们的情感（或者更准确地说是我们的同情心)。同情心的想象力延伸到别的动物中。同情的想象是没有边界的。同情心使我们时常与别的存在分担忧愁。作为真正能与别的存在分担忧愁的内心，它必须是具体的内心，为直接…"
     },
     {
       "type": "Books",
@@ -1546,7 +1672,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0059%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1956%5D%E5%B8%8C%E6%A2%85%E5%86%85%E6%96%AF%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0059][[诺贝尔文学奖][1956]希梅内斯].md",
       "label": "[Books][0059][[诺贝尔文学奖][1956]希梅内斯]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "希梅内斯。 天亮就起床的表，杀不死饥饿的枪，走向贫穷的马。 1949年的《底层的动物》是20世纪最后一本重要的象征主义诗集。 从《一个新婚诗人的日记》(1916)开始，希梅内斯的诗歌创作进入了第二阶段。这时，诗人已摆脱现代主义的束缚，逐渐形成了自已独特的风格。他追求形式的完美，语言的新颖，并力图打破诗歌与散文的界限，而在内容上却始终未能挣脱形而上学的桎梏，企…"
     },
     {
       "type": "Books",
@@ -1563,7 +1690,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0056%5D%5B%E8%AE%BA%E8%AF%AD-%E5%AD%94%E5%AD%90%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0056][论语-孔子].md",
       "label": "[Books][0056][论语-孔子]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "孔子。 论语。"
     },
     {
       "type": "Books",
@@ -1580,7 +1708,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0055%5D%5B%5B%E7%A7%91%E5%AD%A6%E5%A4%A7%E5%B8%88%E4%BD%B3%E4%BD%9C%E7%B3%BB%E5%88%97%5D%E8%87%AA%E7%84%B6%E4%B9%8B%E6%95%B0-%E4%BC%8A%E6%81%A9%C2%B7%E6%96%AF%E5%9B%BE%E5%B0%94%E7%89%B9%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0055][[科学大师佳作系列]自然之数-伊恩·斯图尔特].md",
       "label": "[Books][0055][[科学大师佳作系列]自然之数-伊恩·斯图尔特]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。 有些事物从外面观察比从内部观察简单。 云的形状，尺度无关，统计自相似。 蜗牛渐次扩张的螺旋形扭转的圆锥成因：生长缘扩张和缓慢离心旋转，抽象为生长率和生长离心率。 Daniel Nilsson, Susanne Pelger在1994年发表的眼睛进化的计算模拟。 关键的生物官能，如细胞感光性、流动性。 高斯指出数学中重要的不是符号，是概念。 运算和函数是类…"
     },
     {
       "type": "Books",
@@ -1597,7 +1726,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0054%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0812%5D%E9%9D%A2%E5%90%91%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85-%E6%B5%B7%E5%BE%B7%E6%A0%BC%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0054][[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔].md",
       "label": "[Books][0054][[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "海德格尔。 存在是像在场那样的东西。在在场、在场状态中可以言说“当前”。当前、过去、将来，构成时间的特征。存在通过时间而被规定为在场状态。 在存在中，为什么，以何种方式，从哪里讲出了诸如时间这样的东西？ 存在通过时间被规定为在场状态。在物中,我们哪儿都找不到存在。凡物都有其时间。但是存在不是物,存在也不在时间中。可是,存在仍然通过时间,通过时间性的东西,而被…"
     },
     {
       "type": "Books",
@@ -1614,7 +1744,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0053%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2022%5D%E6%82%A0%E6%82%A0%E5%B2%81%E6%9C%88-%E5%AE%89%E5%A6%AE%C2%B7%E8%89%BE%E5%B0%94%E8%AF%BA%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0053][[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺].md",
       "label": "[Books][0053][[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "安妮·艾尔诺。 独创的“无人称自传”，采用第三人称，旧照片反映时代变迁。 21世纪年度最佳外国小说系列。 深刻感到社会演变和人生短暂，一切事情以一种闻所未闻的速度被遗忘。 消解典型叙事。 从时代变迁中世界留给个体的印象，那些零散的代表集体记忆的画面中，展现集体记忆，重建历史。 Everything will be erased in a second. Th…"
     },
     {
       "type": "Books",
@@ -1631,7 +1762,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0058%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1911%5D%E9%9D%92%E9%B8%9F-%E8%8E%AB%E9%87%8C%E6%96%AF%C2%B7%E6%A2%85%E7%89%B9%E6%9E%97%E5%85%8B%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0058][[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克].md",
       "label": "[Books][0058][[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "莫里斯·梅特林克。 象征。话剧。赋予抽象的无情的事物生命。 他们为什么不马上就吃 因为他们不饿 （惊讶）他们不饿？......为什么会不饿？...... 他们想吃就吃...... （怀疑）天天这样？...... 听说是这样...... 这是不渴而饮幸福和不饥而食幸福，他俩是孪生兄弟，腿是通心粉。 并不是有笑容的人才是最快乐的人。 这条漂亮的裙子，是用什么做的…"
     },
     {
       "type": "Books",
@@ -1648,7 +1780,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0057%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1923%5D%E5%8F%B6%E8%8A%9D%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0057][[诺贝尔文学奖][1923]叶芝].md",
       "label": "[Books][0057][[诺贝尔文学奖][1923]叶芝]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "叶芝。爱尔兰人。1866年弃画从文。 年轻时追求智慧，年老师又羡慕青春。肉体的衰老即智慧,年轻时我们曾彼此相爱却愚昧无知。 只有非个人的东西才不朽。 最早在初中时候，看见文联书店里有《叶芝全集》。 《心愿之乡》 雪莱：一根神经上蠕动着人世间那些感觉不到的压迫。 拜伦：灵魂磨穿了胸膛。 研究现代招魂术，有几年常和一些巫师交往。 风格几乎是无意识的。 我花了很长…"
     },
     {
       "type": "Books",
@@ -1665,7 +1798,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0050%5D%5B%E5%8A%A8%E7%89%A9%E5%BA%84%E5%9B%AD-%E4%B9%94%E6%B2%BB%E5%A5%A5%E5%A8%81%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0050][动物庄园-乔治奥威尔].md",
       "label": "[Books][0050][动物庄园-乔治奥威尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "乔治奥威尔。 荣如德译。 直接讽刺苏联。 “四条腿好，两条腿更好！”读到这里，我瞪大了双眼，极为精彩。 对数概念进行彻底研究必然总是导致某种哲学的结果 。 我们的生命是悲惨的，劳苦的，和短促的。我们生了下来，供给我们的食物仅仅够维持我们的躯体里始终有一口气，我们当中那些能活下来的，就被强迫干活，直到筋疲力尽；一旦我们的使用价值到了尽头，我们立马就会遭到骇人听…"
     },
     {
       "type": "Books",
@@ -1682,7 +1816,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0052%5D%5B%E8%8B%8F%E8%BD%BC%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0052][苏轼].md",
       "label": "[Books][0052][苏轼]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "苏轼。"
     },
     {
       "type": "Books",
@@ -1699,7 +1834,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0051%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1913%5D%E6%B3%B0%E6%88%88%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0051][[诺贝尔文学奖][1913]泰戈尔].md",
       "label": "[Books][0051][[诺贝尔文学奖][1913]泰戈尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "泰戈尔。 飞鸟集-20221014 如果你因失去了太阳而流泪，那么你也将失去群星了。 有一次，我们梦见大家都是不相识的。我们醒了，却知道我们原是相亲相爱的。 “海水呀，你说的是什么？” “是永恒的疑问。” “天空呀，你回答的话是什么？” “是永恒的沉默。” 创造的神秘，有如夜间的黑暗－－是伟大的。而知识的幻影却不过如晨间之雾。 鸟儿愿为一朵云。云儿愿为一只鸟…"
     },
     {
       "type": "Books",
@@ -1716,7 +1852,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0049%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0903%5D%E7%AE%97%E6%9C%AF%E5%9F%BA%E7%A1%80-%E5%BC%97%E9%9B%B7%E6%A0%BC%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0049][[商务印书馆汉译世界名著][A0903]算术基础-弗雷格].md",
       "label": "[Books][0049][[商务印书馆汉译世界名著][A0903]算术基础-弗雷格]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "弗雷格（1848-1925），德国人，现代数理逻辑创始人。 想从逻辑推出数学。分三步：1）发表《概念文字》，基于构造的一种形式语言，建立了一阶谓词演算系统，提供了一个严格的逻辑工具；2）发表《算数基础》，探讨了什么是数，什么是0，什么是1。从逻辑角度刻化这些基本概念。3）用逻辑系统来构造算术。第三步因为罗素悖论而失败。 本书提出三条原则：区分主观和客观，区分…"
     },
     {
       "type": "Books",
@@ -1733,7 +1870,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0048%5D%5BEffective%20STL-Scott%20Meyers%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0048][Effective STL-Scott Meyers].md",
       "label": "[Books][0048][Effective STL-Scott Meyers]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "50 Specific ways to improve your use of the standard template library. 连续内存容器，vector, string, deque; 基于节点的容器，在插入和删除时不会引起迭代器、指针、引用的失效。 判断式（返回bool的）一般是纯函数，没有状态。 foreach(vec.bagin(),v…"
     },
     {
       "type": "Books",
@@ -1750,7 +1888,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0047%5D%5B%E5%B0%8F%E7%8E%8B%E5%AD%90-%E5%9C%A3%C2%B7%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0047][小王子-圣·埃克苏佩里].md",
       "label": "[Books][0047][小王子-圣·埃克苏佩里]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "圣·埃克苏佩里（1900-1944），飞行员。出航执行第八次任务，从此再也没有回来 小王子存在的证据就是他非常漂亮，他笑着，想要一只 羊。他想要一只小羊，这就证明他的存在。 几百万年以来花儿都在制造着刺，几百万年以来羊仍然在吃花。要搞清楚 为什么花儿费那么大劲给自己制造没有什么用的刺，这难道不是正经事？难道羊 和花之间的战争不重要？这难道不比那个大胖子红脸先…"
     },
     {
       "type": "Books",
@@ -1767,7 +1906,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0046%5D%5B%E5%AE%89%E9%9D%99%E7%9A%84%E4%BD%8D%E7%BD%AE-%E5%91%A8%E5%9B%BD%E5%B9%B3%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0046][安静的位置-周国平].md",
       "label": "[Books][0046][安静的位置-周国平]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "周国平。 我所说出写出的东西只是思考的产物，而一切思考在某种意义上都是一种逃避，从最个别的逃向最一般的，从命运逃向生活，从沉默的深渊逃向语言的彼岸。 把自己的生活当做正文，把书籍当做注解，听别人发言是为了使自己能说话，以一颗活跃的灵魂，为获得灵感而读书。 一部基督教史就是没有信仰的人以维护信仰之名把有信仰的人当做邪教徒烧死的历史。殉道者多半死于同志之手而非敌…"
     },
     {
       "type": "Books",
@@ -1784,7 +1924,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0045%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E9%9D%9E%E6%B4%B2%E7%8E%B0%E4%BB%A3%E8%AF%97%E9%80%89%E4%B8%8A%E4%B8%8B%E5%86%8C%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0045][[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册].md",
       "label": "[Books][0045][[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "非洲是世界第二大陆，有50多个国家和地区，分为三大文化区：黑人文化、移民文化、阿拉伯-莫斯林文化。三分之二的土地在撒哈拉以南，属于黑人文化区。 除埃及外，非洲诗歌奔放、欢快、纯洁、天真。埃及的神话谱系在一神化后，太阳神艾顿是主神。金字塔铭文诗。《亡灵书》是古埃及宗教诗歌的总集。 阿尔及利亚代表北非现代诗歌的高度。 导言介绍了非洲各个国家的诗歌简介，可以看看…"
     },
     {
       "type": "Books",
@@ -1801,7 +1942,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0042%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1954%5D%E8%80%81%E4%BA%BA%E4%B8%8E%E6%B5%B7-%E6%B5%B7%E6%98%8E%E5%A8%81%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0042][[诺贝尔文学奖][1954]老人与海-海明威].md",
       "label": "[Books][0042][[诺贝尔文学奖][1954]老人与海-海明威]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "海明威，《老人与海》48小时手持530万册，当年获得普利策奖，两年后获得诺奖。 站着写作，一只脚站着，处于一种紧张状态，尽可能简短表达思想。 人可以被毁灭，不能被打败。 孩子不知道昨天的报纸是不是也是乌有的。 我却还有好多备用的钓索，一个人还能有什么要求呢。 每样东西都杀死别的东西，不过方式不同罢了。 我太老了，不能用棍子打死鲨鱼了。 海里有我们的朋友，也有…"
     },
     {
       "type": "Videos",
@@ -1818,7 +1960,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BVideos%5D%5B0001%5D%5B%E4%B8%AD%E5%9B%BD%E7%BE%8E%E5%AD%A6-%E6%9C%B1%E8%89%AF%E5%BF%97%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Videos][0001][中国美学-朱良志].md",
       "label": "[Videos][0001][中国美学-朱良志]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "朱良志[1955-]，北大教授，北京大学美学与美育研究中心主任。美学。 视频20多分钟一个，共52个。 var string= 一切有为法，如梦幻泡影。 别人只看采芙蓉，香气长黏绕指风。两岸映，一船红，何曾解染得虚空。 诵文者守株，情通者妙悟。--摩诃止观 禅宗三境界：1）落叶满空山，何处寻行踪；2）空山无人，水流花开。3）万古长空，一朝风月。 古趣，对时间…"
     },
     {
       "type": "Books",
@@ -1835,7 +1978,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0044%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1907%5D%E8%80%81%E8%99%8E%E8%80%81%E8%99%8E-%E5%90%89%E5%8D%9C%E6%9E%97%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0044][[诺贝尔文学奖][1907]老虎老虎-吉卜林].md",
       "label": "[Books][0044][[诺贝尔文学奖][1907]老虎老虎-吉卜林]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "文美惠译。 第二次看。 这样的白天仿佛比大多数人整个一生还要长。"
     },
     {
       "type": "Books",
@@ -1852,7 +1996,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0043%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1957%5D%E5%B1%80%E5%A4%96%E4%BA%BA-%E5%8A%A0%E7%BC%AA%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0043][[诺贝尔文学奖][1957]局外人-加缪].md",
       "label": "[Books][0043][[诺贝尔文学奖][1957]局外人-加缪]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "加缪 任何违反社会的基本法则的人必然收到社会的惩罚。社会需要和它一致的人。 世界本身具有的、使人不能理解的那种厚度和陌生感。 荒诞的人是不否认永恒、不为永恒做任何事的人。 世界是晦涩的还是清晰的，是合乎理性的还是不可理解的，人在世界上是幸福的还是痛苦的，人与这个世界的关系是和谐一致的还是分裂矛盾的？ 莫尔索拒绝传统的价值观念，对习俗规定的行为不以为然。 今天…"
     },
     {
       "type": "Books",
@@ -1869,7 +2014,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month10/%5BBooks%5D%5B0041%5D%5B%E5%BC%A0%E5%B2%B1%E8%AF%97%E6%96%87%E9%9B%86-%E5%A4%8F%E5%92%B8%E6%B7%B3%E6%A0%A1%E7%82%B9%5D",
       "sourcePath": "qrthoughts/year2022/month10/[Books][0041][张岱诗文集-夏咸淳校点].md",
       "label": "[Books][0041][张岱诗文集-夏咸淳校点]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "张岱，1597-1684。 世间之物，为庸人所埋没者，不可胜计。 空山无人，读书深柳。 畀以千乘,弃如敝屣。 神龙露尾，不见其身。 瓶则缺粟，琴亦无弦。 生为明月，死剩清风。 月得竹而青。 脑中酒热骨自鸣，无人知是强王首。 落花一瓣堕流水。 敢借宰官医国手，天下精神尽抖擞。 粗疏之中有细密。 冬山原凛冽，月意自孤清。 夜壑孤藤上，琉璃映碧纱。 横斜非幻影，清…"
     },
     {
       "type": "Books",
@@ -1886,7 +2032,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0040%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E5%90%89%E7%9A%AE%E4%B9%8C%E6%96%AF%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0040][[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选].md",
       "label": "[Books][0040][[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "俄罗斯白银时代（1890-1921），女诗人。颓废派。 [20世纪世界诗歌译丛吉皮乌斯诗选] 我伤心欲狂，命在旦夕，命在旦夕；我追求我一无所知的东西，一无所知的东西。 从不曾有过——我感到：我属于你，亲爱的严厉的大自然啊！我要与你同生共死，我 的灵魂既顺从又自由。 雾气是我们的生命和我们湿漉漉的死亡。 我为你们在担心安逸的生活，我知道离群索居的力量，我并不为…"
     },
     {
       "type": "Books",
@@ -1903,7 +2050,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0039%5D%5B%E7%9E%A7%EF%BC%8C%E8%BF%99%E4%B8%AA%E4%BA%BA-%E5%B0%BC%E9%87%87%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0039][瞧，这个人-尼采].md",
       "label": "[Books][0039][瞧，这个人-尼采]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "尼采自传。 11882-1885写《查拉图斯特拉如是说》。1888年，写了5本，包括《偶像的黄昏》。这是最后一本。 目录：我为什么这样有智慧；我为什么这样聪明；我为什么能写出这样优秀的书。 推翻偶像（我称之为理想），更接近我的工作。当人们捏造一个理想世界时，也就使现实失去了其价值、意义和真实性。 哲学就是去探寻存在中的一切陌生和可疑的事物，寻找至今为止被道德…"
     },
     {
       "type": "Books",
@@ -1920,7 +2068,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0038%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B1901%5D%E5%AD%A4%E7%8B%AC%E4%B8%8E%E6%B2%89%E6%80%9D-%E8%8B%8F%E5%88%A9%C2%B7%E6%99%AE%E5%90%95%E5%A4%9A%E5%A7%86%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0038][[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆].md",
       "label": "[Books][0038][[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "第一遍读在大学。当时认为很棒。 授奖词：世界上没有任何东西能消灭的精神之爱、怀疑和不安，是他形式完美、用词简洁、有雕塑美的作品的常见主题。作品反映了一个追寻者和观察者的灵魂，他在已逝的岁月里没有停止追求，他觉得要认识另一个世界是不可能的，所以他在精神领域，在意识的声音中，在责任崇高而不可否认的要求中，证明了人类归宿的平凡。体现了文学中的理想主义。 她们成了努…"
     },
     {
       "type": "Books",
@@ -1937,7 +2086,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0037%5D%5BModern%20C%2B%2B%20Tutorial-Changkun%20Ou%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0037][Modern C++ Tutorial-Changkun Ou].md",
       "label": "[Books][0037][Modern C++ Tutorial-Changkun Ou]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Modern C++ Tutorial: C++11/14/17/20 On the Fly Last update: May 6, 2022. 87 pages. Doloaded on GitHub. Learned quite a lot."
     },
     {
       "type": "Books",
@@ -1954,7 +2104,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0036%5D%5B%5B%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%5D%5B2012%5D%E8%9B%99-%E8%8E%AB%E8%A8%80%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0036][[诺贝尔文学奖][2012]蛙-莫言].md",
       "label": "[Books][0036][[诺贝尔文学奖][2012]蛙-莫言]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "第一遍读在大学，当时以为太戏剧性。这次第二次看，还好。 我们仿佛在进行一场即兴表演，我们仿佛在玩一种古怪游戏。 每当说到这里，姑姑就大笑，笑着笑着，眼泪就会夺眶而出。 我期盼着。我在王胆的哭叫声中期盼着，在浪涛澎湃声中期盼着，在岸上毛驴高亢叫声中期盼着。 生育繁衍，多么庄严又多么世俗，多么严肃又多么荒唐。 只有那些既无钱又胆小的公职人员不敢生。 你们的哭声感…"
     },
     {
       "type": "Books",
@@ -1971,7 +2122,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0035%5D%5B%E6%AF%9B%E5%A7%86%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0035][毛姆].md",
       "label": "[Books][0035][毛姆]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "毛姆。 刀锋-20231008 罗致一两个能说会笑的客人。 心性广阔，见解摩登，态度宽容。 家世缅邈。 幽娴贞静。 ————我有了一点钱，这就使我有机会做我想做的事情。————晃膀子吗？————对。 可能他对自己心灵的眼睛迷迷糊糊看到的境界是否真实，自己都没有把握。 婚姻只有在婚姻之外的关系得到容忍，并且得到认可时，才会保持其尊严。 布太太有她自己的崇高原则…"
     },
     {
       "type": "Books",
@@ -1988,7 +2140,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month9/%5BBooks%5D%5B0034%5D%5B%E4%B8%89%E4%BD%93-%E5%88%98%E6%85%88%E6%BA%AA%5D",
       "sourcePath": "qrthoughts/year2022/month9/[Books][0034][三体-刘慈溪].md",
       "label": "[Books][0034][三体-刘慈溪]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "第一遍读是在大学，当时通宵读完或者通宵没读完。这次发现了之前的看的文件，带有当时的笔记。这次过得匆匆。 任何一种数字组合对于我都是一种立体形体。 她的那个主，是真实存在的。 其实这一切都在于，她说的那个主，自身难保了。 与非、或非、异或、同或、三态。 洛希极限。 到这里来吧，我将帮助你们获得这个世界。我的文明已无力解决自己的问题，需要你们的力量来介入。 你不…"
     },
     {
       "type": "Books",
@@ -2005,7 +2158,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0033%5D%5B%E6%98%8E%E6%B8%85%E5%8D%81%E5%A4%A7%E7%A6%81%E4%B9%A6%5D",
       "sourcePath": "qrthoughts/year2022/month6/[Books][0033][明清十大禁书].md",
       "label": "[Books][0033][明清十大禁书]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "共10本。快速的翻看。文言的程度不同，但基本上都是产生表面的意向，形不成理解，更不论情节。 [1] 剪灯新话-[明]瞿佑 杨柳青青杨柳黄。 风流好似鱼游水。 记、传、录的短篇小说集。 [2] 醋葫芦-[明]伏雌教主 走马观花看的，什么也没看见，没有看到整句子，匆匆看了些词句。估计是价值观破旧，皆为日常事情。想来日常经历的都是平常的事情。 [3] 品花宝鉴-[…"
     },
     {
       "type": "Books",
@@ -2022,7 +2176,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0032%5D%5B%E5%93%88%E4%BD%9B%E5%A4%A9%E6%89%8D%E4%B8%8E%E7%B4%A0%E8%B4%A8%E6%95%99%E8%82%B2%E5%85%B8%E8%97%8F%E6%96%87%E5%BA%93%E7%B3%BB%E5%88%97%5D",
       "sourcePath": "qrthoughts/year2022/month6/[Books][0032][哈佛天才与素质教育典藏文库系列].md",
       "label": "[Books][0032][哈佛天才与素质教育典藏文库系列]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "共7本。京华出版社。翻译差。 卡尔·威特的教育 DDDDDDDDDOOO 俗物与天才【存目】 原书是PhilistineandGenius，作者Boris Sidis，他的儿子15岁哈佛毕业。中文的这个很糟糕，不需要看中文的。 低度刺激，诸如让孩子观赏花草、听音乐等，开启孩子的心智。中度刺激，诸如观看电视大赛、智力比赛等，培养孩子的观察、欣赏、鉴别及语言表达…"
     },
     {
       "type": "Books",
@@ -2039,7 +2194,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0031%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0310%5D%E5%8A%9D%E5%AD%A6%E7%AF%87-%E7%A6%8F%E6%B3%BD%E8%B0%95%E5%90%89%5D",
       "sourcePath": "qrthoughts/year2022/month6/[Books][0031][[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉].md",
       "label": "[Books][0031][[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "福泽谕吉[1835,1901]，日本思想家，生于德川时代末期的下级武士家。 妥协的、不彻底的民主思想。承认人民是抽象的主人，被统治者奴役、无权、交贡是理所当然的。 人生来平等，共戴一天，同为天地间的造物。基本权利上平等，有很大的贫富、强弱、智愚的区别。把贫富强弱作为为非作歹的工具，就产生了恶。 人人独立，国家就能独立。独立是没有依赖他人的心理，能自己支配自己…"
     },
     {
       "type": "Books",
@@ -2056,7 +2212,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month6/%5BBooks%5D%5B0030%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0115%5D%E7%A7%91%E5%AD%A6%E4%B8%AD%E5%8D%8E%E8%80%8C%E4%B8%8D%E5%AE%9E%E7%9A%84%E4%BD%9C%E9%A3%8E-%E8%B5%AB%E5%B0%94%E5%B2%91%5D",
       "sourcePath": "qrthoughts/year2022/month6/[Books][0030][[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑].md",
       "label": "[Books][0030][[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "赫尔岑[1812,1870]，俄国思想家，革命家。 赫尔岑认为：古典主义尊重自然，相信经验的知识，最终有用的实践。浪漫主义的基础是唯灵论。经验主义是一堆没有联系的经验，没有一个总目标的观察。 社会动物的人，使命在于改善生活，改善社会秩序。 内心纷扰不安，精神生活没有坚实的基础，人就无法生活。 丢掉人为的语言过渡到普遍意识中。 那种柏拉图式的爱情是不够的了，因…"
     },
     {
       "type": "Books",
@@ -2073,7 +2230,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0029%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0512%5D%E8%87%AA%E7%84%B6%E5%93%B2%E5%AD%A6-%E7%9F%B3%E9%87%8C%E5%85%8B%5D",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0029][[商务印书馆汉译世界名著][A0512]自然哲学-石里克].md",
       "label": "[Books][0029][[商务印书馆汉译世界名著][A0512]自然哲学-石里克]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "石里克[1882,1936],哲学家、物理学家，逻辑实证主义维也纳学派的主要创始人，代表作《普通认识论》。出生于柏林的富人家庭。发表的论文涉及物理学、逻辑学、知识论、美学、科学哲学等领域。 1922年，参加哲学家和物理学家组织定期聚会讨论科学和哲学的社团，后成为维也纳学派；同年维特根斯坦发表《逻辑哲学论》。 澄清命题的逻辑意义乃是一般哲学的任务。“被空间所分…"
     },
     {
       "type": "Books",
@@ -2090,7 +2248,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0028%5D%E7%8E%8B%E5%B0%8F%E6%B3%A2",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0028]王小波.md",
       "label": "[Books][0028][王小波]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "王小波。 黄金时代 一切都在不可避免的走向庸俗。 活下去的诀窍是：保持愚蠢，又不能知道自己有多蠢。 在很穷的时候，用到自己偷来的东西，感觉妙不可言！ 大多数愚蠢的人都含有假装和弄假成真的成分。 梦具有一种荒诞的真实性，而真实有一种真实的荒诞性。 似水流年才是一个人的一切， 其余的全是片刻的欢娱和不幸。 人的一切痛苦,本质上都是对自己的无能的愤怒。 黄金时代…"
     },
     {
       "type": "Study",
@@ -2107,7 +2266,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BStudy%5D%5B0001%5D%5BJavaScript-D3.js%5D",
       "sourcePath": "qrthoughts/year2022/month5/[Study][0001][JavaScript-D3.js].md",
       "label": "[Study][0001][JavaScript-D3.js]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "可视化库。 学习。 Fig001, basic test. On 2022050514:15, first picture using D3.",
+      "interactive": true
     },
     {
       "type": "Books",
@@ -2124,7 +2285,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0027%5D%5B%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E5%A5%87%E9%81%87%E8%AE%B0-%E4%B9%94%E6%B2%BB%C2%B7%E4%BC%BD%E8%8E%AB%E5%A4%AB%5D",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0027][物理世界奇遇记-乔治·伽莫夫].md",
       "label": "[Books][0027][物理世界奇遇记-乔治·伽莫夫]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "物理学家写的科普书。杨振宁推荐。 看完了。"
     },
     {
       "type": "Books",
@@ -2141,7 +2303,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0024%5D%5B%E6%B3%95%E5%9B%BD%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0024][法国诗选].md",
       "label": "[Books][0024][法国诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "郑克鲁译。分为上中下三卷。 中世纪，诗歌占优势。随着城市出现，12世纪，市民文学出现。 七星诗社的主将是龙沙和杜贝莱。《保卫和发扬法兰西语》是七星诗社的宣言书。 我深谙鲜艳和苍白如纸，我深谙销蚀一切的死，我深谙一切，胜过了解自己。 黑夜在她的花园里聚集。 物质永存而形式却不复存在。 长久的热望，徒劳的希望，忧郁的叹息和习以为常的眼泪。 我突然狂笑，又悲哀泪落…"
     },
     {
       "type": "Books",
@@ -2158,7 +2321,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2022/month5/%5BBooks%5D%5B0025%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0901%5D%E8%B0%88%E8%B0%88%E6%96%B9%E6%B3%95-%E7%AC%9B%E5%8D%A1%E5%B0%94%5D",
       "sourcePath": "qrthoughts/year2022/month5/[Books][0025][[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔].md",
       "label": "[Books][0025][[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "笛卡尔，1596-1650，法国人，西方近代哲学创始人之一。 出身贵族，父亲是法官。父亲去世后，笛卡尔卖地，投资，靠利息生活。思想上、社会上、经济上属于资产阶级分子。言论谨慎。收集各种经验，随时随地用理性思考。收集资料，分析、综合、理解。为了认识世界，与各种各样的人交往。不爱早起，躺在床上一个上午。解析几何基本是靠在枕头上发明的。追求经验，还追问人是怎样研究…"
     },
     {
       "type": "Books",
@@ -2175,7 +2339,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0023%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%88%87%C2%B7%E7%B1%B3%E6%B2%83%E4%BB%80%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0023][[20世纪世界诗歌译丛](第一辑)切·米沃什诗选].md",
       "label": "[Books][0023][[20世纪世界诗歌译丛](第一辑)切·米沃什诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "切·米沃什，1911-2004，波兰裔美籍诗人，1980年诺贝尔文学奖。 张曙光译。 var string= 《不幸人的歌--一首关于世界末日的歌》 在世界结束的那天 一只蜜蜂绕着三叶草， 一个渔夫补着发亮的网。 快乐的海豚在海里跳跃， 排水管旁幼小的麻雀在嬉戏 而那蛇是金皮的，像它应有的样子。 在世界结束的那天 妇人们打伞走过田野， 一个酒鬼在草地边上打盹…"
     },
     {
       "type": "Books",
@@ -2192,7 +2357,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0022%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%8D%A1%E7%93%A6%E8%8F%B2%E6%96%AF%E8%AF%97%E9%9B%86%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0022][[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集].md",
       "label": "[Books][0022][[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "卡瓦菲斯,1863-1933,希腊现代诗人，生于埃及亚历山大。家庭富裕，家道中落，在当地水利局工作到1922退休。与艾略特并驾齐驱，消除诗歌中华而不实的东西。诗高贵。同性恋。生前无名。 《祈祷》大海把一个水手吞到深处，他的母亲不知道，照样在，圣母玛利亚面前点燃一根高蜡烛，祈祷他尽快回来，祈祷天气好————她竖起耳朵听风。她祈祷和恳求时，那圣像听着，庄严而忧伤…"
     },
     {
       "type": "Books",
@@ -2209,7 +2375,10 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0021%5D%5B%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0_%E5%8C%97%E4%BA%AC%E5%B8%82%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6%E7%BC%96%E5%86%99%E7%BB%84_1975%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0021][初等代数_北京市初等数学编写组_1975].md",
       "label": "[Books][0021][初等代数_北京市初等数学编写组_1975]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "时代特征鲜明，建设时期。想起小学初中的教材中的种果树离现实远了，电子器件等也远，而书中的例子感觉和书一样是历史中的。书中意识形态鲜明，纯数学+紧密贴合实际，间或有富有哲理的语句，同时贴合时政要闻。 【1】【数】 正负数和数轴，有理数加法、减法、乘法、除法。==》平均数。 乘方，幂的运算，零指数和负整指数。开方==》实数，无限不循环小数是无理数。 进制，二进制…",
+      "math": true,
+      "leadImage": "/resources/pics/20211209_初等代数_北京市初等数学编写组_1975.jpg"
     },
     {
       "type": "Books",
@@ -2226,7 +2395,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0020%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E7%8B%84%E5%85%B0%C2%B7%E6%89%98%E9%A9%AC%E6%96%AF%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0020][[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选].md",
       "label": "[Books][0020][[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "狄兰·托马斯，1914-1953，英国，记者。意象密集。 如果真是这样，我会不屑死去，半是习俗，半是谎言。 我就会派遣使节走访光明，他却有意无意地坠落梦境。 人啊，我疯狂的人，腐败的风，传播吹哨者的咳嗽，追踪的时光，化为死亡的灰烬；爱上他的诡计，快乐的死尸饥肠辘辘，当你占据，这禁止亲吻的世界。 词语不断涌现，向心灵，传译生死最初的字符。 你饮我的美酒，你嚼我…"
     },
     {
       "type": "Books",
@@ -2243,7 +2413,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0019%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BC%8A%E5%87%A1%C2%B7%E5%93%A5%E5%B0%94%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0019][[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选].md",
       "label": "[Books][0019][[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "伊凡-哥尔，1891-1950，法国现代主义诗人，从表现主义到超现实主义。。说法语的犹太家庭。生活与创作在两次世界大战期间，与瑞士神秘主义者、马德里极端主义者、萨勒格布顶点主义者有密切联系，有复杂的时代烙印。 波浪中的波浪，悲哀中的悲哀。 悲哀的鱼住在古老海洋中，畏惧鱼类的上帝。 当你注视我，你就属于我。 我们将永远孤独。 星星碎片在你眼中。 我假装唯恐失去…"
     },
     {
       "type": "Books",
@@ -2260,7 +2431,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0017%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BC%8A%E4%B8%BD%E8%8E%8E%E7%99%BD%C2%B7%E6%AF%95%E8%82%96%E6%99%AE%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0017][[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选].md",
       "label": "[Books][0017][[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "伊丽莎白·毕肖普，1911-1979，美国。 威廉-布莱克：一粒沙中窥见世界，一朵花中看见天堂。 对细节挥之不去的关注导致宏观阐释的生成，精神的聚焦没有缩小反而扩大了感受的尺度。 那里左永远是右，那里阴影是真正的实体，那里我们整夜醒着，那里天空是浅湿的犹如大海，现在又变深了，而且你爱着我。 这只钟随后落入轮子，和叶子与云产生的和谐。 海是“整个一箱刀子”…"
     },
     {
       "type": "Books",
@@ -2277,7 +2449,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0018%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0909%5D%E5%8D%A1%E5%B8%83%E6%96%AF%E6%95%99%E8%AF%B2%E5%BD%95-%E6%98%82%E8%8B%8F%E5%B0%94%E3%83%BB%E7%8E%9B%E9%98%BF%E9%87%8C%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0018][[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里].md",
       "label": "[Books][0018][[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "波斯中世纪，伊斯兰文明的百科全书，大约谢雨1082年。作者是兹雅尔王朝的王子，通知范围约现伊朗中、北部。 不论什么时候做什么工作的奴婢要求卖掉自己，就要尽快卖掉，不要因同情他们而把他们释放，他们对买卖自己并无畏惧。 有的人走向幸福，有的人开始悲苦。 在时代的压迫面前坚强不屈，不断增长才智。 人的本性是向世界持续追求本应属于他的东西，然后把它们留给最亲近的人…"
     },
     {
       "type": "Books",
@@ -2294,7 +2467,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0015%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E8%80%B6%E8%83%A1%E8%BE%BE%C2%B7%E9%98%BF%E7%B1%B3%E4%BA%A5%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0015][[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选].md",
       "label": "[Books][0015][[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "分上下册。 耶胡达·阿米亥，1924-2000，犹太人，以色列诗人，力图改造古老、高度文学化的希伯来语。 约2000年前，耶路撒冷被罗马人夷为平地，犹太人流放，希伯来语只用于宗教、教义、诗歌、墓志铭。19世纪中，犹太复国运动，希伯来语口语化。 希伯来传统中，诗人地位高，相当于先知、智者。 所有这尘土，所有这些在复活和风化过程中的遗骸，所有这爱，所有这些石头…"
     },
     {
       "type": "Books",
@@ -2311,7 +2485,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0014%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E9%87%8C%E5%B0%94%E5%85%8B%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0014][[20世纪世界诗歌译丛](第一辑)里尔克诗选].md",
       "label": "[Books][0014][[20世纪世界诗歌译丛](第一辑)里尔克诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "里尔克，1875-1926，德国现代诗人，生于布拉格。《哀歌》和《十四行诗》1923年出版，二十世纪诗歌的重要里程碑。 不是进入一种以阴影使大地模糊的来世，而是进入一种整体。 美是我们刚好可以承受的恐怖的开始。 黑夜为了谁而不留下，这相望已久的、温和的、不抱幻想的存在，这颗孤寂的心，与它相会是如此痛苦。难道情人们就更容易些吗？但是他们继续利用彼此来隐藏各自的…"
     },
     {
       "type": "Books",
@@ -2328,7 +2503,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0016%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0103%5D%E5%AF%B9%E7%AC%9B%E5%8D%A1%E5%B0%94%E3%80%8A%E6%B2%89%E6%80%9D%E3%80%8B%E7%9A%84%E8%AF%98%E9%9A%BE-%E4%BC%BD%E6%A3%AE%E7%8B%84%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0016][[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄].md",
       "label": "[Books][0016][[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "伽森狄，1592-1655，法国唯物主义哲学家。机械唯物主义，反对笛卡尔的唯理论。 笛卡尔，存在精神实体和物质实体，反对神学和经院哲学，感官知觉提供的一切都可怀疑，只有怀疑本身，即思维不可怀疑。1640年笛卡尔写了《形而上学的沉思》，让一些哲学家提意见，伽森狄写了他的诘难。 我以前存在，推导不出我现在必定存在。不断创造新的你，和你一直存在，有区别吗？ 164…"
     },
     {
       "type": "Books",
@@ -2345,7 +2521,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month12/%5BBooks%5D%5B0013%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E4%BF%9D%E7%BD%97%C2%B7%E7%AD%96%E5%85%B0%E8%AF%97%E6%96%87%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month12/[Books][0013][[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选].md",
       "label": "[Books][0013][[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "生于讲德语的犹太家庭，父母死于集中营。德语诗人，自杀。1952年，诗《死亡赋格》震动了战后西德荒凉的诗坛。阿多诺：“奥斯维辛之后还会有音乐吗？”。在这样的背景下，《死亡赋格》是顶着死亡、暴力、虚无进行写作的象征。 死亡是策兰诗歌最基本、最黑暗的主题。 我是第一个喝蓝色的人，它仍在寻找，它的眼睛。 不要在门前等陌生人。 七个夜晚更高了红色朝向红色，七颗心脏更深…"
     },
     {
       "type": "Books",
@@ -2362,7 +2539,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0012%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%80%E8%BE%91%29%E5%AE%89%E4%B8%9C%E5%B0%BC%E5%A5%A5%C2%B7%E9%A9%AC%E6%9F%A5%E5%A4%9A%E8%AF%97%E9%80%89%5D",
       "sourcePath": "qrthoughts/year2021/month11/[Books][0012][[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选].md",
       "label": "[Books][0012][[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "安东尼奥·马查多，1875-1939，西班牙，“九八年一代”，20世纪西班牙诗歌的源头。三大主题：土地、风光、祖国。第一阶段，现代主义，代表作1903《孤独》；第二阶段，来自直觉，代表作1907《孤独、长廊及其他诗作》。 我沿着许多道路走过，又穿过灌木丛开辟道路；我再一百片大海上行驶过，又被系在一百条海岸上。 邪恶的人四处行走，污染大地。 我知道我的苦涩是一…"
     },
     {
       "type": "Books",
@@ -2379,7 +2557,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0011%5D%5B%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3-Aditya%20Bhargava%5D",
       "sourcePath": "qrthoughts/year2021/month11/[Books][0011][算法图解-Aditya Bhargava].md",
       "label": "[Books][0011][算法图解-Aditya Bhargava]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "图灵程序设计丛书，作者Aditya Bhargava。不好。只在最后的有趣的一些话题记一些名词。 狄克斯特拉算法 【NP完全问题的可能征兆】涉及所有组合的问题；不能分解为子问题，需要考虑多种可能；涉及序列；涉及集合；可转化为集合覆盖或旅行商问题。 【Feynman Algorithm】算法步骤：写下问题；思考；写下答案。 【OCR，Optical Chara…"
     },
     {
       "type": "Books",
@@ -2396,7 +2575,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month11/%5BBooks%5D%5B0010%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0408%5D%E7%9F%A5%E6%80%A7%E6%94%B9%E8%BF%9B%E8%AE%BA-%E6%96%AF%E5%AE%BE%E8%AF%BA%E8%8E%8E%5D",
       "sourcePath": "qrthoughts/year2021/month11/[Books][0010][[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎].md",
       "label": "[Books][0010][[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "书副标题“并论最足以指导人达到对事物的真知识的途径”。 斯宾诺莎1961到1962年写的，是学习研究培根《新工具》和笛卡尔《谈谈方法》所提出的问题的继承、发展、批判。 笛卡尔：始终只求克服自己，不求克服命运，只求改变自己的欲望，不求改变世界的秩序。不违反自己目标的情况下，有条件地遵从习俗。 唯一无限的实体必然存在。 方法论为世界观服务，方法论受认识论指导。方…"
     },
     {
       "type": "Books",
@@ -2413,7 +2593,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0009%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0107%5D%E4%BA%BA%E6%98%AF%E6%9C%BA%E5%99%A8-Mettrie%5D",
       "sourcePath": "qrthoughts/year2021/month9/[Books][0009][[商务印书馆汉译世界名著][A0107]人是机器-Mettrie].md",
       "label": "[Books][0009][[商务印书馆汉译世界名著][A0107]人是机器-Mettrie]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Mettrie，1709—1751，法国人。1747年在荷兰匿名发表。法国第一部以公开的无神论形式出现的系统的机械唯物主义著作。模仿笛卡尔动物是机器的思想写成。 打毫无危险的仗，战胜了也不光荣。 官能的快乐和精神的快乐，不加节制便不再是快乐。 任凭是全宇宙的重量，也动摇不了一个真正的无神论者。 人是一架机器，在整个宇宙里只存在一个实体，形式有各种变化。"
     },
     {
       "type": "Books",
@@ -2430,7 +2611,9 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0008%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0907%5D%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BA%BA%E8%84%91-John%20von%20Neumann%5D",
       "sourcePath": "qrthoughts/year2021/month9/[Books][0008][[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann].md",
       "label": "[Books][0008][[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "John von Neumann, 1903-1957.二战后为计算弹道，色剂了第一台电子数字计算机ENIAC，电子数字积分器和自动计算器。 语言是历史事件。逻辑、数学也是历史的、偶然的表达形式。神经系统所用的语言是第一语言，人类表达的语言是基于基础上的第二语言，数学思考最好是来自第一语言借助第二语言来公开。 逻辑是思维的规律，不是物质过程的规律，是物质过程…",
+      "math": true
     },
     {
       "type": "Books",
@@ -2447,7 +2630,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month9/%5BBooks%5D%5B0007%5D%5B%E7%BC%96%E7%A8%8B%E4%B9%8B%E9%81%93%5D",
       "sourcePath": "qrthoughts/year2021/month9/[Books][0007][编程之道].md",
       "label": "[Books][0007][编程之道]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Written by Geoffrey James, some man-made stories. These about 10 days I have finished reading some books. And I'm kinda tired to write them down. I'm back now."
     },
     {
       "type": "Books",
@@ -2464,7 +2648,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0006%5D%5B%5B%E5%95%86%E5%8A%A1%E5%8D%B0%E4%B9%A6%E9%A6%86%E6%B1%89%E8%AF%91%E4%B8%96%E7%95%8C%E5%90%8D%E8%91%97%5D%5BA0804%5D%E6%B3%9B%E7%A5%9E%E8%AE%BA%E8%A6%81%E4%B9%89-John%20Toland%5D",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0006][[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland].md",
       "label": "[Books][0006][[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "[商务印书馆汉译世界名著\\A哲学类][A0804泛神论要义-John Toland] The author is John Toland, 1670-1722, England. If we read one book per day, and 300 per year, 21000 for 70 years. We can read about 2w bo…"
     },
     {
       "type": "Books",
@@ -2481,7 +2666,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0005%5D%5BAlgorithms%20to%20live%20by%5D",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0005][Algorithms to live by].md",
       "label": "[Books][0005][Algorithms to live by]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "The whole name of this book is, Algorithms to Live by:The Computer Science of Human Decisions. Several years ago I already heard of it during the programming class. When I read it…"
     },
     {
       "type": "Books",
@@ -2498,7 +2684,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0004%5D%5BEffective%20C%2B%2B%5D",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0004][Effective C++].md",
       "label": "[Books][0004][Effective C++]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Acturally I collected the first 3 versions of this book. What I read is about the 2nd version on my cellphone. Acturally I have finished reading it for a couple of months, and almo…"
     },
     {
       "type": "Books",
@@ -2515,7 +2702,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0003%5D%E7%8E%8B%E5%9B%BD%E7%BB%B4",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0003]王国维.md",
       "label": "[Books][0003][王国维]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "。。。 人间词话 20230318整理完。 有有我之境，有无我之境。 冯延巳【鹊踏枝】：\"庭院深深深几许？杨柳堆烟，帘幕无重数。玉勒雕鞍游冶处，楼高不见章台路。 雨横风狂三月暮，门掩黄昏，无计留春住。泪眼问花花不语，乱红飞过秋千去。\" 秦观【踏沙行】：\"雾失楼台，月迷津度，桃源望断无寻处。可堪孤馆闭春寒，杜鹃声里斜阳暮。 驿寄梅花，鱼传尺素，砌成此恨无重数…"
     },
     {
       "type": "Books",
@@ -2532,7 +2720,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0002%5D%5B%E5%9B%BE%E7%81%B5%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%9B%E4%B9%A6%5D",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0002][图灵程序设计丛书].md",
       "label": "[Books][0002][图灵程序设计丛书]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "图灵程序设计丛书 核心知识收集在latex中。这里罗列总体目录和心得。 The Pragmatic Programmers 20210808整理完。Number 3 book of TURING serious. And the writer describes 75 problems. The last several probles are intere…"
     },
     {
       "type": "Books",
@@ -2549,7 +2738,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2021/month8/%5BBooks%5D%5B0001%5D%5BJournal%20of%20the%20Universe%5D",
       "sourcePath": "qrthoughts/year2021/month8/[Books][0001][Journal of the Universe].md",
       "label": "[Books][0001][Journal of the Universe]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "There are tons of books in this universe, I think it's good to read some of them. I think it's a good idea to update the study notes daily. The expansition of the universe, may lea…"
     },
     {
       "type": "Thoughts",
@@ -2566,7 +2756,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month8/%5BThoughts%5D%5B0007%5D%5BFirst%20Sunday%5D",
       "sourcePath": "qrthoughts/year2020/month8/[Thoughts][0007][First Sunday].md",
       "label": "[Thoughts][0007][First Sunday]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Actually it is time to plan living alone for a quite long time. While selfhood is still in the process of being built. The last 6 days, felt tired as always after work. Actually, i…"
     },
     {
       "type": "Thoughts",
@@ -2583,7 +2774,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0006%5D%5BA%20little%20poem%5D",
       "sourcePath": "qrthoughts/year2020/month3/[Thoughts][0006][A little poem].md",
       "label": "[Thoughts][0006][A little poem]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "When checking my email for some old stuff, I found this little poem. I wrote it before 2017101400:32, so maybe in the midnight. It's not good, but I love part of it. \"Toast to the…"
     },
     {
       "type": "Thoughts",
@@ -2600,7 +2792,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0005%5D%5BSomeplace%5D",
       "sourcePath": "qrthoughts/year2020/month3/[Thoughts][0005][Someplace].md",
       "label": "[Thoughts][0005][Someplace]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Sunshine always cheers. The warm wind last night, is that charming and kinda unreal. Time flies, while beautiful wind is still. Cannot tell if it's the air or the people flowing an…"
     },
     {
       "type": "Thoughts",
@@ -2617,7 +2810,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month3/%5BThoughts%5D%5B0004%5D%5BFire%5D",
       "sourcePath": "qrthoughts/year2020/month3/[Thoughts][0004][Fire].md",
       "label": "[Thoughts][0004][Fire]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Something changed today.I wonder when will the fire burn again.It's not that cold, well, for the reason, first the smoke, then the smell comming. Also the message spread. Guess it'…"
     },
     {
       "type": "Thoughts",
@@ -2634,7 +2828,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0003%5D%5BRain%5D",
       "sourcePath": "qrthoughts/year2020/month2/[Thoughts][0003][Rain].md",
       "label": "[Thoughts][0003][Rain]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "It has been raining almost all day. Rainny cloud spreads locally. Maybe it is not difficult to tell the boundary, because the gap is huge. The fact cannot be found by oberving the…"
     },
     {
       "type": "Thoughts",
@@ -2651,7 +2846,8 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0002%5D%5Bfirst-remote-meeting%5D",
       "sourcePath": "qrthoughts/year2020/month2/[Thoughts][0002][first-remote-meeting].md",
       "label": "[Thoughts][0002][first-remote-meeting]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "It rained in the morning, that's what I found when I woke up. With the 5G technology, I wonder if it possible to develope remote restaurant. How to share thoughts without any delay…"
     },
     {
       "type": "Thoughts",
@@ -2668,19 +2864,20 @@ window.HOMEPAGE_DATA = {
       "legacyHref": "render.html?md=/qrthoughts/year2020/month2/%5BThoughts%5D%5B0001%5D%5Bwhy-now%5D",
       "sourcePath": "qrthoughts/year2020/month2/[Thoughts][0001][why-now].md",
       "label": "[Thoughts][0001][why-now]",
-      "source": "markdown"
+      "source": "markdown",
+      "summary": "Because of the varius, people have stayed at home for over a month. Need to recover to normal study life. There are three important things to do: The paper. The final paper. The wo…"
     }
   ],
   "stats": {
-    "total": 157,
+    "total": 158,
     "byType": {
-      "Thoughts": 29,
+      "Thoughts": 30,
       "Books": 125,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 26,
+      "2026": 27,
       "2025": 1,
       "2024": 2,
       "2023": 36,

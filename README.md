@@ -215,6 +215,14 @@ Optional but useful fields:
 - `tags`
 - `series`
 - `summary`
+- `math: true` when the article requires MathJax
+- `interactive: true` when the article requires D3 or embedded scripts
+- `lead_image` for article sharing metadata; source-relative and site-root paths are supported
+
+The build preserves these fields in `homepage-data.js`. When `summary` is not
+provided, it derives a short plain-text excerpt for metadata and Atom feeds.
+MathJax and D3 are emitted only for articles that explicitly request them or
+whose existing Markdown content requires them.
 
 ## Statistics
 
@@ -226,6 +234,11 @@ Optional but useful fields:
 - year distribution
 
 These numbers come from generated Markdown metadata in `homepage-data.js`. There is no separate CSV or Excel source.
+
+Validation also checks generated local links, Markdown image targets, article
+feature flags, and generated metadata. Multiple body H1 headings and file-header
+timestamps that disagree with front matter are reported as non-blocking warnings
+so historical notes can be cleaned up incrementally.
 
 ## Project Files
 

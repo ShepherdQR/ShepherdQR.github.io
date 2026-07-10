@@ -40,11 +40,16 @@ def root_relative_prefix(alias_path: Path, root: Path) -> str:
 def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path) -> str:
     prefix = root_relative_prefix(alias_path, root)
     canonical = item["canonicalHref"]
+    canonical_url = absolute_url(site_base_url(root), canonical)
     md_path = "/" + item["sourcePath"].lstrip("/")
+    math_enabled = bool(item.get("math"))
+    interactive_enabled = bool(item.get("interactive"))
     config = json.dumps(
         {
             "md": md_path,
             "canonical": canonical,
+            "math": math_enabled,
+            "interactive": interactive_enabled,
         },
         ensure_ascii=False,
         indent=2,
@@ -54,24 +59,53 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
         return prefix + path
 
     title = html.escape(item["title"], quote=False)
+    title_attr = html.escape(item["title"], quote=True)
+    description_attr = html.escape(item.get("summary") or item["title"], quote=True)
+    canonical_attr = html.escape(canonical_url, quote=True)
+    lead_image = item.get("leadImage", "")
+    lead_image_url = (
+        absolute_url(site_base_url(root), lead_image)
+        if lead_image and not lead_image.startswith(("http://", "https://", "//"))
+        else lead_image
+    )
+    og_image_tag = (
+        f'    <meta property="og:image" content="{html.escape(lead_image_url, quote=True)}">\n'
+        if lead_image_url
+        else ""
+    )
+    feature_scripts: list[str] = []
+    if interactive_enabled:
+        feature_scripts.append(f'    <script src="{asset("includes/js/d3.js")}"></script>')
+    if math_enabled:
+        feature_scripts.extend(
+            [
+                "    <script>",
+                "        window.MathJax = {",
+                "            tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']] }",
+                "        };",
+                "    </script>",
+                '    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>',
+            ]
+        )
+    feature_script_html = "\n".join(feature_scripts)
+    if feature_script_html:
+        feature_script_html += "\n"
 
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{asset('includes/css/pages.css')}" rel="stylesheet" type="text/css">
+    <meta name="description" content="{description_attr}">
+    <meta property="og:title" content="{title_attr}">
+    <meta property="og:description" content="{description_attr}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{canonical_attr}">
+{og_image_tag}    <link href="{asset('includes/css/pages.css')}" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/atom+xml" href="{asset('includes/atom.xml')}" title="Atom feed">
     <link rel="shortcut icon" href="{asset('resources/pics/shepherd.png')}">
     <link rel="canonical" href="{html.escape(canonical, quote=True)}">
-    <script src="{asset('includes/js/d3.js')}"></script>
-    <script>
-        window.MathJax = {{
-            tex: {{ inlineMath: [['$', '$'], ['\\\\(', '\\\\)']] }}
-        }};
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+{feature_script_html}    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>{title}</title>
 </head>
 <body>

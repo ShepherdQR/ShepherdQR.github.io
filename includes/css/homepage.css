@@ -122,6 +122,53 @@ a:hover {
     letter-spacing: 0;
 }
 
+.profile-statement {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.48fr);
+    gap: 56px;
+    align-items: start;
+    padding: 42px 0;
+}
+
+.profile-heading {
+    padding-top: 4px;
+}
+
+.profile-kicker {
+    margin: 0 0 10px;
+    color: var(--quiet);
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Microsoft YaHei", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.profile-title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.28;
+}
+
+.profile-copy {
+    max-width: 700px;
+}
+
+.profile-copy p {
+    margin: 0 0 14px;
+    color: var(--muted);
+}
+
+.profile-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-lead {
+    color: var(--text) !important;
+    font-size: 24px;
+    line-height: 1.55;
+}
+
 .intro-grid {
     display: grid;
     grid-template-columns: 1.4fr 0.8fr;
@@ -274,6 +321,7 @@ a:hover {
     }
 
     .site-header,
+    .profile-statement,
     .intro-grid {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -285,6 +333,18 @@ a:hover {
 
     .site-subtitle {
         font-size: 18px;
+    }
+
+    .profile-statement {
+        padding: 34px 0;
+    }
+
+    .profile-title {
+        font-size: 29px;
+    }
+
+    .profile-lead {
+        font-size: 21px;
     }
 
     .site-nav {
