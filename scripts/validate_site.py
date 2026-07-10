@@ -25,6 +25,7 @@ FIELD_RE = re.compile(r"^(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*(?P<value>.*)$")
 FRONT_MATTER_RE = re.compile(
     r"^\ufeff?(?:<!--[\s\S]*?-->\s*)*---\s*\n(?P<yaml>[\s\S]*?)\n---\s*\n"
 )
+AMBIGUOUS_SETEXT_H2_RE = re.compile(r"(?m)^(?P<text>[^\n#][^\n]*)\n---\s*$")
 ARTICLE_TYPES = {"Books", "Thoughts", "Study", "Videos"}
 APPROVED_STATUSES = {"published", "draft", "doing", "archived"}
 STATIC_SITEMAP_PATHS = {
@@ -97,6 +98,25 @@ def parse_front_matter(text: str) -> dict[str, str] | None:
         if field:
             data[field.group("key")] = parse_scalar(field.group("value"))
     return data
+
+
+def validate_markdown_structure(path: Path, root: Path, text: str) -> list[str]:
+    """Reject Markdown constructs that are ambiguous in the site's renderer."""
+    errors: list[str] = []
+    front_matter = FRONT_MATTER_RE.match(text)
+    if not front_matter:
+        return errors
+
+    body = text[front_matter.end() :]
+    rel = path.relative_to(root).as_posix()
+    for match in AMBIGUOUS_SETEXT_H2_RE.finditer(body):
+        line = text.count("\n", 0, front_matter.end() + match.start()) + 1
+        excerpt = match.group("text").strip()
+        errors.append(
+            f"{rel}:{line}: text followed by --- renders as a level-2 Setext heading; "
+            f"use ## for a heading or *** for a divider: {excerpt}"
+        )
+    return errors
 
 
 def load_homepage_data(root: Path) -> dict:
@@ -311,10 +331,13 @@ def validate_markdown_sources(root: Path, homepage_keys: set[tuple[str, str]]) -
             continue
         checked += 1
         rel = path.relative_to(root).as_posix()
-        data = parse_front_matter(read_text(path))
+        text = read_text(path)
+        data = parse_front_matter(text)
         if data is None:
             errors.append(f"{rel}: missing front matter")
             continue
+
+        errors.extend(validate_markdown_structure(path, root, text))
 
         status = data.get("status")
         if status and status not in APPROVED_STATUSES:
