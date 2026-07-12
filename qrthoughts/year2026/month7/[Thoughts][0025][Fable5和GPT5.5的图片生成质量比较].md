@@ -18,6 +18,9 @@ updated: "2026-07-04 18:39:13"
 updated_date: "2026-07-04"
 slug: "fable5gpt5-5"
 status: "published"
+summary: "并置审美叙事线、GPT5.5 Pro 与 Fable5 Max 的导数主题图像，比较不同生成路径在结构表达、视觉密度与审美叙事上的差异。"
+tags: ["evaluation"]
+series: "工程证据与发版之后"
 source:
   date_source:
     created: "new-note"

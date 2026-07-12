@@ -24,6 +24,9 @@ jobs:
       - name: Compile scripts
         run: python -m py_compile scripts/*.py
 
+      - name: Check client scripts
+        run: find includes/js -name '*.js' -print0 | xargs -0 -n1 node --check
+
       - name: Build site
         run: python scripts/build_site.py
 

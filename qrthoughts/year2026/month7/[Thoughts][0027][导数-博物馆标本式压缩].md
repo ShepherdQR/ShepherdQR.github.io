@@ -18,6 +18,9 @@ updated: "2026-07-04 21:03:31"
 updated_date: "2026-07-04"
 slug: "thoughts-0027"
 status: "published"
+summary: "以博物馆标本式压缩的视觉叙事，将导数的一阶结构凝结为可观察、可比较的数学标本。"
+tags: ["mathematics"]
+series: "数学结构札记"
 source:
   date_source:
     created: "new-note"

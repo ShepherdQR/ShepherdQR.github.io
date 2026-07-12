@@ -22,6 +22,7 @@ STATIC_SITEMAP_PATHS = [
     "/",
     "/archive.html",
     "/stats.html",
+    "/field.html",
     "/books.html",
     "/series.html",
     "/series/20th-century-world-poetry/",
@@ -29,6 +30,8 @@ STATIC_SITEMAP_PATHS = [
     "/study.html",
     "/videos.html",
 ]
+SITE_PLANE_SOURCE = Path("data/site-plane.json")
+SITE_PLANE_OUTPUT = Path("site-data.js")
 
 
 def root_relative_prefix(alias_path: Path, root: Path) -> str:
@@ -101,7 +104,8 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     <meta property="og:description" content="{description_attr}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{canonical_attr}">
-{og_image_tag}    <link href="{asset('includes/css/pages.css')}" rel="stylesheet" type="text/css">
+{og_image_tag}    <script src="{asset('includes/js/theme.js')}"></script>
+    <link href="{asset('includes/css/pages.css')}" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/atom+xml" href="{asset('includes/atom.xml')}" title="Atom feed">
     <link rel="shortcut icon" href="{asset('resources/pics/shepherd.png')}">
     <link rel="canonical" href="{html.escape(canonical, quote=True)}">
@@ -282,12 +286,27 @@ def write_site_indexes(root: Path, items: list[dict[str, str]]) -> None:
     atom_path.write_text(build_atom_xml(items, base_url), encoding="utf-8", newline="\n")
 
 
+def write_site_plane_data(root: Path) -> dict:
+    source_path = root / SITE_PLANE_SOURCE
+    if not source_path.exists():
+        raise FileNotFoundError(f"Missing public site-plane source: {source_path}")
+
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("data/site-plane.json must contain a JSON object")
+
+    output = "window.SITE_PLANE = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"
+    (root / SITE_PLANE_OUTPUT).write_text(output, encoding="utf-8", newline="\n")
+    return payload
+
+
 def build_generated_site(root: Path, out_name: str, include_legacy_index: bool = False) -> tuple[int, int]:
     items = generate_homepage_data.collect_items(root, include_legacy_index=include_legacy_index)
     out = root / out_name
     out.write_text(generate_homepage_data.build_js(items), encoding="utf-8", newline="\n")
     alias_count = write_article_alias_pages(root, items)
     write_site_indexes(root, items)
+    write_site_plane_data(root)
     return len(items), alias_count
 
 
@@ -349,6 +368,7 @@ def main(argv: list[str]) -> int:
     print(f"Generated {alias_count} article alias pages")
     print("Generated sitemap.xml")
     print("Generated includes/atom.xml")
+    print("Generated site-data.js")
     return 0
 
 

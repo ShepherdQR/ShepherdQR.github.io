@@ -39,12 +39,20 @@ local_validators:
 surfaces:
   readme: README.md
   homepage: index.html
+  current_field: field.html
+  knowledge_atlas: archive.html
+  evidence_observatory: stats.html
   content_root: qrthoughts/
   project_map: architecture/site-content-architecture.md
   status_dashboard: stats.html
   task_cards: architecture/site-development-plan.md
   completed_tasks: architecture/task-closeouts/
   evidence_index: homepage-data.js
+  public_projection_source: data/site-plane.json
+  public_projection: site-data.js
+  visual_system: includes/css/system.css
+  theme_controller: includes/js/theme.js
+  control_plane_interface: architecture/site-control-plane-interface-2026-07-13.md
   content_plan: architecture/site-content-form-and-publishing-cadence-plan-2026-07-10.md
   publishing_workflow: architecture/markdown-publishing-workflow.md
   build_script: scripts/build_site.py
@@ -88,9 +96,9 @@ architecture_learning:
   core_promotion_allowed: false
 
 x_current_release:
-  human_release_date: 2026-07-10
-  authorized_scope: publish all accumulated site improvements and Thoughts 0030 after validation
+  human_release_date: 2026-07-13
+  authorized_scope: align the repository, public knowledge interface, evidence surfaces, metadata navigation, and dual visual system with current AGI control-plane development; preserve and include the pending Thoughts 0031 content after validation
   commit_or_publish_authorized: true
-  authorization_source: direct owner request on 2026-07-10
+  authorization_source: direct owner requests in the active 2026-07-13 site-evolution task
 
 x_domain_role: public_knowledge_publishing_site

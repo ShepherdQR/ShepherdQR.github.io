@@ -18,6 +18,10 @@ updated: "2026-07-07 21:46:22"
 updated_date: "2026-07-07"
 slug: "thoughts-0028"
 status: "published"
+summary: "以 L0-L11 的阶段框架记录 ASI 结构计划与研究进展，标定当前所处层级，并为后续能力组合、验证与演化保留统一骨架。"
+tags: ["ASI", "agent", "constraint-field", "software-engineering"]
+series: "约束场与复杂智能"
+lead_image: "/resources/pics/agi-structure-plan-nine-grid-v2.png"
 source:
   date_source:
     created: "new-note"

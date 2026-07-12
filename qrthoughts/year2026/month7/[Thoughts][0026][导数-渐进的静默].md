@@ -18,6 +18,9 @@ updated: "2026-07-04 21:00:38"
 updated_date: "2026-07-04"
 slug: "thoughts-0026"
 status: "published"
+summary: "以“渐进的静默”视觉叙事呈现导数作为局部变化率与一阶结构的统一认识，记录数学概念的海报化表达。"
+tags: ["mathematics"]
+series: "数学结构札记"
 source:
   date_source:
     created: "new-note"

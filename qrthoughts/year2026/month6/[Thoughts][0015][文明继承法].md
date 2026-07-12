@@ -18,6 +18,9 @@ updated: "2026-06-07 16:54:02"
 updated_date: "2026-06-07"
 slug: "thoughts-0015"
 status: "published"
+summary: "从 AI 进入组织因果主路径与制度自动化出发，追问人类文明向智能体时代传递价值、责任、尊严与主体地位所需的治理框架。"
+tags: ["agent", "governance", "civilization", "AI-boundary"]
+series: "治理、文明与人的尺度"
 source:
   date_source:
     created: "new-note"

@@ -1,0 +1,361 @@
+@import url("./system.css");
+
+.field-page {
+    width: min(var(--content-wide), calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.system-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    gap: clamp(38px, 7vw, 92px);
+    align-items: center;
+    min-height: min(760px, calc(100vh - 78px));
+    padding: var(--space-6) 0;
+}
+
+.system-hero h1 {
+    margin: 16px 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 7vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 0.93;
+}
+
+.system-hero h1 span {
+    display: block;
+    color: var(--signal);
+}
+
+.system-lead {
+    max-width: 700px;
+    margin: 26px 0 0;
+    color: var(--ink-700);
+    font-family: var(--font-display);
+    font-size: clamp(1.22rem, 2vw, 1.7rem);
+    line-height: 1.55;
+}
+
+.boundary-note {
+    margin-top: 26px;
+    padding: 16px 0 0 18px;
+    border-top: 1px solid var(--line);
+    border-left: 2px solid var(--amber);
+    color: var(--ink-600);
+    font-size: 13px;
+}
+
+.system-object {
+    position: relative;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: var(--paper-100);
+    box-shadow: var(--shadow-lg);
+}
+
+.system-object img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    background: #030708;
+}
+
+.object-label {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: end;
+    padding: 14px 2px 2px;
+}
+
+.object-label strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.object-label small,
+.object-label span {
+    color: var(--ink-500);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    line-height: 1.55;
+    text-transform: uppercase;
+}
+
+.object-label > span {
+    text-align: right;
+}
+
+.system-section {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--line);
+}
+
+.boundary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.boundary-cell {
+    min-height: 160px;
+    padding: 20px;
+    background: var(--paper-0);
+}
+
+.boundary-cell span {
+    color: var(--ink-500);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.boundary-cell strong {
+    display: block;
+    margin-top: 34px;
+    color: var(--ink-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 550;
+    line-height: 1.15;
+}
+
+.control-loop {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    counter-reset: loop;
+    list-style: none;
+}
+
+.control-loop li {
+    position: relative;
+    min-height: 170px;
+    padding: 21px 20px 18px;
+    border-top: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    counter-increment: loop;
+}
+
+.control-loop li:nth-child(4n) {
+    border-right: 0;
+}
+
+.control-loop li::before {
+    display: block;
+    margin-bottom: 34px;
+    color: var(--signal);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    content: "0" counter(loop) " / LOOP";
+}
+
+.control-loop strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.control-loop span {
+    display: block;
+    margin-top: 8px;
+    color: var(--ink-600);
+    font-size: 11px;
+}
+
+.chronicle-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+    gap: var(--space-5);
+}
+
+.wp-rail {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 22px;
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.wp-node {
+    min-height: 96px;
+    padding: 12px 8px;
+    background: var(--paper-0);
+}
+
+.wp-node strong {
+    display: block;
+    color: var(--signal);
+    font-family: var(--font-mono);
+    font-size: 10px;
+}
+
+.wp-node span {
+    display: block;
+    margin-top: 28px;
+    color: var(--ink-500);
+    font-family: var(--font-mono);
+    font-size: 7px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.candidate-object {
+    padding: 23px;
+}
+
+.candidate-object h3 {
+    margin: 16px 0 0;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 550;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.candidate-object blockquote {
+    margin: 22px 0 0;
+    padding: 16px 0 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink-700);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+}
+
+.candidate-meta,
+.gate-grid,
+.source-list {
+    display: grid;
+    gap: 0;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.candidate-meta li,
+.gate-grid li,
+.source-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink-600);
+    font-size: 12px;
+}
+
+.candidate-meta strong,
+.gate-grid strong {
+    color: var(--ink-900);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-align: right;
+}
+
+.gate-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.gate-panel {
+    padding: 23px;
+}
+
+.gate-panel h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+
+.source-list li {
+    display: block;
+    overflow-wrap: anywhere;
+    color: var(--ink-600);
+    font-family: var(--font-mono);
+    font-size: 9px;
+}
+
+html[data-theme="museum"] .system-object,
+html[data-theme="museum"] .boundary-grid,
+html[data-theme="museum"] .boundary-cell,
+html[data-theme="museum"] .wp-rail,
+html[data-theme="museum"] .wp-node,
+html[data-theme="museum"] .candidate-object,
+html[data-theme="museum"] .gate-panel {
+    border-radius: 2px;
+}
+
+html[data-theme="museum"] .system-object {
+    background: #030708;
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.48);
+}
+
+html[data-theme="museum"] .boundary-cell,
+html[data-theme="museum"] .wp-node,
+html[data-theme="museum"] .candidate-object,
+html[data-theme="museum"] .gate-panel {
+    background: rgba(3, 7, 8, 0.52);
+}
+
+@media (max-width: 900px) {
+    .system-hero,
+    .chronicle-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .boundary-grid,
+    .control-loop {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .control-loop li:nth-child(4n) {
+        border-right: 1px solid var(--line);
+    }
+
+    .control-loop li:nth-child(2n) {
+        border-right: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .field-page {
+        width: min(100% - 24px, var(--content-wide));
+    }
+
+    .system-hero {
+        min-height: auto;
+        padding-top: var(--space-5);
+    }
+
+    .boundary-grid,
+    .control-loop,
+    .gate-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .control-loop li {
+        border-right: 0 !important;
+    }
+
+    .wp-rail {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

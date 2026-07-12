@@ -1,6 +1,29 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-10",
+  "generatedAt": "2026-07-12",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0031",
+      "title": "未名大赋",
+      "created": "2026-07-12 19:13:41",
+      "createdDate": "2026-07-12",
+      "published": "2026-07-12",
+      "updated": "2026-07-12 19:13:41",
+      "updatedDate": "2026-07-12",
+      "slug": "thoughts-0031",
+      "href": "/thoughts/0031/",
+      "canonicalHref": "/thoughts/0031/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0031%5D%5B%E6%9C%AA%E5%90%8D%E5%A4%A7%E8%B5%8B%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0031][未名大赋].md",
+      "label": "[Thoughts][0031][未名大赋]",
+      "source": "markdown",
+      "summary": "一则写于 2026 年 7 月 12 日的极短诗性片段，以“诗本无名”保留命名之前的感受与生成时刻。",
+      "tags": [
+        "literature",
+        "poetry"
+      ],
+      "series": "诗与内部结构"
+    },
     {
       "type": "Thoughts",
       "id": "0029",
@@ -17,7 +40,15 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md",
       "label": "[Thoughts][0029][约束场的形态]",
       "source": "markdown",
-      "summary": "## 实例1：我们的海报任务流程 海报任务 - classify visibility - 启用审美叙事线 / visual workflow 【纵向硬的 + 横向软的】 - 如需要，编制 topic-object aesthetic brief - 路由 V4/V5 审美角色：Reference Curator, Aesthetic Director, V…"
+      "summary": "以海报生产和 s012 Domain Research OS 为实例，刻画约束场由横向任务循环、纵向控制线和事件证据脊柱共同组成的 repo-native 运行形态。",
+      "tags": [
+        "ASI",
+        "agent",
+        "constraint-field",
+        "software-engineering",
+        "evaluation"
+      ],
+      "series": "约束场与复杂智能"
     },
     {
       "type": "Thoughts",
@@ -35,8 +66,15 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0028][ASI研究进展].md",
       "label": "[Thoughts][0028][ASI研究进展]",
       "source": "markdown",
-      "summary": "## V1 ## V2 # ASI研究进展 ## L0【20260705】 ## L1【20260705】 20260705，划分为12个阶段，此时处于第1阶段。 ## L2【TODO】 ## L3【TODO】 ## L4【TODO】 ## L5【TODO】 ## L6【TODO】 ## L7【TODO】 ## L8【TODO】 ## L9【TODO】 ##…",
-      "leadImage": "/resources/pics/agi-structure-plan-nine-grid-v1.png"
+      "summary": "以 L0-L11 的阶段框架记录 ASI 结构计划与研究进展，标定当前所处层级，并为后续能力组合、验证与演化保留统一骨架。",
+      "tags": [
+        "ASI",
+        "agent",
+        "constraint-field",
+        "software-engineering"
+      ],
+      "series": "约束场与复杂智能",
+      "leadImage": "/resources/pics/agi-structure-plan-nine-grid-v2.png"
     },
     {
       "type": "Books",
@@ -72,7 +110,11 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0027][导数-博物馆标本式压缩].md",
       "label": "[Thoughts][0027][导数-博物馆标本式压缩]",
       "source": "markdown",
-      "summary": "说明：最新的审美叙事线驱动",
+      "summary": "以博物馆标本式压缩的视觉叙事，将导数的一阶结构凝结为可观察、可比较的数学标本。",
+      "tags": [
+        "mathematics"
+      ],
+      "series": "数学结构札记",
       "leadImage": "/resources/pics/derivative-museum-specimen-mobile-poster-v3.png"
     },
     {
@@ -91,7 +133,11 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0026][导数-渐进的静默].md",
       "label": "[Thoughts][0026][导数-渐进的静默]",
       "source": "markdown",
-      "summary": "说明： 基于【渐进的静默】设计风格，opus4.8生成",
+      "summary": "以“渐进的静默”视觉叙事呈现导数作为局部变化率与一阶结构的统一认识，记录数学概念的海报化表达。",
+      "tags": [
+        "mathematics"
+      ],
+      "series": "数学结构札记",
       "leadImage": "/resources/pics/导数_一阶结构的统一理论_海报.png"
     },
     {
@@ -110,7 +156,11 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较].md",
       "label": "[Thoughts][0025][Fable5和GPT5.5的图片生成质量比较]",
       "source": "markdown",
-      "summary": "## 以下为审美叙事线驱动 ## 以下为GPT5.5Pro网页版 ## 以下为Fable5Max网页版",
+      "summary": "并置审美叙事线、GPT5.5 Pro 与 Fable5 Max 的导数主题图像，比较不同生成路径在结构表达、视觉密度与审美叙事上的差异。",
+      "tags": [
+        "evaluation"
+      ],
+      "series": "工程证据与发版之后",
       "leadImage": "/resources/pics/导数的认识-derivative-first-order-mobile-poster.png"
     },
     {
@@ -129,7 +179,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0024][Fable5无敌].md",
       "label": "[Thoughts][0024][Fable5无敌]",
       "source": "markdown",
-      "summary": "# claude code + fable5 = 无敌，20260703 配合cc工具使用，40刀，84min，生成19万字符的【专著级】研究报告，从综述跃迁到研究工具/导航/遵循 cc订阅此时不推荐（高压高风险、短窗口期），5x和20x管控严格，pro量太少（严肃研究问题需要跨5h时段间隔） 在提示词生成上，fable5宏伟开阔，更通用更拔高，很强调共同体…"
+      "summary": "基于 Claude Code 与 Fable5 的一次长时研究实践，评估其在大型报告生成、结构压缩、跨域统合和证据纪律上的能力与使用边界。",
+      "tags": [
+        "ASI",
+        "agent",
+        "software-engineering",
+        "evaluation"
+      ],
+      "series": "工程证据与发版之后"
     },
     {
       "type": "Thoughts",
@@ -147,7 +204,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0023][最近关切的5个问题].md",
       "label": "[Thoughts][0023][最近关切的5个问题]",
       "source": "markdown",
-      "summary": "## 缘起 整个事情都是非常有趣味：在人间观察的预见性上打赌输了，赌注是近期密切关注/久久不忘怀的 5 个问题。 ## 分析：近期的问题 ### 第I类：轻盈处 总括：颇为浅薄，兴致是随时来随时走的。 各国航母数量统计：美国11个均为核动力，法国只有1个是核动力；其余均为常规动力，我国总量排名第二有3搜。 山东地域文化特征分析：设计地理/历史/人文的综合问题…"
+      "summary": "从日常观察与头脑直出的问题中筛选五项持续关切：政绩观、阅读方法、身体治理、人机共生与诗歌阅读，作为下一阶段研究入口。",
+      "tags": [
+        "governance",
+        "AI-boundary",
+        "reading",
+        "poetry"
+      ],
+      "series": "治理、文明与人的尺度"
     },
     {
       "type": "Books",
@@ -183,7 +247,12 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0022][Topos理论研究报告].md",
       "label": "[Thoughts][0022][Topos理论研究报告]",
       "source": "markdown",
-      "summary": "Topos理论研究报告",
+      "summary": "以移动海报形式凝练 Topos 理论的结构图景，为范畴论视角下的数学与复杂系统研究提供视觉入口。",
+      "tags": [
+        "Topos",
+        "mathematics"
+      ],
+      "series": "数学结构札记",
       "leadImage": "/resources/pics/topos-field-mobile-poster.png"
     },
     {
@@ -202,7 +271,12 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0021][第二次论我的政绩观].md",
       "label": "[Thoughts][0021][第二次论我的政绩观]",
       "source": "markdown",
-      "summary": "夏播时节，阴云连绵，风雷激荡，这注定是一个提心吊胆的夏天。 各位领导，同志们， 我们从不畏惧埋没深土，蛰伏沉寂；而是担心未曾扎根固本，便急于抽枝绽放。 我们从不怯于风雨淬炼，岁月磨砺；而是担心远离土地的干瘪的饱满。 种子只有落地，才是生命；政绩只有为民，才有重量。 越是在这样的夏天，越能体现一粒种子的初心。 回顾总书记深耕地方，砥砺实干的奋斗历程，正是这样一…",
+      "summary": "以种子、土地与长征为意象，论述政绩应以人民需要、长期承载和真实工程反馈为尺度，并反对短期指标与局部炫技。",
+      "tags": [
+        "governance",
+        "civilization"
+      ],
+      "series": "治理、文明与人的尺度",
       "leadImage": "/resources/pics/governance-view-mobile-red.png"
     },
     {
@@ -221,7 +295,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0020][热带对称的范畴图景].md",
       "label": "[Thoughts][0020][热带对称的范畴图景]",
       "source": "markdown",
-      "summary": "是这样的，这是把共生约束场抽象成【独立repo】节点，发挥吸收/富集/统合效能的初探小捷。研究转向repo群的结构，是一种联邦治理/项目集管理/生态建设/文明运营行为",
+      "summary": "记录将共生约束场抽象为独立仓库节点的初探，并把 repo 群的吸收、富集与统合能力理解为联邦治理和生态演化的范畴图景。",
+      "tags": [
+        "tropical-geometry",
+        "mathematics",
+        "constraint-field",
+        "governance"
+      ],
+      "series": "数学结构札记",
       "leadImage": "/resources/pics/tropical-geometry-latex-category-theory-mobile-v3.png"
     },
     {
@@ -240,7 +321,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0019][机械工程智能层].md",
       "label": "[Thoughts][0019][机械工程智能层]",
       "source": "markdown",
-      "summary": "# leo ai cax学习小结 仔细想来，整个cax领域有较强的反馈环境，还是比较适合构建闭环的：生成-运行-验证-纠正-固化 内核是第一性原理；第二梯度是验证器证据意识，工作流数据闭环，生态建设工程服务团队; 后面是专业的数据/后训练技术/agent leo ai 这个公司的战略定位是机械工程智能层：机械工程copilot + 企业知识 这个产品：一做出…",
+      "summary": "以 CAX 领域的可反馈闭环为场景，提出由通用智能底座、外置领域资产、后训练、企业知识和工程验证共同构成机械工程智能层。",
+      "tags": [
+        "ASI",
+        "agent",
+        "software-engineering",
+        "evaluation"
+      ],
+      "series": "Agentic Software Engineering",
       "leadImage": "/resources/pics/leo-ai-cax-mobile-summary-v3-refined.png"
     },
     {
@@ -259,7 +347,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0018][agent共生约束场].md",
       "label": "[Thoughts][0018][agent共生约束场]",
       "source": "markdown",
-      "summary": "# 关于单/大/厚软件系统智能化： 多尺度模型：ropo/项目/系统级理解核心是构建符号图-历史-运行态证据-检索（按需）与验证的多维度/多层次/多分辨率的外部认知结构/共生成长组织/对等体量适配系统 组织记忆：瞬时上下文（压缩/rag）需要转向持久化状态/组织型记忆/体系型制度； 联邦治理：除了代码生成，还有很丰富的内容：CL（急），系统能力/边界量化/统…",
+      "summary": "面向大型软件系统与组织级智能体体系，提出由横向呼吸层、纵向吸引层、持久记忆和联邦治理共同构成的 agent 共生约束场。",
+      "tags": [
+        "ASI",
+        "agent",
+        "constraint-field",
+        "software-engineering"
+      ],
+      "series": "约束场与复杂智能",
       "leadImage": "/resources/pics/agent-symbiosis-constraint-field-mobile-zqr-world.png"
     },
     {
@@ -296,7 +391,13 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0017][ASE会议20260612].md",
       "label": "[Thoughts][0017][ASE会议20260612]",
       "source": "markdown",
-      "summary": "## 背景 上午，集团会议，公开。 ## 整体感受 自动化为主，没有见到智能化的味道 人机协同只是【口号】级别，ai/agent占据人的生态位是结构性必然 大领导有水平，提到了纵向贯通的制度线 ## 个人的学习 ### 1.1 组织治理 软件/组件包从坚硬/稳定的路径，到柔软/支持变化的路径节点 agent - harness - loop, 关注边界（权限…"
+      "summary": "基于一次 ASE 会议观察，提炼组织治理、需求到验证的追溯证据包、人机协同和智能体驱动软件工程的落地要点。",
+      "tags": [
+        "agent",
+        "software-engineering",
+        "evaluation"
+      ],
+      "series": "工程证据与发版之后"
     },
     {
       "type": "Thoughts",
@@ -314,7 +415,13 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0016][自主无人机事件].md",
       "label": "[Thoughts][0016][自主无人机事件]",
       "source": "markdown",
-      "summary": "## 定性 具名产业人士披露 严肃科技媒体报道 独立证据链未闭合 不是司法级/联合调查级/独立取证级 可信度：高 技术可行性：完全可行 战略层：临界事件 ## 我们所看到的 人类从选择具体目标，到给出范围/规则/目标特征，机器在开发战场执行发现/接近/解决完整动作。 新型空中地雷 ## 我们的材料 ### 自主杀伤系统的治理层级【可控性】 自主涉及以下环节…"
+      "summary": "以自主无人机事件为例，区分公开信息可信度与闭合证据链，梳理自主杀伤系统的可控性、责任主体和国际人道法边界。",
+      "tags": [
+        "governance",
+        "AI-boundary",
+        "evaluation"
+      ],
+      "series": "治理、文明与人的尺度"
     },
     {
       "type": "Thoughts",
@@ -332,7 +439,14 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0015][文明继承法].md",
       "label": "[Thoughts][0015][文明继承法]",
       "source": "markdown",
-      "summary": "我们必须尽快，在人类文明与ai文明之间，制定【文明继承法】。 # 背景 ## 引子：从【生产力—生产关系】变革角度，需要研究/发展/引导 AI agent 进入 因果主路径/核心矛盾 生产力层面：【认知劳动/知识生产/可验证行动】进入准工业化阶段。【工具增效-生产流程-工业闭环】发展趋势锐不可当，顶级AI公司已经进入agentic engineering工程…"
+      "summary": "从 AI 进入组织因果主路径与制度自动化出发，追问人类文明向智能体时代传递价值、责任、尊严与主体地位所需的治理框架。",
+      "tags": [
+        "agent",
+        "governance",
+        "civilization",
+        "AI-boundary"
+      ],
+      "series": "治理、文明与人的尺度"
     },
     {
       "type": "Thoughts",
@@ -350,7 +464,15 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&D].md",
       "label": "[Thoughts][0014][AI4AI R&D]",
       "source": "markdown",
-      "summary": "Today, Anthoro published When all builds itself, RSI(recursive self-improvement) is actually taking off. ## 我先生成这些自然的观点： 核武器级别的AI，中国有没有，怎么有 SE的复杂性治理的对象，必须升级为【治理过程】（闭环/自动化/高速的研发模式）…"
+      "summary": "从递归自我改进与智能体工程出发，提出以价值、契约、权限、预算、证据、审计和停机机制组织 AI4AI 研发闭环。",
+      "tags": [
+        "ASI",
+        "agent",
+        "software-engineering",
+        "evaluation",
+        "AI-boundary"
+      ],
+      "series": "Agentic Software Engineering"
     },
     {
       "type": "Thoughts",
@@ -2869,15 +2991,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 158,
+    "total": 159,
     "byType": {
-      "Thoughts": 30,
+      "Thoughts": 31,
       "Books": 125,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 27,
+      "2026": 28,
       "2025": 1,
       "2024": 2,
       "2023": 36,

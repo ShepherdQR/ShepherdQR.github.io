@@ -1,6 +1,8 @@
 # ShepherdQR.github.io
 
-Personal static site for notes, reading records, study logs, and small essays.
+Human-owned public knowledge interface for complex intelligence, engineering
+evidence, mathematical structure, governance, civilization, reading, and
+literature.
 
 Public site:
 
@@ -14,12 +16,46 @@ The site is Markdown-first:
 1. Source notes live under `qrthoughts/yearYYYY/monthM/`.
 2. Each note may start with an HTML file-header comment, followed by YAML front matter.
 3. `scripts/build_site.py` reads Markdown and regenerates site data.
-4. `homepage-data.js` drives the homepage, archive pages, category pages, adjacent article links, and `stats.html`.
-5. Stable article URLs are generated as committed static pages, such as `/books/0056/` and `/thoughts/0012/`.
-6. `sitemap.xml` and `includes/atom.xml` are generated from the same Markdown metadata.
-7. `render.html?md=...` remains as a legacy and diagnostic reader.
+4. `homepage-data.js` drives the homepage, searchable Atlas, category pages,
+   adjacent article links, and the Evidence observatory.
+5. `data/site-plane.json` is the declarative source for the public L1 advisory
+   projection; the build emits it as `site-data.js` for the homepage, Evidence,
+   and System surfaces.
+6. Stable article URLs are generated as committed static pages, such as `/books/0056/` and `/thoughts/0012/`.
+7. `sitemap.xml` and `includes/atom.xml` are generated from the same Markdown metadata.
+8. `render.html?md=...` remains as a legacy and diagnostic reader.
 
-Because GitHub Pages serves this repository as static files, generated files such as `homepage-data.js`, `sitemap.xml`, `includes/atom.xml`, and `books/0056/index.html` must be committed after a build.
+Because GitHub Pages serves this repository as static files, generated files
+such as `homepage-data.js`, `site-data.js`, `sitemap.xml`, `includes/atom.xml`,
+and `books/0056/index.html` must be committed after a build.
+
+## Public Interface
+
+The site now has four primary surfaces:
+
+- `Field` (`index.html`): identity, five narrative lines, fresh evidence,
+  curated entry paths, and corpus pulse.
+- `Atlas` (`archive.html`): full-text metadata search plus type, year, series,
+  and tag filters.
+- `Evidence` (`stats.html`): corpus shape, metadata coverage, dated evolution
+  baseline, and authority boundary.
+- `System` (`field.html`): L1 public projection, human-gated control loop,
+  WP0-WP8 Chronicle baseline, T12 candidate boundary, and provenance rail.
+
+Every modern surface and generated article supports two persistent visual
+profiles:
+
+- `Field / 学术约束场`: warm paper, editorial structure, and calm long-form
+  reading.
+- `Museum / 深层博物馆`: the control plane's governed-institutional-artifact
+  aesthetic—obsidian field, cold glass, archival labels, and role-bearing gate
+  colors. Its canonical reference is
+  `resources/pics/agi-structure-plan-nine-grid-v2.png`.
+
+The switch stores only a device-local viewing preference. It does not mutate
+content or control-plane state. The museum profile is not a generic dark mode:
+amber is reserved for human gates, red for blocked/refused/revoked states, and
+the long-form reading surface remains an archival paper folio.
 
 ## Daily Workflow
 
@@ -29,7 +65,7 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "约束场的形态"
+python scripts/new_note.py Thoughts "未名大赋"
 python scripts/new_note.py Books "中国2014年度诗歌精选"
 ```
 
@@ -96,6 +132,7 @@ python scripts/build_site.py
 This regenerates:
 
 - `homepage-data.js`
+- `site-data.js`
 - `sitemap.xml`
 - `includes/atom.xml`
 - `/books/NNNN/index.html`
@@ -122,6 +159,7 @@ Open:
 - <http://localhost:8000/>
 - <http://localhost:8000/archive.html>
 - <http://localhost:8000/stats.html>
+- <http://localhost:8000/field.html>
 - <http://localhost:8000/thoughts/0012/>
 - <http://localhost:8000/render.html?md=/qrthoughts/year2026/month5/[Thoughts][0012][对“生存还是毁灭”这一问题的认识].md>
 
@@ -142,7 +180,10 @@ Site validation summary
   result: OK
 ```
 
-This checks that Markdown-backed records have valid clean URLs, source paths, legacy URLs, and generated alias pages.
+This checks that Markdown-backed records have valid clean URLs, source paths,
+legacy URLs, and generated alias pages. It also verifies the public site-plane
+projection, human/L1/T12 authority boundaries, dual visual profiles, root-page
+metadata, theme controller, and sitemap coverage.
 
 ### 6. Publish
 
@@ -226,12 +267,15 @@ whose existing Markdown content requires them.
 
 ## Statistics
 
-`stats.html` shows global counts, including:
+`stats.html` is the public Evidence observatory. It shows:
 
 - total published notes
 - `Books` count
 - `Thoughts` count
 - year distribution
+- explicit summary, tag, series, lead-image, math, and interactive coverage
+- human ownership, L1 advisory mode, denied runtime surfaces, and the dated
+  WP0-WP8 / T12-candidate projection
 
 These numbers come from generated Markdown metadata in `homepage-data.js`. There is no separate CSV or Excel source.
 
@@ -248,6 +292,11 @@ Important source files:
 - `scripts/new_note.py`: create a note and optionally build
 - `scripts/build_site.py`: regenerate site data and stable URL pages
 - `scripts/validate_site.py`: validate generated article URLs
+- `data/site-plane.json`: canonical public projection and interface contract data
+- `site-data.js`: generated browser projection of `data/site-plane.json`
+- `field.html`: public System and Evolution Chronicle surface
+- `includes/css/system.css`: shared tokens, primitives, accessibility, and dual themes
+- `includes/js/theme.js`: device-local Field/Museum profile switch
 - `includes/js/article-renderer.js`: shared Markdown article renderer
 - `includes/js/archive-page.js`: archive and category page renderer
 - `includes/js/stats-page.js`: global statistics page renderer

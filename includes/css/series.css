@@ -1,3 +1,5 @@
+@import url("./system.css");
+
 :root {
     --bg: #fbf7ec;
     --paper: #fffdf7;
@@ -12,6 +14,22 @@
     --todo: #355f8d;
     --candidate: #9a6622;
     --shadow: rgba(77, 56, 28, 0.08);
+}
+
+html[data-theme="museum"] {
+    --bg: #030708;
+    --paper: #0b1112;
+    --paper-deep: #171715;
+    --text: #f1ead9;
+    --muted: rgba(215, 226, 226, 0.68);
+    --quiet: rgba(215, 226, 226, 0.42);
+    --line: rgba(232, 226, 207, 0.16);
+    --accent: #a9f0ff;
+    --accent-soft: rgba(169, 240, 255, 0.1);
+    --done: #4f9b91;
+    --todo: #7fa2c7;
+    --candidate: #e9b86d;
+    --shadow: rgba(0, 0, 0, 0.34);
 }
 
 * {
@@ -34,6 +52,24 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 18px;
     line-height: 1.65;
+}
+
+html[data-theme="museum"] body {
+    background:
+        radial-gradient(circle at 56% 14%, rgba(180, 239, 255, 0.08), transparent 30rem),
+        #030708;
+}
+
+html[data-theme="museum"] .series-card,
+html[data-theme="museum"] .work-card,
+html[data-theme="museum"] .segmented-control button,
+html[data-theme="museum"] .metric-pill,
+html[data-theme="museum"] .tag-pill,
+html[data-theme="museum"] .status-pill,
+html[data-theme="museum"] .source-pill,
+html[data-theme="museum"] .work-action-link {
+    border-radius: 2px;
+    background: rgba(3, 7, 8, 0.58);
 }
 
 a {

@@ -18,6 +18,9 @@ updated: "2026-06-24 23:00:41"
 updated_date: "2026-06-24"
 slug: "thoughts-0019"
 status: "published"
+summary: "以 CAX 领域的可反馈闭环为场景，提出由通用智能底座、外置领域资产、后训练、企业知识和工程验证共同构成机械工程智能层。"
+tags: ["ASI", "agent", "software-engineering", "evaluation"]
+series: "Agentic Software Engineering"
 source:
   date_source:
     created: "new-note"

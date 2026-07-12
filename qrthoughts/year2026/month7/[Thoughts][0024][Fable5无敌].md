@@ -18,6 +18,9 @@ updated: "2026-07-03 23:22:26"
 updated_date: "2026-07-03"
 slug: "fable5"
 status: "published"
+summary: "基于 Claude Code 与 Fable5 的一次长时研究实践，评估其在大型报告生成、结构压缩、跨域统合和证据纪律上的能力与使用边界。"
+tags: ["ASI", "agent", "software-engineering", "evaluation"]
+series: "工程证据与发版之后"
 source:
   date_source:
     created: "new-note"

@@ -18,6 +18,9 @@ updated: "2026-06-19 10:40:23"
 updated_date: "2026-06-19"
 slug: "agent"
 status: "published"
+summary: "面向大型软件系统与组织级智能体体系，提出由横向呼吸层、纵向吸引层、持久记忆和联邦治理共同构成的 agent 共生约束场。"
+tags: ["ASI", "agent", "constraint-field", "software-engineering"]
+series: "约束场与复杂智能"
 source:
   date_source:
     created: "new-note"

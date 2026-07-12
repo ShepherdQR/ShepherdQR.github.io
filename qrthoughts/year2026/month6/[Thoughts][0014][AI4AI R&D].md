@@ -18,6 +18,9 @@ updated: "2026-06-05 23:26:07"
 updated_date: "2026-06-05"
 slug: "ai4ai-r-d"
 status: "published"
+summary: "从递归自我改进与智能体工程出发，提出以价值、契约、权限、预算、证据、审计和停机机制组织 AI4AI 研发闭环。"
+tags: ["ASI", "agent", "software-engineering", "evaluation", "AI-boundary"]
+series: "Agentic Software Engineering"
 source:
   date_source:
     created: "new-note"

@@ -18,6 +18,9 @@ updated: "2026-06-24 23:09:19"
 updated_date: "2026-06-24"
 slug: "thoughts-0020"
 status: "published"
+summary: "记录将共生约束场抽象为独立仓库节点的初探，并把 repo 群的吸收、富集与统合能力理解为联邦治理和生态演化的范畴图景。"
+tags: ["tropical-geometry", "mathematics", "constraint-field", "governance"]
+series: "数学结构札记"
 source:
   date_source:
     created: "new-note"

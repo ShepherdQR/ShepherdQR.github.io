@@ -1,38 +1,48 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="field">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ZQR.WORLD 知识星图：按标题、类型、年份、系列与标签检索全部公开知识对象。">
+    <meta property="og:title" content="Knowledge Atlas · ZQR.WORLD">
+    <meta property="og:description" content="跨越复杂智能、工程证据、数学结构、治理、文明与文学的公共知识星图。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zqr.world/archive.html">
+    <link rel="canonical" href="https://zqr.world/archive.html">
+    <link rel="alternate" type="application/atom+xml" href="./includes/atom.xml" title="ZQR.WORLD Atom feed">
+    <script src="./includes/js/theme.js"></script>
     <link rel="stylesheet" href="./includes/css/archive.css">
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
-    <title>Archive - Pursuing Immortality</title>
+    <title>Knowledge Atlas · ZQR.WORLD</title>
 </head>
-<body data-collection="">
-    <main class="archive-page">
+<body class="atlas-page" data-section="atlas" data-collection="">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="global-header">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ZQR.WORLD</strong><small>Public intelligence organ</small></span></a>
+        <nav class="primary-nav" aria-label="主导航">
+            <a href="./index.html" data-route="home">Field</a><a href="./archive.html" data-route="atlas">Atlas</a><a href="./stats.html" data-route="stats">Evidence</a><a href="./field.html" data-route="field">System</a><a href="./series.html" data-route="series">Series</a><a class="nav-external" href="https://github.com/ShepherdQR">GitHub ↗</a>
+        </nav>
+    </header>
+    <main class="archive-page" id="main-content">
         <header class="archive-header">
-            <p class="archive-kicker">ShepherdQR.github.io</p>
-            <h1>Archive</h1>
-            <p id="archive-summary" class="archive-summary"></p>
-            <nav class="archive-nav" aria-label="Archive navigation">
-                <a href="./index.html">Home</a>
-                <a href="./archive.html" data-nav="Archive">Archive</a>
-                <a href="./stats.html" data-nav="Stats">Stats</a>
-                <a href="./books.html" data-nav="Books">Books</a>
-                <a href="./thoughts.html" data-nav="Thoughts">Thoughts</a>
-                <a href="./study.html" data-nav="Study">Study</a>
-                <a href="./videos.html" data-nav="Videos">Videos</a>
-                <a href="https://github.com/ShepherdQR">GitHub</a>
-            </nav>
+            <div><p class="archive-kicker">01 · KNOWLEDGE ATLAS</p><h1>Atlas.</h1><p class="archive-summary" id="archive-summary"></p></div>
+            <aside class="archive-aside"><span class="status-chip" data-state="verified">Generated from Markdown</span><p>Archive is an accession ledger, not a ranking. Search describes the corpus without changing its source or authority.</p>
+                <nav class="collection-nav" aria-label="内容类型"><a class="is-active" href="./archive.html" aria-current="page">All</a><a href="./thoughts.html">Thoughts</a><a href="./books.html">Books</a><a href="./series.html">Series</a><a href="./study.html">Study</a><a href="./videos.html">Videos</a></nav>
+            </aside>
         </header>
-
-        <section class="archive-section" aria-label="All notes">
-            <div id="archive-list"></div>
+        <section class="atlas-controls" aria-label="知识星图筛选器">
+            <div class="control-group control-search"><label for="archive-search">Search / 检索</label><input id="archive-search" type="search" placeholder="标题、摘要、标签、系列…" autocomplete="off"></div>
+            <div class="control-group"><label for="filter-type">Type</label><select id="filter-type"></select></div>
+            <div class="control-group"><label for="filter-year">Year</label><select id="filter-year"></select></div>
+            <div class="control-group"><label for="filter-series">Series</label><select id="filter-series"></select></div>
+            <div class="control-group"><label for="filter-tag">Tag</label><select id="filter-tag"></select></div>
+            <button class="clear-filters" id="clear-filters" type="button">Reset</button>
         </section>
-
-        <footer class="archive-footer">Pursuing Immortality · Since 2020</footer>
+        <div class="atlas-status" aria-live="polite"><div class="active-filters" id="active-filters"></div><strong id="atlas-result-count">—</strong></div>
+        <section class="archive-section" aria-label="全部知识对象"><div id="archive-list"></div></section>
+        <noscript><p class="archive-empty">此星图依赖站点生成数据进行筛选；请启用 JavaScript 或从首页进入最新文章。</p></noscript>
+        <footer class="archive-footer">ZQR.WORLD · HUMAN OWNED · MARKDOWN SOURCE · <span data-current-year>2026</span></footer>
     </main>
-
-    <script src="./homepage-data.js"></script>
-    <script src="./includes/js/archive-page.js"></script>
+    <script src="./homepage-data.js"></script><script src="./includes/js/archive-page.js"></script><script src="./includes/js/site-shell.js"></script>
 </body>
 </html>

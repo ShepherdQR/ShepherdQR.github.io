@@ -1,6 +1,7 @@
 # Site Development Plan
 
 Date: 2026-07-03
+Last updated: 2026-07-13
 Status: Active
 Scope: ShepherdQR.github.io static personal site
 Source analysis: [Site Improvement Analysis 2026-07-03](site-improvement-analysis-2026-07-03.md)
@@ -19,12 +20,12 @@ The development direction is:
 
 ## Current Baseline
 
-As of 2026-07-03:
+As of 2026-07-13:
 
 | Area | Baseline |
 | --- | --- |
-| Published Markdown notes | 150 |
-| Collections | Books 124, Thoughts 23, Study 1, Videos 2 |
+| Published Markdown notes | 159 |
+| Collections | Books 125, Thoughts 31, Study 1, Videos 2 |
 | Validation | `python scripts/validate_site.py` passes with 0 errors |
 | Source model | Markdown front matter under `qrthoughts/` |
 | Public URLs | Clean generated URLs such as `/thoughts/0023/` |
@@ -58,12 +59,12 @@ Goal: make the corpus explorable by theme and reading path, not only by date and
 
 | Task | Status | Notes |
 | --- | --- | --- |
-| Backfill summaries for recent and selected notes | Proposed | Start with current Thoughts notes and homepage selected notes. |
-| Backfill tags for high-value clusters | Proposed | Suggested clusters: AI/agent systems, software engineering, mathematics, governance, literature, personal essays. |
-| Add series support to archive rendering | Proposed | Use existing front matter field rather than inventing a new source. |
-| Make `Selected Notes` data-driven | Proposed | Prefer front matter or a small curated data file over hard-coded IDs in `index.html`. |
-| Add tag/series filters to archive pages | Proposed | Can be client-side first using generated data. |
-| Add curated topic paths | Proposed | Small static pages for stable reader journeys. |
+| Backfill summaries for recent and selected notes | Implemented initial slice | Thoughts 0014-0029 and 0031 now have explicit summary, tags, and series; historical corpus remains incremental. |
+| Backfill tags for high-value clusters | Implemented initial slice | Recent Thoughts cover ASI/agents, engineering, mathematics, governance, civilization, reading, literature, and poetry. |
+| Add series support to archive rendering | Implemented | Atlas search and rows expose series from generated metadata. |
+| Make `Selected Notes` data-driven | Implemented | `data/site-plane.json` curates stable `type` + `id` entries across five narrative lines. |
+| Add tag/series filters to archive pages | Implemented | Atlas and collection pages filter by query, type, year, series, and tag with URL persistence. |
+| Add curated topic paths | Implemented first public layer | Homepage five-field map links into generated Atlas filters and stable collections. |
 
 Acceptance:
 
@@ -77,9 +78,9 @@ Goal: turn statistics and archive data into public navigation.
 
 | Task | Status | Notes |
 | --- | --- | --- |
-| Add a lightweight generated search index | Proposed | Keep it static and framework-free. |
-| Add archive search/filter UI | Proposed | Filter by title, type, year, tag, and series. |
-| Expand `stats.html` | Proposed | Add year-by-type matrix, longest notes, content features, and top tags. |
+| Add a lightweight generated search index | Implemented without a second file | `homepage-data.js` remains the compact static search/read model. |
+| Add archive search/filter UI | Implemented | Filters title/summary/id/type/year/tag/series without a backend. |
+| Expand `stats.html` | Implemented public evidence slice | Adds metadata coverage, authority boundary, dated control-plane baseline, collections, years, and fresh evidence. |
 | Track content feature counts | Proposed | Images, math, interactive notes, posters. |
 
 Acceptance:
@@ -112,28 +113,50 @@ Goal: simplify styling after behavior is protected by validation.
 
 | Task | Status | Notes |
 | --- | --- | --- |
-| Separate modern article-shell CSS from legacy page CSS | Proposed | `includes/css/pages.css` carries both current and historical rules. |
+| Separate modern article-shell CSS from legacy page CSS | In progress | Shared `system.css` and scoped modern overrides now protect the generated article shell; historical exception rules remain quarantined in `pages.css`. |
 | Audit retained legacy exception pages | Proposed | Confirm which Bootstrap/jQuery-era assets still matter. |
 | Remove or quarantine unused assets | Proposed | Only after link and browser checks. |
-| Improve image/poster handling | Proposed | Add optional lead-image styling and social preview support. |
+| Improve image/poster handling | Implemented initial slice | Lead images drive article/social metadata; ASI Research explicitly selects canonical nine-grid v2. |
+
+## Phase 6: Public Control-Plane Interface And Visual System
+
+Goal: express the repository as a human-owned public knowledge data plane
+without presenting an advisory projection as runtime authority.
+
+| Task | Status | Notes |
+| --- | --- | --- |
+| Add declarative public projection | Implemented | `data/site-plane.json` -> generated `site-data.js`, validated for L1/human/T12 boundaries. |
+| Add System / Chronicle surface | Implemented | `field.html` exposes the human-gated loop, dated WP0-WP8 baseline, T12 candidate, denials, and provenance. |
+| Establish shared design tokens | Implemented | `includes/css/system.css` governs typography, spacing, focus, status colors, and responsive primitives. |
+| Add reversible dual visual profiles | Implemented | Field and Museum profiles share content/semantics; preference persists device-locally through `theme.js`. |
+| Upgrade article reading | Implemented progressive layer | Reading progress, taxonomy links, estimated time, heading anchors, and responsive object index are injected without a new dependency. |
+| Preserve authority truthfulness | Implemented validator gate | Validator rejects authority effects, adopted T12 claims, runtime/broker flags, missing theme profiles, and local absolute paths. |
 
 Acceptance:
 
-- Current homepage, archive, stats, and article pages retain their visual identity.
-- Retained legacy exception pages remain intentionally supported or explicitly retired.
-- CSS cleanup does not create layout regressions on desktop or mobile.
+- Field, Atlas, Evidence, System, Series, and generated articles share the same
+  tokens and persistent profile switch.
+- Museum mode uses the canonical governed-institutional-artifact semantics
+  without implying live runtime or target authority.
+- Generated public projection and all 159 article aliases remain deterministic.
+- Retained legacy exception pages remain protected by scoped modern selectors.
 
 ## Near-Term Task Card
 
-Recommended first implementation slice:
+Recommended next implementation slice:
 
-1. Fix homepage year ordering.
-2. Normalize article body H1 rendering.
-3. Add optional metadata propagation to `homepage-data.js`.
-4. Generate article/root meta descriptions and better Atom summaries.
-5. Add local link/image validation to `scripts/validate_site.py`.
+1. Render ordinary Markdown article bodies to HTML at build time.
+2. Add a readable no-JavaScript article fallback while retaining
+   `render.html?md=...` for diagnostics.
+3. Pin or vendor the Markdown runtime only under a separate dependency release.
+4. Continue metadata backfill through natural maintenance rather than a blind
+   historical rewrite.
+5. Perform a human visual review of both Field and Museum profiles across
+   desktop/mobile, a normal article, a math article, an interactive article and
+   a poster-led article.
 
-This slice is small enough to ship safely and creates the foundation for the larger knowledge-map work.
+This keeps the next risk concentrated in rendering durability instead of
+mixing it with another information-architecture change.
 
 ## Operating Rules
 

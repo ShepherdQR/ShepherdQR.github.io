@@ -18,6 +18,9 @@ updated: "2026-07-07 22:39:39"
 updated_date: "2026-07-07"
 slug: "thoughts-0029"
 status: "published"
+summary: "以海报生产和 s012 Domain Research OS 为实例，刻画约束场由横向任务循环、纵向控制线和事件证据脊柱共同组成的 repo-native 运行形态。"
+tags: ["ASI", "agent", "constraint-field", "software-engineering", "evaluation"]
+series: "约束场与复杂智能"
 source:
   date_source:
     created: "new-note"

@@ -18,6 +18,9 @@ updated: "2026-07-10 22:44:06"
 updated_date: "2026-07-10"
 slug: "thoughts-0021"
 status: "published"
+summary: "以种子、土地与长征为意象，论述政绩应以人民需要、长期承载和真实工程反馈为尺度，并反对短期指标与局部炫技。"
+tags: ["governance", "civilization"]
+series: "治理、文明与人的尺度"
 source:
   date_source:
     created: "new-note"

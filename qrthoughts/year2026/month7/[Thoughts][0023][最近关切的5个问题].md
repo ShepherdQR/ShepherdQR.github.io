@@ -18,6 +18,9 @@ updated: "2026-07-03 18:47:25"
 updated_date: "2026-07-03"
 slug: "thoughts-0023"
 status: "published"
+summary: "从日常观察与头脑直出的问题中筛选五项持续关切：政绩观、阅读方法、身体治理、人机共生与诗歌阅读，作为下一阶段研究入口。"
+tags: ["governance", "AI-boundary", "reading", "poetry"]
+series: "治理、文明与人的尺度"
 source:
   date_source:
     created: "new-note"

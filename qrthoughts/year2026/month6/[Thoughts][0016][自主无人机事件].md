@@ -18,6 +18,9 @@ updated: "2026-06-14 09:48:54"
 updated_date: "2026-06-14"
 slug: "thoughts-0016"
 status: "published"
+summary: "以自主无人机事件为例，区分公开信息可信度与闭合证据链，梳理自主杀伤系统的可控性、责任主体和国际人道法边界。"
+tags: ["governance", "AI-boundary", "evaluation"]
+series: "治理、文明与人的尺度"
 source:
   date_source:
     created: "new-note"

@@ -1,48 +1,43 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="field">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ZQR.WORLD 证据台：公开语料、元数据覆盖、验证边界与 dated control-plane projection。">
+    <meta property="og:title" content="Evidence · ZQR.WORLD">
+    <meta property="og:description" content="看见知识系统的形状、证据覆盖和人类闸门，而不把统计误写成权威。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zqr.world/stats.html">
+    <link rel="canonical" href="https://zqr.world/stats.html">
+    <link rel="alternate" type="application/atom+xml" href="./includes/atom.xml" title="ZQR.WORLD Atom feed">
+    <script src="./includes/js/theme.js"></script>
     <link rel="stylesheet" href="./includes/css/archive.css">
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
-    <title>Stats - Pursuing Immortality</title>
+    <title>Evidence · ZQR.WORLD</title>
 </head>
-<body>
-    <main class="archive-page">
+<body data-section="stats">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="global-header">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ZQR.WORLD</strong><small>Public intelligence organ</small></span></a>
+        <nav class="primary-nav" aria-label="主导航"><a href="./index.html" data-route="home">Field</a><a href="./archive.html" data-route="atlas">Atlas</a><a href="./stats.html" data-route="stats">Evidence</a><a href="./field.html" data-route="field">System</a><a href="./series.html" data-route="series">Series</a><a class="nav-external" href="https://github.com/ShepherdQR">GitHub ↗</a></nav>
+    </header>
+    <main class="archive-page" id="main-content">
         <header class="archive-header">
-            <p class="archive-kicker">ShepherdQR.github.io</p>
-            <h1>Stats</h1>
-            <p id="archive-summary" class="archive-summary"></p>
-            <nav class="archive-nav" aria-label="Stats navigation">
-                <a href="./index.html">Home</a>
-                <a href="./archive.html" data-nav="Archive">Archive</a>
-                <a href="./stats.html" data-nav="Stats">Stats</a>
-                <a href="./books.html" data-nav="Books">Books</a>
-                <a href="./thoughts.html" data-nav="Thoughts">Thoughts</a>
-                <a href="./study.html" data-nav="Study">Study</a>
-                <a href="./videos.html" data-nav="Videos">Videos</a>
-                <a href="https://github.com/ShepherdQR">GitHub</a>
-            </nav>
+            <div><p class="archive-kicker">02 · EVIDENCE OBSERVATORY</p><h1>Evidence.</h1><p class="archive-summary" id="archive-summary"></p></div>
+            <aside class="archive-aside"><span class="status-chip" data-state="verified">Evidence, not authority</span><p>Counts describe this public corpus. Validation can support a release decision, but cannot create permission or global truth.</p><nav class="collection-nav" aria-label="证据导航"><a href="./archive.html">Atlas</a><a class="is-active" href="./stats.html" aria-current="page">Evidence</a><a href="./field.html">System boundary</a><a href="./includes/atom.xml">Atom</a></nav></aside>
         </header>
 
-        <section class="archive-section" aria-label="Site statistics">
-            <div id="stats-overview" class="stats-overview"></div>
-
-            <section class="stats-block" aria-labelledby="stats-types-heading">
-                <h2 id="stats-types-heading">Collections</h2>
-                <div id="stats-types"></div>
-            </section>
-
-            <section class="stats-block" aria-labelledby="stats-years-heading">
-                <h2 id="stats-years-heading">Years</h2>
-                <div id="stats-years"></div>
-            </section>
+        <section class="stats-overview" id="stats-overview" aria-label="核心指标"></section>
+        <section class="stats-grid" aria-label="证据细目">
+            <article class="panel stats-block" aria-labelledby="metadata-title"><h2 id="metadata-title">Metadata coverage</h2><ul class="evidence-gate-list" id="stats-metadata"></ul></article>
+            <article class="panel stats-block" aria-labelledby="governance-title"><h2 id="governance-title">Authority boundary</h2><ul class="evidence-gate-list" id="stats-governance"></ul></article>
+            <article class="panel stats-block" aria-labelledby="collections-title"><h2 id="collections-title">Collections</h2><div id="stats-types"></div></article>
+            <article class="panel stats-block" aria-labelledby="years-title"><h2 id="years-title">Years</h2><div id="stats-years"></div></article>
+            <article class="panel stats-block" aria-labelledby="baseline-title"><h2 id="baseline-title">Dated evolution baseline</h2><ul class="evidence-gate-list" id="stats-baseline"></ul></article>
+            <article class="panel stats-block" aria-labelledby="recent-title"><h2 id="recent-title">Fresh evidence objects</h2><ul class="evidence-gate-list" id="stats-recent"></ul></article>
         </section>
-
-        <footer class="archive-footer">Pursuing Immortality 路 Since 2020</footer>
+        <footer class="archive-footer">ZQR.WORLD · GENERATED EVIDENCE READOUT · <span data-current-year>2026</span></footer>
     </main>
-
-    <script src="./homepage-data.js"></script>
-    <script src="./includes/js/stats-page.js"></script>
+    <script src="./site-data.js"></script><script src="./homepage-data.js"></script><script src="./includes/js/stats-page.js"></script><script src="./includes/js/site-shell.js"></script>
 </body>
 </html>

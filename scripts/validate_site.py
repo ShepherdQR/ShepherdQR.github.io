@@ -17,6 +17,7 @@ import generate_homepage_data
 
 
 DATA_RE = re.compile(r"^\s*window\.HOMEPAGE_DATA\s*=\s*(?P<payload>[\s\S]*?)\s*;\s*$")
+SITE_PLANE_RE = re.compile(r"^\s*window\.SITE_PLANE\s*=\s*(?P<payload>[\s\S]*?)\s*;\s*$")
 ARTICLE_CONFIG_RE = re.compile(
     r'<script\s+type="application/json"\s+id="article-config"\s*>(?P<payload>[\s\S]*?)</script>',
     re.I,
@@ -36,6 +37,7 @@ STATIC_SITEMAP_PATHS = {
     "/",
     "/archive.html",
     "/stats.html",
+    "/field.html",
     "/books.html",
     "/series.html",
     "/series/20th-century-world-poetry/",
@@ -45,6 +47,17 @@ STATIC_SITEMAP_PATHS = {
 }
 SERIES_STATUSES = {"done", "todo"}
 SERIES_MATCH_STATUSES = {"confirmed", "candidate", "unmatched"}
+PUBLIC_ROOT_PAGES = {
+    "index.html": "https://zqr.world/",
+    "archive.html": "https://zqr.world/archive.html",
+    "stats.html": "https://zqr.world/stats.html",
+    "field.html": "https://zqr.world/field.html",
+    "books.html": "https://zqr.world/books.html",
+    "thoughts.html": "https://zqr.world/thoughts.html",
+    "study.html": "https://zqr.world/study.html",
+    "videos.html": "https://zqr.world/videos.html",
+    "series.html": "https://zqr.world/series.html",
+}
 REQUIRED_ITEM_FIELDS = {
     "type",
     "id",
@@ -222,6 +235,117 @@ def load_homepage_data(root: Path) -> dict:
     if not match:
         raise ValueError(f"{data_path} does not contain window.HOMEPAGE_DATA JSON")
     return json.loads(match.group("payload"))
+
+
+def load_site_plane(root: Path) -> dict:
+    data_path = root / "site-data.js"
+    text = read_text(data_path)
+    match = SITE_PLANE_RE.match(text)
+    if not match:
+        raise ValueError(f"{data_path} does not contain window.SITE_PLANE JSON")
+    payload = json.loads(match.group("payload"))
+    if not isinstance(payload, dict):
+        raise ValueError("site-data.js payload must be an object")
+    return payload
+
+
+def validate_site_plane(root: Path, plane: dict, items: list[dict[str, str]]) -> list[str]:
+    errors: list[str] = []
+    source_path = root / "data" / "site-plane.json"
+    try:
+        source = json.loads(read_text(source_path))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"data/site-plane.json: cannot load public projection: {exc}"]
+
+    if source != plane:
+        errors.append("site-data.js: generated projection differs from data/site-plane.json")
+
+    site = plane.get("site") or {}
+    governance = plane.get("governance") or {}
+    baseline = plane.get("control_plane_baseline") or {}
+    operational = baseline.get("operational_frontier") or {}
+    candidate = ((baseline.get("evolution_frontier") or {}).get("next_stage_candidate") or {})
+
+    if site.get("owner") != "human":
+        errors.append("site-plane: public projection must preserve human ownership")
+    if governance.get("control_level") != "L1":
+        errors.append("site-plane: control level must remain L1")
+    if governance.get("authority_effect") != "none":
+        errors.append("site-plane: public projection must not claim an authority effect")
+    if candidate.get("status") != "candidate_not_adopted":
+        errors.append("site-plane: T12 must remain candidate_not_adopted")
+    if candidate.get("adoption_authorized") is not False:
+        errors.append("site-plane: T12 adoption must remain unauthorized")
+
+    denied_runtime_flags = {
+        "live_watcher_started": operational.get("live_watcher_started"),
+        "broker_process_started": operational.get("broker_process_started"),
+        "guarded_broker_authorized": operational.get("guarded_broker_authorized"),
+        "resident_agent_runtime_started": operational.get("resident_agent_runtime_started"),
+        "target_local_adapter_released": operational.get("target_local_adapter_released"),
+    }
+    for label, value in denied_runtime_flags.items():
+        if value is not False:
+            errors.append(f"site-plane: {label} must be explicitly false")
+
+    lines = ((plane.get("narrative_lines") or {}).get("items") or [])
+    if not isinstance(lines, list) or len(lines) != 5:
+        errors.append("site-plane: exactly five public narrative lines are required")
+    else:
+        line_ids = [line.get("id") for line in lines]
+        if len(set(line_ids)) != len(line_ids) or any(not value for value in line_ids):
+            errors.append("site-plane: narrative line ids must be present and unique")
+        if sum(line.get("weight_hint_percent", 0) for line in lines) != 100:
+            errors.append("site-plane: narrative line weights must total 100")
+
+    item_keys = {(item.get("type"), item.get("id")) for item in items}
+    selected = ((plane.get("selected_entries") or {}).get("items") or [])
+    for entry in selected:
+        key = (entry.get("type"), entry.get("id"))
+        if key not in item_keys:
+            errors.append(f"site-plane: selected entry does not exist: {key[0]} {key[1]}")
+
+    serialized = json.dumps(source, ensure_ascii=False)
+    if re.search(r"(?:[A-Za-z]:\\|\\\\)", serialized):
+        errors.append("data/site-plane.json: public projection contains an absolute local path")
+
+    visual = plane.get("visual_system") or {}
+    profiles = visual.get("profiles") or []
+    profile_ids = {profile.get("id") for profile in profiles if isinstance(profile, dict)}
+    if profile_ids != {"field", "museum"}:
+        errors.append("site-plane: visual system must declare exactly field and museum profiles")
+    museum = next((profile for profile in profiles if profile.get("id") == "museum"), {})
+    reference = museum.get("canonical_reference", "")
+    if not reference or not (root / reference).exists():
+        errors.append(f"site-plane: museum canonical reference does not exist: {reference or '<missing>'}")
+
+    thought_28 = next((item for item in items if item.get("type") == "Thoughts" and item.get("id") == "0028"), None)
+    if not thought_28 or thought_28.get("leadImage") != "/resources/pics/agi-structure-plan-nine-grid-v2.png":
+        errors.append("homepage-data.js: Thoughts 0028 must declare the canonical nine-grid v2 lead image")
+
+    return errors
+
+
+def validate_public_root_pages(root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel, canonical in PUBLIC_ROOT_PAGES.items():
+        path = root / rel
+        if not path.exists():
+            errors.append(f"{rel}: public root page is missing")
+            continue
+        text = read_text(path)
+        required_fragments = {
+            'meta description': '<meta name="description"',
+            'canonical link': f'<link rel="canonical" href="{canonical}"',
+            'Atom discovery': 'type="application/atom+xml"',
+            'theme controller': 'includes/js/theme.js',
+            'skip link': 'class="skip-link"',
+            'main target': 'id="main-content"',
+        }
+        for label, fragment in required_fragments.items():
+            if fragment not in text:
+                errors.append(f"{rel}: missing {label}")
+    return errors
 
 
 def alias_path_for(root: Path, item: dict[str, str]) -> Path:
@@ -737,6 +861,12 @@ def main(argv: list[str]) -> int:
         print(f"Site validation failed: cannot load homepage-data.js: {exc}")
         return 1
 
+    try:
+        site_plane = load_site_plane(root)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        print(f"Site validation failed: cannot load site-data.js: {exc}")
+        return 1
+
     items = data.get("items")
     if not isinstance(items, list):
         print("Site validation failed: homepage-data.js has no items array")
@@ -748,6 +878,8 @@ def main(argv: list[str]) -> int:
     errors.extend(validate_uniqueness(items))
     errors.extend(validate_item_order(items))
     errors.extend(validate_stats_and_counts(root, data, items))
+    errors.extend(validate_site_plane(root, site_plane, items))
+    errors.extend(validate_public_root_pages(root))
     errors.extend(validate_atom_xml(root))
     errors.extend(validate_sitemap_xml(root, markdown_items))
     errors.extend(validate_series_books(root))
