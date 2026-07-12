@@ -68,6 +68,13 @@ material-object series without reducing it to generic dark mode.
 - HTTP smoke: homepage, Atlas query, Evidence, System, Series, Thoughts 0028,
   Thoughts 0031, generated data, shared CSS, and theme script all returned 200;
   expected interface markers and generated article theme binding were present.
+- Remote delivery verification for `5c1e6f0`:
+  - `HEAD...origin/master` divergence was `0 0` after push;
+  - GitHub `Site hardening` run `29205508359` completed successfully;
+  - GitHub Pages reported `status=built`, no error, for commit `5c1e6f0`;
+  - cache-busted public reads of the homepage, System, Atlas, Evidence,
+    Thoughts 0028, and the theme controller returned 200 with new-release
+    markers present.
 
 ## Decisions
 
@@ -103,7 +110,9 @@ material-object series without reducing it to generic dark mode.
 
 - Branch: `master`
 - Implementation commit: `470f599`
-- The implementation and this closeout are intended for the same
-  `origin/master` release.
+- Closeout commit: `5c1e6f0`
+- The implementation and closeout were pushed to `origin/master`, passed the
+  repository workflow, completed the GitHub Pages build, and were read back
+  from `https://zqr.world/` before this deployment-verification update.
 - No unrelated repository or control-plane working tree was staged by this
   closeout.
