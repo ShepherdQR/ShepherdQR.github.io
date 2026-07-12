@@ -19,6 +19,7 @@ This directory stores architecture design documents and decision records for the
 
 ## Task Closeouts
 
+- [2026-07-13 Control-Plane Public Interface and Dual Theme Closeout](task-closeouts/2026-07-13-control-plane-public-interface-and-dual-theme-closeout.md): Release record for the Field/Atlas/Evidence/System architecture, declarative L1 public projection, searchable knowledge map, evidence observatory, article reading upgrade, Field/Museum visual profiles, validation, and delivery.
 - [2026-07-10 Complete Session Summary Closeout](task-closeouts/2026-07-10-complete-session-summary-closeout.md): End-to-end record covering the governance essay cleanup, homepage identity, repository hardening, content strategy, L1 control-plane onboarding, Thoughts 0030, validation, release, and remaining work.
 - [2026-07-10 Site Content and Publishing Closeout](task-closeouts/2026-07-10-site-content-and-publishing-closeout.md): Release record for Thoughts 0030, the elevated homepage About section, publishing-pipeline improvements, the content plan, L1 control-plane registration, validation, and full repository push.
 - [2026-07-03 Site Improvement Planning Closeout](task-closeouts/2026-07-03-site-improvement-planning-closeout.md): Durable handoff for the site improvement analysis, active development plan, validation evidence, and next implementation slice.
