@@ -1,6 +1,6 @@
 # Homepage Scroll Repair
 
-Date: 2026-07-14  
+Date: 2026-07-14
 Workspace: `E:\Codes\ShepherdQR.github.io`
 
 ## Objective
@@ -17,7 +17,8 @@ Restore normal vertical scrolling on the public homepage, then validate and publ
 
 - Files: `includes/css/homepage.css`, `scripts/validate_site.py`
 - Checks: canonical site build, site validation, Python compilation, CSS regression assertion
-- Delivery: the repair and this report ship together in one focused commit to `origin/master`.
+- Repair commit: `f8f2833 Restore homepage vertical scrolling`
+- Delivery: the repair was pushed to `origin/master`; this closeout update records the verified delivery state.
 
 ## Decisions
 
