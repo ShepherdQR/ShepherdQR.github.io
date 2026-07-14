@@ -348,6 +348,28 @@ def validate_public_root_pages(root: Path) -> list[str]:
     return errors
 
 
+def validate_homepage_scrollability(root: Path) -> list[str]:
+    css_path = root / "includes" / "css" / "homepage.css"
+    if not css_path.exists():
+        return ["includes/css/homepage.css: stylesheet is missing"]
+
+    css = read_text(css_path)
+    home_page_rule = re.search(r"\.home-page\s*\{(?P<body>[^}]*)\}", css, re.DOTALL)
+    if not home_page_rule:
+        return ["includes/css/homepage.css: .home-page rule is missing"]
+
+    declarations = {
+        name.strip().lower(): value.strip().lower()
+        for name, value in re.findall(r"([\w-]+)\s*:\s*([^;]+);", home_page_rule.group("body"))
+    }
+    blocked_values = {"hidden", "clip"}
+    if declarations.get("overflow") in blocked_values:
+        return ["includes/css/homepage.css: .home-page must not block vertical overflow"]
+    if declarations.get("overflow-y") in blocked_values:
+        return ["includes/css/homepage.css: .home-page must keep vertical scrolling enabled"]
+    return []
+
+
 def alias_path_for(root: Path, item: dict[str, str]) -> Path:
     href = item.get("href", "")
     return root / href.lstrip("/") / "index.html"
@@ -880,6 +902,7 @@ def main(argv: list[str]) -> int:
     errors.extend(validate_stats_and_counts(root, data, items))
     errors.extend(validate_site_plane(root, site_plane, items))
     errors.extend(validate_public_root_pages(root))
+    errors.extend(validate_homepage_scrollability(root))
     errors.extend(validate_atom_xml(root))
     errors.extend(validate_sitemap_xml(root, markdown_items))
     errors.extend(validate_series_books(root))

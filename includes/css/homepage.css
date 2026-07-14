@@ -1,7 +1,7 @@
 @import url("./system.css");
 
 .home-page {
-    overflow: clip;
+    overflow-x: clip;
 }
 
 .home-main {
