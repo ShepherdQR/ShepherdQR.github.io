@@ -1,6 +1,29 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-12",
+  "generatedAt": "2026-07-15",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0032",
+      "title": "诗本无名",
+      "created": "2026-07-15 01:09:59",
+      "createdDate": "2026-07-15",
+      "published": "2026-07-15",
+      "updated": "2026-07-15 01:09:59",
+      "updatedDate": "2026-07-15",
+      "slug": "thoughts-0032",
+      "href": "/thoughts/0032/",
+      "canonicalHref": "/thoughts/0032/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month7/%5BThoughts%5D%5B0032%5D%5B%E8%AF%97%E6%9C%AC%E6%97%A0%E5%90%8D%5D",
+      "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0032][诗本无名].md",
+      "label": "[Thoughts][0032][诗本无名]",
+      "source": "markdown",
+      "summary": "张棋荣的诗歌。",
+      "tags": [
+        "literature",
+        "poetry"
+      ],
+      "series": "诗与内部结构"
+    },
     {
       "type": "Thoughts",
       "id": "0031",
@@ -17,7 +40,7 @@ window.HOMEPAGE_DATA = {
       "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0031][未名大赋].md",
       "label": "[Thoughts][0031][未名大赋]",
       "source": "markdown",
-      "summary": "一则写于 2026 年 7 月 12 日的极短诗性片段，以“诗本无名”保留命名之前的感受与生成时刻。",
+      "summary": "一则写于 2026 年 7 月 12 日的音韵节奏练习，探究疏松的热与雨的因等待而来而去。",
       "tags": [
         "literature",
         "poetry"
@@ -2991,15 +3014,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 159,
+    "total": 160,
     "byType": {
-      "Thoughts": 31,
+      "Thoughts": 32,
       "Books": 125,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 28,
+      "2026": 29,
       "2025": 1,
       "2024": 2,
       "2023": 36,

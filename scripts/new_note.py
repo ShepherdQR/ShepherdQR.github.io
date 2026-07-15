@@ -124,6 +124,9 @@ def build_markdown(
     tags: list[str],
     series: str | None,
     summary: str | None,
+    lead_image: str | None,
+    math_enabled: bool,
+    interactive_enabled: bool,
 ) -> str:
     slug = slugify(title, content_type, content_id)
     lines = [
@@ -138,13 +141,13 @@ def build_markdown(
         f"updated_date: {yaml_quote(date)}",
         f"slug: {yaml_quote(slug)}",
         f"status: {yaml_quote(status)}",
+        f"summary: {yaml_quote(summary or '')}",
+        f"tags: {yaml_list(tags)}",
+        f"series: {yaml_quote(series or '')}",
+        f"lead_image: {yaml_quote(lead_image or '')}",
+        f"math: {'true' if math_enabled else 'false'}",
+        f"interactive: {'true' if interactive_enabled else 'false'}",
     ]
-    if tags:
-        lines.append(f"tags: {yaml_list(tags)}")
-    if series:
-        lines.append(f"series: {yaml_quote(series)}")
-    if summary:
-        lines.append(f"summary: {yaml_quote(summary)}")
     lines.extend(
         [
             "source:",
@@ -184,6 +187,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tags", help="Comma-separated tags to write into front matter.")
     parser.add_argument("--series", help="Series name to write into front matter.")
     parser.add_argument("--summary", help="Short summary to write into front matter.")
+    parser.add_argument("--lead-image", help="Repository-root-relative or external lead image URL.")
+    parser.add_argument("--math", action="store_true", help="Declare that the note requires MathJax.")
+    parser.add_argument("--interactive", action="store_true", help="Declare that the note requires D3 support.")
     parser.add_argument("--open", action="store_true", help="Open the new Markdown file with the system default app.")
     parser.add_argument("--no-build", action="store_true", help="Create the note without regenerating homepage data.")
     return parser
@@ -226,6 +232,9 @@ def main(argv: list[str]) -> int:
             split_values(args.tags),
             args.series,
             args.summary,
+            args.lead_image,
+            args.math,
+            args.interactive,
         ),
         encoding="utf-8",
         newline="\n",
@@ -237,6 +246,7 @@ def main(argv: list[str]) -> int:
         item_count, alias_count = build_site.build_generated_site(root, "homepage-data.js")
         print(f"Regenerated homepage-data.js with {item_count} Markdown-backed items")
         print(f"Generated {alias_count} article alias pages")
+        print("Regenerated sitemap.xml, includes/atom.xml, and site-data.js")
 
     if args.open:
         open_note(target)

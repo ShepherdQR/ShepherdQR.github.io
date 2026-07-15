@@ -32,6 +32,7 @@ STATIC_SITEMAP_PATHS = [
 ]
 SITE_PLANE_SOURCE = Path("data/site-plane.json")
 SITE_PLANE_OUTPUT = Path("site-data.js")
+ARTICLE_TEMPLATE_VERSION = "knowledge-note-v2"
 
 
 def root_relative_prefix(alias_path: Path, root: Path) -> str:
@@ -51,6 +52,7 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
         {
             "md": md_path,
             "canonical": canonical,
+            "template": ARTICLE_TEMPLATE_VERSION,
             "math": math_enabled,
             "interactive": interactive_enabled,
         },
@@ -95,7 +97,7 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
         feature_script_html += "\n"
 
     return f"""<!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="field">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,15 +114,17 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
 {feature_script_html}    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>{title}</title>
 </head>
-<body>
-    <main class="article-shell">
-        <nav class="article-nav" aria-label="Article navigation">
-            <a class="article-brand" href="{asset('index.html')}">ShepherdQR.github.io</a>
+<body data-template="{ARTICLE_TEMPLATE_VERSION}">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <main class="article-shell" id="main-content">
+        <nav class="article-nav" aria-label="知识界面导航">
+            <a class="article-brand" href="{asset('index.html')}">ZQR.WORLD</a>
             <div class="article-nav-links">
-                <a href="{asset('archive.html')}">Archive</a>
-                <a href="{asset('stats.html')}">Stats</a>
-                <a href="{asset('books.html')}">Books</a>
-                <a href="{asset('thoughts.html')}">Thoughts</a>
+                <a href="{asset('index.html')}">Field</a>
+                <a href="{asset('archive.html')}">Atlas</a>
+                <a href="{asset('stats.html')}">Evidence</a>
+                <a href="{asset('field.html')}">System</a>
+                <a href="{asset('series.html')}">Series</a>
             </div>
         </nav>
 
@@ -133,9 +137,11 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
             <div id="markdown-content" class="article-content" aria-live="polite"></div>
             <footer class="article-footer">
                 <div class="article-footer-links">
-                    <a href="{asset('index.html')}">Home</a>
-                    <a href="{asset('archive.html')}">Archive</a>
-                    <a href="{asset('stats.html')}">Stats</a>
+                    <a href="{asset('index.html')}">Field</a>
+                    <a href="{asset('archive.html')}">Atlas</a>
+                    <a href="{asset('stats.html')}">Evidence</a>
+                    <a href="{asset('field.html')}">System</a>
+                    <a href="{asset('series.html')}">Series</a>
                     <a href="{asset('books.html')}">Books</a>
                     <a href="{asset('thoughts.html')}">Thoughts</a>
                     <a href="{asset('study.html')}">Study</a>

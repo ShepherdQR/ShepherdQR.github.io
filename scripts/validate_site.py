@@ -14,6 +14,7 @@ from urllib.parse import quote, unquote, urlparse
 from xml.etree import ElementTree as ET
 
 import generate_homepage_data
+import build_site
 
 
 DATA_RE = re.compile(r"^\s*window\.HOMEPAGE_DATA\s*=\s*(?P<payload>[\s\S]*?)\s*;\s*$")
@@ -499,6 +500,21 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
             errors.append(f"{label}: alias page does not exist: {alias_path.relative_to(root).as_posix()}")
         else:
             alias_text = read_text(alias_path)
+            required_alias_fragments = {
+                "current article template": f'data-template="{build_site.ARTICLE_TEMPLATE_VERSION}"',
+                "default visual profile": 'data-theme="field"',
+                "theme controller": "includes/js/theme.js",
+                "skip link": 'class="skip-link"',
+                "main target": 'id="main-content"',
+                "Field navigation": ">Field</a>",
+                "Atlas navigation": ">Atlas</a>",
+                "Evidence navigation": ">Evidence</a>",
+                "System navigation": ">System</a>",
+                "Series navigation": ">Series</a>",
+            }
+            for fragment_label, fragment in required_alias_fragments.items():
+                if fragment not in alias_text:
+                    errors.append(f"{label}: generated alias page is missing {fragment_label}")
             try:
                 config = load_article_config(alias_path)
             except (ValueError, json.JSONDecodeError) as exc:
@@ -515,6 +531,8 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
                         f"{label}: article-config canonical mismatch in {alias_path.relative_to(root).as_posix()}: "
                         f"{config.get('canonical')} != {href}"
                     )
+                if config.get("template") != build_site.ARTICLE_TEMPLATE_VERSION:
+                    errors.append(f"{label}: article-config template does not match current generator")
                 expected_math = bool(item.get("math"))
                 expected_interactive = bool(item.get("interactive"))
                 if config.get("math") is not expected_math:

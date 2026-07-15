@@ -4,17 +4,25 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-07-12T00:00:00+08:00</updated>
+  <updated>2026-07-15T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>诗本无名</title>
+    <link href="https://zqr.world/thoughts/0032/" />
+    <id>https://zqr.world/thoughts/0032/</id>
+    <published>2026-07-15T00:00:00+08:00</published>
+    <updated>2026-07-15T01:09:59+08:00</updated>
+    <summary>张棋荣的诗歌。</summary>
+  </entry>
   <entry>
     <title>未名大赋</title>
     <link href="https://zqr.world/thoughts/0031/" />
     <id>https://zqr.world/thoughts/0031/</id>
     <published>2026-07-12T00:00:00+08:00</published>
     <updated>2026-07-12T19:13:41+08:00</updated>
-    <summary>一则写于 2026 年 7 月 12 日的极短诗性片段，以“诗本无名”保留命名之前的感受与生成时刻。</summary>
+    <summary>一则写于 2026 年 7 月 12 日的音韵节奏练习，探究疏松的热与雨的因等待而来而去。</summary>
   </entry>
   <entry>
     <title>约束场的形态</title>
@@ -399,13 +407,5 @@
     <published>2023-04-02T00:00:00+08:00</published>
     <updated>2023-04-02T19:02:14+08:00</updated>
     <summary>沈从文。 我的寫作就是頌揚一切與我同在的人類美麗與智慧。 生活或許使我平凡與沉落，我的感情還可以向高處跑去﹔生活或許使我孤單寂寞，我的作品將同許多人發生愛情同友誼。 AAAAAAA-BBBBBBBBB</summary>
-  </entry>
-  <entry>
-    <title>[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选</title>
-    <link href="https://zqr.world/books/0101/" />
-    <id>https://zqr.world/books/0101/</id>
-    <published>2023-03-30T00:00:00+08:00</published>
-    <updated>2023-03-30T22:10:13+08:00</updated>
-    <summary>。。。 一-位对冰岛诗歌相当熟悉、前不久访问过我们国家的拉脱维亚诗人告诉我,他错过了的我们诗歌里的东西,就是人类存在的固有性质的“危险性”和“不安全性”,而自然是多数冰岛诗歌中的一个突出而投上阴影的主题。这个评论到目前是有效的,它记录下了多数冰岛诗歌里缺乏明显“哲学的"或者“存在的”内容,但它忽略自然可以是恶意也可以是善意的这一事实,而两方面都深深涉及我们的…</summary>
   </entry>
 </feed>

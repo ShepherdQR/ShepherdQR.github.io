@@ -65,7 +65,7 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "未名大赋"
+python scripts/new_note.py Thoughts "诗本无名"
 python scripts/new_note.py Books "中国2014年度诗歌精选"
 ```
 
@@ -89,6 +89,8 @@ Useful options:
 ```powershell
 python scripts/new_note.py Books "鲁迅" --tags "文学,鲁迅" --series "读书"
 python scripts/new_note.py Thoughts "短札" --summary "一句短说明"
+python scripts/new_note.py Thoughts "数学札记" --math --lead-image "/resources/pics/example.png"
+python scripts/new_note.py Study "交互实验" --interactive
 python scripts/new_note.py Study "D3.js" --date 2026-05-20
 python scripts/new_note.py Thoughts "草稿标题" --status draft --no-build
 python scripts/new_note.py Thoughts "文章标题" --open
@@ -229,9 +231,12 @@ updated: "2026-05-20 21:30:00"
 updated_date: "2026-05-20"
 slug: "thoughts-0013"
 status: "published"
+summary: "一句短说明"
 tags: ["标签一", "标签二"]
 series: "系列名"
-summary: "一句短说明"
+lead_image: ""
+math: false
+interactive: false
 source:
   date_source:
     created: "new-note"
