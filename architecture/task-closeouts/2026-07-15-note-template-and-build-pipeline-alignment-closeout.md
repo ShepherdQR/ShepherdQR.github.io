@@ -35,5 +35,5 @@ Align the new-note authoring template with the current knowledge-interface artic
 
 ## Remaining
 
-- The implementation is local and uncommitted because this request did not explicitly authorize a commit or push.
-- The current working tree also contains the user's in-progress 0031/0032 content and generated publication changes; those should be reviewed and released together only when the user requests it.
+- Released on 2026-07-16 in `7b7b447 Publish latest notes and align article templates` after explicit owner authorization.
+- The 30 validation warnings remain non-blocking historical/content metadata observations; no template or build error remains.
