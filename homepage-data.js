@@ -1,5 +1,5 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-15",
+  "generatedAt": "2026-07-20",
   "items": [
     {
       "type": "Thoughts",
@@ -8,8 +8,8 @@ window.HOMEPAGE_DATA = {
       "created": "2026-07-15 01:09:59",
       "createdDate": "2026-07-15",
       "published": "2026-07-15",
-      "updated": "2026-07-15 01:09:59",
-      "updatedDate": "2026-07-15",
+      "updated": "2026-07-20 00:37:40",
+      "updatedDate": "2026-07-20",
       "slug": "thoughts-0032",
       "href": "/thoughts/0032/",
       "canonicalHref": "/thoughts/0032/",
