@@ -19,6 +19,7 @@ This directory stores architecture design documents and decision records for the
 
 ## Task Closeouts
 
+- [2026-07-20 Thoughts 0032 Update Publishing Closeout](task-closeouts/2026-07-20-thoughts-0032-update-publishing-closeout.md): Scoped release record for the expanded Thoughts 0032 note, synchronized update metadata, regenerated discovery artifacts, validation, and push.
 - [2026-07-16 Local Changes Release Closeout](task-closeouts/2026-07-16-local-changes-release-closeout.md): Final commit, push, validation, and repository-cleanliness record for the current note content, template alignment, generated article pages, and discovery artifacts.
 - [2026-07-15 Note Template and Build Pipeline Alignment Closeout](task-closeouts/2026-07-15-note-template-and-build-pipeline-alignment-closeout.md): Local implementation record for aligning new-note metadata, generated article shells, template regression checks, and the current deterministic build pipeline while preserving in-progress content edits.
 - [2026-07-13 Control-Plane Public Interface and Dual Theme Closeout](task-closeouts/2026-07-13-control-plane-public-interface-and-dual-theme-closeout.md): Release record for the Field/Atlas/Evidence/System architecture, declarative L1 public projection, searchable knowledge map, evidence observatory, article reading upgrade, Field/Museum visual profiles, validation, and delivery.
