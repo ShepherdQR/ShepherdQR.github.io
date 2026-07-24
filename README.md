@@ -65,8 +65,8 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "诗本无名"
-python scripts/new_note.py Books "中国2014年度诗歌精选"
+python scripts/new_note.py Thoughts "党建文选学习报告"
+python scripts/new_note.py Books "舒婷"
 ```
 
 Supported content types:
