@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "generator": "scripts/image_pipeline.py",
+  "widths": [
+    960,
+    1440,
+    2160
+  ],
+  "formatsRequested": [
+    "webp",
+    "avif"
+  ],
+  "formatsUnsupported": [
+    "avif"
+  ],
+  "assets": {
+    "resources/pics/20211209_乘除计算尺.jpg": {
+      "masterWidth": 433,
+      "masterHeight": 132,
+      "masterBytes": 13822,
+      "masterSha256": "1a212a5fedf544ebbe59703e3ac93106056ebe92f64bb88bd7cb34812505712f",
+      "variants": []
+    },
+    "resources/pics/20211209_初等代数_北京市初等数学编写组_1975.jpg": {
+      "masterWidth": 537,
+      "masterHeight": 802,
+      "masterBytes": 76784,
+      "masterSha256": "f1ae11af5bc4aa19c01955d0d6843f23291568276a7dc11be0fa0f5c5784a984",
+      "variants": []
+    },
+    "resources/pics/20211209_纸带很像算盘.jpg": {
+      "masterWidth": 198,
+      "masterHeight": 128,
+      "masterBytes": 8877,
+      "masterSha256": "9bf606e1b7fa4efd6a2e3e262823e267ca72d0058e28b7d757e8730c8f428769",
+      "variants": []
+    },
+    "resources/pics/QirongZHANG.png": {
+      "masterWidth": 1327,
+      "masterHeight": 1186,
+      "masterBytes": 2148914,
+      "masterSha256": "063ef7dc5523e2e8f9fc0a30a41ab03028570a4e62010bb19f154749e3451b86",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 858,
+          "path": "resources/pics/derivatives/063ef7dc5523e2e8-w960.webp",
+          "bytes": 49430,
+          "sha256": "fd5abd4b4c91d5fabea0dcf1c048e14689a46581221838e8e2a51b714fe9e3bf"
+        }
+      ]
+    },
+    "resources/pics/agent-symbiosis-constraint-field-mobile-zqr-world.png": {
+      "masterWidth": 1080,
+      "masterHeight": 2220,
+      "masterBytes": 400722,
+      "masterSha256": "63eabe2e464a0050e1bcb2ce8d39923c8a11c4e97a063697e4cd8825d96f2b2e",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1973,
+          "path": "resources/pics/derivatives/63eabe2e464a0050-w960.webp",
+          "bytes": 140452,
+          "sha256": "90c50e07851c2a176dbfa5745208de0a133f135814726f8303347f2e2a0d5217"
+        }
+      ]
+    },
+    "resources/pics/agi-structure-plan-nine-grid-v1.png": {
+      "masterWidth": 3840,
+      "masterHeight": 2880,
+      "masterBytes": 9250309,
+      "masterSha256": "2129b35acfd68288f5e7be9cbe9dfaf4cbfc16884d937da2fbe655f07c290bed",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "resources/pics/derivatives/2129b35acfd68288-w960.webp",
+          "bytes": 52350,
+          "sha256": "e347b9167bf3d0e33576bf5a765c1d8d866a1925fb238e4aa5fd48a75682c7ca"
+        },
+        {
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "path": "resources/pics/derivatives/2129b35acfd68288-w1440.webp",
+          "bytes": 100990,
+          "sha256": "3411100f740953849028cb466acb12657fe7c2cbe42990050dc887de4bea3a64"
+        },
+        {
+          "format": "webp",
+          "width": 2160,
+          "height": 1620,
+          "path": "resources/pics/derivatives/2129b35acfd68288-w2160.webp",
+          "bytes": 236696,
+          "sha256": "651935bbf7c6d82f5335a3ead5c9999dba839135fe2ee6e37e75c154a2d50bc9"
+        }
+      ]
+    },
+    "resources/pics/agi-structure-plan-nine-grid-v2.png": {
+      "masterWidth": 3840,
+      "masterHeight": 2880,
+      "masterBytes": 9321747,
+      "masterSha256": "71945cda70e7ff1efa8bd0f19572c29a1ceb7da2f988f60db421fb1b9689c758",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 720,
+          "path": "resources/pics/derivatives/71945cda70e7ff1e-w960.webp",
+          "bytes": 53138,
+          "sha256": "3bfbdf514c01b447666b803ef2098b01f00d143dce73555feae8b9658696a5be"
+        },
+        {
+          "format": "webp",
+          "width": 1440,
+          "height": 1080,
+          "path": "resources/pics/derivatives/71945cda70e7ff1e-w1440.webp",
+          "bytes": 102546,
+          "sha256": "7bcb44d8e835096c199dc168d136f6dfe16fa1693c6782869fbf6d66f6cb9fd3"
+        },
+        {
+          "format": "webp",
+          "width": 2160,
+          "height": 1620,
+          "path": "resources/pics/derivatives/71945cda70e7ff1e-w2160.webp",
+          "bytes": 240166,
+          "sha256": "a749de5bd4ac6ea3bff0809d71aba733ab7b335fd3f079993e8188da2bde3fed"
+        }
+      ]
+    },
+    "resources/pics/derivative-museum-specimen-mobile-poster-v3.png": {
+      "masterWidth": 1080,
+      "masterHeight": 1920,
+      "masterBytes": 1746948,
+      "masterSha256": "a81f0356298900a8681f10ce8fcf66c87ae43d36d88fe2eb8d188719c65311f9",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1707,
+          "path": "resources/pics/derivatives/a81f0356298900a8-w960.webp",
+          "bytes": 101408,
+          "sha256": "017949b01056c6a39768a7cdf9d901818b3def3167f71c1d4050469604d38599"
+        }
+      ]
+    },
+    "resources/pics/governance-view-mobile-red.png": {
+      "masterWidth": 1080,
+      "masterHeight": 1920,
+      "masterBytes": 1555953,
+      "masterSha256": "3b9dbd6e8ac5ad64c6e1cda34a9f92d383b488cab1a0833d5e01e575729856e9",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1707,
+          "path": "resources/pics/derivatives/3b9dbd6e8ac5ad64-w960.webp",
+          "bytes": 151976,
+          "sha256": "14f53dcbda34e06b7e36871572d81fcb375687f4c0572d59c0c42457f2174ee3"
+        }
+      ]
+    },
+    "resources/pics/leo-ai-cax-mobile-summary-v3-refined.png": {
+      "masterWidth": 1080,
+      "masterHeight": 2220,
+      "masterBytes": 555608,
+      "masterSha256": "cdfa52cc9e3a694e60a5f400fd8698b8b7a1dadc98378e84e397be631e9403b6",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1973,
+          "path": "resources/pics/derivatives/cdfa52cc9e3a694e-w960.webp",
+          "bytes": 113324,
+          "sha256": "08183c8e9f42bb07337a873090cb905e0b6c8c8c382eb57f92c4cb70f41bd3ab"
+        }
+      ]
+    },
+    "resources/pics/topos-asi-shadow-luxury-image-v2.png": {
+      "masterWidth": 3840,
+      "masterHeight": 2160,
+      "masterBytes": 6003782,
+      "masterSha256": "861e48243789fdcd52e1ef03c5fd85d4d5f12bf31abd8aac33fbd83b7aa8bb3f",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 540,
+          "path": "resources/pics/derivatives/861e48243789fdcd-w960.webp",
+          "bytes": 33536,
+          "sha256": "e35681d23f930bc9f3b3dc404c73c709ad73bd113bf1637d71b3406452566f1c"
+        },
+        {
+          "format": "webp",
+          "width": 1440,
+          "height": 810,
+          "path": "resources/pics/derivatives/861e48243789fdcd-w1440.webp",
+          "bytes": 59292,
+          "sha256": "572bf89e76cf2e0b2e4df30d028e5c36e3cf6a9735b281922251df983cfaf632"
+        },
+        {
+          "format": "webp",
+          "width": 2160,
+          "height": 1215,
+          "path": "resources/pics/derivatives/861e48243789fdcd-w2160.webp",
+          "bytes": 110278,
+          "sha256": "f29c787f55d9e7794179c3e0629a4b16cca7052d24c90d1867eea8a282b6f0f6"
+        }
+      ]
+    },
+    "resources/pics/topos-field-mobile-poster.png": {
+      "masterWidth": 1080,
+      "masterHeight": 1920,
+      "masterBytes": 1842545,
+      "masterSha256": "ea596b69d063b881c9577ad667abfcc878072a8bf2e3a2c069f9aff8e9fbf1f1",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1707,
+          "path": "resources/pics/derivatives/ea596b69d063b881-w960.webp",
+          "bytes": 159164,
+          "sha256": "efcc515cf3165e4afac03ae068af6bacf5da0ba494bd9c301f63fffd8d045ee8"
+        }
+      ]
+    },
+    "resources/pics/tropical-geometry-latex-category-theory-mobile-v3.png": {
+      "masterWidth": 1080,
+      "masterHeight": 2220,
+      "masterBytes": 290995,
+      "masterSha256": "641270a27c72b0a0ce6ba03182e64dca910f42d1ac426b290e71868af6883092",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1973,
+          "path": "resources/pics/derivatives/641270a27c72b0a0-w960.webp",
+          "bytes": 95414,
+          "sha256": "1a7d28f2d46bb21beef7e6d4c2a968aeda79921badfe27f5ea5225cf81907d60"
+        }
+      ]
+    },
+    "resources/pics/导数_一阶结构的统一理论_海报.png": {
+      "masterWidth": 2400,
+      "masterHeight": 4200,
+      "masterBytes": 1791889,
+      "masterSha256": "136e628f1d59de6114c80513a66e6e783f214dbda4fb41ffa92f5429897b5e24",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1680,
+          "path": "resources/pics/derivatives/136e628f1d59de61-w960.webp",
+          "bytes": 116088,
+          "sha256": "14a75dea4bf5472e75509fc03162cb2a65b21cd056bb6cc1260ffec7300caf20"
+        },
+        {
+          "format": "webp",
+          "width": 1440,
+          "height": 2520,
+          "path": "resources/pics/derivatives/136e628f1d59de61-w1440.webp",
+          "bytes": 202166,
+          "sha256": "bbe5dfabbb53633a6570ff8de9202ea98ed78fd285b1d389bc1b4a99af93a639"
+        },
+        {
+          "format": "webp",
+          "width": 2160,
+          "height": 3780,
+          "path": "resources/pics/derivatives/136e628f1d59de61-w2160.webp",
+          "bytes": 294900,
+          "sha256": "ff136111af67dc51a46369e066adc20774ddfc4090fe0be0438fb59e6cfea450"
+        }
+      ]
+    },
+    "resources/pics/导数的认识-ChatGPTImage.png": {
+      "masterWidth": 941,
+      "masterHeight": 1672,
+      "masterBytes": 2107990,
+      "masterSha256": "ed2c8e95d671fcb88a54b976c326e86b8a249ff76e7a96b5a55e41c596fe7708",
+      "variants": []
+    },
+    "resources/pics/导数的认识-derivative-first-order-mobile-poster.png": {
+      "masterWidth": 1080,
+      "masterHeight": 1920,
+      "masterBytes": 1353310,
+      "masterSha256": "754dcf672ff2dca32d3d23cb669655cb55f573c5885dbbe28a31a31b47dffc34",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 1707,
+          "path": "resources/pics/derivatives/754dcf672ff2dca3-w960.webp",
+          "bytes": 138784,
+          "sha256": "39bad1cb5b9249eff73bca6b7c8aae95f342f22ef45ac756b3badb871d89dd4b"
+        }
+      ]
+    },
+    "resources/pics/导数的认识-fable5max网页.png": {
+      "masterWidth": 1517,
+      "masterHeight": 8192,
+      "masterBytes": 1424334,
+      "masterSha256": "5c4b8e8aca38656bde694090658b33ef01673d3ee08c01f0a9959a03c990bd1d",
+      "variants": [
+        {
+          "format": "webp",
+          "width": 960,
+          "height": 5184,
+          "path": "resources/pics/derivatives/5c4b8e8aca38656b-w960.webp",
+          "bytes": 212854,
+          "sha256": "b7d63fbca851756f5d214bf4c8b3854835aeb0605cc041989f07a6561f44e7a5"
+        },
+        {
+          "format": "webp",
+          "width": 1440,
+          "height": 7776,
+          "path": "resources/pics/derivatives/5c4b8e8aca38656b-w1440.webp",
+          "bytes": 326556,
+          "sha256": "16459c9c355a68f2e47b31ab1160bd6454a4083c59ba81b5e0230b6087a084b1"
+        }
+      ]
+    }
+  }
+}

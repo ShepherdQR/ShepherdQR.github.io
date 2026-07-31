@@ -34,15 +34,14 @@
             <a href="./archive.html" data-route="archive">Atlas</a>
             <a href="./stats.html" data-route="stats">Evidence</a>
             <a href="./field.html" data-route="field">System</a>
-            <a href="./series.html" data-route="series">Series</a>
             <a class="nav-external" href="https://github.com/ShepherdQR" rel="me">GitHub ↗</a>
         </nav>
     </header>
 
     <main class="home-main" id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
+        <section class="hero current-exhibition" data-curatorial-state="current" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">ZQR.WORLD · PUBLIC KNOWLEDGE INTERFACE</p>
+                <p class="eyebrow">CURRENT EXHIBITION · PUBLIC KNOWLEDGE INTERFACE</p>
                 <h1 id="hero-title">Pursuing<span>Immortality.</span></h1>
                 <p class="hero-lead">以约束为骨，以证据为脉，让智能在可审查、可否决、可回滚的秩序中生长。</p>
                 <div class="button-row hero-actions">
@@ -54,15 +53,20 @@
                     <span class="hero-fact"><strong>Role</strong><span>Public knowledge data plane</span></span>
                     <span class="hero-fact"><strong>Method</strong><span>Markdown → evidence → release</span></span>
                 </div>
+                <dl class="object-registry hero-registry" aria-label="当前陈列登记">
+                    <div><dt>Exhibition state</dt><dd><span class="state-marker" data-state="current">Current</span></dd></div>
+                    <div><dt>Claim ceiling</dt><dd>Public knowledge projection</dd></div>
+                    <div><dt>Next human gate</dt><dd>Review, revise, or supersede</dd></div>
+                </dl>
             </div>
 
-            <aside class="control-pulse" aria-labelledby="pulse-heading">
+            <aside class="control-pulse provenance-rail" aria-labelledby="pulse-heading">
                 <div class="pulse-head">
                     <h2 class="pulse-title" id="pulse-heading">Control pulse</h2>
-                    <span class="pulse-live">Dated projection</span>
+                    <span class="pulse-live state-marker" id="pulse-freshness" data-state="catalogued">Dated projection</span>
                 </div>
-                <figure class="museum-specimen">
-                    <img src="./resources/pics/topos-asi-shadow-luxury-image-v2.png" alt="局部真理宪章：冷玻璃制度器物">
+                <figure class="museum-specimen" data-profile-object="museum">
+                    <img data-museum-src="./resources/pics/derivatives/861e48243789fdcd-w1440.webp" data-museum-srcset="./resources/pics/derivatives/861e48243789fdcd-w960.webp 960w, ./resources/pics/derivatives/861e48243789fdcd-w1440.webp 1440w, ./resources/pics/derivatives/861e48243789fdcd-w2160.webp 2160w" data-museum-sizes="(max-width: 760px) calc(100vw - 48px), min(1120px, 86vw)" alt="局部真理宪章：冷玻璃制度器物" width="3840" height="2160" decoding="async">
                     <figcaption><span>ACC. 2026 · 07 · T11</span><strong>局部真理宪章</strong><small>LOCAL TRUTH CHARTER / MATERIAL WITNESS</small></figcaption>
                 </figure>
                 <div class="pulse-body">
@@ -73,9 +77,10 @@
                         <li><span>Owner</span><strong id="pulse-owner">human</strong></li>
                         <li><span>Authority effect</span><strong id="pulse-authority">none</strong></li>
                         <li><span>Evidence as of</span><strong id="pulse-as-of">2026-07-12</strong></li>
+                        <li><span>Observation state</span><strong id="pulse-observation">checking</strong></li>
                     </ul>
                 </div>
-                <div class="pulse-foot"><a href="./field.html">查看系统边界与演化纪事 →</a></div>
+                <div class="pulse-foot"><a href="./field.html">查看系统边界</a><a href="./chronicle.html">读取演化纪事 →</a></div>
             </aside>
         </section>
 
@@ -87,7 +92,8 @@
                 </div>
                 <p>每条研究线都回答同一个更大的问题：如何让知识、能力与行动在真实约束中形成可继承的秩序。</p>
             </div>
-            <div class="field-grid" id="field-grid"></div>
+            <div class="registry-caption"><span>Declared narrative topology</span><strong id="field-coverage">— / — mapped</strong></div>
+            <ol class="field-grid field-registry" id="field-grid"></ol>
             <noscript><p class="noscript-note">启用 JavaScript 可读取声明式研究线与实时生成的内容统计；全部文章仍可从 <a href="./archive.html">Archive</a> 进入。</p></noscript>
         </section>
 
@@ -101,7 +107,7 @@
             </div>
             <div class="evidence-layout">
                 <ol class="evidence-list" id="latest-evidence"></ol>
-                <aside class="panel corpus-panel" aria-labelledby="corpus-title">
+                <aside class="corpus-panel provenance-rail" aria-labelledby="corpus-title">
                     <p class="eyebrow">CORPUS PULSE</p>
                     <h3 id="corpus-title">可持续积累的公开语料。</h3>
                     <div class="corpus-metrics">
@@ -109,6 +115,7 @@
                         <div class="corpus-metric"><strong id="metric-years">—</strong><span>Years</span></div>
                         <div class="corpus-metric"><strong id="metric-tagged">—</strong><span>Tagged</span></div>
                         <div class="corpus-metric"><strong id="metric-series">—</strong><span>Series</span></div>
+                        <div class="corpus-metric"><strong id="metric-mapped">—</strong><span>Mapped</span></div>
                     </div>
                     <a class="button" href="./stats.html">打开证据台</a>
                 </aside>
@@ -123,13 +130,13 @@
                 </div>
                 <p>精选不是排行榜，而是跨越算法、文学、哲学与治理的几条深层路径。</p>
             </div>
-            <div class="selected-grid" id="selected-grid"></div>
+            <ol class="selected-grid curated-registry" id="selected-grid"></ol>
         </section>
 
         <section class="home-section" aria-labelledby="about-title">
             <div class="about-layout">
-                <figure class="portrait-card">
-                    <img src="./resources/pics/QirongZHANG.png" alt="Qirong Zhang">
+                <figure class="portrait-card folio-portrait">
+                    <picture><source type="image/webp" srcset="./resources/pics/derivatives/063ef7dc5523e2e8-w960.webp 960w" sizes="(max-width: 760px) calc(100vw - 48px), 38vw"><img src="./resources/pics/QirongZHANG.png" alt="Qirong Zhang" width="1327" height="1186" loading="lazy" decoding="async"></picture>
                     <figcaption>Qirong Zhang · Complex Intelligence Architect</figcaption>
                 </figure>
                 <div class="about-copy">
@@ -150,6 +157,8 @@
             <nav class="footer-links" aria-label="页脚导航">
                 <a href="./includes/atom.xml">Atom</a>
                 <a href="./sitemap.xml">Sitemap</a>
+                <a href="./series.html">Series</a>
+                <a href="./chronicle.html">Chronicle</a>
                 <a href="./field.html#provenance">Provenance</a>
                 <span>© 2020–<span data-current-year>2026</span></span>
             </nav>
@@ -158,6 +167,7 @@
 
     <script src="./site-data.js"></script>
     <script src="./homepage-data.js"></script>
+    <script src="./includes/js/projection-truth.js"></script>
     <script src="./includes/js/home-page.js"></script>
     <script src="./includes/js/site-shell.js"></script>
 </body>

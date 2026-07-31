@@ -21,7 +21,7 @@ The site is Markdown-first:
 5. `data/site-plane.json` is the declarative source for the public L1 advisory
    projection; the build emits it as `site-data.js` for the homepage, Evidence,
    and System surfaces.
-6. Stable article URLs are generated as committed static pages, such as `/books/0056/` and `/thoughts/0012/`.
+6. Stable article URLs are generated as committed, build-rendered semantic HTML pages, such as `/books/0056/` and `/thoughts/0012/`; JavaScript progressively adds the object index, reading progress, math, and interactive enhancements.
 7. `sitemap.xml` and `includes/atom.xml` are generated from the same Markdown metadata.
 8. `render.html?md=...` remains as a legacy and diagnostic reader.
 
@@ -33,14 +33,12 @@ and `books/0056/index.html` must be committed after a build.
 
 The site now has four primary surfaces:
 
-- `Field` (`index.html`): identity, five narrative lines, fresh evidence,
-  curated entry paths, and corpus pulse.
-- `Atlas` (`archive.html`): full-text metadata search plus type, year, series,
-  and tag filters.
-- `Evidence` (`stats.html`): corpus shape, metadata coverage, dated evolution
-  baseline, and authority boundary.
-- `System` (`field.html`): L1 public projection, human-gated control loop,
-  WP0-WP8 Chronicle baseline, T12 candidate boundary, and provenance rail.
+- `Field` (`index.html`): Current Exhibition、叙事 registry、fresh evidence 与来源 rail。
+- `Atlas` (`archive.html`): 可切换的 Constellation / complete accession Ledger，加全文元数据筛选；Series 是二级策展路径。
+- `Evidence` (`stats.html`): 将摘要来源、叙事映射、修订链、dated baseline 与权威边界串成 Evidence Spine。
+- `System` (`field.html`): Charter Room、局部所有权 topology、人类门控循环与唯一 negative vitrine。
+
+`Chronicle` (`chronicle.html`) 是独立的 as-known-at 时间脊柱，从 Atlas 与 System 进入，不占用顶级导航。
 
 Every modern surface and generated article supports two persistent visual
 profiles:
@@ -56,6 +54,11 @@ The switch stores only a device-local viewing preference. It does not mutate
 content or control-plane state. The museum profile is not a generic dark mode:
 amber is reserved for human gates, red for blocked/refused/revoked states, and
 the long-form reading surface remains an archival paper folio.
+
+Museum has one explicit non-regression invariant: switching to Museum must show
+the **局部真理宪章 / Local Truth Charter** as the core exhibit. Field does not
+download that Museum-only material on first load; the switch hydrates a responsive
+WebP source when Museum is actually requested.
 
 ## Daily Workflow
 
@@ -90,6 +93,8 @@ Useful options:
 python scripts/new_note.py Books "鲁迅" --tags "文学,鲁迅" --series "读书"
 python scripts/new_note.py Thoughts "短札" --summary "一句短说明"
 python scripts/new_note.py Thoughts "数学札记" --math --lead-image "/resources/pics/example.png"
+python scripts/new_note.py Thoughts "研究日志" --field-ids "VL-ENGINEERING-EVIDENCE" --revision 1
+python scripts/new_note.py Thoughts "修订稿" --supersedes "Thoughts:0012" --revision 2
 python scripts/new_note.py Study "交互实验" --interactive
 python scripts/new_note.py Study "D3.js" --date 2026-05-20
 python scripts/new_note.py Thoughts "草稿标题" --status draft --no-build
@@ -142,6 +147,18 @@ This regenerates:
 - `/study/NNNN/index.html`
 - `/videos/NNNN/index.html`
 
+Generated article pages already contain readable semantic HTML. A CDN or
+runtime Markdown failure therefore cannot erase the article body.
+
+Responsive image masters and derivatives are tracked by
+`resources/pics/derivatives/manifest.json`. Normal builds validate and reuse the
+committed derivatives. To deliberately regenerate them with a locally installed
+Chromium-family browser, run:
+
+```powershell
+python scripts/build_site.py --images
+```
+
 If old Markdown files are missing front matter, the build will stop and list them. For migration cleanup only, run:
 
 ```powershell
@@ -172,7 +189,11 @@ The clean URL is the public canonical URL. The `render.html?md=...` form is main
 Run:
 
 ```powershell
-python scripts/validate_site.py
+python -B scripts/test_templates.py
+python -B scripts/test_article_durability.py
+python -B scripts/image_pipeline.py --check
+python -B scripts/validate_site.py --max-warnings 50
+python -B scripts/validate_aesthetic_system.py
 ```
 
 Expected result:
@@ -182,10 +203,11 @@ Site validation summary
   result: OK
 ```
 
-This checks that Markdown-backed records have valid clean URLs, source paths,
-legacy URLs, and generated alias pages. It also verifies the public site-plane
-projection, human/L1/T12 authority boundaries, dual visual profiles, root-page
-metadata, theme controller, and sitemap coverage.
+Together these checks cover Markdown truth projection, static article fallback,
+heading normalization, responsive image hashes, clean URLs, source paths,
+generated aliases, public site-plane freshness, role semantics, the Museum
+Charter invariant, transfer budgets, root metadata, theme hydration, and sitemap
+coverage.
 
 ### 6. Publish
 
@@ -234,6 +256,12 @@ status: "published"
 summary: "一句短说明"
 tags: ["标签一", "标签二"]
 series: "系列名"
+field_ids: ["VL-ENGINEERING-EVIDENCE"]
+revision: "1"
+revision_status: "current"
+supersedes: ""
+superseded_by: ""
+errata: []
 lead_image: ""
 math: false
 interactive: false
@@ -261,12 +289,17 @@ Optional but useful fields:
 - `tags`
 - `series`
 - `summary`
+- `field_ids`: stable narrative ids declared in `data/site-plane.json`
+- `revision`, `revision_status`, `supersedes`, `superseded_by`, and `errata` for explicit object history
 - `math: true` when the article requires MathJax
 - `interactive: true` when the article requires D3 or embedded scripts
 - `lead_image` for article sharing metadata; source-relative and site-root paths are supported
 
-The build preserves these fields in `homepage-data.js`. When `summary` is not
-provided, it derives a short plain-text excerpt for metadata and Atom feeds.
+The build preserves these fields in `homepage-data.js`. It emits
+`summarySource: explicit|derived`, `fieldIds`, and `mappingSource` so authored
+summaries and transparent taxonomy/default mappings are never reported as the
+same kind of evidence. When `summary` is absent, the first prose paragraph is
+cleaned into a plain-text excerpt for metadata and Atom feeds.
 MathJax and D3 are emitted only for articles that explicitly request them or
 whose existing Markdown content requires them.
 
@@ -278,7 +311,9 @@ whose existing Markdown content requires them.
 - `Books` count
 - `Thoughts` count
 - year distribution
-- explicit summary, tag, series, lead-image, math, and interactive coverage
+- authored summary versus derived excerpt coverage
+- narrative mapping coverage and mapping source
+- revision, supersession, errata, stale projection, and broken provenance counts
 - human ownership, L1 advisory mode, denied runtime surfaces, and the dated
   WP0-WP8 / T12-candidate projection
 
@@ -297,9 +332,14 @@ Important source files:
 - `scripts/new_note.py`: create a note and optionally build
 - `scripts/build_site.py`: regenerate site data and stable URL pages
 - `scripts/validate_site.py`: validate generated article URLs
+- `scripts/test_article_durability.py`: verify static article fallback, heading normalization, form variants, and responsive media
+- `scripts/image_pipeline.py`: generate or check responsive image derivatives
+- `scripts/validate_aesthetic_system.py`: enforce role tokens, Museum Charter preservation, freshness wiring, and transfer budgets
+- `scripts/capture_visual_matrix.ps1`: rebuild the Field/Museum desktop/mobile visual matrix, using segmented viewport samples for the very long Atlas Ledger
 - `data/site-plane.json`: canonical public projection and interface contract data
 - `site-data.js`: generated browser projection of `data/site-plane.json`
 - `field.html`: public System and Evolution Chronicle surface
+- `chronicle.html`: dated public knowledge and control-plane temporal spine
 - `includes/css/system.css`: shared tokens, primitives, accessibility, and dual themes
 - `includes/js/theme.js`: device-local Field/Museum profile switch
 - `includes/js/article-renderer.js`: shared Markdown article renderer

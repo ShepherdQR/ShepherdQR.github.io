@@ -58,6 +58,16 @@
     margin-bottom: 14px;
 }
 
+.archive-aside.provenance-rail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--rule-subtle);
+    background: transparent;
+}
+
 .collection-nav {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +81,7 @@
     align-items: center;
     padding: 5px 10px;
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: 2px;
     color: var(--ink-700);
     font-size: 12px;
     font-weight: 600;
@@ -97,9 +107,9 @@
     margin: 0 0 var(--space-4);
     padding: 16px;
     border: 1px solid var(--line);
-    border-radius: var(--radius-md);
+    border-radius: 0;
     background: color-mix(in srgb, var(--paper-0) 88%, transparent);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 0 var(--rule-strong);
     backdrop-filter: blur(18px);
 }
 
@@ -195,12 +205,265 @@
     min-height: 300px;
 }
 
+/* Atlas may switch between relational constellation and accession ledger. */
+.atlas-view {
+    min-width: 0;
+}
+
+.atlas-mode-switch,
+.atlas-view-switch {
+    display: inline-flex;
+    gap: 1px;
+    padding: 1px;
+    border: 1px solid var(--rule-strong);
+    border-radius: 2px;
+    background: var(--rule-subtle);
+}
+
+.atlas-mode-switch button,
+.atlas-view-switch button {
+    min-height: 2.25rem;
+    padding: 0.4rem 0.72rem;
+    border: 0;
+    border-radius: 0;
+    background: var(--surface-base);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.atlas-mode-switch button[aria-pressed="true"],
+.atlas-view-switch button[aria-pressed="true"] {
+    background: var(--role-displayed-soft);
+    color: var(--role-displayed);
+}
+
+.atlas-constellation {
+    position: relative;
+    display: none;
+    min-height: min(86vh, 980px);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(3.2rem, auto));
+    gap: 1px;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    border-block: 1px solid var(--rule-strong);
+    background:
+        radial-gradient(circle at 50% 50%, var(--role-displayed-soft), transparent 42%),
+        linear-gradient(var(--rule-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rule-subtle) 1px, transparent 1px);
+    background-size: auto, 3rem 3rem, 3rem 3rem;
+}
+
+.atlas-constellation::before,
+.atlas-constellation::after {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: min(72vw, 720px);
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(24deg);
+    background: var(--rule-strong);
+    content: "";
+}
+
+.atlas-constellation::after {
+    transform: translate(-50%, -50%) rotate(-31deg);
+}
+
+.constellation-hub {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-column: 6 / span 2;
+    grid-row: 6;
+    width: clamp(5.6rem, 8vw, 7.5rem);
+    aspect-ratio: 1;
+    align-self: center;
+    justify-self: center;
+    place-content: center;
+    padding: 0.75rem;
+    border: 1px solid var(--role-current);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--surface-base) 90%, var(--role-current-soft));
+    color: var(--text-primary);
+    text-align: center;
+    box-shadow: 0 0 0 0.55rem var(--role-current-soft);
+}
+
+.constellation-hub span,
+.constellation-hub small {
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.54rem;
+    letter-spacing: 0.065em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.constellation-hub strong {
+    color: var(--role-current);
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 3vw, 2.2rem);
+    font-weight: 550;
+    line-height: 1;
+}
+
+.atlas-node,
+.constellation-cluster {
+    --node-color: var(--role-displayed);
+    position: relative;
+    z-index: 1;
+    grid-column: var(--atlas-column, auto) / span var(--atlas-span, 3);
+    grid-row: var(--atlas-row, auto) / span 2;
+    align-self: center;
+    min-width: 0;
+    padding: 0.7rem 0.85rem 0.75rem 1rem;
+    border-left: 2px solid var(--node-color);
+    background: color-mix(in srgb, var(--surface-base) 91%, transparent);
+    color: var(--text-primary);
+}
+
+.atlas-node[data-state="current"], .constellation-cluster[data-state="current"] { --node-color: var(--role-current); }
+.atlas-node[data-state="verified"], .constellation-cluster[data-state="verified"] { --node-color: var(--role-verified); }
+.atlas-node[data-state="simulation"], .constellation-cluster[data-state="simulation"] { --node-color: var(--role-simulation); }
+.atlas-node[data-state="superseded"], .constellation-cluster[data-state="superseded"] { --node-color: var(--role-superseded); }
+
+.constellation-cluster header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.4rem 0.8rem;
+    align-items: baseline;
+}
+
+.constellation-cluster .state-marker {
+    grid-column: 1 / -1;
+}
+
+.constellation-cluster h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+    font-weight: 550;
+    line-height: 1.1;
+}
+
+.constellation-cluster header > strong {
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.constellation-cluster ol {
+    display: grid;
+    gap: 0;
+    margin: 0.8rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.constellation-cluster li {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--rule-subtle);
+}
+
+.constellation-cluster li a {
+    overflow: hidden;
+    color: var(--text-primary);
+    font-size: 0.74rem;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.constellation-cluster li span {
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.52rem;
+    letter-spacing: 0.04em;
+}
+
+.curated-paths {
+    margin-bottom: var(--space-4);
+}
+
+.path-registry {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--rule-strong);
+    background: var(--rule-subtle);
+    list-style: none;
+}
+
+.path-entry {
+    min-width: 0;
+    background: var(--surface-base);
+}
+
+.path-entry > a {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.9rem;
+    min-height: 8.5rem;
+    padding: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.path-index {
+    color: var(--role-displayed);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+}
+
+.path-entry strong,
+.path-entry small {
+    display: block;
+}
+
+.path-entry strong {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 550;
+    line-height: 1.2;
+}
+
+.path-entry small {
+    margin-top: 0.45rem;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.atlas-page[data-atlas-mode="constellation"] .atlas-constellation,
+body[data-atlas-mode="constellation"] .atlas-constellation {
+    display: grid;
+}
+
+.atlas-page[data-atlas-mode="constellation"] .atlas-ledger,
+.atlas-page[data-atlas-mode="constellation"] .archive-section:not(.atlas-constellation),
+body[data-atlas-mode="constellation"] .atlas-ledger,
+body[data-atlas-mode="constellation"] .archive-section:not(.atlas-constellation) {
+    display: none;
+}
+
 .archive-year {
     display: grid;
     grid-template-columns: 150px minmax(0, 1fr);
     gap: var(--space-4);
     padding: var(--space-4) 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--rule-strong);
 }
 
 .archive-year-heading {
@@ -239,7 +502,17 @@
     gap: 20px;
     align-items: start;
     padding: 17px 0;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--rule-subtle);
+}
+
+.archive-note[data-state="superseded"] {
+    color: var(--role-superseded);
+    opacity: 0.82;
+}
+
+.archive-note[data-state="withheld"] {
+    border-left: 2px solid var(--role-withheld);
+    padding-left: 0.9rem;
 }
 
 .archive-note:first-child {
@@ -294,9 +567,10 @@
 }
 
 .archive-note-kind {
-    display: flex;
+    display: grid;
+    gap: 0.35rem;
     min-width: 76px;
-    justify-content: flex-end;
+    justify-items: end;
 }
 
 .archive-empty {
@@ -343,11 +617,76 @@
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+    gap: 1px;
+    border: 1px solid var(--rule-strong);
+    background: var(--rule-subtle);
 }
 
 .stats-block {
     padding: 22px;
+    border: 0;
+    border-radius: 0;
+    background: var(--surface-base);
+    box-shadow: none;
+}
+
+.stats-grid.evidence-spine {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: clamp(1.5rem, 3vw, 2.25rem);
+    border: 0;
+    background: transparent;
+}
+
+.stats-grid.evidence-spine::before {
+    left: 0.36rem;
+}
+
+.evidence-station {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(3.5rem, 0.16fr) minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 3rem);
+    min-height: 0;
+    padding: clamp(1.3rem, 3vw, 2.4rem) 0;
+    border: 0;
+    border-top: 1px solid var(--rule-subtle);
+    background: transparent;
+}
+
+.evidence-station:first-child {
+    border-top-color: var(--rule-strong);
+}
+
+.evidence-station::before {
+    position: absolute;
+    top: clamp(1.65rem, 3vw, 2.75rem);
+    left: calc(clamp(1.5rem, 3vw, 2.25rem) * -1 - 0.02rem);
+    width: 0.58rem;
+    height: 0.58rem;
+    border: 2px solid var(--surface-base);
+    border-radius: 50%;
+    background: var(--role-verified);
+    box-shadow: 0 0 0 1px var(--role-verified);
+    content: "";
+}
+
+.station-index {
+    color: var(--role-verified);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+}
+
+.station-method {
+    max-width: 70ch;
+    margin: -0.55rem 0 1rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    line-height: 1.65;
 }
 
 .stats-block h2 {
@@ -387,14 +726,26 @@
 }
 
 .evidence-gate-list {
+    position: relative;
     display: grid;
     gap: 8px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 1rem;
     list-style: none;
 }
 
+.evidence-gate-list::before {
+    position: absolute;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.15rem;
+    width: 1px;
+    background: var(--rule-strong);
+    content: "";
+}
+
 .evidence-gate-list li {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 18px;
@@ -402,6 +753,19 @@
     border-top: 1px solid var(--line);
     color: var(--ink-700);
     font-size: 12px;
+}
+
+.evidence-gate-list li::before {
+    position: absolute;
+    top: 0.9rem;
+    left: -1.08rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    border: 1px solid var(--surface-base);
+    border-radius: 50%;
+    background: var(--role-verified);
+    box-shadow: 0 0 0 1px var(--role-verified);
+    content: "";
 }
 
 .evidence-gate-list strong {
@@ -416,6 +780,170 @@
     font-size: 9px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+/* Chronicle uses a temporal spine, never the Atlas spatial grammar. */
+.chronicle-main {
+    --chronicle-rail: clamp(7.5rem, 16vw, 12rem);
+}
+
+.chronicle-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.9rem 0;
+    border-block: 1px solid var(--rule-strong);
+}
+
+.chronicle-baseline {
+    margin: var(--space-5) 0 var(--space-6);
+}
+
+.chronicle-control-object {
+    max-width: 920px;
+    margin-top: 1.2rem;
+}
+
+.chronicle-control-object h3 {
+    margin: 1.2rem 0 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3.4rem);
+    font-weight: 550;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+}
+
+.chronicle-control-object blockquote {
+    margin: 1.4rem 0 0;
+    padding: 0.9rem 0 0.9rem 1.1rem;
+    border-left: 2px solid var(--rule-strong);
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+}
+
+.chronicle-spine {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule-strong);
+    list-style: none;
+}
+
+.chronicle-spine::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--chronicle-rail);
+    width: 1px;
+    background: var(--rule-strong);
+    content: "";
+}
+
+.chronicle-year {
+    --year-color: var(--role-displayed);
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--chronicle-rail) minmax(0, 1fr);
+    gap: clamp(1.5rem, 5vw, 4.5rem);
+    padding: clamp(1.7rem, 4vw, 3.5rem) 0;
+    border-bottom: 1px solid var(--rule-subtle);
+}
+
+.chronicle-year[data-state="current"] {
+    --year-color: var(--role-current);
+}
+
+.chronicle-year::before {
+    position: absolute;
+    top: clamp(2.1rem, 4vw, 3.9rem);
+    left: calc(var(--chronicle-rail) - 0.31rem);
+    width: 0.62rem;
+    height: 0.62rem;
+    border: 2px solid var(--surface-base);
+    border-radius: 50%;
+    background: var(--year-color);
+    box-shadow: 0 0 0 1px var(--year-color);
+    content: "";
+}
+
+.chronicle-year-mark {
+    align-self: start;
+    text-align: right;
+}
+
+.chronicle-year-mark time {
+    display: block;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    line-height: 0.9;
+}
+
+.chronicle-year-mark span {
+    display: block;
+    margin-top: 0.65rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.chronicle-year-body {
+    min-width: 0;
+}
+
+.chronicle-year-body > ol {
+    display: grid;
+    gap: 0;
+    margin: 1rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--rule-subtle);
+    list-style: none;
+}
+
+.chronicle-year-body > ol > li {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr) minmax(9rem, 0.55fr);
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule-subtle);
+}
+
+.chronicle-year-body > ol > li time,
+.chronicle-year-body > ol > li span {
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.035em;
+}
+
+.chronicle-year-body > ol > li a {
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+.chronicle-year-body > ol > li[data-state="superseded"] a {
+    color: var(--role-superseded);
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+}
+
+.chronicle-more {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--role-displayed);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
 }
 
 html[data-theme="museum"] .collection-nav a,
@@ -447,6 +975,19 @@ html[data-theme="museum"] .stats-metric {
     background: rgba(3, 7, 8, 0.58);
 }
 
+html[data-theme="museum"] .stats-grid.evidence-spine .evidence-station {
+    background: transparent;
+}
+
+html[data-theme="museum"] .atlas-constellation {
+    background:
+        radial-gradient(circle at 50% 50%, var(--role-displayed-soft), transparent 42%),
+        linear-gradient(var(--rule-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rule-subtle) 1px, transparent 1px),
+        #030708;
+    background-size: auto, 3.5rem 3.5rem, 3.5rem 3.5rem, auto;
+}
+
 @media (max-width: 920px) {
     .atlas-controls {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -458,6 +999,10 @@ html[data-theme="museum"] .stats-metric {
 
     .stats-overview {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .evidence-station {
+        grid-template-columns: 3.4rem minmax(0, 1fr);
     }
 }
 
@@ -490,6 +1035,40 @@ html[data-theme="museum"] .stats-metric {
     .archive-note time {
         grid-column: 1 / -1;
     }
+
+    .atlas-constellation {
+        min-height: 36rem;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: repeat(12, minmax(2.6rem, auto));
+    }
+
+    .atlas-node,
+    .constellation-cluster {
+        grid-column: auto / span 3 !important;
+        grid-row: auto / span 2 !important;
+    }
+
+    .constellation-hub {
+        grid-column: 3 / span 2;
+        grid-row: 6;
+    }
+
+    .path-registry {
+        grid-template-columns: 1fr;
+    }
+
+    .chronicle-main {
+        --chronicle-rail: 5.2rem;
+    }
+
+    .chronicle-year {
+        gap: 1.2rem;
+    }
+
+    .chronicle-year-body > ol > li {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
 }
 
 @media (max-width: 520px) {
@@ -504,5 +1083,112 @@ html[data-theme="museum"] .stats-metric {
 
     .clear-filters {
         width: 100%;
+    }
+
+    .archive-note {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-note time,
+    .archive-note-kind {
+        grid-column: auto;
+        justify-content: flex-start;
+        justify-items: start;
+    }
+
+    .atlas-status,
+    .evidence-gate-list li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .evidence-station {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .atlas-constellation {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        padding-inline: 0;
+    }
+
+    .atlas-node,
+    .constellation-cluster {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+    .constellation-hub {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        aspect-ratio: auto;
+        justify-self: stretch;
+        border-radius: 0;
+        box-shadow: inset 0 0 0 1px var(--role-current-soft);
+    }
+
+    .chronicle-main {
+        --chronicle-rail: 0;
+    }
+
+    .chronicle-spine::before {
+        left: 0.3rem;
+    }
+
+    .chronicle-year {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-left: 1.4rem;
+    }
+
+    .chronicle-year::before {
+        left: 0;
+    }
+
+    .chronicle-year-mark {
+        text-align: left;
+    }
+}
+
+@media print {
+    .archive-page {
+        width: 100%;
+        padding: 0;
+    }
+
+    .atlas-controls,
+    .atlas-mode-switch,
+    .atlas-view-switch,
+    .active-filters {
+        display: none !important;
+    }
+
+    .atlas-constellation {
+        display: none !important;
+    }
+
+    .atlas-ledger,
+    .archive-section {
+        display: block !important;
+    }
+
+    .archive-year-heading {
+        position: static;
+    }
+
+    .archive-note,
+    .stats-block,
+    .stats-metric,
+    .chronicle-year,
+    .chronicle-control-object {
+        break-inside: avoid;
+    }
+
+    .chronicle-spine::before,
+    .chronicle-year::before {
+        display: none;
     }
 }

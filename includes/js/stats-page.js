@@ -5,20 +5,24 @@
     const stats = data.stats || {};
     const byType = stats.byType || {};
     const years = stats.years || {};
+    const projection = window.PROJECTION_TRUTH || { state: 'catalogued', label: 'dated projection', ageDays: null, thresholdDays: 14 };
 
     renderSummary();
     renderOverview();
     renderMetadata();
+    renderMapping();
     renderGovernance();
     renderTypes();
     renderYears();
     renderBaseline();
+    renderRevisions();
     renderRecent();
 
     function renderSummary() {
         const tagged = items.filter(item => Array.isArray(item.tags) && item.tags.length).length;
         const summary = document.getElementById('archive-summary');
-        if (summary) summary.textContent = `${items.length} public objects across ${Object.keys(years).length} years. ${tagged} now carry explicit thematic tags; every count is generated from repository evidence.`;
+        const explicit = items.filter(item => item.summarySource === 'explicit').length;
+        if (summary) summary.textContent = `${items.length} public objects across ${Object.keys(years).length} years. ${tagged} carry thematic tags; ${explicit} carry authored summaries. Every count is generated from repository evidence.`;
     }
 
     function renderOverview() {
@@ -26,13 +30,14 @@
         if (!host) return;
         host.appendChild(metric(items.length, 'Public objects'));
         host.appendChild(metric(byType.Thoughts || 0, 'Thought objects'));
-        host.appendChild(metric(percent(items.filter(item => Array.isArray(item.tags) && item.tags.length).length, items.length), 'Tagged coverage'));
-        host.appendChild(metric(new Set(items.map(item => item.series).filter(Boolean)).size, 'Declared series'));
+        host.appendChild(metric(percent(items.filter(item => item.summarySource === 'explicit').length, items.length), 'Authored summaries'));
+        host.appendChild(metric(`${mappingCoverage().mapped}/${mappingCoverage().total}`, 'Narrative mapped'));
     }
 
     function renderMetadata() {
         const rows = [
-            ['Summary', items.filter(item => item.summary).length, items.length],
+            ['Authored summary', items.filter(item => item.summarySource === 'explicit').length, items.length],
+            ['Derived excerpt', items.filter(item => item.summarySource === 'derived').length, items.length],
             ['Tags', items.filter(item => Array.isArray(item.tags) && item.tags.length).length, items.length],
             ['Series', items.filter(item => item.series).length, items.length],
             ['Lead image', items.filter(item => item.leadImage).length, items.length],
@@ -40,6 +45,19 @@
             ['Interactive flag', items.filter(item => item.interactive).length, items.length]
         ];
         renderKeyValues('stats-metadata', rows.map(([label, value, total]) => [label, `${value} · ${percent(value, total)}`]));
+    }
+
+    function renderMapping() {
+        const coverage = mappingCoverage();
+        const bySource = coverage.bySource || {};
+        renderKeyValues('stats-mapping', [
+            ['Mapped objects', `${coverage.mapped} / ${coverage.total} · ${percent(coverage.mapped, coverage.total)}`],
+            ['Unmapped objects', coverage.unmapped ?? Math.max(0, coverage.total - coverage.mapped)],
+            ['Front matter', bySource.frontmatter || 0],
+            ['Selected register', bySource.selected || 0],
+            ['Taxonomy inference', bySource.taxonomy || 0],
+            ['Collection default', `${bySource.collection_default || 0} · disclosed ceiling`]
+        ]);
     }
 
     function renderGovernance() {
@@ -72,11 +90,27 @@
         const operational = baseline.operational_frontier || {};
         renderKeyValues('stats-baseline', [
             ['As known at', baseline.as_of || '—'],
+            ['Observation state', projection.label],
+            ['Projection age', projection.ageDays === null ? 'unknown' : `${projection.ageDays} days · threshold ${projection.thresholdDays}`],
             ['Evolution record', `${(frontier.completed_work_packages || []).length} work packages · WP0–WP8`],
             ['Next candidate', candidate.title_zh || candidate.title || '—'],
             ['Candidate state', candidate.status || '—'],
             ['Authority effect', candidate.authority_effect || 'none'],
             ['Broker process', operational.broker_process_started ? 'started' : 'not started']
+        ]);
+    }
+
+    function renderRevisions() {
+        const revised = items.filter(item => item.revisionOf || item.revision_of || item.supersedes).length;
+        const superseded = items.filter(item => item.supersededBy || item.superseded_by).length;
+        const errata = items.filter(item => Array.isArray(item.errata) ? item.errata.length : item.errata).length;
+        const sourceBound = items.filter(item => item.sourcePath || item.source_path).length;
+        renderKeyValues('stats-revisions', [
+            ['Source-bound objects', `${sourceBound} / ${items.length}`],
+            ['Revision links', revised],
+            ['Superseded objects', superseded],
+            ['Errata-bearing objects', errata],
+            ['Broken provenance', Math.max(0, items.length - sourceBound)]
         ]);
     }
 
@@ -145,5 +179,12 @@
 
     function includes(values, item) {
         return Array.isArray(values) && values.includes(item);
+    }
+
+    function mappingCoverage() {
+        const generated = stats.narrativeCoverage || {};
+        if (Number.isFinite(generated.total)) return generated;
+        const mapped = items.filter(item => Array.isArray(item.fieldIds) && item.fieldIds.length).length;
+        return { mapped, total: items.length, unmapped: items.length - mapped, bySource: {} };
     }
 })();

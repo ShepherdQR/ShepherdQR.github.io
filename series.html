@@ -11,33 +11,27 @@
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
     <title>Series - Pursuing Immortality</title>
 </head>
-<body>
+<body data-section="series">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="global-header">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ZQR.WORLD</strong><small>Public intelligence organ</small></span></a>
+        <nav class="primary-nav" aria-label="主导航"><a href="./index.html" data-route="home">Field</a><a href="./archive.html" data-route="atlas">Atlas</a><a href="./stats.html" data-route="stats">Evidence</a><a href="./field.html" data-route="field">System</a><a class="nav-external" href="https://github.com/ShepherdQR">GitHub ↗</a></nav>
+    </header>
     <main class="series-page" id="main-content">
         <header class="series-header">
-            <p class="series-kicker">ZQR.WORLD · KNOWLEDGE SERIES</p>
+            <p class="series-kicker">ATLAS PATHS · KNOWLEDGE SERIES</p>
             <h1>丛书 / 系列书</h1>
             <p id="series-summary" class="series-summary"></p>
-            <nav class="series-nav" aria-label="Series navigation">
-                <a href="./index.html">Home</a>
-                <a href="./archive.html">Archive</a>
-                <a href="./field.html">System</a>
-                <a href="./books.html">Books</a>
-                <a class="is-active" href="./series.html">Series</a>
-                <a href="./thoughts.html">Thoughts</a>
-                <a href="./study.html">Study</a>
-                <a href="./videos.html">Videos</a>
-                <a href="https://github.com/ShepherdQR">GitHub</a>
-            </nav>
+            <div class="series-nav provenance-rail" aria-label="Series boundary"><span class="state-marker" data-state="displayed">Curated path</span><p>Series is an Atlas path, not a ranking or a separate source of truth.</p><a href="./archive.html">Return to Atlas →</a></div>
         </header>
 
         <section class="series-section" aria-label="Series list">
-            <div id="series-list" class="series-grid"></div>
+            <ol id="series-list" class="series-grid series-registry"></ol>
         </section>
 
         <footer class="series-footer">Pursuing Immortality · Since 2020</footer>
     </main>
 
-    <script src="./includes/js/series-index.js"></script>
+    <script src="./includes/js/series-index.js"></script><script src="./includes/js/site-shell.js"></script>
 </body>
 </html>

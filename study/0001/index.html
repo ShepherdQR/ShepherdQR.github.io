@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="可视化库。 学习。 Fig001, basic test. On 2022050514:15, first picture using D3.">
+    <meta name="description" content="可视化库。">
     <meta property="og:title" content="JavaScript-D3.js">
-    <meta property="og:description" content="可视化库。 学习。 Fig001, basic test. On 2022050514:15, first picture using D3.">
+    <meta property="og:description" content="可视化库。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://zqr.world/study/0001/">
     <script src="../../includes/js/theme.js"></script>
@@ -13,11 +13,12 @@
     <link rel="alternate" type="application/atom+xml" href="../../includes/atom.xml" title="Atom feed">
     <link rel="shortcut icon" href="../../resources/pics/shepherd.png">
     <link rel="canonical" href="/study/0001/">
+    <meta name="article:form" content="research-log">
+    <meta name="article:source-digest" content="4fd76a186dbbfe44">
     <script src="../../includes/js/d3.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>JavaScript-D3.js</title>
 </head>
-<body data-template="knowledge-note-v2">
+<body data-template="knowledge-note-v3" data-article-form="research-log" data-static-rendered="true">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <main class="article-shell" id="main-content">
         <nav class="article-nav" aria-label="知识界面导航">
@@ -27,30 +28,60 @@
                 <a href="../../archive.html">Atlas</a>
                 <a href="../../stats.html">Evidence</a>
                 <a href="../../field.html">System</a>
+                <a href="../../chronicle.html">Chronicle</a>
                 <a href="../../series.html">Series</a>
             </div>
         </nav>
 
-        <article class="article-frame">
+        <article class="article-frame article-form-research-log" data-document-status="published">
             <header class="article-header">
-                <p id="currentInnerType" class="article-kicker"></p>
-                <h1 id="currentInnerTitle"></h1>
-                <div id="currentInnerMeta" class="article-meta"></div>
+                <p id="currentInnerType" class="article-kicker">Study · 0001 · research-log</p>
+                <h1 id="currentInnerTitle">JavaScript-D3.js</h1>
+                <div id="currentInnerMeta" class="article-meta"><time datetime="2021-08-05">Created 2021-08-05</time><time datetime="2022-05-08">Published 2022-05-08</time><time datetime="2022-05-02">Updated 2022-05-02</time></div>
             </header>
-            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+            <div id="markdown-content" class="article-content" data-build-rendered="true"><p>可视化库。</p>
+<hr>
+<p>学习。</p>
+<svg width = "400px" height = "20px">
+        <!--  H 10, reach coordinate H10 -->
+        <path d="M 10 10 H 390 V 19 H 10 L 10 10" />
+    </svg>
+<p>Fig001, basic test. On 20220505_14:15, first picture using D3.</p>
+<svg width = "960" height = "300" id = "mainsvg" class = "svgs">
+        <rect id="my_rect"
+      x="10" y="200" width="200" height="30"
+      stroke="black" fill="#69b3a2" stroke-width="1"
+      />
+    </svg>
+<script>
+
+    let mainsvg = d3.select("#mainsvg");
+
+    let maingroup = mainsvg
+        .append('g')
+        .attr('transform', `translate(${100}, ${100})`);
+
+        let circle = maingroup
+        .append('circle')
+        .attr('stroke', 'black')
+        .attr('r', '66')
+        .attr('fill', 'yellow');
+    </script></div>
+            <aside class="article-provenance" aria-labelledby="article-provenance-title"><p class="article-kicker">Revision &amp; provenance</p><h2 id="article-provenance-title">Document record</h2><dl><div><dt>Form</dt><dd>research-log</dd></div><div><dt>Source</dt><dd>Repository-authored Markdown</dd></div><div><dt>Source path</dt><dd>qrthoughts/year2022/month5/[Study][0001][JavaScript-D3.js].md</dd></div><div><dt>Revision</dt><dd>2022-05-02</dd></div><div><dt>Errata</dt><dd>None declared</dd></div><div><dt>Supersedes</dt><dd>None declared</dd></div><div><dt>Superseded by</dt><dd>None declared</dd></div><div><dt>Canonical</dt><dd>/study/0001/</dd></div></dl></aside>
             <footer class="article-footer">
                 <div class="article-footer-links">
                     <a href="../../index.html">Field</a>
                     <a href="../../archive.html">Atlas</a>
                     <a href="../../stats.html">Evidence</a>
                     <a href="../../field.html">System</a>
+                    <a href="../../chronicle.html">Chronicle</a>
                     <a href="../../series.html">Series</a>
                     <a href="../../books.html">Books</a>
                     <a href="../../thoughts.html">Thoughts</a>
                     <a href="../../study.html">Study</a>
                     <a href="../../videos.html">Videos</a>
                 </div>
-                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="相邻笔记"></nav>
             </footer>
         </article>
     </main>
@@ -58,9 +89,34 @@
     <script type="application/json" id="article-config">{
   "md": "/qrthoughts/year2022/month5/[Study][0001][JavaScript-D3.js].md",
   "canonical": "/study/0001/",
-  "template": "knowledge-note-v2",
+  "template": "knowledge-note-v3",
   "math": false,
-  "interactive": true
+  "interactive": true,
+  "staticRendered": true,
+  "sourceDigest": "4fd76a186dbbfe44",
+  "articleForm": "research-log",
+  "meta": {
+    "type": "Study",
+    "id": "0001",
+    "title": "JavaScript-D3.js",
+    "created_date": "2021-08-05",
+    "published": "2022-05-08",
+    "updated_date": "2022-05-02",
+    "tags": [],
+    "series": "",
+    "article_form": "research-log"
+  },
+  "governance": {
+    "source": "Repository-authored Markdown",
+    "sourcePath": "qrthoughts/year2022/month5/[Study][0001][JavaScript-D3.js].md",
+    "revision": "2022-05-02",
+    "errata": "None declared",
+    "supersedes": "None declared",
+    "supersededBy": "None declared",
+    "status": "published"
+  },
+  "headings": [],
+  "themeAssets": {}
 }</script>
     <script src="../../homepage-data.js"></script>
     <script src="../../includes/js/article-renderer.js"></script>

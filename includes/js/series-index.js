@@ -33,6 +33,9 @@
 
     function renderSeriesCard(series) {
         const counts = countItems(series.items || []);
+        const entry = document.createElement('li');
+        entry.className = 'series-register-entry';
+        entry.dataset.state = counts.done === counts.total ? 'verified' : 'current';
         const link = document.createElement('a');
         link.className = 'series-card';
         link.href = series.href || `./series/${series.slug}/`;
@@ -59,11 +62,18 @@
             tags.appendChild(pill('tag-pill', `updated ${series.lastUpdated}`));
         }
 
+        const marker = document.createElement('span');
+        marker.className = 'state-marker';
+        marker.dataset.state = entry.dataset.state;
+        marker.textContent = entry.dataset.state === 'verified' ? 'Completed path' : 'Current path';
+
+        link.appendChild(marker);
         link.appendChild(title);
         link.appendChild(description);
         link.appendChild(meta);
         link.appendChild(tags);
-        return link;
+        entry.appendChild(link);
+        return entry;
     }
 
     function countItems(items) {

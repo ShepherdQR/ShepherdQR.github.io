@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="50 Specific ways to improve your use of the standard template library. 连续内存容器，vector, string, deque; 基于节点的容器，在插入和删除时不会引起迭代器、指针、引用的失效。 判断式（返回bool的）一般是纯函数，没有状态。 foreach(vec.bagin(),v…">
+    <meta name="description" content="50 Specific ways to improve your use of the standard template library.">
     <meta property="og:title" content="Effective STL-Scott Meyers">
-    <meta property="og:description" content="50 Specific ways to improve your use of the standard template library. 连续内存容器，vector, string, deque; 基于节点的容器，在插入和删除时不会引起迭代器、指针、引用的失效。 判断式（返回bool的）一般是纯函数，没有状态。 foreach(vec.bagin(),v…">
+    <meta property="og:description" content="50 Specific ways to improve your use of the standard template library.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://zqr.world/books/0048/">
     <script src="../../includes/js/theme.js"></script>
@@ -13,10 +13,11 @@
     <link rel="alternate" type="application/atom+xml" href="../../includes/atom.xml" title="Atom feed">
     <link rel="shortcut icon" href="../../resources/pics/shepherd.png">
     <link rel="canonical" href="/books/0048/">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="article:form" content="reading">
+    <meta name="article:source-digest" content="acc947cd9a9021c6">
     <title>Effective STL-Scott Meyers</title>
 </head>
-<body data-template="knowledge-note-v2">
+<body data-template="knowledge-note-v3" data-article-form="reading" data-static-rendered="true">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <main class="article-shell" id="main-content">
         <nav class="article-nav" aria-label="知识界面导航">
@@ -26,30 +27,43 @@
                 <a href="../../archive.html">Atlas</a>
                 <a href="../../stats.html">Evidence</a>
                 <a href="../../field.html">System</a>
+                <a href="../../chronicle.html">Chronicle</a>
                 <a href="../../series.html">Series</a>
             </div>
         </nav>
 
-        <article class="article-frame">
+        <article class="article-frame article-form-reading" data-document-status="published">
             <header class="article-header">
-                <p id="currentInnerType" class="article-kicker"></p>
-                <h1 id="currentInnerTitle"></h1>
-                <div id="currentInnerMeta" class="article-meta"></div>
+                <p id="currentInnerType" class="article-kicker">Books · 0048 · reading</p>
+                <h1 id="currentInnerTitle">Effective STL-Scott Meyers</h1>
+                <div id="currentInnerMeta" class="article-meta"><time datetime="2022-06-02">Created 2022-06-02</time><time datetime="2022-10-08">Published 2022-10-08</time><time datetime="2022-10-08">Updated 2022-10-08</time></div>
             </header>
-            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+            <div id="markdown-content" class="article-content" data-build-rendered="true"><p>50 Specific ways to improve your use of the standard template library.</p>
+<hr>
+<p>连续内存容器，vector, string, deque; 基于节点的容器，在插入和删除时不会引起迭代器、指针、引用的失效。</p>
+<p>判断式（返回bool的）一般是纯函数，没有状态。</p>
+<p>for<em>each(vec.bagin(),vec.end(),mem</em>fun(&amp;A::test));</p>
+<p>//元素从data复制到d前端，每个增加42: transform(data, data+number, insert(d,d.begin()), bind2nd(plus &lt; double &gt;(), 42));</p>
+<p>实践中，完全平衡树效率总体不如红黑树。</p>
+<p>find算法用的是相等，find成员函数用的是等价。</p>
+<p>greater &lt; double &gt; ::operator()是内联的，实例化sort时展开。</p>
+<p>函数指针做参数会抑制内联。</p>
+<p>不要写容易写，不容易读的代码。</p></div>
+            <aside class="article-provenance" aria-labelledby="article-provenance-title"><p class="article-kicker">Revision &amp; provenance</p><h2 id="article-provenance-title">Document record</h2><dl><div><dt>Form</dt><dd>reading</dd></div><div><dt>Source</dt><dd>Repository-authored Markdown</dd></div><div><dt>Source path</dt><dd>qrthoughts/year2022/month10/[Books][0048][Effective STL-Scott Meyers].md</dd></div><div><dt>Revision</dt><dd>2022-10-08</dd></div><div><dt>Errata</dt><dd>None declared</dd></div><div><dt>Supersedes</dt><dd>None declared</dd></div><div><dt>Superseded by</dt><dd>None declared</dd></div><div><dt>Canonical</dt><dd>/books/0048/</dd></div></dl></aside>
             <footer class="article-footer">
                 <div class="article-footer-links">
                     <a href="../../index.html">Field</a>
                     <a href="../../archive.html">Atlas</a>
                     <a href="../../stats.html">Evidence</a>
                     <a href="../../field.html">System</a>
+                    <a href="../../chronicle.html">Chronicle</a>
                     <a href="../../series.html">Series</a>
                     <a href="../../books.html">Books</a>
                     <a href="../../thoughts.html">Thoughts</a>
                     <a href="../../study.html">Study</a>
                     <a href="../../videos.html">Videos</a>
                 </div>
-                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="相邻笔记"></nav>
             </footer>
         </article>
     </main>
@@ -57,9 +71,34 @@
     <script type="application/json" id="article-config">{
   "md": "/qrthoughts/year2022/month10/[Books][0048][Effective STL-Scott Meyers].md",
   "canonical": "/books/0048/",
-  "template": "knowledge-note-v2",
+  "template": "knowledge-note-v3",
   "math": false,
-  "interactive": false
+  "interactive": false,
+  "staticRendered": true,
+  "sourceDigest": "acc947cd9a9021c6",
+  "articleForm": "reading",
+  "meta": {
+    "type": "Books",
+    "id": "0048",
+    "title": "Effective STL-Scott Meyers",
+    "created_date": "2022-06-02",
+    "published": "2022-10-08",
+    "updated_date": "2022-10-08",
+    "tags": [],
+    "series": "",
+    "article_form": "reading"
+  },
+  "governance": {
+    "source": "Repository-authored Markdown",
+    "sourcePath": "qrthoughts/year2022/month10/[Books][0048][Effective STL-Scott Meyers].md",
+    "revision": "2022-10-08",
+    "errata": "None declared",
+    "supersedes": "None declared",
+    "supersededBy": "None declared",
+    "status": "published"
+  },
+  "headings": [],
+  "themeAssets": {}
 }</script>
     <script src="../../homepage-data.js"></script>
     <script src="../../includes/js/article-renderer.js"></script>

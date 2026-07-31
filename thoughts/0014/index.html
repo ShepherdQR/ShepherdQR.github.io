@@ -13,10 +13,11 @@
     <link rel="alternate" type="application/atom+xml" href="../../includes/atom.xml" title="Atom feed">
     <link rel="shortcut icon" href="../../resources/pics/shepherd.png">
     <link rel="canonical" href="/thoughts/0014/">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="article:form" content="research-log">
+    <meta name="article:source-digest" content="08377cd609eec9f6">
     <title>AI4AI R&amp;D</title>
 </head>
-<body data-template="knowledge-note-v2">
+<body data-template="knowledge-note-v3" data-article-form="research-log" data-static-rendered="true">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <main class="article-shell" id="main-content">
         <nav class="article-nav" aria-label="知识界面导航">
@@ -26,30 +27,81 @@
                 <a href="../../archive.html">Atlas</a>
                 <a href="../../stats.html">Evidence</a>
                 <a href="../../field.html">System</a>
+                <a href="../../chronicle.html">Chronicle</a>
                 <a href="../../series.html">Series</a>
             </div>
         </nav>
 
-        <article class="article-frame">
+        <article class="article-frame article-form-research-log" data-document-status="published">
             <header class="article-header">
-                <p id="currentInnerType" class="article-kicker"></p>
-                <h1 id="currentInnerTitle"></h1>
-                <div id="currentInnerMeta" class="article-meta"></div>
+                <p id="currentInnerType" class="article-kicker">Thoughts · 0014 · research-log</p>
+                <h1 id="currentInnerTitle">AI4AI R&amp;D</h1>
+                <div id="currentInnerMeta" class="article-meta"><time datetime="2026-06-05">Created 2026-06-05</time><time datetime="2026-06-05">Published 2026-06-05</time><time datetime="2026-06-05">Updated 2026-06-05</time></div>
+                <div class="article-header-tags" aria-label="Taxonomy"><a href="/archive.html?series=Agentic%20Software%20Engineering">Agentic Software Engineering</a><a href="/archive.html?tag=ASI">#ASI</a><a href="/archive.html?tag=agent">#agent</a><a href="/archive.html?tag=software-engineering">#software-engineering</a><a href="/archive.html?tag=evaluation">#evaluation</a><a href="/archive.html?tag=AI-boundary">#AI-boundary</a></div>
             </header>
-            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+            <div id="markdown-content" class="article-content" data-build-rendered="true"><h2 id="ai4ai-r-d-v1-想到哪里随意写">AI4AI R&amp;D 【V1 想到哪里随意写】</h2>
+<p>Today, Anthoro published <code>When all builds itself</code>, RSI(recursive self-improvement) is actually taking off.</p>
+<h3 id="我先生成这些自然的观点">我先生成这些自然的观点：</h3>
+<ul><li>核武器级别的AI，中国有没有，怎么有</li><li>SE的复杂性治理的对象，必须升级为【治理过程】（闭环/自动化/高速的研发模式）</li><li>从传统SE流程查找升级点：</li></ul>
+<pre><code>需求：诉求和目标模型，价值问题，做什么样的问题；
+设计：架构，约束/边界，给出对自由度的限制；
+开发：过；
+测试：验证体系，可信赖/可应答性的证明；
+安全/权限：agent的边界，改代码/测试/评估器，改生产代码；
+组织瓶颈识别：搞定代码后，审查/部署/代码质量/合规性/缺陷响应，会自然变成新的瓶颈。
+组织设计：核心是以下角色的分配问题：目标/执行/测试/审计/停机。甚至责任分配。</code></pre>
+<ul><li>我们一直忽视的点位：风险/证据要求/缺陷聚类/知识淬炼/判断力打磨。</li></ul>
+<h3 id="对于agent的行为-我们随意给出一些张口就来的建议">对于agent的行为，我们随意给出一些张口就来的建议</h3>
+<ul><li>改动涉及核心代码/基础设施/高危漏洞，需要高等级审查；</li><li>同时改动【代码/测试/评估器】，必须有另外1个评估器评估；</li><li>push和review必须节奏适配，速度可升高可降低；</li><li>RSI行为必须sandbox，可回滚，行为严格受限，有严格的丰富的文档；</li><li>停机准则/价值目标/原始诉求，必须人工审查；</li><li>A所制作的分身A',必须不能有超越A的权限。</li></ul>
+<h3 id="我一直在做什么">我一直在做什么</h3>
+<ul><li>开发流程制度化：约束/调度/审计/停机/复盘/判断力升级。</li><li>新管理模式探索</li><li>把唯一限制因素【人】排除</li><li>组织行为范式</li><li>agentic-se新范式</li><li>可计算/可量化/可约束的组织制度工程</li><li>组织/制度控制论</li><li>Reflexive SE：反身SE。【补充】</li><li>高可信的AI研发组织（低人类带宽，以后描述人的词，需要和描述机器的词，颠倒）【补充】</li><li>如何让软件化组织可靠地产生更强的软件化组织？【补充】</li></ul>
+<h3 id="此时抽象出的制度单元-细胞">此时抽象出的制度单元/细胞</h3>
+<ul><li>价值层：判断力，如目标/价值/优先级/风险；</li><li>契约层：角色/职责，IO，工具，行为规范；</li><li>权限：文件/模型/网络/指令；</li><li>经济性/预算：token，时间【今天20260606领导提出，我才显示考虑】，产出评价；</li><li>证据：测试/日志/证据/链接/benchmark/场景；</li><li>审计：统计/复盘/抽样；</li><li>停机：触发器（事件设计）/影响性分析</li></ul>
+<h3 id="ai4ai">AI4AI</h3>
+<p>事实，或者即将工程化的部分：</p>
+<ul><li>所有我们努力的【制度化】，完全ai接管；</li><li>没有【人】的位置预留</li><li>【人】作为【系统外部对象】，与以下【外部不变量】同一层面：组织规范/形式化契约/基线/只读日志/独立评估器。</li></ul>
+<h3 id="当我写到这里-我们在ai4ai还追求什么-必须且只有从-传统se流程-中寻找">当我写到这里，我们在AI4AI还追求什么？必须且只有从【传统SE流程】中寻找</h3>
+<ul><li>诉求/需求/目标：【AI4】还是要和【人4】是一样的；</li><li>证据：充分。【好像只有充分/大量的要求，必须大量，不同的数量我们能做出的判断是不一样的，足够以后，就可以】；</li><li>风险：受控。【必须要有风险，没有风险的事情不做，因此必须可控，且，必须在可控-失控边缘游走（最佳状态）】；</li><li>认识/知识/经验：持久化/可传承/热插拔；</li><li>停机准则：CS的核心。</li></ul>
+<h3 id="作为开发者-组织-我们究竟是什么">作为开发者/组织，我们究竟是什么</h3>
+<ul><li>提供可靠/可信赖/可应答的产品，依靠：认知状态 + 组织编排 + 复杂性控制力；</li><li>我们所拥有的一切，只有：prompt，契约，工具，评估/测试集，gold set，审查机制/规则，审计（各种指标，例如领导关心的经济性指标），停机条件，人的接口。</li><li>我们【人】，在这里面，追求发展，必然是实践（失败），我们的失败，只有对应agent的失败（agent的错误/失败的类型）：理解错误/误读，规格漂移，实现迎合，评价器有偏/污染，幻觉，越界/越权，遗忘，丢失上下文，局部-全局的gap，协调步调不统一。</li><li>最大的担心：【人】跟不上【agent】的发展/速度/节奏，甚至在责任担当/判断力等领域</li></ul>
+<h3 id="结论-我目前的研究-完全契合ai4ai发展进程">结论：我目前的研究，完全契合AI4AI发展进程</h3>
+<p>我打的叙事线逻辑，本质是【组织设计】，目前是多agent的协调机制，保持【目标/证据/职责/权限/停机/复盘】动态稳定。</p>
+<h2 id="ai4ai-r-d-v2-冷静看看我的想法">AI4AI R&amp;D 【V2 冷静看看我的想法】</h2>
+<h3 id="冷静后-认为非常激进">冷静后，认为非常激进</h3>
+<ul><li>迫切认为【人】是制约因素；</li><li>所谓【足够/大量的证据】，是臆想；</li><li>最佳状态 == 边缘游走，需要再斟酌。一旦我这边要担风险了，肯定我就绝对不会这样认为了；</li></ul>
+<h3 id="没有说明白anthro本身的这个事件">没有说明白anthro本身的这个事件</h3>
+<ul><li>叙事角度：融资/万亿准备/资本运作；</li><li>战略上：一直是宽以待己，严格待人；</li><li>ASI究竟怎样：自动化链路ok，正在工程化，且已经发生了关键瓶颈的转移（实现/执行能力 -&gt; 价值判断/验证/治理/停机）；</li><li>看似呼吁停机，实则吹响号角。</li></ul>
+<h3 id="我还丢了什么">我还丢了什么</h3>
+<ul><li>肯定是我不熟悉的部分：部署/安全/维护；实验/解释</li><li>没有提到我一直重视的话题：自指性/递归论；</li></ul>
+<h3 id="人在哪里-被压缩到高杠杆治理接口">人在哪里：被压缩到高杠杆治理接口</h3>
+<ul><li>【解释】价值锚点：给定目标/价值，是判断力问题，什么值得做/什么可信/方向在哪里；</li><li>【解释】合法性来源：失败复盘/组织学习/认知源头</li><li>【责任】责任主体；</li><li>【责任】风险承担者：风险预算；</li><li>【授权】停机授权者；</li></ul>
+<h3 id="证据问题-依然用我们的范式来结构性处理-从追求数量-改为追求结构">证据问题，依然用我们的范式来结构性处理：从追求数量，改为追求结构</h3>
+<p>证据的性质方面，我们追求以下方面：</p>
+<ul><li>独立性：来源，例如是否是独立评估器</li><li>覆盖性：聚类，是否对风险类别覆盖完全，或核心风险是否覆盖</li><li>对抗性/抗毁性：反例/红队/恶意输入</li><li>因果性：区别于相关性；</li><li>不可篡改性：日志/摘要/评估/结果的归档/可追溯；</li><li>迁移性：跨场景/版本/数据的稳定性</li></ul>
+<h3 id="比较柔顺是拉到数学层-发展-证据演算-系统">比较柔顺是拉到数学层，发展【证据演算】系统</h3>
+<p>结构化输出的证据结构：</p>
+<ul><li>结论A，A的证据集{B}；</li><li>{B}的独立性/覆盖性/抗毁性</li><li>{B}和A的因果性</li><li>{B}的访问权限约定</li><li>{B}的边界，何时/什么情况下，可以推翻{B}</li></ul>
+<h3 id="高风险边缘不是我们的追求-限制在可控范围内-追求高-学习率">高风险边缘不是我们的追求，限制在可控范围内，追求高【学习率】</h3>
+<p>风险的可控：</p>
+<ul><li>局部化</li><li>分层化</li><li>可回滚</li><li>可分类/归因</li></ul>
+<h3 id="我一直没有考虑的-开发-是时候考虑这方面的新玩法-制度约束下的生成式搜索">我一直没有考虑的【开发】，是时候考虑这方面的新玩法：制度约束下的生成式搜索</h3>
+<p>可能的新玩法：单线程 -&gt; 多线程/多方案</p>
+<ul><li>定义搜索空间</li><li>约定工具调用权限/逻辑</li><li>记录中间状态</li><li>受控/无污染的自动修复</li><li>完全解耦：编码/测试/验证（评估器）</li><li>审计过程如何实现风险降低</li></ul></div>
+            <aside class="article-provenance" aria-labelledby="article-provenance-title"><p class="article-kicker">Revision &amp; provenance</p><h2 id="article-provenance-title">Document record</h2><dl><div><dt>Form</dt><dd>research-log</dd></div><div><dt>Source</dt><dd>Repository-authored Markdown</dd></div><div><dt>Source path</dt><dd>qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&amp;D].md</dd></div><div><dt>Revision</dt><dd>2026-06-05</dd></div><div><dt>Errata</dt><dd>None declared</dd></div><div><dt>Supersedes</dt><dd>None declared</dd></div><div><dt>Superseded by</dt><dd>None declared</dd></div><div><dt>Canonical</dt><dd>/thoughts/0014/</dd></div></dl></aside>
             <footer class="article-footer">
                 <div class="article-footer-links">
                     <a href="../../index.html">Field</a>
                     <a href="../../archive.html">Atlas</a>
                     <a href="../../stats.html">Evidence</a>
                     <a href="../../field.html">System</a>
+                    <a href="../../chronicle.html">Chronicle</a>
                     <a href="../../series.html">Series</a>
                     <a href="../../books.html">Books</a>
                     <a href="../../thoughts.html">Thoughts</a>
                     <a href="../../study.html">Study</a>
                     <a href="../../videos.html">Videos</a>
                 </div>
-                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="相邻笔记"></nav>
             </footer>
         </article>
     </main>
@@ -57,9 +109,131 @@
     <script type="application/json" id="article-config">{
   "md": "/qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&D].md",
   "canonical": "/thoughts/0014/",
-  "template": "knowledge-note-v2",
+  "template": "knowledge-note-v3",
   "math": false,
-  "interactive": false
+  "interactive": false,
+  "staticRendered": true,
+  "sourceDigest": "08377cd609eec9f6",
+  "articleForm": "research-log",
+  "meta": {
+    "type": "Thoughts",
+    "id": "0014",
+    "title": "AI4AI R&D",
+    "created_date": "2026-06-05",
+    "published": "2026-06-05",
+    "updated_date": "2026-06-05",
+    "tags": [
+      "ASI",
+      "agent",
+      "software-engineering",
+      "evaluation",
+      "AI-boundary"
+    ],
+    "series": "Agentic Software Engineering",
+    "article_form": "research-log"
+  },
+  "governance": {
+    "source": "Repository-authored Markdown",
+    "sourcePath": "qrthoughts/year2026/month6/[Thoughts][0014][AI4AI R&D].md",
+    "revision": "2026-06-05",
+    "errata": "None declared",
+    "supersedes": "None declared",
+    "supersededBy": "None declared",
+    "status": "published"
+  },
+  "headings": [
+    {
+      "level": 2,
+      "id": "ai4ai-r-d-v1-想到哪里随意写",
+      "text": "AI4AI R&D 【V1 想到哪里随意写】"
+    },
+    {
+      "level": 3,
+      "id": "我先生成这些自然的观点",
+      "text": "我先生成这些自然的观点："
+    },
+    {
+      "level": 3,
+      "id": "对于agent的行为-我们随意给出一些张口就来的建议",
+      "text": "对于agent的行为，我们随意给出一些张口就来的建议"
+    },
+    {
+      "level": 3,
+      "id": "我一直在做什么",
+      "text": "我一直在做什么"
+    },
+    {
+      "level": 3,
+      "id": "此时抽象出的制度单元-细胞",
+      "text": "此时抽象出的制度单元/细胞"
+    },
+    {
+      "level": 3,
+      "id": "ai4ai",
+      "text": "AI4AI"
+    },
+    {
+      "level": 3,
+      "id": "当我写到这里-我们在ai4ai还追求什么-必须且只有从-传统se流程-中寻找",
+      "text": "当我写到这里，我们在AI4AI还追求什么？必须且只有从【传统SE流程】中寻找"
+    },
+    {
+      "level": 3,
+      "id": "作为开发者-组织-我们究竟是什么",
+      "text": "作为开发者/组织，我们究竟是什么"
+    },
+    {
+      "level": 3,
+      "id": "结论-我目前的研究-完全契合ai4ai发展进程",
+      "text": "结论：我目前的研究，完全契合AI4AI发展进程"
+    },
+    {
+      "level": 2,
+      "id": "ai4ai-r-d-v2-冷静看看我的想法",
+      "text": "AI4AI R&D 【V2 冷静看看我的想法】"
+    },
+    {
+      "level": 3,
+      "id": "冷静后-认为非常激进",
+      "text": "冷静后，认为非常激进"
+    },
+    {
+      "level": 3,
+      "id": "没有说明白anthro本身的这个事件",
+      "text": "没有说明白anthro本身的这个事件"
+    },
+    {
+      "level": 3,
+      "id": "我还丢了什么",
+      "text": "我还丢了什么"
+    },
+    {
+      "level": 3,
+      "id": "人在哪里-被压缩到高杠杆治理接口",
+      "text": "人在哪里：被压缩到高杠杆治理接口"
+    },
+    {
+      "level": 3,
+      "id": "证据问题-依然用我们的范式来结构性处理-从追求数量-改为追求结构",
+      "text": "证据问题，依然用我们的范式来结构性处理：从追求数量，改为追求结构"
+    },
+    {
+      "level": 3,
+      "id": "比较柔顺是拉到数学层-发展-证据演算-系统",
+      "text": "比较柔顺是拉到数学层，发展【证据演算】系统"
+    },
+    {
+      "level": 3,
+      "id": "高风险边缘不是我们的追求-限制在可控范围内-追求高-学习率",
+      "text": "高风险边缘不是我们的追求，限制在可控范围内，追求高【学习率】"
+    },
+    {
+      "level": 3,
+      "id": "我一直没有考虑的-开发-是时候考虑这方面的新玩法-制度约束下的生成式搜索",
+      "text": "我一直没有考虑的【开发】，是时候考虑这方面的新玩法：制度约束下的生成式搜索"
+    }
+  ],
+  "themeAssets": {}
 }</script>
     <script src="../../homepage-data.js"></script>
     <script src="../../includes/js/article-renderer.js"></script>

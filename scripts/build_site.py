@@ -9,8 +9,10 @@ import html
 import json
 import sys
 from pathlib import Path
+from urllib.parse import quote
 from xml.sax.saxutils import escape as xml_escape
 
+import article_pipeline
 import generate_homepage_data
 import normalize_markdown_front_matter
 
@@ -21,6 +23,7 @@ DEFAULT_SITE_BASE_URL = "https://shepherdqr.github.io"
 STATIC_SITEMAP_PATHS = [
     "/",
     "/archive.html",
+    "/chronicle.html",
     "/stats.html",
     "/field.html",
     "/books.html",
@@ -32,7 +35,66 @@ STATIC_SITEMAP_PATHS = [
 ]
 SITE_PLANE_SOURCE = Path("data/site-plane.json")
 SITE_PLANE_OUTPUT = Path("site-data.js")
-ARTICLE_TEMPLATE_VERSION = "knowledge-note-v2"
+ARTICLE_TEMPLATE_VERSION = "knowledge-note-v3"
+
+
+def _static_article_payload(item: dict[str, str], root: Path) -> tuple[article_pipeline.RenderedArticle, dict, str, dict, str]:
+    source_path = root / item.get("sourcePath", "")
+    if source_path.is_file():
+        return article_pipeline.render_article(root, item)
+
+    # Some callers render a shell before its canonical Markdown is written.
+    fallback = article_pipeline.RenderedArticle(
+        body_html=f'<p>{html.escape(item.get("summary") or "Article body pending canonical Markdown.")}</p>'
+    )
+    meta = {
+        "type": item.get("type", "Note"),
+        "id": item.get("id", ""),
+        "title": item.get("title", "Untitled"),
+    }
+    form = article_pipeline.article_form(item, meta, "")
+    governance = article_pipeline.article_governance(item, meta, item.get("sourcePath", ""))
+    return fallback, meta, form, governance, "unavailable"
+
+
+def _article_taxonomy_html(item: dict[str, str]) -> str:
+    entries: list[tuple[str, str]] = []
+    series = item.get("series", "")
+    if series:
+        entries.append((series, "/archive.html?series=" + quote(series)))
+    for tag in item.get("tags", []):
+        entries.append(("#" + tag, "/archive.html?tag=" + quote(tag)))
+    if not entries:
+        return ""
+    links = "".join(
+        f'<a href="{html.escape(href, quote=True)}">{html.escape(label)}</a>'
+        for label, href in entries
+    )
+    return f'<div class="article-header-tags" aria-label="Taxonomy">{links}</div>'
+
+
+def _governance_rail_html(governance: dict[str, str], form: str, canonical: str) -> str:
+    rows = [
+        ("Form", form),
+        ("Source", governance["source"]),
+        ("Source path", governance["sourcePath"]),
+        ("Revision", governance["revision"]),
+        ("Errata", governance["errata"]),
+        ("Supersedes", governance["supersedes"]),
+        ("Superseded by", governance["supersededBy"]),
+        ("Canonical", canonical),
+    ]
+    values = "".join(
+        f"<div><dt>{html.escape(label)}</dt><dd>{html.escape(str(value))}</dd></div>"
+        for label, value in rows
+    )
+    return (
+        '<aside class="article-provenance" aria-labelledby="article-provenance-title">'
+        '<p class="article-kicker">Revision &amp; provenance</p>'
+        '<h2 id="article-provenance-title">Document record</h2>'
+        f"<dl>{values}</dl>"
+        "</aside>"
+    )
 
 
 def root_relative_prefix(alias_path: Path, root: Path) -> str:
@@ -48,6 +110,19 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     md_path = "/" + item["sourcePath"].lstrip("/")
     math_enabled = bool(item.get("math"))
     interactive_enabled = bool(item.get("interactive"))
+    rendered_article, source_meta, form, governance, digest = _static_article_payload(item, root)
+
+    config_meta = {
+        "type": item.get("type") or source_meta.get("type", ""),
+        "id": item.get("id") or source_meta.get("id", ""),
+        "title": item.get("title") or source_meta.get("title", ""),
+        "created_date": item.get("createdDate") or source_meta.get("created_date", ""),
+        "published": item.get("published") or source_meta.get("published", ""),
+        "updated_date": item.get("updatedDate") or source_meta.get("updated_date", ""),
+        "tags": item.get("tags", []),
+        "series": item.get("series", ""),
+        "article_form": form,
+    }
     config = json.dumps(
         {
             "md": md_path,
@@ -55,6 +130,17 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
             "template": ARTICLE_TEMPLATE_VERSION,
             "math": math_enabled,
             "interactive": interactive_enabled,
+            "staticRendered": True,
+            "sourceDigest": digest,
+            "articleForm": form,
+            "meta": config_meta,
+            "governance": governance,
+            "headings": rendered_article.headings,
+            "themeAssets": (
+                {"museum": {"localTruthCharter": "/resources/pics/topos-asi-shadow-luxury-image-v2.png"}}
+                if rendered_article.local_truth_charter_present
+                else {}
+            ),
         },
         ensure_ascii=False,
         indent=2,
@@ -96,6 +182,25 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     if feature_script_html:
         feature_script_html += "\n"
 
+    published = item.get("published") or source_meta.get("published", "")
+    updated = item.get("updatedDate") or source_meta.get("updated_date", "")
+    created = item.get("createdDate") or source_meta.get("created_date", "")
+    type_name = item.get("type") or source_meta.get("type", "Note")
+    content_id = item.get("id") or source_meta.get("id", "")
+    kicker = " · ".join(value for value in (type_name, content_id, form) if value)
+    meta_parts = []
+    if created:
+        meta_parts.append(f'<time datetime="{html.escape(created, quote=True)}">Created {html.escape(created)}</time>')
+    if published:
+        meta_parts.append(f'<time datetime="{html.escape(published, quote=True)}">Published {html.escape(published)}</time>')
+    if updated:
+        meta_parts.append(f'<time datetime="{html.escape(updated, quote=True)}">Updated {html.escape(updated)}</time>')
+    static_meta_html = "".join(meta_parts)
+    taxonomy_html = _article_taxonomy_html(item)
+    taxonomy_block = f"                {taxonomy_html}\n" if taxonomy_html else ""
+    governance_html = _governance_rail_html(governance, form, canonical)
+    charter_marker = ' data-local-truth-charter="preserved"' if rendered_article.local_truth_charter_present else ""
+
     return f"""<!doctype html>
 <html lang="zh-CN" data-theme="field">
 <head>
@@ -111,10 +216,11 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     <link rel="alternate" type="application/atom+xml" href="{asset('includes/atom.xml')}" title="Atom feed">
     <link rel="shortcut icon" href="{asset('resources/pics/shepherd.png')}">
     <link rel="canonical" href="{html.escape(canonical, quote=True)}">
-{feature_script_html}    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <title>{title}</title>
+    <meta name="article:form" content="{html.escape(form, quote=True)}">
+    <meta name="article:source-digest" content="{html.escape(digest, quote=True)}">
+{feature_script_html}    <title>{title}</title>
 </head>
-<body data-template="{ARTICLE_TEMPLATE_VERSION}">
+<body data-template="{ARTICLE_TEMPLATE_VERSION}" data-article-form="{html.escape(form, quote=True)}" data-static-rendered="true"{charter_marker}>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <main class="article-shell" id="main-content">
         <nav class="article-nav" aria-label="知识界面导航">
@@ -124,30 +230,33 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
                 <a href="{asset('archive.html')}">Atlas</a>
                 <a href="{asset('stats.html')}">Evidence</a>
                 <a href="{asset('field.html')}">System</a>
+                <a href="{asset('chronicle.html')}">Chronicle</a>
                 <a href="{asset('series.html')}">Series</a>
             </div>
         </nav>
 
-        <article class="article-frame">
+        <article class="article-frame article-form-{html.escape(form, quote=True)}" data-document-status="{html.escape(governance['status'], quote=True)}">
             <header class="article-header">
-                <p id="currentInnerType" class="article-kicker"></p>
-                <h1 id="currentInnerTitle"></h1>
-                <div id="currentInnerMeta" class="article-meta"></div>
-            </header>
-            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+                <p id="currentInnerType" class="article-kicker">{html.escape(kicker)}</p>
+                <h1 id="currentInnerTitle">{title}</h1>
+                <div id="currentInnerMeta" class="article-meta">{static_meta_html}</div>
+{taxonomy_block}            </header>
+            <div id="markdown-content" class="article-content" data-build-rendered="true">{rendered_article.body_html}</div>
+            {governance_html}
             <footer class="article-footer">
                 <div class="article-footer-links">
                     <a href="{asset('index.html')}">Field</a>
                     <a href="{asset('archive.html')}">Atlas</a>
                     <a href="{asset('stats.html')}">Evidence</a>
                     <a href="{asset('field.html')}">System</a>
+                    <a href="{asset('chronicle.html')}">Chronicle</a>
                     <a href="{asset('series.html')}">Series</a>
                     <a href="{asset('books.html')}">Books</a>
                     <a href="{asset('thoughts.html')}">Thoughts</a>
                     <a href="{asset('study.html')}">Study</a>
                     <a href="{asset('videos.html')}">Videos</a>
                 </div>
-                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="相邻笔记"></nav>
             </footer>
         </article>
     </main>
@@ -306,8 +415,20 @@ def write_site_plane_data(root: Path) -> dict:
     return payload
 
 
-def build_generated_site(root: Path, out_name: str, include_legacy_index: bool = False) -> tuple[int, int]:
+def build_generated_site(
+    root: Path,
+    out_name: str,
+    include_legacy_index: bool = False,
+    generate_images: bool = False,
+) -> tuple[int, int]:
     items = generate_homepage_data.collect_items(root, include_legacy_index=include_legacy_index)
+    if generate_images:
+        import image_pipeline
+
+        browser = image_pipeline.find_browser()
+        if not browser:
+            raise RuntimeError("--images requested but no Chromium-family browser was found")
+        image_pipeline.generate_derivatives(root, browser)
     out = root / out_name
     out.write_text(generate_homepage_data.build_js(items), encoding="utf-8", newline="\n")
     alias_count = write_article_alias_pages(root, items)
@@ -329,6 +450,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--include-legacy-index",
         action="store_true",
         help="Also merge legacy index-data.js entries for transition diagnostics.",
+    )
+    parser.add_argument(
+        "--images",
+        action="store_true",
+        help="Regenerate responsive image derivatives before article aliases.",
     )
     return parser
 
@@ -369,6 +495,7 @@ def main(argv: list[str]) -> int:
         root,
         args.out,
         include_legacy_index=args.include_legacy_index,
+        generate_images=args.images,
     )
     print(f"Generated {root / args.out} with {item_count} Markdown-backed items")
     print(f"Generated {alias_count} article alias pages")

@@ -13,10 +13,11 @@
     <link rel="alternate" type="application/atom+xml" href="../../includes/atom.xml" title="Atom feed">
     <link rel="shortcut icon" href="../../resources/pics/shepherd.png">
     <link rel="canonical" href="/thoughts/0029/">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="article:form" content="research-log">
+    <meta name="article:source-digest" content="325754fa649d34c3">
     <title>约束场的形态</title>
 </head>
-<body data-template="knowledge-note-v2">
+<body data-template="knowledge-note-v3" data-article-form="research-log" data-static-rendered="true">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <main class="article-shell" id="main-content">
         <nav class="article-nav" aria-label="知识界面导航">
@@ -26,30 +27,78 @@
                 <a href="../../archive.html">Atlas</a>
                 <a href="../../stats.html">Evidence</a>
                 <a href="../../field.html">System</a>
+                <a href="../../chronicle.html">Chronicle</a>
                 <a href="../../series.html">Series</a>
             </div>
         </nav>
 
-        <article class="article-frame">
+        <article class="article-frame article-form-research-log" data-document-status="published">
             <header class="article-header">
-                <p id="currentInnerType" class="article-kicker"></p>
-                <h1 id="currentInnerTitle"></h1>
-                <div id="currentInnerMeta" class="article-meta"></div>
+                <p id="currentInnerType" class="article-kicker">Thoughts · 0029 · research-log</p>
+                <h1 id="currentInnerTitle">约束场的形态</h1>
+                <div id="currentInnerMeta" class="article-meta"><time datetime="2026-07-07">Created 2026-07-07</time><time datetime="2026-07-07">Published 2026-07-07</time><time datetime="2026-07-07">Updated 2026-07-07</time></div>
+                <div class="article-header-tags" aria-label="Taxonomy"><a href="/archive.html?series=%E7%BA%A6%E6%9D%9F%E5%9C%BA%E4%B8%8E%E5%A4%8D%E6%9D%82%E6%99%BA%E8%83%BD">约束场与复杂智能</a><a href="/archive.html?tag=ASI">#ASI</a><a href="/archive.html?tag=agent">#agent</a><a href="/archive.html?tag=constraint-field">#constraint-field</a><a href="/archive.html?tag=software-engineering">#software-engineering</a><a href="/archive.html?tag=evaluation">#evaluation</a></div>
             </header>
-            <div id="markdown-content" class="article-content" aria-live="polite"></div>
+            <div id="markdown-content" class="article-content" data-build-rendered="true"><h2 id="实例1-我们的海报任务流程">实例1：我们的海报任务流程</h2>
+<p>海报任务 -&gt; classify visibility -&gt; 启用审美叙事线 / visual workflow 【纵向硬的 + 横向软的】 -&gt; 如需要，编制 topic-object aesthetic brief -&gt; 路由 V4/V5 审美角色：Reference Curator, Aesthetic Director, Visual QA Verifier 等 -&gt; 并行启动 skill-agent operations -&gt; 记录是否触碰 skill / agent / tool / MCP / eval / audit surface -&gt; 产出海报源文件、source note、QA JSON、最终图/PDF -&gt; 若产生可复用经验，再进入 pattern review / skill-agent eval / profile update</p>
+<h2 id="实例2-我们的s012-domain-research-os">实例2：我们的s012 Domain Research OS</h2>
+<p>质量问题是纵向的收缩场。我随便一问，可以看见我们发展的形态。</p>
+<h3 id="问题">问题</h3>
+<p>我们的s012 Domain Research OS的实际运作形式是什么？是一系列横向的loop和纵向的一系列控制线吗？</p>
+<h3 id="回答">回答</h3>
+<p>是的，你这个理解基本准确；更精确地说：</p>
+<p><strong>s012 Domain Research OS = 横向研究 loops + 纵向控制线 + 一条事件/证据脊柱。</strong></p>
+<p>它不是一个后台 daemon，也不是一个单一脚本，而是 repo-native 的控制面：Markdown / YAML / CSV / JSONL / validators / topic-pack artifact 共同组成的操作系统。</p>
+<p><strong>横向 Loops</strong> 横向 loop 是“一个具体研究任务如何被做完”：</p>
+<pre><code class="language-text">研究请求
+-&gt; 选择 program row / topic pack
+-&gt; 建立 source register
+-&gt; 生成 reviewable artifact
+-&gt; gate review
+-&gt; failure class
+-&gt; repair / accept / pause / promote decision
+-&gt; evidence / event / join record
+-&gt; validator
+-&gt; next action</code></pre>
+<p>现在已经存在的主要横向 loop 有：</p>
+<ul><li><strong>Research Request Loop</strong>：从一个话题请求进入 topic pack / domain lab。</li><li><strong>Field Genesis Loop</strong>：从 sparse pressure 到 candidate field、artifact、review、promotion/block。</li><li><strong>Evaluation Loop</strong>：三轴评估：surface professionalism / structural field understanding / epistemic reliability。</li><li><strong>Promotion Blocking Loop</strong>：防止因为“话题很有趣”就升级。</li><li><strong>Evidence-to-Claim Loop</strong>：把 claim 拆成 source、evidence、supports、does-not-support、uncertainty、update condition。</li></ul>
+<p><strong>纵向控制线</strong> 纵向控制线是“每个研究动作必须被哪些层约束”：</p>
+<pre><code class="language-text">L0 command center：当前目标、边界、停止条件
+L1 s008 routing：skill、domain route、quality gate
+L2 t006 terrain：C01-C14 / SC01-SC07 / truth operator
+L3 execution：topic pack、domain lab、G-level program、artifact
+L4 evaluation：rubric、failure taxonomy、repair decision
+L5 memory：evidence index、promotion registry、reports archive
+L6 validators：结构一致性、路径、事件、join、crosswalk</code></pre>
+<p>所以一个短提示词能展开，是因为它会被这些纵向线“拉住”，不会只靠语言自由扩写。</p>
+<p><strong>第三个关键：事件/证据脊柱</strong> 只有横纵还不够。真正让 OS 像 OS 的，是中间这条脊柱：</p>
+<pre><code class="language-text">research-topic-register.csv
+-&gt; lifecycle schema
+-&gt; field-genesis-events.jsonl
+-&gt; evaluation-promotion-join.jsonl
+-&gt; evidence-index / promotion-registry
+-&gt; validators</code></pre>
+<p>它让每次动作变成可追踪状态，而不是一次性聊天输出。</p>
+<p>所以实际运作形式可以画成一句话：</p>
+<pre><code class="language-text">横向 loop 负责推进研究；
+纵向控制线负责约束质量；
+事件/证据脊柱负责留下可复查状态。</code></pre>
+<p>当前成熟度：<strong>半自动 control-plane</strong>。<br> 它已经能实战展开深研，但仍然需要真实 source reading、artifact review 和人类 judgment；validator 只能保证结构不漂，不能保证思想一定深。</p></div>
+            <aside class="article-provenance" aria-labelledby="article-provenance-title"><p class="article-kicker">Revision &amp; provenance</p><h2 id="article-provenance-title">Document record</h2><dl><div><dt>Form</dt><dd>research-log</dd></div><div><dt>Source</dt><dd>Repository-authored Markdown</dd></div><div><dt>Source path</dt><dd>qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md</dd></div><div><dt>Revision</dt><dd>2026-07-07</dd></div><div><dt>Errata</dt><dd>None declared</dd></div><div><dt>Supersedes</dt><dd>None declared</dd></div><div><dt>Superseded by</dt><dd>None declared</dd></div><div><dt>Canonical</dt><dd>/thoughts/0029/</dd></div></dl></aside>
             <footer class="article-footer">
                 <div class="article-footer-links">
                     <a href="../../index.html">Field</a>
                     <a href="../../archive.html">Atlas</a>
                     <a href="../../stats.html">Evidence</a>
                     <a href="../../field.html">System</a>
+                    <a href="../../chronicle.html">Chronicle</a>
                     <a href="../../series.html">Series</a>
                     <a href="../../books.html">Books</a>
                     <a href="../../thoughts.html">Thoughts</a>
                     <a href="../../study.html">Study</a>
                     <a href="../../videos.html">Videos</a>
                 </div>
-                <nav id="article-neighbors" class="article-neighbors" aria-label="Adjacent notes"></nav>
+                <nav id="article-neighbors" class="article-neighbors" aria-label="相邻笔记"></nav>
             </footer>
         </article>
     </main>
@@ -57,9 +106,61 @@
     <script type="application/json" id="article-config">{
   "md": "/qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md",
   "canonical": "/thoughts/0029/",
-  "template": "knowledge-note-v2",
+  "template": "knowledge-note-v3",
   "math": false,
-  "interactive": false
+  "interactive": false,
+  "staticRendered": true,
+  "sourceDigest": "325754fa649d34c3",
+  "articleForm": "research-log",
+  "meta": {
+    "type": "Thoughts",
+    "id": "0029",
+    "title": "约束场的形态",
+    "created_date": "2026-07-07",
+    "published": "2026-07-07",
+    "updated_date": "2026-07-07",
+    "tags": [
+      "ASI",
+      "agent",
+      "constraint-field",
+      "software-engineering",
+      "evaluation"
+    ],
+    "series": "约束场与复杂智能",
+    "article_form": "research-log"
+  },
+  "governance": {
+    "source": "Repository-authored Markdown",
+    "sourcePath": "qrthoughts/year2026/month7/[Thoughts][0029][约束场的形态].md",
+    "revision": "2026-07-07",
+    "errata": "None declared",
+    "supersedes": "None declared",
+    "supersededBy": "None declared",
+    "status": "published"
+  },
+  "headings": [
+    {
+      "level": 2,
+      "id": "实例1-我们的海报任务流程",
+      "text": "实例1：我们的海报任务流程"
+    },
+    {
+      "level": 2,
+      "id": "实例2-我们的s012-domain-research-os",
+      "text": "实例2：我们的s012 Domain Research OS"
+    },
+    {
+      "level": 3,
+      "id": "问题",
+      "text": "问题"
+    },
+    {
+      "level": 3,
+      "id": "回答",
+      "text": "回答"
+    }
+  ],
+  "themeAssets": {}
 }</script>
     <script src="../../homepage-data.js"></script>
     <script src="../../includes/js/article-renderer.js"></script>

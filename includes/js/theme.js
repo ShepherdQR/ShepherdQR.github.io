@@ -44,6 +44,7 @@
             }
             control.addEventListener('click', toggleTheme);
         });
+        if (active === museumTheme) hydrateMuseumObjects();
         updateControls();
     }
 
@@ -60,11 +61,27 @@
     function applyTheme(theme, announce) {
         root.dataset.theme = theme;
         root.style.colorScheme = theme === museumTheme ? 'dark' : 'light';
+        if (theme === museumTheme && document.body) hydrateMuseumObjects();
         if (document.body && announce) {
             document.body.classList.add('theme-changing');
             window.setTimeout(() => document.body.classList.remove('theme-changing'), 260);
         }
         updateControls();
+    }
+
+    function hydrateMuseumObjects() {
+        document.querySelectorAll('[data-museum-src]').forEach(image => {
+            if (image.getAttribute('src')) return;
+            const figure = image.closest('[data-profile-object="museum"]');
+            if (figure) figure.setAttribute('aria-busy', 'true');
+            if (image.dataset.museumSrcset) image.setAttribute('srcset', image.dataset.museumSrcset);
+            if (image.dataset.museumSizes) image.setAttribute('sizes', image.dataset.museumSizes);
+            image.setAttribute('src', image.dataset.museumSrc);
+            image.addEventListener('load', () => {
+                if (figure) figure.removeAttribute('aria-busy');
+            }, { once: true });
+        });
+        document.dispatchEvent(new CustomEvent('zqr:museum-material-ready'));
     }
 
     function updateControls() {

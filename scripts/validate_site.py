@@ -29,6 +29,7 @@ FRONT_MATTER_RE = re.compile(
 )
 AMBIGUOUS_SETEXT_H2_RE = re.compile(r"(?m)^(?P<text>[^\n#][^\n]*)\n---\s*$")
 ATX_H1_RE = re.compile(r"(?m)^#\s+(?P<title>.+?)\s*$")
+ATX_HEADING_RE = re.compile(r"^\s{0,3}(?P<marks>#{1,6})(?:\s+|$)(?P<title>.*?)\s*#*\s*$")
 HTML_REFERENCE_RE = re.compile(r"\b(?:href|src)\s*=\s*['\"](?P<target>[^'\"]+)['\"]", re.I)
 MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?P<target><[^>]+>|[^\s)]+)")
 FILE_HEADER_FIELD_RE = re.compile(r"(?m)^\s*- (?P<key>Date|LastEditTime):\s*(?P<value>.+?)\s*$")
@@ -39,6 +40,7 @@ STATIC_SITEMAP_PATHS = {
     "/archive.html",
     "/stats.html",
     "/field.html",
+    "/chronicle.html",
     "/books.html",
     "/series.html",
     "/series/20th-century-world-poetry/",
@@ -53,6 +55,7 @@ PUBLIC_ROOT_PAGES = {
     "archive.html": "https://zqr.world/archive.html",
     "stats.html": "https://zqr.world/stats.html",
     "field.html": "https://zqr.world/field.html",
+    "chronicle.html": "https://zqr.world/chronicle.html",
     "books.html": "https://zqr.world/books.html",
     "thoughts.html": "https://zqr.world/thoughts.html",
     "study.html": "https://zqr.world/study.html",
@@ -75,6 +78,10 @@ REQUIRED_ITEM_FIELDS = {
     "sourcePath",
     "label",
     "source",
+    "summary",
+    "summarySource",
+    "fieldIds",
+    "mappingSource",
 }
 REQUIRED_FRONT_MATTER_FIELDS = {
     "type",
@@ -90,6 +97,18 @@ REQUIRED_FRONT_MATTER_FIELDS = {
 }
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 DATETIME_RE = re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")
+ARTICLE_REFERENCE_RE = re.compile(
+    r"^(?:https?://[^/]+)?/?(?P<type>books|thoughts|study|videos)/(?P<id>\d{4})/?$",
+    re.I,
+)
+ARTICLE_LABEL_REFERENCE_RE = re.compile(
+    r"^\[(?P<type>Books|Thoughts|Study|Videos)\]\[(?P<id>\d{4})\]",
+    re.I,
+)
+SUMMARY_SOURCES = {"explicit", "derived"}
+MAPPING_SOURCES = {"frontmatter", "selected", "taxonomy", "collection_default", "unmapped"}
+REVISION_STATUSES = {"current", "revised", "superseded", "withdrawn"}
+NEWEST_SUMMARY_REVIEW_COUNT = 7
 
 
 def read_text(path: Path) -> str:
@@ -137,6 +156,31 @@ def validate_markdown_structure(path: Path, root: Path, text: str) -> list[str]:
     return errors
 
 
+def markdown_headings(body: str) -> list[tuple[int, str, int]]:
+    """Collect ATX headings outside fenced code blocks."""
+
+    headings: list[tuple[int, str, int]] = []
+    in_fence = False
+    fence_marker = ""
+    for line_number, line in enumerate(body.splitlines(), start=1):
+        fence = re.match(r"^\s{0,3}(`{3,}|~{3,})", line)
+        if fence:
+            marker = fence.group(1)[0]
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = ""
+            continue
+        if in_fence:
+            continue
+        match = ATX_HEADING_RE.match(line)
+        if match:
+            headings.append((len(match.group("marks")), match.group("title").strip(), line_number))
+    return headings
+
+
 def markdown_source_warnings(path: Path, root: Path, text: str, data: dict[str, str]) -> list[str]:
     warnings: list[str] = []
     front_matter = FRONT_MATTER_RE.match(text)
@@ -145,12 +189,30 @@ def markdown_source_warnings(path: Path, root: Path, text: str, data: dict[str, 
 
     rel = path.relative_to(root).as_posix()
     body = text[front_matter.end() :]
-    h1_headings = [match.group("title").strip() for match in ATX_H1_RE.finditer(body)]
+    headings = markdown_headings(body)
+    h1_headings = [title for level, title, _ in headings if level == 1]
     if len(h1_headings) > 1:
         warnings.append(
             f"{rel}: body contains {len(h1_headings)} H1 headings; article shell already provides H1: "
             + " | ".join(h1_headings)
         )
+    elif h1_headings and h1_headings[0].strip(" #") != data.get("title", "").strip(" #"):
+        warnings.append(
+            f"{rel}: body H1 differs from front matter title; build normalization will retain the shell H1: "
+            f"{h1_headings[0]} != {data.get('title', '')}"
+        )
+
+    normalized_levels = [2 if level == 1 else level for level, _, _ in headings]
+    previous_level = 1
+    for (level, title, body_line), normalized_level in zip(headings, normalized_levels):
+        if normalized_level > previous_level + 1:
+            source_line = text.count("\n", 0, front_matter.end()) + body_line
+            warnings.append(
+                f"{rel}:{source_line}: heading hierarchy skips H{previous_level} to H{normalized_level}: "
+                f"{title or '<empty>'}"
+            )
+            break
+        previous_level = normalized_level
 
     header_fields = {
         match.group("key"): match.group("value").strip()
@@ -432,9 +494,53 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
     errors: list[str] = []
     label = f"{item.get('type', '<missing-type>')} {item.get('id', '<missing-id>')}"
 
-    missing = sorted(field for field in REQUIRED_ITEM_FIELDS if not item.get(field))
+    missing = sorted(
+        field
+        for field in REQUIRED_ITEM_FIELDS
+        if field not in item or (field != "fieldIds" and not item.get(field))
+    )
     if missing:
         errors.append(f"{label}: missing required item field(s): {', '.join(missing)}")
+
+    summary_source = item.get("summarySource")
+    summary = item.get("summary")
+    if summary_source not in SUMMARY_SOURCES:
+        errors.append(f"{label}: unsupported summarySource: {summary_source}")
+    if not isinstance(summary, str) or not summary.strip():
+        errors.append(f"{label}: summary must be a non-empty string")
+    elif summary_source == "derived" and (
+        re.search(r"(?:^|\s)#{1,6}\s", summary)
+        or "```" in summary
+        or re.search(r"https?://\S+", summary, flags=re.I)
+    ):
+        errors.append(f"{label}: derived summary contains Markdown structure or a raw URL")
+
+    field_ids = item.get("fieldIds")
+    mapping_source = item.get("mappingSource")
+    if not isinstance(field_ids, list) or any(not isinstance(value, str) or not value for value in field_ids):
+        errors.append(f"{label}: fieldIds must be an array of non-empty narrative ids")
+    elif len(set(field_ids)) != len(field_ids):
+        errors.append(f"{label}: fieldIds contains duplicate narrative ids")
+    if mapping_source not in MAPPING_SOURCES:
+        errors.append(f"{label}: unsupported mappingSource: {mapping_source}")
+    elif mapping_source == "unmapped" and field_ids:
+        errors.append(f"{label}: unmapped item must not declare fieldIds")
+    elif mapping_source != "unmapped" and not field_ids:
+        errors.append(f"{label}: mapped item has no fieldIds")
+
+    revision_status = item.get("revisionStatus")
+    revision = item.get("revision")
+    if revision is not None and (not isinstance(revision, str) or not revision.strip()):
+        errors.append(f"{label}: revision must be a non-empty string when present")
+    if revision_status and revision_status not in REVISION_STATUSES:
+        errors.append(f"{label}: unsupported revisionStatus: {revision_status}")
+    for field in ("supersedes", "supersededBy", "errata"):
+        value = item.get(field)
+        if value is not None and (
+            not isinstance(value, list)
+            or any(not isinstance(reference, str) or not reference.strip() for reference in value)
+        ):
+            errors.append(f"{label}: {field} must be an array of non-empty references")
 
     href = item.get("href")
     canonical = item.get("canonicalHref")
@@ -596,6 +702,44 @@ def validate_front_matter(root: Path, item: dict[str, str]) -> list[str]:
                 f"{item.get(item_field)} != {data.get(front_matter_field)}"
             )
 
+    source_text = read_text(md_path)
+    explicit_summary = data.get("summary", "").strip()
+    expected_summary_source = "explicit" if explicit_summary else "derived"
+    expected_summary = (
+        explicit_summary
+        or generate_homepage_data.markdown_excerpt(generate_homepage_data.markdown_body(source_text))
+        or data.get("title", "")
+    )
+    if item.get("summarySource") != expected_summary_source:
+        errors.append(
+            f"{label}: summarySource differs from front matter derivation: "
+            f"{item.get('summarySource')} != {expected_summary_source}"
+        )
+    if item.get("summary") != expected_summary:
+        errors.append(f"{label}: summary differs from canonical source projection")
+
+    scalar_revision_pairs = [
+        ("revision", "revision"),
+        ("revision_status", "revisionStatus"),
+    ]
+    for front_matter_field, item_field in scalar_revision_pairs:
+        expected = data.get(front_matter_field, "").strip()
+        actual = item.get(item_field, "")
+        if actual != expected:
+            errors.append(
+                f"{label}: {item_field} differs from optional front matter {front_matter_field}: "
+                f"{actual} != {expected}"
+            )
+
+    for front_matter_field, item_field in generate_homepage_data.REVISION_LIST_FIELDS.items():
+        expected = generate_homepage_data.parse_list(data.get(front_matter_field, ""))
+        actual = item.get(item_field, [])
+        if actual != expected:
+            errors.append(
+                f"{label}: {item_field} differs from optional front matter {front_matter_field}: "
+                f"{actual} != {expected}"
+            )
+
     return errors
 
 
@@ -630,6 +774,33 @@ def validate_markdown_sources(
             key = (data.get("type", ""), data.get("id", ""))
             if key not in homepage_keys:
                 errors.append(f"{rel}: published markdown is missing from homepage-data.js")
+
+        revision_status = data.get("revision_status", "").strip()
+        if revision_status and revision_status not in REVISION_STATUSES:
+            errors.append(f"{rel}: unsupported revision_status: {revision_status}")
+        revision_lists = {
+            field: generate_homepage_data.parse_list(data.get(field, ""))
+            for field in generate_homepage_data.REVISION_LIST_FIELDS
+        }
+        for field, references in revision_lists.items():
+            if len(references) != len(set(references)):
+                errors.append(f"{rel}: {field} contains duplicate references")
+        self_markers = {
+            f"[{data.get('type', '')}][{data.get('id', '')}]".casefold(),
+            f"/{data.get('type', '').lower()}/{data.get('id', '')}/".casefold(),
+        }
+        for field in ("supersedes", "superseded_by"):
+            for reference in revision_lists[field]:
+                if any(marker and marker in reference.casefold() for marker in self_markers):
+                    errors.append(f"{rel}: {field} must not reference the article itself: {reference}")
+        if revision_status == "superseded" and not revision_lists["superseded_by"]:
+            warnings.append(
+                f"{rel}: revision_status is superseded but superseded_by is empty"
+            )
+        if revision_lists["superseded_by"] and revision_status != "superseded":
+            warnings.append(
+                f"{rel}: superseded_by is present but revision_status is not superseded"
+            )
 
     return checked, errors, warnings
 
@@ -678,6 +849,160 @@ def validate_item_order(items: list[dict[str, str]]) -> list[str]:
     return ["homepage-data.js: items are not sorted newest-first"]
 
 
+def validate_narrative_projection(
+    root: Path,
+    data: dict,
+    plane: dict,
+    items: list[dict[str, str]],
+) -> list[str]:
+    errors: list[str] = []
+    try:
+        contract = generate_homepage_data.load_narrative_contract(root)
+    except ValueError as exc:
+        return [f"narrative projection: {exc}"]
+
+    valid_ids = list(contract.get("order") or [])
+    for item in items:
+        label = f"{item.get('type', '<missing-type>')} {item.get('id', '<missing-id>')}"
+        field_ids = item.get("fieldIds") if isinstance(item.get("fieldIds"), list) else []
+        unknown = [field_id for field_id in field_ids if field_id not in valid_ids]
+        if unknown:
+            errors.append(f"{label}: fieldIds contains unknown narrative id(s): {', '.join(unknown)}")
+        expected_order = [field_id for field_id in valid_ids if field_id in field_ids]
+        if field_ids != expected_order:
+            errors.append(f"{label}: fieldIds does not follow declared narrative order")
+
+        source_path = item.get("sourcePath", "")
+        if not source_path:
+            continue
+        md_path = root / source_path.lstrip("/")
+        if not md_path.exists():
+            continue
+        front_matter = parse_front_matter(read_text(md_path))
+        if not front_matter:
+            continue
+        try:
+            expected_ids, expected_source = generate_homepage_data.resolve_narrative_mapping(
+                front_matter,
+                contract,
+                source_path,
+            )
+        except ValueError as exc:
+            errors.append(str(exc))
+            continue
+        if field_ids != expected_ids:
+            errors.append(f"{label}: fieldIds differs from canonical narrative projection")
+        if item.get("mappingSource") != expected_source:
+            errors.append(
+                f"{label}: mappingSource differs from canonical narrative projection: "
+                f"{item.get('mappingSource')} != {expected_source}"
+            )
+
+    mapped = sum(1 for item in items if item.get("fieldIds"))
+    by_field = {
+        field_id: sum(1 for item in items if field_id in (item.get("fieldIds") or []))
+        for field_id in valid_ids
+    }
+    by_field = {field_id: count for field_id, count in by_field.items() if count}
+    by_source = {
+        source: sum(1 for item in items if item.get("mappingSource") == source)
+        for source in sorted(MAPPING_SOURCES)
+    }
+    expected_coverage = {
+        "mapped": mapped,
+        "total": len(items),
+        "unmapped": len(items) - mapped,
+        "percent": round((mapped / len(items) * 100), 1) if items else 0.0,
+        "byField": by_field,
+        "bySource": by_source,
+    }
+    actual_coverage = ((data.get("stats") or {}).get("narrativeCoverage"))
+    if actual_coverage != expected_coverage:
+        errors.append(
+            "stats.narrativeCoverage does not match item fieldIds/mappingSource projection"
+        )
+
+    declared_ids = [
+        line.get("id")
+        for line in (((plane.get("narrative_lines") or {}).get("items")) or [])
+        if isinstance(line, dict)
+    ]
+    if declared_ids != valid_ids:
+        errors.append("narrative projection contract differs from loaded site-plane narrative order")
+    return errors
+
+
+def editorial_summary_warnings(items: list[dict[str, str]], plane: dict) -> list[str]:
+    """Surface high-impact derived summaries without invalidating legacy notes."""
+
+    roles: dict[tuple[str, str], set[str]] = {}
+    for item in items[:NEWEST_SUMMARY_REVIEW_COUNT]:
+        roles.setdefault((item.get("type", ""), item.get("id", "")), set()).add("newest")
+    selected = ((plane.get("selected_entries") or {}).get("items") or [])
+    for entry in selected:
+        if isinstance(entry, dict):
+            roles.setdefault((str(entry.get("type", "")), str(entry.get("id", ""))), set()).add("featured")
+
+    warnings: list[str] = []
+    for item in items:
+        key = (item.get("type", ""), item.get("id", ""))
+        if item.get("summarySource") != "derived" or key not in roles:
+            continue
+        scope = "/".join(sorted(roles[key]))
+        warnings.append(
+            f"{key[0]} {key[1]}: {scope} item uses a derived summary; "
+            "add an explicit front matter summary for editorial control"
+        )
+    return warnings
+
+
+def article_reference_key(reference: str) -> tuple[str, str] | None:
+    reference = reference.strip()
+    match = ARTICLE_REFERENCE_RE.match(reference) or ARTICLE_LABEL_REFERENCE_RE.match(reference)
+    if not match:
+        return None
+    return match.group("type").capitalize(), match.group("id")
+
+
+def validate_revision_chains(
+    items: list[dict[str, str]],
+) -> tuple[list[str], list[str]]:
+    """Validate resolvable supersession links; keep asymmetry as advisory debt."""
+
+    errors: list[str] = []
+    warnings: list[str] = []
+    by_key = {(item.get("type", ""), item.get("id", "")): item for item in items}
+    for key, item in by_key.items():
+        label = f"{key[0]} {key[1]}"
+        relationships = [
+            ("supersedes", "supersededBy"),
+            ("supersededBy", "supersedes"),
+        ]
+        for field, reciprocal_field in relationships:
+            for reference in item.get(field) or []:
+                target_key = article_reference_key(reference)
+                if target_key is None:
+                    continue
+                if target_key == key:
+                    errors.append(f"{label}: {field} must not reference the article itself: {reference}")
+                    continue
+                target = by_key.get(target_key)
+                if target is None:
+                    errors.append(f"{label}: {field} target does not exist: {reference}")
+                    continue
+                reciprocal_keys = {
+                    parsed
+                    for candidate in (target.get(reciprocal_field) or [])
+                    if (parsed := article_reference_key(candidate)) is not None
+                }
+                if key not in reciprocal_keys:
+                    warnings.append(
+                        f"{label}: {field} link to {target_key[0]} {target_key[1]} has no "
+                        f"reciprocal {reciprocal_field} declaration"
+                    )
+    return errors, warnings
+
+
 def validate_stats_and_counts(root: Path, data: dict, items: list[dict[str, str]]) -> list[str]:
     errors: list[str] = []
     stats = data.get("stats")
@@ -700,6 +1025,13 @@ def validate_stats_and_counts(root: Path, data: dict, items: list[dict[str, str]
     expected_years = dict(sorted(years.items(), reverse=True))
     if stats.get("years") != expected_years:
         errors.append(f"stats.years does not match items: {stats.get('years')} != {expected_years}")
+
+    expected_summaries = {
+        source: sum(1 for item in items if item.get("summarySource") == source)
+        for source in sorted(SUMMARY_SOURCES)
+    }
+    if stats.get("summaries") != expected_summaries:
+        errors.append(f"stats.summaries does not match items: {stats.get('summaries')} != {expected_summaries}")
 
     for article_type in ARTICLE_TYPES:
         page_dir = root / article_type.lower()
@@ -919,6 +1251,7 @@ def main(argv: list[str]) -> int:
     errors.extend(validate_item_order(items))
     errors.extend(validate_stats_and_counts(root, data, items))
     errors.extend(validate_site_plane(root, site_plane, items))
+    errors.extend(validate_narrative_projection(root, data, site_plane, items))
     errors.extend(validate_public_root_pages(root))
     errors.extend(validate_homepage_scrollability(root))
     errors.extend(validate_atom_xml(root))
@@ -931,6 +1264,10 @@ def main(argv: list[str]) -> int:
         errors.extend(validate_front_matter(root, item))
     markdown_source_count, markdown_source_errors, warnings = validate_markdown_sources(root, homepage_keys)
     errors.extend(markdown_source_errors)
+    warnings.extend(editorial_summary_warnings(items, site_plane))
+    revision_errors, revision_warnings = validate_revision_chains(markdown_items)
+    errors.extend(revision_errors)
+    warnings.extend(revision_warnings)
 
     print("Site validation summary")
     print(f"  homepage items: {len(items)}")

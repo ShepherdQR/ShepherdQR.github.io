@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "document_status": "declared_public_projection",
   "site": {
     "site_id": "shepherdqr-site",
@@ -121,6 +121,13 @@
   "narrative_lines": {
     "status": "declared",
     "weight_note": "Directional editorial balance, not publication quotas.",
+    "mapping_contract": {
+      "field": "field_ids",
+      "projection_field": "fieldIds",
+      "source_field": "mappingSource",
+      "precedence": ["frontmatter", "selected", "taxonomy", "collection_default", "unmapped"],
+      "collection_defaults_are_item_level_curation": false
+    },
     "items": [
       {
         "id": "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE",
@@ -173,6 +180,17 @@
         "weight_hint_percent": 15
       }
     ]
+  },
+  "curatorial_states": {
+    "contract_version": "1.0.0",
+    "items": [
+      {"id": "displayed", "meaning": "Published with sufficient source and metadata for public interpretation."},
+      {"id": "current", "meaning": "Temporary editorial emphasis inside Displayed; it does not imply higher authority."},
+      {"id": "catalogued", "meaning": "Named and indexed, but not promoted as a stable conclusion."},
+      {"id": "withheld", "meaning": "Explicitly not published or not executable because evidence, privacy, authority, or a human gate is insufficient."},
+      {"id": "superseded", "meaning": "Retained historical object with an explicit successor relation."}
+    ],
+    "color_is_never_the_only_carrier": true
   },
   "control_loop": {
     "mode": "human_gated_event_driven",
@@ -229,6 +247,12 @@
   "visual_system": {
     "default_profile": "field",
     "preference_scope": "device_local",
+    "shared_invariants": [
+      "identical_content_semantics_across_profiles",
+      "museum_local_truth_charter_is_core_exhibit",
+      "role_colors_do_not_change_meaning",
+      "field_home_does_not_fetch_museum_only_material"
+    ],
     "profiles": [
       {
         "id": "field",
@@ -250,30 +274,35 @@
       {
         "type": "Thoughts",
         "id": "0018",
+        "field_id": "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE",
         "field": "约束场与复杂智能",
         "annotation": "从多尺度认知、组织记忆与联邦治理出发，建立 Agent 共生的约束场。"
       },
       {
         "type": "Thoughts",
         "id": "0019",
+        "field_id": "VL-ENGINEERING-EVIDENCE",
         "field": "工程证据",
         "annotation": "把机械工程中的反馈环境、验证器与数据闭环组织成可演化的智能层。"
       },
       {
         "type": "Thoughts",
         "id": "0020",
+        "field_id": "VL-MATHEMATICAL-STRUCTURE",
         "field": "数学结构",
         "annotation": "用热带几何与范畴图景压缩跨仓库结构、迁移与治理问题。"
       },
       {
         "type": "Thoughts",
         "id": "0021",
+        "field_id": "VL-HUMAN-GOVERNANCE-CIVILIZATION",
         "field": "人、治理与文明",
         "annotation": "让工程的目标函数重新指向人民、承载力与经得起时间检验的公共价值。"
       },
       {
         "type": "Books",
         "id": "0122",
+        "field_id": "VL-READING-LITERATURE-POETRY",
         "field": "阅读、文学与诗",
         "annotation": "从鲁迅进入语言、现实与民族精神的长期阅读路径。"
       }
@@ -283,9 +312,10 @@
     "site_source_refs": [
       ".control-plane.yaml",
       "architecture/site-content-form-and-publishing-cadence-plan-2026-07-10.md",
+      "architecture/site-aesthetic-governance.md",
       "homepage-data.js"
     ],
-    "recorded_on": "2026-07-13",
+    "recorded_on": "2026-08-01",
     "path_policy": "Public data contains only repository-relative references or public URLs."
   }
 }

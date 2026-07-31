@@ -27,6 +27,15 @@ INDEX_ITEM_RE = re.compile(
 )
 MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\((?P<target><[^>]+>|[^\s)]+)")
 TRUE_VALUES = {"1", "true", "yes", "on"}
+MAPPING_SOURCES = {"frontmatter", "selected", "taxonomy", "collection_default", "unmapped"}
+COLLECTION_DEFAULT_FIELD_IDS = {
+    "Books": ["VL-READING-LITERATURE-POETRY"],
+}
+REVISION_LIST_FIELDS = {
+    "supersedes": "supersedes",
+    "superseded_by": "supersededBy",
+    "errata": "errata",
+}
 
 
 def read_text(path: Path) -> str:
@@ -63,20 +72,92 @@ def markdown_body(text: str) -> str:
 
 
 def markdown_excerpt(body: str, limit: int = 180) -> str:
-    text = re.sub(r"```[\s\S]*?```", " ", body)
-    text = re.sub(r"<!--[\s\S]*?-->", " ", text)
-    text = re.sub(r"<script\b[\s\S]*?</script>", " ", text, flags=re.I)
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", text)
-    text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
-    text = re.sub(r"(?m)^\s{0,3}#{1,6}\s+.*$", " ", text, count=1)
-    text = re.sub(r"(?m)^\s*(?:-{3,}|\*{3,}|_{3,})\s*$", " ", text)
-    text = re.sub(r"(?m)^\s*(?:[-*+] |\d+[.)] )", "", text)
-    text = re.sub(r"[`*_~>|]", "", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) <= limit:
-        return text
-    return text[:limit].rstrip(" ，。；：、,.!！?？") + "…"
+    """Return the first prose paragraph, not a flattened Markdown document.
+
+    Homepage summaries are a public projection. Treat headings, code, lists,
+    tables, media, link definitions and bare URLs as structure rather than
+    prose so absent front-matter summaries do not leak syntax into cards.
+    """
+
+    cleaned_body = re.sub(r"<!--[\s\S]*?-->", "\n", body)
+    cleaned_body = re.sub(r"<script\b[\s\S]*?</script>", "\n", cleaned_body, flags=re.I)
+    cleaned_body = re.sub(r"<style\b[\s\S]*?</style>", "\n", cleaned_body, flags=re.I)
+    lines = cleaned_body.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+
+    paragraphs: list[list[str]] = []
+    paragraph: list[str] = []
+    in_fence = False
+    fence_marker = ""
+
+    def flush() -> None:
+        nonlocal paragraph
+        if paragraph:
+            paragraphs.append(paragraph)
+            paragraph = []
+
+    for index, raw_line in enumerate(lines):
+        stripped = raw_line.strip()
+        fence = re.match(r"^\s{0,3}(`{3,}|~{3,})", raw_line)
+        if fence:
+            marker = fence.group(1)[0]
+            if not in_fence:
+                flush()
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = ""
+            continue
+        if in_fence:
+            continue
+        if not stripped:
+            flush()
+            continue
+
+        next_line = lines[index + 1].strip() if index + 1 < len(lines) else ""
+        is_setext_title = bool(next_line and re.fullmatch(r"(?:=+|-+)", next_line))
+        is_structure = any(
+            (
+                re.match(r"^\s{0,3}#{1,6}(?:\s+|$)", raw_line),
+                re.fullmatch(r"\s*(?:={3,}|-{3,}|\*{3,}|_{3,})\s*", raw_line),
+                re.match(r"^\s*(?:[-+*]|\d+[.)])\s+", raw_line),
+                re.match(r"^\s*>", raw_line),
+                re.match(r"^\s*\[[^\]]+\]:\s*\S+", raw_line),
+                re.match(r"^\s*!\[[^\]]*\]\([^)]*\)\s*$", raw_line),
+                re.match(r"^\s*</?[A-Za-z][^>]*>\s*$", raw_line),
+                re.fullmatch(r"\s*<https?://[^>]+>\s*", raw_line, flags=re.I),
+                re.fullmatch(r"\s*https?://\S+\s*", raw_line, flags=re.I),
+                re.fullmatch(r"\s*\|?(?:\s*:?-+:?\s*\|)+\s*", raw_line),
+                re.fullmatch(r"\s*\|.*\|\s*", raw_line),
+                is_setext_title,
+            )
+        )
+        if is_structure:
+            flush()
+            continue
+        if "|" in stripped and next_line and re.search(r"\|\s*:?-{3,}:?", next_line):
+            flush()
+            continue
+        paragraph.append(stripped)
+    flush()
+
+    for candidate_lines in paragraphs:
+        text = " ".join(candidate_lines)
+        text = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", text)
+        text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+        text = re.sub(r"<https?://[^>]+>", " ", text, flags=re.I)
+        text = re.sub(r"(?<![\w/])https?://\S+", " ", text, flags=re.I)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\[(?:\^)?[^\]]+\]", " ", text)
+        text = re.sub(r"[`*_~|]", "", text)
+        text = re.sub(r"\\([#>*_`~\\])", r"\1", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        if not text or not re.search(r"[\w\u3400-\u9fff]", text):
+            continue
+        if len(text) <= limit:
+            return text
+        return text[:limit].rstrip(" ，。；：、,.!！?？)") + "…"
+    return ""
 
 
 def detects_math(body: str) -> bool:
@@ -180,6 +261,145 @@ def parse_front_matter(text: str) -> dict[str, str] | None:
     return data
 
 
+def load_narrative_contract(root: Path) -> dict[str, object]:
+    """Load the declared public narrative taxonomy used by item projections."""
+
+    source_path = root / "data" / "site-plane.json"
+    try:
+        plane = json.loads(read_text(source_path))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"Cannot load narrative contract from {source_path}: {exc}") from exc
+
+    lines = ((plane.get("narrative_lines") or {}).get("items") or [])
+    if not isinstance(lines, list) or not lines:
+        raise ValueError(f"Narrative contract has no lines: {source_path}")
+
+    order: list[str] = []
+    aliases: dict[str, str] = {}
+    series: dict[str, list[str]] = {}
+    tags: dict[str, list[str]] = {}
+    for line in lines:
+        if not isinstance(line, dict) or not line.get("id"):
+            raise ValueError(f"Narrative contract contains a line without id: {source_path}")
+        field_id = str(line["id"]).strip()
+        if field_id in order:
+            raise ValueError(f"Narrative contract contains duplicate id {field_id}: {source_path}")
+        order.append(field_id)
+        for alias in (field_id, line.get("title_zh"), line.get("title_en"), line.get("title")):
+            if alias:
+                alias_key = str(alias).strip().casefold()
+                existing = aliases.get(alias_key)
+                if existing and existing != field_id:
+                    raise ValueError(
+                        f"Narrative alias {alias!s} maps to both {existing} and {field_id}: {source_path}"
+                    )
+                aliases[alias_key] = field_id
+        for series_name in line.get("series_filters") or []:
+            series.setdefault(str(series_name).strip().casefold(), []).append(field_id)
+        for tag in line.get("tags") or []:
+            tags.setdefault(str(tag).strip().casefold(), []).append(field_id)
+
+    selected: dict[tuple[str, str], list[str]] = {}
+    selected_entries = ((plane.get("selected_entries") or {}).get("items") or [])
+    for entry in selected_entries:
+        if not isinstance(entry, dict):
+            continue
+        key = (str(entry.get("type", "")), str(entry.get("id", "")))
+        field_value = str(entry.get("field_id") or entry.get("field") or "").strip()
+        field_id = aliases.get(field_value.casefold())
+        if all(key) and field_id:
+            selected.setdefault(key, []).append(field_id)
+        elif all(key) and field_value:
+            raise ValueError(
+                f"Selected entry {key[0]} {key[1]} references unknown narrative field: {field_value}"
+            )
+
+    for content_type, defaults in COLLECTION_DEFAULT_FIELD_IDS.items():
+        missing = [field_id for field_id in defaults if field_id not in order]
+        if missing:
+            raise ValueError(
+                f"Collection default for {content_type} references unknown narrative id(s): "
+                + ", ".join(missing)
+            )
+
+    return {
+        "order": order,
+        "aliases": aliases,
+        "series": series,
+        "tags": tags,
+        "selected": selected,
+    }
+
+
+def ordered_field_ids(field_ids: list[str], contract: dict[str, object]) -> list[str]:
+    order = list(contract.get("order") or [])
+    unique = set(field_ids)
+    return [field_id for field_id in order if field_id in unique]
+
+
+def resolve_narrative_mapping(
+    data: dict[str, str],
+    contract: dict[str, object],
+    source_path: str,
+) -> tuple[list[str], str]:
+    """Resolve a transparent narrative mapping with an explicit provenance."""
+
+    aliases = dict(contract.get("aliases") or {})
+    explicit_ids = parse_list(data.get("field_ids", "") or data.get("fieldIds", ""))
+    narrative_values = parse_list(data.get("narrative", ""))
+    if explicit_ids or narrative_values:
+        resolved: list[str] = []
+        unknown: list[str] = []
+        for value in explicit_ids:
+            if value in (contract.get("order") or []):
+                resolved.append(value)
+            else:
+                unknown.append(value)
+        for value in narrative_values:
+            field_id = aliases.get(value.strip().casefold())
+            if field_id:
+                resolved.append(str(field_id))
+            else:
+                unknown.append(value)
+        if unknown:
+            raise ValueError(
+                f"Unknown narrative mapping in {source_path}: {', '.join(unknown)}"
+            )
+        return ordered_field_ids(resolved, contract), "frontmatter"
+
+    key = (data.get("type", ""), data.get("id", ""))
+    selected = dict(contract.get("selected") or {}).get(key) or []
+    if selected:
+        return ordered_field_ids(list(selected), contract), "selected"
+
+    resolved = []
+    series_name = data.get("series", "").strip().casefold()
+    if series_name:
+        resolved.extend(dict(contract.get("series") or {}).get(series_name) or [])
+    for tag in parse_list(data.get("tags", "")):
+        resolved.extend(dict(contract.get("tags") or {}).get(tag.casefold()) or [])
+    if resolved:
+        return ordered_field_ids(resolved, contract), "taxonomy"
+
+    defaults = COLLECTION_DEFAULT_FIELD_IDS.get(data.get("type", ""), [])
+    if defaults:
+        return ordered_field_ids(defaults, contract), "collection_default"
+    return [], "unmapped"
+
+
+def project_revision_fields(item: dict[str, object], data: dict[str, str]) -> None:
+    revision = data.get("revision", "").strip()
+    revision_status = data.get("revision_status", "").strip()
+    if revision:
+        item["revision"] = revision
+    if revision_status:
+        item["revisionStatus"] = revision_status
+    for source_field, output_field in REVISION_LIST_FIELDS.items():
+        values = parse_list(data.get(source_field, ""))
+        if values:
+            item[output_field] = values
+
+
 def render_href(path: Path, root: Path) -> str:
     rel = path.relative_to(root).as_posix()
     return f"render.html?md={quote('/' + rel[:-3], safe='/')}"
@@ -248,6 +468,10 @@ def parse_legacy_index_items(root: Path) -> list[dict[str, str]]:
                 "href": normalize_legacy_href(href, root),
                 "label": f"[{content_type}][{content_id}][{title}]" if content_type != "Index" else title,
                 "source": "legacy-index",
+                "summary": title,
+                "summarySource": "derived",
+                "fieldIds": [],
+                "mappingSource": "unmapped",
             }
         )
     return items
@@ -255,6 +479,7 @@ def parse_legacy_index_items(root: Path) -> list[dict[str, str]]:
 
 def collect_markdown_items(root: Path) -> list[dict[str, str]]:
     items: list[dict[str, str]] = []
+    narrative_contract = load_narrative_contract(root)
     for path in sorted((root / "qrthoughts").rglob("*.md")):
         if path.name.lower() == "readme.md":
             continue
@@ -269,9 +494,12 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
         legacy_href = render_href(path, root)
         canonical_href = clean_article_href(data["type"], data["id"])
         body = markdown_body(text)
-        summary = data.get("summary") or markdown_excerpt(body) or data["title"]
+        explicit_summary = data.get("summary", "").strip()
+        summary = explicit_summary or markdown_excerpt(body) or data["title"]
+        summary_source = "explicit" if explicit_summary else "derived"
         tags = parse_list(data.get("tags", ""))
         series = data.get("series", "").strip()
+        field_ids, mapping_source = resolve_narrative_mapping(data, narrative_contract, source_path)
         math_enabled = parse_bool(data.get("math", "")) or detects_math(body)
         interactive_enabled = parse_bool(data.get("interactive", "")) or detects_interactive(body)
         lead_image = normalize_lead_image(data.get("lead_image", ""), path, root) or first_markdown_image(body, path, root)
@@ -291,6 +519,9 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
                 "sourcePath": source_path,
                 "label": f"[{data['type']}][{data['id']}][{data['title']}]",
                 "source": "markdown",
+                "summarySource": summary_source,
+                "fieldIds": field_ids,
+                "mappingSource": mapping_source,
             }
         if summary:
             item["summary"] = summary
@@ -304,6 +535,7 @@ def collect_markdown_items(root: Path) -> list[dict[str, str]]:
             item["interactive"] = True
         if lead_image:
             item["leadImage"] = lead_image
+        project_revision_fields(item, data)
         items.append(item)
 
     return items
@@ -328,9 +560,24 @@ def collect_items(root: Path, include_legacy_index: bool = False) -> list[dict[s
 def build_js(items: list[dict[str, str]]) -> str:
     by_type: dict[str, int] = {}
     years: dict[str, int] = {}
+    summary_sources = {"explicit": 0, "derived": 0}
+    narrative_by_field: dict[str, int] = {}
+    narrative_by_source = {source: 0 for source in sorted(MAPPING_SOURCES)}
+    mapped = 0
     for item in items:
         by_type[item["type"]] = by_type.get(item["type"], 0) + 1
         years[item["published"][:4]] = years.get(item["published"][:4], 0) + 1
+        summary_source = item.get("summarySource", "derived")
+        if summary_source in summary_sources:
+            summary_sources[summary_source] += 1
+        mapping_source = item.get("mappingSource", "unmapped")
+        if mapping_source in narrative_by_source:
+            narrative_by_source[mapping_source] += 1
+        field_ids = item.get("fieldIds") or []
+        if field_ids:
+            mapped += 1
+        for field_id in field_ids:
+            narrative_by_field[field_id] = narrative_by_field.get(field_id, 0) + 1
     generated_at = max(
         (item.get("updatedDate") or item.get("published") or item.get("createdDate") for item in items),
         default="",
@@ -343,6 +590,15 @@ def build_js(items: list[dict[str, str]]) -> str:
             "total": len(items),
             "byType": by_type,
             "years": dict(sorted(years.items(), reverse=True)),
+            "summaries": summary_sources,
+            "narrativeCoverage": {
+                "mapped": mapped,
+                "total": len(items),
+                "unmapped": len(items) - mapped,
+                "percent": round((mapped / len(items) * 100), 1) if items else 0.0,
+                "byField": narrative_by_field,
+                "bySource": narrative_by_source,
+            },
         },
     }
     return "window.HOMEPAGE_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"

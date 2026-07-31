@@ -6,9 +6,11 @@
     const frontier = baseline.evolution_frontier || {};
     const candidate = frontier.next_stage_candidate || {};
     const operational = baseline.operational_frontier || {};
+    const projection = window.PROJECTION_TRUTH || { state: 'catalogued', label: 'dated projection' };
 
     setText('boundary-statement', site.boundary_statement_zh || '本站由人类拥有；公开投影不创造权威。');
     renderBoundary();
+    renderTopology();
     renderLoop();
     renderChronicle();
     renderGates();
@@ -18,11 +20,47 @@
         const rows = [
             ['Evidence state', 'derived / dated'],
             ['Lifecycle', candidate.status || 'candidate_not_adopted'],
+            ['Observation', projection.label],
             ['Authority effect', governance.authority_effect || 'none'],
             ['Owner', site.owner || 'human']
         ];
         const host = document.getElementById('boundary-grid');
         rows.forEach(([label, value]) => { const cell = document.createElement('div'); cell.className = 'boundary-cell'; const key = document.createElement('span'); key.textContent = label; const data = document.createElement('strong'); data.textContent = value; cell.appendChild(key); cell.appendChild(data); host.appendChild(cell); });
+    }
+
+    function renderTopology() {
+        const host = document.getElementById('system-topology');
+        if (!host) return;
+        const nodes = [
+            ['Human owner', 'sovereign', 'Defines intent; releases, revises, or withdraws publication.'],
+            ['Markdown objects', 'displayed', 'Local sources preserve claims, context, provenance and revision fields.'],
+            ['Static build', 'verified', 'Deterministic validators check projection integrity without creating authority.'],
+            ['Public site', projection.state, 'Read-only knowledge projection; stale evidence visibly loses current weight.'],
+            ['Control-plane evidence', 'catalogued', 'Dated advisory evidence enters through provenance, never as a live control channel.']
+        ];
+        nodes.forEach(([title, state, detail], index) => {
+            const li = document.createElement('li');
+            li.className = 'topology-node';
+            li.dataset.state = state;
+            const indexEl = document.createElement('span');
+            indexEl.className = 'topology-index';
+            indexEl.textContent = `T${String(index + 1).padStart(2, '0')}`;
+            const copy = document.createElement('div');
+            const heading = document.createElement('strong');
+            heading.textContent = title;
+            const body = document.createElement('span');
+            body.textContent = detail;
+            copy.appendChild(heading);
+            copy.appendChild(body);
+            const marker = document.createElement('span');
+            marker.className = 'state-marker';
+            marker.dataset.state = state;
+            marker.textContent = state;
+            li.appendChild(indexEl);
+            li.appendChild(copy);
+            li.appendChild(marker);
+            host.appendChild(li);
+        });
     }
 
     function renderLoop() {
@@ -44,6 +82,8 @@
         const rail = document.getElementById('wp-rail');
         (frontier.completed_work_packages || []).forEach(wp => { const node = document.createElement('div'); node.className = 'wp-node'; const name = document.createElement('strong'); name.textContent = wp; const state = document.createElement('span'); state.textContent = 'evidence completed'; node.appendChild(name); node.appendChild(state); rail.appendChild(node); });
         setText('candidate-state', candidate.status || 'candidate_not_adopted');
+        const state = document.getElementById('candidate-state');
+        if (state) state.dataset.state = candidate.adoption_authorized ? 'current' : 'catalogued';
         setText('candidate-title', candidate.title_zh || candidate.title || 'T12 candidate');
         setText('candidate-invariant', candidate.derived_invariant_zh || candidate.derived_invariant || '');
         renderKeyValues('candidate-meta', [

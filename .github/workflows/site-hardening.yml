@@ -30,11 +30,20 @@ jobs:
       - name: Check authoring and article templates
         run: python scripts/test_templates.py
 
+      - name: Check build-time article durability
+        run: python scripts/test_article_durability.py
+
       - name: Build site
         run: python scripts/build_site.py
 
+      - name: Check responsive image manifest
+        run: python scripts/image_pipeline.py --check
+
       - name: Validate site
         run: python scripts/validate_site.py
+
+      - name: Validate aesthetic and material contracts
+        run: python scripts/validate_aesthetic_system.py
 
       - name: Ensure generated files are committed
         run: git diff --exit-code

@@ -127,6 +127,12 @@ def build_markdown(
     lead_image: str | None,
     math_enabled: bool,
     interactive_enabled: bool,
+    field_ids: list[str] | None = None,
+    revision: str = "1",
+    revision_status: str = "current",
+    supersedes: str | None = None,
+    superseded_by: str | None = None,
+    errata: list[str] | None = None,
 ) -> str:
     slug = slugify(title, content_type, content_id)
     lines = [
@@ -144,6 +150,12 @@ def build_markdown(
         f"summary: {yaml_quote(summary or '')}",
         f"tags: {yaml_list(tags)}",
         f"series: {yaml_quote(series or '')}",
+        f"field_ids: {yaml_list(field_ids or [])}",
+        f"revision: {yaml_quote(revision)}",
+        f"revision_status: {yaml_quote(revision_status)}",
+        f"supersedes: {yaml_quote(supersedes or '')}",
+        f"superseded_by: {yaml_quote(superseded_by or '')}",
+        f"errata: {yaml_list(errata or [])}",
         f"lead_image: {yaml_quote(lead_image or '')}",
         f"math: {'true' if math_enabled else 'false'}",
         f"interactive: {'true' if interactive_enabled else 'false'}",
@@ -186,7 +198,13 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--status", default="published", choices=("draft", "published", "doing", "archived"))
     parser.add_argument("--tags", help="Comma-separated tags to write into front matter.")
     parser.add_argument("--series", help="Series name to write into front matter.")
+    parser.add_argument("--field-ids", help="Comma-separated narrative line ids from data/site-plane.json.")
     parser.add_argument("--summary", help="Short summary to write into front matter.")
+    parser.add_argument("--revision", default="1", help="Revision identifier for this knowledge object.")
+    parser.add_argument("--revision-status", default="current", help="Lifecycle label such as current or superseded.")
+    parser.add_argument("--supersedes", help="Type:id or canonical path superseded by this object.")
+    parser.add_argument("--superseded-by", help="Type:id or canonical path that replaces this object.")
+    parser.add_argument("--errata", help="Comma-separated errata notes or identifiers.")
     parser.add_argument("--lead-image", help="Repository-root-relative or external lead image URL.")
     parser.add_argument("--math", action="store_true", help="Declare that the note requires MathJax.")
     parser.add_argument("--interactive", action="store_true", help="Declare that the note requires D3 support.")
@@ -235,6 +253,12 @@ def main(argv: list[str]) -> int:
             args.lead_image,
             args.math,
             args.interactive,
+            split_values(args.field_ids),
+            args.revision,
+            args.revision_status,
+            args.supersedes,
+            args.superseded_by,
+            split_values(args.errata),
         ),
         encoding="utf-8",
         newline="\n",

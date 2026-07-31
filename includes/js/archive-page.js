@@ -1,5 +1,6 @@
 (function () {
     const data = window.HOMEPAGE_DATA || { items: [], stats: { byType: {}, years: {} } };
+    const plane = window.SITE_PLANE || {};
     const allItems = Array.isArray(data.items) ? data.items : [];
     const collection = document.body.dataset.collection || '';
     const summaryEl = document.getElementById('archive-summary');
@@ -12,6 +13,10 @@
     const seriesSelect = document.getElementById('filter-series');
     const tagSelect = document.getElementById('filter-tag');
     const clearButton = document.getElementById('clear-filters');
+    const constellationEl = document.getElementById('atlas-constellation');
+    const ledgerEl = document.getElementById('atlas-ledger');
+    const pathHost = document.getElementById('atlas-paths');
+    const modeButtons = Array.from(document.querySelectorAll('[data-atlas-mode]'));
     const params = new URLSearchParams(window.location.search);
 
     const state = {
@@ -19,10 +24,12 @@
         type: collection || params.get('type') || '',
         year: params.get('year') || '',
         series: params.get('series') || '',
-        tag: params.get('tag') || ''
+        tag: params.get('tag') || '',
+        mode: constellationEl ? (params.get('view') === 'ledger' ? 'ledger' : 'constellation') : 'ledger'
     };
 
     populateControls();
+    renderPaths();
     bindControls();
     render();
 
@@ -49,10 +56,18 @@
         if (seriesSelect) seriesSelect.addEventListener('change', () => update('series', seriesSelect.value));
         if (tagSelect) tagSelect.addEventListener('change', () => update('tag', tagSelect.value));
         if (clearButton) clearButton.addEventListener('click', clearFilters);
+        modeButtons.forEach(button => button.addEventListener('click', () => updateMode(button.dataset.atlasMode)));
     }
 
     function update(key, value) {
         state[key] = String(value || '').trim();
+        writeQuery();
+        render();
+    }
+
+    function updateMode(mode) {
+        if (mode !== 'constellation' && mode !== 'ledger') return;
+        state.mode = mode;
         writeQuery();
         render();
     }
@@ -73,8 +88,113 @@
         const filtered = allItems.filter(matchesState);
         renderSummary(filtered);
         renderActiveFilters();
+        renderConstellation(filtered);
         renderList(filtered);
+        renderMode();
         if (resultCount) resultCount.textContent = `${filtered.length} / ${allItems.filter(item => !collection || item.type === collection).length} OBJECTS`;
+    }
+
+    function renderMode() {
+        document.body.dataset.atlasMode = state.mode;
+        modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.atlasMode === state.mode)));
+        if (constellationEl) constellationEl.hidden = state.mode !== 'constellation';
+        if (ledgerEl) ledgerEl.hidden = state.mode !== 'ledger';
+    }
+
+    function renderPaths() {
+        if (!pathHost) return;
+        const lines = narrativeLines().slice().sort((a, b) => Number(b.weight_hint_percent || 0) - Number(a.weight_hint_percent || 0)).slice(0, 3);
+        pathHost.innerHTML = '';
+        lines.forEach((line, index) => {
+            const li = document.createElement('li');
+            li.className = 'path-entry';
+            const link = document.createElement('a');
+            link.href = line.href || './archive.html';
+            const marker = document.createElement('span');
+            marker.className = 'path-index';
+            marker.textContent = String(index + 1).padStart(2, '0');
+            const copy = document.createElement('span');
+            const title = document.createElement('strong');
+            title.textContent = line.title_zh || line.title || line.title_en || line.id;
+            const question = document.createElement('small');
+            question.textContent = line.core_question_zh || line.question || line.title_en || '';
+            copy.appendChild(title);
+            copy.appendChild(question);
+            link.appendChild(marker);
+            link.appendChild(copy);
+            li.appendChild(link);
+            pathHost.appendChild(li);
+        });
+    }
+
+    function renderConstellation(filtered) {
+        if (!constellationEl) return;
+        constellationEl.innerHTML = '';
+        const hub = document.createElement('div');
+        hub.className = 'constellation-hub';
+        hub.setAttribute('role', 'note');
+        const hubLabel = document.createElement('span');
+        hubLabel.textContent = 'PUBLIC KNOWLEDGE FIELD';
+        const hubCount = document.createElement('strong');
+        hubCount.textContent = String(filtered.length);
+        const hubUnit = document.createElement('small');
+        hubUnit.textContent = 'related objects';
+        hub.appendChild(hubLabel);
+        hub.appendChild(hubCount);
+        hub.appendChild(hubUnit);
+        constellationEl.appendChild(hub);
+        const assigned = new Set();
+        narrativeLines().forEach((line, index) => {
+            const fieldId = line.id || line.title_zh || line.title;
+            const related = filtered.filter(item => fieldIds(item).includes(fieldId));
+            related.forEach(item => assigned.add(itemKey(item)));
+            if (!related.length) return;
+            constellationEl.appendChild(renderFieldCluster(line, related, index));
+        });
+        const unmapped = filtered.filter(item => !assigned.has(itemKey(item)));
+        if (unmapped.length) {
+            constellationEl.appendChild(renderFieldCluster({ title_zh: '尚未映射', title_en: 'Catalogued / unmapped', id: 'unmapped' }, unmapped, 5));
+        }
+    }
+
+    function renderFieldCluster(line, related, index) {
+        const cluster = document.createElement('article');
+        cluster.className = 'constellation-cluster atlas-node';
+        cluster.dataset.state = line.id === 'unmapped' ? 'catalogued' : (index === 0 ? 'current' : 'displayed');
+        const positions = [
+            [2, 1, 4], [8, 2, 4], [5, 4, 4], [9, 6, 4], [1, 7, 4], [5, 9, 4]
+        ];
+        const [column, row, span] = positions[index % positions.length];
+        cluster.style.setProperty('--atlas-column', column);
+        cluster.style.setProperty('--atlas-row', row);
+        cluster.style.setProperty('--atlas-span', span);
+        const heading = document.createElement('header');
+        const marker = document.createElement('span');
+        marker.className = 'state-marker';
+        marker.dataset.state = cluster.dataset.state;
+        marker.textContent = line.id === 'unmapped' ? 'Catalogued' : (index === 0 ? 'Current path' : 'Displayed path');
+        const title = document.createElement('h2');
+        title.textContent = line.title_zh || line.title || line.title_en || line.id;
+        const count = document.createElement('strong');
+        count.textContent = `${related.length} objects`;
+        heading.appendChild(marker);
+        heading.appendChild(title);
+        heading.appendChild(count);
+        const list = document.createElement('ol');
+        related.slice(0, 5).forEach(item => {
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = item.href;
+            link.textContent = item.title;
+            const meta = document.createElement('span');
+            meta.textContent = `${item.type} ${item.id} · ${item.published || 'undated'}`;
+            li.appendChild(link);
+            li.appendChild(meta);
+            list.appendChild(li);
+        });
+        cluster.appendChild(heading);
+        cluster.appendChild(list);
+        return cluster;
     }
 
     function matchesState(item) {
@@ -158,6 +278,7 @@
     function renderNote(item) {
         const li = document.createElement('li');
         li.className = 'archive-note';
+        li.dataset.state = item.supersededBy || item.superseded_by ? 'superseded' : 'displayed';
 
         const date = document.createElement('time');
         date.dateTime = item.published || '';
@@ -185,7 +306,16 @@
         const accession = document.createElement('span');
         accession.className = 'archive-note-accession';
         accession.textContent = `${item.type} · ${item.id}`;
+        const marker = document.createElement('span');
+        marker.className = 'state-marker';
+        marker.dataset.state = li.dataset.state;
+        marker.textContent = li.dataset.state === 'superseded' ? 'Superseded' : 'Displayed';
+        const summarySource = document.createElement('span');
+        summarySource.className = 'summary-source';
+        summarySource.textContent = item.summarySource === 'explicit' ? 'authored summary' : 'derived excerpt';
+        kind.appendChild(marker);
         kind.appendChild(accession);
+        kind.appendChild(summarySource);
 
         li.appendChild(date);
         li.appendChild(main);
@@ -235,6 +365,7 @@
         if (state.year) next.set('year', state.year);
         if (state.series) next.set('series', state.series);
         if (state.tag) next.set('tag', state.tag);
+        if (constellationEl && state.mode === 'ledger') next.set('view', 'ledger');
         const suffix = next.toString();
         window.history.replaceState(null, '', window.location.pathname + (suffix ? '?' + suffix : '') + window.location.hash);
     }
@@ -245,5 +376,20 @@
 
     function localeCompare(a, b) {
         return String(a).localeCompare(String(b), 'zh-CN');
+    }
+
+    function narrativeLines() {
+        if (Array.isArray(plane.narrativeLines)) return plane.narrativeLines;
+        return (((plane.narrative_lines || {}).items) || []);
+    }
+
+    function fieldIds(item) {
+        if (Array.isArray(item.fieldIds)) return item.fieldIds;
+        if (Array.isArray(item.field_ids)) return item.field_ids;
+        return [];
+    }
+
+    function itemKey(item) {
+        return `${item.type}:${item.id}`;
     }
 })();
