@@ -324,6 +324,31 @@ feature flags, and generated metadata. Multiple body H1 headings and file-header
 timestamps that disagree with front matter are reported as non-blocking warnings
 so historical notes can be cleaned up incrementally.
 
+## Series Reading Catalogs
+
+`series.html` is the registry for long-running reading projects. The committed
+`data/series-books.json` currently drives the 20th-century poetry, Commercial
+Press academic classics, and Nobel literature detail pages. The two large
+catalogs also have durable Markdown registers:
+
+- `reading-lists/hanyi-world-academic-classics-unread.md`: the unread difference
+  against Commercial Press's official 1000-title baseline, grouped by the five
+  traditional colors and kept in official catalog order
+- `reading-lists/nobel-literature-reading-progress.md`: the 1901-2025 official
+  laureate timeline with public reading-note links
+
+The ordinary site build is deliberately offline. Refresh the external catalog
+snapshots separately, then inspect the maintenance interface before rebuilding:
+
+```powershell
+python scripts/build_reading_series.py --help
+python scripts/build_site.py
+python scripts/validate_site.py
+```
+
+The catalog helper fails if the official 1000-title count, category order,
+Nobel prize/laureate counts, or registered Books-note links drift unexpectedly.
+
 ## Project Files
 
 Important source files:
@@ -331,12 +356,15 @@ Important source files:
 - `qrthoughts/`: canonical Markdown content
 - `scripts/new_note.py`: create a note and optionally build
 - `scripts/build_site.py`: regenerate site data and stable URL pages
+- `scripts/build_reading_series.py`: rebuild large series data and Markdown registers from source snapshots
 - `scripts/validate_site.py`: validate generated article URLs
 - `scripts/test_article_durability.py`: verify static article fallback, heading normalization, form variants, and responsive media
 - `scripts/image_pipeline.py`: generate or check responsive image derivatives
 - `scripts/validate_aesthetic_system.py`: enforce role tokens, Museum Charter preservation, freshness wiring, and transfer budgets
 - `scripts/capture_visual_matrix.ps1`: rebuild the Field/Museum desktop/mobile visual matrix, using segmented viewport samples for the very long Atlas Ledger
 - `data/site-plane.json`: canonical public projection and interface contract data
+- `data/series-books.json`: canonical public series registry and reading status
+- `reading-lists/`: durable full-catalog reading registers
 - `site-data.js`: generated browser projection of `data/site-plane.json`
 - `field.html`: public System and Evolution Chronicle surface
 - `chronicle.html`: dated public knowledge and control-plane temporal spine
@@ -359,6 +387,8 @@ Generated public entry points:
 - `thoughts.html`
 - `study.html`
 - `videos.html`
+- `series.html`
+- `series/*/index.html`
 - `books/NNNN/index.html`
 - `thoughts/NNNN/index.html`
 - `study/NNNN/index.html`

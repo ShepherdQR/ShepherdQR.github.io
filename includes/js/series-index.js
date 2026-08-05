@@ -48,7 +48,7 @@
 
         const meta = document.createElement('div');
         meta.className = 'series-card-meta';
-        meta.appendChild(pill('metric-pill', `${counts.total} works`));
+        meta.appendChild(pill('metric-pill', `${counts.total} ${series.unitLabel || 'works'}`));
         meta.appendChild(pill('metric-pill', `${counts.done} done`));
         meta.appendChild(pill('metric-pill', `${counts.todo} todo`));
         if (counts.candidate) {

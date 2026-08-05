@@ -43,7 +43,6 @@ STATIC_SITEMAP_PATHS = {
     "/chronicle.html",
     "/books.html",
     "/series.html",
-    "/series/20th-century-world-poetry/",
     "/thoughts.html",
     "/study.html",
     "/videos.html",
@@ -1098,6 +1097,7 @@ def validate_sitemap_xml(root: Path, markdown_items: list[dict[str, str]]) -> li
             loc_paths.add(path)
 
     expected_paths = set(STATIC_SITEMAP_PATHS)
+    expected_paths.update(build_site.series_sitemap_paths(root))
     expected_paths.update(item["canonicalHref"] for item in markdown_items if item.get("canonicalHref"))
     missing = sorted(expected_paths - loc_paths)
     if missing:
@@ -1152,6 +1152,50 @@ def validate_series_books(root: Path) -> list[str]:
             errors.append(f"{label}: href leaks a local path: {href}")
         elif not series_href_path(root, href).exists():
             errors.append(f"{label}: href target does not exist: {href}")
+        else:
+            detail_text = series_href_path(root, href).read_text(encoding="utf-8")
+            for element_id in (
+                "metric-total",
+                "metric-done",
+                "metric-todo",
+                "work-list-count",
+                "work-list",
+                "view-controls",
+            ):
+                if f'id="{element_id}"' not in detail_text:
+                    errors.append(f"{label}: detail page is missing #{element_id}")
+
+        default_view = series.get("defaultView", "cards")
+        if default_view not in {"cards", "catalog"}:
+            errors.append(f"{label}: unsupported defaultView: {default_view}")
+
+        reading_list_href = series.get("readingListHref", "")
+        if reading_list_href:
+            if local_path_leak(reading_list_href):
+                errors.append(f"{label}: readingListHref leaks a local path: {reading_list_href}")
+            elif not series_href_path(root, reading_list_href).exists():
+                errors.append(f"{label}: readingListHref target does not exist: {reading_list_href}")
+
+        group_order = series.get("groupOrder")
+        if group_order is not None:
+            if not isinstance(group_order, list) or not all(isinstance(value, str) and value for value in group_order):
+                errors.append(f"{label}: groupOrder must be a non-empty-string array")
+                group_order = []
+            elif len(group_order) != len(set(group_order)):
+                errors.append(f"{label}: groupOrder contains duplicate labels")
+
+        groups = series.get("groups")
+        if groups is not None:
+            if not isinstance(groups, list):
+                errors.append(f"{label}: groups must be an array")
+            else:
+                group_labels = [group.get("label", "") for group in groups if isinstance(group, dict)]
+                if len(group_labels) != len(groups) or any(not value for value in group_labels):
+                    errors.append(f"{label}: every group must have a label")
+                elif len(group_labels) != len(set(group_labels)):
+                    errors.append(f"{label}: groups contains duplicate labels")
+                if isinstance(group_order, list) and group_order and group_labels != group_order:
+                    errors.append(f"{label}: groups order does not match groupOrder")
 
         items = series.get("items")
         if not isinstance(items, list) or not items:
@@ -1159,6 +1203,9 @@ def validate_series_books(root: Path) -> list[str]:
             continue
 
         seen_work_ids: set[str] = set()
+        seen_sequences: set[int] = set()
+        seen_catalog_codes: set[str] = set()
+        item_groups: set[str] = set()
         for item in items:
             work_id = item.get("workId", "")
             item_label = f"{label} / {work_id or '<missing-workId>'}"
@@ -1171,6 +1218,8 @@ def validate_series_books(root: Path) -> list[str]:
             for field in ["displayTitle", "personOrScope", "seriesPart", "status", "matchStatus"]:
                 if not item.get(field):
                     errors.append(f"{item_label}: missing {field}")
+            if item.get("seriesPart"):
+                item_groups.add(item["seriesPart"])
 
             status = item.get("status")
             if status and status not in SERIES_STATUSES:
@@ -1179,6 +1228,28 @@ def validate_series_books(root: Path) -> list[str]:
             match_status = item.get("matchStatus")
             if match_status and match_status not in SERIES_MATCH_STATUSES:
                 errors.append(f"{item_label}: unsupported matchStatus: {match_status}")
+
+            sequence = item.get("sequence")
+            if sequence is not None:
+                if not isinstance(sequence, int) or sequence < 0:
+                    errors.append(f"{item_label}: sequence must be a non-negative integer")
+                elif sequence in seen_sequences:
+                    errors.append(f"{item_label}: duplicate sequence: {sequence}")
+                seen_sequences.add(sequence)
+
+            catalog_code = item.get("catalogCode", "")
+            if catalog_code:
+                if catalog_code in seen_catalog_codes:
+                    errors.append(f"{item_label}: duplicate catalogCode: {catalog_code}")
+                seen_catalog_codes.add(catalog_code)
+
+            award_year = item.get("awardYear", "")
+            if award_year and not re.fullmatch(r"\d{4}", str(award_year)):
+                errors.append(f"{item_label}: awardYear must be four digits: {award_year}")
+
+            source_url = item.get("sourceUrl", "")
+            if source_url and not source_url.startswith("https://"):
+                errors.append(f"{item_label}: sourceUrl must use https: {source_url}")
 
             href = item.get("href", "")
             if href:
@@ -1192,6 +1263,29 @@ def validate_series_books(root: Path) -> list[str]:
             for value in flatten_string_values(item):
                 if local_path_leak(value):
                     errors.append(f"{item_label}: contains local absolute path: {value}")
+
+        if isinstance(group_order, list) and group_order:
+            missing_groups = sorted(item_groups - set(group_order))
+            if missing_groups:
+                errors.append(f"{label}: groupOrder omits item group(s): {', '.join(missing_groups)}")
+
+        actual_done = sum(item.get("status") == "done" for item in items)
+        actual_todo = sum(item.get("status") == "todo" for item in items)
+        actual_candidate = sum(item.get("matchStatus") == "candidate" for item in items)
+        source_summary = series.get("sourceSummary", {})
+        summary_expectations = {
+            "officialBaseline": len(items),
+            "officialLaureates": len(items),
+            "siteDoneWorks": actual_done,
+            "siteDoneLaureates": actual_done,
+            "localDoneWorks": actual_done,
+            "todoWorks": actual_todo,
+            "todoLaureates": actual_todo,
+            "candidateMatches": actual_candidate,
+        }
+        for field, expected in summary_expectations.items():
+            if field in source_summary and source_summary[field] != expected:
+                errors.append(f"{label}: sourceSummary.{field} is stale: {source_summary[field]} != {expected}")
 
     return errors
 

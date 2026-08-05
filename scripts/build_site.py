@@ -28,13 +28,13 @@ STATIC_SITEMAP_PATHS = [
     "/field.html",
     "/books.html",
     "/series.html",
-    "/series/20th-century-world-poetry/",
     "/thoughts.html",
     "/study.html",
     "/videos.html",
 ]
 SITE_PLANE_SOURCE = Path("data/site-plane.json")
 SITE_PLANE_OUTPUT = Path("site-data.js")
+SERIES_DATA_SOURCE = Path("data/series-books.json")
 ARTICLE_TEMPLATE_VERSION = "knowledge-note-v3"
 
 
@@ -332,11 +332,31 @@ def atom_datetime(value: str) -> str:
     return parsed.replace(tzinfo=dt.timezone(dt.timedelta(hours=8))).isoformat()
 
 
-def build_sitemap_xml(items: list[dict[str, str]], base_url: str) -> str:
+def series_sitemap_paths(root: Path) -> list[str]:
+    """Return public series paths from the committed series registry."""
+
+    data_path = root / SERIES_DATA_SOURCE
+    if not data_path.exists():
+        return []
+    payload = json.loads(data_path.read_text(encoding="utf-8"))
+    paths: list[str] = []
+    for series in payload.get("series", []):
+        href = series.get("href", "")
+        if isinstance(href, str) and href.startswith("/"):
+            paths.append(href)
+    return list(dict.fromkeys(paths))
+
+
+def build_sitemap_xml(
+    items: list[dict[str, str]],
+    base_url: str,
+    static_paths: list[str] | None = None,
+) -> str:
     site_lastmod = latest_date(items)
+    paths = static_paths if static_paths is not None else STATIC_SITEMAP_PATHS
     urls = [
         {"loc": absolute_url(base_url, path), "lastmod": site_lastmod}
-        for path in STATIC_SITEMAP_PATHS
+        for path in paths
     ]
     urls.extend(
         {
@@ -395,7 +415,12 @@ def build_atom_xml(items: list[dict[str, str]], base_url: str) -> str:
 
 def write_site_indexes(root: Path, items: list[dict[str, str]]) -> None:
     base_url = site_base_url(root)
-    (root / "sitemap.xml").write_text(build_sitemap_xml(items, base_url), encoding="utf-8", newline="\n")
+    sitemap_paths = list(dict.fromkeys(STATIC_SITEMAP_PATHS + series_sitemap_paths(root)))
+    (root / "sitemap.xml").write_text(
+        build_sitemap_xml(items, base_url, sitemap_paths),
+        encoding="utf-8",
+        newline="\n",
+    )
     atom_path = root / "includes" / "atom.xml"
     atom_path.parent.mkdir(parents=True, exist_ok=True)
     atom_path.write_text(build_atom_xml(items, base_url), encoding="utf-8", newline="\n")
