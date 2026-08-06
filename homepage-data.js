@@ -1,6 +1,52 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-07-25",
+  "generatedAt": "2026-08-06",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0035",
+      "title": "受控外部化-Dean与Google的组织新探索",
+      "created": "2026-08-06 09:11:49",
+      "createdDate": "2026-08-06",
+      "published": "2026-08-06",
+      "updated": "2026-08-06 10:43:55",
+      "updatedDate": "2026-08-06",
+      "slug": "deangoogle",
+      "href": "/thoughts/0035/",
+      "canonicalHref": "/thoughts/0035/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BThoughts%5D%5B0035%5D%5B%E5%8F%97%E6%8E%A7%E5%A4%96%E9%83%A8%E5%8C%96-Dean%E4%B8%8EGoogle%E7%9A%84%E7%BB%84%E7%BB%87%E6%96%B0%E6%8E%A2%E7%B4%A2%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Thoughts][0035][受控外部化-Dean与Google的组织新探索].md",
+      "label": "[Thoughts][0035][受控外部化-Dean与Google的组织新探索]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [],
+      "mappingSource": "unmapped",
+      "summary": "Google 在同一天重新分配组织中 AI 相关权力：",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Thoughts",
+      "id": "0034",
+      "title": "前无再前",
+      "created": "2026-08-05 21:19:38",
+      "createdDate": "2026-08-05",
+      "published": "2026-08-05",
+      "updated": "2026-08-06 10:47:00",
+      "updatedDate": "2026-08-06",
+      "slug": "thoughts-0034",
+      "href": "/thoughts/0034/",
+      "canonicalHref": "/thoughts/0034/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BThoughts%5D%5B0034%5D%5B%E5%89%8D%E6%97%A0%E5%86%8D%E5%89%8D%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Thoughts][0034][前无再前].md",
+      "label": "[Thoughts][0034][前无再前]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [],
+      "mappingSource": "unmapped",
+      "summary": "纵山横海，博采旁参；前无再前，缘无定界缘。——（张棋荣，20260803，11.44。注意，第一个【前】和【缘】是动词）",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Thoughts",
       "id": "0033",
@@ -3856,15 +3902,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 163,
+    "total": 165,
     "byType": {
-      "Thoughts": 33,
+      "Thoughts": 35,
       "Books": 127,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 32,
+      "2026": 34,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -3874,13 +3920,13 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 19,
-      "derived": 144
+      "derived": 146
     },
     "narrativeCoverage": {
       "mapped": 145,
-      "total": 163,
-      "unmapped": 18,
-      "percent": 89.0,
+      "total": 165,
+      "unmapped": 20,
+      "percent": 87.9,
       "byField": {
         "VL-READING-LITERATURE-POETRY": 130,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
@@ -3893,7 +3939,7 @@ window.HOMEPAGE_DATA = {
         "frontmatter": 0,
         "selected": 5,
         "taxonomy": 14,
-        "unmapped": 18
+        "unmapped": 20
       }
     }
   }

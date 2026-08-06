@@ -4,10 +4,26 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-07-25T00:00:00+08:00</updated>
+  <updated>2026-08-06T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>受控外部化-Dean与Google的组织新探索</title>
+    <link href="https://zqr.world/thoughts/0035/" />
+    <id>https://zqr.world/thoughts/0035/</id>
+    <published>2026-08-06T00:00:00+08:00</published>
+    <updated>2026-08-06T10:43:55+08:00</updated>
+    <summary>Google 在同一天重新分配组织中 AI 相关权力：</summary>
+  </entry>
+  <entry>
+    <title>前无再前</title>
+    <link href="https://zqr.world/thoughts/0034/" />
+    <id>https://zqr.world/thoughts/0034/</id>
+    <published>2026-08-05T00:00:00+08:00</published>
+    <updated>2026-08-06T10:47:00+08:00</updated>
+    <summary>纵山横海，博采旁参；前无再前，缘无定界缘。——（张棋荣，20260803，11.44。注意，第一个【前】和【缘】是动词）</summary>
+  </entry>
   <entry>
     <title>党建文选学习报告</title>
     <link href="https://zqr.world/thoughts/0033/" />
@@ -391,21 +407,5 @@
     <published>2023-04-16T00:00:00+08:00</published>
     <updated>2023-04-16T21:50:23+08:00</updated>
     <summary>莫尔，英国，1478-1535.</summary>
-  </entry>
-  <entry>
-    <title>白夜行-东野圭吾</title>
-    <link href="https://zqr.world/books/0106/" />
-    <id>https://zqr.world/books/0106/</id>
-    <published>2023-04-09T00:00:00+08:00</published>
-    <updated>2023-04-09T15:55:27+08:00</updated>
-    <summary>东野圭吾。</summary>
-  </entry>
-  <entry>
-    <title>屈原</title>
-    <link href="https://zqr.world/books/0105/" />
-    <id>https://zqr.world/books/0105/</id>
-    <published>2023-04-09T00:00:00+08:00</published>
-    <updated>2023-04-09T00:45:26+08:00</updated>
-    <summary>屈原。</summary>
   </entry>
 </feed>

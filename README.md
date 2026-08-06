@@ -68,7 +68,7 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "党建文选学习报告"
+python scripts/new_note.py Thoughts "受控外部化-Dean与Google的组织新探索"
 python scripts/new_note.py Books "舒婷"
 ```
 
