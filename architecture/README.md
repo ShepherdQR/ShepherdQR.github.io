@@ -23,6 +23,7 @@ This directory stores architecture design documents and decision records for the
 
 ## Task Closeouts
 
+- [2026-08-06 Thoughts 0034 and 0035 Publishing Closeout](task-closeouts/2026-08-06-thoughts-0034-0035-publishing-closeout.md): Scoped release record for two new Thoughts notes, synchronized update metadata, regenerated public artifacts, validation, deployment, and live URL checks.
 - [2026-08-01 Site Aesthetic Summit Implementation Closeout](task-closeouts/2026-08-01-site-aesthetic-summit-implementation-closeout.md): P0-P3 implementation, validation, visual acceptance, Museum Local Truth Charter non-regression, and Git delivery handoff.
 - [2026-07-27 Site Aesthetic Summit Analysis Closeout](task-closeouts/2026-07-27-site-aesthetic-summit-analysis-closeout.md): Durable handoff for the control-plane V6 aesthetic audit, peak-direction analysis, browser evidence, P0-P3 roadmap, validation results, and local documentation-only final state.
 - [2026-07-25 Latest Notes Publishing Closeout](task-closeouts/2026-07-25-latest-notes-publishing-closeout.md): Scoped release record for three new notes, two updated thoughts, synchronized update metadata, regenerated public artifacts, validation, deployment, and live URL checks.
