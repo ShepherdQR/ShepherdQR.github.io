@@ -1,6 +1,106 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-08-06",
+  "generatedAt": "2026-08-19",
   "items": [
+    {
+      "type": "Books",
+      "id": "0131",
+      "title": "[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选",
+      "created": "2026-08-18 23:33:23",
+      "createdDate": "2026-08-18",
+      "published": "2026-08-18",
+      "updated": "2026-08-19 00:04:12",
+      "updatedDate": "2026-08-19",
+      "slug": "books-0131",
+      "href": "/books/0131/",
+      "canonicalHref": "/books/0131/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0131%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E4%BC%BD%E5%A7%86%E6%89%8E%E6%89%98%E5%A4%AB%E7%88%B1%E6%83%85%E8%AF%97%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0131][[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选].md",
+      "label": "[Books][0131][[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "“除了妈妈，没有妈妈！”",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0130",
+      "title": "[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选",
+      "created": "2026-08-09 09:57:45",
+      "createdDate": "2026-08-09",
+      "published": "2026-08-09",
+      "updated": "2026-08-18 23:32:11",
+      "updatedDate": "2026-08-18",
+      "slug": "books-0130",
+      "href": "/books/0130/",
+      "canonicalHref": "/books/0130/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0130%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E8%8F%B2%E5%88%A9%E6%99%AE%C2%B7%E6%8B%89%E9%87%91%E8%AF%97%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0130][[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选].md",
+      "label": "[Books][0130][[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "桑克，译。",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0129",
+      "title": "[20世纪世界诗歌译丛](第三辑)英国当代诗选",
+      "created": "2026-08-09 09:04:42",
+      "createdDate": "2026-08-09",
+      "published": "2026-08-09",
+      "updated": "2026-08-09 09:55:02",
+      "updatedDate": "2026-08-09",
+      "slug": "books-0129",
+      "href": "/books/0129/",
+      "canonicalHref": "/books/0129/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0129%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E8%8B%B1%E5%9B%BD%E5%BD%93%E4%BB%A3%E8%AF%97%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0129][[20世纪世界诗歌译丛](第三辑)英国当代诗选].md",
+      "label": "[Books][0129][[20世纪世界诗歌译丛](第三辑)英国当代诗选]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "马永波，译。",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0128",
+      "title": "[20世纪世界诗歌译丛](第三辑)沃伦诗选",
+      "created": "2026-08-09 07:57:50",
+      "createdDate": "2026-08-09",
+      "published": "2026-08-09",
+      "updated": "2026-08-09 08:57:47",
+      "updatedDate": "2026-08-09",
+      "slug": "books-0128",
+      "href": "/books/0128/",
+      "canonicalHref": "/books/0128/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0128%5D%5B%5B20%E4%B8%96%E7%BA%AA%E4%B8%96%E7%95%8C%E8%AF%97%E6%AD%8C%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%B8%89%E8%BE%91%29%E6%B2%83%E4%BC%A6%E8%AF%97%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0128][[20世纪世界诗歌译丛](第三辑)沃伦诗选].md",
+      "label": "[Books][0128][[20世纪世界诗歌译丛](第三辑)沃伦诗选]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "周伟驰，译。",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Thoughts",
       "id": "0035",
@@ -121,8 +221,8 @@ window.HOMEPAGE_DATA = {
       "created": "2026-07-15 01:09:59",
       "createdDate": "2026-07-15",
       "published": "2026-07-15",
-      "updated": "2026-07-25 01:59:13",
-      "updatedDate": "2026-07-25",
+      "updated": "2026-08-14 22:56:56",
+      "updatedDate": "2026-08-14",
       "slug": "thoughts-0032",
       "href": "/thoughts/0032/",
       "canonicalHref": "/thoughts/0032/",
@@ -3902,15 +4002,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 165,
+    "total": 169,
     "byType": {
+      "Books": 131,
       "Thoughts": 35,
-      "Books": 127,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 34,
+      "2026": 38,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -3920,22 +4020,22 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 19,
-      "derived": 146
+      "derived": 150
     },
     "narrativeCoverage": {
-      "mapped": 145,
-      "total": 165,
+      "mapped": 149,
+      "total": 169,
       "unmapped": 20,
-      "percent": 87.9,
+      "percent": 88.2,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 130,
+        "VL-READING-LITERATURE-POETRY": 134,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
         "VL-ENGINEERING-EVIDENCE": 8,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 126,
+        "collection_default": 130,
         "frontmatter": 0,
         "selected": 5,
         "taxonomy": 14,

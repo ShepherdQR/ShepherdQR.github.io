@@ -69,7 +69,7 @@ From the repository root:
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
 python scripts/new_note.py Thoughts "受控外部化-Dean与Google的组织新探索"
-python scripts/new_note.py Books "舒婷"
+python scripts/new_note.py Books "[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选"
 ```
 
 Supported content types:

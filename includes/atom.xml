@@ -4,10 +4,42 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-08-06T00:00:00+08:00</updated>
+  <updated>2026-08-19T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选</title>
+    <link href="https://zqr.world/books/0131/" />
+    <id>https://zqr.world/books/0131/</id>
+    <published>2026-08-18T00:00:00+08:00</published>
+    <updated>2026-08-19T00:04:12+08:00</updated>
+    <summary>“除了妈妈，没有妈妈！”</summary>
+  </entry>
+  <entry>
+    <title>[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选</title>
+    <link href="https://zqr.world/books/0130/" />
+    <id>https://zqr.world/books/0130/</id>
+    <published>2026-08-09T00:00:00+08:00</published>
+    <updated>2026-08-18T23:32:11+08:00</updated>
+    <summary>桑克，译。</summary>
+  </entry>
+  <entry>
+    <title>[20世纪世界诗歌译丛](第三辑)英国当代诗选</title>
+    <link href="https://zqr.world/books/0129/" />
+    <id>https://zqr.world/books/0129/</id>
+    <published>2026-08-09T00:00:00+08:00</published>
+    <updated>2026-08-09T09:55:02+08:00</updated>
+    <summary>马永波，译。</summary>
+  </entry>
+  <entry>
+    <title>[20世纪世界诗歌译丛](第三辑)沃伦诗选</title>
+    <link href="https://zqr.world/books/0128/" />
+    <id>https://zqr.world/books/0128/</id>
+    <published>2026-08-09T00:00:00+08:00</published>
+    <updated>2026-08-09T08:57:47+08:00</updated>
+    <summary>周伟驰，译。</summary>
+  </entry>
   <entry>
     <title>受控外部化-Dean与Google的组织新探索</title>
     <link href="https://zqr.world/thoughts/0035/" />
@@ -53,7 +85,7 @@
     <link href="https://zqr.world/thoughts/0032/" />
     <id>https://zqr.world/thoughts/0032/</id>
     <published>2026-07-15T00:00:00+08:00</published>
-    <updated>2026-07-25T01:59:13+08:00</updated>
+    <updated>2026-08-14T22:56:56+08:00</updated>
     <summary>张棋荣的诗歌。</summary>
   </entry>
   <entry>
@@ -375,37 +407,5 @@
     <published>2023-05-02T00:00:00+08:00</published>
     <updated>2023-05-02T15:46:23+08:00</updated>
     <summary>弥尔顿，1608-1674。</summary>
-  </entry>
-  <entry>
-    <title>欧里庇得斯</title>
-    <link href="https://zqr.world/books/0110/" />
-    <id>https://zqr.world/books/0110/</id>
-    <published>2023-05-02T00:00:00+08:00</published>
-    <updated>2023-05-02T09:24:30+08:00</updated>
-    <summary>欧里庇得斯。</summary>
-  </entry>
-  <entry>
-    <title>Sarah Kane</title>
-    <link href="https://zqr.world/books/0109/" />
-    <id>https://zqr.world/books/0109/</id>
-    <published>2023-05-01T00:00:00+08:00</published>
-    <updated>2023-05-01T21:09:10+08:00</updated>
-    <summary>Sarah Kane， 1971-1999，英国，“直面戏剧浪潮”代表人物。用鞋带勒死了自己。</summary>
-  </entry>
-  <entry>
-    <title>源氏物语</title>
-    <link href="https://zqr.world/books/0108/" />
-    <id>https://zqr.world/books/0108/</id>
-    <published>2023-04-22T00:00:00+08:00</published>
-    <updated>2023-04-22T21:56:51+08:00</updated>
-    <summary>紫式部，或者说无名氏。</summary>
-  </entry>
-  <entry>
-    <title>[商务印书馆汉译世界名著][C0201]乌托邦-莫尔</title>
-    <link href="https://zqr.world/books/0107/" />
-    <id>https://zqr.world/books/0107/</id>
-    <published>2023-04-16T00:00:00+08:00</published>
-    <updated>2023-04-16T21:50:23+08:00</updated>
-    <summary>莫尔，英国，1478-1535.</summary>
   </entry>
 </feed>
