@@ -4,10 +4,34 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-08-19T00:00:00+08:00</updated>
+  <updated>2026-08-23T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>盐铁论</title>
+    <link href="https://zqr.world/books/0134/" />
+    <id>https://zqr.world/books/0134/</id>
+    <published>2026-08-22T00:00:00+08:00</published>
+    <updated>2026-08-22T01:04:57+08:00</updated>
+    <summary>盐铁论</summary>
+  </entry>
+  <entry>
+    <title>中国航空工业机载简史</title>
+    <link href="https://zqr.world/books/0133/" />
+    <id>https://zqr.world/books/0133/</id>
+    <published>2026-08-20T00:00:00+08:00</published>
+    <updated>2026-08-21T00:00:07+08:00</updated>
+    <summary>中国航空工业机载简史</summary>
+  </entry>
+  <entry>
+    <title>马克思恩格斯箴言</title>
+    <link href="https://zqr.world/books/0132/" />
+    <id>https://zqr.world/books/0132/</id>
+    <published>2026-08-20T00:00:00+08:00</published>
+    <updated>2026-08-22T22:58:38+08:00</updated>
+    <summary>70min + 87 min。+ 100 min = 257 min。 // 20260822，22:59</summary>
+  </entry>
   <entry>
     <title>[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选</title>
     <link href="https://zqr.world/books/0131/" />
@@ -85,7 +109,7 @@
     <link href="https://zqr.world/thoughts/0032/" />
     <id>https://zqr.world/thoughts/0032/</id>
     <published>2026-07-15T00:00:00+08:00</published>
-    <updated>2026-08-14T22:56:56+08:00</updated>
+    <updated>2026-08-23T01:07:50+08:00</updated>
     <summary>张棋荣的诗歌。</summary>
   </entry>
   <entry>
@@ -383,29 +407,5 @@
     <published>2023-05-20T00:00:00+08:00</published>
     <updated>2023-03-27T19:42:30+08:00</updated>
     <summary>爱因斯坦</summary>
-  </entry>
-  <entry>
-    <title>[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选</title>
-    <link href="https://zqr.world/books/0113/" />
-    <id>https://zqr.world/books/0113/</id>
-    <published>2023-05-07T00:00:00+08:00</published>
-    <updated>2023-05-20T17:38:20+08:00</updated>
-    <summary>勃洛克，1880-1921，俄国贵族，象征主义诗人。姥爷是彼得堡大学校长。</summary>
-  </entry>
-  <entry>
-    <title>[诺贝尔文学奖][1996]辛波丝卡</title>
-    <link href="https://zqr.world/books/0112/" />
-    <id>https://zqr.world/books/0112/</id>
-    <published>2023-05-02T00:00:00+08:00</published>
-    <updated>2023-05-02T17:26:57+08:00</updated>
-    <summary>辛波丝卡，1923-2012，波兰女诗人。</summary>
-  </entry>
-  <entry>
-    <title>[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿</title>
-    <link href="https://zqr.world/books/0111/" />
-    <id>https://zqr.world/books/0111/</id>
-    <published>2023-05-02T00:00:00+08:00</published>
-    <updated>2023-05-02T15:46:23+08:00</updated>
-    <summary>弥尔顿，1608-1674。</summary>
   </entry>
 </feed>

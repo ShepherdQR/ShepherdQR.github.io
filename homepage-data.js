@@ -1,6 +1,81 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-08-19",
+  "generatedAt": "2026-08-23",
   "items": [
+    {
+      "type": "Books",
+      "id": "0134",
+      "title": "盐铁论",
+      "created": "2026-08-22 00:39:34",
+      "createdDate": "2026-08-22",
+      "published": "2026-08-22",
+      "updated": "2026-08-22 01:04:57",
+      "updatedDate": "2026-08-22",
+      "slug": "books-0134",
+      "href": "/books/0134/",
+      "canonicalHref": "/books/0134/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0134%5D%5B%E7%9B%90%E9%93%81%E8%AE%BA%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0134][盐铁论].md",
+      "label": "[Books][0134][盐铁论]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "盐铁论",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0133",
+      "title": "中国航空工业机载简史",
+      "created": "2026-08-20 23:58:17",
+      "createdDate": "2026-08-20",
+      "published": "2026-08-20",
+      "updated": "2026-08-21 00:00:07",
+      "updatedDate": "2026-08-21",
+      "slug": "books-0133",
+      "href": "/books/0133/",
+      "canonicalHref": "/books/0133/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0133%5D%5B%E4%B8%AD%E5%9B%BD%E8%88%AA%E7%A9%BA%E5%B7%A5%E4%B8%9A%E6%9C%BA%E8%BD%BD%E7%AE%80%E5%8F%B2%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0133][中国航空工业机载简史].md",
+      "label": "[Books][0133][中国航空工业机载简史]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "中国航空工业机载简史",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0132",
+      "title": "马克思恩格斯箴言",
+      "created": "2026-08-20 23:17:36",
+      "createdDate": "2026-08-20",
+      "published": "2026-08-20",
+      "updated": "2026-08-22 22:58:38",
+      "updatedDate": "2026-08-22",
+      "slug": "books-0132",
+      "href": "/books/0132/",
+      "canonicalHref": "/books/0132/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0132%5D%5B%E9%A9%AC%E5%85%8B%E6%80%9D%E6%81%A9%E6%A0%BC%E6%96%AF%E7%AE%B4%E8%A8%80%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0132][马克思恩格斯箴言].md",
+      "label": "[Books][0132][马克思恩格斯箴言]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "70min + 87 min。+ 100 min = 257 min。 // 20260822，22:59",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Books",
       "id": "0131",
@@ -221,8 +296,8 @@ window.HOMEPAGE_DATA = {
       "created": "2026-07-15 01:09:59",
       "createdDate": "2026-07-15",
       "published": "2026-07-15",
-      "updated": "2026-08-14 22:56:56",
-      "updatedDate": "2026-08-14",
+      "updated": "2026-08-23 01:07:50",
+      "updatedDate": "2026-08-23",
       "slug": "thoughts-0032",
       "href": "/thoughts/0032/",
       "canonicalHref": "/thoughts/0032/",
@@ -4002,15 +4077,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 169,
+    "total": 172,
     "byType": {
-      "Books": 131,
+      "Books": 134,
       "Thoughts": 35,
       "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 38,
+      "2026": 41,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -4020,22 +4095,22 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 19,
-      "derived": 150
+      "derived": 153
     },
     "narrativeCoverage": {
-      "mapped": 149,
-      "total": 169,
+      "mapped": 152,
+      "total": 172,
       "unmapped": 20,
-      "percent": 88.2,
+      "percent": 88.4,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 134,
+        "VL-READING-LITERATURE-POETRY": 137,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
         "VL-ENGINEERING-EVIDENCE": 8,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 130,
+        "collection_default": 133,
         "frontmatter": 0,
         "selected": 5,
         "taxonomy": 14,
