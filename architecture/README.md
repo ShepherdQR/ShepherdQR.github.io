@@ -23,6 +23,7 @@ This directory stores architecture design documents and decision records for the
 
 ## Task Closeouts
 
+- [2026-08-23 Books 0132-0134 and Thoughts 0032 Publishing Closeout](task-closeouts/2026-08-23-books-0132-0134-thoughts-0032-publishing-closeout.md): Scoped release record for three new Books notes, the expanded Thoughts 0032 note, synchronized update metadata, regenerated public artifacts, validation, deployment, and live URL checks.
 - [2026-08-19 Books 0128-0131 and Thoughts 0032 Publishing Closeout](task-closeouts/2026-08-19-books-0128-0131-thoughts-0032-publishing-closeout.md): Scoped release record for four new Books notes, the expanded Thoughts 0032 note, synchronized update metadata, regenerated public artifacts, validation, deployment, and live URL checks.
 - [2026-08-06 Thoughts 0034 and 0035 Publishing Closeout](task-closeouts/2026-08-06-thoughts-0034-0035-publishing-closeout.md): Scoped release record for two new Thoughts notes, synchronized update metadata, regenerated public artifacts, validation, deployment, and live URL checks.
 - [2026-08-01 Site Aesthetic Summit Implementation Closeout](task-closeouts/2026-08-01-site-aesthetic-summit-implementation-closeout.md): P0-P3 implementation, validation, visual acceptance, Museum Local Truth Charter non-regression, and Git delivery handoff.
