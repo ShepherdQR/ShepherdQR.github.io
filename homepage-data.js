@@ -22,7 +22,7 @@ window.HOMEPAGE_DATA = {
         "VL-READING-LITERATURE-POETRY"
       ],
       "mappingSource": "collection_default",
-      "summary": "鲍迪埃诗选",
+      "summary": "【END】 // 2026-08-30 22:39:12",
       "revision": "1",
       "revisionStatus": "current"
     },
