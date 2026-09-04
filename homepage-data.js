@@ -1,6 +1,129 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-08-23",
+  "generatedAt": "2026-08-30",
   "items": [
+    {
+      "type": "Books",
+      "id": "0138",
+      "title": "鲍迪埃诗选",
+      "created": "2026-08-30 10:49:47",
+      "createdDate": "2026-08-30",
+      "published": "2026-08-30",
+      "updated": "2026-08-30 10:49:47",
+      "updatedDate": "2026-08-30",
+      "slug": "books-0138",
+      "href": "/books/0138/",
+      "canonicalHref": "/books/0138/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0138%5D%5B%E9%B2%8D%E8%BF%AA%E5%9F%83%E8%AF%97%E9%80%89%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0138][鲍迪埃诗选].md",
+      "label": "[Books][0138][鲍迪埃诗选]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "鲍迪埃诗选",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0137",
+      "title": "人海之间-海洋亚洲中的中国与世界",
+      "created": "2026-08-29 00:27:07",
+      "createdDate": "2026-08-29",
+      "published": "2026-08-29",
+      "updated": "2026-08-29 00:27:07",
+      "updatedDate": "2026-08-29",
+      "slug": "books-0137",
+      "href": "/books/0137/",
+      "canonicalHref": "/books/0137/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0137%5D%5B%E4%BA%BA%E6%B5%B7%E4%B9%8B%E9%97%B4-%E6%B5%B7%E6%B4%8B%E4%BA%9A%E6%B4%B2%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%9B%BD%E4%B8%8E%E4%B8%96%E7%95%8C%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0137][人海之间-海洋亚洲中的中国与世界].md",
+      "label": "[Books][0137][人海之间-海洋亚洲中的中国与世界]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "杨斌。西冷印社社员。",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0136",
+      "title": "合二为一-场地与机理的解读",
+      "created": "2026-08-25 22:52:09",
+      "createdDate": "2026-08-25",
+      "published": "2026-08-25",
+      "updated": "2026-08-25 22:52:09",
+      "updatedDate": "2026-08-25",
+      "slug": "books-0136",
+      "href": "/books/0136/",
+      "canonicalHref": "/books/0136/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0136%5D%5B%E5%90%88%E4%BA%8C%E4%B8%BA%E4%B8%80-%E5%9C%BA%E5%9C%B0%E4%B8%8E%E6%9C%BA%E7%90%86%E7%9A%84%E8%A7%A3%E8%AF%BB%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0136][合二为一-场地与机理的解读].md",
+      "label": "[Books][0136][合二为一-场地与机理的解读]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "合二为一-场地与机理的解读",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Videos",
+      "id": "0003",
+      "title": "TheBirthOfANation",
+      "created": "2026-08-23 10:02:20",
+      "createdDate": "2026-08-23",
+      "published": "2026-08-23",
+      "updated": "2026-08-23 10:02:20",
+      "updatedDate": "2026-08-23",
+      "slug": "thebirthofanation",
+      "href": "/videos/0003/",
+      "canonicalHref": "/videos/0003/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BVideos%5D%5B0003%5D%5BTheBirthOfANation%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Videos][0003][TheBirthOfANation].md",
+      "label": "[Videos][0003][TheBirthOfANation]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [],
+      "mappingSource": "unmapped",
+      "summary": "TheBirthOfANation",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0135",
+      "title": "散文诗的新时代",
+      "created": "2026-08-23 09:29:36",
+      "createdDate": "2026-08-23",
+      "published": "2026-08-23",
+      "updated": "2026-08-23 09:29:36",
+      "updatedDate": "2026-08-23",
+      "slug": "books-0135",
+      "href": "/books/0135/",
+      "canonicalHref": "/books/0135/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month8/%5BBooks%5D%5B0135%5D%5B%E6%95%A3%E6%96%87%E8%AF%97%E7%9A%84%E6%96%B0%E6%97%B6%E4%BB%A3%5D",
+      "sourcePath": "qrthoughts/year2026/month8/[Books][0135][散文诗的新时代].md",
+      "label": "[Books][0135][散文诗的新时代]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "桂兴华，主编。",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Books",
       "id": "0134",
@@ -4077,15 +4200,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 172,
+    "total": 177,
     "byType": {
-      "Books": 134,
+      "Books": 138,
+      "Videos": 3,
       "Thoughts": 35,
-      "Videos": 2,
       "Study": 1
     },
     "years": {
-      "2026": 41,
+      "2026": 46,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -4095,26 +4218,26 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 19,
-      "derived": 153
+      "derived": 158
     },
     "narrativeCoverage": {
-      "mapped": 152,
-      "total": 172,
-      "unmapped": 20,
-      "percent": 88.4,
+      "mapped": 156,
+      "total": 177,
+      "unmapped": 21,
+      "percent": 88.1,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 137,
+        "VL-READING-LITERATURE-POETRY": 141,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
         "VL-ENGINEERING-EVIDENCE": 8,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 133,
+        "collection_default": 137,
         "frontmatter": 0,
         "selected": 5,
         "taxonomy": 14,
-        "unmapped": 20
+        "unmapped": 21
       }
     }
   }

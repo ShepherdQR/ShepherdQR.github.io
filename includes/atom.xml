@@ -4,10 +4,50 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-08-23T00:00:00+08:00</updated>
+  <updated>2026-08-30T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>鲍迪埃诗选</title>
+    <link href="https://zqr.world/books/0138/" />
+    <id>https://zqr.world/books/0138/</id>
+    <published>2026-08-30T00:00:00+08:00</published>
+    <updated>2026-08-30T10:49:47+08:00</updated>
+    <summary>鲍迪埃诗选</summary>
+  </entry>
+  <entry>
+    <title>人海之间-海洋亚洲中的中国与世界</title>
+    <link href="https://zqr.world/books/0137/" />
+    <id>https://zqr.world/books/0137/</id>
+    <published>2026-08-29T00:00:00+08:00</published>
+    <updated>2026-08-29T00:27:07+08:00</updated>
+    <summary>杨斌。西冷印社社员。</summary>
+  </entry>
+  <entry>
+    <title>合二为一-场地与机理的解读</title>
+    <link href="https://zqr.world/books/0136/" />
+    <id>https://zqr.world/books/0136/</id>
+    <published>2026-08-25T00:00:00+08:00</published>
+    <updated>2026-08-25T22:52:09+08:00</updated>
+    <summary>合二为一-场地与机理的解读</summary>
+  </entry>
+  <entry>
+    <title>TheBirthOfANation</title>
+    <link href="https://zqr.world/videos/0003/" />
+    <id>https://zqr.world/videos/0003/</id>
+    <published>2026-08-23T00:00:00+08:00</published>
+    <updated>2026-08-23T10:02:20+08:00</updated>
+    <summary>TheBirthOfANation</summary>
+  </entry>
+  <entry>
+    <title>散文诗的新时代</title>
+    <link href="https://zqr.world/books/0135/" />
+    <id>https://zqr.world/books/0135/</id>
+    <published>2026-08-23T00:00:00+08:00</published>
+    <updated>2026-08-23T09:29:36+08:00</updated>
+    <summary>桂兴华，主编。</summary>
+  </entry>
   <entry>
     <title>盐铁论</title>
     <link href="https://zqr.world/books/0134/" />
@@ -367,45 +407,5 @@
     <published>2023-06-29T00:00:00+08:00</published>
     <updated>2024-06-30T08:41:24+08:00</updated>
     <summary>1994年，战国晚期楚国贵族墓中的随葬品，竹书出现于香港文物市场，辗转到上海博物馆，简称上博简。《凡物流形》是上博简其中之一。</summary>
-  </entry>
-  <entry>
-    <title>[诺贝尔文学奖][1994]福克纳</title>
-    <link href="https://zqr.world/books/0117/" />
-    <id>https://zqr.world/books/0117/</id>
-    <published>2023-06-08T00:00:00+08:00</published>
-    <updated>2024-06-16T01:07:21+08:00</updated>
-    <summary>福克纳。强。</summary>
-  </entry>
-  <entry>
-    <title>[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷</title>
-    <link href="https://zqr.world/books/0116/" />
-    <id>https://zqr.world/books/0116/</id>
-    <published>2023-06-02T00:00:00+08:00</published>
-    <updated>2024-06-02T18:03:17+08:00</updated>
-    <summary>约翰·格雷，英国空想社会主义，1798-1850。</summary>
-  </entry>
-  <entry>
-    <title>[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔</title>
-    <link href="https://zqr.world/books/0115/" />
-    <id>https://zqr.world/books/0115/</id>
-    <published>2023-05-20T00:00:00+08:00</published>
-    <updated>2023-05-20T19:00:38+08:00</updated>
-    <summary>1916年访日、美的演讲稿。</summary>
-  </entry>
-  <entry>
-    <title>王尔德</title>
-    <link href="https://zqr.world/books/0114/" />
-    <id>https://zqr.world/books/0114/</id>
-    <published>2023-05-20T00:00:00+08:00</published>
-    <updated>2023-05-20T18:06:38+08:00</updated>
-    <summary>王尔德，1854-1900，英国，唯美主义。</summary>
-  </entry>
-  <entry>
-    <title>爱因斯坦</title>
-    <link href="https://zqr.world/books/0026/" />
-    <id>https://zqr.world/books/0026/</id>
-    <published>2023-05-20T00:00:00+08:00</published>
-    <updated>2023-03-27T19:42:30+08:00</updated>
-    <summary>爱因斯坦</summary>
   </entry>
 </feed>
