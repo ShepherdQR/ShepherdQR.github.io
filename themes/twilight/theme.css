@@ -1,0 +1,10 @@
+html[data-theme="twilight"] {
+ --page-start:#536470; --page-end:#303e4d; --page-glow:#b4acb4;
+ --surface-base:#465761; --surface-raised:#52646c; --surface-inset:#364750; --surface-inverse:#eee9df;
+ --text-primary:#f4f0e7; --text-secondary:#deddd7; --text-tertiary:#c4cbd0; --text-inverse:#25353e;
+ --rule-subtle:rgba(236,229,211,.24); --rule-strong:rgba(236,229,211,.5); --focus-ring:#f2d9b5;
+ --accent-selection:#e5bd86; --scene-line:211,224,232; --scene-light:249,194,132; --glass-tint:rgba(214,227,230,.1);
+}
+html[data-theme="twilight"] .document-stage { perspective:1500px; }
+html[data-theme="twilight"] .document-echo { border-radius:42% 3px 3px 3px / 16% 3px 3px 3px; transform:translateX(calc(var(--layer) * -37px)) rotateY(-20deg) rotateZ(calc(var(--layer) * -2deg)); }
+html[data-theme="twilight"] .selected-document { border-top-left-radius:22%; }

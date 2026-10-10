@@ -5,12 +5,26 @@
     const stats = corpus.stats || {};
     const projection = window.PROJECTION_TRUTH || { state: 'catalogued', label: 'dated projection', stale: false };
 
+    renderSpatial();
     renderPulse();
     renderFields();
     renderEvidence();
     renderCorpus();
     renderSelected();
     renderPrinciples();
+
+    function renderSpatial() {
+        const host = document.getElementById('home-spatial');
+        if (!host || !window.ZQRSpatial) return;
+        const curated = Array.isArray(plane.selected) ? plane.selected : (((plane.selected_entries || {}).items) || []);
+        const featured = curated.map(selection => {
+            const item = items.find(item => item.type === selection.type && item.id === selection.id);
+            return item ? { ...item, annotation: selection.annotation } : null;
+        }).filter(Boolean);
+        const seen = new Set(featured.map(item => item.type + ':' + item.id));
+        const recent = items.slice(0, 7).filter(item => !seen.has(item.type + ':' + item.id));
+        window.ZQRHomeDeck = window.ZQRSpatial.create(host, [...featured, ...recent], 'SELECTED DOCUMENT / 精选与近作');
+    }
 
     function renderPulse() {
         const control = plane.control || {};
@@ -125,10 +139,10 @@
             const state = document.createElement('span');
             state.className = 'state-marker';
             state.dataset.state = index === 0 ? 'current' : 'displayed';
-            state.textContent = index === 0 ? 'Current' : 'Displayed';
+            state.textContent = index === 0 ? '最新' : '已发布';
             const source = document.createElement('span');
             source.className = 'summary-source';
-            source.textContent = item.summarySource === 'explicit' ? 'authored summary' : 'derived excerpt';
+            source.textContent = item.summarySource === 'explicit' ? '作者摘要' : '正文摘录';
             kind.appendChild(state);
             kind.appendChild(document.createTextNode(item.type));
             kind.appendChild(source);

@@ -32,7 +32,6 @@
         const currentItem = renderArticleNeighbors(meta, config.md, config);
         if (!document.querySelector('.article-header-tags')) renderArticleTaxonomy(currentItem, meta);
         enhanceArticleContent();
-        initializeThemeAwareMedia();
         if (config.math) scheduleMathJax();
     }
 
@@ -68,8 +67,7 @@
                 const currentItem = renderArticleNeighbors(parsed.meta, mdFile, config);
                 renderArticleTaxonomy(currentItem, parsed.meta);
                 enhanceArticleContent();
-                initializeThemeAwareMedia();
-                if (config.math) scheduleMathJax();
+                        if (config.math) scheduleMathJax();
             })
             .catch(error => {
                 renderError('加载失败：' + error.message);
@@ -331,23 +329,6 @@
             }, { rootMargin: '-18% 0px -70% 0px', threshold: 0 });
             headings.forEach(heading => observer.observe(heading));
         }
-    }
-
-    function initializeThemeAwareMedia() {
-        const root = document.documentElement;
-        const sync = function () {
-            const theme = root.dataset.theme || 'field';
-            document.querySelectorAll('[data-theme-affinity]').forEach(media => {
-                const active = media.dataset.themeAffinity === theme;
-                media.dataset.themeState = active ? 'active' : 'dormant';
-                const image = media.querySelector('img');
-                if (image) image.setAttribute('fetchpriority', active ? 'high' : 'low');
-            });
-        };
-        sync();
-        const observer = new MutationObserver(sync);
-        observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
-        document.addEventListener('zqr:museum-material-ready', sync);
     }
 
     function updateReadingProgress() {

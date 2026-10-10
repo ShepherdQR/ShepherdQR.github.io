@@ -3,3 +3,6 @@ __pycache__/
 output/playwright/
 output/pycache/
 .playwright-cli/
+
+# Unpublished author scratch; kept locally, never included in the public corpus.
+/qrthoughts/Temp.md

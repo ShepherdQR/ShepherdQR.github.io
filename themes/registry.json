@@ -1,0 +1,9 @@
+{
+  "contractVersion": 1,
+  "default": "weave",
+  "packages": [
+    "weave",
+    "twilight",
+    "tomography"
+  ]
+}

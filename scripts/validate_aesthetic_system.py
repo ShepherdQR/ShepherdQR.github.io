@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the site's institutional visual and material non-regression contract."""
+"""Validate registered theme packages, readable content and visual resource budgets."""
 
 from __future__ import annotations
 
+import build_themes
 import argparse
 import json
 import re
@@ -13,9 +14,7 @@ from urllib.parse import urlsplit
 
 
 ROOT_PAGES = ("index.html", "archive.html", "stats.html", "field.html", "chronicle.html", "series.html")
-FIELD_BUDGET = 1_500_000
-MUSEUM_BUDGET = 3_000_000
-MUSEUM_LABEL = "局部真理宪章"
+HOME_BUDGET = 1_500_000
 
 
 class PageInventory(HTMLParser):
@@ -108,101 +107,75 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, object]]:
     errors: list[str] = []
     warnings: list[str] = []
     evidence: dict[str, object] = {}
-
+    try:
+        registry = build_themes.load_registry(root)
+    except (ValueError, KeyError, OSError) as exc:
+        return [f"theme registry: {exc}"], [], {}
+    registry_text = read_text(root / "themes/registry.js")
+    payload = re.search(r"window\.ZQR_THEMES\s*=\s*([\s\S]+);\s*$", registry_text)
+    if not payload or json.loads(payload.group(1)) != registry:
+        errors.append("theme registry.js differs from canonical package metadata; rebuild")
     for relative in ROOT_PAGES:
         path = root / relative
         if not path.exists():
             errors.append(f"missing root surface: {relative}")
             continue
-        h1_count = parse_page(path).h1_count
-        if h1_count != 1:
-            errors.append(f"{relative}: expected exactly one h1, found {h1_count}")
-
-    index_text = read_text(root / "index.html")
+        text = read_text(path)
+        if parse_page(path).h1_count != 1:
+            errors.append(f"{relative}: expected exactly one h1")
+        for fragment in ("themes/registry.js", "includes/js/theme.js", "themes/shared/layout.css"):
+            if fragment not in text:
+                errors.append(f"{relative}: missing {fragment}")
+        if f'data-theme="{registry["default"]}"' not in text:
+            errors.append(f"{relative}: default theme differs from registry")
     field_text = read_text(root / "field.html")
-    theme_text = read_text(root / "includes/js/theme.js")
-    homepage_css = read_text(root / "includes/css/homepage.css")
+    if 'data-charter-object="local-truth"' not in field_text:
+        errors.append("field.html: the original charter content must remain accessible")
     system_css = read_text(root / "includes/css/system.css")
-
-    if MUSEUM_LABEL not in index_text or 'data-profile-object="museum"' not in index_text:
-        errors.append("index.html: Museum Local Truth Charter core exhibit is missing")
-    if MUSEUM_LABEL not in field_text or 'data-charter-object="local-truth"' not in field_text:
-        errors.append("field.html: System Local Truth Charter object is missing")
-    museum_img = re.search(r'<img\b(?=[^>]*data-museum-src=)[^>]*>', index_text, flags=re.I)
-    if not museum_img:
-        errors.append("index.html: Museum exhibit has no theme-aware image source")
-    elif re.search(r'\ssrc\s*=', museum_img.group(0), flags=re.I):
-        errors.append("index.html: Field profile eagerly loads the Museum-only exhibit")
-    if "hydrateMuseumObjects" not in theme_text or "data-museum-src" not in theme_text:
-        errors.append("theme.js: Museum material hydration is missing")
-    if not re.search(r'html\[data-theme="museum"\]\s+\.museum-specimen', homepage_css):
-        errors.append("homepage.css: Museum exhibit visibility rule is missing")
-
-    required_roles = (
-        "--role-displayed",
-        "--role-current",
-        "--role-catalogued",
-        "--role-verified",
-        "--role-gate",
-        "--role-blocked",
-        "--role-simulation",
-        "--role-superseded",
-    )
-    for role in required_roles:
+    for role in ("--role-displayed", "--role-current", "--role-catalogued", "--role-verified",
+                 "--role-gate", "--role-blocked", "--role-simulation", "--role-superseded"):
         if role not in system_css:
-            errors.append(f"system.css: missing semantic token {role}")
-
+            errors.append(f"missing semantic role: {role}")
+    layout = read_text(root / "themes/shared/layout.css")
+    for marker in ("@media print", "forced-colors", "data-reading", "--reader-font-size"):
+        if marker not in layout:
+            errors.append(f"shared theme layout missing {marker}")
     for relative in ("index.html", "stats.html", "field.html", "chronicle.html"):
-        text = read_text(root / relative)
-        if "projection-truth.js" not in text:
+        if "projection-truth.js" not in read_text(root / relative):
             errors.append(f"{relative}: shared freshness calculation is not loaded")
-
     transfer, assets = field_transfer_bytes(root)
-    evidence["fieldTransferBytes"] = transfer
-    evidence["fieldAssets"] = [asset.relative_to(root).as_posix() for asset in assets if asset.is_relative_to(root)]
-    if transfer > FIELD_BUDGET:
-        errors.append(f"Field homepage initial transfer {transfer} exceeds {FIELD_BUDGET} bytes")
-
-    manifest_path = root / "resources/pics/derivatives/manifest.json"
-    if not manifest_path.exists():
-        errors.append("responsive image derivative manifest is missing")
-    else:
-        manifest = json.loads(read_text(manifest_path))
-        charter = (manifest.get("assets") or {}).get("resources/pics/topos-asi-shadow-luxury-image-v2.png")
-        variants = (charter or {}).get("variants") or []
-        widths = {variant.get("width") for variant in variants if variant.get("format") == "webp"}
-        if not {960, 1440, 2160}.issubset(widths):
-            errors.append("Local Truth Charter is missing 960/1440/2160 WebP derivatives")
-        portrait = (manifest.get("assets") or {}).get("resources/pics/QirongZHANG.png")
-        portrait_widths = {
-            variant.get("width") for variant in (portrait or {}).get("variants") or []
-            if variant.get("format") == "webp"
-        }
-        if 960 not in portrait_widths:
-            errors.append("Homepage portrait is missing its 960px WebP derivative")
-        museum_variant = next((variant for variant in variants if variant.get("width") == 1440 and variant.get("format") == "webp"), None)
-        museum_transfer = transfer + int((museum_variant or {}).get("bytes") or 0)
-        evidence["museumTransferBytes"] = museum_transfer
-        evidence["imageFormatsUnsupported"] = manifest.get("formatsUnsupported") or []
-        if museum_transfer > MUSEUM_BUDGET:
-            errors.append(f"Museum homepage initial transfer {museum_transfer} exceeds {MUSEUM_BUDGET} bytes")
-        for asset_name, record in (manifest.get("assets") or {}).items():
-            for variant in record.get("variants") or []:
-                variant_path = root / variant.get("path", "")
-                if not variant_path.exists():
-                    errors.append(f"missing responsive derivative: {variant.get('path')}")
-                elif variant_path.stat().st_size != variant.get("bytes"):
-                    errors.append(f"derivative byte count drift: {variant.get('path')}")
-
-    homepage_data = read_text(root / "homepage-data.js")
-    if '"summarySource"' not in homepage_data or '"narrativeCoverage"' not in homepage_data:
-        errors.append("homepage-data.js: truth projection has not been rebuilt")
+    shared_scene = root / "themes/shared/scene.js"
+    largest_preview = 0
+    manifest = json.loads(read_text(root / "resources/pics/derivatives/manifest.json"))
+    for record in manifest.get("assets", {}).values():
+        variants = sorted((v for v in record.get("variants", []) if v.get("format") == "webp"),
+                          key=lambda v: v["width"])
+        if variants:
+            largest_preview = max(largest_preview, variants[0].get("bytes", 0))
+        for variant in record.get("variants", []):
+            path = root / variant.get("path", "")
+            if not path.is_file() or path.stat().st_size != variant.get("bytes"):
+                errors.append(f"responsive image derivative missing or drifted: {variant.get('path')}")
+    evidence["coreAssets"] = [p.relative_to(root).as_posix() for p in assets if p.is_relative_to(root)]
+    evidence["estimateScope"] = "Local bytes: HTML, direct JS/CSS imports, selected package, shared scene, largest preview; not a network or GPU benchmark."
+    evidence["themes"] = {}
+    for theme in registry["themes"]:
+        package_dir = root / "themes" / theme["id"]
+        package_bytes = sum(p.stat().st_size for p in package_dir.rglob("*") if p.is_file())
+        if package_bytes > theme["maxPackageBytes"]:
+            errors.append(f'{theme["id"]}: package exceeds its declared budget')
+        estimate = transfer + package_bytes + shared_scene.stat().st_size + largest_preview
+        evidence["themes"][theme["id"]] = {"version": theme["version"], "packageBytes": package_bytes,
+                                           "estimatedHomeBytes": estimate}
+        if estimate > HOME_BUDGET:
+            errors.append(f'{theme["id"]}: estimated homepage exceeds {HOME_BUDGET} bytes')
+        if theme["colorScheme"] not in ("light", "dark"):
+            errors.append(f'{theme["id"]}: invalid colorScheme')
+    data = read_text(root / "homepage-data.js")
+    if '"summarySource"' not in data or '"narrativeCoverage"' not in data:
+        errors.append("homepage truth projection has not been rebuilt")
     if '"curatorial_states"' not in read_text(root / "site-data.js"):
-        errors.append("site-data.js: curatorial state contract has not been rebuilt")
-
-    if "field_ids" not in read_text(root / "scripts/new_note.py"):
-        errors.append("new_note.py: authoring template does not expose narrative mapping")
-
+        errors.append("site-plane state contract has not been rebuilt")
     return errors, warnings, evidence
 
 

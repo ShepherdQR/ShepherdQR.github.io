@@ -52,7 +52,8 @@ class MarkdownDurabilityTests(unittest.TestCase):
         self.assertIn('data-local-truth-charter="preserved"', page)
         self.assertIn('data-specimen="local-truth-charter"', page)
         self.assertIn('alt="局部真理宪章"', page)
-        self.assertIn('"localTruthCharter": "/resources/pics/topos-asi-shadow-luxury-image-v2.png"', page)
+        self.assertIn('data-load-policy="content"', page)
+        self.assertNotIn('data-theme-affinity=', page)
         self.assertNotIn("cdn.jsdelivr.net/npm/marked", page)
 
 

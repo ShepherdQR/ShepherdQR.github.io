@@ -1,0 +1,22 @@
+{
+  "id": "weave",
+  "version": "1.0.0",
+  "contractVersion": 1,
+  "label": "相位织场",
+  "description": "在连续的光学织面中，让思想彼此照亮。",
+  "colorScheme": "dark",
+  "stylesheet": "themes/weave/theme.css",
+  "scene": "themes/weave/scene.js",
+  "surfaces": [
+    "home",
+    "atlas",
+    "article",
+    "series",
+    "evidence",
+    "system",
+    "chronicle"
+  ],
+  "fallbackTheme": "tomography",
+  "maxPackageBytes": 100000,
+  "motionPolicy": "respect-system-and-user"
+}

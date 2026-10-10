@@ -1,7 +1,7 @@
 param(
     [string]$BaseUrl = "http://127.0.0.1:8000",
     [Parameter(Mandatory = $true)][string]$CliPath,
-    [string]$OutputDir = "output/playwright/aesthetic-summit-2026-08-01",
+    [string]$OutputDir = "output/playwright/theme-packages-2026-10-11",
     [switch]$IncludeChronicle,
     [string[]]$OnlySurface = @(),
     [switch]$PreserveExisting
@@ -47,7 +47,7 @@ $viewports = @(
     @{ Name = "desktop"; Width = 1440; Height = 1100 },
     @{ Name = "mobile"; Width = 390; Height = 844 }
 )
-$profiles = @("field", "museum")
+$profiles = @((Get-Content -LiteralPath (Join-Path $root "themes/registry.json") -Raw | ConvertFrom-Json).packages)
 
 function Invoke-PlaywrightCli {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Arguments)
@@ -67,17 +67,14 @@ Invoke-PlaywrightCli open "$BaseUrl/index.html" | Out-Null
 Invoke-PlaywrightCli snapshot | Out-Null
 
 foreach ($profile in $profiles) {
-    Invoke-PlaywrightCli localstorage-set zqr-visual-system $profile | Out-Null
+    $preference = @{ theme = $profile; reading = "spatial"; motion = "off"; fontSize = 20 } | ConvertTo-Json -Compress
+    Invoke-PlaywrightCli localstorage-set zqr-display-v1 $preference | Out-Null
     foreach ($viewport in $viewports) {
         Invoke-PlaywrightCli resize $viewport.Width $viewport.Height | Out-Null
         foreach ($surface in $surfaces) {
             Invoke-PlaywrightCli goto "$BaseUrl$($surface.Path)" | Out-Null
             Warm-VisualPage
-            if ($surface.Name -eq "field") {
-                Invoke-PlaywrightCli eval '(element) => { element.scrollIntoView(); return window.scrollY; }' '.portrait-card' | Out-Null
-            } else {
-                Invoke-PlaywrightCli eval '() => { window.scrollTo(0, 0); return window.scrollY; }' | Out-Null
-            }
+            Invoke-PlaywrightCli eval '() => { window.scrollTo(0, 0); return window.scrollY; }' | Out-Null
             if ($surface.Name -eq "atlas-ledger") {
                 $segments = @(
                     @{ Name = "start"; Script = 'async () => { window.scrollTo(0, 0); await new Promise(resolve => setTimeout(resolve, 180)); return window.scrollY; }' },

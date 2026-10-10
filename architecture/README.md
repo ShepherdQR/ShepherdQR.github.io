@@ -4,6 +4,9 @@ This directory stores architecture design documents and decision records for the
 
 ## Documents
 
+- [Theme package contract](theme-packages.md): Current theme architecture, reader, package lifecycle and upgrade workflow.
+- [2026-10-11 Theme Packages and Notes Release](task-closeouts/2026-10-11-theme-packages-and-notes.md): Theme replacement, browser verification, 12 new notes and four note updates.
+
 - [Site Content Architecture](site-content-architecture.md): Design decision for unifying Markdown, HTML rendering, homepage structure, metadata, and migration strategy.
 - [Markdown Publishing Workflow](markdown-publishing-workflow.md): Current Markdown-first authoring, build, and article rendering workflow.
 - [Legacy HTML to Markdown Migration](legacy-html-to-markdown-migration.md): Migration design for converting historical HTML notes into Markdown while preserving original date information.

@@ -297,32 +297,32 @@ window.SITE_PLANE = {
     }
   ],
   "visual_system": {
-    "default_profile": "field",
+    "default_profile": "weave",
+    "registry": "themes/registry.json",
+    "contract_version": 1,
     "preference_scope": "device_local",
     "shared_invariants": [
       "identical_content_semantics_across_profiles",
-      "museum_local_truth_charter_is_core_exhibit",
+      "static_readable_html",
       "role_colors_do_not_change_meaning",
-      "field_home_does_not_fetch_museum_only_material"
+      "selected_package_only",
+      "respect_reduced_motion"
     ],
     "profiles": [
       {
-        "id": "field",
-        "title": "学术约束场",
-        "role": "paper, archive, editorial structure, and calm public reading"
+        "id": "weave",
+        "title": "相位织场",
+        "role": "continuous optical field and stable HTML reading"
       },
       {
-        "id": "museum",
-        "title": "深层博物馆",
-        "role": "governed institutional artifact aesthetics with obsidian field, cold glass, provenance labels, and role-bearing gate colors",
-        "canonical_reference": "resources/pics/agi-structure-plan-nine-grid-v2.png",
-        "forbidden_shortcuts": [
-          "dashboard_card_wall",
-          "decorative_glassmorphism",
-          "neon_cyberpunk",
-          "generic_ai_brain",
-          "autonomy_overclaim"
-        ]
+        "id": "twilight",
+        "title": "暮色观测",
+        "role": "layered optical archive in blue-grey twilight"
+      },
+      {
+        "id": "tomography",
+        "title": "思想层析",
+        "role": "quiet opaline layers and clear editorial surfaces"
       }
     ]
   },

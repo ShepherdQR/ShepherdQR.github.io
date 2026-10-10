@@ -31,34 +31,29 @@ and `books/0056/index.html` must be committed after a build.
 
 ## Public Interface
 
-The site now has four primary surfaces:
+The site is a Markdown-backed collection with three independent theme packages:
 
-- `Field` (`index.html`): Current Exhibition、叙事 registry、fresh evidence 与来源 rail。
-- `Atlas` (`archive.html`): 可切换的 Constellation / complete accession Ledger，加全文元数据筛选；Series 是二级策展路径。
-- `Evidence` (`stats.html`): 将摘要来源、叙事映射、修订链、dated baseline 与权威边界串成 Evidence Spine。
-- `System` (`field.html`): Charter Room、局部所有权 topology、人类门控循环与唯一 negative vitrine。
+- **相位织场 / Weave** (default): a continuous optical field and stable document surface.
+- **暮色观测 / Twilight**: blue-grey light and curved transparent layers.
+- **思想层析 / Tomography**: opaline lavender and restrained editorial structure.
 
-`Chronicle` (`chronicle.html`) 是独立的 as-known-at 时间脊柱，从 Atlas 与 System 进入，不占用顶级导航。
+Use **外观** in the navigation to select a theme, text size and motion preference.
+**专注阅读** removes the spatial scene and provides a quiet reading surface.
+Settings are device-local and survive navigation. Field/Museum are retired.
 
-Every modern surface and generated article supports two persistent visual
-profiles:
+The homepage brings selected and recent writing forward. Its document stage
+uses real titles, summaries, images and canonical article links. Atlas offers
+spatial browsing, relationship clusters and a complete searchable ledger.
+Books, Thoughts, Study, Videos, Series and Chronicle retain their URLs.
+Evidence and System retain source, revision and public-authority information.
 
-- `Field / 学术约束场`: warm paper, editorial structure, and calm long-form
-  reading.
-- `Museum / 深层博物馆`: the control plane's governed-institutional-artifact
-  aesthetic—obsidian field, cold glass, archival labels, and role-bearing gate
-  colors. Its canonical reference is
-  `resources/pics/agi-structure-plan-nine-grid-v2.png`.
+Themes consume one shared content model. Article text, image captions,
+canonical URLs and provenance do not change with appearance. All 189 current
+articles have build-rendered HTML and remain readable without JavaScript.
+Optical scenery uses lightweight Canvas 2D and CSS perspective; text is HTML.
 
-The switch stores only a device-local viewing preference. It does not mutate
-content or control-plane state. The museum profile is not a generic dark mode:
-amber is reserved for human gates, red for blocked/refused/revoked states, and
-the long-form reading surface remains an archival paper folio.
-
-Museum has one explicit non-regression invariant: switching to Museum must show
-the **局部真理宪章 / Local Truth Charter** as the core exhibit. Field does not
-download that Museum-only material on first load; the switch hydrates a responsive
-WebP source when Museum is actually requested.
+See [Theme package contract](architecture/theme-packages.md) for lifecycle,
+package fields, future upgrades and verification.
 
 ## Daily Workflow
 
@@ -68,9 +63,9 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "受控外部化-Dean与Google的组织新探索"
+python scripts/new_note.py Thoughts "党建思想学习研讨发言"
 python scripts/new_note.py Books "[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选"
-python scripts/new_note.py Books "鲍迪埃诗选"
+python scripts/new_note.py Books "巴比伦与巴比伦人赞歌"
 python scripts/new_note.py Videos "TheBirthOfANation"
 ```
 
@@ -193,6 +188,7 @@ Run:
 ```powershell
 python -B scripts/test_templates.py
 python -B scripts/test_article_durability.py
+python -B scripts/test_themes.py
 python -B scripts/image_pipeline.py --check
 python -B scripts/validate_site.py --max-warnings 50
 python -B scripts/validate_aesthetic_system.py
@@ -207,8 +203,7 @@ Site validation summary
 
 Together these checks cover Markdown truth projection, static article fallback,
 heading normalization, responsive image hashes, clean URLs, source paths,
-generated aliases, public site-plane freshness, role semantics, the Museum
-Charter invariant, transfer budgets, root metadata, theme hydration, and sitemap
+generated aliases, public site-plane freshness, role semantics, theme-package compatibility, resource budgets, root metadata, theme hydration, and sitemap
 coverage.
 
 ### 6. Publish
@@ -362,16 +357,22 @@ Important source files:
 - `scripts/validate_site.py`: validate generated article URLs
 - `scripts/test_article_durability.py`: verify static article fallback, heading normalization, form variants, and responsive media
 - `scripts/image_pipeline.py`: generate or check responsive image derivatives
-- `scripts/validate_aesthetic_system.py`: enforce role tokens, Museum Charter preservation, freshness wiring, and transfer budgets
-- `scripts/capture_visual_matrix.ps1`: rebuild the Field/Museum desktop/mobile visual matrix, using segmented viewport samples for the very long Atlas Ledger
+- `scripts/validate_aesthetic_system.py`: validate theme packages, role tokens, freshness, image integrity, and resource budgets
+- `scripts/capture_visual_matrix.ps1`: capture registered themes across desktop/mobile surfaces and segmented Atlas Ledger samples
 - `data/site-plane.json`: canonical public projection and interface contract data
 - `data/series-books.json`: canonical public series registry and reading status
 - `reading-lists/`: durable full-catalog reading registers
 - `site-data.js`: generated browser projection of `data/site-plane.json`
 - `field.html`: public System and Evolution Chronicle surface
 - `chronicle.html`: dated public knowledge and control-plane temporal spine
-- `includes/css/system.css`: shared tokens, primitives, accessibility, and dual themes
-- `includes/js/theme.js`: device-local Field/Museum profile switch
+- themes/registry.json: registered IDs and default package
+- themes/*/theme.json: package version, capability, paths and budgets
+- themes/shared/: common layout and ambient scene renderer
+- scripts/build_themes.py: browser registry and preview-image source map
+- scripts/test_themes.py: package boundary tests
+- scripts/test_theme_browser.cjs: real-browser behavior and fallback checks
+- `includes/css/system.css`: shared semantic tokens, primitives and accessibility
+- `includes/js/theme.js`: theme loading, preferences, race protection, lifecycle and fallback
 - `includes/js/article-renderer.js`: shared Markdown article renderer
 - `includes/js/archive-page.js`: archive and category page renderer
 - `includes/js/stats-page.js`: global statistics page renderer
@@ -407,6 +408,12 @@ Usually check these first:
 3. Confirm `.nojekyll` exists in the repository root.
 4. Confirm the Markdown path in `homepage-data.js` matches the actual file path.
 5. Prefer the clean URL, such as `/thoughts/0012/`, for public links.
+
+### Local Scratch
+
+qrthoughts/Temp.md is reserved for unpublished device-local scratch. It is ignored
+by Git and excluded from source validation. Publish real notes with front matter
+and a supported type/ID; dated notes are validated normally.
 
 ### New Note Does Not Appear
 

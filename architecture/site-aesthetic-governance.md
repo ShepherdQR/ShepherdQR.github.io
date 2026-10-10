@@ -1,8 +1,10 @@
 # ZQR.WORLD 审美治理与陈列复审契约
 
-Status: active, supersedable
+Status: historical; visual profile requirements superseded on 2026-10-11
 
 Effective date: 2026-08-01
+
+2026-10-11: 用户明确授权替换 Field / Museum，不再保留旧主题。现行展示合同见 [主题包架构](theme-packages.md)。本文件保留为历史记录；旧主题首屏和加载规则不再约束新包，内容来源、日期与权威语义继续保留。
 
 Review cadence: quarterly, and before any material change to a root surface
 

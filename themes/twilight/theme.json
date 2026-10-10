@@ -1,0 +1,22 @@
+{
+  "id": "twilight",
+  "version": "1.0.0",
+  "contractVersion": 1,
+  "label": "暮色观测",
+  "description": "苍青、微光与透明层次，留一个安静的观测位置。",
+  "colorScheme": "dark",
+  "stylesheet": "themes/twilight/theme.css",
+  "scene": "themes/twilight/scene.js",
+  "surfaces": [
+    "home",
+    "atlas",
+    "article",
+    "series",
+    "evidence",
+    "system",
+    "chronicle"
+  ],
+  "fallbackTheme": "tomography",
+  "maxPackageBytes": 100000,
+  "motionPolicy": "respect-system-and-user"
+}

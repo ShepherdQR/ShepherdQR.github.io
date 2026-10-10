@@ -519,11 +519,6 @@
     color: var(--text-inverse);
 }
 
-html[data-theme="museum"] .negative-vitrine .state-marker {
-    --state-color: #724c3e;
-    --state-soft: #eee2dc;
-}
-
 .gate-panel h3 {
     margin: 0;
     font-family: var(--font-display);
@@ -537,40 +532,6 @@ html[data-theme="museum"] .negative-vitrine .state-marker {
     color: var(--ink-600);
     font-family: var(--font-mono);
     font-size: 9px;
-}
-
-html[data-theme="museum"] .system-object,
-html[data-theme="museum"] .boundary-grid,
-html[data-theme="museum"] .boundary-cell,
-html[data-theme="museum"] .wp-rail,
-html[data-theme="museum"] .wp-node,
-html[data-theme="museum"] .gate-panel {
-    border-radius: 2px;
-}
-
-html[data-theme="museum"] .system-object {
-    background: #030708;
-    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.48);
-}
-
-html[data-theme="museum"] .boundary-cell,
-html[data-theme="museum"] .wp-node,
-html[data-theme="museum"] .gate-panel {
-    background: rgba(3, 7, 8, 0.52);
-}
-
-html[data-theme="museum"] .candidate-object {
-    --surface-inverse: #030708;
-    --text-inverse: #f1ead9;
-    border-radius: 0;
-    background:
-        linear-gradient(135deg, color-mix(in srgb, var(--vitrine-state) 13%, transparent), transparent 58%),
-        var(--surface-inverse);
-}
-
-html[data-theme="museum"] .candidate-object .status-chip {
-    --state-color: #f1c77d;
-    --state-soft: rgba(241, 199, 125, 0.14);
 }
 
 @media (max-width: 900px) {

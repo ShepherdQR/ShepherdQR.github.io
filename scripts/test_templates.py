@@ -264,16 +264,18 @@ class ArticleTemplateTests(unittest.TestCase):
         }
         rendered = build_site.build_article_alias_html(item, root, alias_path)
         for fragment in (
-            '<html lang="zh-CN" data-theme="field">',
+            '<html lang="zh-CN" data-theme="weave">',
             f'data-template="{build_site.ARTICLE_TEMPLATE_VERSION}"',
             'class="skip-link"',
             'id="main-content"',
-            ">Field</a>",
-            ">Atlas</a>",
-            ">Evidence</a>",
-            ">System</a>",
-            ">Series</a>",
+            ">探索</a>",
+            ">文库</a>",
+            ">证据</a>",
+            ">关于</a>",
+            ">阅读计划</a>",
             "includes/js/theme.js",
+            "themes/registry.js",
+            "themes/shared/layout.css",
         ):
             self.assertIn(fragment, rendered)
 

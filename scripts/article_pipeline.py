@@ -487,8 +487,8 @@ class MarkdownRenderer:
             )
 
         marker = (
-            ' data-specimen="local-truth-charter" data-theme-affinity="museum" '
-            'data-load-policy="theme-aware"'
+            ' data-specimen="local-truth-charter" '
+            'data-load-policy="content"'
             if is_charter
             else ""
         )

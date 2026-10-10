@@ -1,0 +1,10 @@
+html[data-theme="tomography"] {
+ --page-start:#e1dde3; --page-end:#c6c3cd; --page-glow:#fbf6ee;
+ --surface-base:#e4e1e7; --surface-raised:#f1edf1; --surface-inset:#d2cfd8; --surface-inverse:#35323f;
+ --text-primary:#282833; --text-secondary:#484653; --text-tertiary:#605c6c; --text-inverse:#f7f2ed;
+ --rule-subtle:rgba(49,43,63,.19); --rule-strong:rgba(49,43,63,.38); --focus-ring:#795346;
+ --accent-selection:#905e48; --scene-line:83,76,102; --scene-light:162,105,76; --glass-tint:rgba(252,248,254,.22);
+}
+html[data-theme="tomography"] .document-stage { perspective:1600px; }
+html[data-theme="tomography"] .document-echo { transform:translateX(calc(var(--layer) * -34px)) rotateY(-14deg); background:linear-gradient(115deg,rgba(255,255,255,.24),rgba(244,236,255,.08)); }
+html[data-theme="tomography"] .selected-document { border-radius:2px; background:linear-gradient(125deg,#f5f0f4,#e9e5ee); border-right:3px solid #b88770; }

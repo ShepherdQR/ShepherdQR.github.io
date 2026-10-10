@@ -125,7 +125,13 @@
       "field": "field_ids",
       "projection_field": "fieldIds",
       "source_field": "mappingSource",
-      "precedence": ["frontmatter", "selected", "taxonomy", "collection_default", "unmapped"],
+      "precedence": [
+        "frontmatter",
+        "selected",
+        "taxonomy",
+        "collection_default",
+        "unmapped"
+      ],
       "collection_defaults_are_item_level_curation": false
     },
     "items": [
@@ -135,8 +141,14 @@
         "title_en": "Constraint Fields and Complex Intelligence",
         "core_question_zh": "什么结构使智能可治理、可验证并能够持续演化？",
         "href": "./archive.html?series=约束场与复杂智能",
-        "series_filters": ["约束场与复杂智能"],
-        "tags": ["ASI", "agent", "constraint-field"],
+        "series_filters": [
+          "约束场与复杂智能"
+        ],
+        "tags": [
+          "ASI",
+          "agent",
+          "constraint-field"
+        ],
         "weight_hint_percent": 30
       },
       {
@@ -145,8 +157,14 @@
         "title_en": "Engineering Evidence",
         "core_question_zh": "哪些判断真正经受住了实现、验证、失败与修复？",
         "href": "./archive.html?tag=software-engineering",
-        "series_filters": ["Agentic Software Engineering", "工程证据与发版之后"],
-        "tags": ["software-engineering", "evaluation"],
+        "series_filters": [
+          "Agentic Software Engineering",
+          "工程证据与发版之后"
+        ],
+        "tags": [
+          "software-engineering",
+          "evaluation"
+        ],
         "weight_hint_percent": 25
       },
       {
@@ -155,8 +173,14 @@
         "title_en": "Mathematical Structure",
         "core_question_zh": "什么不变量、几何或逻辑能够压缩系统的复杂性？",
         "href": "./archive.html?series=数学结构札记",
-        "series_filters": ["数学结构札记"],
-        "tags": ["mathematics", "Topos", "tropical-geometry"],
+        "series_filters": [
+          "数学结构札记"
+        ],
+        "tags": [
+          "mathematics",
+          "Topos",
+          "tropical-geometry"
+        ],
         "weight_hint_percent": 15
       },
       {
@@ -165,8 +189,14 @@
         "title_en": "Human, Governance, and Civilization",
         "core_question_zh": "技术能力应当服务什么、拒绝什么，并如何保留人的主权？",
         "href": "./archive.html?series=治理、文明与人的尺度",
-        "series_filters": ["治理、文明与人的尺度"],
-        "tags": ["governance", "civilization", "AI-boundary"],
+        "series_filters": [
+          "治理、文明与人的尺度"
+        ],
+        "tags": [
+          "governance",
+          "civilization",
+          "AI-boundary"
+        ],
         "weight_hint_percent": 15
       },
       {
@@ -175,8 +205,15 @@
         "title_en": "Reading, Literature, and Poetry",
         "core_question_zh": "什么语言与精神结构能够扩展系统建造者的内部世界？",
         "href": "./books.html",
-        "series_filters": ["阅读星图", "诗与内部结构"],
-        "tags": ["reading", "literature", "poetry"],
+        "series_filters": [
+          "阅读星图",
+          "诗与内部结构"
+        ],
+        "tags": [
+          "reading",
+          "literature",
+          "poetry"
+        ],
         "weight_hint_percent": 15
       }
     ]
@@ -184,11 +221,26 @@
   "curatorial_states": {
     "contract_version": "1.0.0",
     "items": [
-      {"id": "displayed", "meaning": "Published with sufficient source and metadata for public interpretation."},
-      {"id": "current", "meaning": "Temporary editorial emphasis inside Displayed; it does not imply higher authority."},
-      {"id": "catalogued", "meaning": "Named and indexed, but not promoted as a stable conclusion."},
-      {"id": "withheld", "meaning": "Explicitly not published or not executable because evidence, privacy, authority, or a human gate is insufficient."},
-      {"id": "superseded", "meaning": "Retained historical object with an explicit successor relation."}
+      {
+        "id": "displayed",
+        "meaning": "Published with sufficient source and metadata for public interpretation."
+      },
+      {
+        "id": "current",
+        "meaning": "Temporary editorial emphasis inside Displayed; it does not imply higher authority."
+      },
+      {
+        "id": "catalogued",
+        "meaning": "Named and indexed, but not promoted as a stable conclusion."
+      },
+      {
+        "id": "withheld",
+        "meaning": "Explicitly not published or not executable because evidence, privacy, authority, or a human gate is insufficient."
+      },
+      {
+        "id": "superseded",
+        "meaning": "Retained historical object with an explicit successor relation."
+      }
     ],
     "color_is_never_the_only_carrier": true
   },
@@ -245,26 +297,32 @@
     }
   ],
   "visual_system": {
-    "default_profile": "field",
+    "default_profile": "weave",
+    "registry": "themes/registry.json",
+    "contract_version": 1,
     "preference_scope": "device_local",
     "shared_invariants": [
       "identical_content_semantics_across_profiles",
-      "museum_local_truth_charter_is_core_exhibit",
+      "static_readable_html",
       "role_colors_do_not_change_meaning",
-      "field_home_does_not_fetch_museum_only_material"
+      "selected_package_only",
+      "respect_reduced_motion"
     ],
     "profiles": [
       {
-        "id": "field",
-        "title": "学术约束场",
-        "role": "paper, archive, editorial structure, and calm public reading"
+        "id": "weave",
+        "title": "相位织场",
+        "role": "continuous optical field and stable HTML reading"
       },
       {
-        "id": "museum",
-        "title": "深层博物馆",
-        "role": "governed institutional artifact aesthetics with obsidian field, cold glass, provenance labels, and role-bearing gate colors",
-        "canonical_reference": "resources/pics/agi-structure-plan-nine-grid-v2.png",
-        "forbidden_shortcuts": ["dashboard_card_wall", "decorative_glassmorphism", "neon_cyberpunk", "generic_ai_brain", "autonomy_overclaim"]
+        "id": "twilight",
+        "title": "暮色观测",
+        "role": "layered optical archive in blue-grey twilight"
+      },
+      {
+        "id": "tomography",
+        "title": "思想层析",
+        "role": "quiet opaline layers and clear editorial surfaces"
       }
     ]
   },

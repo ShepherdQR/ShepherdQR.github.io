@@ -1,6 +1,7 @@
 (function () {
     const data = window.HOMEPAGE_DATA || { items: [], stats: { byType: {}, years: {} } };
     const plane = window.SITE_PLANE || {};
+    let spatialDeck = null;
     const allItems = Array.isArray(data.items) ? data.items : [];
     const collection = document.body.dataset.collection || '';
     const summaryEl = document.getElementById('archive-summary');
@@ -91,6 +92,11 @@
         renderConstellation(filtered);
         renderList(filtered);
         renderMode();
+        const host = document.getElementById('atlas-spatial-browser');
+        if (host && window.ZQRSpatial) {
+            if (spatialDeck) spatialDeck.update(filtered);
+            else spatialDeck = window.ZQRSpatial.create(host, filtered, 'COLLECTION / 从一篇文章开始');
+        }
         if (resultCount) resultCount.textContent = `${filtered.length} / ${allItems.filter(item => !collection || item.type === collection).length} OBJECTS`;
     }
 
@@ -99,6 +105,8 @@
         modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.atlasMode === state.mode)));
         if (constellationEl) constellationEl.hidden = state.mode !== 'constellation';
         if (ledgerEl) ledgerEl.hidden = state.mode !== 'ledger';
+        const spatial = document.getElementById('atlas-spatial');
+        if (spatial) spatial.hidden = state.mode === 'ledger';
     }
 
     function renderPaths() {
@@ -220,7 +228,7 @@
         const baseItems = allItems.filter(item => !collection || item.type === collection);
         const yearCount = new Set(baseItems.map(item => String(item.published || '').slice(0, 4))).size;
         const label = collection || 'published knowledge';
-        summaryEl.textContent = `${baseItems.length} ${label} objects across ${yearCount} years. ${filtered.length === baseItems.length ? 'Browse by provenance, series and time.' : `${filtered.length} objects match the current field.`}`;
+        summaryEl.textContent = baseItems.length + ' 篇文章，' + yearCount + ' 年的阅读与思考。' + (filtered.length === baseItems.length ? '从主题、系列或时间中，找到下一篇。' : '当前筛选找到 ' + filtered.length + ' 篇。');
     }
 
     function renderActiveFilters() {

@@ -16,22 +16,6 @@
     --shadow: rgba(77, 56, 28, 0.08);
 }
 
-html[data-theme="museum"] {
-    --bg: var(--surface-raised);
-    --paper: var(--surface-base);
-    --paper-deep: var(--surface-inset);
-    --text: var(--text-primary);
-    --muted: var(--text-secondary);
-    --quiet: var(--text-tertiary);
-    --line: var(--rule-subtle);
-    --accent: var(--role-current);
-    --accent-soft: var(--role-current-soft);
-    --done: var(--role-verified);
-    --todo: var(--role-displayed);
-    --candidate: var(--role-gate);
-    --shadow: rgba(0, 0, 0, 0.34);
-}
-
 * {
     box-sizing: border-box;
 }
@@ -52,24 +36,6 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 18px;
     line-height: 1.65;
-}
-
-html[data-theme="museum"] body {
-    background:
-        radial-gradient(circle at 56% 14%, rgba(180, 239, 255, 0.08), transparent 30rem),
-        #030708;
-}
-
-html[data-theme="museum"] .series-card,
-html[data-theme="museum"] .work-card,
-html[data-theme="museum"] .segmented-control button,
-html[data-theme="museum"] .metric-pill,
-html[data-theme="museum"] .tag-pill,
-html[data-theme="museum"] .status-pill,
-html[data-theme="museum"] .source-pill,
-html[data-theme="museum"] .work-action-link {
-    border-radius: 2px;
-    background: rgba(3, 7, 8, 0.58);
 }
 
 a {
@@ -691,11 +657,6 @@ h3.work-title {
 }
 
 @media print {
-    body,
-    html[data-theme="museum"] body {
-        background: #fff;
-        color: #000;
-    }
 
     .series-page {
         width: 100%;

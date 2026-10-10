@@ -272,7 +272,7 @@ def validate_markdown_images(root: Path) -> list[str]:
     errors: list[str] = []
     root_resolved = root.resolve()
     for path in sorted((root / "qrthoughts").rglob("*.md")):
-        if path.name.lower() == "readme.md":
+        if path.name.lower() == "readme.md" or path.relative_to(root).as_posix() == "qrthoughts/Temp.md":
             continue
         rel = path.relative_to(root).as_posix()
         for match in MARKDOWN_IMAGE_RE.finditer(read_text(path)):
@@ -374,12 +374,13 @@ def validate_site_plane(root: Path, plane: dict, items: list[dict[str, str]]) ->
     visual = plane.get("visual_system") or {}
     profiles = visual.get("profiles") or []
     profile_ids = {profile.get("id") for profile in profiles if isinstance(profile, dict)}
-    if profile_ids != {"field", "museum"}:
-        errors.append("site-plane: visual system must declare exactly field and museum profiles")
-    museum = next((profile for profile in profiles if profile.get("id") == "museum"), {})
-    reference = museum.get("canonical_reference", "")
-    if not reference or not (root / reference).exists():
-        errors.append(f"site-plane: museum canonical reference does not exist: {reference or '<missing>'}")
+    registry_path = root / "themes/registry.json"
+    if not registry_path.exists():
+        errors.append("site-plane: theme registry is missing")
+    else:
+        registry = json.loads(read_text(registry_path))
+        if profile_ids != set(registry["packages"]) or visual.get("default_profile") != registry["default"]:
+            errors.append("site-plane: visual profiles differ from the theme registry")
 
     thought_28 = next((item for item in items if item.get("type") == "Thoughts" and item.get("id") == "0028"), None)
     if not thought_28 or thought_28.get("leadImage") != "/resources/pics/agi-structure-plan-nine-grid-v2.png":
@@ -607,15 +608,17 @@ def validate_item(root: Path, item: dict[str, str]) -> list[str]:
             alias_text = read_text(alias_path)
             required_alias_fragments = {
                 "current article template": f'data-template="{build_site.ARTICLE_TEMPLATE_VERSION}"',
-                "default visual profile": 'data-theme="field"',
+                "default visual profile": f'data-theme="{build_site.build_themes.default_theme_id(root)}"',
                 "theme controller": "includes/js/theme.js",
+                "theme registry": "themes/registry.js",
+                "theme layout": "themes/shared/layout.css",
                 "skip link": 'class="skip-link"',
                 "main target": 'id="main-content"',
-                "Field navigation": ">Field</a>",
-                "Atlas navigation": ">Atlas</a>",
-                "Evidence navigation": ">Evidence</a>",
-                "System navigation": ">System</a>",
-                "Series navigation": ">Series</a>",
+                "Field navigation": ">探索</a>",
+                "Atlas navigation": ">文库</a>",
+                "Evidence navigation": ">证据</a>",
+                "System navigation": ">关于</a>",
+                "Series navigation": ">阅读计划</a>",
             }
             for fragment_label, fragment in required_alias_fragments.items():
                 if fragment not in alias_text:
@@ -750,7 +753,7 @@ def validate_markdown_sources(
     warnings: list[str] = []
     checked = 0
     for path in sorted((root / "qrthoughts").rglob("*.md")):
-        if path.name.lower() == "readme.md":
+        if path.name.lower() == "readme.md" or path.relative_to(root).as_posix() == "qrthoughts/Temp.md":
             continue
         checked += 1
         rel = path.relative_to(root).as_posix()

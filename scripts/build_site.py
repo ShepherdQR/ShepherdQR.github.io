@@ -13,6 +13,7 @@ from urllib.parse import quote
 from xml.sax.saxutils import escape as xml_escape
 
 import article_pipeline
+import build_themes
 import generate_homepage_data
 import normalize_markdown_front_matter
 
@@ -35,7 +36,7 @@ STATIC_SITEMAP_PATHS = [
 SITE_PLANE_SOURCE = Path("data/site-plane.json")
 SITE_PLANE_OUTPUT = Path("site-data.js")
 SERIES_DATA_SOURCE = Path("data/series-books.json")
-ARTICLE_TEMPLATE_VERSION = "knowledge-note-v3"
+ARTICLE_TEMPLATE_VERSION = "knowledge-note-v4"
 
 
 def _static_article_payload(item: dict[str, str], root: Path) -> tuple[article_pipeline.RenderedArticle, dict, str, dict, str]:
@@ -136,11 +137,6 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
             "meta": config_meta,
             "governance": governance,
             "headings": rendered_article.headings,
-            "themeAssets": (
-                {"museum": {"localTruthCharter": "/resources/pics/topos-asi-shadow-luxury-image-v2.png"}}
-                if rendered_article.local_truth_charter_present
-                else {}
-            ),
         },
         ensure_ascii=False,
         indent=2,
@@ -202,7 +198,7 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     charter_marker = ' data-local-truth-charter="preserved"' if rendered_article.local_truth_charter_present else ""
 
     return f"""<!doctype html>
-<html lang="zh-CN" data-theme="field">
+<html lang="zh-CN" data-theme="{build_themes.default_theme_id(root)}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -211,8 +207,10 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
     <meta property="og:description" content="{description_attr}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{canonical_attr}">
-{og_image_tag}    <script src="{asset('includes/js/theme.js')}"></script>
+{og_image_tag}    <script src="{asset('themes/registry.js')}"></script>
+    <script src="{asset('includes/js/theme.js')}"></script>
     <link href="{asset('includes/css/pages.css')}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{asset('themes/shared/layout.css')}">
     <link rel="alternate" type="application/atom+xml" href="{asset('includes/atom.xml')}" title="Atom feed">
     <link rel="shortcut icon" href="{asset('resources/pics/shepherd.png')}">
     <link rel="canonical" href="{html.escape(canonical, quote=True)}">
@@ -226,12 +224,12 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
         <nav class="article-nav" aria-label="知识界面导航">
             <a class="article-brand" href="{asset('index.html')}">ZQR.WORLD</a>
             <div class="article-nav-links">
-                <a href="{asset('index.html')}">Field</a>
-                <a href="{asset('archive.html')}">Atlas</a>
-                <a href="{asset('stats.html')}">Evidence</a>
-                <a href="{asset('field.html')}">System</a>
-                <a href="{asset('chronicle.html')}">Chronicle</a>
-                <a href="{asset('series.html')}">Series</a>
+                <a href="{asset('index.html')}">探索</a>
+                <a href="{asset('archive.html')}">文库</a>
+                <a href="{asset('stats.html')}">证据</a>
+                <a href="{asset('field.html')}">关于</a>
+                <a href="{asset('chronicle.html')}">时间线</a>
+                <a href="{asset('series.html')}">阅读计划</a>
             </div>
         </nav>
 
@@ -245,12 +243,12 @@ def build_article_alias_html(item: dict[str, str], root: Path, alias_path: Path)
             {governance_html}
             <footer class="article-footer">
                 <div class="article-footer-links">
-                    <a href="{asset('index.html')}">Field</a>
-                    <a href="{asset('archive.html')}">Atlas</a>
-                    <a href="{asset('stats.html')}">Evidence</a>
-                    <a href="{asset('field.html')}">System</a>
-                    <a href="{asset('chronicle.html')}">Chronicle</a>
-                    <a href="{asset('series.html')}">Series</a>
+                    <a href="{asset('index.html')}">探索</a>
+                    <a href="{asset('archive.html')}">文库</a>
+                    <a href="{asset('stats.html')}">证据</a>
+                    <a href="{asset('field.html')}">关于</a>
+                    <a href="{asset('chronicle.html')}">时间线</a>
+                    <a href="{asset('series.html')}">阅读计划</a>
                     <a href="{asset('books.html')}">Books</a>
                     <a href="{asset('thoughts.html')}">Thoughts</a>
                     <a href="{asset('study.html')}">Study</a>
@@ -446,6 +444,8 @@ def build_generated_site(
     include_legacy_index: bool = False,
     generate_images: bool = False,
 ) -> tuple[int, int]:
+    if (root / "themes/registry.json").exists():
+        build_themes.build(root)
     items = generate_homepage_data.collect_items(root, include_legacy_index=include_legacy_index)
     if generate_images:
         import image_pipeline

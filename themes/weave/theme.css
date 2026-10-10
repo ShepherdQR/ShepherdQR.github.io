@@ -1,0 +1,9 @@
+html[data-theme="weave"] {
+ --page-start:#344b58; --page-end:#223641; --page-glow:#a1b5bf;
+ --surface-base:#314650; --surface-raised:#3c525d; --surface-inset:#283d47; --surface-inverse:#edf0ed;
+ --text-primary:#eef1ed; --text-secondary:#cbd5d6; --text-tertiary:#b3c2c7; --text-inverse:#243942;
+ --rule-subtle:rgba(218,231,230,.22); --rule-strong:rgba(218,231,230,.46); --focus-ring:#d5e8e8;
+ --accent-selection:#dcbd94; --scene-line:198,216,225; --scene-light:233,196,151; --glass-tint:rgba(209,221,223,.1);
+}
+html[data-theme="weave"] .selected-document { border-radius:42% 4px 4px 4px / 15% 4px 4px 4px; }
+html[data-theme="weave"] .document-echo { border-radius:48% 3px 3px 3px / 23% 3px 3px 3px; }

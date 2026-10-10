@@ -946,48 +946,6 @@ body[data-atlas-mode="constellation"] .archive-section:not(.atlas-constellation)
     letter-spacing: 0.04em;
 }
 
-html[data-theme="museum"] .collection-nav a,
-html[data-theme="museum"] .atlas-controls,
-html[data-theme="museum"] .control-group input,
-html[data-theme="museum"] .control-group select,
-html[data-theme="museum"] .clear-filters,
-html[data-theme="museum"] .active-filter,
-html[data-theme="museum"] .stats-overview,
-html[data-theme="museum"] .stats-block {
-    border-radius: 2px;
-}
-
-html[data-theme="museum"] .atlas-controls {
-    background: rgba(3, 7, 8, 0.88);
-    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.34);
-}
-
-html[data-theme="museum"] .archive-note:hover {
-    background: linear-gradient(90deg, rgba(169, 240, 255, 0.045), transparent 80%);
-}
-
-html[data-theme="museum"] .archive-note-title {
-    color: #f1ead9;
-}
-
-html[data-theme="museum"] .stats-block,
-html[data-theme="museum"] .stats-metric {
-    background: rgba(3, 7, 8, 0.58);
-}
-
-html[data-theme="museum"] .stats-grid.evidence-spine .evidence-station {
-    background: transparent;
-}
-
-html[data-theme="museum"] .atlas-constellation {
-    background:
-        radial-gradient(circle at 50% 50%, var(--role-displayed-soft), transparent 42%),
-        linear-gradient(var(--rule-subtle) 1px, transparent 1px),
-        linear-gradient(90deg, var(--rule-subtle) 1px, transparent 1px),
-        #030708;
-    background-size: auto, 3.5rem 3.5rem, 3.5rem 3.5rem, auto;
-}
-
 @media (max-width: 920px) {
     .atlas-controls {
         grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="field">
+<html lang="zh-CN" data-theme="weave">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,33 +10,31 @@
     <meta property="og:url" content="https://zqr.world/archive.html">
     <link rel="canonical" href="https://zqr.world/archive.html">
     <link rel="alternate" type="application/atom+xml" href="./includes/atom.xml" title="ZQR.WORLD Atom feed">
+    <script src="./themes/registry.js"></script>
     <script src="./includes/js/theme.js"></script>
     <link rel="stylesheet" href="./includes/css/archive.css">
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
     <title>Knowledge Atlas · ZQR.WORLD</title>
+    <link rel="stylesheet" href="./themes/shared/layout.css">
 </head>
 <body class="atlas-page" data-section="atlas" data-collection="">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="global-header">
-        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ZQR.WORLD</strong><small>Public intelligence organ</small></span></a>
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ZQR.WORLD</strong><small>IDEAS · READING · CONNECTIONS</small></span></a>
         <nav class="primary-nav" aria-label="主导航">
-            <a href="./index.html" data-route="home">Field</a><a href="./archive.html" data-route="atlas">Atlas</a><a href="./stats.html" data-route="stats">Evidence</a><a href="./field.html" data-route="field">System</a><a class="nav-external" href="https://github.com/ShepherdQR">GitHub ↗</a>
+            <a href="./index.html" data-route="home">探索</a><a href="./archive.html" data-route="atlas">文库</a><a href="./stats.html" data-route="stats">证据</a><a href="./field.html" data-route="field">关于</a><a class="nav-external" href="https://github.com/ShepherdQR">GitHub ↗</a>
         </nav>
     </header>
     <main class="archive-page" id="main-content">
         <header class="archive-header">
-            <div><p class="archive-kicker">01 · KNOWLEDGE ATLAS</p><h1>Atlas.</h1><p class="archive-summary" id="archive-summary"></p></div>
-            <aside class="archive-aside provenance-rail"><span class="status-chip" data-state="displayed">Generated from Markdown</span><p>Atlas reveals relations; its ledger registers the complete corpus without ranking it or changing source authority.</p>
-                <nav class="collection-nav" aria-label="知识路径"><a class="is-active" href="./archive.html" aria-current="page">Atlas</a><a href="./series.html">Series paths</a><a href="./chronicle.html">Chronicle</a><a href="./includes/atom.xml">Atom</a></nav>
+            <div><p class="archive-kicker">01 · KNOWLEDGE ATLAS</p><h1>知识，在此相遇。</h1><p class="archive-summary" id="archive-summary"></p></div>
+            <aside class="archive-aside provenance-rail"><span class="status-chip" data-state="displayed">个人知识文库</span><p>从一篇文章开始，也可以沿着主题、系列与时间继续探索。</p>
+                <nav class="collection-nav" aria-label="知识路径"><a class="is-active" href="./archive.html" aria-current="page">文库</a><a href="./series.html">Series paths</a><a href="./chronicle.html">时间线</a><a href="./includes/atom.xml">Atom</a></nav>
             </aside>
         </header>
-        <section class="curated-paths" aria-labelledby="curated-paths-title">
-            <div class="registry-caption"><span>Curated paths</span><strong id="curated-paths-title">从关系进入，不从排名进入。</strong></div>
-            <ol class="path-registry" id="atlas-paths"></ol>
-        </section>
         <div class="atlas-view-switch atlas-mode-switch" role="group" aria-label="Atlas 视图">
-            <button type="button" data-atlas-mode="constellation" aria-pressed="true">Constellation / 关系</button>
-            <button type="button" data-atlas-mode="ledger" aria-pressed="false">Ledger / 登记</button>
+            <button type="button" data-atlas-mode="constellation" aria-pressed="true">空间 / 关系</button>
+            <button type="button" data-atlas-mode="ledger" aria-pressed="false">列表 / 全部</button>
         </div>
         <section class="atlas-controls index-rail" aria-label="知识星图筛选器">
             <div class="control-group control-search"><label for="archive-search">Search / 检索</label><input id="archive-search" type="search" placeholder="标题、摘要、标签、系列…" autocomplete="off"></div>
@@ -47,11 +45,16 @@
             <button class="clear-filters" id="clear-filters" type="button">Reset</button>
         </section>
         <div class="atlas-status" aria-live="polite"><div class="active-filters" id="active-filters"></div><strong id="atlas-result-count">—</strong></div>
+        <section id="atlas-spatial" class="atlas-spatial" data-theme-scene aria-label="文库空间浏览"><div id="atlas-spatial-browser"></div></section>
         <section class="atlas-constellation" id="atlas-constellation" aria-label="关系星图"></section>
         <section class="archive-section accession-ledger" id="atlas-ledger" aria-label="完整 accession ledger" hidden><div id="archive-list"></div></section>
+        <details class="curated-paths" aria-labelledby="curated-paths-title">
+            <summary>按研究线索浏览</summary><div class="registry-caption"><span>Curated paths</span><strong id="curated-paths-title">从关系进入，不从排名进入。</strong></div>
+            <ol class="path-registry" id="atlas-paths"></ol>
+        </details>
         <noscript><p class="archive-empty">此星图依赖站点生成数据进行筛选；请启用 JavaScript 或从首页进入最新文章。</p></noscript>
         <footer class="archive-footer">ZQR.WORLD · HUMAN OWNED · MARKDOWN SOURCE · <span data-current-year>2026</span></footer>
     </main>
-    <script src="./site-data.js"></script><script src="./homepage-data.js"></script><script src="./includes/js/archive-page.js"></script><script src="./includes/js/site-shell.js"></script>
+    <script src="./site-data.js"></script><script src="./homepage-data.js"></script><script src="./includes/js/image-sources.js"></script><script src="./includes/js/spatial-browser.js"></script><script src="./includes/js/archive-page.js"></script><script src="./includes/js/site-shell.js"></script>
 </body>
 </html>
