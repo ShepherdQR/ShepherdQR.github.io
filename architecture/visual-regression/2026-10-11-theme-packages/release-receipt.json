@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "implementationCommit": "562284c98ecbbfc4162cf7e4e883d3bb386816e0",
+  "branch": "master",
+  "remote": "https://github.com/ShepherdQR/ShepherdQR.github.io.git",
+  "site": "https://zqr.world/",
+  "ci": {
+    "result": "success",
+    "url": "https://github.com/ShepherdQR/ShepherdQR.github.io/actions/runs/38077934688"
+  },
+  "deployment": {
+    "result": "success",
+    "url": "https://github.com/ShepherdQR/ShepherdQR.github.io/actions/runs/38077934043"
+  },
+  "liveBrowser": {
+    "url": "https://zqr.world/?release=562284c",
+    "themes": [
+      "twilight",
+      "tomography",
+      "weave"
+    ],
+    "documents": 189,
+    "selectedDocument": "Thoughts:0018",
+    "deepArticleTheme": "weave",
+    "articleTitle": "巴比伦与巴比伦人赞歌",
+    "errors": []
+  },
+  "liveHTTP": [
+    "/",
+    "/themes/registry.json",
+    "/books/0147/",
+    "/thoughts/0038/"
+  ],
+  "liveHTTPStatus": 200
+}

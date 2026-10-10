@@ -120,4 +120,3 @@ node scripts/test_theme_browser.cjs；BASE_URL 可覆盖默认的本地 8000 端
 
 本地临时笔记 qrthoughts/Temp.md 保留且忽略，不进入发布语料；其他 dated
 Markdown 继续按原 front matter 合同校验。
-

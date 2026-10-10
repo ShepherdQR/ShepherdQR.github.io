@@ -91,9 +91,15 @@ legacy 读取与打印。截图复核发现的手机导航逐字换行已修正�
 - [文库](../visual-regression/2026-10-11-theme-packages/atlas-tomography-desktop.png)
 
 本机更完整的临时日志位于 output/playwright/theme-upgrade/，该目录不提交。
-本报告与代码、内容一同进入发布提交；可用 git log --follow -- 本报告路径定位该
-提交。推送后的 CI 与线上核对结果另保存在本机 release-receipt.json，并在本次对话
-交付时报告。
+实现与内容发布提交：562284c98ecbbfc4162cf7e4e883d3bb386816e0，已推送 origin/master。
+
+- [GitHub Site hardening](https://github.com/ShepherdQR/ShepherdQR.github.io/actions/runs/38077934688)：success。
+- [Pages build and deployment](https://github.com/ShepherdQR/ShepherdQR.github.io/actions/runs/38077934043)：success。
+- 线上首页、主题注册表、Books0147、Thoughts0038 均返回 200 并包含预期内容。
+- 线上真实浏览器依次切换三主题成功；189 篇语料、深路径偏好保留，0 个未捕获错误。
+- [部署回执](../visual-regression/2026-10-11-theme-packages/release-receipt.json)。
+
+本次收尾记录另随一个文档提交保存，并清理新文件末尾多余空行；不改动功能或作者笔记。
 
 ## 回退与后续边界
 
@@ -102,4 +108,3 @@ legacy 读取与打印。截图复核发现的手机导航逐字换行已修正�
 主题，应保留 qrthoughts 的新增/修改，并用上一版模板重新生成文章。
 
 本阶段到实现、验证和 Git 交付完成为止，不创建自动化，不继续扩展新的视觉方向。
-
