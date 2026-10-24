@@ -327,14 +327,12 @@ window.SITE_PLANE = {
     ]
   },
   "selected_entries": {
-    "selection_source": "five-field-public-entry-curation-2026-07-13",
+    "selection_source": "homepage-introduction-selection-2026-10-24",
     "items": [
       {
         "type": "Thoughts",
-        "id": "0018",
-        "field_id": "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE",
-        "field": "约束场与复杂智能",
-        "annotation": "从多尺度认知、组织记忆与联邦治理出发，建立 Agent 共生的约束场。"
+        "id": "0039",
+        "annotation": "第一次向总经理作个人介绍与请教：六种手机阅读版的比较，以及最终选用的稳重简报。"
       },
       {
         "type": "Thoughts",

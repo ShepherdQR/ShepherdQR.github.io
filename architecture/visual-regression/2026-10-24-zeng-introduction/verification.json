@@ -1,0 +1,49 @@
+{
+  "baseline": "64d4aff52a2a5b0a7141ed6cce7434889a96fda3",
+  "articles": 193,
+  "templates": 9,
+  "durability": 6,
+  "themes": 6,
+  "browser_checks": 31,
+  "browser_uncaught_errors": [],
+  "image_manifest": "passed",
+  "site_errors": 0,
+  "site_warnings": 105,
+  "aesthetic_errors": 0,
+  "aesthetic_warnings": 0,
+  "selected": "Thoughts:0039",
+  "watermarked_images": 6,
+  "image1_revision": "Removed seven-day and line-count metric; added AI-native solving infrastructure.",
+  "assets": [
+    {
+      "path": "resources/pics/thoughts-0039/01-brief.png",
+      "bytes": 288192,
+      "sha256": "c485c34b0c2638c45157c018de5a2a45cf413029c6837c8a0e0ab33013b5943f"
+    },
+    {
+      "path": "resources/pics/thoughts-0039/02-letter.png",
+      "bytes": 350908,
+      "sha256": "dd56aac89fbe770bd1da8a52e3874d57cdf720f793ae1014a11c87eb51395634"
+    },
+    {
+      "path": "resources/pics/thoughts-0039/03-technical.png",
+      "bytes": 304866,
+      "sha256": "c1faceb47ad23256b218286e7488105cfee762b463cae4060c75596bfd5ded00"
+    },
+    {
+      "path": "resources/pics/thoughts-0039/04-path.png",
+      "bytes": 336541,
+      "sha256": "26a6dffd4cf342932a26c3ea9d26c7e7bcaf8c3cd872652bd1493b48bb324cdb"
+    },
+    {
+      "path": "resources/pics/thoughts-0039/05-literary.png",
+      "bytes": 376805,
+      "sha256": "8bf80f435f05a56726b6499e17f3c147322c1be95988cce0d008a6a7f0a89fae"
+    },
+    {
+      "path": "resources/pics/thoughts-0039/06-reflection.png",
+      "bytes": 367678,
+      "sha256": "af22f495c5f4527eac43c0645b73a0c94cf8bc4be379261a659364dbea8a4eb9"
+    }
+  ]
+}

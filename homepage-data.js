@@ -1,6 +1,110 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-10-02",
+  "generatedAt": "2026-10-24",
   "items": [
+    {
+      "type": "Thoughts",
+      "id": "0039",
+      "title": "曾总您好",
+      "created": "2026-10-24 16:21:13",
+      "createdDate": "2026-10-24",
+      "published": "2026-10-24",
+      "updated": "2026-10-24 18:20:00",
+      "updatedDate": "2026-10-24",
+      "slug": "thoughts-0039",
+      "href": "/thoughts/0039/",
+      "canonicalHref": "/thoughts/0039/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BThoughts%5D%5B0039%5D%5B%E6%9B%BE%E6%80%BB%E6%82%A8%E5%A5%BD%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Thoughts][0039][曾总您好].md",
+      "label": "[Thoughts][0039][曾总您好]",
+      "source": "markdown",
+      "summarySource": "explicit",
+      "fieldIds": [],
+      "mappingSource": "unmapped",
+      "summary": "第一次向总经理作个人介绍与请教：六种手机阅读版的比较、最终选用的稳重简报，以及关于技术探索、阅读和现实落地的原始思考。",
+      "tags": [
+        "个人介绍",
+        "沟通",
+        "阅读"
+      ],
+      "leadImage": "/resources/pics/thoughts-0039/01-brief.png",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0150",
+      "title": "柏拉图",
+      "created": "2026-10-20 21:37:00",
+      "createdDate": "2026-10-20",
+      "published": "2026-10-20",
+      "updated": "2026-10-20 21:37:00",
+      "updatedDate": "2026-10-20",
+      "slug": "books-0150",
+      "href": "/books/0150/",
+      "canonicalHref": "/books/0150/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0150%5D%5B%E6%9F%8F%E6%8B%89%E5%9B%BE%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0150][柏拉图].md",
+      "label": "[Books][0150][柏拉图]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "三种读法：",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0149",
+      "title": "老派约会之必要",
+      "created": "2026-10-13 22:20:52",
+      "createdDate": "2026-10-13",
+      "published": "2026-10-13",
+      "updated": "2026-10-13 22:20:52",
+      "updatedDate": "2026-10-13",
+      "slug": "books-0149",
+      "href": "/books/0149/",
+      "canonicalHref": "/books/0149/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0149%5D%5B%E8%80%81%E6%B4%BE%E7%BA%A6%E4%BC%9A%E4%B9%8B%E5%BF%85%E8%A6%81%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0149][老派约会之必要].md",
+      "label": "[Books][0149][老派约会之必要]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "老派约会之必要",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0148",
+      "title": "公文写作大手笔",
+      "created": "2026-10-12 18:55:37",
+      "createdDate": "2026-10-12",
+      "published": "2026-10-12",
+      "updated": "2026-10-12 18:55:37",
+      "updatedDate": "2026-10-12",
+      "slug": "books-0148",
+      "href": "/books/0148/",
+      "canonicalHref": "/books/0148/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0148%5D%5B%E5%85%AC%E6%96%87%E5%86%99%E4%BD%9C%E5%A4%A7%E6%89%8B%E7%AC%94%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0148][公文写作大手笔].md",
+      "label": "[Books][0148][公文写作大手笔]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "先进事例的框架：根据维度 例如宣传员：",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Thoughts",
       "id": "0038",
@@ -170,7 +274,7 @@ window.HOMEPAGE_DATA = {
         "VL-READING-LITERATURE-POETRY"
       ],
       "mappingSource": "collection_default",
-      "summary": "诗论",
+      "summary": "考古不能全信",
       "revision": "1",
       "revisionStatus": "current"
     },
@@ -1156,9 +1260,10 @@ window.HOMEPAGE_DATA = {
       "source": "markdown",
       "summarySource": "explicit",
       "fieldIds": [
-        "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE"
+        "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE",
+        "VL-ENGINEERING-EVIDENCE"
       ],
-      "mappingSource": "selected",
+      "mappingSource": "taxonomy",
       "summary": "面向大型软件系统与组织级智能体体系，提出由横向呼吸层、纵向吸引层、持久记忆和联邦治理共同构成的 agent 共生约束场。",
       "tags": [
         "ASI",
@@ -4495,15 +4600,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 189,
+    "total": 193,
     "byType": {
-      "Thoughts": 38,
-      "Books": 147,
+      "Thoughts": 39,
+      "Books": 150,
       "Videos": 3,
       "Study": 1
     },
     "years": {
-      "2026": 58,
+      "2026": 62,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -4512,27 +4617,27 @@ window.HOMEPAGE_DATA = {
       "2020": 7
     },
     "summaries": {
-      "explicit": 19,
-      "derived": 170
+      "explicit": 20,
+      "derived": 173
     },
     "narrativeCoverage": {
-      "mapped": 165,
-      "total": 189,
-      "unmapped": 24,
-      "percent": 87.3,
+      "mapped": 168,
+      "total": 193,
+      "unmapped": 25,
+      "percent": 87.0,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 150,
+        "VL-READING-LITERATURE-POETRY": 153,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
-        "VL-ENGINEERING-EVIDENCE": 8,
+        "VL-ENGINEERING-EVIDENCE": 9,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 146,
+        "collection_default": 149,
         "frontmatter": 0,
-        "selected": 5,
-        "taxonomy": 14,
-        "unmapped": 24
+        "selected": 4,
+        "taxonomy": 15,
+        "unmapped": 25
       }
     }
   }

@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 output/playwright/
 output/pycache/
+output/pdf/
 .playwright-cli/
 
 # Unpublished author scratch; kept locally, never included in the public corpus.

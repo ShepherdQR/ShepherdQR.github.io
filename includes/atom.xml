@@ -4,10 +4,42 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-10-02T00:00:00+08:00</updated>
+  <updated>2026-10-24T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>曾总您好</title>
+    <link href="https://zqr.world/thoughts/0039/" />
+    <id>https://zqr.world/thoughts/0039/</id>
+    <published>2026-10-24T00:00:00+08:00</published>
+    <updated>2026-10-24T18:20:00+08:00</updated>
+    <summary>第一次向总经理作个人介绍与请教：六种手机阅读版的比较、最终选用的稳重简报，以及关于技术探索、阅读和现实落地的原始思考。</summary>
+  </entry>
+  <entry>
+    <title>柏拉图</title>
+    <link href="https://zqr.world/books/0150/" />
+    <id>https://zqr.world/books/0150/</id>
+    <published>2026-10-20T00:00:00+08:00</published>
+    <updated>2026-10-20T21:37:00+08:00</updated>
+    <summary>三种读法：</summary>
+  </entry>
+  <entry>
+    <title>老派约会之必要</title>
+    <link href="https://zqr.world/books/0149/" />
+    <id>https://zqr.world/books/0149/</id>
+    <published>2026-10-13T00:00:00+08:00</published>
+    <updated>2026-10-13T22:20:52+08:00</updated>
+    <summary>老派约会之必要</summary>
+  </entry>
+  <entry>
+    <title>公文写作大手笔</title>
+    <link href="https://zqr.world/books/0148/" />
+    <id>https://zqr.world/books/0148/</id>
+    <published>2026-10-12T00:00:00+08:00</published>
+    <updated>2026-10-12T18:55:37+08:00</updated>
+    <summary>先进事例的框架：根据维度 例如宣传员：</summary>
+  </entry>
   <entry>
     <title>党建思想学习研讨发言</title>
     <link href="https://zqr.world/thoughts/0038/" />
@@ -62,7 +94,7 @@
     <id>https://zqr.world/books/0142/</id>
     <published>2026-09-25T00:00:00+08:00</published>
     <updated>2026-09-25T20:02:08+08:00</updated>
-    <summary>诗论</summary>
+    <summary>考古不能全信</summary>
   </entry>
   <entry>
     <title>灞桥折柳</title>
@@ -375,37 +407,5 @@
     <published>2026-06-18T00:00:00+08:00</published>
     <updated>2026-06-18T00:30:42+08:00</updated>
     <summary>20260616中午，速读。读书【忠诚奉献，逐梦蓝天-新中国航空事业发展70周年70件大事】</summary>
-  </entry>
-  <entry>
-    <title>ASE会议20260612</title>
-    <link href="https://zqr.world/thoughts/0017/" />
-    <id>https://zqr.world/thoughts/0017/</id>
-    <published>2026-06-15T00:00:00+08:00</published>
-    <updated>2026-06-15T22:42:03+08:00</updated>
-    <summary>基于一次 ASE 会议观察，提炼组织治理、需求到验证的追溯证据包、人机协同和智能体驱动软件工程的落地要点。</summary>
-  </entry>
-  <entry>
-    <title>自主无人机事件</title>
-    <link href="https://zqr.world/thoughts/0016/" />
-    <id>https://zqr.world/thoughts/0016/</id>
-    <published>2026-06-14T00:00:00+08:00</published>
-    <updated>2026-06-14T09:48:54+08:00</updated>
-    <summary>以自主无人机事件为例，区分公开信息可信度与闭合证据链，梳理自主杀伤系统的可控性、责任主体和国际人道法边界。</summary>
-  </entry>
-  <entry>
-    <title>文明继承法</title>
-    <link href="https://zqr.world/thoughts/0015/" />
-    <id>https://zqr.world/thoughts/0015/</id>
-    <published>2026-06-07T00:00:00+08:00</published>
-    <updated>2026-06-07T16:54:02+08:00</updated>
-    <summary>从 AI 进入组织因果主路径与制度自动化出发，追问人类文明向智能体时代传递价值、责任、尊严与主体地位所需的治理框架。</summary>
-  </entry>
-  <entry>
-    <title>AI4AI R&amp;D</title>
-    <link href="https://zqr.world/thoughts/0014/" />
-    <id>https://zqr.world/thoughts/0014/</id>
-    <published>2026-06-05T00:00:00+08:00</published>
-    <updated>2026-06-05T23:26:07+08:00</updated>
-    <summary>从递归自我改进与智能体工程出发，提出以价值、契约、权限、预算、证据、审计和停机机制组织 AI4AI 研发闭环。</summary>
   </entry>
 </feed>
