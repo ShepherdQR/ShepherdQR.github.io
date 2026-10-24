@@ -63,9 +63,9 @@ From the repository root:
 
 ```powershell
 python scripts/new_note.py Thoughts "文章标题"
-python scripts/new_note.py Thoughts "党建思想学习研讨发言"
+python scripts/new_note.py Thoughts "曾总您好"
 python scripts/new_note.py Books "[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选"
-python scripts/new_note.py Books "巴比伦与巴比伦人赞歌"
+python scripts/new_note.py Books "柏拉图"
 python scripts/new_note.py Videos "TheBirthOfANation"
 ```
 
