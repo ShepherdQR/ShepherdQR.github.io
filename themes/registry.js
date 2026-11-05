@@ -5,7 +5,7 @@ window.ZQR_THEMES = {
   "themes": [
     {
       "id": "weave",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "contractVersion": 1,
       "label": "相位织场",
       "description": "在连续的光学织面中，让思想彼此照亮。",
@@ -27,7 +27,7 @@ window.ZQR_THEMES = {
     },
     {
       "id": "twilight",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "contractVersion": 1,
       "label": "暮色观测",
       "description": "苍青、微光与透明层次，留一个安静的观测位置。",
@@ -49,7 +49,7 @@ window.ZQR_THEMES = {
     },
     {
       "id": "tomography",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "contractVersion": 1,
       "label": "思想层析",
       "description": "烟紫与层片之间，清晰地展开一份思想。",

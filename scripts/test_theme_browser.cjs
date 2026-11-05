@@ -73,6 +73,7 @@ const check = (label, value) => { assert(value, label); results.push(label); };
     await screenshot('article-twilight-mobile');
     await page.getByRole('button', { name: '专注阅读', exact: true }).click();
     check('focus reading selected', await page.getAttribute('html', 'data-reading') === 'focus');
+    check('focus reading hides the article table of contents', await page.locator('.article-toc').isHidden());
     check('focus mode keeps article HTML', articleBefore === await page.locator('#markdown-content').innerHTML());
     await screenshot('article-focus-mobile');
     await page.evaluate(() => { window.ZQRTheme.setReading('spatial'); window.ZQRTheme.setFontSize(20); });

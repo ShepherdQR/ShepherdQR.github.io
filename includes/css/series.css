@@ -23,7 +23,7 @@
 html {
     background: var(--bg);
     color: var(--text);
-    -webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
         linear-gradient(180deg, rgba(255, 253, 247, 0.9), rgba(251, 247, 236, 0.98)),
         var(--bg);
     color: var(--text);
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    font-family: var(--font-sans);
     font-size: 18px;
     line-height: 1.65;
 }
@@ -44,7 +44,7 @@ a {
     border-bottom: 1px solid rgba(138, 90, 43, 0.28);
 }
 
-a:hover {
+.series-page a:hover {
     border-bottom-color: var(--accent);
     background: var(--accent-soft);
 }
