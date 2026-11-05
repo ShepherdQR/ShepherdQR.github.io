@@ -1,6 +1,184 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-10-24",
+  "generatedAt": "2026-11-04",
   "items": [
+    {
+      "type": "Books",
+      "id": "0157",
+      "title": "白",
+      "created": "2026-11-04 20:58:05",
+      "createdDate": "2026-11-04",
+      "published": "2026-11-04",
+      "updated": "2026-11-04 20:58:05",
+      "updatedDate": "2026-11-04",
+      "slug": "books-0157",
+      "href": "/books/0157/",
+      "canonicalHref": "/books/0157/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month11/%5BBooks%5D%5B0157%5D%5B%E7%99%BD%5D",
+      "sourcePath": "qrthoughts/year2026/month11/[Books][0157][白].md",
+      "label": "[Books][0157][白]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "白",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0156",
+      "title": "金匮要略",
+      "created": "2026-11-03 23:10:28",
+      "createdDate": "2026-11-03",
+      "published": "2026-11-03",
+      "updated": "2026-11-03 23:10:28",
+      "updatedDate": "2026-11-03",
+      "slug": "books-0156",
+      "href": "/books/0156/",
+      "canonicalHref": "/books/0156/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month11/%5BBooks%5D%5B0156%5D%5B%E9%87%91%E5%8C%AE%E8%A6%81%E7%95%A5%5D",
+      "sourcePath": "qrthoughts/year2026/month11/[Books][0156][金匮要略].md",
+      "label": "[Books][0156][金匮要略]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "第一，历史理解能力。",
+      "math": true,
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0155",
+      "title": "[马克思恩格斯]研究计划-其他-马克思主义信仰十讲",
+      "created": "2026-10-28 23:28:31",
+      "createdDate": "2026-10-28",
+      "published": "2026-10-28",
+      "updated": "2026-10-28 23:28:31",
+      "updatedDate": "2026-10-28",
+      "slug": "books-0155",
+      "href": "/books/0155/",
+      "canonicalHref": "/books/0155/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0155%5D%5B%5B%E9%A9%AC%E5%85%8B%E6%80%9D%E6%81%A9%E6%A0%BC%E6%96%AF%5D%E7%A0%94%E7%A9%B6%E8%AE%A1%E5%88%92-%E5%85%B6%E4%BB%96-%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E4%BF%A1%E4%BB%B0%E5%8D%81%E8%AE%B2%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0155][[马克思恩格斯]研究计划-其他-马克思主义信仰十讲].md",
+      "label": "[Books][0155][[马克思恩格斯]研究计划-其他-马克思主义信仰十讲]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "我重新组织结构，分为【2-3-3-2】",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0154",
+      "title": "[马克思恩格斯]研究计划",
+      "created": "2026-10-28 23:03:26",
+      "createdDate": "2026-10-28",
+      "published": "2026-10-28",
+      "updated": "2026-10-28 23:03:26",
+      "updatedDate": "2026-10-28",
+      "slug": "books-0154",
+      "href": "/books/0154/",
+      "canonicalHref": "/books/0154/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0154%5D%5B%5B%E9%A9%AC%E5%85%8B%E6%80%9D%E6%81%A9%E6%A0%BC%E6%96%AF%5D%E7%A0%94%E7%A9%B6%E8%AE%A1%E5%88%92%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0154][[马克思恩格斯]研究计划].md",
+      "label": "[Books][0154][[马克思恩格斯]研究计划]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "形态如：",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0153",
+      "title": "[科学史译丛](第二辑)炼金术的秘密",
+      "created": "2026-10-26 23:22:10",
+      "createdDate": "2026-10-26",
+      "published": "2026-10-26",
+      "updated": "2026-10-26 23:22:10",
+      "updatedDate": "2026-10-26",
+      "slug": "books-0153",
+      "href": "/books/0153/",
+      "canonicalHref": "/books/0153/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0153%5D%5B%5B%E7%A7%91%E5%AD%A6%E5%8F%B2%E8%AF%91%E4%B8%9B%5D%28%E7%AC%AC%E4%BA%8C%E8%BE%91%29%E7%82%BC%E9%87%91%E6%9C%AF%E7%9A%84%E7%A7%98%E5%AF%86%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0153][[科学史译丛](第二辑)炼金术的秘密].md",
+      "label": "[Books][0153][[科学史译丛](第二辑)炼金术的秘密]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "Principe：",
+      "math": true,
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0152",
+      "title": "[科学史译丛]书目",
+      "created": "2026-10-26 23:08:42",
+      "createdDate": "2026-10-26",
+      "published": "2026-10-26",
+      "updated": "2026-10-26 23:08:42",
+      "updatedDate": "2026-10-26",
+      "slug": "books-0152",
+      "href": "/books/0152/",
+      "canonicalHref": "/books/0152/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0152%5D%5B%5B%E7%A7%91%E5%AD%A6%E5%8F%B2%E8%AF%91%E4%B8%9B%5D%E4%B9%A6%E7%9B%AE%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0152][[科学史译丛]书目].md",
+      "label": "[Books][0152][[科学史译丛]书目]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "内容：",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0151",
+      "title": "伯罗奔尼撒战争史",
+      "created": "2026-10-25 16:54:20",
+      "createdDate": "2026-10-25",
+      "published": "2026-10-25",
+      "updated": "2026-10-25 16:54:20",
+      "updatedDate": "2026-10-25",
+      "slug": "books-0151",
+      "href": "/books/0151/",
+      "canonicalHref": "/books/0151/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month10/%5BBooks%5D%5B0151%5D%5B%E4%BC%AF%E7%BD%97%E5%A5%94%E5%B0%BC%E6%92%92%E6%88%98%E4%BA%89%E5%8F%B2%5D",
+      "sourcePath": "qrthoughts/year2026/month10/[Books][0151][伯罗奔尼撒战争史].md",
+      "label": "[Books][0151][伯罗奔尼撒战争史]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "本书定位：文明（战争/权利/人性）奠基。以下诸领域的源头：",
+      "leadImage": "/resources/pics/ThePeloponnesianWar/basicMap.jpg",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Thoughts",
       "id": "0039",
@@ -324,7 +502,7 @@ window.HOMEPAGE_DATA = {
         "VL-READING-LITERATURE-POETRY"
       ],
       "mappingSource": "collection_default",
-      "summary": "【问题-数据-价值】【需求-研发-反馈】闭环的案例",
+      "summary": "战略管理的诸范畴变化：【数据驱动，细粒度，敏捷】",
       "revision": "1",
       "revisionStatus": "current"
     },
@@ -4600,15 +4778,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 193,
+    "total": 200,
     "byType": {
+      "Books": 157,
       "Thoughts": 39,
-      "Books": 150,
       "Videos": 3,
       "Study": 1
     },
     "years": {
-      "2026": 62,
+      "2026": 69,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -4618,22 +4796,22 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 20,
-      "derived": 173
+      "derived": 180
     },
     "narrativeCoverage": {
-      "mapped": 168,
-      "total": 193,
+      "mapped": 175,
+      "total": 200,
       "unmapped": 25,
-      "percent": 87.0,
+      "percent": 87.5,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 153,
+        "VL-READING-LITERATURE-POETRY": 160,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
         "VL-ENGINEERING-EVIDENCE": 9,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 149,
+        "collection_default": 156,
         "frontmatter": 0,
         "selected": 4,
         "taxonomy": 15,

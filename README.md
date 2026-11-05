@@ -65,7 +65,10 @@ From the repository root:
 python scripts/new_note.py Thoughts "文章标题"
 python scripts/new_note.py Thoughts "曾总您好"
 python scripts/new_note.py Books "[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选"
-python scripts/new_note.py Books "柏拉图"
+python scripts/new_note.py Books "[科学史译丛]书目"
+python scripts/new_note.py Books "[马克思恩格斯]研究计划-其他-马克思主义信仰十讲"
+python scripts/new_note.py Books "[科学史译丛](第二辑)炼金术的秘密"
+python scripts/new_note.py Books "白"
 python scripts/new_note.py Videos "TheBirthOfANation"
 ```
 

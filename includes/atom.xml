@@ -4,10 +4,66 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-10-24T00:00:00+08:00</updated>
+  <updated>2026-11-04T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>白</title>
+    <link href="https://zqr.world/books/0157/" />
+    <id>https://zqr.world/books/0157/</id>
+    <published>2026-11-04T00:00:00+08:00</published>
+    <updated>2026-11-04T20:58:05+08:00</updated>
+    <summary>白</summary>
+  </entry>
+  <entry>
+    <title>金匮要略</title>
+    <link href="https://zqr.world/books/0156/" />
+    <id>https://zqr.world/books/0156/</id>
+    <published>2026-11-03T00:00:00+08:00</published>
+    <updated>2026-11-03T23:10:28+08:00</updated>
+    <summary>第一，历史理解能力。</summary>
+  </entry>
+  <entry>
+    <title>[马克思恩格斯]研究计划-其他-马克思主义信仰十讲</title>
+    <link href="https://zqr.world/books/0155/" />
+    <id>https://zqr.world/books/0155/</id>
+    <published>2026-10-28T00:00:00+08:00</published>
+    <updated>2026-10-28T23:28:31+08:00</updated>
+    <summary>我重新组织结构，分为【2-3-3-2】</summary>
+  </entry>
+  <entry>
+    <title>[马克思恩格斯]研究计划</title>
+    <link href="https://zqr.world/books/0154/" />
+    <id>https://zqr.world/books/0154/</id>
+    <published>2026-10-28T00:00:00+08:00</published>
+    <updated>2026-10-28T23:03:26+08:00</updated>
+    <summary>形态如：</summary>
+  </entry>
+  <entry>
+    <title>[科学史译丛](第二辑)炼金术的秘密</title>
+    <link href="https://zqr.world/books/0153/" />
+    <id>https://zqr.world/books/0153/</id>
+    <published>2026-10-26T00:00:00+08:00</published>
+    <updated>2026-10-26T23:22:10+08:00</updated>
+    <summary>Principe：</summary>
+  </entry>
+  <entry>
+    <title>[科学史译丛]书目</title>
+    <link href="https://zqr.world/books/0152/" />
+    <id>https://zqr.world/books/0152/</id>
+    <published>2026-10-26T00:00:00+08:00</published>
+    <updated>2026-10-26T23:08:42+08:00</updated>
+    <summary>内容：</summary>
+  </entry>
+  <entry>
+    <title>伯罗奔尼撒战争史</title>
+    <link href="https://zqr.world/books/0151/" />
+    <id>https://zqr.world/books/0151/</id>
+    <published>2026-10-25T00:00:00+08:00</published>
+    <updated>2026-10-25T16:54:20+08:00</updated>
+    <summary>本书定位：文明（战争/权利/人性）奠基。以下诸领域的源头：</summary>
+  </entry>
   <entry>
     <title>曾总您好</title>
     <link href="https://zqr.world/thoughts/0039/" />
@@ -110,7 +166,7 @@
     <id>https://zqr.world/books/0140/</id>
     <published>2026-09-25T00:00:00+08:00</published>
     <updated>2026-09-25T15:28:59+08:00</updated>
-    <summary>【问题-数据-价值】【需求-研发-反馈】闭环的案例</summary>
+    <summary>战略管理的诸范畴变化：【数据驱动，细粒度，敏捷】</summary>
   </entry>
   <entry>
     <title>新跃迁边缘感性直观</title>
@@ -351,61 +407,5 @@
     <published>2026-07-03T00:00:00+08:00</published>
     <updated>2026-07-03T18:47:25+08:00</updated>
     <summary>从日常观察与头脑直出的问题中筛选五项持续关切：政绩观、阅读方法、身体治理、人机共生与诗歌阅读，作为下一阶段研究入口。</summary>
-  </entry>
-  <entry>
-    <title>麦肯锡-问题分析与解决技巧</title>
-    <link href="https://zqr.world/books/0124/" />
-    <id>https://zqr.world/books/0124/</id>
-    <published>2026-07-03T00:00:00+08:00</published>
-    <updated>2026-07-03T00:56:34+08:00</updated>
-    <summary>好像陆续看了3个中午，有长有短，大约2h。速度还需要进一步提高。</summary>
-  </entry>
-  <entry>
-    <title>Topos理论研究报告</title>
-    <link href="https://zqr.world/thoughts/0022/" />
-    <id>https://zqr.world/thoughts/0022/</id>
-    <published>2026-07-03T00:00:00+08:00</published>
-    <updated>2026-07-03T00:49:05+08:00</updated>
-    <summary>以移动海报形式凝练 Topos 理论的结构图景，为范畴论视角下的数学与复杂系统研究提供视觉入口。</summary>
-  </entry>
-  <entry>
-    <title>第二次论我的政绩观</title>
-    <link href="https://zqr.world/thoughts/0021/" />
-    <id>https://zqr.world/thoughts/0021/</id>
-    <published>2026-07-01T00:00:00+08:00</published>
-    <updated>2026-07-10T22:44:06+08:00</updated>
-    <summary>以种子、土地与长征为意象，论述政绩应以人民需要、长期承载和真实工程反馈为尺度，并反对短期指标与局部炫技。</summary>
-  </entry>
-  <entry>
-    <title>热带对称的范畴图景</title>
-    <link href="https://zqr.world/thoughts/0020/" />
-    <id>https://zqr.world/thoughts/0020/</id>
-    <published>2026-06-24T00:00:00+08:00</published>
-    <updated>2026-06-24T23:09:19+08:00</updated>
-    <summary>记录将共生约束场抽象为独立仓库节点的初探，并把 repo 群的吸收、富集与统合能力理解为联邦治理和生态演化的范畴图景。</summary>
-  </entry>
-  <entry>
-    <title>机械工程智能层</title>
-    <link href="https://zqr.world/thoughts/0019/" />
-    <id>https://zqr.world/thoughts/0019/</id>
-    <published>2026-06-24T00:00:00+08:00</published>
-    <updated>2026-06-24T23:00:41+08:00</updated>
-    <summary>以 CAX 领域的可反馈闭环为场景，提出由通用智能底座、外置领域资产、后训练、企业知识和工程验证共同构成机械工程智能层。</summary>
-  </entry>
-  <entry>
-    <title>agent共生约束场</title>
-    <link href="https://zqr.world/thoughts/0018/" />
-    <id>https://zqr.world/thoughts/0018/</id>
-    <published>2026-06-19T00:00:00+08:00</published>
-    <updated>2026-06-19T10:40:23+08:00</updated>
-    <summary>面向大型软件系统与组织级智能体体系，提出由横向呼吸层、纵向吸引层、持久记忆和联邦治理共同构成的 agent 共生约束场。</summary>
-  </entry>
-  <entry>
-    <title>新中国航空事业发展70周年70件大事</title>
-    <link href="https://zqr.world/books/0123/" />
-    <id>https://zqr.world/books/0123/</id>
-    <published>2026-06-18T00:00:00+08:00</published>
-    <updated>2026-06-18T00:30:42+08:00</updated>
-    <summary>20260616中午，速读。读书【忠诚奉献，逐梦蓝天-新中国航空事业发展70周年70件大事】</summary>
   </entry>
 </feed>
