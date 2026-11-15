@@ -4,10 +4,34 @@
   <link href="https://zqr.world/" />
   <link rel="self" href="https://zqr.world/includes/atom.xml" />
   <id>https://zqr.world/</id>
-  <updated>2026-11-04T00:00:00+08:00</updated>
+  <updated>2026-11-15T00:00:00+08:00</updated>
   <author>
     <name>Qirong Zhang</name>
   </author>
+  <entry>
+    <title>文学想象与现代面向</title>
+    <link href="https://zqr.world/books/0160/" />
+    <id>https://zqr.world/books/0160/</id>
+    <published>2026-11-15T00:00:00+08:00</published>
+    <updated>2026-11-15T10:09:14+08:00</updated>
+    <summary>文学想象与现代面向</summary>
+  </entry>
+  <entry>
+    <title>[中国共产党人精神谱系][红旗渠精神]</title>
+    <link href="https://zqr.world/books/0159/" />
+    <id>https://zqr.world/books/0159/</id>
+    <published>2026-11-09T00:00:00+08:00</published>
+    <updated>2026-11-09T07:34:06+08:00</updated>
+    <summary>[中国共产党人精神谱系][红旗渠精神]</summary>
+  </entry>
+  <entry>
+    <title>[中国共产党人精神谱系]目录</title>
+    <link href="https://zqr.world/books/0158/" />
+    <id>https://zqr.world/books/0158/</id>
+    <published>2026-11-09T00:00:00+08:00</published>
+    <updated>2026-11-09T07:25:57+08:00</updated>
+    <summary>建党精神</summary>
+  </entry>
   <entry>
     <title>白</title>
     <link href="https://zqr.world/books/0157/" />
@@ -383,29 +407,5 @@
     <published>2026-07-04T00:00:00+08:00</published>
     <updated>2026-07-04T21:00:38+08:00</updated>
     <summary>以“渐进的静默”视觉叙事呈现导数作为局部变化率与一阶结构的统一认识，记录数学概念的海报化表达。</summary>
-  </entry>
-  <entry>
-    <title>Fable5和GPT5.5的图片生成质量比较</title>
-    <link href="https://zqr.world/thoughts/0025/" />
-    <id>https://zqr.world/thoughts/0025/</id>
-    <published>2026-07-04T00:00:00+08:00</published>
-    <updated>2026-07-04T18:39:13+08:00</updated>
-    <summary>并置审美叙事线、GPT5.5 Pro 与 Fable5 Max 的导数主题图像，比较不同生成路径在结构表达、视觉密度与审美叙事上的差异。</summary>
-  </entry>
-  <entry>
-    <title>Fable5无敌</title>
-    <link href="https://zqr.world/thoughts/0024/" />
-    <id>https://zqr.world/thoughts/0024/</id>
-    <published>2026-07-03T00:00:00+08:00</published>
-    <updated>2026-07-03T23:22:26+08:00</updated>
-    <summary>基于 Claude Code 与 Fable5 的一次长时研究实践，评估其在大型报告生成、结构压缩、跨域统合和证据纪律上的能力与使用边界。</summary>
-  </entry>
-  <entry>
-    <title>最近关切的5个问题</title>
-    <link href="https://zqr.world/thoughts/0023/" />
-    <id>https://zqr.world/thoughts/0023/</id>
-    <published>2026-07-03T00:00:00+08:00</published>
-    <updated>2026-07-03T18:47:25+08:00</updated>
-    <summary>从日常观察与头脑直出的问题中筛选五项持续关切：政绩观、阅读方法、身体治理、人机共生与诗歌阅读，作为下一阶段研究入口。</summary>
   </entry>
 </feed>

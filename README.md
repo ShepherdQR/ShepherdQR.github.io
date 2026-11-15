@@ -68,7 +68,9 @@ python scripts/new_note.py Books "[20世纪世界诗歌译丛](第三辑)伽姆�
 python scripts/new_note.py Books "[科学史译丛]书目"
 python scripts/new_note.py Books "[马克思恩格斯]研究计划-其他-马克思主义信仰十讲"
 python scripts/new_note.py Books "[科学史译丛](第二辑)炼金术的秘密"
-python scripts/new_note.py Books "白"
+python scripts/new_note.py Books "[中国共产党人精神谱系]目录"
+python scripts/new_note.py Books "[中国共产党人精神谱系][红旗渠精神]"
+python scripts/new_note.py Books "文学想象与现代面向"
 python scripts/new_note.py Videos "TheBirthOfANation"
 ```
 

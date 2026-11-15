@@ -3,7 +3,7 @@
  - Date: 2026-10-13 22:20:52
  - Github: https://github.com/ShepherdQR
  - LastEditors: Qirong ZHANG
- - LastEditTime: 2026-10-14 00:27:53
+ - LastEditTime: 2026-11-15 10:00:26
  - Copyright (c) 2026 Qirong ZHANG. All rights reserved.
  - SPDX-License-Identifier: LGPL-3.0-or-later.
  --------------------------------------------------------->
@@ -71,9 +71,23 @@ source:
 - 我却看见你是我。
 - 约莫九十三个红绿灯那样久的手牵手。
 
+```
+老派
+
+肉圆
+走不远，跑不快，思念也不高贵。
+怨不成，妒不全，憎恨也成不了局。
+我的整个四月都在相爱恐惧自燃的虚无之中。
+吃了温柔的寂寞配方。吃了寂寞的温柔配方。
+我偷得一宿也算恩义，赌到一生便是我幸。
+然后便忘了曾经的人来人往。
+
+p156，收获不大。后面的不继续看了。
+```
+
 ## Compact
 
 
 # END
 
-
+- [2026-11-15 10:00:38-05:00]

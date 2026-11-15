@@ -1,6 +1,81 @@
 window.HOMEPAGE_DATA = {
-  "generatedAt": "2026-11-04",
+  "generatedAt": "2026-11-15",
   "items": [
+    {
+      "type": "Books",
+      "id": "0160",
+      "title": "文学想象与现代面向",
+      "created": "2026-11-15 10:09:14",
+      "createdDate": "2026-11-15",
+      "published": "2026-11-15",
+      "updated": "2026-11-15 10:09:14",
+      "updatedDate": "2026-11-15",
+      "slug": "books-0160",
+      "href": "/books/0160/",
+      "canonicalHref": "/books/0160/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month11/%5BBooks%5D%5B0160%5D%5B%E6%96%87%E5%AD%A6%E6%83%B3%E8%B1%A1%E4%B8%8E%E7%8E%B0%E4%BB%A3%E9%9D%A2%E5%90%91%5D",
+      "sourcePath": "qrthoughts/year2026/month11/[Books][0160][文学想象与现代面向].md",
+      "label": "[Books][0160][文学想象与现代面向]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "文学想象与现代面向",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0159",
+      "title": "[中国共产党人精神谱系][红旗渠精神]",
+      "created": "2026-11-09 07:34:06",
+      "createdDate": "2026-11-09",
+      "published": "2026-11-09",
+      "updated": "2026-11-09 07:34:06",
+      "updatedDate": "2026-11-09",
+      "slug": "books-0159",
+      "href": "/books/0159/",
+      "canonicalHref": "/books/0159/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month11/%5BBooks%5D%5B0159%5D%5B%5B%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E4%BA%BA%E7%B2%BE%E7%A5%9E%E8%B0%B1%E7%B3%BB%5D%5B%E7%BA%A2%E6%97%97%E6%B8%A0%E7%B2%BE%E7%A5%9E%5D%5D",
+      "sourcePath": "qrthoughts/year2026/month11/[Books][0159][[中国共产党人精神谱系][红旗渠精神]].md",
+      "label": "[Books][0159][[中国共产党人精神谱系][红旗渠精神]]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "[中国共产党人精神谱系][红旗渠精神]",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
+    {
+      "type": "Books",
+      "id": "0158",
+      "title": "[中国共产党人精神谱系]目录",
+      "created": "2026-11-09 07:25:57",
+      "createdDate": "2026-11-09",
+      "published": "2026-11-09",
+      "updated": "2026-11-09 07:25:57",
+      "updatedDate": "2026-11-09",
+      "slug": "books-0158",
+      "href": "/books/0158/",
+      "canonicalHref": "/books/0158/",
+      "legacyHref": "render.html?md=/qrthoughts/year2026/month11/%5BBooks%5D%5B0158%5D%5B%5B%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E4%BA%BA%E7%B2%BE%E7%A5%9E%E8%B0%B1%E7%B3%BB%5D%E7%9B%AE%E5%BD%95%5D",
+      "sourcePath": "qrthoughts/year2026/month11/[Books][0158][[中国共产党人精神谱系]目录].md",
+      "label": "[Books][0158][[中国共产党人精神谱系]目录]",
+      "source": "markdown",
+      "summarySource": "derived",
+      "fieldIds": [
+        "VL-READING-LITERATURE-POETRY"
+      ],
+      "mappingSource": "collection_default",
+      "summary": "建党精神",
+      "revision": "1",
+      "revisionStatus": "current"
+    },
     {
       "type": "Books",
       "id": "0157",
@@ -4778,15 +4853,15 @@ window.HOMEPAGE_DATA = {
     }
   ],
   "stats": {
-    "total": 200,
+    "total": 203,
     "byType": {
-      "Books": 157,
+      "Books": 160,
       "Thoughts": 39,
       "Videos": 3,
       "Study": 1
     },
     "years": {
-      "2026": 69,
+      "2026": 72,
       "2025": 1,
       "2024": 2,
       "2023": 36,
@@ -4796,22 +4871,22 @@ window.HOMEPAGE_DATA = {
     },
     "summaries": {
       "explicit": 20,
-      "derived": 180
+      "derived": 183
     },
     "narrativeCoverage": {
-      "mapped": 175,
-      "total": 200,
+      "mapped": 178,
+      "total": 203,
       "unmapped": 25,
-      "percent": 87.5,
+      "percent": 87.7,
       "byField": {
-        "VL-READING-LITERATURE-POETRY": 160,
+        "VL-READING-LITERATURE-POETRY": 163,
         "VL-CONSTRAINT-FIELDS-COMPLEX-INTELLIGENCE": 7,
         "VL-ENGINEERING-EVIDENCE": 9,
         "VL-MATHEMATICAL-STRUCTURE": 4,
         "VL-HUMAN-GOVERNANCE-CIVILIZATION": 5
       },
       "bySource": {
-        "collection_default": 156,
+        "collection_default": 159,
         "frontmatter": 0,
         "selected": 4,
         "taxonomy": 15,
