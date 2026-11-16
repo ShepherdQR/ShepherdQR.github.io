@@ -4,6 +4,8 @@ This directory stores architecture design documents and decision records for the
 
 ## Documents
 
+- [开放知识地图](knowledge-atlas.md)：全领域分类来源、306项导航覆盖、递归扩展、笔记关联、静态回退与验证合同。
+
 - [Theme package contract](theme-packages.md): Current theme architecture, reader, package lifecycle and upgrade workflow.
 - [2026-10-11 Theme Packages and Notes Release](task-closeouts/2026-10-11-theme-packages-and-notes.md): Theme replacement, browser verification, 12 new notes and four note updates.
 

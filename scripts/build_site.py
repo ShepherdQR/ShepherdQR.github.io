@@ -14,6 +14,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 import article_pipeline
 import build_themes
+import build_knowledge_atlas
 import generate_homepage_data
 import normalize_markdown_front_matter
 
@@ -459,6 +460,8 @@ def build_generated_site(
     alias_count = write_article_alias_pages(root, items)
     write_site_indexes(root, items)
     write_site_plane_data(root)
+    if (root / "data/knowledge-taxonomy.json").exists():
+        build_knowledge_atlas.build(root, items)
     return len(items), alias_count
 
 

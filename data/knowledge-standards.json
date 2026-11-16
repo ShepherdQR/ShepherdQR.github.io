@@ -1,0 +1,1724 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "ford2015",
+      "title": "OECD · Fields of R&D",
+      "version": "Frascati Manual 2015, Table 2.2",
+      "scope": "42 second-level fields",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/10/frascati-manual-2015_g1g57dcb/9789264239012-en.pdf",
+      "count": 42,
+      "entries": [
+        {
+          "code": "1.1",
+          "title": "Mathematics"
+        },
+        {
+          "code": "1.2",
+          "title": "Computer and information sciences"
+        },
+        {
+          "code": "1.3",
+          "title": "Physical sciences"
+        },
+        {
+          "code": "1.4",
+          "title": "Chemical sciences"
+        },
+        {
+          "code": "1.5",
+          "title": "Earth and related environmental sciences"
+        },
+        {
+          "code": "1.6",
+          "title": "Biological sciences"
+        },
+        {
+          "code": "1.7",
+          "title": "Other natural sciences"
+        },
+        {
+          "code": "2.1",
+          "title": "Civil engineering"
+        },
+        {
+          "code": "2.2",
+          "title": "Electrical engineering, electronic engineering, information engineering"
+        },
+        {
+          "code": "2.3",
+          "title": "Mechanical engineering"
+        },
+        {
+          "code": "2.4",
+          "title": "Chemical engineering"
+        },
+        {
+          "code": "2.5",
+          "title": "Materials engineering"
+        },
+        {
+          "code": "2.6",
+          "title": "Medical engineering"
+        },
+        {
+          "code": "2.7",
+          "title": "Environmental engineering"
+        },
+        {
+          "code": "2.8",
+          "title": "Environmental biotechnology"
+        },
+        {
+          "code": "2.9",
+          "title": "Industrial biotechnology"
+        },
+        {
+          "code": "2.10",
+          "title": "Nano-technology"
+        },
+        {
+          "code": "2.11",
+          "title": "Other engineering and technologies"
+        },
+        {
+          "code": "3.1",
+          "title": "Basic medicine"
+        },
+        {
+          "code": "3.2",
+          "title": "Clinical medicine"
+        },
+        {
+          "code": "3.3",
+          "title": "Health sciences"
+        },
+        {
+          "code": "3.4",
+          "title": "Medical biotechnology"
+        },
+        {
+          "code": "3.5",
+          "title": "Other medical science"
+        },
+        {
+          "code": "4.1",
+          "title": "Agriculture, forestry, and fisheries"
+        },
+        {
+          "code": "4.2",
+          "title": "Animal and dairy science"
+        },
+        {
+          "code": "4.3",
+          "title": "Veterinary science"
+        },
+        {
+          "code": "4.4",
+          "title": "Agricultural biotechnology"
+        },
+        {
+          "code": "4.5",
+          "title": "Other agricultural sciences"
+        },
+        {
+          "code": "5.1",
+          "title": "Psychology and cognitive sciences"
+        },
+        {
+          "code": "5.2",
+          "title": "Economics and business"
+        },
+        {
+          "code": "5.3",
+          "title": "Education"
+        },
+        {
+          "code": "5.4",
+          "title": "Sociology"
+        },
+        {
+          "code": "5.5",
+          "title": "Law"
+        },
+        {
+          "code": "5.6",
+          "title": "Political science"
+        },
+        {
+          "code": "5.7",
+          "title": "Social and economic geography"
+        },
+        {
+          "code": "5.8",
+          "title": "Media and communications"
+        },
+        {
+          "code": "5.9",
+          "title": "Other social sciences"
+        },
+        {
+          "code": "6.1",
+          "title": "History and archaeology"
+        },
+        {
+          "code": "6.2",
+          "title": "Languages and literature"
+        },
+        {
+          "code": "6.3",
+          "title": "Philosophy, ethics and religion"
+        },
+        {
+          "code": "6.4",
+          "title": "Arts (arts, history of arts, performing arts, music)"
+        },
+        {
+          "code": "6.5",
+          "title": "Other humanities"
+        }
+      ],
+      "accessed": "2026-11-16"
+    },
+    {
+      "id": "isced2013",
+      "title": "UNESCO · ISCED-F",
+      "version": "ISCED-F 2013, detailed descriptions 2015, Appendix I",
+      "scope": "80 substantive detailed fields; residual, unspecified and interdisciplinary codes recorded separately",
+      "url": "https://www.uis.unesco.org/sites/default/files/medias/fichiers/2025/04/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf",
+      "count": 80,
+      "entries": [
+        {
+          "code": "0011",
+          "title": "Basic programmes and qualifications"
+        },
+        {
+          "code": "0021",
+          "title": "Literacy and numeracy"
+        },
+        {
+          "code": "0031",
+          "title": "Personal skills and development"
+        },
+        {
+          "code": "0111",
+          "title": "Education science"
+        },
+        {
+          "code": "0112",
+          "title": "Training for pre-school teachers"
+        },
+        {
+          "code": "0113",
+          "title": "Teacher training without subject specialisation"
+        },
+        {
+          "code": "0114",
+          "title": "Teacher training with subject specialisation"
+        },
+        {
+          "code": "0211",
+          "title": "Audio-visual techniques and media production"
+        },
+        {
+          "code": "0212",
+          "title": "Fashion, interior and industrial design"
+        },
+        {
+          "code": "0213",
+          "title": "Fine arts"
+        },
+        {
+          "code": "0214",
+          "title": "Handicrafts"
+        },
+        {
+          "code": "0215",
+          "title": "Music and performing arts"
+        },
+        {
+          "code": "0221",
+          "title": "Religion and theology"
+        },
+        {
+          "code": "0222",
+          "title": "History and archaeology"
+        },
+        {
+          "code": "0223",
+          "title": "Philosophy and ethics"
+        },
+        {
+          "code": "0231",
+          "title": "Language acquisition"
+        },
+        {
+          "code": "0232",
+          "title": "Literature and linguistics"
+        },
+        {
+          "code": "0311",
+          "title": "Economics"
+        },
+        {
+          "code": "0312",
+          "title": "Political sciences and civics"
+        },
+        {
+          "code": "0313",
+          "title": "Psychology"
+        },
+        {
+          "code": "0314",
+          "title": "Sociology and cultural studies"
+        },
+        {
+          "code": "0321",
+          "title": "Journalism and reporting"
+        },
+        {
+          "code": "0322",
+          "title": "Library, information and archival studies"
+        },
+        {
+          "code": "0411",
+          "title": "Accounting and taxation"
+        },
+        {
+          "code": "0412",
+          "title": "Finance, banking and insurance"
+        },
+        {
+          "code": "0413",
+          "title": "Management and administration"
+        },
+        {
+          "code": "0414",
+          "title": "Marketing and advertising"
+        },
+        {
+          "code": "0415",
+          "title": "Secretarial and office work"
+        },
+        {
+          "code": "0416",
+          "title": "Wholesale and retail sales"
+        },
+        {
+          "code": "0417",
+          "title": "Work skills"
+        },
+        {
+          "code": "0421",
+          "title": "Law"
+        },
+        {
+          "code": "0511",
+          "title": "Biology"
+        },
+        {
+          "code": "0512",
+          "title": "Biochemistry"
+        },
+        {
+          "code": "0521",
+          "title": "Environmental sciences"
+        },
+        {
+          "code": "0522",
+          "title": "Natural environments and wildlife"
+        },
+        {
+          "code": "0531",
+          "title": "Chemistry"
+        },
+        {
+          "code": "0532",
+          "title": "Earth sciences"
+        },
+        {
+          "code": "0533",
+          "title": "Physics"
+        },
+        {
+          "code": "0541",
+          "title": "Mathematics"
+        },
+        {
+          "code": "0542",
+          "title": "Statistics"
+        },
+        {
+          "code": "0611",
+          "title": "Computer use"
+        },
+        {
+          "code": "0612",
+          "title": "Database and network design and administration"
+        },
+        {
+          "code": "0613",
+          "title": "Software and applications development and analysis"
+        },
+        {
+          "code": "0711",
+          "title": "Chemical engineering and processes"
+        },
+        {
+          "code": "0712",
+          "title": "Environmental protection technology"
+        },
+        {
+          "code": "0713",
+          "title": "Electricity and energy"
+        },
+        {
+          "code": "0714",
+          "title": "Electronics and automation"
+        },
+        {
+          "code": "0715",
+          "title": "Mechanics and metal trades"
+        },
+        {
+          "code": "0716",
+          "title": "Motor vehicles, ships and aircraft"
+        },
+        {
+          "code": "0721",
+          "title": "Food processing"
+        },
+        {
+          "code": "0722",
+          "title": "Materials (glass, paper, plastic and wood)"
+        },
+        {
+          "code": "0723",
+          "title": "Textiles (clothes, footwear and leather)"
+        },
+        {
+          "code": "0724",
+          "title": "Mining and extraction"
+        },
+        {
+          "code": "0731",
+          "title": "Architecture and town planning"
+        },
+        {
+          "code": "0732",
+          "title": "Building and civil engineering"
+        },
+        {
+          "code": "0811",
+          "title": "Crop and livestock production"
+        },
+        {
+          "code": "0812",
+          "title": "Horticulture"
+        },
+        {
+          "code": "0821",
+          "title": "Forestry"
+        },
+        {
+          "code": "0831",
+          "title": "Fisheries"
+        },
+        {
+          "code": "0841",
+          "title": "Veterinary"
+        },
+        {
+          "code": "0911",
+          "title": "Dental studies"
+        },
+        {
+          "code": "0912",
+          "title": "Medicine"
+        },
+        {
+          "code": "0913",
+          "title": "Nursing and midwifery"
+        },
+        {
+          "code": "0914",
+          "title": "Medical diagnostic and treatment technology"
+        },
+        {
+          "code": "0915",
+          "title": "Therapy and rehabilitation"
+        },
+        {
+          "code": "0916",
+          "title": "Pharmacy"
+        },
+        {
+          "code": "0917",
+          "title": "Traditional and complementary medicine and therapy"
+        },
+        {
+          "code": "0921",
+          "title": "Care of the elderly and of disabled adults"
+        },
+        {
+          "code": "0922",
+          "title": "Child care and youth services"
+        },
+        {
+          "code": "0923",
+          "title": "Social work and counselling"
+        },
+        {
+          "code": "1011",
+          "title": "Domestic services"
+        },
+        {
+          "code": "1012",
+          "title": "Hair and beauty services"
+        },
+        {
+          "code": "1013",
+          "title": "Hotel, restaurants and catering"
+        },
+        {
+          "code": "1014",
+          "title": "Sports"
+        },
+        {
+          "code": "1015",
+          "title": "Travel, tourism and leisure"
+        },
+        {
+          "code": "1021",
+          "title": "Community sanitation"
+        },
+        {
+          "code": "1022",
+          "title": "Occupational health and safety"
+        },
+        {
+          "code": "1031",
+          "title": "Military and defence"
+        },
+        {
+          "code": "1032",
+          "title": "Protection of persons and property"
+        },
+        {
+          "code": "1041",
+          "title": "Transport services"
+        }
+      ],
+      "extendedCodes": [
+        {
+          "code": "0000",
+          "title": "Generic programmes and qualifications not further defined"
+        },
+        {
+          "code": "0099",
+          "title": "Generic programmes and qualifications not elsewhere classified"
+        },
+        {
+          "code": "0110",
+          "title": "Education not further defined"
+        },
+        {
+          "code": "0119",
+          "title": "Education not elsewhere classified"
+        },
+        {
+          "code": "0188",
+          "title": "Inter-disciplinary programmes and qualifications involving education"
+        },
+        {
+          "code": "0200",
+          "title": "Arts and humanities not further defined"
+        },
+        {
+          "code": "0210",
+          "title": "Arts not further defined"
+        },
+        {
+          "code": "0219",
+          "title": "Arts not elsewhere classified"
+        },
+        {
+          "code": "0220",
+          "title": "Humanities (except languages) not further defined"
+        },
+        {
+          "code": "0229",
+          "title": "Humanities (except languages) not elsewhere classified"
+        },
+        {
+          "code": "0230",
+          "title": "Languages not further defined"
+        },
+        {
+          "code": "0239",
+          "title": "Languages not elsewhere classified"
+        },
+        {
+          "code": "0288",
+          "title": "Inter-disciplinary programmes and qualifications involving arts and humanities"
+        },
+        {
+          "code": "0299",
+          "title": "Arts and humanities not elsewhere classified ailed field"
+        },
+        {
+          "code": "0300",
+          "title": "Social sciences, journalism and information not further defined"
+        },
+        {
+          "code": "0310",
+          "title": "Social and behavioural sciences not further defined"
+        },
+        {
+          "code": "0319",
+          "title": "Social and behavioural sciences not elsewhere classified"
+        },
+        {
+          "code": "0320",
+          "title": "Journalism and information not further defined"
+        },
+        {
+          "code": "0329",
+          "title": "Journalism and information not elsewhere classified"
+        },
+        {
+          "code": "0388",
+          "title": "Inter-disciplinary programmes and qualifications involving social sciences, journalism and information"
+        },
+        {
+          "code": "0399",
+          "title": "Social sciences, journalism and information not elsewhere classified"
+        },
+        {
+          "code": "0400",
+          "title": "Business, administration and law not further defined"
+        },
+        {
+          "code": "0410",
+          "title": "Business and administration not further defined"
+        },
+        {
+          "code": "0419",
+          "title": "Business and administration not elsewhere classified"
+        },
+        {
+          "code": "0488",
+          "title": "Inter-disciplinary programmes and qualifications involving business, administration and law"
+        },
+        {
+          "code": "0499",
+          "title": "Business, administration and law not elsewhere classified etailed field"
+        },
+        {
+          "code": "0500",
+          "title": "Natural sciences, mathematics and statistics not further defined"
+        },
+        {
+          "code": "0510",
+          "title": "Biological and related sciences not further defined"
+        },
+        {
+          "code": "0519",
+          "title": "Biological and related sciences not elsewhere classified"
+        },
+        {
+          "code": "0520",
+          "title": "Environment not further defined"
+        },
+        {
+          "code": "0529",
+          "title": "Environment not elsewhere classified"
+        },
+        {
+          "code": "0530",
+          "title": "Physical sciences not further defined"
+        },
+        {
+          "code": "0539",
+          "title": "Physical sciences not elsewhere classified"
+        },
+        {
+          "code": "0540",
+          "title": "Mathematics and statistics not further defined"
+        },
+        {
+          "code": "0588",
+          "title": "Inter-disciplinary programmes and qualifications involving natural sciences, mathematics and statistics"
+        },
+        {
+          "code": "0599",
+          "title": "Natural sciences, mathematics and statistics not elsewhere classified"
+        },
+        {
+          "code": "0610",
+          "title": "Information and Communication Technologies (ICTs) not further defined"
+        },
+        {
+          "code": "0619",
+          "title": "Information and Communication Technologies (ICTs) not elsewhere classified"
+        },
+        {
+          "code": "0688",
+          "title": "Inter-disciplinary programmes and qualifications involving Information and Communication Technologies (ICTs)"
+        },
+        {
+          "code": "0700",
+          "title": "Engineering, manufacturing and construction not further defined"
+        },
+        {
+          "code": "0710",
+          "title": "Engineering and engineering trades not further defined"
+        },
+        {
+          "code": "0719",
+          "title": "Engineering and engineering trades not elsewhere classified"
+        },
+        {
+          "code": "0720",
+          "title": "Manufacturing and processing not further defined"
+        },
+        {
+          "code": "0729",
+          "title": "Manufacturing and processing not elsewhere classified"
+        },
+        {
+          "code": "0730",
+          "title": "Architecture and construction not further defined"
+        },
+        {
+          "code": "0788",
+          "title": "Inter-disciplinary programmes and qualifications involving engineering, manufacturing and construction"
+        },
+        {
+          "code": "0799",
+          "title": "Engineering, manufacturing and construction not elsewhere classified"
+        },
+        {
+          "code": "0800",
+          "title": "Agriculture, forestry, fisheries and veterinary not further defined"
+        },
+        {
+          "code": "0810",
+          "title": "Agriculture not further defined"
+        },
+        {
+          "code": "0819",
+          "title": "Agriculture not elsewhere classified"
+        },
+        {
+          "code": "0888",
+          "title": "Inter-disciplinary programmes and qualifications involving agriculture, forestry, fisheries and veterinary"
+        },
+        {
+          "code": "0899",
+          "title": "Agriculture, forestry, fisheries and veterinary not elsewhere classified led field"
+        },
+        {
+          "code": "0900",
+          "title": "Health and welfare not further defined"
+        },
+        {
+          "code": "0910",
+          "title": "Health not further defined"
+        },
+        {
+          "code": "0919",
+          "title": "Health not elsewhere classified"
+        },
+        {
+          "code": "0920",
+          "title": "Welfare not further defined"
+        },
+        {
+          "code": "0929",
+          "title": "Welfare not elsewhere classified"
+        },
+        {
+          "code": "0988",
+          "title": "Inter-disciplinary programmes and qualifications involving health and welfare"
+        },
+        {
+          "code": "0999",
+          "title": "Health and welfare not elsewhere classified"
+        },
+        {
+          "code": "1000",
+          "title": "Services not further defined"
+        },
+        {
+          "code": "1010",
+          "title": "Personal services not further defined"
+        },
+        {
+          "code": "1019",
+          "title": "Personal services not elsewhere classified"
+        },
+        {
+          "code": "1020",
+          "title": "Hygiene and occupational health services not further defined"
+        },
+        {
+          "code": "1029",
+          "title": "Hygiene and occupational health services not elsewhere classified"
+        },
+        {
+          "code": "1030",
+          "title": "Security services not further defined"
+        },
+        {
+          "code": "1039",
+          "title": "Security services not elsewhere classified"
+        },
+        {
+          "code": "1088",
+          "title": "Inter-disciplinary programmes and qualifications involving services"
+        },
+        {
+          "code": "1099",
+          "title": "Services not elsewhere classified"
+        },
+        {
+          "code": "9999",
+          "title": "Field unknown"
+        }
+      ],
+      "accessed": "2026-11-16"
+    },
+    {
+      "id": "moe2022",
+      "title": "中国 · 研究生学科目录",
+      "version": "研究生教育学科专业目录（2022年）",
+      "scope": "117 first-level academic disciplines and all 67 professional degree categories, including 1051, 1052 and 1055 declared in parentheses",
+      "url": "https://yzst.chsi.com.cn/kyzx/jybzc/202209/20220913/2293267493.html",
+      "count": 184,
+      "entries": [
+        {
+          "code": "0101",
+          "title": "哲学",
+          "kind": "academic"
+        },
+        {
+          "code": "0201",
+          "title": "理论经济学",
+          "kind": "academic"
+        },
+        {
+          "code": "0202",
+          "title": "应用经济学",
+          "kind": "academic"
+        },
+        {
+          "code": "0301",
+          "title": "法学",
+          "kind": "academic"
+        },
+        {
+          "code": "0302",
+          "title": "政治学",
+          "kind": "academic"
+        },
+        {
+          "code": "0303",
+          "title": "社会学",
+          "kind": "academic"
+        },
+        {
+          "code": "0304",
+          "title": "民族学",
+          "kind": "academic"
+        },
+        {
+          "code": "0305",
+          "title": "马克思主义理论",
+          "kind": "academic"
+        },
+        {
+          "code": "0306",
+          "title": "公安学",
+          "kind": "academic"
+        },
+        {
+          "code": "0307",
+          "title": "中共党史党建学",
+          "kind": "academic"
+        },
+        {
+          "code": "0308",
+          "title": "纪检监察学",
+          "kind": "academic"
+        },
+        {
+          "code": "0401",
+          "title": "教育学",
+          "kind": "academic"
+        },
+        {
+          "code": "0402",
+          "title": "心理学",
+          "kind": "academic"
+        },
+        {
+          "code": "0403",
+          "title": "体育学",
+          "kind": "academic"
+        },
+        {
+          "code": "0501",
+          "title": "中国语言文学",
+          "kind": "academic"
+        },
+        {
+          "code": "0502",
+          "title": "外国语言文学",
+          "kind": "academic"
+        },
+        {
+          "code": "0503",
+          "title": "新闻传播学",
+          "kind": "academic"
+        },
+        {
+          "code": "0601",
+          "title": "考古学",
+          "kind": "academic"
+        },
+        {
+          "code": "0602",
+          "title": "中国史",
+          "kind": "academic"
+        },
+        {
+          "code": "0603",
+          "title": "世界史",
+          "kind": "academic"
+        },
+        {
+          "code": "0701",
+          "title": "数学",
+          "kind": "academic"
+        },
+        {
+          "code": "0702",
+          "title": "物理学",
+          "kind": "academic"
+        },
+        {
+          "code": "0703",
+          "title": "化学",
+          "kind": "academic"
+        },
+        {
+          "code": "0704",
+          "title": "天文学",
+          "kind": "academic"
+        },
+        {
+          "code": "0705",
+          "title": "地理学",
+          "kind": "academic"
+        },
+        {
+          "code": "0706",
+          "title": "大气科学",
+          "kind": "academic"
+        },
+        {
+          "code": "0707",
+          "title": "海洋科学",
+          "kind": "academic"
+        },
+        {
+          "code": "0708",
+          "title": "地球物理学",
+          "kind": "academic"
+        },
+        {
+          "code": "0709",
+          "title": "地质学",
+          "kind": "academic"
+        },
+        {
+          "code": "0710",
+          "title": "生物学",
+          "kind": "academic"
+        },
+        {
+          "code": "0711",
+          "title": "系统科学",
+          "kind": "academic"
+        },
+        {
+          "code": "0712",
+          "title": "科学技术史",
+          "kind": "academic"
+        },
+        {
+          "code": "0713",
+          "title": "生态学",
+          "kind": "academic"
+        },
+        {
+          "code": "0714",
+          "title": "统计学",
+          "kind": "academic"
+        },
+        {
+          "code": "0801",
+          "title": "力学",
+          "kind": "academic"
+        },
+        {
+          "code": "0802",
+          "title": "机械工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0803",
+          "title": "光学工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0804",
+          "title": "仪器科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0805",
+          "title": "材料科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0806",
+          "title": "冶金工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0807",
+          "title": "动力工程及工程热物理",
+          "kind": "academic"
+        },
+        {
+          "code": "0808",
+          "title": "电气工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0809",
+          "title": "电子科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0810",
+          "title": "信息与通信工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0811",
+          "title": "控制科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0812",
+          "title": "计算机科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0813",
+          "title": "建筑学",
+          "kind": "academic"
+        },
+        {
+          "code": "0814",
+          "title": "土木工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0815",
+          "title": "水利工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0816",
+          "title": "测绘科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0817",
+          "title": "化学工程与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0818",
+          "title": "地质资源与地质工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0819",
+          "title": "矿业工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0820",
+          "title": "石油与天然气工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0821",
+          "title": "纺织科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0822",
+          "title": "轻工技术与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0823",
+          "title": "交通运输工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0824",
+          "title": "船舶与海洋工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0825",
+          "title": "航空宇航科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0826",
+          "title": "兵器科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0827",
+          "title": "核科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0828",
+          "title": "农业工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0829",
+          "title": "林业工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0830",
+          "title": "环境科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0831",
+          "title": "生物医学工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0832",
+          "title": "食品科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0833",
+          "title": "城乡规划学",
+          "kind": "academic"
+        },
+        {
+          "code": "0835",
+          "title": "软件工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0836",
+          "title": "生物工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0837",
+          "title": "安全科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "0838",
+          "title": "公安技术",
+          "kind": "academic"
+        },
+        {
+          "code": "0839",
+          "title": "网络空间安全",
+          "kind": "academic"
+        },
+        {
+          "code": "0901",
+          "title": "作物学",
+          "kind": "academic"
+        },
+        {
+          "code": "0902",
+          "title": "园艺学",
+          "kind": "academic"
+        },
+        {
+          "code": "0903",
+          "title": "农业资源与环境",
+          "kind": "academic"
+        },
+        {
+          "code": "0904",
+          "title": "植物保护",
+          "kind": "academic"
+        },
+        {
+          "code": "0905",
+          "title": "畜牧学",
+          "kind": "academic"
+        },
+        {
+          "code": "0906",
+          "title": "兽医学",
+          "kind": "academic"
+        },
+        {
+          "code": "0907",
+          "title": "林学",
+          "kind": "academic"
+        },
+        {
+          "code": "0908",
+          "title": "水产",
+          "kind": "academic"
+        },
+        {
+          "code": "0909",
+          "title": "草学",
+          "kind": "academic"
+        },
+        {
+          "code": "0910",
+          "title": "水土保持与荒漠化防治学",
+          "kind": "academic"
+        },
+        {
+          "code": "1001",
+          "title": "基础医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1002",
+          "title": "临床医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1003",
+          "title": "口腔医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1004",
+          "title": "公共卫生与预防医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1005",
+          "title": "中医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1006",
+          "title": "中西医结合",
+          "kind": "academic"
+        },
+        {
+          "code": "1007",
+          "title": "药学",
+          "kind": "academic"
+        },
+        {
+          "code": "1008",
+          "title": "中药学",
+          "kind": "academic"
+        },
+        {
+          "code": "1009",
+          "title": "特种医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1011",
+          "title": "护理学",
+          "kind": "academic"
+        },
+        {
+          "code": "1012",
+          "title": "法医学",
+          "kind": "academic"
+        },
+        {
+          "code": "1101",
+          "title": "军事思想与军事历史",
+          "kind": "academic"
+        },
+        {
+          "code": "1102",
+          "title": "战略学",
+          "kind": "academic"
+        },
+        {
+          "code": "1103",
+          "title": "联合作战学",
+          "kind": "academic"
+        },
+        {
+          "code": "1104",
+          "title": "军兵种作战学",
+          "kind": "academic"
+        },
+        {
+          "code": "1105",
+          "title": "军队指挥学",
+          "kind": "academic"
+        },
+        {
+          "code": "1106",
+          "title": "军队政治工作学",
+          "kind": "academic"
+        },
+        {
+          "code": "1107",
+          "title": "军事后勤学",
+          "kind": "academic"
+        },
+        {
+          "code": "1108",
+          "title": "军事装备学",
+          "kind": "academic"
+        },
+        {
+          "code": "1109",
+          "title": "军事管理学",
+          "kind": "academic"
+        },
+        {
+          "code": "1110",
+          "title": "军事训练学",
+          "kind": "academic"
+        },
+        {
+          "code": "1111",
+          "title": "军事智能",
+          "kind": "academic"
+        },
+        {
+          "code": "1201",
+          "title": "管理科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "1202",
+          "title": "工商管理学",
+          "kind": "academic"
+        },
+        {
+          "code": "1203",
+          "title": "农林经济管理",
+          "kind": "academic"
+        },
+        {
+          "code": "1204",
+          "title": "公共管理学",
+          "kind": "academic"
+        },
+        {
+          "code": "1205",
+          "title": "信息资源管理",
+          "kind": "academic"
+        },
+        {
+          "code": "1301",
+          "title": "艺术学",
+          "kind": "academic"
+        },
+        {
+          "code": "1401",
+          "title": "集成电路科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "1402",
+          "title": "国家安全学",
+          "kind": "academic"
+        },
+        {
+          "code": "1403",
+          "title": "设计学",
+          "kind": "academic"
+        },
+        {
+          "code": "1404",
+          "title": "遥感科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "1405",
+          "title": "智能科学与技术",
+          "kind": "academic"
+        },
+        {
+          "code": "1406",
+          "title": "纳米科学与工程",
+          "kind": "academic"
+        },
+        {
+          "code": "1407",
+          "title": "区域国别学",
+          "kind": "academic"
+        },
+        {
+          "code": "0151",
+          "title": "应用伦理",
+          "kind": "professional"
+        },
+        {
+          "code": "0251",
+          "title": "金融",
+          "kind": "professional"
+        },
+        {
+          "code": "0252",
+          "title": "应用统计",
+          "kind": "professional"
+        },
+        {
+          "code": "0253",
+          "title": "税务",
+          "kind": "professional"
+        },
+        {
+          "code": "0254",
+          "title": "国际商务",
+          "kind": "professional"
+        },
+        {
+          "code": "0255",
+          "title": "保险",
+          "kind": "professional"
+        },
+        {
+          "code": "0256",
+          "title": "资产评估",
+          "kind": "professional"
+        },
+        {
+          "code": "0258",
+          "title": "数字经济",
+          "kind": "professional"
+        },
+        {
+          "code": "0351",
+          "title": "法律",
+          "kind": "professional"
+        },
+        {
+          "code": "0352",
+          "title": "社会工作",
+          "kind": "professional"
+        },
+        {
+          "code": "0353",
+          "title": "警务",
+          "kind": "professional"
+        },
+        {
+          "code": "0354",
+          "title": "知识产权",
+          "kind": "professional"
+        },
+        {
+          "code": "0355",
+          "title": "国际事务",
+          "kind": "professional"
+        },
+        {
+          "code": "0451",
+          "title": "教育",
+          "kind": "professional"
+        },
+        {
+          "code": "0452",
+          "title": "体育",
+          "kind": "professional"
+        },
+        {
+          "code": "0453",
+          "title": "国际中文教育",
+          "kind": "professional"
+        },
+        {
+          "code": "0454",
+          "title": "应用心理",
+          "kind": "professional"
+        },
+        {
+          "code": "0551",
+          "title": "翻译",
+          "kind": "professional"
+        },
+        {
+          "code": "0552",
+          "title": "新闻与传播",
+          "kind": "professional"
+        },
+        {
+          "code": "0553",
+          "title": "出版",
+          "kind": "professional"
+        },
+        {
+          "code": "0651",
+          "title": "博物馆",
+          "kind": "professional"
+        },
+        {
+          "code": "0751",
+          "title": "气象",
+          "kind": "professional"
+        },
+        {
+          "code": "0851",
+          "title": "建筑",
+          "kind": "professional"
+        },
+        {
+          "code": "0853",
+          "title": "城乡规划",
+          "kind": "professional"
+        },
+        {
+          "code": "0854",
+          "title": "电子信息",
+          "kind": "professional"
+        },
+        {
+          "code": "0855",
+          "title": "机械",
+          "kind": "professional"
+        },
+        {
+          "code": "0856",
+          "title": "材料与化工",
+          "kind": "professional"
+        },
+        {
+          "code": "0857",
+          "title": "资源与环境",
+          "kind": "professional"
+        },
+        {
+          "code": "0858",
+          "title": "能源动力",
+          "kind": "professional"
+        },
+        {
+          "code": "0859",
+          "title": "土木水利",
+          "kind": "professional"
+        },
+        {
+          "code": "0860",
+          "title": "生物与医药",
+          "kind": "professional"
+        },
+        {
+          "code": "0861",
+          "title": "交通运输",
+          "kind": "professional"
+        },
+        {
+          "code": "0862",
+          "title": "风景园林",
+          "kind": "professional"
+        },
+        {
+          "code": "0951",
+          "title": "农业",
+          "kind": "professional"
+        },
+        {
+          "code": "0952",
+          "title": "兽医",
+          "kind": "professional"
+        },
+        {
+          "code": "0954",
+          "title": "林业",
+          "kind": "professional"
+        },
+        {
+          "code": "0955",
+          "title": "食品与营养",
+          "kind": "professional"
+        },
+        {
+          "code": "1051",
+          "title": "临床医学",
+          "kind": "professional"
+        },
+        {
+          "code": "1052",
+          "title": "口腔医学",
+          "kind": "professional"
+        },
+        {
+          "code": "1053",
+          "title": "公共卫生",
+          "kind": "professional"
+        },
+        {
+          "code": "1054",
+          "title": "护理",
+          "kind": "professional"
+        },
+        {
+          "code": "1055",
+          "title": "药学",
+          "kind": "professional"
+        },
+        {
+          "code": "1056",
+          "title": "中药",
+          "kind": "professional"
+        },
+        {
+          "code": "1057",
+          "title": "中医",
+          "kind": "professional"
+        },
+        {
+          "code": "1058",
+          "title": "医学技术",
+          "kind": "professional"
+        },
+        {
+          "code": "1059",
+          "title": "针灸",
+          "kind": "professional"
+        },
+        {
+          "code": "1152",
+          "title": "联合作战指挥",
+          "kind": "professional"
+        },
+        {
+          "code": "1153",
+          "title": "军兵种作战指挥",
+          "kind": "professional"
+        },
+        {
+          "code": "1154",
+          "title": "作战指挥保障",
+          "kind": "professional"
+        },
+        {
+          "code": "1155",
+          "title": "战时政治工作",
+          "kind": "professional"
+        },
+        {
+          "code": "1156",
+          "title": "后勤与装备保障",
+          "kind": "professional"
+        },
+        {
+          "code": "1157",
+          "title": "军事训练与管理",
+          "kind": "professional"
+        },
+        {
+          "code": "1251",
+          "title": "工商管理",
+          "kind": "professional"
+        },
+        {
+          "code": "1252",
+          "title": "公共管理",
+          "kind": "professional"
+        },
+        {
+          "code": "1253",
+          "title": "会计",
+          "kind": "professional"
+        },
+        {
+          "code": "1254",
+          "title": "旅游管理",
+          "kind": "professional"
+        },
+        {
+          "code": "1255",
+          "title": "图书情报",
+          "kind": "professional"
+        },
+        {
+          "code": "1256",
+          "title": "工程管理",
+          "kind": "professional"
+        },
+        {
+          "code": "1257",
+          "title": "审计",
+          "kind": "professional"
+        },
+        {
+          "code": "1352",
+          "title": "音乐",
+          "kind": "professional"
+        },
+        {
+          "code": "1353",
+          "title": "舞蹈",
+          "kind": "professional"
+        },
+        {
+          "code": "1354",
+          "title": "戏剧与影视",
+          "kind": "professional"
+        },
+        {
+          "code": "1355",
+          "title": "戏曲与曲艺",
+          "kind": "professional"
+        },
+        {
+          "code": "1356",
+          "title": "美术与书法",
+          "kind": "professional"
+        },
+        {
+          "code": "1357",
+          "title": "设计",
+          "kind": "professional"
+        },
+        {
+          "code": "1451",
+          "title": "文物",
+          "kind": "professional"
+        },
+        {
+          "code": "1452",
+          "title": "密码",
+          "kind": "professional"
+        }
+      ],
+      "accessed": "2026-11-16"
+    }
+  ]
+}

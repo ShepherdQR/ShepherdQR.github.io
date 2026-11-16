@@ -1,0 +1,2853 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-16",
+  "mappings": [
+    {
+      "standard": "ford2015",
+      "code": "1.1",
+      "nodes": [
+        "math"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.2",
+      "nodes": [
+        "computing",
+        "information"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.3",
+      "nodes": [
+        "physics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.4",
+      "nodes": [
+        "chemistry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.5",
+      "nodes": [
+        "earth",
+        "environment"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.6",
+      "nodes": [
+        "life"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "1.7",
+      "nodes": [
+        "environment.crossdisciplinary",
+        "physics",
+        "life",
+        "earth"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.1",
+      "nodes": [
+        "built.civil",
+        "built.water"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.2",
+      "nodes": [
+        "engineering.electrical",
+        "engineering.communication",
+        "computing.hardware"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.3",
+      "nodes": [
+        "engineering.mechanical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.4",
+      "nodes": [
+        "chemistry.chemical-engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.5",
+      "nodes": [
+        "chemistry.materials"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.6",
+      "nodes": [
+        "health.technology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.7",
+      "nodes": [
+        "environment.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.8",
+      "nodes": [
+        "environment.restoration",
+        "life.biotechnology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.9",
+      "nodes": [
+        "engineering.biotechnology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.10",
+      "nodes": [
+        "chemistry.nano"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "2.11",
+      "nodes": [
+        "engineering.general"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "3.1",
+      "nodes": [
+        "health.basic"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "3.2",
+      "nodes": [
+        "health.clinical",
+        "health.dental"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "3.3",
+      "nodes": [
+        "health.public",
+        "health.nursing",
+        "health.rehabilitation",
+        "health.nutrition"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "3.4",
+      "nodes": [
+        "health.technology",
+        "life.biotechnology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "3.5",
+      "nodes": [
+        "health.traditional",
+        "health.care"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "4.1",
+      "nodes": [
+        "agriculture.crops",
+        "agriculture.forestry",
+        "agriculture.fisheries"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "4.2",
+      "nodes": [
+        "agriculture.animals"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "4.3",
+      "nodes": [
+        "agriculture.veterinary"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "4.4",
+      "nodes": [
+        "agriculture.biotechnology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "4.5",
+      "nodes": [
+        "agriculture.soil",
+        "agriculture.protection",
+        "agriculture.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.1",
+      "nodes": [
+        "mind"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.2",
+      "nodes": [
+        "economics",
+        "management"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.3",
+      "nodes": [
+        "education"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.4",
+      "nodes": [
+        "society.sociology",
+        "society.anthropology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.5",
+      "nodes": [
+        "law"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.6",
+      "nodes": [
+        "politics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.7",
+      "nodes": [
+        "earth.human"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.8",
+      "nodes": [
+        "information.media"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "5.9",
+      "nodes": [
+        "society.crossdisciplinary",
+        "society.population",
+        "society.gender"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "6.1",
+      "nodes": [
+        "history"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "6.2",
+      "nodes": [
+        "language",
+        "literature"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "6.3",
+      "nodes": [
+        "philosophy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "6.4",
+      "nodes": [
+        "arts"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "ford2015",
+      "code": "6.5",
+      "nodes": [
+        "information.digital",
+        "society.culture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "宽泛残余类的多个导航落点，并非学科等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0011",
+      "nodes": [
+        "education.literacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0021",
+      "nodes": [
+        "education.literacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0031",
+      "nodes": [
+        "practice.personal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0111",
+      "nodes": [
+        "education.theory"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0112",
+      "nodes": [
+        "education.early",
+        "education.teaching"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0113",
+      "nodes": [
+        "education.teaching"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0114",
+      "nodes": [
+        "education.teaching"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0211",
+      "nodes": [
+        "arts.film",
+        "information.media"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0212",
+      "nodes": [
+        "arts.design",
+        "built.architecture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0213",
+      "nodes": [
+        "arts.visual"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0214",
+      "nodes": [
+        "practice.craft"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0215",
+      "nodes": [
+        "arts.music",
+        "arts.performance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0221",
+      "nodes": [
+        "philosophy.religion"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0222",
+      "nodes": [
+        "history.world",
+        "history.archaeology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0223",
+      "nodes": [
+        "philosophy.metaphysics",
+        "philosophy.epistemology",
+        "philosophy.ethics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0231",
+      "nodes": [
+        "language.translation"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0232",
+      "nodes": [
+        "literature",
+        "language.linguistics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0311",
+      "nodes": [
+        "economics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0312",
+      "nodes": [
+        "politics.theory",
+        "politics.institutions"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0313",
+      "nodes": [
+        "mind.psychology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0314",
+      "nodes": [
+        "society.sociology",
+        "society.culture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0321",
+      "nodes": [
+        "information.media"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0322",
+      "nodes": [
+        "information.library",
+        "information.archives"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0411",
+      "nodes": [
+        "management.accounting",
+        "economics.fiscal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0412",
+      "nodes": [
+        "economics.finance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0413",
+      "nodes": [
+        "management.business",
+        "management.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0414",
+      "nodes": [
+        "management.marketing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0415",
+      "nodes": [
+        "management.operations",
+        "practice.personal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0416",
+      "nodes": [
+        "management.marketing",
+        "economics.trade"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0417",
+      "nodes": [
+        "practice.work"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0421",
+      "nodes": [
+        "law"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0511",
+      "nodes": [
+        "life"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0512",
+      "nodes": [
+        "life.biochemistry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0521",
+      "nodes": [
+        "environment.pollution",
+        "environment.ecology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0522",
+      "nodes": [
+        "environment.biodiversity"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0531",
+      "nodes": [
+        "chemistry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0532",
+      "nodes": [
+        "earth"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0533",
+      "nodes": [
+        "physics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0541",
+      "nodes": [
+        "math"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0542",
+      "nodes": [
+        "math.probability"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0611",
+      "nodes": [
+        "practice.digital"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0612",
+      "nodes": [
+        "computing.data",
+        "computing.networks"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0613",
+      "nodes": [
+        "computing.software"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0711",
+      "nodes": [
+        "chemistry.chemical-engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0712",
+      "nodes": [
+        "environment.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0713",
+      "nodes": [
+        "energy.power",
+        "engineering.electrical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0714",
+      "nodes": [
+        "engineering.electrical",
+        "engineering.control"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0715",
+      "nodes": [
+        "engineering.mechanical",
+        "energy.metallurgy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0716",
+      "nodes": [
+        "transport.land",
+        "transport.marine",
+        "transport.aerospace"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0721",
+      "nodes": [
+        "agriculture.food"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0722",
+      "nodes": [
+        "chemistry.materials",
+        "engineering.textiles"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0723",
+      "nodes": [
+        "engineering.textiles"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0724",
+      "nodes": [
+        "energy.mining"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0731",
+      "nodes": [
+        "built.architecture",
+        "built.urban"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0732",
+      "nodes": [
+        "built.civil"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0811",
+      "nodes": [
+        "agriculture.crops",
+        "agriculture.animals"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0812",
+      "nodes": [
+        "agriculture.crops"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0821",
+      "nodes": [
+        "agriculture.forestry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0831",
+      "nodes": [
+        "agriculture.fisheries"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0841",
+      "nodes": [
+        "agriculture.veterinary"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0911",
+      "nodes": [
+        "health.dental"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0912",
+      "nodes": [
+        "health.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0913",
+      "nodes": [
+        "health.nursing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0914",
+      "nodes": [
+        "health.technology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0915",
+      "nodes": [
+        "health.rehabilitation"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0916",
+      "nodes": [
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0917",
+      "nodes": [
+        "health.traditional"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0921",
+      "nodes": [
+        "health.care",
+        "practice.community"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0922",
+      "nodes": [
+        "practice.community"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "0923",
+      "nodes": [
+        "society.welfare",
+        "mind.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1011",
+      "nodes": [
+        "practice.domestic"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1012",
+      "nodes": [
+        "practice.beauty"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1013",
+      "nodes": [
+        "practice.hospitality"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1014",
+      "nodes": [
+        "practice.sport"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1015",
+      "nodes": [
+        "practice.travel"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1021",
+      "nodes": [
+        "health.public",
+        "environment.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1022",
+      "nodes": [
+        "security.occupational"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1031",
+      "nodes": [
+        "security.military",
+        "security.defence"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1032",
+      "nodes": [
+        "security.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "isced2013",
+      "code": "1041",
+      "nodes": [
+        "transport.services"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0101",
+      "nodes": [
+        "philosophy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0201",
+      "nodes": [
+        "economics.theory"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0202",
+      "nodes": [
+        "economics.applied"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0301",
+      "nodes": [
+        "law"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0302",
+      "nodes": [
+        "politics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0303",
+      "nodes": [
+        "society.sociology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0304",
+      "nodes": [
+        "society.anthropology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0305",
+      "nodes": [
+        "politics.marxism",
+        "philosophy.traditions"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0306",
+      "nodes": [
+        "security.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0307",
+      "nodes": [
+        "politics.party",
+        "history.china"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0308",
+      "nodes": [
+        "law.governance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0401",
+      "nodes": [
+        "education"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0402",
+      "nodes": [
+        "mind.psychology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0403",
+      "nodes": [
+        "practice.sport"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0501",
+      "nodes": [
+        "language.linguistics",
+        "literature"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0502",
+      "nodes": [
+        "language.linguistics",
+        "language.translation",
+        "literature"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0503",
+      "nodes": [
+        "information.media"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0601",
+      "nodes": [
+        "history.archaeology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0602",
+      "nodes": [
+        "history.china"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0603",
+      "nodes": [
+        "history.world"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0701",
+      "nodes": [
+        "math"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0702",
+      "nodes": [
+        "physics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0703",
+      "nodes": [
+        "chemistry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0704",
+      "nodes": [
+        "physics.astronomy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0705",
+      "nodes": [
+        "earth.geography",
+        "earth.human"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0706",
+      "nodes": [
+        "earth.climate"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0707",
+      "nodes": [
+        "earth.ocean"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0708",
+      "nodes": [
+        "earth.geology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0709",
+      "nodes": [
+        "earth.geology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0710",
+      "nodes": [
+        "life"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0711",
+      "nodes": [
+        "systems"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0712",
+      "nodes": [
+        "history.science"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0713",
+      "nodes": [
+        "environment.ecology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0714",
+      "nodes": [
+        "math.probability"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0801",
+      "nodes": [
+        "physics.mechanics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0802",
+      "nodes": [
+        "engineering.mechanical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0803",
+      "nodes": [
+        "physics.electromagnetism",
+        "engineering.instruments"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0804",
+      "nodes": [
+        "engineering.instruments"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0805",
+      "nodes": [
+        "chemistry.materials"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0806",
+      "nodes": [
+        "energy.metallurgy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0807",
+      "nodes": [
+        "energy.thermal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0808",
+      "nodes": [
+        "engineering.electrical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0809",
+      "nodes": [
+        "engineering.electrical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0810",
+      "nodes": [
+        "engineering.communication"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0811",
+      "nodes": [
+        "engineering.control",
+        "systems.control"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0812",
+      "nodes": [
+        "computing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0813",
+      "nodes": [
+        "built.architecture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0814",
+      "nodes": [
+        "built.civil"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0815",
+      "nodes": [
+        "built.water"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0816",
+      "nodes": [
+        "earth.mapping"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0817",
+      "nodes": [
+        "chemistry.chemical-engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0818",
+      "nodes": [
+        "earth.resources"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0819",
+      "nodes": [
+        "energy.mining"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0820",
+      "nodes": [
+        "energy.petroleum"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0821",
+      "nodes": [
+        "engineering.textiles"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0822",
+      "nodes": [
+        "engineering.textiles"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0823",
+      "nodes": [
+        "transport.logistics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0824",
+      "nodes": [
+        "transport.marine"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0825",
+      "nodes": [
+        "transport.aerospace"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0826",
+      "nodes": [
+        "security.defence"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0827",
+      "nodes": [
+        "energy.nuclear"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0828",
+      "nodes": [
+        "agriculture.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0829",
+      "nodes": [
+        "agriculture.engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0830",
+      "nodes": [
+        "environment"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0831",
+      "nodes": [
+        "health.technology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0832",
+      "nodes": [
+        "agriculture.food"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0833",
+      "nodes": [
+        "built.urban"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0835",
+      "nodes": [
+        "computing.software"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0836",
+      "nodes": [
+        "life.biotechnology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0837",
+      "nodes": [
+        "security.occupational"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0838",
+      "nodes": [
+        "security.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0839",
+      "nodes": [
+        "computing.security"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0901",
+      "nodes": [
+        "agriculture.crops"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0902",
+      "nodes": [
+        "agriculture.crops"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0903",
+      "nodes": [
+        "agriculture.soil"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0904",
+      "nodes": [
+        "agriculture.protection"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0905",
+      "nodes": [
+        "agriculture.animals"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0906",
+      "nodes": [
+        "agriculture.veterinary"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0907",
+      "nodes": [
+        "agriculture.forestry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0908",
+      "nodes": [
+        "agriculture.fisheries"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0909",
+      "nodes": [
+        "agriculture.forestry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0910",
+      "nodes": [
+        "agriculture.soil",
+        "environment.restoration"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1001",
+      "nodes": [
+        "health.basic"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1002",
+      "nodes": [
+        "health.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1003",
+      "nodes": [
+        "health.dental"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1004",
+      "nodes": [
+        "health.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1005",
+      "nodes": [
+        "health.traditional"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1006",
+      "nodes": [
+        "health.traditional",
+        "health.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1007",
+      "nodes": [
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1008",
+      "nodes": [
+        "health.traditional",
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1009",
+      "nodes": [
+        "health.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1011",
+      "nodes": [
+        "health.nursing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1012",
+      "nodes": [
+        "health.basic",
+        "law.criminal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1101",
+      "nodes": [
+        "security.military",
+        "history.world"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1102",
+      "nodes": [
+        "security.military"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1103",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1104",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1105",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1106",
+      "nodes": [
+        "security.operations",
+        "politics.institutions"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1107",
+      "nodes": [
+        "security.defence",
+        "transport.logistics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1108",
+      "nodes": [
+        "security.defence"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1109",
+      "nodes": [
+        "security.operations",
+        "management.theory"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1110",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1111",
+      "nodes": [
+        "security.operations",
+        "ai"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1201",
+      "nodes": [
+        "management.theory"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1202",
+      "nodes": [
+        "management.business"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1203",
+      "nodes": [
+        "management.land",
+        "economics.applied"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1204",
+      "nodes": [
+        "management.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1205",
+      "nodes": [
+        "information"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1301",
+      "nodes": [
+        "arts"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1401",
+      "nodes": [
+        "engineering.integrated"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1402",
+      "nodes": [
+        "security.national"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1403",
+      "nodes": [
+        "arts.design"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1404",
+      "nodes": [
+        "earth.mapping"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1405",
+      "nodes": [
+        "ai"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1406",
+      "nodes": [
+        "chemistry.nano"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1407",
+      "nodes": [
+        "society.culture",
+        "politics.international"
+      ],
+      "relation": "navigation-coverage",
+      "note": "主题导航归属；不主张与来源分类严格等价。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0151",
+      "nodes": [
+        "philosophy.ethics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0251",
+      "nodes": [
+        "economics.finance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0252",
+      "nodes": [
+        "math.probability"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0253",
+      "nodes": [
+        "economics.fiscal"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0254",
+      "nodes": [
+        "economics.trade"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0255",
+      "nodes": [
+        "economics.finance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0256",
+      "nodes": [
+        "management.accounting",
+        "economics.finance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0258",
+      "nodes": [
+        "economics.applied",
+        "computing.data"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0351",
+      "nodes": [
+        "law"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0352",
+      "nodes": [
+        "society.welfare"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0353",
+      "nodes": [
+        "security.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0354",
+      "nodes": [
+        "law.intellectual"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0355",
+      "nodes": [
+        "politics.international"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0451",
+      "nodes": [
+        "education"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0452",
+      "nodes": [
+        "practice.sport"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0453",
+      "nodes": [
+        "language.translation",
+        "education.teaching"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0454",
+      "nodes": [
+        "mind.psychology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0551",
+      "nodes": [
+        "language.translation"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0552",
+      "nodes": [
+        "information.media"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0553",
+      "nodes": [
+        "information.publishing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0651",
+      "nodes": [
+        "information.museums",
+        "history.archaeology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0751",
+      "nodes": [
+        "earth.climate"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0851",
+      "nodes": [
+        "built.architecture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0853",
+      "nodes": [
+        "built.urban"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0854",
+      "nodes": [
+        "engineering.electrical",
+        "engineering.communication",
+        "computing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0855",
+      "nodes": [
+        "engineering.mechanical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0856",
+      "nodes": [
+        "chemistry.materials",
+        "chemistry.chemical-engineering"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0857",
+      "nodes": [
+        "earth.resources",
+        "environment"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0858",
+      "nodes": [
+        "energy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0859",
+      "nodes": [
+        "built.civil",
+        "built.water"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0860",
+      "nodes": [
+        "life.biotechnology",
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0861",
+      "nodes": [
+        "transport"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0862",
+      "nodes": [
+        "built.landscape"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0951",
+      "nodes": [
+        "agriculture"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0952",
+      "nodes": [
+        "agriculture.veterinary"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0954",
+      "nodes": [
+        "agriculture.forestry"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "0955",
+      "nodes": [
+        "agriculture.food",
+        "health.nutrition"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1051",
+      "nodes": [
+        "health.clinical"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1052",
+      "nodes": [
+        "health.dental"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1053",
+      "nodes": [
+        "health.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1054",
+      "nodes": [
+        "health.nursing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1055",
+      "nodes": [
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1056",
+      "nodes": [
+        "health.traditional",
+        "health.pharmacy"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1057",
+      "nodes": [
+        "health.traditional"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1058",
+      "nodes": [
+        "health.technology"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1059",
+      "nodes": [
+        "health.traditional"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1152",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1153",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1154",
+      "nodes": [
+        "security.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1155",
+      "nodes": [
+        "security.operations",
+        "politics.institutions"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1156",
+      "nodes": [
+        "security.defence",
+        "transport.logistics"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1157",
+      "nodes": [
+        "security.operations",
+        "management.theory"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1251",
+      "nodes": [
+        "management.business"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1252",
+      "nodes": [
+        "management.public"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1253",
+      "nodes": [
+        "management.accounting"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1254",
+      "nodes": [
+        "practice.travel",
+        "management.business"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1255",
+      "nodes": [
+        "information.library"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1256",
+      "nodes": [
+        "management.operations"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1257",
+      "nodes": [
+        "management.accounting"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1352",
+      "nodes": [
+        "arts.music"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1353",
+      "nodes": [
+        "arts.performance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1354",
+      "nodes": [
+        "arts.performance",
+        "arts.film",
+        "literature.drama"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1355",
+      "nodes": [
+        "arts.performance"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1356",
+      "nodes": [
+        "arts.visual",
+        "language.writing"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1357",
+      "nodes": [
+        "arts.design"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1451",
+      "nodes": [
+        "history.archaeology",
+        "built.heritage"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    },
+    {
+      "standard": "moe2022",
+      "code": "1452",
+      "nodes": [
+        "computing.security"
+      ],
+      "relation": "navigation-coverage",
+      "note": "专业学位类别的主题导航归属；不是学位授予或能力认定。"
+    }
+  ]
+}

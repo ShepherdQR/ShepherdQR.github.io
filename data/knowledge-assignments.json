@@ -1,0 +1,690 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-16",
+  "basis": "编辑依据公开标题、摘要与必要的正文作主题关联；不是全文知识抽取或对观点的背书。",
+  "items": {
+    "Books:0001": [
+      "education.reading"
+    ],
+    "Books:0002": [
+      "computing.software"
+    ],
+    "Books:0004": [
+      "computing.software"
+    ],
+    "Books:0007": [
+      "computing.software"
+    ],
+    "Books:0037": [
+      "computing.software"
+    ],
+    "Books:0048": [
+      "computing.software"
+    ],
+    "Books:0005": [
+      "computing.algorithms"
+    ],
+    "Books:0011": [
+      "computing.algorithms"
+    ],
+    "Books:0003": [
+      "literature.theory",
+      "philosophy.aesthetics"
+    ],
+    "Books:0006": [
+      "philosophy.religion"
+    ],
+    "Books:0071": [
+      "philosophy.religion"
+    ],
+    "Books:0078": [
+      "philosophy.religion"
+    ],
+    "Books:0008": [
+      "computing.hardware",
+      "mind.neuroscience"
+    ],
+    "Books:0009": [
+      "philosophy.metaphysics",
+      "mind.consciousness"
+    ],
+    "Books:0010": [
+      "philosophy.epistemology"
+    ],
+    "Books:0016": [
+      "philosophy.epistemology"
+    ],
+    "Books:0025": [
+      "philosophy.epistemology"
+    ],
+    "Books:0029": [
+      "philosophy.epistemology"
+    ],
+    "Books:0054": [
+      "philosophy.epistemology"
+    ],
+    "Books:0077": [
+      "philosophy.epistemology"
+    ],
+    "Books:0018": [
+      "philosophy.traditions",
+      "history.civilization"
+    ],
+    "Books:0021": [
+      "math.algebra"
+    ],
+    "Books:0026": [
+      "physics",
+      "history.science"
+    ],
+    "Books:0027": [
+      "physics",
+      "history.science"
+    ],
+    "Books:0030": [
+      "philosophy.epistemology",
+      "education.methods"
+    ],
+    "Books:0031": [
+      "education.theory"
+    ],
+    "Books:0032": [
+      "education.theory"
+    ],
+    "Books:0039": [
+      "philosophy.traditions"
+    ],
+    "Books:0056": [
+      "philosophy.traditions"
+    ],
+    "Books:0062": [
+      "philosophy.traditions"
+    ],
+    "Books:0064": [
+      "philosophy.traditions"
+    ],
+    "Books:0073": [
+      "philosophy.traditions"
+    ],
+    "Books:0075": [
+      "philosophy.traditions"
+    ],
+    "Books:0118": [
+      "philosophy.traditions"
+    ],
+    "Books:0120": [
+      "philosophy.traditions"
+    ],
+    "Books:0150": [
+      "philosophy.traditions"
+    ],
+    "Books:0046": [
+      "literature.essays",
+      "philosophy.ethics"
+    ],
+    "Books:0049": [
+      "math.foundations",
+      "philosophy.logic"
+    ],
+    "Books:0055": [
+      "math",
+      "history.science"
+    ],
+    "Books:0094": [
+      "math",
+      "history.science"
+    ],
+    "Books:0099": [
+      "math",
+      "history.science"
+    ],
+    "Books:0096": [
+      "society.anthropology",
+      "society.sociology"
+    ],
+    "Books:0098": [
+      "mind.clinical",
+      "philosophy.ethics"
+    ],
+    "Books:0107": [
+      "politics.theory"
+    ],
+    "Books:0115": [
+      "politics.theory"
+    ],
+    "Books:0111": [
+      "law.constitutional",
+      "information.publishing"
+    ],
+    "Books:0116": [
+      "economics.history",
+      "philosophy.ethics"
+    ],
+    "Books:0121": [
+      "computing",
+      "history.science"
+    ],
+    "Books:0123": [
+      "transport.aerospace",
+      "history.science"
+    ],
+    "Books:0126": [
+      "transport.aerospace",
+      "history.science"
+    ],
+    "Books:0133": [
+      "transport.aerospace",
+      "history.science"
+    ],
+    "Books:0124": [
+      "management.theory"
+    ],
+    "Books:0132": [
+      "politics.marxism",
+      "philosophy.traditions"
+    ],
+    "Books:0154": [
+      "politics.marxism",
+      "philosophy.traditions"
+    ],
+    "Books:0155": [
+      "politics.marxism",
+      "philosophy.traditions"
+    ],
+    "Books:0134": [
+      "economics.history",
+      "history.china"
+    ],
+    "Books:0136": [
+      "built.landscape",
+      "arts.design"
+    ],
+    "Books:0137": [
+      "history.civilization",
+      "earth.human"
+    ],
+    "Books:0139": [
+      "politics.party",
+      "history.china"
+    ],
+    "Books:0158": [
+      "politics.party",
+      "history.china"
+    ],
+    "Books:0159": [
+      "politics.party",
+      "history.china"
+    ],
+    "Books:0140": [
+      "ai",
+      "management.business"
+    ],
+    "Books:0142": [
+      "literature.theory"
+    ],
+    "Books:0160": [
+      "literature.theory"
+    ],
+    "Books:0146": [
+      "history.science",
+      "engineering.instruments"
+    ],
+    "Books:0147": [
+      "literature.poetry",
+      "history.civilization"
+    ],
+    "Books:0148": [
+      "language.rhetoric",
+      "management.public"
+    ],
+    "Books:0151": [
+      "history.world",
+      "security.military"
+    ],
+    "Books:0152": [
+      "history.science",
+      "education.reading"
+    ],
+    "Books:0153": [
+      "history.science",
+      "chemistry"
+    ],
+    "Books:0156": [
+      "health.traditional",
+      "history.science"
+    ],
+    "Books:0012": [
+      "literature.poetry"
+    ],
+    "Books:0013": [
+      "literature.poetry"
+    ],
+    "Books:0014": [
+      "literature.poetry"
+    ],
+    "Books:0015": [
+      "literature.poetry"
+    ],
+    "Books:0017": [
+      "literature.poetry"
+    ],
+    "Books:0019": [
+      "literature.poetry"
+    ],
+    "Books:0020": [
+      "literature.poetry"
+    ],
+    "Books:0022": [
+      "literature.poetry"
+    ],
+    "Books:0023": [
+      "literature.poetry"
+    ],
+    "Books:0024": [
+      "literature.poetry"
+    ],
+    "Books:0038": [
+      "literature.poetry"
+    ],
+    "Books:0040": [
+      "literature.poetry"
+    ],
+    "Books:0045": [
+      "literature.poetry"
+    ],
+    "Books:0051": [
+      "literature.poetry"
+    ],
+    "Books:0052": [
+      "literature.poetry"
+    ],
+    "Books:0057": [
+      "literature.poetry"
+    ],
+    "Books:0059": [
+      "literature.poetry"
+    ],
+    "Books:0063": [
+      "literature.poetry"
+    ],
+    "Books:0067": [
+      "literature.poetry"
+    ],
+    "Books:0069": [
+      "literature.poetry"
+    ],
+    "Books:0074": [
+      "literature.poetry"
+    ],
+    "Books:0080": [
+      "literature.poetry"
+    ],
+    "Books:0081": [
+      "literature.poetry"
+    ],
+    "Books:0082": [
+      "literature.poetry"
+    ],
+    "Books:0084": [
+      "literature.poetry"
+    ],
+    "Books:0086": [
+      "literature.poetry"
+    ],
+    "Books:0087": [
+      "literature.poetry"
+    ],
+    "Books:0089": [
+      "literature.poetry"
+    ],
+    "Books:0090": [
+      "literature.poetry"
+    ],
+    "Books:0095": [
+      "literature.poetry"
+    ],
+    "Books:0097": [
+      "literature.poetry"
+    ],
+    "Books:0101": [
+      "literature.poetry"
+    ],
+    "Books:0104": [
+      "literature.poetry"
+    ],
+    "Books:0105": [
+      "literature.poetry"
+    ],
+    "Books:0112": [
+      "literature.poetry"
+    ],
+    "Books:0113": [
+      "literature.poetry"
+    ],
+    "Books:0125": [
+      "literature.poetry"
+    ],
+    "Books:0127": [
+      "literature.poetry"
+    ],
+    "Books:0128": [
+      "literature.poetry"
+    ],
+    "Books:0129": [
+      "literature.poetry"
+    ],
+    "Books:0130": [
+      "literature.poetry"
+    ],
+    "Books:0131": [
+      "literature.poetry"
+    ],
+    "Books:0135": [
+      "literature.poetry"
+    ],
+    "Books:0138": [
+      "literature.poetry"
+    ],
+    "Books:0141": [
+      "history.china",
+      "practice.travel"
+    ],
+    "Books:0143": [
+      "literature.poetry"
+    ],
+    "Books:0144": [
+      "literature.poetry"
+    ],
+    "Books:0157": [
+      "literature.poetry"
+    ],
+    "Books:0041": [
+      "literature.essays"
+    ],
+    "Books:0145": [
+      "literature.essays"
+    ],
+    "Books:0149": [
+      "literature.essays"
+    ],
+    "Books:0058": [
+      "literature.drama",
+      "arts.performance"
+    ],
+    "Books:0066": [
+      "literature.drama",
+      "arts.performance"
+    ],
+    "Books:0085": [
+      "literature.drama",
+      "arts.performance"
+    ],
+    "Books:0109": [
+      "literature.drama",
+      "arts.performance"
+    ],
+    "Books:0110": [
+      "literature.drama",
+      "arts.performance"
+    ],
+    "Books:0028": [
+      "literature.fiction"
+    ],
+    "Books:0033": [
+      "literature.fiction"
+    ],
+    "Books:0034": [
+      "literature.fiction"
+    ],
+    "Books:0035": [
+      "literature.fiction"
+    ],
+    "Books:0036": [
+      "literature.fiction"
+    ],
+    "Books:0042": [
+      "literature.fiction"
+    ],
+    "Books:0043": [
+      "literature.fiction"
+    ],
+    "Books:0044": [
+      "literature.fiction"
+    ],
+    "Books:0047": [
+      "literature.fiction"
+    ],
+    "Books:0050": [
+      "literature.fiction"
+    ],
+    "Books:0053": [
+      "literature.fiction"
+    ],
+    "Books:0060": [
+      "literature.fiction"
+    ],
+    "Books:0061": [
+      "literature.fiction"
+    ],
+    "Books:0065": [
+      "literature.fiction"
+    ],
+    "Books:0068": [
+      "literature.fiction"
+    ],
+    "Books:0070": [
+      "literature.fiction"
+    ],
+    "Books:0072": [
+      "literature.fiction"
+    ],
+    "Books:0076": [
+      "literature.fiction"
+    ],
+    "Books:0079": [
+      "literature.fiction"
+    ],
+    "Books:0083": [
+      "literature.fiction"
+    ],
+    "Books:0088": [
+      "literature.fiction"
+    ],
+    "Books:0091": [
+      "literature.fiction"
+    ],
+    "Books:0092": [
+      "literature.fiction"
+    ],
+    "Books:0093": [
+      "literature.fiction"
+    ],
+    "Books:0100": [
+      "literature.fiction"
+    ],
+    "Books:0102": [
+      "literature.fiction"
+    ],
+    "Books:0103": [
+      "literature.fiction"
+    ],
+    "Books:0106": [
+      "literature.fiction"
+    ],
+    "Books:0108": [
+      "literature.fiction"
+    ],
+    "Books:0114": [
+      "literature.fiction"
+    ],
+    "Books:0117": [
+      "literature.fiction"
+    ],
+    "Books:0119": [
+      "literature.fiction"
+    ],
+    "Books:0122": [
+      "literature.fiction"
+    ],
+    "Study:0001": [
+      "computing.interaction"
+    ],
+    "Videos:0001": [
+      "philosophy.aesthetics",
+      "arts.history"
+    ],
+    "Videos:0002": [
+      "arts.performance",
+      "literature.drama"
+    ],
+    "Videos:0003": [
+      "arts.film"
+    ],
+    "Thoughts:0001": [
+      "practice.personal"
+    ],
+    "Thoughts:0002": [
+      "practice.personal"
+    ],
+    "Thoughts:0007": [
+      "practice.personal"
+    ],
+    "Thoughts:0030": [
+      "practice.personal"
+    ],
+    "Thoughts:0039": [
+      "practice.personal"
+    ],
+    "Thoughts:0003": [
+      "literature.essays"
+    ],
+    "Thoughts:0004": [
+      "literature.essays"
+    ],
+    "Thoughts:0005": [
+      "literature.essays"
+    ],
+    "Thoughts:0006": [
+      "literature.poetry"
+    ],
+    "Thoughts:0009": [
+      "literature.poetry"
+    ],
+    "Thoughts:0031": [
+      "literature.poetry"
+    ],
+    "Thoughts:0032": [
+      "literature.poetry"
+    ],
+    "Thoughts:0034": [
+      "literature.essays",
+      "practice.local"
+    ],
+    "Thoughts:0008": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0010": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0021": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0033": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0036": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0038": [
+      "politics.party",
+      "management.public"
+    ],
+    "Thoughts:0011": [
+      "computing.software",
+      "politics.policy"
+    ],
+    "Thoughts:0012": [
+      "philosophy.ethics",
+      "literature.drama"
+    ],
+    "Thoughts:0013": [
+      "ai.language",
+      "ai.agents"
+    ],
+    "Thoughts:0014": [
+      "ai.discovery",
+      "education.methods"
+    ],
+    "Thoughts:0015": [
+      "history.civilization",
+      "philosophy.ethics"
+    ],
+    "Thoughts:0016": [
+      "ai.robotics",
+      "ai.governance"
+    ],
+    "Thoughts:0017": [
+      "computing.software",
+      "ai.agents"
+    ],
+    "Thoughts:0018": [
+      "ai.agents",
+      "ai.governance",
+      "systems.complexity"
+    ],
+    "Thoughts:0028": [
+      "ai.agents",
+      "ai.governance",
+      "systems.complexity"
+    ],
+    "Thoughts:0029": [
+      "ai.agents",
+      "ai.governance",
+      "systems.complexity"
+    ],
+    "Thoughts:0019": [
+      "engineering.mechanical",
+      "ai.robotics"
+    ],
+    "Thoughts:0020": [
+      "math.geometry",
+      "math.foundations"
+    ],
+    "Thoughts:0022": [
+      "math.geometry",
+      "math.foundations"
+    ],
+    "Thoughts:0023": [
+      "education.reading",
+      "philosophy.ethics",
+      "literature.poetry"
+    ],
+    "Thoughts:0024": [
+      "ai.evaluation",
+      "education.methods"
+    ],
+    "Thoughts:0025": [
+      "arts.digital",
+      "ai.evaluation"
+    ],
+    "Thoughts:0026": [
+      "math.analysis"
+    ],
+    "Thoughts:0027": [
+      "math.analysis"
+    ],
+    "Thoughts:0035": [
+      "management.theory",
+      "ai.agents"
+    ],
+    "Thoughts:0037": [
+      "philosophy.epistemology",
+      "education.reading"
+    ]
+  }
+}

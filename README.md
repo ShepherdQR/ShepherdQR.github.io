@@ -41,8 +41,12 @@ Use **外观** in the navigation to select a theme, text size and motion prefere
 **专注阅读** removes the spatial scene and provides a quiet reading surface.
 Settings are device-local and survive navigation. Field/Museum are retired.
 
-The homepage brings selected and recent writing forward. Its document stage
-uses real titles, summaries, images and canonical article links. Atlas offers
+The homepage is an open knowledge atlas: 30 domains, 220 branches and real
+reading/research notes, with drill-down navigation, search and multiple subject
+memberships. It checks navigation coverage against 306 entries from three
+versioned classification inventories, while keeping future fields open through
+recursive branches and stable IDs. See [Knowledge atlas](architecture/knowledge-atlas.md)
+for scope, source evidence, authoring and extension rules. Atlas offers
 spatial browsing, relationship clusters and a complete searchable ledger.
 Books, Thoughts, Study, Videos, Series and Chronicle retain their URLs.
 Evidence and System retain source, revision and public-authority information.
@@ -104,6 +108,11 @@ python scripts/new_note.py Thoughts "文章标题" --open
 ```
 
 Use `--id 0013` only when a specific id is intentionally needed.
+
+For knowledge-map placement, add `knowledge_ids: ["math.geometry"]` (or other
+IDs from `data/knowledge-taxonomy.json`) to the note's front matter. New notes
+without a subject remain visible in the map's unassigned queue; classify them
+before the full publication checks. Do not infer a subject from the Books type.
 
 ### 2. Edit an Existing Note
 

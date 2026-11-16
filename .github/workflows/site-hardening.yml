@@ -36,6 +36,9 @@ jobs:
       - name: Check build-time article durability
         run: python scripts/test_article_durability.py
 
+      - name: Check knowledge coverage and open extension
+        run: python scripts/test_knowledge_atlas.py
+
       - name: Build site
         run: python scripts/build_site.py
 

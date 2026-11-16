@@ -1,0 +1,1409 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.11.16",
+  "reviewed": "2026-11-16",
+  "families": [
+    {
+      "id": "formal",
+      "title": "形式与智能",
+      "en": "FORM & INTELLIGENCE"
+    },
+    {
+      "id": "nature",
+      "title": "自然与宇宙",
+      "en": "NATURE & COSMOS"
+    },
+    {
+      "id": "living",
+      "title": "生命与生活",
+      "en": "LIFE & EXPERIENCE"
+    },
+    {
+      "id": "making",
+      "title": "技术与行动",
+      "en": "TECHNOLOGY & ACTION"
+    },
+    {
+      "id": "society",
+      "title": "社会与制度",
+      "en": "SOCIETY & INSTITUTIONS"
+    },
+    {
+      "id": "humanities",
+      "title": "人文与表达",
+      "en": "HUMANITIES & EXPRESSION"
+    }
+  ],
+  "domains": [
+    {
+      "id": "math",
+      "title": "数学与逻辑",
+      "en": "Mathematics & Logic",
+      "family": "formal",
+      "question": "什么能够被严格地证明？",
+      "description": "从数、结构与空间，到变化、不确定性和推理的边界。",
+      "children": [
+        {
+          "id": "math.foundations",
+          "title": "数学基础与逻辑"
+        },
+        {
+          "id": "math.algebra",
+          "title": "代数与数论"
+        },
+        {
+          "id": "math.geometry",
+          "title": "几何与拓扑"
+        },
+        {
+          "id": "math.analysis",
+          "title": "分析与微分方程"
+        },
+        {
+          "id": "math.probability",
+          "title": "概率与统计"
+        },
+        {
+          "id": "math.discrete",
+          "title": "离散数学与组合"
+        },
+        {
+          "id": "math.applied",
+          "title": "应用数学与运筹"
+        }
+      ],
+      "related": [
+        "systems",
+        "computing",
+        "physics"
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "系统与复杂性",
+      "en": "Systems & Complexity",
+      "family": "formal",
+      "question": "局部的相互作用如何形成整体？",
+      "description": "研究信息、反馈、网络、涌现与跨尺度的系统行为。",
+      "children": [
+        {
+          "id": "systems.theory",
+          "title": "系统理论"
+        },
+        {
+          "id": "systems.information",
+          "title": "信息论"
+        },
+        {
+          "id": "systems.control",
+          "title": "控制与反馈"
+        },
+        {
+          "id": "systems.complexity",
+          "title": "复杂系统与网络"
+        },
+        {
+          "id": "systems.simulation",
+          "title": "建模与仿真"
+        },
+        {
+          "id": "systems.decisions",
+          "title": "决策与博弈"
+        }
+      ],
+      "related": [
+        "math",
+        "ai",
+        "society"
+      ]
+    },
+    {
+      "id": "computing",
+      "title": "计算与软件",
+      "en": "Computing & Software",
+      "family": "formal",
+      "question": "什么可以计算，又怎样可靠地实现？",
+      "description": "从计算边界与算法，到程序、硬件、网络和数据系统。",
+      "children": [
+        {
+          "id": "computing.theory",
+          "title": "计算理论"
+        },
+        {
+          "id": "computing.algorithms",
+          "title": "算法与数据结构"
+        },
+        {
+          "id": "computing.software",
+          "title": "程序设计与软件工程"
+        },
+        {
+          "id": "computing.hardware",
+          "title": "体系结构与计算硬件"
+        },
+        {
+          "id": "computing.networks",
+          "title": "网络与分布式系统"
+        },
+        {
+          "id": "computing.data",
+          "title": "数据库与数据科学"
+        },
+        {
+          "id": "computing.security",
+          "title": "密码与网络安全"
+        },
+        {
+          "id": "computing.interaction",
+          "title": "人机交互与可视化"
+        }
+      ],
+      "related": [
+        "math",
+        "ai",
+        "engineering"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "人工智能",
+      "en": "Artificial Intelligence",
+      "family": "formal",
+      "question": "智能如何学习、推理与行动？",
+      "description": "研究机器智能及其与人类合作、产生知识和接受检验的方式。",
+      "children": [
+        {
+          "id": "ai.foundations",
+          "title": "智能基础与表示"
+        },
+        {
+          "id": "ai.learning",
+          "title": "机器学习"
+        },
+        {
+          "id": "ai.language",
+          "title": "语言与多模态"
+        },
+        {
+          "id": "ai.agents",
+          "title": "智能体与协作"
+        },
+        {
+          "id": "ai.robotics",
+          "title": "机器人与具身智能"
+        },
+        {
+          "id": "ai.discovery",
+          "title": "机器发现与自动证明"
+        },
+        {
+          "id": "ai.evaluation",
+          "title": "评估、解释与可靠性"
+        },
+        {
+          "id": "ai.governance",
+          "title": "智能治理与对齐"
+        }
+      ],
+      "related": [
+        "computing",
+        "mind",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "information",
+      "title": "信息与知识",
+      "en": "Information & Knowledge",
+      "family": "formal",
+      "question": "知识怎样被记录、组织与传递？",
+      "description": "连接文献、档案、新闻、传播、出版与知识组织。",
+      "children": [
+        {
+          "id": "information.library",
+          "title": "图书馆与情报"
+        },
+        {
+          "id": "information.archives",
+          "title": "档案与文献"
+        },
+        {
+          "id": "information.organization",
+          "title": "知识组织与检索"
+        },
+        {
+          "id": "information.media",
+          "title": "新闻与传播"
+        },
+        {
+          "id": "information.publishing",
+          "title": "编辑与出版"
+        },
+        {
+          "id": "information.digital",
+          "title": "数字人文与知识基础设施"
+        },
+        {
+          "id": "information.museums",
+          "title": "博物馆与策展"
+        }
+      ],
+      "related": [
+        "language",
+        "education",
+        "computing"
+      ]
+    },
+    {
+      "id": "physics",
+      "title": "物理与宇宙",
+      "en": "Physics & Cosmos",
+      "family": "nature",
+      "question": "世界遵循怎样的基本规律？",
+      "description": "从物质与运动，到量子、时空、恒星和宇宙的演化。",
+      "children": [
+        {
+          "id": "physics.mechanics",
+          "title": "力学"
+        },
+        {
+          "id": "physics.thermal",
+          "title": "热学与统计物理"
+        },
+        {
+          "id": "physics.electromagnetism",
+          "title": "电磁学与光学"
+        },
+        {
+          "id": "physics.quantum",
+          "title": "量子与原子物理"
+        },
+        {
+          "id": "physics.matter",
+          "title": "凝聚态与材料物理"
+        },
+        {
+          "id": "physics.particles",
+          "title": "粒子与核物理"
+        },
+        {
+          "id": "physics.relativity",
+          "title": "相对论与引力"
+        },
+        {
+          "id": "physics.astronomy",
+          "title": "天文学与宇宙学"
+        }
+      ],
+      "related": [
+        "math",
+        "earth",
+        "chemistry"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "title": "化学与材料",
+      "en": "Chemistry & Materials",
+      "family": "nature",
+      "question": "物质如何组成、转化并获得性质？",
+      "description": "理解分子反应与物质结构，以及材料的设计与制备。",
+      "children": [
+        {
+          "id": "chemistry.physical",
+          "title": "物理化学"
+        },
+        {
+          "id": "chemistry.organic",
+          "title": "有机化学"
+        },
+        {
+          "id": "chemistry.inorganic",
+          "title": "无机化学"
+        },
+        {
+          "id": "chemistry.analytical",
+          "title": "分析化学"
+        },
+        {
+          "id": "chemistry.materials",
+          "title": "材料与高分子"
+        },
+        {
+          "id": "chemistry.nano",
+          "title": "纳米科学"
+        },
+        {
+          "id": "chemistry.chemical-engineering",
+          "title": "化学工程"
+        }
+      ],
+      "related": [
+        "physics",
+        "life",
+        "engineering"
+      ]
+    },
+    {
+      "id": "earth",
+      "title": "地球与空间",
+      "en": "Earth & Geography",
+      "family": "nature",
+      "question": "地球与人类居住的空间如何形成？",
+      "description": "研究岩石、地貌、海洋、大气，以及空间测量与人地关系。",
+      "children": [
+        {
+          "id": "earth.geology",
+          "title": "地质与地球物理"
+        },
+        {
+          "id": "earth.geography",
+          "title": "自然地理"
+        },
+        {
+          "id": "earth.climate",
+          "title": "大气与气候"
+        },
+        {
+          "id": "earth.ocean",
+          "title": "海洋科学"
+        },
+        {
+          "id": "earth.mapping",
+          "title": "测绘与地理信息"
+        },
+        {
+          "id": "earth.human",
+          "title": "人文与经济地理"
+        },
+        {
+          "id": "earth.resources",
+          "title": "地质资源"
+        }
+      ],
+      "related": [
+        "environment",
+        "built",
+        "history"
+      ]
+    },
+    {
+      "id": "environment",
+      "title": "环境与生态",
+      "en": "Environment & Ecology",
+      "family": "nature",
+      "question": "生命与环境如何共同延续？",
+      "description": "研究生态关系、环境变化、保护修复与可持续发展。",
+      "children": [
+        {
+          "id": "environment.ecology",
+          "title": "生态学"
+        },
+        {
+          "id": "environment.biodiversity",
+          "title": "生物多样性与保护"
+        },
+        {
+          "id": "environment.pollution",
+          "title": "污染与环境化学"
+        },
+        {
+          "id": "environment.engineering",
+          "title": "环境工程"
+        },
+        {
+          "id": "environment.restoration",
+          "title": "生态修复与管理"
+        },
+        {
+          "id": "environment.sustainability",
+          "title": "可持续发展"
+        },
+        {
+          "id": "environment.crossdisciplinary",
+          "title": "交叉自然科学"
+        }
+      ],
+      "related": [
+        "life",
+        "earth",
+        "agriculture"
+      ]
+    },
+    {
+      "id": "life",
+      "title": "生命与演化",
+      "en": "Life & Evolution",
+      "family": "nature",
+      "question": "生命如何组织自己并不断演化？",
+      "description": "从分子与细胞，到遗传、发育、生理和生物多样性。",
+      "children": [
+        {
+          "id": "life.molecular",
+          "title": "分子与细胞"
+        },
+        {
+          "id": "life.genetics",
+          "title": "遗传与基因组"
+        },
+        {
+          "id": "life.development",
+          "title": "发育与生理"
+        },
+        {
+          "id": "life.evolution",
+          "title": "演化与系统分类"
+        },
+        {
+          "id": "life.organisms",
+          "title": "动物、植物与微生物"
+        },
+        {
+          "id": "life.biotechnology",
+          "title": "生物技术"
+        },
+        {
+          "id": "life.biochemistry",
+          "title": "生物化学"
+        },
+        {
+          "id": "life.systems",
+          "title": "系统生物学"
+        }
+      ],
+      "related": [
+        "chemistry",
+        "health",
+        "environment"
+      ]
+    },
+    {
+      "id": "health",
+      "title": "医学与健康",
+      "en": "Medicine & Health",
+      "family": "living",
+      "question": "怎样理解疾病、改善健康并提供照护？",
+      "description": "连接医学基础、临床、公共卫生、药物与人的身心健康。",
+      "children": [
+        {
+          "id": "health.basic",
+          "title": "基础医学"
+        },
+        {
+          "id": "health.clinical",
+          "title": "临床医学"
+        },
+        {
+          "id": "health.dental",
+          "title": "口腔医学"
+        },
+        {
+          "id": "health.public",
+          "title": "公共卫生与预防"
+        },
+        {
+          "id": "health.pharmacy",
+          "title": "药学"
+        },
+        {
+          "id": "health.traditional",
+          "title": "传统医学研究"
+        },
+        {
+          "id": "health.nursing",
+          "title": "护理与助产"
+        },
+        {
+          "id": "health.rehabilitation",
+          "title": "康复与治疗"
+        },
+        {
+          "id": "health.technology",
+          "title": "医学技术与生物医学工程"
+        },
+        {
+          "id": "health.nutrition",
+          "title": "营养与健康"
+        },
+        {
+          "id": "health.care",
+          "title": "长期照护"
+        }
+      ],
+      "related": [
+        "life",
+        "mind",
+        "society"
+      ]
+    },
+    {
+      "id": "agriculture",
+      "title": "农林牧渔",
+      "en": "Agriculture & Veterinary Science",
+      "family": "living",
+      "question": "怎样理解并维系食物与生物资源的生产？",
+      "description": "涵盖作物、园艺、土壤、林业、畜牧、水产与兽医。",
+      "children": [
+        {
+          "id": "agriculture.crops",
+          "title": "作物与园艺"
+        },
+        {
+          "id": "agriculture.soil",
+          "title": "农业资源与土壤"
+        },
+        {
+          "id": "agriculture.protection",
+          "title": "植物保护"
+        },
+        {
+          "id": "agriculture.forestry",
+          "title": "林业与草业"
+        },
+        {
+          "id": "agriculture.animals",
+          "title": "畜牧与动物科学"
+        },
+        {
+          "id": "agriculture.veterinary",
+          "title": "兽医学"
+        },
+        {
+          "id": "agriculture.fisheries",
+          "title": "水产与渔业"
+        },
+        {
+          "id": "agriculture.biotechnology",
+          "title": "农业生物技术"
+        },
+        {
+          "id": "agriculture.food",
+          "title": "食品科学与加工"
+        },
+        {
+          "id": "agriculture.engineering",
+          "title": "农业与林业工程"
+        }
+      ],
+      "related": [
+        "life",
+        "environment",
+        "energy"
+      ]
+    },
+    {
+      "id": "mind",
+      "title": "心智与行为",
+      "en": "Mind & Behaviour",
+      "family": "living",
+      "question": "经验、认知与行为如何产生？",
+      "description": "理解感知、学习、情绪、意识和人与环境的互动。",
+      "children": [
+        {
+          "id": "mind.psychology",
+          "title": "心理学"
+        },
+        {
+          "id": "mind.cognition",
+          "title": "认知科学"
+        },
+        {
+          "id": "mind.neuroscience",
+          "title": "神经科学"
+        },
+        {
+          "id": "mind.consciousness",
+          "title": "意识与心灵"
+        },
+        {
+          "id": "mind.development",
+          "title": "发展与社会心理"
+        },
+        {
+          "id": "mind.clinical",
+          "title": "临床与咨询心理"
+        }
+      ],
+      "related": [
+        "life",
+        "ai",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "education",
+      "title": "教育与研究",
+      "en": "Education & Inquiry",
+      "family": "living",
+      "question": "我们怎样学习，又怎样可靠地求知？",
+      "description": "从教学与学习，到研究方法、科学制度和个人阅读实践。",
+      "children": [
+        {
+          "id": "education.theory",
+          "title": "教育理论与学习科学"
+        },
+        {
+          "id": "education.teaching",
+          "title": "教师教育与教学"
+        },
+        {
+          "id": "education.early",
+          "title": "学前教育"
+        },
+        {
+          "id": "education.special",
+          "title": "特殊与融合教育"
+        },
+        {
+          "id": "education.literacy",
+          "title": "基础教育与读写素养"
+        },
+        {
+          "id": "education.methods",
+          "title": "研究方法与科学学"
+        },
+        {
+          "id": "education.reading",
+          "title": "阅读与个人研究"
+        },
+        {
+          "id": "education.technology",
+          "title": "教育技术"
+        }
+      ],
+      "related": [
+        "mind",
+        "information",
+        "society"
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "生活与技艺",
+      "en": "Life, Craft & Services",
+      "family": "living",
+      "question": "知识怎样在日常实践中成为能力？",
+      "description": "容纳身体技艺、手工经验、服务、休闲与地方性知识。",
+      "children": [
+        {
+          "id": "practice.craft",
+          "title": "工艺与修复"
+        },
+        {
+          "id": "practice.domestic",
+          "title": "家政与个人生活"
+        },
+        {
+          "id": "practice.hospitality",
+          "title": "餐饮与住宿"
+        },
+        {
+          "id": "practice.beauty",
+          "title": "美容与个人服务"
+        },
+        {
+          "id": "practice.sport",
+          "title": "体育与身体技艺"
+        },
+        {
+          "id": "practice.travel",
+          "title": "旅游与休闲"
+        },
+        {
+          "id": "practice.community",
+          "title": "社区、儿童与家庭服务"
+        },
+        {
+          "id": "practice.local",
+          "title": "地方知识与经验"
+        },
+        {
+          "id": "practice.personal",
+          "title": "个人发展与沟通"
+        },
+        {
+          "id": "practice.work",
+          "title": "职业与岗位技能"
+        },
+        {
+          "id": "practice.digital",
+          "title": "数字素养与计算机应用"
+        }
+      ],
+      "related": [
+        "arts",
+        "education",
+        "society"
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "工程与制造",
+      "en": "Engineering & Manufacturing",
+      "family": "making",
+      "question": "怎样把理解变成可靠的造物？",
+      "description": "连接机械、电子、仪器、自动化与生产制造。",
+      "children": [
+        {
+          "id": "engineering.mechanical",
+          "title": "机械与制造"
+        },
+        {
+          "id": "engineering.electrical",
+          "title": "电气与电子"
+        },
+        {
+          "id": "engineering.communication",
+          "title": "通信工程"
+        },
+        {
+          "id": "engineering.control",
+          "title": "自动化与控制"
+        },
+        {
+          "id": "engineering.instruments",
+          "title": "仪器与计量"
+        },
+        {
+          "id": "engineering.industrial",
+          "title": "工业与生产工程"
+        },
+        {
+          "id": "engineering.textiles",
+          "title": "纺织与轻工"
+        },
+        {
+          "id": "engineering.biotechnology",
+          "title": "工业生物技术"
+        },
+        {
+          "id": "engineering.integrated",
+          "title": "集成电路"
+        },
+        {
+          "id": "engineering.general",
+          "title": "综合工程"
+        }
+      ],
+      "related": [
+        "physics",
+        "computing",
+        "management"
+      ]
+    },
+    {
+      "id": "energy",
+      "title": "能源与资源",
+      "en": "Energy & Resources",
+      "family": "making",
+      "question": "怎样获取、转化与使用能量和资源？",
+      "description": "研究能源系统、动力、采掘、冶金与资源循环。",
+      "children": [
+        {
+          "id": "energy.thermal",
+          "title": "动力与工程热物理"
+        },
+        {
+          "id": "energy.power",
+          "title": "电力与能源系统"
+        },
+        {
+          "id": "energy.renewable",
+          "title": "可再生能源"
+        },
+        {
+          "id": "energy.nuclear",
+          "title": "核科学与工程"
+        },
+        {
+          "id": "energy.mining",
+          "title": "矿业与资源开采"
+        },
+        {
+          "id": "energy.petroleum",
+          "title": "石油与天然气"
+        },
+        {
+          "id": "energy.metallurgy",
+          "title": "冶金"
+        },
+        {
+          "id": "energy.recycling",
+          "title": "资源循环"
+        }
+      ],
+      "related": [
+        "physics",
+        "environment",
+        "economics"
+      ]
+    },
+    {
+      "id": "built",
+      "title": "建筑与城市",
+      "en": "Architecture & Built Environment",
+      "family": "making",
+      "question": "怎样建造可居住的共同世界？",
+      "description": "理解建筑、城市、景观与基础设施的空间和技术。",
+      "children": [
+        {
+          "id": "built.architecture",
+          "title": "建筑学"
+        },
+        {
+          "id": "built.urban",
+          "title": "城乡规划"
+        },
+        {
+          "id": "built.civil",
+          "title": "土木与结构"
+        },
+        {
+          "id": "built.water",
+          "title": "水利工程"
+        },
+        {
+          "id": "built.landscape",
+          "title": "风景园林"
+        },
+        {
+          "id": "built.heritage",
+          "title": "建筑遗产与修复"
+        }
+      ],
+      "related": [
+        "earth",
+        "arts",
+        "society"
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "交通与航天",
+      "en": "Transport & Aerospace",
+      "family": "making",
+      "question": "人与物怎样跨越距离？",
+      "description": "连接车辆、轨道、船舶、航空航天与交通服务。",
+      "children": [
+        {
+          "id": "transport.land",
+          "title": "车辆与轨道"
+        },
+        {
+          "id": "transport.marine",
+          "title": "船舶与海洋工程"
+        },
+        {
+          "id": "transport.aerospace",
+          "title": "航空与航天"
+        },
+        {
+          "id": "transport.logistics",
+          "title": "交通运输与物流"
+        },
+        {
+          "id": "transport.services",
+          "title": "运输服务"
+        }
+      ],
+      "related": [
+        "engineering",
+        "energy",
+        "economics"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "军事与安全",
+      "en": "Security, Defence & Risk",
+      "family": "making",
+      "question": "怎样理解冲突、风险与保护？",
+      "description": "研究军事制度与历史、公共安全、灾害和风险治理。",
+      "children": [
+        {
+          "id": "security.military",
+          "title": "军事理论与战略"
+        },
+        {
+          "id": "security.operations",
+          "title": "军事组织与作战研究"
+        },
+        {
+          "id": "security.defence",
+          "title": "国防技术与保障"
+        },
+        {
+          "id": "security.public",
+          "title": "公共安全与警务"
+        },
+        {
+          "id": "security.disasters",
+          "title": "灾害与应急"
+        },
+        {
+          "id": "security.occupational",
+          "title": "安全工程与职业健康"
+        },
+        {
+          "id": "security.national",
+          "title": "国家安全与和平研究"
+        }
+      ],
+      "related": [
+        "politics",
+        "law",
+        "engineering"
+      ]
+    },
+    {
+      "id": "society",
+      "title": "社会与人类学",
+      "en": "Society & Anthropology",
+      "family": "society",
+      "question": "人如何共同生活，并形成不同的文化？",
+      "description": "研究群体、文化、人口、社会关系和日常制度。",
+      "children": [
+        {
+          "id": "society.sociology",
+          "title": "社会学"
+        },
+        {
+          "id": "society.anthropology",
+          "title": "人类学与民族学"
+        },
+        {
+          "id": "society.population",
+          "title": "人口与社会发展"
+        },
+        {
+          "id": "society.culture",
+          "title": "文化与区域研究"
+        },
+        {
+          "id": "society.welfare",
+          "title": "社会工作与社会保障"
+        },
+        {
+          "id": "society.gender",
+          "title": "性别与家庭"
+        },
+        {
+          "id": "society.crossdisciplinary",
+          "title": "交叉社会研究"
+        }
+      ],
+      "related": [
+        "history",
+        "politics",
+        "mind"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "经济与金融",
+      "en": "Economics & Finance",
+      "family": "society",
+      "question": "资源、价值与交换如何组织社会？",
+      "description": "理解生产、分配、市场、金融与经济发展的机制。",
+      "children": [
+        {
+          "id": "economics.theory",
+          "title": "经济理论"
+        },
+        {
+          "id": "economics.applied",
+          "title": "应用经济"
+        },
+        {
+          "id": "economics.finance",
+          "title": "金融与保险"
+        },
+        {
+          "id": "economics.trade",
+          "title": "贸易与国际经济"
+        },
+        {
+          "id": "economics.fiscal",
+          "title": "财政与税收"
+        },
+        {
+          "id": "economics.history",
+          "title": "经济思想史"
+        }
+      ],
+      "related": [
+        "math",
+        "society",
+        "management"
+      ]
+    },
+    {
+      "id": "management",
+      "title": "管理与组织",
+      "en": "Management & Organisations",
+      "family": "society",
+      "question": "怎样组织共同的工作与行动？",
+      "description": "研究组织、经营、会计、运营与公共管理。",
+      "children": [
+        {
+          "id": "management.theory",
+          "title": "管理科学与组织理论"
+        },
+        {
+          "id": "management.business",
+          "title": "工商管理与战略"
+        },
+        {
+          "id": "management.accounting",
+          "title": "会计与审计"
+        },
+        {
+          "id": "management.operations",
+          "title": "运营与工程管理"
+        },
+        {
+          "id": "management.marketing",
+          "title": "营销与商业服务"
+        },
+        {
+          "id": "management.public",
+          "title": "公共管理"
+        },
+        {
+          "id": "management.land",
+          "title": "农林与土地管理"
+        }
+      ],
+      "related": [
+        "economics",
+        "systems",
+        "politics"
+      ]
+    },
+    {
+      "id": "politics",
+      "title": "政治与治理",
+      "en": "Politics & Governance",
+      "family": "society",
+      "question": "公共权力如何形成、运行并获得约束？",
+      "description": "理解政治制度、公共政策、国际关系与政治思想。",
+      "children": [
+        {
+          "id": "politics.theory",
+          "title": "政治理论与思想"
+        },
+        {
+          "id": "politics.institutions",
+          "title": "政治制度与行政"
+        },
+        {
+          "id": "politics.policy",
+          "title": "公共政策"
+        },
+        {
+          "id": "politics.international",
+          "title": "国际关系与外交"
+        },
+        {
+          "id": "politics.marxism",
+          "title": "马克思主义与政治传统"
+        },
+        {
+          "id": "politics.party",
+          "title": "政党与政治史"
+        }
+      ],
+      "related": [
+        "law",
+        "history",
+        "society"
+      ]
+    },
+    {
+      "id": "law",
+      "title": "法律与正义",
+      "en": "Law & Justice",
+      "family": "society",
+      "question": "规则怎样构成秩序并回应正义？",
+      "description": "从法理与权利，到法律制度、司法实践和国际规范。",
+      "children": [
+        {
+          "id": "law.theory",
+          "title": "法理与法律思想"
+        },
+        {
+          "id": "law.constitutional",
+          "title": "宪法与行政法"
+        },
+        {
+          "id": "law.civil",
+          "title": "民商法与经济法"
+        },
+        {
+          "id": "law.criminal",
+          "title": "刑事法与司法"
+        },
+        {
+          "id": "law.international",
+          "title": "国际法"
+        },
+        {
+          "id": "law.intellectual",
+          "title": "知识产权"
+        },
+        {
+          "id": "law.governance",
+          "title": "监察与法治治理"
+        }
+      ],
+      "related": [
+        "politics",
+        "philosophy",
+        "economics"
+      ]
+    },
+    {
+      "id": "history",
+      "title": "历史与文明",
+      "en": "History & Civilisations",
+      "family": "humanities",
+      "question": "我们如何认识过去，并理解文明的变化？",
+      "description": "连接历史、考古、物质文化、文献和科学技术史。",
+      "children": [
+        {
+          "id": "history.world",
+          "title": "世界史"
+        },
+        {
+          "id": "history.china",
+          "title": "中国史"
+        },
+        {
+          "id": "history.archaeology",
+          "title": "考古与文物"
+        },
+        {
+          "id": "history.science",
+          "title": "科学技术史"
+        },
+        {
+          "id": "history.civilization",
+          "title": "文明与思想交流"
+        },
+        {
+          "id": "history.methods",
+          "title": "史学方法与史料"
+        }
+      ],
+      "related": [
+        "society",
+        "information",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "philosophy",
+      "title": "哲学与宗教",
+      "en": "Philosophy & Religion",
+      "family": "humanities",
+      "question": "存在、知识、价值与意义如何被理解？",
+      "description": "汇集哲学论证、思想传统、伦理、美学与宗教研究。",
+      "children": [
+        {
+          "id": "philosophy.metaphysics",
+          "title": "形而上学"
+        },
+        {
+          "id": "philosophy.epistemology",
+          "title": "认识论与科学哲学"
+        },
+        {
+          "id": "philosophy.ethics",
+          "title": "伦理与实践哲学"
+        },
+        {
+          "id": "philosophy.aesthetics",
+          "title": "美学"
+        },
+        {
+          "id": "philosophy.traditions",
+          "title": "哲学史与思想传统"
+        },
+        {
+          "id": "philosophy.religion",
+          "title": "宗教与神学"
+        },
+        {
+          "id": "philosophy.logic",
+          "title": "哲学逻辑"
+        }
+      ],
+      "related": [
+        "math",
+        "mind",
+        "literature"
+      ]
+    },
+    {
+      "id": "language",
+      "title": "语言与符号",
+      "en": "Language & Signs",
+      "family": "humanities",
+      "question": "语言与符号怎样产生意义？",
+      "description": "研究语言结构、使用、习得、翻译与符号系统。",
+      "children": [
+        {
+          "id": "language.linguistics",
+          "title": "语言学"
+        },
+        {
+          "id": "language.semantics",
+          "title": "语义与语用"
+        },
+        {
+          "id": "language.writing",
+          "title": "文字与书写"
+        },
+        {
+          "id": "language.translation",
+          "title": "翻译与语言习得"
+        },
+        {
+          "id": "language.semiotics",
+          "title": "符号学"
+        },
+        {
+          "id": "language.rhetoric",
+          "title": "修辞与写作"
+        }
+      ],
+      "related": [
+        "information",
+        "literature",
+        "ai"
+      ]
+    },
+    {
+      "id": "literature",
+      "title": "文学与诗",
+      "en": "Literature & Poetry",
+      "family": "humanities",
+      "question": "语言如何容纳人的经验与想象？",
+      "description": "在诗歌、小说、散文和戏剧中研究表达的可能。",
+      "children": [
+        {
+          "id": "literature.theory",
+          "title": "文学理论与批评"
+        },
+        {
+          "id": "literature.poetry",
+          "title": "诗歌"
+        },
+        {
+          "id": "literature.fiction",
+          "title": "小说与叙事"
+        },
+        {
+          "id": "literature.essays",
+          "title": "散文与随笔"
+        },
+        {
+          "id": "literature.drama",
+          "title": "戏剧文学"
+        },
+        {
+          "id": "literature.comparative",
+          "title": "比较文学与文学史"
+        }
+      ],
+      "related": [
+        "language",
+        "history",
+        "arts"
+      ]
+    },
+    {
+      "id": "arts",
+      "title": "艺术与设计",
+      "en": "Arts & Design",
+      "family": "humanities",
+      "question": "感知与形式怎样创造新的经验？",
+      "description": "理解视觉、声音、身体、影像和设计中的创作与研究。",
+      "children": [
+        {
+          "id": "arts.visual",
+          "title": "美术与视觉艺术"
+        },
+        {
+          "id": "arts.music",
+          "title": "音乐"
+        },
+        {
+          "id": "arts.performance",
+          "title": "舞蹈与表演"
+        },
+        {
+          "id": "arts.film",
+          "title": "电影与影像"
+        },
+        {
+          "id": "arts.design",
+          "title": "设计学"
+        },
+        {
+          "id": "arts.history",
+          "title": "艺术史与理论"
+        },
+        {
+          "id": "arts.digital",
+          "title": "数字与生成艺术"
+        }
+      ],
+      "related": [
+        "literature",
+        "practice",
+        "built"
+      ]
+    }
+  ],
+  "frontiers": [
+    {
+      "id": "machine-discovery",
+      "title": "机器发现与新的表征",
+      "description": "自动证明、机器提出的模型与新概念，在对应领域记录来源、复核方式与理解边界。",
+      "nodes": [
+        "ai.discovery",
+        "math.foundations",
+        "education.methods"
+      ]
+    },
+    {
+      "id": "living-systems",
+      "title": "生命、计算与新型系统",
+      "description": "为合成、演化与计算交汇处的新对象保留多重归属；新增领域可拥有独立身份。",
+      "nodes": [
+        "life.evolution",
+        "systems.complexity",
+        "computing.theory"
+      ]
+    },
+    {
+      "id": "shared-worlds",
+      "title": "人机共同的社会与文化",
+      "description": "共同创作、组织和治理中的新问题，连接社会制度、技术与人的经验。",
+      "nodes": [
+        "ai.governance",
+        "society.culture",
+        "arts.digital"
+      ]
+    }
+  ],
+  "extensionPolicy": {
+    "stableIds": true,
+    "multipleMembership": true,
+    "unknowns": "unassigned",
+    "newFields": "Add a stable domain or child ID; update crosswalk and reviewed version. Never recycle retired IDs.",
+    "provenance": "Contribution origin and evidence status are independent optional metadata; never infer validation from AI or human origin."
+  },
+  "redirects": {}
+}

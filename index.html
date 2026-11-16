@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="张棋荣的公共知识界面：记录复杂智能、工程证据、数学结构、治理、文明、阅读与文学之间可追溯、可修正、可长期积累的连接。">
+    <meta name="description" content="张棋荣的开放知识地图：面向人类与 AI 的知识领域，逐层探索学科、书籍与思考。以可核查的分类为坐标，为新的知识持续保留位置。">
     <meta name="theme-color" content="#0d1716">
     <meta property="og:title" content="Pursuing Immortality · ZQR.WORLD">
-    <meta property="og:description" content="以约束为骨，以证据为脉，让智能在可审查、可否决、可回滚的秩序中生长。">
+    <meta property="og:description" content="向一切知识敞开。在人类与 AI 共同拓展的世界里，留下阅读、思考与发现的坐标。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zqr.world/">
     <meta property="og:image" content="https://zqr.world/resources/pics/agi-structure-plan-nine-grid-v2.png">
@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="./resources/pics/shepherd.png">
     <title>Pursuing Immortality · ZQR.WORLD</title>
     <link rel="stylesheet" href="./themes/shared/layout.css">
+    <link rel="stylesheet" href="./includes/css/knowledge-atlas.css">
 </head>
 <body class="home-page">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
@@ -41,63 +42,1514 @@
     </header>
 
     <main class="home-main" id="main-content">
-        <section class="spatial-stage" data-theme-scene aria-labelledby="hero-title">
-            <div class="spatial-intro">
-                <p class="eyebrow home-kicker">A PERSONAL KNOWLEDGE COLLECTION · EST. 2020</p>
-                <h1 id="hero-title" class="home-motto" lang="en"><span>Pursuing</span> <em>Immortality</em></h1>
-                <p class="home-thesis">思想，彼此照亮。</p>
-                <p class="intro-text">在数学的结构、工程的实践与文学的经验之间，寻找更大的连续性。</p>
-                <div class="intro-rule" aria-hidden="true"></div>
-                <nav class="spatial-index" aria-label="阅读入口">
-                    <a href="./books.html"><span>01</span>阅读与文学</a>
-                    <a href="./thoughts.html"><span>02</span>思想与研究</a>
-                    <a href="./series.html"><span>03</span>长期阅读计划</a>
-                    <a href="./archive.html"><span>04</span>全部文库 ↗</a>
-                </nav>
+        <section class="knowledge-intro" data-theme-scene aria-labelledby="hero-title">
+            <div class="knowledge-intro-copy">
+                <p class="eyebrow">AN OPEN ATLAS · PURSUING IMMORTALITY</p>
+                <h1 id="hero-title">向一切知识<span>敞开。</span></h1>
             </div>
-            <div id="home-spatial" class="spatial-browser">
-                <p class="deck-label">SELECTED DOCUMENT / 精选阅读</p>
-                <article class="selected-document"><span class="document-type">思想与研究</span>
-                    <h2><a href="./thoughts/0039/">曾总您好</a></h2>
-                    <p class="document-summary">第一次向总经理作个人介绍与请教：六种手机阅读版的比较，以及最终选用的稳重简报。</p>
-                    <a class="document-read" href="./thoughts/0039/">继续阅读 ↗</a>
-                </article>
+            <div class="knowledge-intro-aside">
+                <p>在人类与 AI 共同拓展的知识世界里，<br>留下阅读、思考与发现的坐标。</p>
+                <div class="knowledge-signature">张棋荣 <span>QIRONG ZHANG / EST. 2020</span></div>
             </div>
-            <div class="stage-colophon"><span>张棋荣 <span lang="en">/ Qirong Zhang</span></span><a href="#latest">沿着文字，继续向前 <span aria-hidden="true">↓</span></a></div>
+        </section>
+
+        <section class="knowledge-atlas" id="knowledge-map" aria-labelledby="knowledge-heading">
+            <div class="knowledge-toolbar">
+                <div class="knowledge-map-label"><span class="knowledge-compass" aria-hidden="true">＋</span><div><p class="eyebrow">THE KNOWLEDGE LANDSCAPE</p><h2 id="knowledge-heading">知识地图</h2></div></div>
+                <form id="knowledge-search-form" role="search" hidden>
+                    <label class="visually-hidden" for="knowledge-search">搜索领域、书籍与思考</label>
+                    <input id="knowledge-search" type="search" placeholder="搜索领域、书籍与思考" autocomplete="off" maxlength="120">
+                    <button type="submit" aria-label="搜索知识地图">搜索 <span aria-hidden="true">↗</span></button>
+                </form>
+            </div>
+            <div id="knowledge-interactive" hidden>
+                <nav class="knowledge-breadcrumbs" id="knowledge-breadcrumbs" aria-label="知识地图路径"></nav>
+                <div id="knowledge-view"></div>
+                <p id="knowledge-status" class="visually-hidden" role="status" aria-live="polite"></p>
+            </div>
+            <!-- KNOWLEDGE_ATLAS_STATIC_START -->
+<div class="knowledge-static" id="knowledge-static">
+<p class="knowledge-static-intro">逐层打开领域，阅读其中的书籍与思考。</p>
+<div class="knowledge-static-grid">
+<a class="knowledge-static-tile" href="#knowledge-math"><span>数学与逻辑</span><small>9 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-systems"><span>系统与复杂性</span><small>3 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-computing"><span>计算与软件</span><small>12 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-ai"><span>人工智能</span><small>12 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-information"><span>信息与知识</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-physics"><span>物理与宇宙</span><small>2 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-chemistry"><span>化学与材料</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-earth"><span>地球与空间</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-environment"><span>环境与生态</span><small>0 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-life"><span>生命与演化</span><small>0 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-health"><span>医学与健康</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-agriculture"><span>农林牧渔</span><small>0 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-mind"><span>心智与行为</span><small>3 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-education"><span>教育与研究</span><small>9 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-practice"><span>生活与技艺</span><small>7 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-engineering"><span>工程与制造</span><small>2 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-energy"><span>能源与资源</span><small>0 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-built"><span>建筑与城市</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-transport"><span>交通与航天</span><small>3 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-security"><span>军事与安全</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-society"><span>社会与人类学</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-economics"><span>经济与金融</span><small>2 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-management"><span>管理与组织</span><small>10 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-politics"><span>政治与治理</span><small>15 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-law"><span>法律与正义</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-history"><span>历史与文明</span><small>23 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-philosophy"><span>哲学与宗教</span><small>34 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-language"><span>语言与符号</span><small>1 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-literature"><span>文学与诗</span><small>104 篇笔记</small></a>
+<a class="knowledge-static-tile" href="#knowledge-arts"><span>艺术与设计</span><small>10 篇笔记</small></a>
+</div>
+<details class="knowledge-static-domain" id="knowledge-math"><summary>数学与逻辑 · 9 篇笔记</summary>
+<p>从数、结构与空间，到变化、不确定性和推理的边界。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-math.foundations"><summary>数学基础与逻辑 · 3 篇</summary>
+<ul>
+<li><a href="/thoughts/0022/">Topos理论研究报告</a></li>
+<li><a href="/thoughts/0020/">热带对称的范畴图景</a></li>
+<li><a href="/books/0049/">[商务印书馆汉译世界名著][A0903]算术基础-弗雷格</a></li>
+</ul>
+</details>
+<details id="knowledge-math.algebra"><summary>代数与数论 · 1 篇</summary>
+<ul>
+<li><a href="/books/0021/">初等代数_北京市初等数学编写组_1975</a></li>
+</ul>
+</details>
+<details id="knowledge-math.geometry"><summary>几何与拓扑 · 2 篇</summary>
+<ul>
+<li><a href="/thoughts/0022/">Topos理论研究报告</a></li>
+<li><a href="/thoughts/0020/">热带对称的范畴图景</a></li>
+</ul>
+</details>
+<details id="knowledge-math.analysis"><summary>分析与微分方程 · 2 篇</summary>
+<ul>
+<li><a href="/thoughts/0027/">导数-博物馆标本式压缩</a></li>
+<li><a href="/thoughts/0026/">导数-渐进的静默</a></li>
+</ul>
+</details>
+<details id="knowledge-math.probability"><summary>概率与统计 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-math.discrete"><summary>离散数学与组合 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-math.applied"><summary>应用数学与运筹 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/thoughts/0027/">导数-博物馆标本式压缩</a></li>
+<li><a href="/thoughts/0026/">导数-渐进的静默</a></li>
+<li><a href="/thoughts/0022/">Topos理论研究报告</a></li>
+<li><a href="/thoughts/0020/">热带对称的范畴图景</a></li>
+<li><a href="/books/0099/">西方数学文化理念传播译丛</a></li>
+<li><a href="/books/0094/">陈景润[DOING]</a></li>
+<li><a href="/books/0055/">[科学大师佳作系列]自然之数-伊恩·斯图尔特</a></li>
+<li><a href="/books/0049/">[商务印书馆汉译世界名著][A0903]算术基础-弗雷格</a></li>
+<li><a href="/books/0021/">初等代数_北京市初等数学编写组_1975</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-systems"><summary>系统与复杂性 · 3 篇笔记</summary>
+<p>研究信息、反馈、网络、涌现与跨尺度的系统行为。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-systems.theory"><summary>系统理论 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-systems.information"><summary>信息论 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-systems.control"><summary>控制与反馈 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-systems.complexity"><summary>复杂系统与网络 · 3 篇</summary>
+<ul>
+<li><a href="/thoughts/0029/">约束场的形态</a></li>
+<li><a href="/thoughts/0028/">ASI研究进展</a></li>
+<li><a href="/thoughts/0018/">agent共生约束场</a></li>
+</ul>
+</details>
+<details id="knowledge-systems.simulation"><summary>建模与仿真 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-systems.decisions"><summary>决策与博弈 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/thoughts/0029/">约束场的形态</a></li>
+<li><a href="/thoughts/0028/">ASI研究进展</a></li>
+<li><a href="/thoughts/0018/">agent共生约束场</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-computing"><summary>计算与软件 · 12 篇笔记</summary>
+<p>从计算边界与算法，到程序、硬件、网络和数据系统。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-computing.theory"><summary>计算理论 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-computing.algorithms"><summary>算法与数据结构 · 2 篇</summary>
+<ul>
+<li><a href="/books/0011/">算法图解-Aditya Bhargava</a></li>
+<li><a href="/books/0005/">Algorithms to live by</a></li>
+</ul>
+</details>
+<details id="knowledge-computing.software"><summary>程序设计与软件工程 · 7 篇</summary>
+<ul>
+<li><a href="/thoughts/0017/">ASE会议20260612</a></li>
+<li><a href="/thoughts/0011/">“十五五”规划引领软件创新</a></li>
+<li><a href="/books/0048/">Effective STL-Scott Meyers</a></li>
+<li><a href="/books/0037/">Modern C++ Tutorial-Changkun Ou</a></li>
+<li><a href="/books/0007/">编程之道</a></li>
+<li><a href="/books/0004/">Effective C++</a></li>
+<li><a href="/books/0002/">图灵程序设计丛书</a></li>
+</ul>
+</details>
+<details id="knowledge-computing.hardware"><summary>体系结构与计算硬件 · 1 篇</summary>
+<ul>
+<li><a href="/books/0008/">[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann</a></li>
+</ul>
+</details>
+<details id="knowledge-computing.networks"><summary>网络与分布式系统 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-computing.data"><summary>数据库与数据科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-computing.security"><summary>密码与网络安全 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-computing.interaction"><summary>人机交互与可视化 · 1 篇</summary>
+<ul>
+<li><a href="/study/0001/">JavaScript-D3.js</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/thoughts/0017/">ASE会议20260612</a></li>
+<li><a href="/thoughts/0011/">“十五五”规划引领软件创新</a></li>
+<li><a href="/books/0121/">TuringAward</a></li>
+<li><a href="/books/0048/">Effective STL-Scott Meyers</a></li>
+<li><a href="/books/0037/">Modern C++ Tutorial-Changkun Ou</a></li>
+<li><a href="/study/0001/">JavaScript-D3.js</a></li>
+<li><a href="/books/0011/">算法图解-Aditya Bhargava</a></li>
+<li><a href="/books/0008/">[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann</a></li>
+<li><a href="/books/0007/">编程之道</a></li>
+<li><a href="/books/0005/">Algorithms to live by</a></li>
+<li><a href="/books/0004/">Effective C++</a></li>
+<li><a href="/books/0002/">图灵程序设计丛书</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-ai"><summary>人工智能 · 12 篇笔记</summary>
+<p>研究机器智能及其与人类合作、产生知识和接受检验的方式。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-ai.foundations"><summary>智能基础与表示 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-ai.learning"><summary>机器学习 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-ai.language"><summary>语言与多模态 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0013/">关于token和工具的观察与思考</a></li>
+</ul>
+</details>
+<details id="knowledge-ai.agents"><summary>智能体与协作 · 6 篇</summary>
+<ul>
+<li><a href="/thoughts/0035/">受控外部化-Dean与Google的组织新探索</a></li>
+<li><a href="/thoughts/0029/">约束场的形态</a></li>
+<li><a href="/thoughts/0028/">ASI研究进展</a></li>
+<li><a href="/thoughts/0018/">agent共生约束场</a></li>
+<li><a href="/thoughts/0017/">ASE会议20260612</a></li>
+<li><a href="/thoughts/0013/">关于token和工具的观察与思考</a></li>
+</ul>
+</details>
+<details id="knowledge-ai.robotics"><summary>机器人与具身智能 · 2 篇</summary>
+<ul>
+<li><a href="/thoughts/0019/">机械工程智能层</a></li>
+<li><a href="/thoughts/0016/">自主无人机事件</a></li>
+</ul>
+</details>
+<details id="knowledge-ai.discovery"><summary>机器发现与自动证明 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0014/">AI4AI R&amp;D</a></li>
+</ul>
+</details>
+<details id="knowledge-ai.evaluation"><summary>评估、解释与可靠性 · 2 篇</summary>
+<ul>
+<li><a href="/thoughts/0025/">Fable5和GPT5.5的图片生成质量比较</a></li>
+<li><a href="/thoughts/0024/">Fable5无敌</a></li>
+</ul>
+</details>
+<details id="knowledge-ai.governance"><summary>智能治理与对齐 · 4 篇</summary>
+<ul>
+<li><a href="/thoughts/0029/">约束场的形态</a></li>
+<li><a href="/thoughts/0028/">ASI研究进展</a></li>
+<li><a href="/thoughts/0018/">agent共生约束场</a></li>
+<li><a href="/thoughts/0016/">自主无人机事件</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0140/">人工智能+企业转型：策略-路径-典型案例</a></li>
+<li><a href="/thoughts/0035/">受控外部化-Dean与Google的组织新探索</a></li>
+<li><a href="/thoughts/0029/">约束场的形态</a></li>
+<li><a href="/thoughts/0028/">ASI研究进展</a></li>
+<li><a href="/thoughts/0025/">Fable5和GPT5.5的图片生成质量比较</a></li>
+<li><a href="/thoughts/0024/">Fable5无敌</a></li>
+<li><a href="/thoughts/0019/">机械工程智能层</a></li>
+<li><a href="/thoughts/0018/">agent共生约束场</a></li>
+<li><a href="/thoughts/0017/">ASE会议20260612</a></li>
+<li><a href="/thoughts/0016/">自主无人机事件</a></li>
+<li><a href="/thoughts/0014/">AI4AI R&amp;D</a></li>
+<li><a href="/thoughts/0013/">关于token和工具的观察与思考</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-information"><summary>信息与知识 · 1 篇笔记</summary>
+<p>连接文献、档案、新闻、传播、出版与知识组织。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-information.library"><summary>图书馆与情报 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-information.archives"><summary>档案与文献 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-information.organization"><summary>知识组织与检索 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-information.media"><summary>新闻与传播 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-information.publishing"><summary>编辑与出版 · 1 篇</summary>
+<ul>
+<li><a href="/books/0111/">[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿</a></li>
+</ul>
+</details>
+<details id="knowledge-information.digital"><summary>数字人文与知识基础设施 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-information.museums"><summary>博物馆与策展 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0111/">[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-physics"><summary>物理与宇宙 · 2 篇笔记</summary>
+<p>从物质与运动，到量子、时空、恒星和宇宙的演化。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-physics.mechanics"><summary>力学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.thermal"><summary>热学与统计物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.electromagnetism"><summary>电磁学与光学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.quantum"><summary>量子与原子物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.matter"><summary>凝聚态与材料物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.particles"><summary>粒子与核物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.relativity"><summary>相对论与引力 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-physics.astronomy"><summary>天文学与宇宙学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0026/">爱因斯坦</a></li>
+<li><a href="/books/0027/">物理世界奇遇记-乔治·伽莫夫</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-chemistry"><summary>化学与材料 · 1 篇笔记</summary>
+<p>理解分子反应与物质结构，以及材料的设计与制备。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-chemistry.physical"><summary>物理化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.organic"><summary>有机化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.inorganic"><summary>无机化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.analytical"><summary>分析化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.materials"><summary>材料与高分子 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.nano"><summary>纳米科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-chemistry.chemical-engineering"><summary>化学工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0153/">[科学史译丛](第二辑)炼金术的秘密</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-earth"><summary>地球与空间 · 1 篇笔记</summary>
+<p>研究岩石、地貌、海洋、大气，以及空间测量与人地关系。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-earth.geology"><summary>地质与地球物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-earth.geography"><summary>自然地理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-earth.climate"><summary>大气与气候 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-earth.ocean"><summary>海洋科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-earth.mapping"><summary>测绘与地理信息 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-earth.human"><summary>人文与经济地理 · 1 篇</summary>
+<ul>
+<li><a href="/books/0137/">人海之间-海洋亚洲中的中国与世界</a></li>
+</ul>
+</details>
+<details id="knowledge-earth.resources"><summary>地质资源 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0137/">人海之间-海洋亚洲中的中国与世界</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-environment"><summary>环境与生态 · 0 篇笔记</summary>
+<p>研究生态关系、环境变化、保护修复与可持续发展。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-environment.ecology"><summary>生态学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.biodiversity"><summary>生物多样性与保护 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.pollution"><summary>污染与环境化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.engineering"><summary>环境工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.restoration"><summary>生态修复与管理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.sustainability"><summary>可持续发展 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-environment.crossdisciplinary"><summary>交叉自然科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li>领域已建立，尚无公开笔记。</li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-life"><summary>生命与演化 · 0 篇笔记</summary>
+<p>从分子与细胞，到遗传、发育、生理和生物多样性。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-life.molecular"><summary>分子与细胞 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.genetics"><summary>遗传与基因组 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.development"><summary>发育与生理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.evolution"><summary>演化与系统分类 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.organisms"><summary>动物、植物与微生物 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.biotechnology"><summary>生物技术 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.biochemistry"><summary>生物化学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-life.systems"><summary>系统生物学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li>领域已建立，尚无公开笔记。</li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-health"><summary>医学与健康 · 1 篇笔记</summary>
+<p>连接医学基础、临床、公共卫生、药物与人的身心健康。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-health.basic"><summary>基础医学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.clinical"><summary>临床医学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.dental"><summary>口腔医学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.public"><summary>公共卫生与预防 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.pharmacy"><summary>药学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.traditional"><summary>传统医学研究 · 1 篇</summary>
+<ul>
+<li><a href="/books/0156/">金匮要略</a></li>
+</ul>
+</details>
+<details id="knowledge-health.nursing"><summary>护理与助产 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.rehabilitation"><summary>康复与治疗 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.technology"><summary>医学技术与生物医学工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.nutrition"><summary>营养与健康 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-health.care"><summary>长期照护 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0156/">金匮要略</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-agriculture"><summary>农林牧渔 · 0 篇笔记</summary>
+<p>涵盖作物、园艺、土壤、林业、畜牧、水产与兽医。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-agriculture.crops"><summary>作物与园艺 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.soil"><summary>农业资源与土壤 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.protection"><summary>植物保护 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.forestry"><summary>林业与草业 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.animals"><summary>畜牧与动物科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.veterinary"><summary>兽医学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.fisheries"><summary>水产与渔业 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.biotechnology"><summary>农业生物技术 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.food"><summary>食品科学与加工 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-agriculture.engineering"><summary>农业与林业工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li>领域已建立，尚无公开笔记。</li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-mind"><summary>心智与行为 · 3 篇笔记</summary>
+<p>理解感知、学习、情绪、意识和人与环境的互动。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-mind.psychology"><summary>心理学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-mind.cognition"><summary>认知科学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-mind.neuroscience"><summary>神经科学 · 1 篇</summary>
+<ul>
+<li><a href="/books/0008/">[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann</a></li>
+</ul>
+</details>
+<details id="knowledge-mind.consciousness"><summary>意识与心灵 · 1 篇</summary>
+<ul>
+<li><a href="/books/0009/">[商务印书馆汉译世界名著][A0107]人是机器-Mettrie</a></li>
+</ul>
+</details>
+<details id="knowledge-mind.development"><summary>发展与社会心理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-mind.clinical"><summary>临床与咨询心理 · 1 篇</summary>
+<ul>
+<li><a href="/books/0098/">活出生命的意义-Frank.V.E</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0098/">活出生命的意义-Frank.V.E</a></li>
+<li><a href="/books/0009/">[商务印书馆汉译世界名著][A0107]人是机器-Mettrie</a></li>
+<li><a href="/books/0008/">[商务印书馆汉译世界名著][A0907]计算机与人脑-John von Neumann</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-education"><summary>教育与研究 · 9 篇笔记</summary>
+<p>从教学与学习，到研究方法、科学制度和个人阅读实践。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-education.theory"><summary>教育理论与学习科学 · 2 篇</summary>
+<ul>
+<li><a href="/books/0032/">哈佛天才与素质教育典藏文库系列</a></li>
+<li><a href="/books/0031/">[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉</a></li>
+</ul>
+</details>
+<details id="knowledge-education.teaching"><summary>教师教育与教学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-education.early"><summary>学前教育 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-education.special"><summary>特殊与融合教育 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-education.literacy"><summary>基础教育与读写素养 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-education.methods"><summary>研究方法与科学学 · 3 篇</summary>
+<ul>
+<li><a href="/thoughts/0024/">Fable5无敌</a></li>
+<li><a href="/thoughts/0014/">AI4AI R&amp;D</a></li>
+<li><a href="/books/0030/">[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑</a></li>
+</ul>
+</details>
+<details id="knowledge-education.reading"><summary>阅读与个人研究 · 4 篇</summary>
+<ul>
+<li><a href="/books/0152/">[科学史译丛]书目</a></li>
+<li><a href="/thoughts/0037/">新跃迁边缘感性直观</a></li>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/books/0001/">Journal of the Universe</a></li>
+</ul>
+</details>
+<details id="knowledge-education.technology"><summary>教育技术 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0152/">[科学史译丛]书目</a></li>
+<li><a href="/thoughts/0037/">新跃迁边缘感性直观</a></li>
+<li><a href="/thoughts/0024/">Fable5无敌</a></li>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/thoughts/0014/">AI4AI R&amp;D</a></li>
+<li><a href="/books/0032/">哈佛天才与素质教育典藏文库系列</a></li>
+<li><a href="/books/0031/">[商务印书馆汉译世界名著][A0310]劝学篇-福泽谕吉</a></li>
+<li><a href="/books/0030/">[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑</a></li>
+<li><a href="/books/0001/">Journal of the Universe</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-practice"><summary>生活与技艺 · 7 篇笔记</summary>
+<p>容纳身体技艺、手工经验、服务、休闲与地方性知识。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-practice.craft"><summary>工艺与修复 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.domestic"><summary>家政与个人生活 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.hospitality"><summary>餐饮与住宿 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.beauty"><summary>美容与个人服务 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.sport"><summary>体育与身体技艺 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.travel"><summary>旅游与休闲 · 1 篇</summary>
+<ul>
+<li><a href="/books/0141/">灞桥折柳</a></li>
+</ul>
+</details>
+<details id="knowledge-practice.community"><summary>社区、儿童与家庭服务 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.local"><summary>地方知识与经验 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0034/">前无再前</a></li>
+</ul>
+</details>
+<details id="knowledge-practice.personal"><summary>个人发展与沟通 · 5 篇</summary>
+<ul>
+<li><a href="/thoughts/0039/">曾总您好</a></li>
+<li><a href="/thoughts/0030/">个人事迹：20260604</a></li>
+<li><a href="/thoughts/0007/">First Sunday</a></li>
+<li><a href="/thoughts/0002/">first-remote-meeting</a></li>
+<li><a href="/thoughts/0001/">why-now</a></li>
+</ul>
+</details>
+<details id="knowledge-practice.work"><summary>职业与岗位技能 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-practice.digital"><summary>数字素养与计算机应用 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/thoughts/0039/">曾总您好</a></li>
+<li><a href="/books/0141/">灞桥折柳</a></li>
+<li><a href="/thoughts/0034/">前无再前</a></li>
+<li><a href="/thoughts/0030/">个人事迹：20260604</a></li>
+<li><a href="/thoughts/0007/">First Sunday</a></li>
+<li><a href="/thoughts/0002/">first-remote-meeting</a></li>
+<li><a href="/thoughts/0001/">why-now</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-engineering"><summary>工程与制造 · 2 篇笔记</summary>
+<p>连接机械、电子、仪器、自动化与生产制造。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-engineering.mechanical"><summary>机械与制造 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0019/">机械工程智能层</a></li>
+</ul>
+</details>
+<details id="knowledge-engineering.electrical"><summary>电气与电子 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.communication"><summary>通信工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.control"><summary>自动化与控制 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.instruments"><summary>仪器与计量 · 1 篇</summary>
+<ul>
+<li><a href="/books/0146/">度量世界</a></li>
+</ul>
+</details>
+<details id="knowledge-engineering.industrial"><summary>工业与生产工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.textiles"><summary>纺织与轻工 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.biotechnology"><summary>工业生物技术 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.integrated"><summary>集成电路 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-engineering.general"><summary>综合工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0146/">度量世界</a></li>
+<li><a href="/thoughts/0019/">机械工程智能层</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-energy"><summary>能源与资源 · 0 篇笔记</summary>
+<p>研究能源系统、动力、采掘、冶金与资源循环。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-energy.thermal"><summary>动力与工程热物理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.power"><summary>电力与能源系统 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.renewable"><summary>可再生能源 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.nuclear"><summary>核科学与工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.mining"><summary>矿业与资源开采 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.petroleum"><summary>石油与天然气 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.metallurgy"><summary>冶金 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-energy.recycling"><summary>资源循环 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li>领域已建立，尚无公开笔记。</li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-built"><summary>建筑与城市 · 1 篇笔记</summary>
+<p>理解建筑、城市、景观与基础设施的空间和技术。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-built.architecture"><summary>建筑学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-built.urban"><summary>城乡规划 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-built.civil"><summary>土木与结构 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-built.water"><summary>水利工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-built.landscape"><summary>风景园林 · 1 篇</summary>
+<ul>
+<li><a href="/books/0136/">合二为一-场地与机理的解读</a></li>
+</ul>
+</details>
+<details id="knowledge-built.heritage"><summary>建筑遗产与修复 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0136/">合二为一-场地与机理的解读</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-transport"><summary>交通与航天 · 3 篇笔记</summary>
+<p>连接车辆、轨道、船舶、航空航天与交通服务。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-transport.land"><summary>车辆与轨道 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-transport.marine"><summary>船舶与海洋工程 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-transport.aerospace"><summary>航空与航天 · 3 篇</summary>
+<ul>
+<li><a href="/books/0133/">中国航空工业机载简史</a></li>
+<li><a href="/books/0126/">中国飞机设计的一代宗师--徐舜寿</a></li>
+<li><a href="/books/0123/">新中国航空事业发展70周年70件大事</a></li>
+</ul>
+</details>
+<details id="knowledge-transport.logistics"><summary>交通运输与物流 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-transport.services"><summary>运输服务 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0133/">中国航空工业机载简史</a></li>
+<li><a href="/books/0126/">中国飞机设计的一代宗师--徐舜寿</a></li>
+<li><a href="/books/0123/">新中国航空事业发展70周年70件大事</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-security"><summary>军事与安全 · 1 篇笔记</summary>
+<p>研究军事制度与历史、公共安全、灾害和风险治理。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-security.military"><summary>军事理论与战略 · 1 篇</summary>
+<ul>
+<li><a href="/books/0151/">伯罗奔尼撒战争史</a></li>
+</ul>
+</details>
+<details id="knowledge-security.operations"><summary>军事组织与作战研究 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-security.defence"><summary>国防技术与保障 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-security.public"><summary>公共安全与警务 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-security.disasters"><summary>灾害与应急 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-security.occupational"><summary>安全工程与职业健康 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-security.national"><summary>国家安全与和平研究 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0151/">伯罗奔尼撒战争史</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-society"><summary>社会与人类学 · 1 篇笔记</summary>
+<p>研究群体、文化、人口、社会关系和日常制度。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-society.sociology"><summary>社会学 · 1 篇</summary>
+<ul>
+<li><a href="/books/0096/">费孝通</a></li>
+</ul>
+</details>
+<details id="knowledge-society.anthropology"><summary>人类学与民族学 · 1 篇</summary>
+<ul>
+<li><a href="/books/0096/">费孝通</a></li>
+</ul>
+</details>
+<details id="knowledge-society.population"><summary>人口与社会发展 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-society.culture"><summary>文化与区域研究 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-society.welfare"><summary>社会工作与社会保障 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-society.gender"><summary>性别与家庭 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-society.crossdisciplinary"><summary>交叉社会研究 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0096/">费孝通</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-economics"><summary>经济与金融 · 2 篇笔记</summary>
+<p>理解生产、分配、市场、金融与经济发展的机制。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-economics.theory"><summary>经济理论 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-economics.applied"><summary>应用经济 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-economics.finance"><summary>金融与保险 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-economics.trade"><summary>贸易与国际经济 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-economics.fiscal"><summary>财政与税收 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-economics.history"><summary>经济思想史 · 2 篇</summary>
+<ul>
+<li><a href="/books/0134/">盐铁论</a></li>
+<li><a href="/books/0116/">[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0134/">盐铁论</a></li>
+<li><a href="/books/0116/">[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-management"><summary>管理与组织 · 10 篇笔记</summary>
+<p>研究组织、经营、会计、运营与公共管理。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-management.theory"><summary>管理科学与组织理论 · 2 篇</summary>
+<ul>
+<li><a href="/thoughts/0035/">受控外部化-Dean与Google的组织新探索</a></li>
+<li><a href="/books/0124/">麦肯锡-问题分析与解决技巧</a></li>
+</ul>
+</details>
+<details id="knowledge-management.business"><summary>工商管理与战略 · 1 篇</summary>
+<ul>
+<li><a href="/books/0140/">人工智能+企业转型：策略-路径-典型案例</a></li>
+</ul>
+</details>
+<details id="knowledge-management.accounting"><summary>会计与审计 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-management.operations"><summary>运营与工程管理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-management.marketing"><summary>营销与商业服务 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-management.public"><summary>公共管理 · 7 篇</summary>
+<ul>
+<li><a href="/books/0148/">公文写作大手笔</a></li>
+<li><a href="/thoughts/0038/">党建思想学习研讨发言</a></li>
+<li><a href="/thoughts/0036/">第三次论我的政绩观</a></li>
+<li><a href="/thoughts/0033/">党建文选学习报告</a></li>
+<li><a href="/thoughts/0021/">第二次论我的政绩观</a></li>
+<li><a href="/thoughts/0010/">批评与自我批评</a></li>
+<li><a href="/thoughts/0008/">政绩观</a></li>
+</ul>
+</details>
+<details id="knowledge-management.land"><summary>农林与土地管理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0148/">公文写作大手笔</a></li>
+<li><a href="/thoughts/0038/">党建思想学习研讨发言</a></li>
+<li><a href="/books/0140/">人工智能+企业转型：策略-路径-典型案例</a></li>
+<li><a href="/thoughts/0036/">第三次论我的政绩观</a></li>
+<li><a href="/thoughts/0035/">受控外部化-Dean与Google的组织新探索</a></li>
+<li><a href="/thoughts/0033/">党建文选学习报告</a></li>
+<li><a href="/books/0124/">麦肯锡-问题分析与解决技巧</a></li>
+<li><a href="/thoughts/0021/">第二次论我的政绩观</a></li>
+<li><a href="/thoughts/0010/">批评与自我批评</a></li>
+<li><a href="/thoughts/0008/">政绩观</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-politics"><summary>政治与治理 · 15 篇笔记</summary>
+<p>理解政治制度、公共政策、国际关系与政治思想。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-politics.theory"><summary>政治理论与思想 · 2 篇</summary>
+<ul>
+<li><a href="/books/0115/">[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔</a></li>
+<li><a href="/books/0107/">[商务印书馆汉译世界名著][C0201]乌托邦-莫尔</a></li>
+</ul>
+</details>
+<details id="knowledge-politics.institutions"><summary>政治制度与行政 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-politics.policy"><summary>公共政策 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0011/">“十五五”规划引领软件创新</a></li>
+</ul>
+</details>
+<details id="knowledge-politics.international"><summary>国际关系与外交 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-politics.marxism"><summary>马克思主义与政治传统 · 3 篇</summary>
+<ul>
+<li><a href="/books/0155/">[马克思恩格斯]研究计划-其他-马克思主义信仰十讲</a></li>
+<li><a href="/books/0154/">[马克思恩格斯]研究计划</a></li>
+<li><a href="/books/0132/">马克思恩格斯箴言</a></li>
+</ul>
+</details>
+<details id="knowledge-politics.party"><summary>政党与政治史 · 9 篇</summary>
+<ul>
+<li><a href="/books/0159/">[中国共产党人精神谱系][红旗渠精神]</a></li>
+<li><a href="/books/0158/">[中国共产党人精神谱系]目录</a></li>
+<li><a href="/thoughts/0038/">党建思想学习研讨发言</a></li>
+<li><a href="/thoughts/0036/">第三次论我的政绩观</a></li>
+<li><a href="/books/0139/">习近平用典</a></li>
+<li><a href="/thoughts/0033/">党建文选学习报告</a></li>
+<li><a href="/thoughts/0021/">第二次论我的政绩观</a></li>
+<li><a href="/thoughts/0010/">批评与自我批评</a></li>
+<li><a href="/thoughts/0008/">政绩观</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0159/">[中国共产党人精神谱系][红旗渠精神]</a></li>
+<li><a href="/books/0158/">[中国共产党人精神谱系]目录</a></li>
+<li><a href="/books/0155/">[马克思恩格斯]研究计划-其他-马克思主义信仰十讲</a></li>
+<li><a href="/books/0154/">[马克思恩格斯]研究计划</a></li>
+<li><a href="/thoughts/0038/">党建思想学习研讨发言</a></li>
+<li><a href="/thoughts/0036/">第三次论我的政绩观</a></li>
+<li><a href="/books/0139/">习近平用典</a></li>
+<li><a href="/books/0132/">马克思恩格斯箴言</a></li>
+<li><a href="/thoughts/0033/">党建文选学习报告</a></li>
+<li><a href="/thoughts/0021/">第二次论我的政绩观</a></li>
+<li><a href="/thoughts/0011/">“十五五”规划引领软件创新</a></li>
+<li><a href="/thoughts/0010/">批评与自我批评</a></li>
+<li><a href="/thoughts/0008/">政绩观</a></li>
+<li><a href="/books/0115/">[商务印书馆汉译世界名著][C0412]民族主义-泰戈尔</a></li>
+<li><a href="/books/0107/">[商务印书馆汉译世界名著][C0201]乌托邦-莫尔</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-law"><summary>法律与正义 · 1 篇笔记</summary>
+<p>从法理与权利，到法律制度、司法实践和国际规范。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-law.theory"><summary>法理与法律思想 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-law.constitutional"><summary>宪法与行政法 · 1 篇</summary>
+<ul>
+<li><a href="/books/0111/">[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿</a></li>
+</ul>
+</details>
+<details id="knowledge-law.civil"><summary>民商法与经济法 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-law.criminal"><summary>刑事法与司法 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-law.international"><summary>国际法 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-law.intellectual"><summary>知识产权 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-law.governance"><summary>监察与法治治理 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0111/">[商务印书馆汉译世界名著][C0503]论出版自由-弥尔顿</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-history"><summary>历史与文明 · 23 篇笔记</summary>
+<p>连接历史、考古、物质文化、文献和科学技术史。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-history.world"><summary>世界史 · 1 篇</summary>
+<ul>
+<li><a href="/books/0151/">伯罗奔尼撒战争史</a></li>
+</ul>
+</details>
+<details id="knowledge-history.china"><summary>中国史 · 5 篇</summary>
+<ul>
+<li><a href="/books/0159/">[中国共产党人精神谱系][红旗渠精神]</a></li>
+<li><a href="/books/0158/">[中国共产党人精神谱系]目录</a></li>
+<li><a href="/books/0141/">灞桥折柳</a></li>
+<li><a href="/books/0139/">习近平用典</a></li>
+<li><a href="/books/0134/">盐铁论</a></li>
+</ul>
+</details>
+<details id="knowledge-history.archaeology"><summary>考古与文物 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-history.science"><summary>科学技术史 · 13 篇</summary>
+<ul>
+<li><a href="/books/0156/">金匮要略</a></li>
+<li><a href="/books/0153/">[科学史译丛](第二辑)炼金术的秘密</a></li>
+<li><a href="/books/0152/">[科学史译丛]书目</a></li>
+<li><a href="/books/0146/">度量世界</a></li>
+<li><a href="/books/0133/">中国航空工业机载简史</a></li>
+<li><a href="/books/0126/">中国飞机设计的一代宗师--徐舜寿</a></li>
+<li><a href="/books/0123/">新中国航空事业发展70周年70件大事</a></li>
+<li><a href="/books/0121/">TuringAward</a></li>
+<li><a href="/books/0026/">爱因斯坦</a></li>
+<li><a href="/books/0099/">西方数学文化理念传播译丛</a></li>
+<li><a href="/books/0094/">陈景润[DOING]</a></li>
+<li><a href="/books/0055/">[科学大师佳作系列]自然之数-伊恩·斯图尔特</a></li>
+<li><a href="/books/0027/">物理世界奇遇记-乔治·伽莫夫</a></li>
+</ul>
+</details>
+<details id="knowledge-history.civilization"><summary>文明与思想交流 · 4 篇</summary>
+<ul>
+<li><a href="/books/0147/">巴比伦与巴比伦人赞歌</a></li>
+<li><a href="/books/0137/">人海之间-海洋亚洲中的中国与世界</a></li>
+<li><a href="/thoughts/0015/">文明继承法</a></li>
+<li><a href="/books/0018/">[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里</a></li>
+</ul>
+</details>
+<details id="knowledge-history.methods"><summary>史学方法与史料 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0159/">[中国共产党人精神谱系][红旗渠精神]</a></li>
+<li><a href="/books/0158/">[中国共产党人精神谱系]目录</a></li>
+<li><a href="/books/0156/">金匮要略</a></li>
+<li><a href="/books/0153/">[科学史译丛](第二辑)炼金术的秘密</a></li>
+<li><a href="/books/0152/">[科学史译丛]书目</a></li>
+<li><a href="/books/0151/">伯罗奔尼撒战争史</a></li>
+<li><a href="/books/0147/">巴比伦与巴比伦人赞歌</a></li>
+<li><a href="/books/0146/">度量世界</a></li>
+<li><a href="/books/0141/">灞桥折柳</a></li>
+<li><a href="/books/0139/">习近平用典</a></li>
+<li><a href="/books/0137/">人海之间-海洋亚洲中的中国与世界</a></li>
+<li><a href="/books/0134/">盐铁论</a></li>
+<li><a href="/books/0133/">中国航空工业机载简史</a></li>
+<li><a href="/books/0126/">中国飞机设计的一代宗师--徐舜寿</a></li>
+<li><a href="/books/0123/">新中国航空事业发展70周年70件大事</a></li>
+<li><a href="/thoughts/0015/">文明继承法</a></li>
+<li><a href="/books/0121/">TuringAward</a></li>
+<li><a href="/books/0026/">爱因斯坦</a></li>
+<li><a href="/books/0099/">西方数学文化理念传播译丛</a></li>
+<li><a href="/books/0094/">陈景润[DOING]</a></li>
+<li><a href="/books/0055/">[科学大师佳作系列]自然之数-伊恩·斯图尔特</a></li>
+<li><a href="/books/0027/">物理世界奇遇记-乔治·伽莫夫</a></li>
+<li><a href="/books/0018/">[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-philosophy"><summary>哲学与宗教 · 34 篇笔记</summary>
+<p>汇集哲学论证、思想传统、伦理、美学与宗教研究。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-philosophy.metaphysics"><summary>形而上学 · 1 篇</summary>
+<ul>
+<li><a href="/books/0009/">[商务印书馆汉译世界名著][A0107]人是机器-Mettrie</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.epistemology"><summary>认识论与科学哲学 · 8 篇</summary>
+<ul>
+<li><a href="/thoughts/0037/">新跃迁边缘感性直观</a></li>
+<li><a href="/books/0077/">[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德</a></li>
+<li><a href="/books/0054/">[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔</a></li>
+<li><a href="/books/0030/">[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑</a></li>
+<li><a href="/books/0029/">[商务印书馆汉译世界名著][A0512]自然哲学-石里克</a></li>
+<li><a href="/books/0025/">[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔</a></li>
+<li><a href="/books/0016/">[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄</a></li>
+<li><a href="/books/0010/">[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.ethics"><summary>伦理与实践哲学 · 6 篇</summary>
+<ul>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/thoughts/0015/">文明继承法</a></li>
+<li><a href="/thoughts/0012/">对“生存还是毁灭”这一问题的认识</a></li>
+<li><a href="/books/0116/">[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷</a></li>
+<li><a href="/books/0098/">活出生命的意义-Frank.V.E</a></li>
+<li><a href="/books/0046/">安静的位置-周国平</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.aesthetics"><summary>美学 · 2 篇</summary>
+<ul>
+<li><a href="/videos/0001/">中国美学-朱良志</a></li>
+<li><a href="/books/0003/">王国维</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.traditions"><summary>哲学史与思想传统 · 13 篇</summary>
+<ul>
+<li><a href="/books/0155/">[马克思恩格斯]研究计划-其他-马克思主义信仰十讲</a></li>
+<li><a href="/books/0154/">[马克思恩格斯]研究计划</a></li>
+<li><a href="/books/0150/">柏拉图</a></li>
+<li><a href="/books/0132/">马克思恩格斯箴言</a></li>
+<li><a href="/books/0120/">淮南子</a></li>
+<li><a href="/books/0118/">凡物流形</a></li>
+<li><a href="/books/0073/">查拉图斯特拉如是说-尼采</a></li>
+<li><a href="/books/0075/">[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔</a></li>
+<li><a href="/books/0064/">[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民</a></li>
+<li><a href="/books/0062/">传习录-王阳明</a></li>
+<li><a href="/books/0056/">论语-孔子</a></li>
+<li><a href="/books/0039/">瞧，这个人-尼采</a></li>
+<li><a href="/books/0018/">[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.religion"><summary>宗教与神学 · 3 篇</summary>
+<ul>
+<li><a href="/books/0071/">[佛教经典][DOING]</a></li>
+<li><a href="/books/0078/">[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫</a></li>
+<li><a href="/books/0006/">[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland</a></li>
+</ul>
+</details>
+<details id="knowledge-philosophy.logic"><summary>哲学逻辑 · 1 篇</summary>
+<ul>
+<li><a href="/books/0049/">[商务印书馆汉译世界名著][A0903]算术基础-弗雷格</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0155/">[马克思恩格斯]研究计划-其他-马克思主义信仰十讲</a></li>
+<li><a href="/books/0154/">[马克思恩格斯]研究计划</a></li>
+<li><a href="/books/0150/">柏拉图</a></li>
+<li><a href="/thoughts/0037/">新跃迁边缘感性直观</a></li>
+<li><a href="/books/0132/">马克思恩格斯箴言</a></li>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/thoughts/0015/">文明继承法</a></li>
+<li><a href="/thoughts/0012/">对“生存还是毁灭”这一问题的认识</a></li>
+<li><a href="/books/0120/">淮南子</a></li>
+<li><a href="/books/0118/">凡物流形</a></li>
+<li><a href="/books/0116/">[商务印书馆汉译世界名著][C0306]人类幸福论-约翰·格雷</a></li>
+<li><a href="/books/0098/">活出生命的意义-Frank.V.E</a></li>
+<li><a href="/books/0071/">[佛教经典][DOING]</a></li>
+<li><a href="/books/0078/">[商务印书馆汉译世界名著][A0109]袖珍神学-霍尔巴赫</a></li>
+<li><a href="/books/0077/">[商务印书馆汉译世界名著][A0403]范畴篇-解释篇-亚里士多德</a></li>
+<li><a href="/books/0073/">查拉图斯特拉如是说-尼采</a></li>
+<li><a href="/books/0075/">[商务印书馆汉译世界名著][A0711]人生的亲证-泰戈尔</a></li>
+<li><a href="/books/0064/">[商务印书馆汉译世界名著][A0209]一年有半-续一年有半-中江兆民</a></li>
+<li><a href="/books/0062/">传习录-王阳明</a></li>
+<li><a href="/books/0056/">论语-孔子</a></li>
+<li><a href="/books/0054/">[商务印书馆汉译世界名著][A0812]面向思的事情-海德格尔</a></li>
+<li><a href="/books/0049/">[商务印书馆汉译世界名著][A0903]算术基础-弗雷格</a></li>
+<li><a href="/books/0046/">安静的位置-周国平</a></li>
+<li><a href="/videos/0001/">中国美学-朱良志</a></li>
+<li><a href="/books/0039/">瞧，这个人-尼采</a></li>
+<li><a href="/books/0030/">[商务印书馆汉译世界名著][A0115]科学中华而不实的作风-赫尔岑</a></li>
+<li><a href="/books/0029/">[商务印书馆汉译世界名著][A0512]自然哲学-石里克</a></li>
+<li><a href="/books/0025/">[商务印书馆汉译世界名著][A0901]谈谈方法-笛卡尔</a></li>
+<li><a href="/books/0018/">[商务印书馆汉译世界名著][A0909]卡布斯教诲录-昂苏尔・玛阿里</a></li>
+<li><a href="/books/0016/">[商务印书馆汉译世界名著][A0103]对笛卡尔《沉思》的诘难-伽森狄</a></li>
+<li><a href="/books/0010/">[商务印书馆汉译世界名著][A0408]知性改进论-斯宾诺莎</a></li>
+<li><a href="/books/0009/">[商务印书馆汉译世界名著][A0107]人是机器-Mettrie</a></li>
+<li><a href="/books/0006/">[商务印书馆汉译世界名著][A0804]泛神论要义-John Toland</a></li>
+<li><a href="/books/0003/">王国维</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-language"><summary>语言与符号 · 1 篇笔记</summary>
+<p>研究语言结构、使用、习得、翻译与符号系统。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-language.linguistics"><summary>语言学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-language.semantics"><summary>语义与语用 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-language.writing"><summary>文字与书写 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-language.translation"><summary>翻译与语言习得 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-language.semiotics"><summary>符号学 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-language.rhetoric"><summary>修辞与写作 · 1 篇</summary>
+<ul>
+<li><a href="/books/0148/">公文写作大手笔</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0148/">公文写作大手笔</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-literature"><summary>文学与诗 · 104 篇笔记</summary>
+<p>在诗歌、小说、散文和戏剧中研究表达的可能。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-literature.theory"><summary>文学理论与批评 · 3 篇</summary>
+<ul>
+<li><a href="/books/0160/">文学想象与现代面向</a></li>
+<li><a href="/books/0142/">诗论</a></li>
+<li><a href="/books/0003/">王国维</a></li>
+</ul>
+</details>
+<details id="knowledge-literature.poetry"><summary>诗歌 · 53 篇</summary>
+<ul>
+<li><a href="/books/0157/">白</a></li>
+<li><a href="/books/0147/">巴比伦与巴比伦人赞歌</a></li>
+<li><a href="/books/0144/">2020年中国诗歌精选</a></li>
+<li><a href="/books/0143/">坍塌</a></li>
+<li><a href="/books/0138/">鲍迪埃诗选</a></li>
+<li><a href="/books/0135/">散文诗的新时代</a></li>
+<li><a href="/books/0131/">[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选</a></li>
+<li><a href="/books/0130/">[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选</a></li>
+<li><a href="/books/0129/">[20世纪世界诗歌译丛](第三辑)英国当代诗选</a></li>
+<li><a href="/books/0128/">[20世纪世界诗歌译丛](第三辑)沃伦诗选</a></li>
+<li><a href="/books/0127/">舒婷</a></li>
+<li><a href="/thoughts/0032/">诗本无名</a></li>
+<li><a href="/thoughts/0031/">未名大赋</a></li>
+<li><a href="/books/0125/">中国2014年度诗歌精选</a></li>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/thoughts/0009/">丙午三学究天歌</a></li>
+<li><a href="/books/0113/">[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选</a></li>
+<li><a href="/books/0112/">[诺贝尔文学奖][1996]辛波丝卡</a></li>
+<li><a href="/books/0105/">屈原</a></li>
+<li><a href="/books/0104/">李白</a></li>
+<li><a href="/books/0101/">[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选</a></li>
+<li><a href="/books/0097/">[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选</a></li>
+<li><a href="/books/0095/">[诺贝尔文学奖][1948]Thomas Stearns Eliot</a></li>
+<li><a href="/books/0090/">[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选</a></li>
+<li><a href="/books/0089/">[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册</a></li>
+<li><a href="/books/0087/">风雅俳句</a></li>
+<li><a href="/books/0086/">[20世纪世界诗歌译丛](第二辑)索德格朗诗全集</a></li>
+<li><a href="/books/0084/">散宜生诗-聂绀弩</a></li>
+<li><a href="/books/0082/">[诺贝尔文学奖][2011]特朗斯特罗姆</a></li>
+<li><a href="/books/0081/">[20世纪世界诗歌译丛](第二辑)聂鲁达诗选</a></li>
+<li><a href="/books/0080/">[20世纪世界诗歌译丛](第二辑)默温诗选上中下册</a></li>
+<li><a href="/books/0074/">[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选</a></li>
+<li><a href="/books/0069/">中国新诗百年大典-共30卷</a></li>
+<li><a href="/books/0067/">海子</a></li>
+<li><a href="/books/0063/">[20世纪世界诗歌译丛](第二辑)美洲译诗文选</a></li>
+<li><a href="/books/0059/">[诺贝尔文学奖][1956]希梅内斯</a></li>
+<li><a href="/books/0057/">[诺贝尔文学奖][1923]叶芝</a></li>
+<li><a href="/books/0052/">苏轼</a></li>
+<li><a href="/books/0051/">[诺贝尔文学奖][1913]泰戈尔</a></li>
+<li><a href="/books/0045/">[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册</a></li>
+<li><a href="/books/0040/">[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选</a></li>
+<li><a href="/books/0038/">[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆</a></li>
+<li><a href="/books/0024/">法国诗选</a></li>
+<li><a href="/books/0023/">[20世纪世界诗歌译丛](第一辑)切·米沃什诗选</a></li>
+<li><a href="/books/0022/">[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集</a></li>
+<li><a href="/books/0020/">[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选</a></li>
+<li><a href="/books/0019/">[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选</a></li>
+<li><a href="/books/0017/">[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选</a></li>
+<li><a href="/books/0015/">[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选</a></li>
+<li><a href="/books/0014/">[20世纪世界诗歌译丛](第一辑)里尔克诗选</a></li>
+<li><a href="/books/0013/">[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选</a></li>
+<li><a href="/books/0012/">[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选</a></li>
+<li><a href="/thoughts/0006/">A little poem</a></li>
+</ul>
+</details>
+<details id="knowledge-literature.fiction"><summary>小说与叙事 · 33 篇</summary>
+<ul>
+<li><a href="/books/0122/">鲁迅</a></li>
+<li><a href="/books/0119/">[诺贝尔文学奖][2024]韩江</a></li>
+<li><a href="/books/0117/">[诺贝尔文学奖][1994]福克纳</a></li>
+<li><a href="/books/0114/">王尔德</a></li>
+<li><a href="/books/0108/">源氏物语</a></li>
+<li><a href="/books/0106/">白夜行-东野圭吾</a></li>
+<li><a href="/books/0103/">纳博科夫</a></li>
+<li><a href="/books/0102/">沈从文</a></li>
+<li><a href="/books/0100/">红楼梦</a></li>
+<li><a href="/books/0093/">三岛由纪夫</a></li>
+<li><a href="/books/0092/">[诺贝尔文学奖][1982]马尔克斯</a></li>
+<li><a href="/books/0091/">Alice&#x27;s Adventures in Wonderland</a></li>
+<li><a href="/books/0088/">Woolf</a></li>
+<li><a href="/books/0083/">[诺贝尔文学奖][1968]川端康成</a></li>
+<li><a href="/books/0070/">[鲁迅全集][DOING]</a></li>
+<li><a href="/books/0079/">人间失格-太宰治</a></li>
+<li><a href="/books/0076/">老妓抄-冈本加乃子</a></li>
+<li><a href="/books/0072/">博尔赫斯</a></li>
+<li><a href="/books/0068/">伊索寓言-伊索</a></li>
+<li><a href="/books/0065/">伊恩·麦克尤恩</a></li>
+<li><a href="/books/0060/">[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔</a></li>
+<li><a href="/books/0061/">[诺贝尔文学奖][2003]库切</a></li>
+<li><a href="/books/0053/">[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺</a></li>
+<li><a href="/books/0050/">动物庄园-乔治奥威尔</a></li>
+<li><a href="/books/0047/">小王子-圣·埃克苏佩里</a></li>
+<li><a href="/books/0042/">[诺贝尔文学奖][1954]老人与海-海明威</a></li>
+<li><a href="/books/0044/">[诺贝尔文学奖][1907]老虎老虎-吉卜林</a></li>
+<li><a href="/books/0043/">[诺贝尔文学奖][1957]局外人-加缪</a></li>
+<li><a href="/books/0036/">[诺贝尔文学奖][2012]蛙-莫言</a></li>
+<li><a href="/books/0035/">毛姆</a></li>
+<li><a href="/books/0034/">三体-刘慈溪</a></li>
+<li><a href="/books/0033/">明清十大禁书</a></li>
+<li><a href="/books/0028/">王小波</a></li>
+</ul>
+</details>
+<details id="knowledge-literature.essays"><summary>散文与随笔 · 8 篇</summary>
+<ul>
+<li><a href="/books/0149/">老派约会之必要</a></li>
+<li><a href="/books/0145/">张爱玲</a></li>
+<li><a href="/thoughts/0034/">前无再前</a></li>
+<li><a href="/books/0046/">安静的位置-周国平</a></li>
+<li><a href="/books/0041/">张岱诗文集-夏咸淳校点</a></li>
+<li><a href="/thoughts/0005/">Someplace</a></li>
+<li><a href="/thoughts/0004/">Fire</a></li>
+<li><a href="/thoughts/0003/">Rain</a></li>
+</ul>
+</details>
+<details id="knowledge-literature.drama"><summary>戏剧文学 · 7 篇</summary>
+<ul>
+<li><a href="/thoughts/0012/">对“生存还是毁灭”这一问题的认识</a></li>
+<li><a href="/books/0110/">欧里庇得斯</a></li>
+<li><a href="/books/0109/">Sarah Kane</a></li>
+<li><a href="/books/0085/">[诺贝尔文学奖][1969]Samuel Beckett</a></li>
+<li><a href="/videos/0002/">北京人民艺术剧院话剧</a></li>
+<li><a href="/books/0066/">[诺贝尔文学奖][1925]萧伯纳</a></li>
+<li><a href="/books/0058/">[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克</a></li>
+</ul>
+</details>
+<details id="knowledge-literature.comparative"><summary>比较文学与文学史 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0160/">文学想象与现代面向</a></li>
+<li><a href="/books/0157/">白</a></li>
+<li><a href="/books/0149/">老派约会之必要</a></li>
+<li><a href="/books/0147/">巴比伦与巴比伦人赞歌</a></li>
+<li><a href="/books/0145/">张爱玲</a></li>
+<li><a href="/books/0144/">2020年中国诗歌精选</a></li>
+<li><a href="/books/0143/">坍塌</a></li>
+<li><a href="/books/0142/">诗论</a></li>
+<li><a href="/books/0138/">鲍迪埃诗选</a></li>
+<li><a href="/books/0135/">散文诗的新时代</a></li>
+<li><a href="/books/0131/">[20世纪世界诗歌译丛](第三辑)伽姆扎托夫爱情诗选</a></li>
+<li><a href="/books/0130/">[20世纪世界诗歌译丛](第三辑)菲利普·拉金诗选</a></li>
+<li><a href="/books/0129/">[20世纪世界诗歌译丛](第三辑)英国当代诗选</a></li>
+<li><a href="/books/0128/">[20世纪世界诗歌译丛](第三辑)沃伦诗选</a></li>
+<li><a href="/thoughts/0034/">前无再前</a></li>
+<li><a href="/books/0127/">舒婷</a></li>
+<li><a href="/thoughts/0032/">诗本无名</a></li>
+<li><a href="/thoughts/0031/">未名大赋</a></li>
+<li><a href="/books/0125/">中国2014年度诗歌精选</a></li>
+<li><a href="/thoughts/0023/">最近关切的5个问题</a></li>
+<li><a href="/thoughts/0012/">对“生存还是毁灭”这一问题的认识</a></li>
+<li><a href="/books/0122/">鲁迅</a></li>
+<li><a href="/thoughts/0009/">丙午三学究天歌</a></li>
+<li><a href="/books/0119/">[诺贝尔文学奖][2024]韩江</a></li>
+<li><a href="/books/0117/">[诺贝尔文学奖][1994]福克纳</a></li>
+<li><a href="/books/0114/">王尔德</a></li>
+<li><a href="/books/0113/">[20世纪世界诗歌译丛](第三辑)勃洛克抒情诗选</a></li>
+<li><a href="/books/0112/">[诺贝尔文学奖][1996]辛波丝卡</a></li>
+<li><a href="/books/0110/">欧里庇得斯</a></li>
+<li><a href="/books/0109/">Sarah Kane</a></li>
+<li><a href="/books/0108/">源氏物语</a></li>
+<li><a href="/books/0106/">白夜行-东野圭吾</a></li>
+<li><a href="/books/0105/">屈原</a></li>
+<li><a href="/books/0103/">纳博科夫</a></li>
+<li><a href="/books/0104/">李白</a></li>
+<li><a href="/books/0102/">沈从文</a></li>
+<li><a href="/books/0101/">[20世纪世界诗歌译丛](第三辑)二十世纪冰岛诗选</a></li>
+<li><a href="/books/0100/">红楼梦</a></li>
+<li><a href="/books/0097/">[20世纪世界诗歌译丛](第三辑)波普拉夫斯基诗选</a></li>
+<li><a href="/books/0095/">[诺贝尔文学奖][1948]Thomas Stearns Eliot</a></li>
+<li><a href="/books/0093/">三岛由纪夫</a></li>
+<li><a href="/books/0092/">[诺贝尔文学奖][1982]马尔克斯</a></li>
+<li><a href="/books/0090/">[20世纪世界诗歌译丛](第三辑)阿蒂拉-尤若夫诗选</a></li>
+<li><a href="/books/0091/">Alice&#x27;s Adventures in Wonderland</a></li>
+<li><a href="/books/0089/">[20世纪世界诗歌译丛](第二辑)约翰阿什贝利诗选上下册</a></li>
+<li><a href="/books/0088/">Woolf</a></li>
+<li><a href="/books/0087/">风雅俳句</a></li>
+<li><a href="/books/0086/">[20世纪世界诗歌译丛](第二辑)索德格朗诗全集</a></li>
+<li><a href="/books/0085/">[诺贝尔文学奖][1969]Samuel Beckett</a></li>
+<li><a href="/books/0084/">散宜生诗-聂绀弩</a></li>
+<li><a href="/books/0083/">[诺贝尔文学奖][1968]川端康成</a></li>
+<li><a href="/books/0082/">[诺贝尔文学奖][2011]特朗斯特罗姆</a></li>
+<li><a href="/books/0070/">[鲁迅全集][DOING]</a></li>
+<li><a href="/books/0081/">[20世纪世界诗歌译丛](第二辑)聂鲁达诗选</a></li>
+<li><a href="/books/0080/">[20世纪世界诗歌译丛](第二辑)默温诗选上中下册</a></li>
+<li><a href="/books/0079/">人间失格-太宰治</a></li>
+<li><a href="/books/0076/">老妓抄-冈本加乃子</a></li>
+<li><a href="/books/0074/">[20世纪世界诗歌译丛](第二辑)曼德尔施塔姆诗选</a></li>
+<li><a href="/books/0072/">博尔赫斯</a></li>
+<li><a href="/books/0068/">伊索寓言-伊索</a></li>
+<li><a href="/videos/0002/">北京人民艺术剧院话剧</a></li>
+<li><a href="/books/0069/">中国新诗百年大典-共30卷</a></li>
+<li><a href="/books/0067/">海子</a></li>
+<li><a href="/books/0066/">[诺贝尔文学奖][1925]萧伯纳</a></li>
+<li><a href="/books/0065/">伊恩·麦克尤恩</a></li>
+<li><a href="/books/0063/">[20世纪世界诗歌译丛](第二辑)美洲译诗文选</a></li>
+<li><a href="/books/0060/">[诺贝尔文学奖][1972]短篇小说选-亨利希·伯尔</a></li>
+<li><a href="/books/0061/">[诺贝尔文学奖][2003]库切</a></li>
+<li><a href="/books/0059/">[诺贝尔文学奖][1956]希梅内斯</a></li>
+<li><a href="/books/0053/">[诺贝尔文学奖][2022]悠悠岁月-安妮·艾尔诺</a></li>
+<li><a href="/books/0058/">[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克</a></li>
+<li><a href="/books/0057/">[诺贝尔文学奖][1923]叶芝</a></li>
+<li><a href="/books/0050/">动物庄园-乔治奥威尔</a></li>
+<li><a href="/books/0052/">苏轼</a></li>
+<li><a href="/books/0051/">[诺贝尔文学奖][1913]泰戈尔</a></li>
+<li><a href="/books/0047/">小王子-圣·埃克苏佩里</a></li>
+<li><a href="/books/0046/">安静的位置-周国平</a></li>
+<li><a href="/books/0045/">[20世纪世界诗歌译丛](第二辑)非洲现代诗选上下册</a></li>
+<li><a href="/books/0042/">[诺贝尔文学奖][1954]老人与海-海明威</a></li>
+<li><a href="/books/0044/">[诺贝尔文学奖][1907]老虎老虎-吉卜林</a></li>
+<li><a href="/books/0043/">[诺贝尔文学奖][1957]局外人-加缪</a></li>
+<li><a href="/books/0041/">张岱诗文集-夏咸淳校点</a></li>
+<li><a href="/books/0040/">[20世纪世界诗歌译丛](第二辑)吉皮乌斯诗选</a></li>
+<li><a href="/books/0038/">[诺贝尔文学奖][1901]孤独与沉思-苏利·普吕多姆</a></li>
+<li><a href="/books/0036/">[诺贝尔文学奖][2012]蛙-莫言</a></li>
+<li><a href="/books/0035/">毛姆</a></li>
+<li><a href="/books/0034/">三体-刘慈溪</a></li>
+<li><a href="/books/0033/">明清十大禁书</a></li>
+<li><a href="/books/0028/">王小波</a></li>
+<li><a href="/books/0024/">法国诗选</a></li>
+<li><a href="/books/0023/">[20世纪世界诗歌译丛](第一辑)切·米沃什诗选</a></li>
+<li><a href="/books/0022/">[20世纪世界诗歌译丛](第一辑)卡瓦菲斯诗集</a></li>
+<li><a href="/books/0020/">[20世纪世界诗歌译丛](第一辑)狄兰·托马斯诗选</a></li>
+<li><a href="/books/0019/">[20世纪世界诗歌译丛](第一辑)伊凡·哥尔诗选</a></li>
+<li><a href="/books/0017/">[20世纪世界诗歌译丛](第一辑)伊丽莎白·毕肖普诗选</a></li>
+<li><a href="/books/0015/">[20世纪世界诗歌译丛](第一辑)耶胡达·阿米亥诗选</a></li>
+<li><a href="/books/0014/">[20世纪世界诗歌译丛](第一辑)里尔克诗选</a></li>
+<li><a href="/books/0013/">[20世纪世界诗歌译丛](第一辑)保罗·策兰诗文选</a></li>
+<li><a href="/books/0012/">[20世纪世界诗歌译丛](第一辑)安东尼奥·马查多诗选</a></li>
+<li><a href="/books/0003/">王国维</a></li>
+<li><a href="/thoughts/0006/">A little poem</a></li>
+<li><a href="/thoughts/0005/">Someplace</a></li>
+<li><a href="/thoughts/0004/">Fire</a></li>
+<li><a href="/thoughts/0003/">Rain</a></li>
+</ul></details>
+<details class="knowledge-static-domain" id="knowledge-arts"><summary>艺术与设计 · 10 篇笔记</summary>
+<p>理解视觉、声音、身体、影像和设计中的创作与研究。</p>
+<div class="knowledge-static-branches">
+<details id="knowledge-arts.visual"><summary>美术与视觉艺术 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-arts.music"><summary>音乐 · 0 篇</summary>
+<p>这个分支尚无公开笔记。</p>
+</details>
+<details id="knowledge-arts.performance"><summary>舞蹈与表演 · 6 篇</summary>
+<ul>
+<li><a href="/books/0110/">欧里庇得斯</a></li>
+<li><a href="/books/0109/">Sarah Kane</a></li>
+<li><a href="/books/0085/">[诺贝尔文学奖][1969]Samuel Beckett</a></li>
+<li><a href="/videos/0002/">北京人民艺术剧院话剧</a></li>
+<li><a href="/books/0066/">[诺贝尔文学奖][1925]萧伯纳</a></li>
+<li><a href="/books/0058/">[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克</a></li>
+</ul>
+</details>
+<details id="knowledge-arts.film"><summary>电影与影像 · 1 篇</summary>
+<ul>
+<li><a href="/videos/0003/">TheBirthOfANation</a></li>
+</ul>
+</details>
+<details id="knowledge-arts.design"><summary>设计学 · 1 篇</summary>
+<ul>
+<li><a href="/books/0136/">合二为一-场地与机理的解读</a></li>
+</ul>
+</details>
+<details id="knowledge-arts.history"><summary>艺术史与理论 · 1 篇</summary>
+<ul>
+<li><a href="/videos/0001/">中国美学-朱良志</a></li>
+</ul>
+</details>
+<details id="knowledge-arts.digital"><summary>数字与生成艺术 · 1 篇</summary>
+<ul>
+<li><a href="/thoughts/0025/">Fable5和GPT5.5的图片生成质量比较</a></li>
+</ul>
+</details>
+</div><p>本领域全部笔记</p><ul>
+<li><a href="/books/0136/">合二为一-场地与机理的解读</a></li>
+<li><a href="/videos/0003/">TheBirthOfANation</a></li>
+<li><a href="/thoughts/0025/">Fable5和GPT5.5的图片生成质量比较</a></li>
+<li><a href="/books/0110/">欧里庇得斯</a></li>
+<li><a href="/books/0109/">Sarah Kane</a></li>
+<li><a href="/books/0085/">[诺贝尔文学奖][1969]Samuel Beckett</a></li>
+<li><a href="/videos/0002/">北京人民艺术剧院话剧</a></li>
+<li><a href="/books/0066/">[诺贝尔文学奖][1925]萧伯纳</a></li>
+<li><a href="/books/0058/">[诺贝尔文学奖][1911]青鸟-莫里斯·梅特林克</a></li>
+<li><a href="/videos/0001/">中国美学-朱良志</a></li>
+</ul></details>
+</div>
+<!-- KNOWLEDGE_ATLAS_STATIC_END -->
+            <div class="knowledge-map-colophon"><span>领域的边界可以修订，求知的方向始终敞开。</span><a href="#knowledge-foundations">分类依据与开放边界 <span aria-hidden="true">↘</span></a></div>
+        </section>
+
+        <section class="knowledge-open" aria-labelledby="knowledge-open-title">
+            <div class="knowledge-open-heading"><p class="eyebrow">BEYOND THE KNOWN</p><h2 id="knowledge-open-title">为尚未命名的知识<br><em>留一个位置。</em></h2></div>
+            <div class="knowledge-open-copy"><p>人类发现、机器发现与共同创造，都可以进入相应领域。新的对象与方法，也可以长出新的分支。</p><p>地图记录已知的结构，也容纳交叉、争议与未知。知识的来源和它得到怎样的验证，分别留下记录。</p><div id="knowledge-frontiers" class="knowledge-frontiers"></div></div>
         </section>
 
         <section class="home-section" id="latest" aria-labelledby="latest-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">01 · RECENT WRITING</p>
+                    <p class="eyebrow">FIELD NOTES · RECENT WRITING</p>
                     <h2 id="latest-title">最近，在思考什么。</h2>
                 </div>
-                <p>读书、随笔与研究，沿着最近的记录继续前行。</p>
+                <p>地图上的足迹，从最近的一页继续。</p>
             </div>
             <div class="evidence-layout">
                 <ol class="evidence-list" id="latest-evidence"></ol>
-                <aside class="corpus-panel provenance-rail" aria-labelledby="corpus-title">
-                    <p class="eyebrow">CORPUS PULSE</p>
-                    <h3 id="corpus-title">可持续积累的公开语料。</h3>
-                    <div class="corpus-metrics">
-                        <div class="corpus-metric"><strong id="metric-total">—</strong><span>篇文章</span></div>
-                        <div class="corpus-metric"><strong id="metric-years">—</strong><span>年记录</span></div>
-                        <div class="corpus-metric"><strong id="metric-tagged">—</strong><span>带标签</span></div>
-                        <div class="corpus-metric"><strong id="metric-series">—</strong><span>个系列</span></div>
-                        <div class="corpus-metric"><strong id="metric-mapped">—</strong><span>已关联</span></div>
-                    </div>
-                    <a class="button" href="./stats.html">打开证据台</a>
-                </aside>
+                <aside class="knowledge-reading-rail"><p class="eyebrow">WAYS INTO THE COLLECTION</p><a href="./books.html">书籍与阅读 <span>↗</span></a><a href="./thoughts.html">思考与研究 <span>↗</span></a><a href="./series.html">长期阅读计划 <span>↗</span></a><a href="./archive.html">全部文库 <span>↗</span></a></aside>
             </div>
         </section>
 
-        <section class="home-section" aria-labelledby="field-title">
+        <section class="home-section knowledge-research-lines" aria-labelledby="field-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">02 · CONNECTED FIELDS</p>
-                    <h2 id="field-title">从不同的方向，理解同一个世界。</h2>
+                    <p class="eyebrow">PERSONAL RESEARCH PATHS</p>
+                    <h2 id="field-title">在广阔之中，持续深耕。</h2>
                 </div>
-                <p>每条研究线都回答同一个更大的问题：如何让知识、能力与行动在真实约束中形成可继承的秩序。</p>
+                <p>五条个人研究线，穿行于不同领域之间。</p>
             </div>
             <div class="registry-caption"><span>五条相互连接的研究线</span><strong id="field-coverage">— / — mapped</strong></div>
             <ol class="field-grid field-registry" id="field-grid"></ol>
@@ -107,7 +1559,7 @@
         <section class="home-section" aria-labelledby="selected-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">03 · LONGER PATHS</p>
+                    <p class="eyebrow">LONGER PATHS</p>
                     <h2 id="selected-title">值得反复回到的地方。</h2>
                 </div>
                 <p>精选不是排行榜，而是跨越算法、文学、哲学与治理的几条深层路径。</p>
@@ -122,7 +1574,7 @@
                     <figcaption>Qirong Zhang · Complex Intelligence Architect</figcaption>
                 </figure>
                 <div class="about-copy">
-                    <p class="eyebrow">04 · AUTHOR / STEWARD</p>
+                    <p class="eyebrow">AUTHOR / STEWARD</p>
                     <h2 id="about-title">复杂智能系统架构者。</h2>
                     <p class="about-lead">以约束为骨、工程为证，以人的全面发展为归宿，构造可演化的人机共生秩序。</p>
                     <p>我们扎根组合理论、刚性理论与智能软件工程交汇前沿，以“对象—关系—约束—表征—验证”贯通理论与工程：让算法有边界，让软件有生命，让智能在可验证、可治理的秩序中生长。</p>
@@ -130,6 +1582,14 @@
                     <div class="about-principles" id="about-principles"></div>
                 </div>
             </div>
+        </section>
+        <section class="knowledge-foundations" id="knowledge-foundations" aria-labelledby="knowledge-foundations-title">
+            <details><summary id="knowledge-foundations-title">地图的依据与边界 <span>分类版本 · 2026.11.16</span></summary><div class="knowledge-foundations-body">
+                <p>这张地图面向所有人类与 AI 的知识领域。当前版本逐项对照 OECD FORD 的 42 个科研二级领域、UNESCO ISCED-F 的 80 个实质详细领域，以及中国《研究生教育学科专业目录（2022年）》的 117 个一级学科与全部 67 个专业学位类别。</p>
+                <p>对照确认的是这 306 个目录条目的导航归属，不等于全部知识已经收录，也不证明笔记中的观点成立。网站的分区服务于阅读，可以和原目录不同；同一内容可以从多个领域进入。</p>
+                <div id="knowledge-sources"><a href="./data/knowledge-standards.json">查看分类来源清单</a> · <a href="./data/knowledge-crosswalk.json">查看逐项对应关系</a></div>
+                <p>实践经验、地方知识与新兴交叉领域也有位置。新增领域采用独立编号；分类可以细分、重组并保留旧链接。尚未归类的笔记会单独显示，不会被悄悄算作已覆盖。</p>
+            </div></details>
         </section>
     </main>
 
@@ -150,10 +1610,12 @@
 
     <script src="./site-data.js"></script>
     <script src="./homepage-data.js"></script>
+    <script src="./knowledge-atlas-data.js"></script>
     <script src="./includes/js/projection-truth.js"></script>
     <script src="./includes/js/image-sources.js"></script>
     <script src="./includes/js/spatial-browser.js"></script>
     <script src="./includes/js/home-page.js"></script>
+    <script src="./includes/js/knowledge-atlas.js"></script>
     <script src="./includes/js/site-shell.js"></script>
 </body>
 </html>
