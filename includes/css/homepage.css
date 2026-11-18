@@ -2,7 +2,7 @@
 
 .home-page { overflow-x:clip; overflow-y:visible; }
 .home-main { width:100%; margin:auto; }
-.home-section { width:min(var(--content-wide),calc(100% - 96px)); margin:0 auto; padding:80px 0; border-bottom:1px solid var(--line); }
+.home-section { width:var(--page-width); margin:0 auto; padding:clamp(42px,5.5vw,80px) 0; border-bottom:1px solid var(--line); }
 .home-kicker { max-width:400px; line-height:1.8; }
 .spatial-intro .home-motto { margin:28px 0 24px; font-family:var(--font-editorial); font-size:clamp(58px,7.1vw,106px); font-weight:400; line-height:.98; letter-spacing:-.045em; }
 .home-motto span,.home-motto em { display:block; }
@@ -63,7 +63,6 @@
 .site-provenance { margin-top:15px; font-size:11px; color:var(--text-tertiary); max-width:560px; }
 .site-provenance summary { cursor:pointer; }
 @media(max-width:1050px) {
- .home-section { width:calc(100% - 48px); }
  .evidence-layout { grid-template-columns:minmax(0,1fr) 230px; gap:35px; }
  .field-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
  .field-register-entry { border-bottom:1px solid var(--line); }
@@ -76,7 +75,7 @@
  .stage-colophon { margin-top:28px; padding:18px 0 0; font-size:10px; gap:12px; }
  .stage-colophon > span > span { display:block; margin:4px 0 0; }
  .stage-colophon a span { margin-left:8px; }
- .home-section { width:calc(100% - 36px); padding:36px 0; }
+ .home-section { padding:36px 0; }
  .section-heading { display:block; margin-bottom:20px; }
  .section-heading > p { margin-top:15px; font-size:12px; }
  .evidence-layout { display:block; }

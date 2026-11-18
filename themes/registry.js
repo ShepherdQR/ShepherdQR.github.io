@@ -5,7 +5,7 @@ window.ZQR_THEMES = {
   "themes": [
     {
       "id": "weave",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "contractVersion": 1,
       "label": "相位织场",
       "description": "在连续的光学织面中，让思想彼此照亮。",

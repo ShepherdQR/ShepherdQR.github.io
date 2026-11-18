@@ -1,7 +1,7 @@
 html[data-theme="weave"] {
- --page-start:#182f32; --page-end:#102326; --page-glow:#607f77;
- --surface-base:#1b3335; --surface-raised:#263e40; --surface-inset:#142a2d; --surface-inverse:#f2ebdc;
- --text-primary:#f2eee4; --text-secondary:#c9d1c9; --text-tertiary:#a5b7b0; --text-inverse:#1b3031;
+ --page-start:#172d25; --page-end:#10231d; --page-glow:#788771;
+ --surface-base:#20382e; --surface-raised:#2b4539; --surface-inset:#162c24; --surface-inverse:#f4efdf;
+ --text-primary:#f4f0e4; --text-secondary:#d0d7c9; --text-tertiary:#aebfb1; --text-inverse:#20362b;
  --rule-subtle:rgba(222,231,216,.17); --rule-strong:rgba(222,231,216,.36); --focus-ring:#e6cc9f;
  --accent-selection:#d9bb86; --scene-line:159,192,177; --scene-light:218,188,134; --glass-tint:rgba(209,221,203,.06);
 }

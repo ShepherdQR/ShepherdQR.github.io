@@ -4,6 +4,8 @@
     const data = window.KNOWLEDGE_ATLAS;
     const host = document.getElementById('knowledge-interactive');
     if (!host || !data || !Array.isArray(data.domains) || !data.items) return;
+    const directory = document.querySelector('#knowledge-static .knowledge-directory');
+    if (!directory) return;
     const view = document.getElementById('knowledge-view');
     const breadcrumbs = document.getElementById('knowledge-breadcrumbs');
     const input = document.getElementById('knowledge-search');
@@ -21,6 +23,7 @@
     data.domains.forEach((d, i) => register(d, i));
     const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     let state = { node: '', query: '', type: 'all', limit: 18 };
+    let renderedSearch;
     let invalidLink = false;
     const resolve = id => data.redirects?.[id] || id;
     function readURL() {
@@ -44,6 +47,10 @@
         return u.pathname + u.search + u.hash;
     }
     const link = (id, title, extra = '') => `<a href="${esc(url({node:id,query:'',type:'all'}))}" data-knowledge-node="${esc(id)}" ${extra}>${esc(title)}</a>`;
+    // Enhance the printed index in place so both reading modes use the same groups and counts.
+    directory.querySelectorAll('[data-knowledge-node]').forEach(anchor => {
+        anchor.href = url({node:anchor.dataset.knowledgeNode, query:'', type:'all'});
+    });
     function navigate(next, replace = false, focus = true) {
         state = { ...state, ...next, limit: 18 }; invalidLink = false;
         try { history[replace ? 'replaceState' : 'pushState']({}, '', url(state)); } catch (_) { /* Sandboxed previews may deny history. */ }
@@ -78,13 +85,15 @@
             ${selected.length ? `<div class="knowledge-notes">${selected.slice(0,state.limit).map(note).join('')}</div>${selected.length > state.limit ? `<button class="knowledge-more" type="button" data-knowledge-more>继续展开 · 还有 ${selected.length-state.limit} 篇</button>` : ''}` : `<div class="knowledge-empty"><h3>${keys.length ? '这个类型下，暂时没有笔记。' : state.query ? '暂未找到相应记录。' : '这里，等待第一篇笔记。'}</h3><p>${state.query ? '试试较短的关键词，或回到全图搜索。' : '领域与分支已经有了位置。未来的阅读、问题与发现，会逐渐在这里留下痕迹。'}</p></div>`}`;
     }
     function render() {
+        renderedSearch = location.search;
         const node = nodes.get(state.node);
         const domain = node ? nodes.get(node.id.split('.')[0]) : null;
         const q = state.query.toLocaleLowerCase();
         input.value = state.query;
         input.placeholder = node ? `在${node.title}中搜索` : '搜索领域、书籍与思考';
         input.setAttribute('aria-label', input.placeholder);
-        const crumbs = [link('', '全部领域')];
+        const isDirectory = !node && state.node !== 'unassigned' && !q;
+        const crumbs = [isDirectory ? '<span aria-current="page">全部领域</span>' : link('', '全部领域')];
         if (node) {
             const path = []; let cursor = node;
             while (cursor) { path.unshift(cursor); cursor = nodes.get(cursor.parent); }
@@ -101,10 +110,8 @@
             markup += `<h2 class="knowledge-search-heading" data-knowledge-focus tabindex="-1">“${esc(state.query)}”的相关记录</h2>`;
             if (matches.length) markup += `<div class="knowledge-grid knowledge-subgrid">${matches.map(tile).join('')}</div>`;
             markup += notes(keys, '书籍与思考');
-        } else if (!node && state.node !== 'unassigned') {
+        } else if (isDirectory) {
             markup += '<h2 class="visually-hidden" data-knowledge-focus tabindex="-1">全部知识领域</h2>';
-            markup += `<div class="knowledge-grid">${data.domains.map(d => tile(nodes.get(d.id))).join('')}</div>`;
-            markup += '<div class="knowledge-legend"><span><i aria-hidden="true"></i>已有公开笔记</span><span>每个领域都可以进入 · 数量表示笔记，不表示知识的完成度</span></div>';
             if (data.unassigned.length) markup += `<p class="knowledge-scope-note">${link('unassigned', `${data.unassigned.length} 篇待归档笔记`)}</p>`;
         } else {
             const title = node?.title || '待归档笔记';
@@ -115,12 +122,13 @@
             markup += '<p class="knowledge-scope-note">主题关联依据公开标题、摘要与必要正文整理；未声明的内容来源与验证状态保持未标注。</p>';
         }
         view.innerHTML = markup;
+        if (isDirectory) view.appendChild(directory);
         host.dataset.knowledgeNode = state.node;
         const visibleCount = keys.filter(k => state.type === 'all' || data.items[k].type === state.type).length;
         status.textContent = q ? `找到 ${visibleCount} 篇相关笔记` : `${node?.title || '全部领域'}，${visibleCount} 篇公开笔记`;
     }
     host.addEventListener('click', event => {
-        const target = event.target.closest('[data-knowledge-node],[data-knowledge-type],[data-knowledge-more]');
+        const target = event.target.closest('a[data-knowledge-node], button[data-knowledge-type], button[data-knowledge-more]');
         if (!target || !host.contains(target) || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
         if (target.hasAttribute('data-knowledge-node')) {
             event.preventDefault(); navigate({ node:target.dataset.knowledgeNode, query:'', type:'all' });
@@ -135,7 +143,10 @@
     });
     form.addEventListener('submit', event => { event.preventDefault(); navigate({query:input.value.trim().slice(0,120)}, false, false); });
     input.addEventListener('input', () => { if (!input.value && state.query) navigate({query:''}, true, false); });
-    window.addEventListener('popstate', () => { readURL(); render(); });
+    window.addEventListener('popstate', () => {
+        if (location.search === renderedSearch) return;
+        readURL(); render();
+    });
     readURL(); render();
     document.getElementById('knowledge-static').hidden = true;
     host.hidden = false; form.hidden = false;

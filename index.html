@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="张棋荣的开放知识地图：面向人类与 AI 的知识领域，逐层探索学科、书籍与思考。以可核查的分类为坐标，为新的知识持续保留位置。">
-    <meta name="theme-color" content="#0d1716">
+    <meta name="theme-color" content="#172d25">
     <meta property="og:title" content="Pursuing Immortality · ZQR.WORLD">
     <meta property="og:description" content="向一切知识敞开。在人类与 AI 共同拓展的世界里，留下阅读、思考与发现的坐标。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zqr.world/">
-    <meta property="og:image" content="https://zqr.world/resources/pics/agi-structure-plan-nine-grid-v2.png">
+    <meta property="og:image" content="https://zqr.world/resources/atlas/paper-relief.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="纸上山脉，一册摊开的地图集，书页层叠成等高线山脊。">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://zqr.world/">
     <link rel="alternate" type="application/atom+xml" href="./includes/atom.xml" title="ZQR.WORLD Atom feed">
@@ -24,7 +27,7 @@
 <body class="home-page">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
 
-    <header class="global-header">
+    <header class="global-header" id="top">
         <a class="brand" href="./index.html" aria-label="ZQR.WORLD 首页">
             <span class="brand-mark" aria-hidden="true"></span>
             <span class="brand-copy">
@@ -44,63 +47,110 @@
     <main class="home-main" id="main-content">
         <section class="knowledge-intro" data-theme-scene aria-labelledby="hero-title">
             <div class="knowledge-intro-copy">
-                <p class="eyebrow">AN OPEN ATLAS · PURSUING IMMORTALITY</p>
+                <p class="cover-kicker"><span lang="en">Pursuing Immortality</span><a href="#about-title">张棋荣</a></p>
                 <h1 id="hero-title">向一切知识<span>敞开。</span></h1>
+                <p class="cover-deck">在人类与 AI 共同拓展的知识世界里，<br>留下阅读、思考与发现的坐标。</p>
+                <div class="cover-links">
+                    <a class="cover-primary" href="#knowledge-map">探索知识地图 <span aria-hidden="true">↓</span></a>
+                    <a class="cover-secondary" href="./archive.html">浏览文库 <span aria-hidden="true">→</span></a>
+                </div>
             </div>
-            <div class="knowledge-intro-aside">
-                <p>在人类与 AI 共同拓展的知识世界里，<br>留下阅读、思考与发现的坐标。</p>
-                <div class="knowledge-signature">张棋荣 <span>QIRONG ZHANG / EST. 2020</span></div>
-            </div>
+            <figure class="cover-plate">
+                <picture>
+                    <source type="image/webp" srcset="./resources/atlas/paper-relief-720.webp 720w, ./resources/atlas/paper-relief-1440.webp 1440w" sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1400px) 52vw, 704px">
+                    <img src="./resources/atlas/paper-relief.jpg" width="1200" height="800" fetchpriority="high" alt="摊开的地图集里，层层纸页沿等高线隆起成山，一枚朱红书签垂出书脊。">
+                </picture>
+                <figcaption><span>封面作品《纸上山脉》</span><span>AI 生成图像</span></figcaption>
+            </figure>
         </section>
 
         <section class="knowledge-atlas" id="knowledge-map" aria-labelledby="knowledge-heading">
-            <div class="knowledge-toolbar">
-                <div class="knowledge-map-label"><span class="knowledge-compass" aria-hidden="true">＋</span><div><p class="eyebrow">THE KNOWLEDGE LANDSCAPE</p><h2 id="knowledge-heading">知识地图</h2></div></div>
-                <form id="knowledge-search-form" role="search" hidden>
-                    <label class="visually-hidden" for="knowledge-search">搜索领域、书籍与思考</label>
-                    <input id="knowledge-search" type="search" placeholder="搜索领域、书籍与思考" autocomplete="off" maxlength="120">
-                    <button type="submit" aria-label="搜索知识地图">搜索 <span aria-hidden="true">↗</span></button>
-                </form>
-            </div>
-            <div id="knowledge-interactive" hidden>
-                <nav class="knowledge-breadcrumbs" id="knowledge-breadcrumbs" aria-label="知识地图路径"></nav>
-                <div id="knowledge-view"></div>
-                <p id="knowledge-status" class="visually-hidden" role="status" aria-live="polite"></p>
-            </div>
+            <div class="knowledge-sheet">
+                <div class="knowledge-toolbar">
+                    <div class="knowledge-map-label"><p class="eyebrow" lang="en">Subject Index</p><h2 id="knowledge-heading">知识地图</h2></div>
+                    <form id="knowledge-search-form" role="search" hidden>
+                        <label class="visually-hidden" for="knowledge-search">搜索领域、书籍与思考</label>
+                        <input id="knowledge-search" type="search" placeholder="搜索领域、书籍与思考" autocomplete="off" maxlength="120">
+                        <button type="submit" aria-label="搜索知识地图">搜索 <span aria-hidden="true">→</span></button>
+                    </form>
+                </div>
+                <div id="knowledge-interactive" hidden>
+                    <nav class="knowledge-breadcrumbs" id="knowledge-breadcrumbs" aria-label="知识地图路径"></nav>
+                    <div id="knowledge-view"></div>
+                    <p id="knowledge-status" class="visually-hidden" role="status" aria-live="polite"></p>
+                </div>
             <!-- KNOWLEDGE_ATLAS_STATIC_START -->
 <div class="knowledge-static" id="knowledge-static">
 <p class="knowledge-static-intro">逐层打开领域，阅读其中的书籍与思考。</p>
-<div class="knowledge-static-grid">
-<a class="knowledge-static-tile" href="#knowledge-math"><span>数学与逻辑</span><small>9 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-systems"><span>系统与复杂性</span><small>3 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-computing"><span>计算与软件</span><small>12 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-ai"><span>人工智能</span><small>12 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-information"><span>信息与知识</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-physics"><span>物理与宇宙</span><small>2 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-chemistry"><span>化学与材料</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-earth"><span>地球与空间</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-environment"><span>环境与生态</span><small>0 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-life"><span>生命与演化</span><small>0 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-health"><span>医学与健康</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-agriculture"><span>农林牧渔</span><small>0 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-mind"><span>心智与行为</span><small>3 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-education"><span>教育与研究</span><small>9 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-practice"><span>生活与技艺</span><small>7 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-engineering"><span>工程与制造</span><small>2 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-energy"><span>能源与资源</span><small>0 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-built"><span>建筑与城市</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-transport"><span>交通与航天</span><small>3 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-security"><span>军事与安全</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-society"><span>社会与人类学</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-economics"><span>经济与金融</span><small>2 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-management"><span>管理与组织</span><small>10 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-politics"><span>政治与治理</span><small>15 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-law"><span>法律与正义</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-history"><span>历史与文明</span><small>23 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-philosophy"><span>哲学与宗教</span><small>34 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-language"><span>语言与符号</span><small>1 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-literature"><span>文学与诗</span><small>104 篇笔记</small></a>
-<a class="knowledge-static-tile" href="#knowledge-arts"><span>艺术与设计</span><small>10 篇笔记</small></a>
+<div class="knowledge-directory">
+<nav class="subject-shortcuts" aria-label="跳到学科分组">
+<a href="#family-formal">形式与智能</a>
+<a href="#family-nature">自然与宇宙</a>
+<a href="#family-living">生命与生活</a>
+<a href="#family-making">技术与行动</a>
+<a href="#family-society">社会与制度</a>
+<a href="#family-humanities">人文与表达</a>
+</nav>
+<section class="subject-family" data-family="formal" aria-labelledby="family-formal">
+<p class="family-name-en" lang="en">FORM &amp; INTELLIGENCE</p>
+<h3 id="family-formal" tabindex="-1">形式与智能</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="math" href="#knowledge-math"><span class="subject-name">数学与逻辑<span lang="en">Mathematics &amp; Logic</span></span><small>9 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="systems" href="#knowledge-systems"><span class="subject-name">系统与复杂性<span lang="en">Systems &amp; Complexity</span></span><small>3 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="computing" href="#knowledge-computing"><span class="subject-name">计算与软件<span lang="en">Computing &amp; Software</span></span><small>12 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="ai" href="#knowledge-ai"><span class="subject-name">人工智能<span lang="en">Artificial Intelligence</span></span><small>12 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="information" href="#knowledge-information"><span class="subject-name">信息与知识<span lang="en">Information &amp; Knowledge</span></span><small>1 篇笔记</small></a></li>
+</ul></section>
+<section class="subject-family" data-family="nature" aria-labelledby="family-nature">
+<p class="family-name-en" lang="en">NATURE &amp; COSMOS</p>
+<h3 id="family-nature" tabindex="-1">自然与宇宙</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="physics" href="#knowledge-physics"><span class="subject-name">物理与宇宙<span lang="en">Physics &amp; Cosmos</span></span><small>2 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="chemistry" href="#knowledge-chemistry"><span class="subject-name">化学与材料<span lang="en">Chemistry &amp; Materials</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="earth" href="#knowledge-earth"><span class="subject-name">地球与空间<span lang="en">Earth &amp; Geography</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="environment" href="#knowledge-environment"><span class="subject-name">环境与生态<span lang="en">Environment &amp; Ecology</span></span><small>暂无笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="life" href="#knowledge-life"><span class="subject-name">生命与演化<span lang="en">Life &amp; Evolution</span></span><small>暂无笔记</small></a></li>
+</ul></section>
+<section class="subject-family" data-family="living" aria-labelledby="family-living">
+<p class="family-name-en" lang="en">LIFE &amp; EXPERIENCE</p>
+<h3 id="family-living" tabindex="-1">生命与生活</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="health" href="#knowledge-health"><span class="subject-name">医学与健康<span lang="en">Medicine &amp; Health</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="agriculture" href="#knowledge-agriculture"><span class="subject-name">农林牧渔<span lang="en">Agriculture &amp; Veterinary Science</span></span><small>暂无笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="mind" href="#knowledge-mind"><span class="subject-name">心智与行为<span lang="en">Mind &amp; Behaviour</span></span><small>3 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="education" href="#knowledge-education"><span class="subject-name">教育与研究<span lang="en">Education &amp; Inquiry</span></span><small>9 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="practice" href="#knowledge-practice"><span class="subject-name">生活与技艺<span lang="en">Life, Craft &amp; Services</span></span><small>7 篇笔记</small></a></li>
+</ul></section>
+<section class="subject-family" data-family="making" aria-labelledby="family-making">
+<p class="family-name-en" lang="en">TECHNOLOGY &amp; ACTION</p>
+<h3 id="family-making" tabindex="-1">技术与行动</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="engineering" href="#knowledge-engineering"><span class="subject-name">工程与制造<span lang="en">Engineering &amp; Manufacturing</span></span><small>2 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="energy" href="#knowledge-energy"><span class="subject-name">能源与资源<span lang="en">Energy &amp; Resources</span></span><small>暂无笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="built" href="#knowledge-built"><span class="subject-name">建筑与城市<span lang="en">Architecture &amp; Built Environment</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="transport" href="#knowledge-transport"><span class="subject-name">交通与航天<span lang="en">Transport &amp; Aerospace</span></span><small>3 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="security" href="#knowledge-security"><span class="subject-name">军事与安全<span lang="en">Security, Defence &amp; Risk</span></span><small>1 篇笔记</small></a></li>
+</ul></section>
+<section class="subject-family" data-family="society" aria-labelledby="family-society">
+<p class="family-name-en" lang="en">SOCIETY &amp; INSTITUTIONS</p>
+<h3 id="family-society" tabindex="-1">社会与制度</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="society" href="#knowledge-society"><span class="subject-name">社会与人类学<span lang="en">Society &amp; Anthropology</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="economics" href="#knowledge-economics"><span class="subject-name">经济与金融<span lang="en">Economics &amp; Finance</span></span><small>2 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="management" href="#knowledge-management"><span class="subject-name">管理与组织<span lang="en">Management &amp; Organisations</span></span><small>10 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="politics" href="#knowledge-politics"><span class="subject-name">政治与治理<span lang="en">Politics &amp; Governance</span></span><small>15 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="law" href="#knowledge-law"><span class="subject-name">法律与正义<span lang="en">Law &amp; Justice</span></span><small>1 篇笔记</small></a></li>
+</ul></section>
+<section class="subject-family" data-family="humanities" aria-labelledby="family-humanities">
+<p class="family-name-en" lang="en">HUMANITIES &amp; EXPRESSION</p>
+<h3 id="family-humanities" tabindex="-1">人文与表达</h3>
+<ul>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="history" href="#knowledge-history"><span class="subject-name">历史与文明<span lang="en">History &amp; Civilisations</span></span><small>23 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="philosophy" href="#knowledge-philosophy"><span class="subject-name">哲学与宗教<span lang="en">Philosophy &amp; Religion</span></span><small>34 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="language" href="#knowledge-language"><span class="subject-name">语言与符号<span lang="en">Language &amp; Signs</span></span><small>1 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="literature" href="#knowledge-literature"><span class="subject-name">文学与诗<span lang="en">Literature &amp; Poetry</span></span><small>104 篇笔记</small></a></li>
+<li><a class="knowledge-tile subject-link" data-knowledge-node="arts" href="#knowledge-arts"><span class="subject-name">艺术与设计<span lang="en">Arts &amp; Design</span></span><small>10 篇笔记</small></a></li>
+</ul></section>
 </div>
 <details class="knowledge-static-domain" id="knowledge-math"><summary>数学与逻辑 · 9 篇笔记</summary>
 <p>从数、结构与空间，到变化、不确定性和推理的边界。</p>
@@ -1521,7 +1571,8 @@
 </ul></details>
 </div>
 <!-- KNOWLEDGE_ATLAS_STATIC_END -->
-            <div class="knowledge-map-colophon"><span>领域的边界可以修订，求知的方向始终敞开。</span><a href="#knowledge-foundations">分类依据与开放边界 <span aria-hidden="true">↘</span></a></div>
+                <div class="knowledge-map-colophon"><a href="#knowledge-foundations">分类依据与开放边界 <span aria-hidden="true">↘</span></a><a href="#top">回到页首 <span aria-hidden="true">↑</span></a></div>
+            </div>
         </section>
 
         <section class="knowledge-open" aria-labelledby="knowledge-open-title">

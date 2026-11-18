@@ -164,9 +164,32 @@ def static_html(payload: dict) -> str:
             chunks.append('</ul>')
         chunks.append('</details>')
         return '\n'.join(chunks)
-    lines = ['<div class="knowledge-static" id="knowledge-static">', '<p class="knowledge-static-intro">逐层打开领域，阅读其中的书籍与思考。</p>', '<div class="knowledge-static-grid">']
-    for d in payload['domains']:
-        lines.append(f'<a class="knowledge-static-tile" href="#knowledge-{d["id"]}"><span>{esc(d["title"])}</span><small>{len(d["itemKeys"])} 篇笔记</small></a>')
+    groups = []
+    for family in payload['families']:
+        domains = [domain for domain in payload['domains'] if domain['family'] == family['id']]
+        if domains:
+            groups.append((family, domains))
+    lines = ['<div class="knowledge-static" id="knowledge-static">',
+             '<p class="knowledge-static-intro">逐层打开领域，阅读其中的书籍与思考。</p>',
+             '<div class="knowledge-directory">',
+             '<nav class="subject-shortcuts" aria-label="跳到学科分组">']
+    for family, _ in groups:
+        lines.append(f'<a href="#family-{esc(family["id"], quote=True)}">{esc(family["title"])}</a>')
+    lines.append('</nav>')
+    for family, domains in groups:
+        family_id = esc(family['id'], quote=True)
+        lines.append(f'<section class="subject-family" data-family="{family_id}" aria-labelledby="family-{family_id}">')
+        if family.get('en'):
+            lines.append(f'<p class="family-name-en" lang="en">{esc(family["en"])}</p>')
+        lines.extend([f'<h3 id="family-{family_id}" tabindex="-1">{esc(family["title"])}</h3>', '<ul>'])
+        for domain in domains:
+            ident = esc(domain['id'], quote=True)
+            count = len(domain['itemKeys'])
+            count_label = f'{count} 篇笔记' if count else '暂无笔记'
+            translation = f'<span lang="en">{esc(domain["en"])}</span>' if domain.get('en') else ''
+            lines.append(f'<li><a class="knowledge-tile subject-link" data-knowledge-node="{ident}" href="#knowledge-{ident}">'
+                         f'<span class="subject-name">{esc(domain["title"])}{translation}</span><small>{count_label}</small></a></li>')
+        lines.append('</ul></section>')
     lines.append('</div>')
     for d in payload['domains']:
         lines.extend([f'<details class="knowledge-static-domain" id="knowledge-{d["id"]}"><summary>{esc(d["title"])} · {len(d["itemKeys"])} 篇笔记</summary>',f'<p>{esc(d["description"])}</p>', '<div class="knowledge-static-branches">'])

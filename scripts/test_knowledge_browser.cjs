@@ -20,9 +20,29 @@ const check=(name,result)=>{assert(result,name);checks.push(name);};
     const payload=await page.evaluate(()=>window.KNOWLEDGE_ATLAS);
     check('independent inventories fully represented',payload.counts.standardEntries===306);
     check('all current notes classified',payload.unassigned.length===0&&payload.counts.articles===Object.keys(payload.items).length);
+    const subjects = page.locator('#knowledge-view .subject-link');
+    const linkedSubjects = await subjects.evaluateAll(links => links.map(link => ({
+        id: new URL(link.href).searchParams.get('domain'),
+        family: link.closest('.subject-family').dataset.family
+    })));
+    const expectedSubjects = payload.domains.map(({id, family}) => ({id, family}));
+    assert.deepEqual(linkedSubjects.sort((a,b) => a.id.localeCompare(b.id)), expectedSubjects.sort((a,b) => a.id.localeCompare(b.id)));
+    checks.push('every printed subject opens the corresponding domain in its family');
+    await page.locator('.cover-primary').click();
+    check('cover opens the subject index',new URL(page.url()).hash === '#knowledge-map');
+    await subjects.first().click();
+    await page.goBack();
+    check('back restores one complete subject index',await subjects.count() === payload.counts.domains && await page.locator('.knowledge-directory').count() === 1);
+    await go('/');
     await page.screenshot({path:path.join(out,'map-desktop.png'),fullPage:false,animations:'disabled'});
     await go('/?domain=literature&branch=literature.poetry#knowledge-map');
     check('deep branch link works',await page.locator('#knowledge-interactive').getAttribute('data-knowledge-node')==='literature.poetry');
+    const firstNote = page.locator('.knowledge-note h4 a').first();
+    const articlePath = await firstNote.getAttribute('href');
+    await firstNote.click();
+    check('a note title opens its published article',new URL(page.url()).pathname === articlePath && await page.locator('#markdown-content').isVisible());
+    await page.goBack();
+    check('back from the article restores its atlas branch',await page.locator('#knowledge-interactive').getAttribute('data-knowledge-node') === 'literature.poetry');
     const firstCount=await page.locator('.knowledge-note').count();
     await page.locator('[data-knowledge-more]').click();
     check('show more reveals additional actual notes',await page.locator('.knowledge-note').count()>firstCount);
@@ -58,10 +78,18 @@ const check=(name,result)=>{assert(result,name);checks.push(name);};
     }
     await page.setViewportSize({width:390,height:844});await go('/');
     await page.screenshot({path:path.join(out,'map-mobile.png'),animations:'disabled'});
+    const lastGroup = page.locator('.subject-shortcuts a').last();
+    const groupAnchor = await lastGroup.getAttribute('href');
+    await lastGroup.click();
+    check('mobile group shortcut focuses its printed heading',await page.locator(groupAnchor).evaluate(heading => heading === document.activeElement));
+    await page.keyboard.press('Tab');
+    check('the next Tab focuses a subject in that group',await page.evaluate(() => document.activeElement.matches('.subject-link') && document.activeElement.closest('.subject-family').querySelector('h3').id === location.hash.slice(1)));
     const degraded=await browser.newContext();
     await degraded.route('**/knowledge-atlas-data.js',r=>r.abort());
     const fallback=await degraded.newPage();await fallback.goto(base+'/');
     check('data failure preserves static map',await fallback.locator('#knowledge-static').isVisible()&&await fallback.locator('.knowledge-static-domain').count()===30);
+    check('unhydrated subject links target their printed entries',await fallback.locator('#knowledge-static .subject-link').evaluateAll(links =>
+        links.length > 0 && links.every(link => document.getElementById(link.hash.slice(1))?.matches('details.knowledge-static-domain'))));
     await degraded.close();
     const futureContext=await browser.newContext();
     const future=structuredClone(payload);
