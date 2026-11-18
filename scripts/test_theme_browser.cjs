@@ -100,6 +100,17 @@ const check = (label, value) => { assert(value, label); results.push(label); };
     await page.setViewportSize({ width: 390, height: 844 });
     await overflow('atlas-mobile');
     await screenshot('atlas-weave-mobile');
+    const filters = page.locator('.atlas-controls');
+    for (const [width, height] of [[390, 844], [932, 430]]) {
+        await page.setViewportSize({width, height});
+        const bottom = await filters.evaluate(bar => {
+            window.scrollBy({top:bar.getBoundingClientRect().bottom + 80, behavior:'instant'});
+            return bar.getBoundingClientRect().bottom;
+        });
+        check('archive filters scroll out of view at ' + width + 'x' + height, bottom <= 0);
+        await page.evaluate(() => window.scrollTo({top:0, behavior:'instant'}));
+    }
+    await page.setViewportSize({width:390, height:844});
     // Representative maintained template families, all using the shared runtime.
     for (const route of ['/books.html', '/thoughts.html', '/study.html', '/videos.html',
         '/stats.html', '/field.html', '/chronicle.html', '/series.html',

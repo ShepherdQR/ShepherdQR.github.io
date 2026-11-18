@@ -97,9 +97,6 @@
 }
 
 .atlas-controls {
-    position: sticky;
-    top: 0;
-    z-index: 15;
     display: grid;
     grid-template-columns: minmax(240px, 1.45fr) repeat(4, minmax(112px, 0.5fr)) auto;
     gap: 10px;
@@ -946,12 +943,21 @@ body[data-atlas-mode="constellation"] .archive-section:not(.atlas-constellation)
     letter-spacing: 0.04em;
 }
 
+@media (min-width: 921px) and (min-height: 560px) {
+    .atlas-controls {
+        position: sticky;
+        top: 0;
+        z-index: 15;
+    }
+}
+
 @media (max-width: 920px) {
     .atlas-controls {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .control-search {
+    .control-search,
+    .atlas-controls .clear-filters {
         grid-column: 1 / -1;
     }
 
@@ -1030,17 +1036,8 @@ body[data-atlas-mode="constellation"] .archive-section:not(.atlas-constellation)
 }
 
 @media (max-width: 520px) {
-    .atlas-controls,
     .stats-overview {
         grid-template-columns: 1fr;
-    }
-
-    .control-search {
-        grid-column: auto;
-    }
-
-    .clear-filters {
-        width: 100%;
     }
 
     .archive-note {
